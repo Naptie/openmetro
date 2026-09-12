@@ -1,0 +1,25 @@
+{
+  "name": "openmetro-client",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Typed Eden Treaty client for the Open Metro API",
+  "type": "module",
+  "module": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@elysia/eden": "^1.4.10",
+    "@openmetro/core": "workspace:*",
+    "elysia": "^1.4.30"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,155 @@
+name: Release data bundle & typed client
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "packages/core/**"
+      - "packages/client/**"
+      - "scripts/build-data-bundle.ts"
+      - "scripts/build-client-package.ts"
+      - "scripts/export-openapi.ts"
+      - "scripts/verify-data.ts"
+      - "package.json"
+      - ".github/workflows/release.yml"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Force publish
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  release:
+    name: Publish data + typed client
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build (core, adapters, typed client declarations)
+        run: bun run build
+
+      - name: Verify canonical data and write manifest
+        run: bun run data:verify --out dist/data-manifest.json
+
+      - name: Export OpenAPI document
+        run: bun run openapi --out dist/openapi.json
+
+      - name: Stage data bundle
+        run: |
+          bun run scripts/build-data-bundle.ts --out dist/data
+          tar -czf dist/openmetro-data.tar.gz -C dist data
+
+      - name: Stage typed client package
+        run: |
+          bun run scripts/build-client-package.ts --out dist/client
+          cd dist/client
+          npm pack --pack-destination ..
+
+      - name: Compute checksums
+        run: |
+          cd dist
+          sha256sum \
+            openmetro-data.tar.gz \
+            openmetro-client-*.tgz \
+            openapi.json \
+            data-manifest.json \
+            > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+
+      # Fingerprint the *contents* of the published artifacts, not the tarballs:
+      # `npm pack` and `tar` embed mtimes, so packed-file checksums are not
+      # stable across rebuilds of identical inputs.
+      - name: Compute release fingerprint
+        id: fingerprint
+        run: |
+          DATA_AGGREGATE=$(node -p "require('./dist/data-manifest.json').aggregate")
+          OPENAPI_SHA=$(sha256sum dist/openapi.json | awk '{print $1}')
+          CLIENT_SHA=$(
+            cat dist/client/package.json dist/client/index.d.ts dist/client/index.js \
+              | sha256sum | awk '{print $1}'
+          )
+          FINGERPRINT=$(
+            printf '%s\n%s\n%s\n' "$DATA_AGGREGATE" "$OPENAPI_SHA" "$CLIENT_SHA" \
+              | sha256sum | awk '{print $1}'
+          )
+          {
+            echo "data_aggregate=$DATA_AGGREGATE"
+            echo "openapi_sha=$OPENAPI_SHA"
+            echo "client_sha=$CLIENT_SHA"
+            echo "fingerprint=$FINGERPRINT"
+          } >> "$GITHUB_OUTPUT"
+          echo "fingerprint: $FINGERPRINT"
+          echo "  data:    $DATA_AGGREGATE"
+          echo "  openapi: $OPENAPI_SHA"
+          echo "  client:  $CLIENT_SHA"
+
+      - name: Check whether artifacts changed
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          NEW="${{ steps.fingerprint.outputs.fingerprint }}"
+          if [ "$FORCE" = "true" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Forced publish requested."
+            exit 0
+          fi
+
+          PREV_BODY=$(gh release view --json body -q .body 2>/dev/null || true)
+          PREV=$(printf '%s\n' "$PREV_BODY" \
+            | sed -n 's/.*Release fingerprint: `\([^`]*\)`.*/\1/p' \
+            | head -n 1)
+
+          if [ -n "$PREV" ] && [ "$PREV" = "$NEW" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Artifacts unchanged (fingerprint $NEW). Skipping release."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Artifacts changed (prev=${PREV:-none}, new=$NEW). Publishing release."
+          fi
+
+      - name: Create GitHub release
+        if: steps.gate.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DATA_AGGREGATE: ${{ steps.fingerprint.outputs.data_aggregate }}
+          FINGERPRINT: ${{ steps.fingerprint.outputs.fingerprint }}
+        run: |
+          TAG="v$(node -p "require('./package.json').version")-r${GITHUB_RUN_NUMBER}"
+          gh release create "$TAG" \
+            dist/openmetro-data.tar.gz \
+            dist/openmetro-client-*.tgz \
+            dist/openapi.json \
+            dist/data-manifest.json \
+            dist/SHA256SUMS.txt \
+            --title "$TAG" \
+            --notes "Automated release from ${GITHUB_SHA}.
+
+          - \`openmetro-data.tar.gz\` — canonical dataset (see \`data-manifest.json\`)
+          - \`openmetro-client-*.tgz\` — typed Eden Treaty client
+          - \`openapi.json\` — OpenAPI 3.0 document
+
+          Data integrity aggregate: \`${DATA_AGGREGATE}\`
+          Release fingerprint: \`${FINGERPRINT}\`" \
+            --target "$GITHUB_SHA"

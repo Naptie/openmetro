@@ -1,0 +1,38 @@
+{
+  "name": "openmetro",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Open metro data at ease.",
+  "workspaces": [
+    "packages/*",
+    "packages/adapters/*"
+  ],
+  "scripts": {
+    "build": "bun run --cwd packages/core build && bun run scripts/build-adapters.ts && bun run --cwd packages/client build",
+    "typecheck": "bun run --cwd packages/core build && bun run --cwd packages/client typecheck && bun run --cwd packages/api-worker typecheck && bun run scripts/typecheck-adapters.ts",
+    "test": "bun test",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "data:sync": "bun run scripts/sync.ts",
+    "data:verify": "bun run scripts/verify-data.ts",
+    "openapi": "bun run scripts/export-openapi.ts",
+    "api": "bun run --cwd packages/core api",
+    "worker:dev": "bun run --cwd packages/api-worker dev",
+    "worker:build": "bun run --cwd packages/api-worker build",
+    "worker:deploy": "bun run --cwd packages/api-worker deploy",
+    "web:dev": "bun run --cwd packages/web dev",
+    "web:build": "bun run --cwd packages/web build",
+    "web:deploy": "bun run --cwd packages/web deploy",
+    "discover": "bun run scripts/discover-adapters.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "@types/bun": "^1.4.2",
+    "@types/node": "^22.20.2",
+    "effect": "^3.22.1",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.130.0"
+  },
+  "packageManager": "bun@1.4.2"
+}

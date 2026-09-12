@@ -1,0 +1,23 @@
+{
+  "name": "@openmetro/api-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data": "bun run ../../scripts/build-worker-data.ts",
+    "dev": "wrangler dev",
+    "deploy": "bun run data && wrangler deploy",
+    "build": "bun run data && wrangler deploy --dry-run --outdir dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@elysiajs/openapi": "^1.4.16",
+    "effect": "^3.22.0",
+    "elysia": "^1.4.30"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250906.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.130.0"
+  }
+}

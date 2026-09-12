@@ -1,0 +1,60 @@
+name: Lint, typecheck, tests & data checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  verify:
+    name: Lint, typecheck, test, data integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Lint
+        run: bun run lint
+
+      - name: Build
+        run: bun run build
+
+      - name: Build Cloudflare Worker bundle (dry run)
+        run: bun run worker:build
+
+      - name: Typecheck
+        run: bun run typecheck
+
+      - name: Test
+        run: bun test
+
+      - name: Verify canonical data and write manifest
+        run: bun run data:verify --out dist/data-manifest.json
+
+      - name: Export OpenAPI document
+        run: bun run openapi --out dist/openapi.json
+
+      - name: Upload data manifest
+        uses: actions/upload-artifact@v7
+        with:
+          name: data-manifest
+          path: dist/data-manifest.json
+          retention-days: 14
+
+      - name: Upload OpenAPI document
+        uses: actions/upload-artifact@v7
+        with:
+          name: openapi
+          path: dist/openapi.json
+          retention-days: 14
