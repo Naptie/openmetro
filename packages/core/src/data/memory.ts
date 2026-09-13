@@ -1,22 +1,48 @@
 import { Effect } from 'effect';
+import type { NetworkEncoded } from '../schema/index.js';
 import { decodeNetworkData, decodeNetworkMeta } from './decode.js';
 import type { NetworkSource, RawNetworkFiles } from './source.js';
+import type { NetworkData } from './types.js';
 
 /**
  * In-memory network source. Used by runtimes without a filesystem (e.g. the
  * Cloudflare Worker), where the canonical JSON is bundled at build time.
+ *
+ * Decoded results are cached per network id for the lifetime of the isolate.
+ * Effect Schema validation of the full dataset is expensive (hundreds of ms
+ * of CPU on Workers); without this cache every request re-pays that cost and
+ * Free-plan Workers die with Error 1102 (`exceededResources`).
  */
 export function createMemoryNetworkSource(files: Record<string, RawNetworkFiles>): NetworkSource {
   const ids = Object.keys(files).sort();
+  const dataCache = new Map<string, NetworkData>();
+  const metaCache = new Map<string, NetworkEncoded>();
+
   return {
     list: async () => ids,
     load: (id) => {
+      const cached = dataCache.get(id);
+      if (cached) return Effect.succeed(cached);
       const raw = files[id];
-      return raw ? decodeNetworkData(raw) : Effect.fail(new Error(`unknown network ${id}`));
+      if (!raw) return Effect.fail(new Error(`unknown network ${id}`));
+      return decodeNetworkData(raw).pipe(
+        Effect.map((data) => {
+          dataCache.set(id, data);
+          return data;
+        })
+      );
     },
     loadMeta: (id) => {
+      const cached = metaCache.get(id);
+      if (cached) return Effect.succeed(cached);
       const raw = files[id];
-      return raw ? decodeNetworkMeta(raw.network) : Effect.fail(new Error(`unknown network ${id}`));
+      if (!raw) return Effect.fail(new Error(`unknown network ${id}`));
+      return decodeNetworkMeta(raw.network).pipe(
+        Effect.map((meta) => {
+          metaCache.set(id, meta);
+          return meta;
+        })
+      );
     }
   };
 }

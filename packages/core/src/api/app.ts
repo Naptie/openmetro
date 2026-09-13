@@ -108,29 +108,23 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
   const withNetwork = <A>(id: string, fn: (data: NetworkData) => A) =>
     runEffect(source.load(id).pipe(Effect.map(fn)));
 
-  // Pre-build spatial indices for all networks at startup so queries are
-  // instant. On the Node/Bun server this runs at module load; on Cloudflare
-  // Workers it runs once per isolate on first request (then persists).
-  const spatialIndices: Promise<Map<string, SpatialIndex<StationEncoded>>> = runEffect(
-    Effect.tryPromise(() => source.list()).pipe(
-      Effect.flatMap((ids) =>
-        Effect.all(
-          ids.map((id) =>
-            source.load(id).pipe(
-              Effect.map((d) => {
-                const withLocation = d.stations.filter(
-                  (s): s is StationEncoded & { location: { lon: number; lat: number } } =>
-                    s.location != null
-                );
-                return [id, buildSpatialIndex(withLocation, (s) => s.location)] as const;
-              })
-            )
-          )
-        )
-      ),
-      Effect.map((entries) => new Map<string, SpatialIndex<StationEncoded>>(entries))
-    )
-  );
+  // Spatial indices are built lazily per network (only `/nearest` needs them).
+  // Eagerly decoding every network on app creation burned hundreds of ms of
+  // CPU on the first request of each Workers isolate — including for cheap
+  // routes like `/api/health` and `/api/networks/:id/lines`.
+  const spatialIndices = new Map<string, SpatialIndex<StationEncoded>>();
+
+  async function getSpatialIndex(id: string): Promise<SpatialIndex<StationEncoded> | undefined> {
+    const cached = spatialIndices.get(id);
+    if (cached) return cached;
+    const data = await runEffect(source.load(id));
+    const withLocation = data.stations.filter(
+      (s): s is StationEncoded & { location: { lon: number; lat: number } } => s.location != null
+    );
+    const index = buildSpatialIndex(withLocation, (s) => s.location);
+    spatialIndices.set(id, index);
+    return index;
+  }
 
   return (
     new Elysia({ aot: options.aot ?? true })
@@ -447,8 +441,7 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
       .get(
         '/api/networks/:id/nearest',
         async ({ params, query, set }) => {
-          const indices = await spatialIndices;
-          const index = indices.get(params.id);
+          const index = await getSpatialIndex(params.id);
           if (!index) {
             set.status = 404;
             return { error: `unknown network ${params.id}` };
