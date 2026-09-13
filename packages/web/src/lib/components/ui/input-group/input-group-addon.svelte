@@ -21,8 +21,8 @@
 </script>
 
 <script lang="ts">
-  import { cn, type WithElementRef } from '$lib/utils.js';
   import type { HTMLAttributes } from 'svelte/elements';
+  import { cn, type WithElementRef } from '$lib/utils.js';
 
   let {
     ref = $bindable(null),
@@ -35,6 +35,8 @@
   } = $props();
 </script>
 
+<!-- biome-ignore lint/a11y/useSemanticElements: fieldset has UA styles/layout; role=group is intentional -->
+<!-- biome-ignore lint/a11y/useKeyWithClickEvents: mouse convenience to focus adjacent input; keyboard users tab to the input -->
 <div
   bind:this={ref}
   role="group"

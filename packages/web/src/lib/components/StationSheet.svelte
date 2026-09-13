@@ -168,6 +168,7 @@
     style={sizer.style}
   >
     <!-- Mobile drawer handle (drag to resize height) -->
+    <!-- biome-ignore lint/a11y/useSemanticElements: interactive resize handle, not a visual <hr> -->
     <div
       class="absolute top-1.5 left-1/2 z-20 h-6 w-12 -translate-x-1/2 cursor-row-resize touch-none sm:hidden"
       onpointerdown={(e) => sizer.startHeightResize(e, 1)}
@@ -177,6 +178,7 @@
       <div class="mx-auto mt-2 h-1 w-8 rounded-full bg-muted-foreground/40"></div>
     </div>
     <!-- Desktop width grip (drag to resize) -->
+    <!-- biome-ignore lint/a11y/useSemanticElements: interactive resize handle, not a visual <hr> -->
     <div
       class="absolute inset-y-0 left-0 z-20 hidden w-1.5 cursor-col-resize touch-none hover:bg-primary/20 sm:block"
       onpointerdown={(e) => sizer.startWidthResize(e, -1)}

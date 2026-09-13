@@ -10,6 +10,7 @@
   }: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();
 </script>
 
+<!-- biome-ignore lint/a11y/useSemanticElements: fieldset has UA styles/layout; role=group is intentional -->
 <div
   bind:this={ref}
   data-slot="input-group"

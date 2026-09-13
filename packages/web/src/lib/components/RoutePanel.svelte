@@ -225,6 +225,7 @@
                         {/if}
                       </div>
                       <div class="min-w-0 flex-1 py-0.5">
+                        <!-- biome-ignore lint/a11y/useSemanticElements: nested <button> inside; cannot use <button> here -->
                         <div
                           class="group flex w-full cursor-pointer items-baseline gap-1.5 text-left"
                           role="button"

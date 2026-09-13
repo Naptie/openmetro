@@ -231,7 +231,8 @@
           {/each}
 
           <!-- nodes -->
-          {#each layout.nodes as node, i (node.stationId + "-" + node.x)}
+          {#each layout.nodes as node, i (`${node.stationId}-${node.x}`)}
+            <!-- biome-ignore lint/a11y/useSemanticElements: SVG <g> cannot be a <button> -->
             <g
               class="topo-node cursor-pointer"
               style="animation-delay: {node.delay}ms; opacity: {node.junction
