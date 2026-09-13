@@ -157,7 +157,29 @@ jobs:
           - \`openmetro-data.tar.gz\` — canonical dataset (see \`data-manifest.json\`)
           - \`openmetro-client-*.tgz\` — typed Eden Treaty client
           - \`openapi.json\` — OpenAPI 3.0 document
+          - \`client\` branch — same typed client, installable as \`github:Naptie/openmetro#client\`
 
           Data integrity aggregate: \`${DATA_AGGREGATE}\`
           Release fingerprint: \`${FINGERPRINT}\`" \
             --target "$GITHUB_SHA"
+
+      # Force-push the staged client package as an orphan `client` branch so
+      # consumers can depend on `github:Naptie/openmetro#client` without a
+      # registry or tarball URL. Same gate as the release: skip when the
+      # fingerprint is unchanged.
+      - name: Publish to client branch
+        if: steps.gate.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SHORT_SHA="${GITHUB_SHA:0:7}"
+          cd dist/client
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan client
+          git add .
+          git commit -m "chore: publish client [${SHORT_SHA}]"
+          git remote add origin \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push origin client --force

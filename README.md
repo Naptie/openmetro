@@ -238,6 +238,17 @@ A fully typed [Eden Treaty](https://elysiajs.com/eden/treaty/overview) client is
 generated from the server's own Elysia app type (`packages/client`), so request
 params and responses are checked end to end with no hand-written contract.
 
+Install it straight from the published `client` branch (no registry needed),
+plus the peer deps it expects:
+
+```bash
+npm install github:Naptie/openmetro#client elysia @elysia/eden effect
+# or: bun add github:Naptie/openmetro#client elysia @elysia/eden effect
+```
+
+The same package is also attached to each GitHub Release as
+`openmetro-client-<version>.tgz`.
+
 ```ts
 import { createClient } from "openmetro-client";
 
@@ -278,10 +289,16 @@ content fingerprint of the data `aggregate`, OpenAPI document, and staged
 client package — packed tarball checksums are ignored because `tar`/`npm pack`
 embed mtimes). Manual `workflow_dispatch` can force a publish.
 
+On the same gate, the staged client package is force-pushed onto an orphan
+`client` branch, so consumers can depend on
+`"openmetro-client": "github:Naptie/openmetro#client"` without waiting for a
+registry publish.
+
 A release contains:
 
 - `openmetro-data.tar.gz` — the canonical dataset;
-- `openmetro-client-<version>.tgz` — the typed Eden client;
+- `openmetro-client-<version>.tgz` — the typed Eden client (also on the
+  `client` branch);
 - `openapi.json` — the OpenAPI 3.0 document;
 - `data-manifest.json` + `SHA256SUMS.txt` — per-file checksums and a content
   `aggregate` hash for integrity verification.
@@ -304,7 +321,8 @@ compared against a release.
   onto the long-lived `data` branch (merge into `main` manually). Uses secrets
   `REVERSE_PROXY` (optional CN egress proxy) and `AMAP_KEY`.
 - `release.yml` — release bundle when release inputs change and artifacts
-  differ from the latest release (below).
+  differ from the latest release; also force-pushes the typed client onto the
+  `client` branch (below).
 - `deploy-workers.yml` / `deploy-pages.yml` — deploy on push to `main`
   (path-filtered) and on manual dispatch (below).
 
