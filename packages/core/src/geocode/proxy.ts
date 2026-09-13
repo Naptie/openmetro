@@ -1,16 +1,13 @@
 /**
  * Reverse-proxy helper for official metro APIs that reject non-CN egress.
  *
- * When `OPENMETRO_REVERSE_PROXY` is set (e.g. `https://revprx-....eo-edgefunctions.com`),
- * requests to `https://origin.example/path` are rewritten to
- * `{proxy}/?url={encodeURIComponent(origin+path)}`.
+ * When `OPENMETRO_REVERSE_PROXY` is set, requests to `https://origin.example/path`
+ * are rewritten to `{proxy}{encodeURIComponent(origin+path)}`.
  * When unset, the original URL is returned unchanged.
  */
 export function proxyUrl(target: string): string {
   const base = process.env.OPENMETRO_REVERSE_PROXY?.trim();
-  if (!base) return target;
-  const normalized = base.replace(/\/+$/, '');
-  return `${normalized}/?url=${encodeURIComponent(target)}`;
+  return base ? `${base}${encodeURIComponent(target)}` : target;
 }
 
 /** Headers that help some official CDNs accept proxied requests. */

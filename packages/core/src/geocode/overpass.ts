@@ -17,7 +17,7 @@ const DEFAULT_TIMEOUT_SEC = 90;
 export type Bbox = [number, number, number, number];
 
 export interface OverpassStation {
-  /** Primary OSM name (Chinese for CN stations). */
+  /** Primary OSM name. */
   name: string;
   /** GCJ-02 coordinate, converted from OSM's WGS84. */
   location: GeoResult;

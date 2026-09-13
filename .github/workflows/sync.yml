@@ -95,7 +95,6 @@ jobs:
       - name: Sync topology
         env:
           AMAP_KEY: ${{ secrets.AMAP_KEY }}
-          # IP reverse proxy on the user's CN VPS (secret REVERSE_PROXY).
           OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}
         run: |
           echo "proxy=${OPENMETRO_REVERSE_PROXY:-none}"

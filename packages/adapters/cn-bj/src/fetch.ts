@@ -80,8 +80,7 @@ export interface BeijingSources {
 }
 
 /**
- * Fetch the official Beijing map sources. Honors `OPENMETRO_REVERSE_PROXY` for
- * non-CN egress (GitHub Actions).
+ * Fetch the official Beijing map sources.
  */
 export async function fetchBeijingSources(): Promise<BeijingSources> {
   if (process.env.OPENMETRO_REVERSE_PROXY) {
