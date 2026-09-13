@@ -44,7 +44,10 @@ export function smoothLineWithStops(
     const stopIndices = new Array<number>(n);
     const outIndex = (k: number): number => {
       if (kept.length === 1) return 0;
-      if (k === kept.length - 1) return lastIndexIsExact ? smoothed.length - 1 : Math.min(k * samplesPerSegment, smoothed.length - 1);
+      if (k === kept.length - 1)
+        return lastIndexIsExact
+          ? smoothed.length - 1
+          : Math.min(k * samplesPerSegment, smoothed.length - 1);
       return k * samplesPerSegment;
     };
     let prev = 0;

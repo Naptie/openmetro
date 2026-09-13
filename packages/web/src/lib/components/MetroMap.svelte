@@ -3,10 +3,10 @@
   import maplibregl from 'maplibre-gl';
   import { untrack } from 'svelte';
   import {
+    type DrawnLinePath,
     routeGeometryForStationIds,
     smoothLine,
-    smoothLineWithStops,
-    type DrawnLinePath
+    smoothLineWithStops
   } from '$lib';
   import 'maplibre-gl/dist/maplibre-gl.css';
   import type {
