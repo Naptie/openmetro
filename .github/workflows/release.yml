@@ -12,6 +12,13 @@ on:
       - "scripts/export-openapi.ts"
       - "scripts/verify-data.ts"
       - "package.json"
+      # Both core's and client's tsconfig chains extend this; compiler option
+      # changes can alter (or break) the published client's index.d.ts.
+      - "tsconfig.base.json"
+      # `bun install --frozen-lockfile` resolves build dependency versions from
+      # the lock; `bun update` can change it without touching any package.json,
+      # and dependency versions shape the emitted d.ts and OpenAPI document.
+      - "bun.lock"
       - ".github/workflows/release.yml"
   workflow_dispatch:
     inputs:
@@ -86,6 +93,7 @@ jobs:
           OPENAPI_SHA=$(sha256sum dist/openapi.json | awk '{print $1}')
           CLIENT_SHA=$(
             cat dist/client/package.json dist/client/index.d.ts dist/client/index.js \
+              dist/client/README.md \
               | sha256sum | awk '{print $1}'
           )
           FINGERPRINT=$(
