@@ -10,22 +10,22 @@ export const CITY_BBOX: Record<
   北京: {
     lon: [115.4, 117.5],
     lat: [39.4, 41.1],
-    center: { lon: 116.407, lat: 39.904 },
+    center: { lon: 116.407, lat: 39.904 }
   },
   上海: {
     lon: [120.8, 122.2],
     lat: [30.7, 31.9],
-    center: { lon: 121.47, lat: 31.23 },
+    center: { lon: 121.47, lat: 31.23 }
   },
   广州: {
     lon: [112.4, 114.8],
     lat: [22.5, 24.2],
-    center: { lon: 113.26, lat: 23.13 },
-  },
+    center: { lon: 113.26, lat: 23.13 }
+  }
 };
 
 export function cityBbox(city: string) {
-  const key = city.replace(/市$/, "");
+  const key = city.replace(/市$/, '');
   return CITY_BBOX[key];
 }
 

@@ -1,39 +1,39 @@
-import { officialFetchHeaders, proxyUrl } from "@openmetro/core";
-import { type FlTimeRow, fetchAllLines } from "./viewlnfltime.js";
+import { deriveLineEnglishName, officialFetchHeaders, proxyUrl } from '@openmetro/core';
+import { type FlTimeRow, fetchAllLines } from './viewlnfltime.js';
 
-const BASE = "https://m.shmetro.com";
+const BASE = 'https://m.shmetro.com';
 
 /** Shanghai Metro line numbers, including the two special-municipality lines. */
 export const LINE_NOS = [
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-  "14",
-  "15",
-  "16",
-  "17",
-  "18",
-  "41",
-  "51",
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  '12',
+  '13',
+  '14',
+  '15',
+  '16',
+  '17',
+  '18',
+  '41',
+  '51'
 ] as const;
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function postForm(path: string, body: Record<string, string>): Promise<string> {
   const res = await fetch(proxyUrl(`${BASE}${path}`), {
-    method: "POST",
-    headers: officialFetchHeaders({ "Content-Type": "application/x-www-form-urlencoded" }),
-    body: new URLSearchParams(body).toString(),
+    method: 'POST',
+    headers: officialFetchHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' }),
+    body: new URLSearchParams(body).toString()
   });
   if (!res.ok) throw new Error(`POST ${path} -> ${res.status}`);
   return res.text();
@@ -41,7 +41,7 @@ async function postForm(path: string, body: Record<string, string>): Promise<str
 
 async function getJson(path: string): Promise<unknown> {
   const res = await fetch(proxyUrl(`${BASE}${path}`), {
-    headers: officialFetchHeaders(),
+    headers: officialFetchHeaders()
   });
   if (!res.ok) throw new Error(`GET ${path} -> ${res.status}`);
   return res.json();
@@ -52,8 +52,8 @@ async function getText(url: string, retries = 4): Promise<string> {
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const res = await fetch(proxyUrl(url), {
-        headers: officialFetchHeaders({ Referer: "https://m.shmetro.com/" }),
-        signal: AbortSignal.timeout(90_000),
+        headers: officialFetchHeaders({ Referer: 'https://m.shmetro.com/' }),
+        signal: AbortSignal.timeout(90_000)
       });
       if (!res.ok) throw new Error(`GET ${url} -> ${res.status}`);
       return await res.text();
@@ -84,7 +84,7 @@ export interface ShFetchResult {
 
 async function fetchStationCode(code: string, func: string): Promise<unknown[]> {
   const data = (await getJson(
-    `/interface/metromap/metromap.aspx?func=${func}&station_code=${encodeURIComponent(code)}`,
+    `/interface/metromap/metromap.aspx?func=${func}&station_code=${encodeURIComponent(code)}`
   )) as unknown;
   // Guard against proxy/origin error payloads (e.g. bare `500`).
   if (!Array.isArray(data)) {
@@ -97,7 +97,7 @@ async function fetchStationCode(code: string, func: string): Promise<unknown[]> 
 export async function fetchShanghai(
   lineNos: readonly string[],
   nameToCode: Record<string, string>,
-  opts: { delayMs?: number; concurrency?: number } = {},
+  opts: { delayMs?: number; concurrency?: number } = {}
 ): Promise<ShFetchResult> {
   const delayMs = opts.delayMs ?? 200;
   const concurrency = opts.concurrency ?? 3;
@@ -105,10 +105,10 @@ export async function fetchShanghai(
   // 1) Line sequences.
   const lineSequences: Record<string, { code: string; name: string }[]> = {};
   for (const ln of lineNos) {
-    const html = await postForm("/core/shmetro/mdstationinfoback_new.ashx", {
-      act: "slsddl",
+    const html = await postForm('/core/shmetro/mdstationinfoback_new.ashx', {
+      act: 'slsddl',
       ln: ln,
-      sc: "",
+      sc: ''
     });
     lineSequences[ln] = parseSlsddl(html);
     await sleep(delayMs);
@@ -124,7 +124,7 @@ export async function fetchShanghai(
       if (i >= codes.length) return;
       const code = codes[i];
       try {
-        stations[code] = await fetchStationCode(code, "stationInfo");
+        stations[code] = await fetchStationCode(code, 'stationInfo');
       } catch {
         // skip failed station; leave absent
       }
@@ -151,40 +151,46 @@ export interface ShanghaiSources {
 
 /** Fetch Shanghai map bootstrap + topology + first/last tables live. */
 export async function fetchShanghaiSources(): Promise<ShanghaiSources> {
-  console.log("  fetch lineInfo (map locations)");
+  console.log('  fetch lineInfo (map locations)');
   const lineInfo = await getText(`${BASE}/interface/metromap/metromap.aspx?func=lineInfo`);
-  const mapplic = JSON.parse(lineInfo.replace(/^\uFEFF/, "")) as Mapplic;
+  const mapplic = JSON.parse(lineInfo.replace(/^\uFEFF/, '')) as Mapplic;
   const nameToCode: Record<string, string> = {};
   for (const loc of mapplic.levels[0].locations) {
-    if (loc.id.startsWith("ST")) nameToCode[loc.title] = loc.id.slice(2);
+    if (loc.id.startsWith('ST')) nameToCode[loc.title] = loc.id.slice(2);
   }
 
-  console.log("  fetch lines (colors)");
+  console.log('  fetch lines (colors)');
   const linesRaw = await getText(`${BASE}/interface/metromap/metromap.aspx?func=lines`);
   const parsed = JSON.parse(linesRaw) as { line_no: number; color: string; bgcolor: string }[];
-  const lines: ShanghaiSources["lines"] = {};
+  const lines: ShanghaiSources['lines'] = {};
   for (const l of parsed) {
     lines[String(l.line_no)] = {
       line_no: l.line_no,
       color: l.color,
       description: `${l.line_no}号线`,
-      desc_en: `Line ${l.line_no}`,
+      desc_en: `Line ${l.line_no}`
     };
   }
 
-  console.log("  fetch line sequences + station info");
+  console.log('  fetch line sequences + station info');
   const { lineSequences, stations } = await fetchShanghai(LINE_NOS, nameToCode, {
     delayMs: 150,
-    concurrency: 3,
+    concurrency: 3
   });
 
-  console.log("  fetch first/last timetables");
+  console.log('  fetch first/last timetables');
   const fltime = await fetchAllLines([...LINE_NOS], { delayMs: 120 });
   const fltimeRows: Record<string, FlTimeRow[]> = {};
   const lineNotes: Record<string, string | undefined> = {};
   for (const [ln, value] of fltime) {
     fltimeRows[ln] = value.rows;
     lineNotes[ln] = value.note;
+    // Official names (e.g. 浦江线 / 市域机场线) come from the timetable page,
+    // not from the color-only `func=lines` endpoint.
+    if (value.name && lines[ln]) {
+      lines[ln].description = value.name;
+      lines[ln].desc_en = deriveLineEnglishName(value.name, ln) ?? `Line ${ln}`;
+    }
   }
 
   return { nameToCode, lines, lineSequences, stations, fltimeRows, lineNotes };

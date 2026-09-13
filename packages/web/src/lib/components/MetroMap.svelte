@@ -1,320 +1,674 @@
 <script lang="ts">
-import maplibregl from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
-import type { Line, Pattern, Station, Stop } from "$lib/api-types";
-import { client, get } from "$lib/client";
+  import type { Feature, FeatureCollection, LineString } from 'geojson';
+  import maplibregl from 'maplibre-gl';
+  import { smoothLine } from '$lib';
+  import 'maplibre-gl/dist/maplibre-gl.css';
+  import type {
+    ApiLine as Line,
+    ApiPattern as Pattern,
+    ApiRoutePlan as RoutePlan,
+    ApiStation as Station,
+    ApiStop as Stop
+  } from 'openmetro-client';
+  import { localizedName } from '$lib/format';
+  import { i18n } from '$lib/i18n.svelte';
+  import { app } from '$lib/state.svelte';
 
-let {
-  networkId,
-  lines,
-  stations,
-  onStationSelect,
-}: {
-  networkId: string;
-  lines: Line[];
-  stations: Station[];
-  onStationSelect: (s: Station) => void;
-} = $props();
+  let container: HTMLDivElement;
+  let map = $state<maplibregl.Map | null>(null);
+  let mapReady = $state(false);
 
-let container: HTMLDivElement;
-let map = $state<maplibregl.Map | null>(null);
-let mapLoaded = $state(false);
-
-function toQuadkey(z: number, x: number, y: number): string {
-  let q = "";
-  for (let i = z; i > 0; i--) {
-    let b = 0;
-    const mask = 1 << (i - 1);
-    if (x & mask) b |= 1;
-    if (y & mask) b |= 2;
-    q += b;
+  interface StationMarkerSet {
+    selected: maplibregl.Marker | null;
+    origin: maplibregl.Marker | null;
+    destination: maplibregl.Marker | null;
   }
-  return q;
-}
 
-function transformRequest(url: string, resourceType?: string): maplibregl.RequestParameters {
-  // Convert z/x/y back to quadkey for raster tile requests on ditu.live.com
-  if (resourceType === "Tile") {
-    const m = url.match(/\/comp\/ch\/(\d+)\/(\d+)\/(\d+)\?/);
-    if (m) {
-      const qk = toQuadkey(+m[1], +m[2], +m[3]);
-      return { url: url.replace(/\/comp\/ch\/\d+\/\d+\/\d+\?/, `/comp/ch/${qk}?`) };
+  // Plain (non-reactive) registry — maplibregl.Marker instances must not be
+  // wrapped in $state proxies.
+  const markers: StationMarkerSet = { selected: null, origin: null, destination: null };
+  let routeAnimId = 0;
+
+  function toQuadkey(z: number, x: number, y: number): string {
+    let q = '';
+    for (let i = z; i > 0; i--) {
+      let b = 0;
+      const mask = 1 << (i - 1);
+      if (x & mask) b |= 1;
+      if (y & mask) b |= 2;
+      q += b;
     }
-  }
-  return { url };
-}
-
-function stationLabel(s: Station): string {
-  return s.names?.en ? `${s.names.zh} (${s.names.en})` : s.name;
-}
-
-async function loadBingStyle(): Promise<maplibregl.StyleSpecification> {
-  const raw = await fetch("/bing-style.json").then((r) => r.json());
-
-  // Fix protocol and tile format
-  const fixed = JSON.parse(
-    JSON.stringify(raw).replaceAll("raster://", "https://").replaceAll("{quadkey}", "{z}/{x}/{y}"),
-  );
-
-  // Keep only vector layers + jk raster labels; strip other raster layers
-  fixed.layers = fixed.layers.filter(
-    (l: { type: string; source?: string }) => l.type !== "raster" || l.source === "jk",
-  );
-
-  // Remove Korea-only bounds from jk source so labels render globally
-  if (fixed.sources.jk && "bounds" in fixed.sources.jk) {
-    delete fixed.sources.jk.bounds;
+    return q;
   }
 
-  // Expand tile endpoints for CDN failover
-  for (const source of Object.values(fixed.sources) as Record<string, unknown>[]) {
-    if (Array.isArray(source.tiles)) {
-      const expanded: string[] = [];
-      for (const t of source.tiles as string[]) {
-        expanded.push(t);
-        for (let i = 1; i <= 3; i++) {
-          expanded.push(t.replace(/dynamic\.t0\./, `dynamic.t${i}.`));
+  // Bing market code for tile labels; rewritten into every tile request so the
+  // basemap language follows the interface locale.
+  let activeMkt = i18n.locale === 'zh' ? 'zh-CN' : 'en-US';
+  const mktFor = (locale: string) => (locale === 'zh' ? 'zh-CN' : 'en-US');
+
+  function transformRequest(url: string, resourceType?: string): maplibregl.RequestParameters {
+    url = url.replace(/([?&])mkt=[^&]*/i, `$1mkt=${activeMkt}`);
+    // Convert z/x/y back to quadkey for raster tile requests on ditu.live.com
+    if (resourceType === 'Tile') {
+      const m = url.match(/\/comp\/ch\/(\d+)\/(\d+)\/(\d+)\?/);
+      if (m) {
+        const qk = toQuadkey(+m[1], +m[2], +m[3]);
+        return { url: url.replace(/\/comp\/ch\/\d+\/\d+\/\d+\?/, `/comp/ch/${qk}?`) };
+      }
+    }
+    return { url };
+  }
+
+  async function loadBingStyle(): Promise<maplibregl.StyleSpecification> {
+    const raw = await fetch('/bing-style.json').then((r) => r.json());
+    const fixed = JSON.parse(
+      JSON.stringify(raw).replaceAll('raster://', 'https://').replaceAll('{quadkey}', '{z}/{x}/{y}')
+    );
+    // Keep only vector layers + jk raster labels; strip other raster layers
+    fixed.layers = fixed.layers.filter(
+      (l: { type: string; source?: string }) => l.type !== 'raster' || l.source === 'jk'
+    );
+    // Remove Korea-only bounds from jk source so labels render globally
+    if (fixed.sources.jk && 'bounds' in fixed.sources.jk) delete fixed.sources.jk.bounds;
+    // Expand tile endpoints for CDN failover
+    for (const source of Object.values(fixed.sources) as Record<string, unknown>[]) {
+      if (Array.isArray(source.tiles)) {
+        const expanded: string[] = [];
+        for (const t of source.tiles as string[]) {
+          expanded.push(t);
+          for (let i = 1; i <= 3; i++) {
+            expanded.push(t.replace(/dynamic\.t0\./, `dynamic.t${i}.`));
+          }
         }
-      }
-      source.tiles = expanded;
-    }
-  }
-
-  return fixed;
-}
-
-// --- Map init (runs once) ---
-$effect(() => {
-  if (!container) return;
-
-  let cancelled = false;
-
-  loadBingStyle().then((style) => {
-    if (cancelled) return;
-
-    map = new maplibregl.Map({
-      container,
-      transformRequest,
-      style,
-      center: [121.47, 31.23],
-      zoom: 11,
-    });
-
-    map.addControl(new maplibregl.NavigationControl(), "top-right");
-
-    map.on("load", () => {
-      mapLoaded = true;
-    });
-  });
-
-  return () => {
-    cancelled = true;
-    mapLoaded = false;
-    map?.remove();
-  };
-});
-
-// --- Single effect: sync layers + fit bounds on network/data change ---
-$effect(() => {
-  if (!map || !mapLoaded) return;
-
-  const nid = networkId;
-  const lns = lines;
-  const sts = stations;
-  const select = onStationSelect;
-
-  removeLayers(map);
-
-  if (!sts.length || !lns.length) return;
-
-  const stationMap = new Map(sts.map((s) => [s.id, s]));
-  addStationLayer(map, sts, stationMap, select);
-
-  let cancelled = false;
-  Promise.all([
-    get(client.api.networks({ id: nid }).stops.get()),
-    get(client.api.networks({ id: nid }).patterns.get()),
-  ]).then(([stops, patterns]) => {
-    if (cancelled || !map || !map.getSource("stations")) return;
-    addLineLayer(map, lns, stationMap, stops, patterns);
-    fitBounds(map, lns, stationMap, stops);
-  });
-
-  return () => {
-    cancelled = true;
-  };
-});
-
-function removeLayers(m: maplibregl.Map) {
-  for (const id of ["station-labels", "station-circles", "lines-layer"]) {
-    if (m.getLayer(id)) m.removeLayer(id);
-  }
-  for (const id of ["stations", "lines"]) {
-    if (m.getSource(id)) m.removeSource(id);
-  }
-}
-
-function fitBounds(
-  m: maplibregl.Map,
-  lineList: Line[],
-  stationMap: Map<string, Station>,
-  stops: Stop[],
-) {
-  const stopsByLine = new Map<string, Stop[]>();
-  for (const stop of stops) {
-    const list = stopsByLine.get(stop.line_id) ?? [];
-    list.push(stop);
-    stopsByLine.set(stop.line_id, list);
-  }
-
-  const coords: [number, number][] = [];
-  for (const line of lineList) {
-    const lineStops = stopsByLine.get(line.id);
-    if (!lineStops) continue;
-    lineStops.sort((a, b) => a.sequence - b.sequence);
-    for (const stop of lineStops) {
-      const s = stationMap.get(stop.station_id);
-      if (s?.location) coords.push([s.location.lon, s.location.lat]);
-    }
-  }
-
-  if (coords.length === 0) return;
-  const bounds = new maplibregl.LngLatBounds();
-  for (const c of coords) bounds.extend(c);
-  m.fitBounds(bounds, { padding: 40 });
-}
-
-function addStationLayer(
-  m: maplibregl.Map,
-  stationList: Station[],
-  stationMap: Map<string, Station>,
-  select: (s: Station) => void,
-) {
-  const features: {
-    type: "Feature";
-    properties: Record<string, unknown>;
-    geometry: { type: string; coordinates: unknown };
-  }[] = [];
-  for (const s of stationList) {
-    if (!s.location) continue;
-    features.push({
-      type: "Feature",
-      properties: { id: s.id, label: stationLabel(s), interchange: s.is_interchange ? 1 : 0 },
-      geometry: { type: "Point", coordinates: [s.location.lon, s.location.lat] },
-    });
-  }
-
-  m.addSource("stations", {
-    type: "geojson",
-    data: { type: "FeatureCollection", features },
-  });
-
-  m.addLayer({
-    id: "station-circles",
-    type: "circle",
-    source: "stations",
-    paint: {
-      "circle-radius": ["case", ["==", ["get", "interchange"], 1], 5, 3.5],
-      "circle-color": "#fff",
-      "circle-stroke-color": "#333",
-      "circle-stroke-width": 1.5,
-    },
-  });
-
-  m.addLayer({
-    id: "station-labels",
-    type: "symbol",
-    source: "stations",
-    layout: {
-      "text-field": ["get", "label"],
-      "text-size": 11,
-      "text-anchor": "top",
-      "text-offset": [0, 1],
-      "text-allow-overlap": false,
-      "text-ignore-placement": false,
-    },
-    paint: {
-      "text-color": "#111",
-      "text-halo-color": "#fff",
-      "text-halo-width": 1.5,
-    },
-  });
-
-  m.on("click", "station-circles", (e) => {
-    const feature = e.features?.[0];
-    if (!feature) return;
-    const id = feature.properties?.id as string;
-    const station = stationMap.get(id);
-    if (station) select(station);
-  });
-
-  m.on("mouseenter", "station-circles", () => {
-    m.getCanvas().style.cursor = "pointer";
-  });
-
-  m.on("mouseleave", "station-circles", () => {
-    m.getCanvas().style.cursor = "";
-  });
-}
-
-function addLineLayer(
-  m: maplibregl.Map,
-  lineList: Line[],
-  stationMap: Map<string, Station>,
-  stops: Stop[],
-  patterns: Pattern[],
-) {
-  const lineById = new Map(lineList.map((l) => [l.id, l]));
-  const stopById = new Map(stops.map((s) => [s.id, s]));
-
-  const features: {
-    type: "Feature";
-    properties: Record<string, unknown>;
-    geometry: { type: string; coordinates: unknown };
-  }[] = [];
-  for (const pattern of patterns) {
-    const line = lineById.get(pattern.line_id);
-    if (!line) continue;
-
-    const coords: [number, number][] = [];
-    for (const stopId of pattern.stop_ids) {
-      const stop = stopById.get(stopId);
-      const station = stop ? stationMap.get(stop.station_id) : undefined;
-      if (station?.location) {
-        coords.push([station.location.lon, station.location.lat]);
+        source.tiles = expanded;
       }
     }
+    return fixed;
+  }
 
-    if (coords.length >= 2) {
-      if (line.loop && coords.length >= 3) {
-        coords.push(coords[0]);
+  // --- Map init (runs once) ---
+  $effect(() => {
+    if (!container) return;
+    let cancelled = false;
+
+    loadBingStyle().then((style) => {
+      if (cancelled) return;
+      map = new maplibregl.Map({
+        container,
+        transformRequest,
+        style,
+        center: [112.5, 33.5],
+        zoom: 4.2,
+        attributionControl: { compact: true }
+      });
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
+      map.addControl(new maplibregl.ScaleControl(), 'bottom-left');
+
+      map.on('load', () => {
+        if (cancelled) return;
+        setupLayers(map!);
+        mapReady = true;
+        syncMapData();
+      });
+    });
+
+    const onFocus = (event: Event) => {
+      const detail = (event as CustomEvent<{ bounds: [[number, number], [number, number]] }>)
+        .detail;
+      map?.fitBounds(detail.bounds, {
+        padding: { top: 90, bottom: 60, left: 40, right: 40 },
+        duration: 1200
+      });
+    };
+    window.addEventListener('metro:focus-bounds', onFocus);
+
+    return () => {
+      cancelled = true;
+      mapReady = false;
+      window.removeEventListener('metro:focus-bounds', onFocus);
+      stopRouteAnimation();
+      map?.remove();
+      map = null;
+    };
+  });
+
+  // --- Basemap language follows the interface locale ---
+  $effect(() => {
+    if (!map || !mapReady) return;
+    const mkt = mktFor(i18n.locale);
+    if (mkt === activeMkt) return;
+    activeMkt = mkt;
+    // Re-assign each tiled source's tile URLs: this flushes the tile cache and
+    // re-requests everything, and transformRequest injects the new mkt code.
+    const sources = map.getStyle().sources ?? {};
+    for (const id of Object.keys(sources)) {
+      const source = map.getSource(id) as (
+        | maplibregl.RasterTileSource
+        | maplibregl.VectorTileSource
+      ) & {
+        tiles?: string[];
+      };
+      if (source && Array.isArray(source.tiles) && source.tiles.length > 0 && source.setTiles) {
+        source.setTiles(source.tiles);
       }
-      features.push({
-        type: "Feature",
-        properties: { color: line.color ?? "#666", name: pattern.name ?? line.name },
-        geometry: { type: "LineString", coordinates: coords },
+    }
+  });
+
+  function setupLayers(m: maplibregl.Map): void {
+    m.addSource('metro-lines', {
+      type: 'geojson',
+      data: emptyFeatureCollection()
+    });
+    m.addSource('metro-stations', {
+      type: 'geojson',
+      data: emptyFeatureCollection()
+    });
+    m.addSource('route-line', {
+      type: 'geojson',
+      data: emptyFeatureCollection()
+    });
+
+    m.addLayer({
+      id: 'metro-lines-casing',
+      type: 'line',
+      source: 'metro-lines',
+      minzoom: 5,
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': '#ffffff',
+        'line-width': ['interpolate', ['linear'], ['zoom'], 8, 6, 12, 9],
+        'line-opacity': 0.9
+      }
+    });
+
+    m.addLayer({
+      id: 'metro-lines',
+      type: 'line',
+      source: 'metro-lines',
+      minzoom: 5,
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': ['get', 'color'],
+        'line-width': ['interpolate', ['linear'], ['zoom'], 8, 3.5, 12, 5.5],
+        'line-opacity': 0.9
+      }
+    });
+
+    m.addLayer({
+      id: 'metro-stations',
+      type: 'circle',
+      source: 'metro-stations',
+      minzoom: 9.5,
+      paint: {
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          10,
+          ['case', ['==', ['get', 'interchange'], 1], 4.5, 3.5],
+          12,
+          ['case', ['==', ['get', 'interchange'], 1], 5, 4]
+        ],
+        'circle-color': '#ffffff',
+        'circle-stroke-color': '#334155',
+        'circle-stroke-width': 1.4
+      }
+    });
+
+    m.addLayer({
+      id: 'metro-station-labels',
+      type: 'symbol',
+      source: 'metro-stations',
+      minzoom: 10.5,
+      layout: {
+        'text-field': ['get', 'label'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 10, 10.5, 14, 13],
+        'text-anchor': 'top',
+        'text-offset': [0, 0.9],
+        'text-allow-overlap': false,
+        'text-padding': 2
+      },
+      paint: {
+        'text-color': '#0f172a',
+        'text-halo-color': '#ffffff',
+        'text-halo-width': 1.6
+      }
+    });
+
+    m.addLayer({
+      id: 'route-casing',
+      type: 'line',
+      source: 'route-line',
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': '#ffffff',
+        'line-width': 11,
+        'line-opacity': 0.95
+      }
+    });
+
+    m.addLayer({
+      id: 'route-line',
+      type: 'line',
+      source: 'route-line',
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': ['get', 'color'],
+        'line-width': 7
+      }
+    });
+
+    m.addLayer({
+      id: 'route-dashes',
+      type: 'line',
+      source: 'route-line',
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': '#ffffff',
+        'line-width': 2.5,
+        'line-dasharray': [0, 4, 3]
+      }
+    });
+
+    m.on('click', 'metro-lines', (e) => {
+      const feature = e.features?.[0];
+      const lineId = feature?.properties?.line_id;
+      if (typeof lineId === 'string') app.selectLine(lineId);
+    });
+
+    m.on('click', 'metro-stations', (e) => {
+      const feature = e.features?.[0];
+      const id = feature?.properties?.id;
+      if (typeof id === 'string') app.selectStation(id);
+    });
+
+    // Clicking anywhere else on the map drops the line/station focus so every
+    // line renders at equal opacity again.
+    m.on('click', (e) => {
+      const features = m.queryRenderedFeatures(e.point, {
+        layers: ['metro-lines', 'metro-stations']
+      });
+      if (features.length === 0) app.selectLine(null);
+    });
+
+    for (const layerId of ['metro-lines', 'metro-stations']) {
+      m.on('mouseenter', layerId, () => {
+        m.getCanvas().style.cursor = 'pointer';
+      });
+      m.on('mouseleave', layerId, () => {
+        m.getCanvas().style.cursor = '';
       });
     }
   }
 
-  if (features.length === 0) return;
+  function emptyFeatureCollection(): FeatureCollection {
+    return { type: 'FeatureCollection', features: [] };
+  }
 
-  m.addSource("lines", {
-    type: "geojson",
-    data: { type: "FeatureCollection", features },
+  // --- Sync all network data onto the map ---
+  let firstFitDone = $state(false);
+
+  function syncMapData(): void {
+    if (!map || !mapReady) return;
+    const networks = app.networks;
+    if (!networks.length) return;
+
+    const locale = i18n.locale;
+    const lineFeatures: Feature[] = [];
+    const stationFeatures: Feature[] = [];
+    const coordsAll: [number, number][] = [];
+
+    for (const net of networks) {
+      const stationMap = new Map<string, Station>(net.stations.map((s) => [s.id, s]));
+      const stopMap = new Map<string, Stop>(net.stops.map((s) => [s.id, s]));
+      const lineById = new Map<string, Line>(net.lines.map((l) => [l.id, l]));
+
+      for (const station of net.stations) {
+        if (!station.location) continue;
+        stationFeatures.push({
+          type: 'Feature',
+          properties: {
+            id: station.id,
+            label: localizedName(station.names, station.name, locale),
+            interchange: station.is_interchange ? 1 : 0
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [station.location.lon, station.location.lat]
+          }
+        });
+        coordsAll.push([station.location.lon, station.location.lat]);
+      }
+
+      // Draw each line once: the primary pattern is the trunk, and every
+      // other pattern contributes only its branch-only run(s) leaving the
+      // junction — so shared sections are never drawn twice. (Two patterns
+      // over the same trunk would double-draw it, and with spline smoothing
+      // the near-identical curves separate into visible "twin" lines.)
+      for (const line of net.lines) {
+        const linePatterns = (net.patterns as Pattern[]).filter((p) => p.line_id === line.id);
+        if (!linePatterns.length) continue;
+        const primary =
+          linePatterns.find((p) => p.is_primary) ??
+          [...linePatterns].sort((a, b) => b.stop_ids.length - a.stop_ids.length)[0];
+
+        // Ordered unique station ids + coordinates along a pattern.
+        const seqOf = (pattern: Pattern): { ids: string[]; coords: [number, number][] } => {
+          const ids: string[] = [];
+          const coords: [number, number][] = [];
+          for (const stopId of pattern.stop_ids) {
+            const stop = stopMap.get(stopId);
+            const station = stop ? stationMap.get(stop.station_id) : undefined;
+            if (!station?.location) continue;
+            if (ids[ids.length - 1] === station.id) continue;
+            ids.push(station.id);
+            coords.push([station.location.lon, station.location.lat]);
+          }
+          return { ids, coords };
+        };
+
+        const pushSegment = (patternId: string, coords: [number, number][]) => {
+          if (coords.length < 2) return;
+          lineFeatures.push({
+            type: 'Feature',
+            properties: {
+              pattern_id: patternId,
+              line_id: line.id,
+              network_id: net.meta.id,
+              color: line.color ?? '#64748b'
+            },
+            geometry: { type: 'LineString', coordinates: smoothLine(coords) }
+          });
+        };
+
+        const trunk = seqOf(primary);
+        if (trunk.coords.length < 2) continue;
+        if (line.loop && trunk.coords.length >= 3) trunk.coords.push(trunk.coords[0]);
+        pushSegment(primary.id, trunk.coords);
+        const mainSet = new Set(trunk.ids);
+        const stopToStation = new Map<string, string>(
+          stopMap ? [...stopMap.values()].map((s) => [s.id, s.station_id]) : []
+        );
+
+        for (const pattern of linePatterns) {
+          if (pattern.id === primary.id) continue;
+          const { ids, coords } = seqOf(pattern);
+          if (coords.length < 2) continue;
+
+          // Junction: explicit junction stop, else the last station this branch
+          // shares with the trunk.
+          let junctionIdx = pattern.junction_stop_id
+            ? ids.indexOf(stopToStation.get(pattern.junction_stop_id) ?? '')
+            : -1;
+          if (junctionIdx === -1) {
+            for (let i = ids.length - 1; i >= 0; i--) {
+              if (mainSet.has(ids[i])) {
+                junctionIdx = i;
+                break;
+              }
+            }
+          }
+          if (junctionIdx === -1) {
+            // Fully disjoint branch — nothing shared with the trunk, draw whole.
+            pushSegment(pattern.id, coords);
+            continue;
+          }
+
+          // Walk outward from the junction on each side, stopping at the first
+          // trunk station — what remains is exactly this branch's own geometry.
+          const before: [number, number][] = [];
+          for (let i = junctionIdx - 1; i >= 0; i--) {
+            if (mainSet.has(ids[i])) break;
+            before.push(coords[i]);
+          }
+          const after: [number, number][] = [];
+          for (let i = junctionIdx + 1; i < ids.length; i++) {
+            if (mainSet.has(ids[i])) break;
+            after.push(coords[i]);
+          }
+          for (const tail of [before, after]) {
+            pushSegment(pattern.id, [coords[junctionIdx], ...tail]);
+          }
+        }
+      }
+    }
+
+    const m = map;
+    (m.getSource('metro-lines') as maplibregl.GeoJSONSource)?.setData({
+      type: 'FeatureCollection',
+      features: lineFeatures
+    });
+    (m.getSource('metro-stations') as maplibregl.GeoJSONSource)?.setData({
+      type: 'FeatureCollection',
+      features: stationFeatures
+    });
+
+    if (!firstFitDone && coordsAll.length > 0) {
+      firstFitDone = true;
+      const bounds = new maplibregl.LngLatBounds();
+      for (const c of coordsAll) bounds.extend(c);
+      m.fitBounds(bounds, {
+        padding: { top: 100, bottom: 60, left: 60, right: 60 },
+        duration: 1600
+      });
+    }
+  }
+
+  // Reactive sync (locale changes, data arrivals). Belt and braces: syncMapData
+  // is also invoked directly from the map 'load' handler, so data that arrived
+  // before the style loaded (or while the tab was throttled) can never be missed.
+  $effect(() => {
+    if (!map || !mapReady) return;
+    void app.loading;
+    void app.networks;
+    void i18n.locale;
+    syncMapData();
   });
 
-  m.addLayer({
-    id: "lines-layer",
-    type: "line",
-    source: "lines",
-    paint: {
-      "line-color": ["get", "color"],
-      "line-width": 3,
-      "line-opacity": 0.85,
-    },
+  // --- Highlight: dim everything that is not selected / on the route ---
+  $effect(() => {
+    if (!map || !mapReady) return;
+    const selectedLineId = app.state.selectedLineId;
+    const route = app.route;
+    const keep = route
+      ? [
+          ...new Set(
+            route.legs.filter((l) => l.kind === 'ride' && l.line_id).map((l) => l.line_id!)
+          )
+        ]
+      : selectedLineId
+        ? [selectedLineId]
+        : null;
+    const opacity = keep ? ['case', ['in', ['get', 'line_id'], ['literal', keep]], 1, 0.22] : 0.9;
+    map.setPaintProperty('metro-lines', 'line-opacity', opacity);
+    map.setPaintProperty('metro-lines-casing', 'line-opacity', keep ? 0.95 : 0.9);
   });
-}
+
+  // --- Zoom so the selected line fits to view ---
+  let lastFittedLineId: string | null = null;
+  $effect(() => {
+    if (!map || !mapReady) return;
+    const lineId = app.state.selectedLineId;
+    if (!lineId) {
+      lastFittedLineId = null;
+      return;
+    }
+    if (lineId === lastFittedLineId) return;
+    lastFittedLineId = lineId;
+    const hit = app.findLine(lineId);
+    if (!hit) return;
+    const net = hit.network;
+    const stopById = new Map(net.stops.map((s) => [s.id, s]));
+    const stationById = new Map(net.stations.map((s) => [s.id, s]));
+    const coords: [number, number][] = [];
+    for (const pattern of net.patterns) {
+      if (pattern.line_id !== lineId) continue;
+      for (const stopId of pattern.stop_ids) {
+        const stop = stopById.get(stopId);
+        const station = stop ? stationById.get(stop.station_id) : undefined;
+        if (station?.location) coords.push([station.location.lon, station.location.lat]);
+      }
+    }
+    if (coords.length < 2) return;
+    const bounds = new maplibregl.LngLatBounds();
+    for (const c of coords) bounds.extend(c);
+    map.fitBounds(bounds, {
+      padding: { top: 90, bottom: 120, left: 500, right: 80 },
+      duration: 1100
+    });
+  });
+
+  // --- Selected station pulse marker ---
+  $effect(() => {
+    if (!map || !mapReady) return;
+    const selected = app.state.selectedStationId;
+    const loc = app.stationLocation(selected);
+    if (!loc) {
+      markers.selected?.remove();
+      markers.selected = null;
+      return;
+    }
+    const el = document.createElement('div');
+    el.className = 'station-pulse';
+    markers.selected?.remove();
+    markers.selected = new maplibregl.Marker({ element: el }).setLngLat(loc).addTo(map);
+    map.flyTo({ center: loc, zoom: Math.max(map.getZoom(), 12.2), duration: 900, essential: true });
+  });
+
+  // --- Origin / destination markers ---
+  $effect(() => {
+    if (!map || !mapReady) return;
+    const originLoc = app.stationLocation(app.state.originId);
+    const destLoc = app.stationLocation(app.state.destinationId);
+
+    for (const [id, loc, kind, letter] of [
+      ['origin', originLoc, 'origin', 'A'],
+      ['destination', destLoc, 'destination', 'B']
+    ] as const) {
+      if (!loc) {
+        markers[id]?.remove();
+        markers[id] = null;
+        continue;
+      }
+      const el = document.createElement('div');
+      el.className = `od-marker od-marker--${kind}`;
+      el.innerHTML = `<div class="od-marker__ring"></div><div class="od-marker__core">${letter}</div>`;
+      markers[id]?.remove();
+      markers[id] = new maplibregl.Marker({ element: el, anchor: 'center' })
+        .setLngLat(loc)
+        .addTo(map);
+    }
+  });
+
+  // --- Route overlay with animated dashes ---
+  $effect(() => {
+    if (!map || !mapReady) return;
+    const route: RoutePlan | null = app.route;
+    const m = map;
+    stopRouteAnimation();
+
+    if (!route) {
+      (m.getSource('route-line') as maplibregl.GeoJSONSource)?.setData(emptyFeatureCollection());
+      return;
+    }
+
+    const features: Feature[] = [];
+    for (const leg of route.legs) {
+      if (leg.kind !== 'ride') continue;
+      const coords: [number, number][] = [];
+      for (const stationId of leg.station_ids ?? [leg.from_station_id, leg.to_station_id]) {
+        const loc = app.stationLocation(stationId);
+        if (loc) coords.push(loc);
+      }
+      if (coords.length < 2) continue;
+      features.push({
+        type: 'Feature',
+        properties: {
+          color: app.lineColor(leg.line_id),
+          leg: `${leg.from_station_id}->${leg.to_station_id}`
+        },
+        geometry: { type: 'LineString', coordinates: smoothLine(coords) }
+      });
+    }
+    (m.getSource('route-line') as maplibregl.GeoJSONSource)?.setData({
+      type: 'FeatureCollection',
+      features
+    });
+
+    // Fit to the whole route once it changes.
+    const allCoords = features.flatMap(
+      (f) => (f.geometry as LineString).coordinates as [number, number][]
+    );
+    if (allCoords.length > 1) {
+      const bounds = new maplibregl.LngLatBounds();
+      for (const c of allCoords) bounds.extend(c as maplibregl.LngLatLike);
+      map.fitBounds(bounds, {
+        padding: { top: 160, bottom: 260, left: 80, right: 80 },
+        duration: 1100
+      });
+    }
+
+    startRouteAnimation();
+  });
+
+  function startRouteAnimation(): void {
+    const dashArraySequence = [
+      [0, 4, 3],
+      [0.5, 4, 2.5],
+      [1, 4, 2],
+      [1.5, 4, 1.5],
+      [2, 4, 1],
+      [2.5, 4, 0.5],
+      [3, 4, 0],
+      [0, 0.5, 3, 3.5],
+      [0, 1, 3, 3],
+      [0, 1.5, 3, 2.5],
+      [0, 2, 3, 2],
+      [0, 2.5, 3, 1.5],
+      [0, 3, 3, 1],
+      [0, 3.5, 3, 0.5]
+    ];
+    let step = 0;
+    const frame = () => {
+      const dash = dashArraySequence[step % dashArraySequence.length];
+      if (map?.getLayer('route-dashes')) {
+        map.setPaintProperty('route-dashes', 'line-dasharray', dash);
+      }
+      step += 1;
+      routeAnimId = requestAnimationFrame(frame);
+    };
+    routeAnimId = requestAnimationFrame(frame);
+  }
+
+  function stopRouteAnimation(): void {
+    cancelAnimationFrame(routeAnimId);
+    routeAnimId = 0;
+  }
 </script>
 
-<div bind:this={container} class="w-full h-[80vh] rounded border border-gray-200"></div>
+<!-- Wrapper needed: maplibre-gl.css sets `position: relative` on the map
+     container, which would override a bare `absolute inset-0` on it. -->
+<div class="absolute inset-0">
+  <div bind:this={container} class="h-full w-full"></div>
+</div>
+
+{#if app.loading}
+  <div
+    class="pointer-events-none absolute inset-0 z-10 grid place-items-center bg-background/40 backdrop-blur-[2px]"
+  >
+    <div class="flex items-center gap-3 rounded-2xl border bg-popover/90 px-6 py-4 shadow-xl">
+      <span
+        class="size-5 animate-spin rounded-full border-2 border-primary border-t-transparent"
+      ></span>
+      <span class="text-sm font-medium">{i18n.t.map_loading()}</span>
+    </div>
+  </div>
+{:else if app.error}
+  <div class="pointer-events-none absolute inset-0 z-10 grid place-items-center">
+    <div
+      class="rounded-2xl border border-destructive/40 bg-popover/95 px-6 py-4 text-sm text-destructive shadow-xl"
+    >
+      {app.error}
+    </div>
+  </div>
+{/if}

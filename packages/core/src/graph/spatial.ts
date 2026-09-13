@@ -1,4 +1,4 @@
-import { haversineKm, type LonLat } from "../geocode/index.js";
+import { haversineKm, type LonLat } from '../geocode/index.js';
 
 interface Entry<T> {
   item: T;
@@ -66,6 +66,6 @@ export function buildSpatialIndex<T>(items: T[], coord: (item: T) => LonLat): Sp
       }
 
       return results.slice(0, k);
-    },
+    }
   };
 }

@@ -1,4 +1,4 @@
-import { Schema } from "effect";
+import { Schema } from 'effect';
 
 /**
  * Multilingual name object. `zh` and `en` are mandatory; additional languages
@@ -8,7 +8,7 @@ import { Schema } from "effect";
  */
 export const MultilingualName = Schema.Struct({
   zh: Schema.String,
-  en: Schema.String,
+  en: Schema.String
 });
 
 export type MultilingualName = Schema.Schema.Type<typeof MultilingualName>;
@@ -18,15 +18,15 @@ export const MultilingualNameWithExtras = Schema.Struct({
   zh: Schema.String,
   en: Schema.String,
   rest: Schema.optionalWith(Schema.Record({ key: Schema.String, value: Schema.String }), {
-    as: "Option",
-  }),
+    as: 'Option'
+  })
 });
 
 /** Build a names object guaranteed to carry zh and en. */
 export function makeNames(
   zh: string,
   en: string,
-  extra?: Record<string, string>,
+  extra?: Record<string, string>
 ): MultilingualName {
   return { zh, en, ...extra };
 }

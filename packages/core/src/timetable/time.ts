@@ -20,7 +20,7 @@ export function parseHHMM(value: string): number | null {
 export function formatMinutes(total: number): string {
   const h = Math.floor(total / 60);
   const m = total % 60;
-  return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
 }
 
 /** Convert a per-day array of "HH:MM" times to a minutes array (null for gaps). */
@@ -35,7 +35,7 @@ export function toMinutesArray(times: readonly string[]): (number | null)[] {
  */
 export function effectiveTime(times: readonly string[], weekdayIndex: number): number | null {
   if (times.length === 1) return parseHHMM(times[0]);
-  if (times.length === 7) return parseHHMM(times[weekdayIndex] ?? "");
+  if (times.length === 7) return parseHHMM(times[weekdayIndex] ?? '');
   return null;
 }
 
@@ -60,7 +60,7 @@ const DAY_MINUTES = 24 * 60;
  * `first_train` is the service-day anchor and is never shifted (only padded).
  */
 export function normalizeTimetableTimes<
-  T extends { first_train: readonly string[]; last_train: readonly string[] },
+  T extends { first_train: readonly string[]; last_train: readonly string[] }
 >(record: T): T {
   const first = record.first_train;
   const last = record.last_train;
@@ -68,7 +68,7 @@ export function normalizeTimetableTimes<
 
   let changed = false;
   // Sources sometimes use a full-width colon (`7：01`).
-  const clean = (time: string) => time.replace("：", ":").trim();
+  const clean = (time: string) => time.replace('：', ':').trim();
   const pad = (raw: string): string => {
     const time = clean(raw);
     const minutes = parseHHMM(time);
@@ -100,6 +100,6 @@ export function hasValidTimes(record: {
   last_train: readonly string[];
 }): boolean {
   const valid = (times: readonly string[]) =>
-    times.some((t) => parseHHMM(t.replace("：", ":").trim()) != null);
+    times.some((t) => parseHHMM(t.replace('：', ':').trim()) != null);
   return valid(record.first_train) && valid(record.last_train);
 }

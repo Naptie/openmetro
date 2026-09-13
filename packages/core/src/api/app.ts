@@ -1,15 +1,15 @@
-import { cors } from "@elysiajs/cors";
-import { openapi } from "@elysiajs/openapi";
-import { Effect } from "effect";
-import { Elysia, t } from "elysia";
-import type { NetworkSource } from "../data/source.js";
-import type { NetworkData } from "../data/types.js";
-import { buildStationIndex, buildStopGraph, type WeightKind } from "../graph/build.js";
-import { travelTimes } from "../graph/dijkstra.js";
-import { planRoute } from "../graph/route.js";
-import { buildSpatialIndex, type SpatialIndex } from "../graph/spatial.js";
-import type { FareMatrixEncoded, StationEncoded } from "../schema/index.js";
-import { statusForRecord } from "../timetable/status.js";
+import { cors } from '@elysiajs/cors';
+import { openapi } from '@elysiajs/openapi';
+import { Effect } from 'effect';
+import { Elysia, t } from 'elysia';
+import type { NetworkSource } from '../data/source.js';
+import type { NetworkData } from '../data/types.js';
+import { buildStationIndex, buildStopGraph, type WeightKind } from '../graph/build.js';
+import { travelTimes } from '../graph/dijkstra.js';
+import { planRoute } from '../graph/route.js';
+import { buildSpatialIndex, type SpatialIndex } from '../graph/spatial.js';
+import type { FareMatrixEncoded, StationEncoded } from '../schema/index.js';
+import { statusForRecord } from '../timetable/status.js';
 import {
   projectFareMatrix,
   projectLine,
@@ -19,8 +19,8 @@ import {
   projectStation,
   projectStop,
   projectTimetable,
-  projectTransfer,
-} from "./projections.js";
+  projectTransfer
+} from './projections.js';
 
 /** Run an Effect and resolve to a value (throws on failure → Elysia error). */
 function runEffect<E, A>(effect: Effect.Effect<A, E>): Promise<A> {
@@ -46,9 +46,9 @@ function projectStations(data: NetworkData) {
   });
 }
 
-function resolveWeight(weight: "time" | "distance" | undefined, data: NetworkData): WeightKind {
-  if (weight === "distance") return "distance";
-  if (weight === "time") return "time";
+function resolveWeight(weight: 'time' | 'distance' | undefined, data: NetworkData): WeightKind {
+  if (weight === 'distance') return 'distance';
+  if (weight === 'time') return 'time';
   return data.network.routing.weight;
 }
 
@@ -61,32 +61,32 @@ function lookupFare(matrix: FareMatrixEncoded, from: string, to: string): number
 }
 
 const NetworkParams = t.Object({
-  id: t.String({ description: "Network id", examples: ["cn-bj", "cn-sh", "cn-gz"] }),
+  id: t.String({ description: 'Network id', examples: ['cn-bj', 'cn-sh', 'cn-gz'] })
 });
 
 const StationParams = t.Object({
-  id: t.String({ description: "Network id", examples: ["cn-bj"] }),
-  stationId: t.String({ description: "Station id", examples: ["cn-bj-xizhimen"] }),
+  id: t.String({ description: 'Network id', examples: ['cn-bj'] }),
+  stationId: t.String({ description: 'Station id', examples: ['cn-bj-xizhimen'] })
 });
 
 const WeightQuery = t.Optional(
-  t.Union([t.Literal("time"), t.Literal("distance")], {
-    description: "Routing weight; defaults to the network's `routing.weight`.",
-  }),
+  t.Union([t.Literal('time'), t.Literal('distance')], {
+    description: "Routing weight; defaults to the network's `routing.weight`."
+  })
 );
 
 const TAGS = [
-  { name: "Health", description: "Liveness probe" },
-  { name: "Networks", description: "Network metadata and city information" },
-  { name: "Lines", description: "Line metadata (names, colours, mode)" },
-  { name: "Stations", description: "Station identity, coordinates and line membership" },
-  { name: "Stops", description: "Per-line stop occurrences (routing nodes)" },
-  { name: "Patterns", description: "Route alignments (main + branches)" },
-  { name: "Segments", description: "Ride edges with travel times" },
-  { name: "Transfers", description: "Directional transfer walk edges" },
-  { name: "Timetables", description: "First/last train times and in-service status" },
-  { name: "Fares", description: "Origin/destination fares (optional layer)" },
-  { name: "Routing", description: "Derived graphs, routes and travel-time isochrones" },
+  { name: 'Health', description: 'Liveness probe' },
+  { name: 'Networks', description: 'Network metadata and city information' },
+  { name: 'Lines', description: 'Line metadata (names, colours, mode)' },
+  { name: 'Stations', description: 'Station identity, coordinates and line membership' },
+  { name: 'Stops', description: 'Per-line stop occurrences (routing nodes)' },
+  { name: 'Patterns', description: 'Route alignments (main + branches)' },
+  { name: 'Segments', description: 'Ride edges with travel times' },
+  { name: 'Transfers', description: 'Directional transfer walk edges' },
+  { name: 'Timetables', description: 'First/last train times and in-service status' },
+  { name: 'Fares', description: 'Origin/destination fares (optional layer)' },
+  { name: 'Routing', description: 'Derived graphs, routes and travel-time isochrones' }
 ];
 
 export interface ApiAppOptions {
@@ -120,16 +120,16 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
               Effect.map((d) => {
                 const withLocation = d.stations.filter(
                   (s): s is StationEncoded & { location: { lon: number; lat: number } } =>
-                    s.location != null,
+                    s.location != null
                 );
                 return [id, buildSpatialIndex(withLocation, (s) => s.location)] as const;
-              }),
-            ),
-          ),
-        ),
+              })
+            )
+          )
+        )
       ),
-      Effect.map((entries) => new Map<string, SpatialIndex<StationEncoded>>(entries)),
-    ),
+      Effect.map((entries) => new Map<string, SpatialIndex<StationEncoded>>(entries))
+    )
   );
 
   return (
@@ -139,75 +139,75 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
       .use(
         cors({
           origin: true,
-          methods: ["GET", "OPTIONS"],
-          allowedHeaders: ["Content-Type"],
-          maxAge: 86_400,
-        }),
+          methods: ['GET', 'OPTIONS'],
+          allowedHeaders: ['Content-Type'],
+          maxAge: 86_400
+        })
       )
       // OpenAPI docs. `@elysiajs/openapi` builds a fresh UI response per
       // request on Cloudflare Workers, so no manual response handling is needed.
       .use(
         openapi({
-          path: "/swagger",
+          path: '/swagger',
           documentation: {
             info: {
-              title: "Open Metro API",
-              version: "0.1.0",
+              title: 'Open Metro API',
+              version: '0.1.0',
               description:
-                "Read-only API over canonical metro network data (lines, stations, stops, " +
-                "patterns, segments, transfers, timetables). Travel time is the canonical " +
-                "routing weight; routing runs on the stop graph so line changes are charged " +
-                "as transfer edges.",
+                'Read-only API over canonical metro network data (lines, stations, stops, ' +
+                'patterns, segments, transfers, timetables). Travel time is the canonical ' +
+                'routing weight; routing runs on the stop graph so line changes are charged ' +
+                'as transfer edges.'
             },
             servers: [
               {
-                url: "https://openmetro.phi.zone",
-                description: "Production (Cloudflare Worker)",
+                url: 'https://openmetro.phi.zone',
+                description: 'Production (Cloudflare Worker)'
               },
-              { url: "http://localhost:8790", description: "Local development" },
+              { url: 'http://localhost:8790', description: 'Local development' }
             ],
-            tags: TAGS,
-          },
-        }),
+            tags: TAGS
+          }
+        })
       )
-      .get("/api/health", () => ({ status: "ok" }), {
-        detail: { tags: ["Health"], summary: "Liveness probe" },
+      .get('/api/health', () => ({ status: 'ok' }), {
+        detail: { tags: ['Health'], summary: 'Liveness probe' }
       })
       .get(
-        "/api/networks",
+        '/api/networks',
         async () => {
           const ids = await source.list();
           const networks = await Promise.all(
             ids.map((id) =>
-              runEffect(source.loadMeta(id).pipe(Effect.map(projectNetwork))).catch(() => null),
-            ),
+              runEffect(source.loadMeta(id).pipe(Effect.map(projectNetwork))).catch(() => null)
+            )
           );
           return { networks: networks.filter((n) => n != null) };
         },
-        { detail: { tags: ["Networks"], summary: "List all networks with metadata" } },
+        { detail: { tags: ['Networks'], summary: 'List all networks with metadata' } }
       )
       .get(
-        "/api/networks/:id",
+        '/api/networks/:id',
         ({ params }) => withNetwork(params.id, (d) => projectNetwork(d.network)),
         {
           params: NetworkParams,
-          detail: { tags: ["Networks"], summary: "Get one network's metadata" },
-        },
+          detail: { tags: ['Networks'], summary: "Get one network's metadata" }
+        }
       )
       .get(
-        "/api/networks/:id/lines",
+        '/api/networks/:id/lines',
         ({ params }) => withNetwork(params.id, (d) => d.lines.map(projectLine)),
-        { params: NetworkParams, detail: { tags: ["Lines"], summary: "List lines" } },
+        { params: NetworkParams, detail: { tags: ['Lines'], summary: 'List lines' } }
       )
-      .get("/api/networks/:id/stations", ({ params }) => withNetwork(params.id, projectStations), {
+      .get('/api/networks/:id/stations', ({ params }) => withNetwork(params.id, projectStations), {
         params: NetworkParams,
         detail: {
-          tags: ["Stations"],
-          summary: "List stations with coordinates, lines and interchange status",
-        },
+          tags: ['Stations'],
+          summary: 'List stations with coordinates, lines and interchange status'
+        }
       })
       .get(
-        "/api/networks/:id/stations/:stationId",
+        '/api/networks/:id/stations/:stationId',
         ({ params, set }) =>
           withNetwork(params.id, (d) => {
             const lines = stationLines(d);
@@ -225,56 +225,56 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
                 .filter((t) => t.station_id === station.id)
                 .map(projectTransfer),
               timetables: stationTimetables.map(projectTimetable),
-              status: stationTimetables.map((t) => statusForRecord(t, now, d.network.timezone)),
+              status: stationTimetables.map((t) => statusForRecord(t, now, d.network.timezone))
             };
           }),
         {
           params: StationParams,
           detail: {
-            tags: ["Stations"],
-            summary: "Station detail with transfers, timetables and in-service status",
-          },
-        },
+            tags: ['Stations'],
+            summary: 'Station detail with transfers, timetables and in-service status'
+          }
+        }
       )
       .get(
-        "/api/networks/:id/stops",
+        '/api/networks/:id/stops',
         ({ params }) => withNetwork(params.id, (d) => d.stops.map(projectStop)),
-        { params: NetworkParams, detail: { tags: ["Stops"], summary: "List per-line stops" } },
+        { params: NetworkParams, detail: { tags: ['Stops'], summary: 'List per-line stops' } }
       )
       .get(
-        "/api/networks/:id/patterns",
+        '/api/networks/:id/patterns',
         ({ params }) => withNetwork(params.id, (d) => d.patterns.map(projectPattern)),
         {
           params: NetworkParams,
-          detail: { tags: ["Patterns"], summary: "List route alignments (main + branches)" },
-        },
+          detail: { tags: ['Patterns'], summary: 'List route alignments (main + branches)' }
+        }
       )
       .get(
-        "/api/networks/:id/segments",
+        '/api/networks/:id/segments',
         ({ params }) => withNetwork(params.id, (d) => d.segments.map(projectSegment)),
-        { params: NetworkParams, detail: { tags: ["Segments"], summary: "List ride edges" } },
+        { params: NetworkParams, detail: { tags: ['Segments'], summary: 'List ride edges' } }
       )
       .get(
-        "/api/networks/:id/transfers",
+        '/api/networks/:id/transfers',
         ({ params }) => withNetwork(params.id, (d) => d.transfers.map(projectTransfer)),
         {
           params: NetworkParams,
-          detail: { tags: ["Transfers"], summary: "List directional transfer walk edges" },
-        },
+          detail: { tags: ['Transfers'], summary: 'List directional transfer walk edges' }
+        }
       )
       .get(
-        "/api/networks/:id/timetables",
+        '/api/networks/:id/timetables',
         ({ params }) => withNetwork(params.id, (d) => d.timetables.map(projectTimetable)),
-        { params: NetworkParams, detail: { tags: ["Timetables"], summary: "List timetables" } },
+        { params: NetworkParams, detail: { tags: ['Timetables'], summary: 'List timetables' } }
       )
       .get(
-        "/api/networks/:id/fares",
+        '/api/networks/:id/fares',
         ({ params, query, set }) =>
           withNetwork(params.id, (d) => {
             const matrix = d.fares;
             if (!matrix) {
               set.status = 404;
-              return { error: "no fares published for this network" };
+              return { error: 'no fares published for this network' };
             }
             const from = query.from;
             if (from) {
@@ -292,7 +292,7 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
                 from_station_id: from,
                 currency: matrix.currency,
                 unit: matrix.unit,
-                fares,
+                fares
               };
             }
             return projectFareMatrix(matrix);
@@ -303,18 +303,18 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
             from: t.Optional(
               t.String({
                 description: "Return only this origin station's fare row.",
-                examples: ["cn-bj-pingguoyuan"],
-              }),
-            ),
+                examples: ['cn-bj-pingguoyuan']
+              })
+            )
           }),
           detail: {
-            tags: ["Fares"],
-            summary: "Origin-destination fare matrix (or one origin's row)",
-          },
-        },
+            tags: ['Fares'],
+            summary: "Origin-destination fare matrix (or one origin's row)"
+          }
+        }
       )
       .get(
-        "/api/networks/:id/graph",
+        '/api/networks/:id/graph',
         ({ params, query }) =>
           withNetwork(params.id, (d) => {
             const graph = buildStopGraph(
@@ -323,27 +323,27 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
               d.segments,
               d.transfers,
               d.network.routing,
-              resolveWeight(query.weight, d),
+              resolveWeight(query.weight, d)
             );
             return {
               network_id: d.network.id,
-              weight: graph.kind === "time" ? "seconds" : "km",
+              weight: graph.kind === 'time' ? 'seconds' : 'km',
               routing: d.network.routing,
               nodes: graph.nodes,
-              edges: graph.edges,
+              edges: graph.edges
             };
           }),
         {
           params: NetworkParams,
           query: t.Object({ weight: WeightQuery }),
           detail: {
-            tags: ["Routing"],
-            summary: "Assembled stop graph (nodes + weighted ride/transfer edges)",
-          },
-        },
+            tags: ['Routing'],
+            summary: 'Assembled stop graph (nodes + weighted ride/transfer edges)'
+          }
+        }
       )
       .get(
-        "/api/networks/:id/route",
+        '/api/networks/:id/route',
         ({ params, query, set }) =>
           withNetwork(params.id, (d) => {
             const { from, to } = query;
@@ -358,34 +358,34 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
               d.segments,
               d.transfers,
               d.network.routing,
-              resolveWeight(query.weight, d),
+              resolveWeight(query.weight, d)
             );
             const plan = planRoute(graph, d.stops, from, to, index);
             if (!plan) {
               set.status = 404;
-              return { error: "no route found" };
+              return { error: 'no route found' };
             }
             return {
               ...plan,
               fare: d.fares ? lookupFare(d.fares, from, to) : null,
-              currency: d.fares?.currency ?? null,
+              currency: d.fares?.currency ?? null
             };
           }),
         {
           params: NetworkParams,
           query: t.Object({
-            from: t.String({ description: "Origin station id", examples: ["cn-bj-pingguoyuan"] }),
-            to: t.String({ description: "Destination station id", examples: ["cn-bj-xizhimen"] }),
-            weight: WeightQuery,
+            from: t.String({ description: 'Origin station id', examples: ['cn-bj-pingguoyuan'] }),
+            to: t.String({ description: 'Destination station id', examples: ['cn-bj-xizhimen'] }),
+            weight: WeightQuery
           }),
           detail: {
-            tags: ["Routing"],
-            summary: "Station-to-station route with legs, total time and transfer count",
-          },
-        },
+            tags: ['Routing'],
+            summary: 'Station-to-station route with legs, total time and transfer count'
+          }
+        }
       )
       .get(
-        "/api/networks/:id/travel-times",
+        '/api/networks/:id/travel-times',
         ({ params, query, set }) =>
           withNetwork(params.id, (d) => {
             const { from } = query;
@@ -401,7 +401,7 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
               d.segments,
               d.transfers,
               d.network.routing,
-              resolveWeight(query.weight, d),
+              resolveWeight(query.weight, d)
             );
             const stationByStop = new Map(d.stops.map((s) => [s.id, s.station_id]));
             const stopTimes = travelTimes(graph, sources);
@@ -415,37 +415,37 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
             const within = query.within;
             const stations = [...stationTimes.entries()]
               .filter(
-                ([, seconds]) => within == null || !Number.isFinite(within) || seconds <= within,
+                ([, seconds]) => within == null || !Number.isFinite(within) || seconds <= within
               )
               .map(([station_id, seconds]) => ({ station_id, seconds }))
               .sort((a, b) => a.seconds - b.seconds);
             return {
               from_station_id: from,
-              weight: graph.kind === "time" ? "seconds" : "km",
+              weight: graph.kind === 'time' ? 'seconds' : 'km',
               within: within != null && Number.isFinite(within) ? within : null,
-              stations,
+              stations
             };
           }),
         {
           params: NetworkParams,
           query: t.Object({
-            from: t.String({ description: "Origin station id", examples: ["cn-bj-pingguoyuan"] }),
+            from: t.String({ description: 'Origin station id', examples: ['cn-bj-pingguoyuan'] }),
             within: t.Optional(
               t.Numeric({
-                description: "Only return stations reachable within this many seconds.",
-                examples: [600],
-              }),
+                description: 'Only return stations reachable within this many seconds.',
+                examples: [600]
+              })
             ),
-            weight: WeightQuery,
+            weight: WeightQuery
           }),
           detail: {
-            tags: ["Routing"],
-            summary: "Travel-time isochrone from one station to every other station",
-          },
-        },
+            tags: ['Routing'],
+            summary: 'Travel-time isochrone from one station to every other station'
+          }
+        }
       )
       .get(
-        "/api/networks/:id/nearest",
+        '/api/networks/:id/nearest',
         async ({ params, query, set }) => {
           const indices = await spatialIndices;
           const index = indices.get(params.id);
@@ -459,27 +459,27 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
             query: { lon: query.lon, lat: query.lat },
             stations: results.map((r: { item: StationEncoded; distance: number }) => ({
               station_id: r.item.id,
-              distance_km: Math.round(r.distance * 1000) / 1000,
-            })),
+              distance_km: Math.round(r.distance * 1000) / 1000
+            }))
           };
         },
         {
           params: NetworkParams,
           query: t.Object({
-            lon: t.Number({ description: "Longitude (WGS-84 / GCJ-02)", examples: [121.475] }),
-            lat: t.Number({ description: "Latitude (WGS-84 / GCJ-02)", examples: [31.233] }),
+            lon: t.Number({ description: 'Longitude (WGS-84 / GCJ-02)', examples: [121.475] }),
+            lat: t.Number({ description: 'Latitude (WGS-84 / GCJ-02)', examples: [31.233] }),
             k: t.Optional(
               t.Number({
-                description: "Number of nearest stations to return (default 5).",
-                examples: [5],
-              }),
-            ),
+                description: 'Number of nearest stations to return (default 5).',
+                examples: [5]
+              })
+            )
           }),
           detail: {
-            tags: ["Stations"],
-            summary: "Find nearest stations to an arbitrary coordinate",
-          },
-        },
+            tags: ['Stations'],
+            summary: 'Find nearest stations to an arbitrary coordinate'
+          }
+        }
       )
   );
 }

@@ -1,10 +1,10 @@
-import { Schema } from "effect";
-import { SourceIdRef } from "./line.js";
-import { MultilingualName } from "./names.js";
+import { Schema } from 'effect';
+import { SourceIdRef } from './line.js';
+import { MultilingualName } from './names.js';
 
 const Extras = Schema.Record({
   key: Schema.String,
-  value: Schema.Unknown,
+  value: Schema.Unknown
 });
 
 /**
@@ -20,8 +20,8 @@ const Extras = Schema.Record({
 export const Pattern = Schema.Struct({
   id: Schema.String,
   line_id: Schema.String,
-  name: Schema.optionalWith(Schema.String, { as: "Option" }),
-  names: Schema.optionalWith(MultilingualName, { as: "Option" }),
+  name: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  names: Schema.optionalWith(MultilingualName, { as: 'Option' }),
   /** Ordered stop ids, origin first, terminal last. */
   stop_ids: Schema.Array(Schema.String),
   /** First stop of the alignment (origin). */
@@ -31,10 +31,10 @@ export const Pattern = Schema.Struct({
   /** True for the line's main alignment; false for branches. */
   is_primary: Schema.Boolean,
   /** For a branch, the stop on the primary alignment where it diverges. */
-  junction_stop_id: Schema.optionalWith(Schema.String, { as: "Option" }),
-  color: Schema.optionalWith(Schema.String, { as: "Option" }),
+  junction_stop_id: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  color: Schema.optionalWith(Schema.String, { as: 'Option' }),
   source_ids: Schema.Array(SourceIdRef),
-  extras: Schema.optionalWith(Extras, { as: "Option" }),
+  extras: Schema.optionalWith(Extras, { as: 'Option' })
 });
 
 export type Pattern = Schema.Schema.Type<typeof Pattern>;

@@ -17,6 +17,8 @@
     "data:sync": "bun run scripts/sync.ts",
     "data:verify": "bun run scripts/verify-data.ts",
     "openapi": "bun run scripts/export-openapi.ts",
+    "i18n": "bun run scripts/manage-messages.ts",
+    "i18n:fix": "bun run scripts/manage-messages.ts --fix",
     "api": "bun run --cwd packages/core api",
     "worker:dev": "bun run --cwd packages/api-worker dev",
     "worker:build": "bun run --cwd packages/api-worker build",

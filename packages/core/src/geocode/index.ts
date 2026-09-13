@@ -1,48 +1,49 @@
-import { cityBbox, isWithinCityBbox } from "./city-bbox.js";
-import { isCoarseCoordinate, isConsistentWithLine } from "./consistency.js";
+import { cityBbox, isWithinCityBbox } from './city-bbox.js';
+import { isCoarseCoordinate, isConsistentWithLine } from './consistency.js';
 import {
   type Bbox,
   bboxAround,
   bboxOf,
   fetchOverpassStations,
   findOverpassStation,
-  indexOverpassStations,
-} from "./overpass.js";
-import { geocodeViaPhoton } from "./photon.js";
-import { fetchSubwayStations, findSubwayStation, indexSubwayStations } from "./subway.js";
+  indexOverpassStations
+} from './overpass.js';
+import { geocodeViaPhoton } from './photon.js';
+import { fetchSubwayStations, findSubwayStation, indexSubwayStations } from './subway.js';
 
-export { CITY_BBOX, cityBbox, isWithinCityBbox } from "./city-bbox.js";
+export { CITY_BBOX, cityBbox, isWithinCityBbox } from './city-bbox.js';
 export {
   haversineKm,
   isCoarseCoordinate,
   isConsistentWithLine,
   MAX_NEAREST_KM,
   maxNearestKm,
-  nearestSameLinePeerKm,
-} from "./consistency.js";
+  nearestSameLinePeerKm
+} from './consistency.js';
 export {
   type Bbox,
   bboxAround,
   bboxOf,
+  bd09ToGcj02,
   fetchOverpassStations,
   findOverpassStation,
   indexOverpassStations,
   type OverpassStation,
-  wgs84ToGcj02,
-} from "./overpass.js";
-export { geocodeViaPhoton } from "./photon.js";
-export { officialFetchHeaders, proxyUrl } from "./proxy.js";
+  wgs84ToGcj02
+} from './overpass.js';
+export { geocodeViaPhoton } from './photon.js';
+export { officialFetchHeaders, proxyUrl } from './proxy.js';
 export {
   fetchSubwayStations,
   findSubwayStation,
   indexSubwayStations,
-  type SubwayStation,
-} from "./subway.js";
+  type SubwayStation
+} from './subway.js';
 
 export interface GeoResult {
   lon: number;
   lat: number;
-  crs: "gcj02";
+  crs: 'gcj02';
 }
 
 export interface LonLat {
@@ -72,7 +73,7 @@ interface LineRef {
 }
 
 function stationName(st: StationLike): string {
-  return st.names?.zh ?? st.name ?? "";
+  return st.names?.zh ?? st.name ?? '';
 }
 
 function buildStopMaps(stops: StopRef[] | undefined) {
@@ -122,7 +123,7 @@ export async function fillCoordinates<T extends StationLike>(
     onOfficialMatch?: (name: string) => void;
     onOverpassMatch?: (name: string) => void;
     onGeocode?: (name: string) => void;
-  },
+  }
 ): Promise<T[]> {
   const cities = [opts.city, ...(opts.extraCities ?? [])];
   const cityCenter = cityBbox(opts.city)?.center;
@@ -138,8 +139,8 @@ export async function fillCoordinates<T extends StationLike>(
   const accept = (
     st: T,
     loc: GeoResult,
-    source: "official" | "overpass" | "photon",
-    peerPool: Map<string, StationLocation> = placed,
+    source: 'official' | 'overpass' | 'photon',
+    peerPool: Map<string, StationLocation> = placed
   ) => {
     if (!isWithinCityBbox(opts.city, loc.lon, loc.lat)) return false;
     if (isCoarseCoordinate(loc.lon, loc.lat)) return false;
@@ -151,22 +152,22 @@ export async function fillCoordinates<T extends StationLike>(
         stopsByStation,
         stopsByLine,
         modeByLine,
-        stopsByStation.get(st.id) ?? [],
+        stopsByStation.get(st.id) ?? []
       )
     ) {
       return false;
     }
     placed.set(st.id, loc);
     st.location = loc;
-    if (source === "official") opts.onOfficialMatch?.(stationName(st));
-    else if (source === "overpass") opts.onOverpassMatch?.(stationName(st));
+    if (source === 'official') opts.onOfficialMatch?.(stationName(st));
+    else if (source === 'overpass') opts.onOverpassMatch?.(stationName(st));
     else opts.onGeocode?.(stationName(st));
     return true;
   };
 
   // ── 1. AMap subway ────────────────────────────────────────────
   const indices = await Promise.all(
-    cities.map(async (c) => indexSubwayStations(await fetchSubwayStations(c))),
+    cities.map(async (c) => indexSubwayStations(await fetchSubwayStations(c)))
   );
   for (const st of stations) {
     if (st.location) {
@@ -209,7 +210,7 @@ export async function fillCoordinates<T extends StationLike>(
     for (const [id, loc] of officialCandidates) {
       if (id !== st.id && !peerPool.has(id)) peerPool.set(id, loc);
     }
-    accept(st, off, "official", peerPool);
+    accept(st, off, 'official', peerPool);
   }
 
   // Drop pre-seeded locations that are coarse, out of city, or conflict with subway data.
@@ -263,7 +264,7 @@ export async function fillCoordinates<T extends StationLike>(
         if (st.location) continue;
         const name = stationName(st);
         const hit = name ? findOverpassStation(overpass, name) : undefined;
-        if (hit) accept(st, hit.location, "overpass");
+        if (hit) accept(st, hit.location, 'overpass');
       }
     }
   }
@@ -278,7 +279,7 @@ export async function fillCoordinates<T extends StationLike>(
       const hit = await geocodeViaPhoton(name, city, center);
       if (hit) {
         // Photon is biased per city name; accept only if in the primary city bbox.
-        if (accept(st, hit, "photon")) break;
+        if (accept(st, hit, 'photon')) break;
       }
     }
   }

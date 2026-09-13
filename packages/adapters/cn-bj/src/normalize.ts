@@ -7,8 +7,8 @@ import type {
   StationEncoded,
   StopEncoded,
   TimetableEncoded,
-  TransferEncoded,
-} from "@openmetro/core";
+  TransferEncoded
+} from '@openmetro/core';
 import {
   applyTimetableServiceStatus,
   deriveLineEnglishName,
@@ -16,10 +16,10 @@ import {
   fillMissingSegmentTimes,
   hasValidTimes,
   lineSlug,
-  normalizeTimetableTimes,
-} from "@openmetro/core";
-import { XMLParser } from "fast-xml-parser";
-import { buildBeijingTimetablesFromTimeinfos } from "./timeinfos.js";
+  normalizeTimetableTimes
+} from '@openmetro/core';
+import { XMLParser } from 'fast-xml-parser';
+import { buildBeijingTimetablesFromTimeinfos } from './timeinfos.js';
 
 export interface BeijingRawInput {
   beijingXml: string;
@@ -45,14 +45,14 @@ export interface BeijingCanonical {
 
 const parser = new XMLParser({
   ignoreAttributes: false,
-  attributeNamePrefix: "@_",
+  attributeNamePrefix: '@_'
 });
 
 /**
  * Line codes the source XML mislabels as loops. Beijing Line 11 (`lcode=11`)
  * is a linear line; the XML's `loop="true"` is a source error.
  */
-const FORCE_NON_LOOP_LINES = new Set(["11"]);
+const FORCE_NON_LOOP_LINES = new Set(['11']);
 
 interface ApiStation {
   id: number;
@@ -64,60 +64,60 @@ interface ApiStation {
 }
 
 interface RawLine {
-  "@_lid": string;
-  "@_lb": string;
-  "@_i": string;
-  "@_loop": string;
-  "@_lc": string;
-  "@_lnub": string;
-  "@_lcode": string;
+  '@_lid': string;
+  '@_lb': string;
+  '@_i': string;
+  '@_loop': string;
+  '@_lc': string;
+  '@_lnub': string;
+  '@_lcode': string;
   p?: RawPoint | RawPoint[];
 }
 
 interface RawPoint {
-  "@_n": string;
-  "@_acc": string;
-  "@_lb": string;
-  "@_x": string;
-  "@_y": string;
-  "@_st": string;
-  "@_ex": string;
-  "@_ut"?: string;
-  "@_dt"?: string;
-  "@_ud"?: string;
-  "@_dd"?: string;
+  '@_n': string;
+  '@_acc': string;
+  '@_lb': string;
+  '@_x': string;
+  '@_y': string;
+  '@_st': string;
+  '@_ex': string;
+  '@_ut'?: string;
+  '@_dt'?: string;
+  '@_ud'?: string;
+  '@_dd'?: string;
 }
 
-const NETWORK_ID = "cn-bj";
+const NETWORK_ID = 'cn-bj';
 
 /** Classify Beijing lines that are not conventional metro. */
-function lineMode(lcode: string, zhName: string): LineEncoded["mode"] {
-  if (zhName.includes("T1") || zhName.includes("有轨")) return "tram";
-  if (zhName.includes("西郊")) return "light_rail";
-  if (zhName.includes("机场")) return "airport_express";
-  if (lcode === "79") return "tram"; // 亦庄T1线
-  if (lcode === "89") return "light_rail"; // 西郊线
-  if (lcode === "91") return "light_rail"; // S1线 (中低速磁浮)
-  if (lcode === "98" || lcode === "88") return "airport_express";
-  return "metro";
+function lineMode(lcode: string, zhName: string): LineEncoded['mode'] {
+  if (zhName.includes('T1') || zhName.includes('有轨')) return 'tram';
+  if (zhName.includes('西郊')) return 'light_rail';
+  if (zhName.includes('机场')) return 'airport_express';
+  if (lcode === '79') return 'tram'; // 亦庄T1线
+  if (lcode === '89') return 'light_rail'; // 西郊线
+  if (lcode === '91') return 'light_rail'; // S1线 (中低速磁浮)
+  if (lcode === '98' || lcode === '88') return 'airport_express';
+  return 'metro';
 }
 
 /** Human-readable station slug keyed off the English (or pinyin) name. */
 function stationSlug(en: string): string {
   return en
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 /** Fallback ASCII slug for names with no English value. */
 function asciiSlug(s: string): string {
   let out = s
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
   if (!out) {
-    out = [...Buffer.from(s, "utf-8")].map((b) => b.toString(16)).join("");
+    out = [...Buffer.from(s, 'utf-8')].map((b) => b.toString(16)).join('');
   }
   return out;
 }
@@ -139,42 +139,42 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
   const segments: SegmentEncoded[] = [];
 
   for (const rl of lines) {
-    const lid = rl["@_lid"];
-    const lb = rl["@_lb"];
-    const lineEn = deriveLineEnglishName(lb, rl["@_lcode"]) ?? lb;
-    const lineId = `${NETWORK_ID}-line-${lineSlug(rl["@_lcode"], lineEn)}`;
-    const color = hexToCss(rl["@_lc"]);
-    const isLoop = rl["@_loop"] === "true" && !FORCE_NON_LOOP_LINES.has(rl["@_lcode"]);
+    const lid = rl['@_lid'];
+    const lb = rl['@_lb'];
+    const lineEn = deriveLineEnglishName(lb, rl['@_lcode']) ?? lb;
+    const lineId = `${NETWORK_ID}-line-${lineSlug(rl['@_lcode'], lineEn)}`;
+    const color = hexToCss(rl['@_lc']);
+    const isLoop = rl['@_loop'] === 'true' && !FORCE_NON_LOOP_LINES.has(rl['@_lcode']);
 
     lineRecords.push({
       id: lineId,
       name: lb,
       names: { zh: lb, en: lineEn },
       aliases: [],
-      mode: lineMode(rl["@_lcode"], lb),
-      status: "operating",
+      mode: lineMode(rl['@_lcode'], lb),
+      status: 'operating',
       loop: isLoop,
-      source_ids: [{ source: "bjsubway-beijing-xml", id: lid }],
+      source_ids: [{ source: 'bjsubway-beijing-xml', id: lid }],
       color: color ?? undefined,
       extras: {
-        lcode: rl["@_lcode"],
-        lnub: rl["@_lnub"],
-        names_source: "derived",
-      },
+        lcode: rl['@_lcode'],
+        lnub: rl['@_lnub'],
+        names_source: 'derived'
+      }
     });
 
     const points = rl.p ? (Array.isArray(rl.p) ? rl.p : [rl.p]) : [];
-    const orderedStops = points.filter((p) => p["@_st"] === "true");
+    const orderedStops = points.filter((p) => p['@_st'] === 'true');
     const lineStops: StopEncoded[] = [];
 
     // Beijing's source is a single ordered alignment per line (loops included),
     // so each line gets one primary pattern.
     const patternId = `${lineId}-pattern-main`;
     for (const p of orderedStops) {
-      const acc = p["@_acc"];
-      const name = p["@_lb"];
-      const x = Number(p["@_x"]);
-      const y = Number(p["@_y"]);
+      const acc = p['@_acc'];
+      const name = p['@_lb'];
+      const x = Number(p['@_x']);
+      const y = Number(p['@_y']);
       stationNames.add(name);
 
       const stationId = `${NETWORK_ID}-${stationIdFor(name, enByZh.get(name))}`;
@@ -184,9 +184,9 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
         station_id: stationId,
         line_id: lineId,
         sequence: orderedStops.indexOf(p),
-        is_terminal: p["@_ex"] === "true" || p["@_n"] === "0",
+        is_terminal: p['@_ex'] === 'true' || p['@_n'] === '0',
         source_id: acc,
-        schematic: { x, y, crs: "schematic" },
+        schematic: { x, y, crs: 'schematic' }
       });
     }
     stops.push(...lineStops);
@@ -202,16 +202,16 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
         origin_stop_id: stopIds[0],
         terminal_stop_id: stopIds[stopIds.length - 1],
         is_primary: true,
-        source_ids: [{ source: "bjsubway-beijing-xml", id: lid }],
-        extras: { loop: isLoop },
+        source_ids: [{ source: 'bjsubway-beijing-xml', id: lid }],
+        extras: { loop: isLoop }
       });
     }
 
     for (let i = 0; i < orderedStops.length - 1; i++) {
       const a = orderedStops[i];
       const b = orderedStops[i + 1];
-      const aId = `${NETWORK_ID}-${stationIdFor(a["@_lb"], enByZh.get(a["@_lb"]))}`;
-      const bId = `${NETWORK_ID}-${stationIdFor(b["@_lb"], enByZh.get(b["@_lb"]))}`;
+      const aId = `${NETWORK_ID}-${stationIdFor(a['@_lb'], enByZh.get(a['@_lb']))}`;
+      const bId = `${NETWORK_ID}-${stationIdFor(b['@_lb'], enByZh.get(b['@_lb']))}`;
       const aStop = `${aId}-${slugTo(lineId)}`;
       const bStop = `${bId}-${slugTo(lineId)}`;
       segments.push({
@@ -221,11 +221,11 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
         to_stop_id: bStop,
         from_station_id: aId,
         to_station_id: bId,
-        direction: "both",
-        travel_time_seconds: numOrUndef(a["@_ut"]),
-        travel_time_source: "source" as const,
-        distance_km: numOrUndef(a["@_ud"]),
-        source_id: a["@_acc"],
+        direction: 'both',
+        travel_time_seconds: numOrUndef(a['@_ut']),
+        travel_time_source: 'source' as const,
+        distance_km: numOrUndef(a['@_ud']),
+        source_id: a['@_acc']
       });
     }
   }
@@ -241,12 +241,12 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
         id,
         name,
         names,
-        status: "operating" as const,
-        source_ids: [],
+        status: 'operating' as const,
+        source_ids: []
       };
     }),
     stops,
-    timetables,
+    timetables
   );
 
   const official = input.interchangeXml
@@ -260,23 +260,23 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
   return {
     network: {
       id: NETWORK_ID,
-      name: "北京地铁",
+      name: '北京地铁',
       city: {
-        id: "CN-11",
-        name: { zh: "北京", en: "Beijing" },
-        country: "CN",
+        id: 'CN-11',
+        name: { zh: '北京', en: 'Beijing' },
+        country: 'CN',
         population: 21893095,
         area: 16410.54,
-        location: { type: "Point", coordinates: [116.407526, 39.90403] },
+        location: { type: 'Point', coordinates: [116.407526, 39.90403] }
       },
-      country_code: "CN",
-      currency: "CNY",
-      timezone: "Asia/Shanghai",
-      coordinate_system: "gcj02",
-      default_units: { distance: "km", time: "seconds", speed: "km/h" },
-      routing: { weight: "time", default_transfer_seconds: 120, max_transfer_seconds: 600 },
+      country_code: 'CN',
+      currency: 'CNY',
+      timezone: 'Asia/Shanghai',
+      coordinate_system: 'gcj02',
+      default_units: { distance: 'km', time: 'seconds', speed: 'km/h' },
+      routing: { weight: 'time', default_transfer_seconds: 120, max_transfer_seconds: 600 },
       operators: [],
-      source: [],
+      source: []
     },
     lines: lineRecords,
     stations,
@@ -284,7 +284,7 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
     patterns,
     segments: finalSegments,
     transfers: deriveTransfers(stations, stops, official),
-    timetables: timetables.map(normalizeTimetableTimes).filter(hasValidTimes),
+    timetables: timetables.map(normalizeTimetableTimes).filter(hasValidTimes)
   };
 }
 
@@ -294,24 +294,24 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
  * XML); newer lines are absent and fall back to the default transfer penalty.
  */
 const INTERCHANGE_LEGEND: Record<string, string> = {
-  "0": "1号线",
-  "1": "2号线",
-  "2": "4号线",
-  "3": "5号线",
-  "4": "6号线",
-  "5": "8号线",
-  "6": "9号线",
-  "7": "10号线",
-  "8": "13号线",
-  "9": "14号线",
-  "10": "15号线",
-  "11": "八通线",
-  "12": "昌平线",
-  "13": "亦庄线",
-  "14": "房山线",
-  "15": "机场线",
-  "16": "7号线",
-  "17": "14号线",
+  '0': '1号线',
+  '1': '2号线',
+  '2': '4号线',
+  '3': '5号线',
+  '4': '6号线',
+  '5': '8号线',
+  '6': '9号线',
+  '7': '10号线',
+  '8': '13号线',
+  '9': '14号线',
+  '10': '15号线',
+  '11': '八通线',
+  '12': '昌平线',
+  '13': '亦庄线',
+  '14': '房山线',
+  '15': '机场线',
+  '16': '7号线',
+  '17': '14号线'
 };
 
 function matchLineId(name: string, lineRecords: LineEncoded[]): string | undefined {
@@ -319,8 +319,8 @@ function matchLineId(name: string, lineRecords: LineEncoded[]): string | undefin
   if (direct) return direct.id;
   const prefix = lineRecords.find((l) => l.name.startsWith(name));
   if (prefix) return prefix.id;
-  if (name === "八通线") return lineRecords.find((l) => l.name.includes("八通"))?.id;
-  if (name === "机场线") return lineRecords.find((l) => l.name.includes("机场"))?.id;
+  if (name === '八通线') return lineRecords.find((l) => l.name.includes('八通'))?.id;
+  if (name === '机场线') return lineRecords.find((l) => l.name.includes('机场'))?.id;
   return undefined;
 }
 
@@ -334,7 +334,7 @@ export function parseBeijingInterchange(
   xml: string,
   lineRecords: LineEncoded[],
   stops: StopEncoded[],
-  enByZh: Map<string, string>,
+  enByZh: Map<string, string>
 ): OfficialTransfer[] {
   const doc = parser.parse(xml) as {
     exs: { ex?: Record<string, string> | Record<string, string>[] };
@@ -354,10 +354,10 @@ export function parseBeijingInterchange(
 
   const out: OfficialTransfer[] = [];
   for (const ex of list) {
-    const fl = ex["@_fl"];
-    const tl = ex["@_tl"];
-    const name = ex["@_s"];
-    const t = Number(ex["@_t"]);
+    const fl = ex['@_fl'];
+    const tl = ex['@_tl'];
+    const name = ex['@_s'];
+    const t = Number(ex['@_t']);
     if (!fl || !tl || !name || !Number.isFinite(t)) continue;
     const fromLine = lineIdByLegendName.get(fl);
     const toLine = lineIdByLegendName.get(tl);
@@ -370,7 +370,7 @@ export function parseBeijingInterchange(
       from_line_id: fromLine,
       to_line_id: toLine,
       walk_time_seconds: t,
-      source_id: "bjsubway-interchange-xml",
+      source_id: 'bjsubway-interchange-xml'
     });
   }
   return out;
@@ -381,32 +381,32 @@ function stationIdFor(zh: string, en?: string): string {
 }
 
 function slugTo(lineId: string): string {
-  return lineId.replace(`${NETWORK_ID}-line-`, "");
+  return lineId.replace(`${NETWORK_ID}-line-`, '');
 }
 
 function cleanEn(raw: string): string {
   // Strip newlines and parenthetical direction/detail markers for slugs.
   return raw
-    .replace(/[\r\n]+/g, " ")
-    .replace(/\(.*?\)/g, "")
-    .replace(/\s+/g, " ")
+    .replace(/[\r\n]+/g, ' ')
+    .replace(/\(.*?\)/g, '')
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
 function numOrUndef(v: string | undefined): number | undefined {
-  if (v == null || v === "") return undefined;
+  if (v == null || v === '') return undefined;
   const n = Number(v);
   return Number.isFinite(n) ? n : undefined;
 }
 
 function hexToCss(hex: string | undefined): string | undefined {
   if (!hex) return undefined;
-  const m = hex.replace(/^0x/, "");
+  const m = hex.replace(/^0x/, '');
   const r = parseInt(m.slice(0, 2), 16);
   const g = parseInt(m.slice(2, 4), 16);
   const b = parseInt(m.slice(4, 6), 16);
   if ([r, g, b].some((n) => Number.isNaN(n))) return undefined;
-  return `#${[r, g, b].map((n) => n.toString(16).padStart(2, "0")).join("")}`;
+  return `#${[r, g, b].map((n) => n.toString(16).padStart(2, '0')).join('')}`;
 }
 
 /** Stable short hash of a string (for unique, ASCII-safe IDs). */
@@ -419,9 +419,9 @@ function hashSlug(input: string): string {
 }
 
 interface RawStation {
-  "@_name": string;
-  "@_firstend"?: string;
-  "@_linename"?: string;
+  '@_name': string;
+  '@_firstend'?: string;
+  '@_linename'?: string;
 }
 
 /**
@@ -437,9 +437,9 @@ function buildBeijingTimetables(
   stationsXml: string,
   lineRecords: LineEncoded[],
   stops: StopEncoded[],
-  enByZh: Map<string, string>,
+  enByZh: Map<string, string>
 ): TimetableEncoded[] {
-  const xmlParser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: "@_" });
+  const xmlParser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '@_' });
   const doc = xmlParser.parse(stationsXml) as { stations: { s: RawStation[] } };
   const sList = Array.isArray(doc.stations.s) ? doc.stations.s : [doc.stations.s];
   const lineIdByName = new Map<string, string>();
@@ -454,12 +454,12 @@ function buildBeijingTimetables(
 
   const out: TimetableEncoded[] = [];
   for (const s of sList) {
-    const name = s["@_name"];
+    const name = s['@_name'];
     const stationId = `${NETWORK_ID}-${stationIdFor(name, enByZh.get(name))}`;
-    const fe = s["@_firstend"] ?? "";
-    const blocks = fe.split("||||||").filter(Boolean);
+    const fe = s['@_firstend'] ?? '';
+    const blocks = fe.split('||||||').filter(Boolean);
     for (const block of blocks) {
-      const parts = block.split("::::::");
+      const parts = block.split('::::::');
       if (parts.length < 3) continue;
       const lineName = parts[0].trim();
       const route = parts[1].trim();
@@ -475,20 +475,20 @@ function buildBeijingTimetables(
       const lineStops = stopsByLine.get(lineId) ?? [];
       const termStop = terminal
         ? lineStops.find(
-            (x) => x.station_id === `${NETWORK_ID}-${stationIdFor(terminal, enByZh.get(terminal))}`,
+            (x) => x.station_id === `${NETWORK_ID}-${stationIdFor(terminal, enByZh.get(terminal))}`
           )
         : undefined;
       const originStop = originName
         ? lineStops.find(
             (x) =>
-              x.station_id === `${NETWORK_ID}-${stationIdFor(originName, enByZh.get(originName))}`,
+              x.station_id === `${NETWORK_ID}-${stationIdFor(originName, enByZh.get(originName))}`
           )
         : undefined;
       if (!stop) continue;
       const patternId = `${lineId}-pattern-main`;
-      if (!first || first === "——" || !last || last === "——") continue;
+      if (!first || first === '——' || !last || last === '——') continue;
       out.push({
-        id: `${NETWORK_ID}-${stationId}-${slugTo(lineId)}-to-${asciiSlug(terminal ?? "")}-${hashSlug(route)}`,
+        id: `${NETWORK_ID}-${stationId}-${slugTo(lineId)}-to-${asciiSlug(terminal ?? '')}-${hashSlug(route)}`,
         station_id: stationId,
         stop_id: stop.id,
         line_id: lineId,
@@ -500,7 +500,7 @@ function buildBeijingTimetables(
         direction_label: route,
         first_train: [first],
         last_train: [last],
-        service: "all_days",
+        service: 'all_days'
       });
     }
   }
@@ -515,7 +515,7 @@ function buildTimetables(
   input: BeijingRawInput,
   lineRecords: LineEncoded[],
   stops: StopEncoded[],
-  enByZh: Map<string, string>,
+  enByZh: Map<string, string>
 ): TimetableEncoded[] {
   if (input.timeinfos) {
     const stopsByLine = new Map<string, StopEncoded[]>();
@@ -549,7 +549,7 @@ function buildTimetables(
       stationIdByCleanedName,
       stopsByLine,
       loopLineIds,
-      networkId: NETWORK_ID,
+      networkId: NETWORK_ID
     });
   }
 

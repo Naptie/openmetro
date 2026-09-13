@@ -1,4 +1,4 @@
-import type { StopGraph } from "./build.js";
+import type { StopGraph } from './build.js';
 
 export interface RouteResult {
   from: string;
@@ -18,7 +18,7 @@ export interface RouteResult {
 export function dijkstraMany(
   graph: StopGraph,
   sources: Iterable<string>,
-  targets: Iterable<string>,
+  targets: Iterable<string>
 ): RouteResult | null {
   const targetSet = new Set(targets);
   const dist = new Map<string, number>();

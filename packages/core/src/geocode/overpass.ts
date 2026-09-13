@@ -6,11 +6,11 @@
  * coordinates, which are converted to GCJ-02 locally so they align with the
  * rest of the dataset. No API key is required.
  */
-import { foldRareCharacters } from "../station-overrides.js";
-import type { GeoResult } from "./index.js";
+import { foldRareCharacters } from '../station-overrides.js';
+import type { GeoResult } from './index.js';
 
-const OVERPASS_URL = process.env.OVERPASS_URL ?? "https://overpass-api.de/api/interpreter";
-const USER_AGENT = "openmetro/0.1 (data enrichment)";
+const OVERPASS_URL = process.env.OVERPASS_URL ?? 'https://overpass-api.de/api/interpreter';
+const USER_AGENT = 'openmetro/0.1 (data enrichment)';
 const DEFAULT_TIMEOUT_SEC = 90;
 
 /** Overpass bounding box, ordered `[south, west, north, east]`. */
@@ -36,7 +36,7 @@ export interface OverpassStation {
 }
 
 interface OverpassElement {
-  type: "node" | "way" | "relation";
+  type: 'node' | 'way' | 'relation';
   id: number;
   lat?: number;
   lon?: number;
@@ -79,7 +79,7 @@ function transformLon(x: number, y: number): number {
  * dataset use). Coordinates outside China are returned unchanged.
  */
 export function wgs84ToGcj02(lon: number, lat: number): GeoResult {
-  if (outOfChina(lon, lat)) return { lon, lat, crs: "gcj02" };
+  if (outOfChina(lon, lat)) return { lon, lat, crs: 'gcj02' };
   let dLat = transformLat(lon - 105.0, lat - 35.0);
   let dLon = transformLon(lon - 105.0, lat - 35.0);
   const radLat = (lat / 180.0) * PI;
@@ -88,7 +88,24 @@ export function wgs84ToGcj02(lon: number, lat: number): GeoResult {
   const sqrtMagic = Math.sqrt(magic);
   dLat = (dLat * 180.0) / (((GCJ_A * (1 - GCJ_EE)) / (magic * sqrtMagic)) * PI);
   dLon = (dLon * 180.0) / ((GCJ_A / sqrtMagic) * Math.cos(radLat) * PI);
-  return { lon: lon + dLon, lat: lat + dLat, crs: "gcj02" };
+  return { lon: lon + dLon, lat: lat + dLat, crs: 'gcj02' };
+}
+
+/** BD-09 (Baidu) extra twist over GCJ-02, in radians. */
+const BD_X_PI = (PI * 3000.0) / 180.0;
+
+/**
+ * Convert a BD-09 (Baidu) coordinate to GCJ-02.
+ *
+ * Some official operator feeds publish Baidu coordinates under a plain
+ * `longitude`/`latitude` pair; those must not be treated as GCJ-02.
+ */
+export function bd09ToGcj02(lon: number, lat: number): GeoResult {
+  const x = lon - 0.0065;
+  const y = lat - 0.006;
+  const z = Math.sqrt(x * x + y * y) - 0.00002 * Math.sin(y * BD_X_PI);
+  const theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * BD_X_PI);
+  return { lon: z * Math.cos(theta), lat: z * Math.sin(theta), crs: 'gcj02' };
 }
 
 /** Bounding box of `radiusKm` around a point. */
@@ -134,12 +151,12 @@ async function postOverpass(query: string, retries = 3): Promise<OverpassRespons
   for (let attempt = 0; ; attempt++) {
     try {
       const res = await fetch(OVERPASS_URL, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          "User-Agent": USER_AGENT,
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': USER_AGENT
         },
-        body: new URLSearchParams({ data: query }),
+        body: new URLSearchParams({ data: query })
       });
       // 429/504 are common under load; back off and retry.
       if (res.status === 429 || res.status === 504 || res.status >= 500) {
@@ -157,33 +174,33 @@ async function postOverpass(query: string, retries = 3): Promise<OverpassRespons
 // ── Parsing ─────────────────────────────────────────────────────
 
 function railKind(tags: Record<string, string>): string | undefined {
-  if (tags.railway === "station" || tags.railway === "halt" || tags.railway === "tram_stop") {
+  if (tags.railway === 'station' || tags.railway === 'halt' || tags.railway === 'tram_stop') {
     return tags.railway;
   }
   if (
-    tags.public_transport === "station" &&
-    /subway|light_rail|tram|train|monorail/.test(tags.station ?? "")
+    tags.public_transport === 'station' &&
+    /subway|light_rail|tram|train|monorail/.test(tags.station ?? '')
   ) {
-    return "station";
+    return 'station';
   }
   return undefined;
 }
 
 const ALT_NAME_KEYS = [
-  "name",
-  "name:zh",
-  "name:zh-Hans",
-  "name:zh-Hant",
-  "name:en",
-  "alt_name",
-  "official_name",
-  "short_name",
+  'name',
+  'name:zh',
+  'name:zh-Hans',
+  'name:zh-Hant',
+  'name:en',
+  'alt_name',
+  'official_name',
+  'short_name'
 ];
 
 function stationNames(
-  tags: Record<string, string>,
+  tags: Record<string, string>
 ): { primary: string; alt: string[] } | undefined {
-  const primary = tags.name ?? tags["name:zh"] ?? tags["name:zh-Hans"];
+  const primary = tags.name ?? tags['name:zh'] ?? tags['name:zh-Hans'];
   if (!primary) return undefined;
   const all: string[] = [];
   for (const key of ALT_NAME_KEYS) {
@@ -202,7 +219,7 @@ function parseOverpass(raw: OverpassResponse | undefined): OverpassStation[] {
 
     const lat = el.lat ?? el.center?.lat;
     const lon = el.lon ?? el.center?.lon;
-    if (typeof lat !== "number" || typeof lon !== "number") continue;
+    if (typeof lat !== 'number' || typeof lon !== 'number') continue;
 
     const named = stationNames(tags);
     if (!named) continue;
@@ -217,13 +234,13 @@ function parseOverpass(raw: OverpassResponse | undefined): OverpassStation[] {
       station: tags.station,
       operator: tags.operator,
       network: tags.network,
-      altNames: named.alt,
+      altNames: named.alt
     };
 
     const existing = out.get(named.primary);
     if (!existing) {
       out.set(named.primary, station);
-    } else if (existing.osmId.startsWith("way/") && osmId.startsWith("node/")) {
+    } else if (existing.osmId.startsWith('way/') && osmId.startsWith('node/')) {
       // Prefer the node: its coordinate is the mapped point, not an area centre.
       out.set(named.primary, station);
     }
@@ -236,7 +253,7 @@ function parseOverpass(raw: OverpassResponse | undefined): OverpassStation[] {
 /** Fetch stations within a bounding box directly from Overpass. */
 export async function fetchOverpassStations(
   bbox: Bbox,
-  opts: { timeoutSec?: number } = {},
+  opts: { timeoutSec?: number } = {}
 ): Promise<OverpassStation[]> {
   const query = buildQuery(bbox, opts.timeoutSec ?? DEFAULT_TIMEOUT_SEC);
   return parseOverpass(await postOverpass(query));
@@ -244,12 +261,12 @@ export async function fetchOverpassStations(
 
 /** Strip a trailing parenthetical, e.g. "广州塔（有轨）" -> "广州塔". */
 function stripParenthetical(name: string): string {
-  return name.replace(/[(（][^)）]*[)）]\s*$/, "").trim();
+  return name.replace(/[(（][^)）]*[)）]\s*$/, '').trim();
 }
 
 /** Canonical matching form: no whitespace, decomposed rare characters folded. */
 function normalizeName(name: string): string {
-  return foldRareCharacters(name.replace(/\s+/g, ""));
+  return foldRareCharacters(name.replace(/\s+/g, ''));
 }
 
 /** All keys a name should be matchable under. */
@@ -283,7 +300,7 @@ export function indexOverpassStations(stations: OverpassStation[]): Map<string, 
 /** Look up a station by an official Chinese name. */
 export function findOverpassStation(
   index: Map<string, OverpassStation>,
-  name: string,
+  name: string
 ): OverpassStation | undefined {
   for (const key of matchKeys(name)) {
     const hit = index.get(key);

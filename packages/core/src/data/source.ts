@@ -1,8 +1,8 @@
-import type { Effect } from "effect";
-import type { NetworkEncoded } from "../schema/index.js";
-import type { NetworkData } from "./types.js";
+import type { Effect } from 'effect';
+import type { NetworkEncoded } from '../schema/index.js';
+import type { NetworkData } from './types.js';
 
-export type { RawNetworkFiles } from "./types.js";
+export type { RawNetworkFiles } from './types.js';
 
 /**
  * A pluggable source of canonical network data. The filesystem implementation

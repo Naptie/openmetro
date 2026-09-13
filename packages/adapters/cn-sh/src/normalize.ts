@@ -1,6 +1,7 @@
 import {
   applyDerivedTimes,
   applyTimetableServiceStatus,
+  bd09ToGcj02,
   deriveSegmentTimes,
   deriveTransfers,
   hasValidTimes,
@@ -13,9 +14,9 @@ import {
   type StationEncoded,
   type StopEncoded,
   type TimetableEncoded,
-  type TransferEncoded,
-} from "@openmetro/core";
-import type { FlTimeRow } from "./viewlnfltime.js";
+  type TransferEncoded
+} from '@openmetro/core';
+import type { FlTimeRow } from './viewlnfltime.js';
 
 export interface ShRawInput {
   lineSequences: Record<string, { code: string; name: string }[]>;
@@ -52,18 +53,44 @@ export interface ShCanonical {
   segments: SegmentEncoded[];
   transfers: TransferEncoded[];
   timetables: TimetableEncoded[];
+  /**
+   * Official stationInfo coords as GCJ-02, keyed by Chinese name.
+   * Prefers `gao_lng`/`gao_lat` (already GCJ-02); falls back to converting
+   * the BD-09 `longitude`/`latitude` pair.
+   */
+  officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-const NETWORK_ID = "cn-sh";
+const NETWORK_ID = 'cn-sh';
 const DEFAULT_SEGMENT_SECONDS = 120;
+
+const isUsable = (v: number | undefined): v is number => Number.isFinite(v) && v !== 0;
+
+/**
+ * Official stationInfo GCJ-02 coordinate.
+ *
+ * `gao_lng`/`gao_lat` are already GCJ-02 (verified against the AMap subway
+ * dataset, p50 ≈ 30 m). `longitude`/`latitude` are BD-09 and must be converted.
+ */
+function officialGcj02(
+  info: ShStationInfo
+): { lon: number; lat: number; crs: 'gcj02' } | undefined {
+  if (isUsable(info.gao_lng) && isUsable(info.gao_lat)) {
+    return { lon: info.gao_lng, lat: info.gao_lat, crs: 'gcj02' };
+  }
+  if (isUsable(info.longitude) && isUsable(info.latitude)) {
+    return bd09ToGcj02(info.longitude, info.latitude);
+  }
+  return undefined;
+}
 
 function slug(s: string): string {
   let out = s
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
   if (!out) {
-    out = [...Buffer.from(s, "utf-8")].map((b) => b.toString(16)).join("");
+    out = [...Buffer.from(s, 'utf-8')].map((b) => b.toString(16)).join('');
   }
   return out;
 }
@@ -89,13 +116,13 @@ export function buildLastTrainArray(baseLast: string, lastTimeDesc: string | und
   if (wd?.length !== 7) return [baseLast];
   const hasVariation = wd.some((v) => v !== 0);
   if (!hasVariation) return [baseLast];
-  const [h, m] = baseLast.split(":").map(Number);
+  const [h, m] = baseLast.split(':').map(Number);
   const base = h * 60 + m;
   const arr = wd.map((delta) => {
     const total = base + (delta || 0);
     const hh = Math.floor(total / 60);
     const mm = total % 60;
-    return `${String(hh).padStart(2, "0")}:${String(mm).padStart(2, "0")}`;
+    return `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}`;
   });
   return arr;
 }
@@ -120,10 +147,10 @@ function makeUniqueTimetableId(
   networkId: string,
   code: string,
   destination: string,
-  description?: string,
+  description?: string
 ): string {
-  const label = description?.trim() ?? "";
-  const labelSlug = readableSlug(label) || "dest";
+  const label = description?.trim() ?? '';
+  const labelSlug = readableSlug(label) || 'dest';
   const base = `${networkId}-${code}-to-${destination}-${labelSlug}`;
   let id = base;
   let n = 2;
@@ -143,7 +170,7 @@ interface BranchNote {
 
 /** Match the four station names of the branch note against the flat list. */
 function parseBranchNote(note: string | undefined, flatNames: string[]): BranchNote | null {
-  if (!note?.includes("支线段")) return null;
+  if (!note?.includes('支线段')) return null;
   const found: { name: string; index: number }[] = [];
   for (const name of flatNames) {
     const index = note.indexOf(name);
@@ -187,7 +214,7 @@ function reconstructPatterns(
   flatNames: string[],
   note: string | undefined,
   stopIdByName: Map<string, string>,
-  xyByName: Map<string, XY>,
+  xyByName: Map<string, XY>
 ): PatternEncoded[] {
   const stopsFor = (names: string[]): string[] =>
     names.map((n) => stopIdByName.get(n)).filter((id): id is string => id !== undefined);
@@ -198,14 +225,14 @@ function reconstructPatterns(
       {
         id: `${lineId}-pattern-main`,
         line_id: lineId,
-        name: "主线",
-        names: { zh: "主线", en: "Main" },
+        name: '主线',
+        names: { zh: '主线', en: 'Main' },
         stop_ids: stopIds,
         origin_stop_id: stopIds[0],
         terminal_stop_id: stopIds[stopIds.length - 1],
         is_primary: true,
-        source_ids: [{ source: "shmetro-slsddl", id: lineNo }],
-      },
+        source_ids: [{ source: 'shmetro-slsddl', id: lineNo }]
+      }
     ];
   };
 
@@ -250,14 +277,14 @@ function reconstructPatterns(
     {
       id: `${lineId}-pattern-main`,
       line_id: lineId,
-      name: "主线",
-      names: { zh: "主线", en: "Main" },
+      name: '主线',
+      names: { zh: '主线', en: 'Main' },
       stop_ids: mainStopIds,
       origin_stop_id: mainStopIds[0],
       terminal_stop_id: mainStopIds[mainStopIds.length - 1],
       is_primary: true,
-      source_ids: [{ source: "shmetro-slsddl", id: lineNo }],
-    },
+      source_ids: [{ source: 'shmetro-slsddl', id: lineNo }]
+    }
   ];
 
   const junctionId = stopIdByName.get(junction);
@@ -276,8 +303,8 @@ function reconstructPatterns(
         terminal_stop_id: branchStopIds[branchStopIds.length - 1],
         is_primary: false,
         junction_stop_id: junctionId,
-        source_ids: [{ source: "shmetro-slsddl", id: lineNo }],
-        extras: { branch_note: note },
+        source_ids: [{ source: 'shmetro-slsddl', id: lineNo }],
+        extras: { branch_note: note }
       });
     }
   }
@@ -298,9 +325,9 @@ function parseDirectionLabel(label: string): { dest?: string; origin?: string } 
 }
 
 /** Detect loop direction type from a Shanghai direction label. */
-function detectLoopDirection(label: string): "loop_inner" | "loop_outer" | undefined {
-  if (label.includes("（内）") || label.includes("(内)")) return "loop_inner";
-  if (label.includes("（外）") || label.includes("(外)")) return "loop_outer";
+function detectLoopDirection(label: string): 'loop_inner' | 'loop_outer' | undefined {
+  if (label.includes('（内）') || label.includes('(内)')) return 'loop_inner';
+  if (label.includes('（外）') || label.includes('(外)')) return 'loop_outer';
   return undefined;
 }
 
@@ -319,6 +346,8 @@ export function normalize(input: ShRawInput): ShCanonical {
   // station_code -> canonical station id (from station info).
   const codeToStationId = new Map<string, string>();
   const xyByName = new Map<string, XY>();
+  // Official stationInfo coords: `gao_*` is GCJ-02; `longitude`/`latitude` is BD-09.
+  const officialLocations = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>();
   for (const infos of Object.values(input.stations)) {
     for (const info of infos) {
       const name = info.name_cn.trim();
@@ -328,10 +357,13 @@ export function normalize(input: ShRawInput): ShCanonical {
           id,
           name,
           names: { zh: name, en: info.name_en },
-          status: "operating",
-          source_ids: [{ source: "shmetro-stationInfo", id: info.station_code }],
-          location: { lon: info.longitude, lat: info.latitude, crs: "gcj02" },
+          status: 'operating',
+          source_ids: [{ source: 'shmetro-stationInfo', id: info.station_code }]
         });
+      }
+      if (!officialLocations.has(name)) {
+        const loc = officialGcj02(info);
+        if (loc) officialLocations.set(name, loc);
       }
       if (!xyByName.has(name) && Number.isFinite(info.x) && Number.isFinite(info.y)) {
         xyByName.set(name, { x: info.x, y: info.y });
@@ -350,17 +382,19 @@ export function normalize(input: ShRawInput): ShCanonical {
 
   for (const [lineNo, meta] of Object.entries(input.lines)) {
     const lineId = `${NETWORK_ID}-line-${lineNo}`;
+    // Chinese names come from the official timetable page; English is derived
+    // (Wikidata upgrades it later), matching the Beijing adapter's pipeline.
     lineRecords.push({
       id: lineId,
       name: meta.description,
       names: { zh: meta.description, en: meta.desc_en },
       aliases: [],
-      mode: lineNo === "41" || lineNo === "51" ? "suburban_rail" : "metro",
-      status: "operating",
+      mode: lineNo === '41' || lineNo === '51' ? 'suburban_rail' : 'metro',
+      status: 'operating',
       loop: loopLines.has(lineNo),
-      source_ids: [{ source: "shmetro-lines", id: String(meta.line_no) }],
+      source_ids: [{ source: 'shmetro-lines', id: String(meta.line_no) }],
       color: meta.color,
-      extras: { names_source: "source" },
+      extras: { names_source: 'derived' }
     });
   }
 
@@ -382,7 +416,7 @@ export function normalize(input: ShRawInput): ShCanonical {
         line_id: lineId,
         sequence: idx,
         is_terminal: idx === 0 || idx === unique.length - 1,
-        source_id: s.code,
+        source_id: s.code
       });
     });
     const flatNames = unique.map((s) => s.name).filter((n) => stopIdByName.has(n));
@@ -392,7 +426,7 @@ export function normalize(input: ShRawInput): ShCanonical {
       flatNames,
       input.lineNotes?.[lineNo],
       stopIdByName,
-      xyByName,
+      xyByName
     );
     patterns.push(...linePatterns);
 
@@ -415,10 +449,10 @@ export function normalize(input: ShRawInput): ShCanonical {
           to_stop_id: bId,
           from_station_id: aStop.station_id,
           to_station_id: bStop.station_id,
-          direction: "both",
+          direction: 'both',
           travel_time_seconds: DEFAULT_SEGMENT_SECONDS,
-          travel_time_source: "estimated" as const,
-          source_id: aStop.source_id,
+          travel_time_source: 'estimated' as const,
+          source_id: aStop.source_id
         });
       }
     }
@@ -456,24 +490,24 @@ export function normalize(input: ShRawInput): ShCanonical {
             (p) =>
               p.stop_ids.includes(stop.id) &&
               p.stop_ids.includes(destStop.id) &&
-              (p.terminal_stop_id === destStop.id || p.origin_stop_id === destStop.id),
+              (p.terminal_stop_id === destStop.id || p.origin_stop_id === destStop.id)
           ) ??
           linePatterns.find(
-            (p) => p.stop_ids.includes(stop.id) && p.stop_ids.includes(destStop.id),
+            (p) => p.stop_ids.includes(stop.id) && p.stop_ids.includes(destStop.id)
           ))
         : originStop
           ? linePatterns.find(
               (p) =>
                 p.stop_ids.includes(stop.id) &&
                 p.stop_ids.includes(originStop.id) &&
-                (p.terminal_stop_id === originStop.id || p.origin_stop_id === originStop.id),
+                (p.terminal_stop_id === originStop.id || p.origin_stop_id === originStop.id)
             )
           : undefined;
 
       let destinationStop = destStop;
       if (!destinationStop && originStop) {
         pattern ??= linePatterns.find(
-          (p) => p.stop_ids.includes(stop.id) && p.stop_ids.includes(originStop.id),
+          (p) => p.stop_ids.includes(stop.id) && p.stop_ids.includes(originStop.id)
         );
         if (pattern) {
           destinationStop =
@@ -501,8 +535,8 @@ export function normalize(input: ShRawInput): ShCanonical {
           usedTtIds,
           NETWORK_ID,
           `${station.id.slice(NETWORK_ID.length + 1)}-${lineNo}`,
-          isLoop ? (loopDir ?? "loop") : destinationStop.station_id.slice(NETWORK_ID.length + 1),
-          row.directionLabel,
+          isLoop ? (loopDir ?? 'loop') : destinationStop.station_id.slice(NETWORK_ID.length + 1),
+          row.directionLabel
         ),
         station_id: station.id,
         stop_id: stop.id,
@@ -512,11 +546,11 @@ export function normalize(input: ShRawInput): ShCanonical {
         destination_stop_id: isLoop ? undefined : destinationStop.id,
         origin_stop_id: originStop?.id,
         pattern_id: pattern.id,
-        direction_type: loopDir ?? (isLoop ? "linear" : undefined),
+        direction_type: loopDir ?? (isLoop ? 'linear' : undefined),
         direction_label: row.directionLabel,
         first_train: [row.firstTime],
         last_train: last,
-        service: "all_days",
+        service: 'all_days'
       });
     }
   }
@@ -531,23 +565,23 @@ export function normalize(input: ShRawInput): ShCanonical {
   return {
     network: {
       id: NETWORK_ID,
-      name: "上海地铁",
+      name: '上海地铁',
       city: {
-        id: "CN-31",
-        name: { zh: "上海", en: "Shanghai" },
-        country: "CN",
+        id: 'CN-31',
+        name: { zh: '上海', en: 'Shanghai' },
+        country: 'CN',
         population: 24870895,
         area: 6341,
-        location: { type: "Point", coordinates: [121.469166666, 31.2325] },
+        location: { type: 'Point', coordinates: [121.469166666, 31.2325] }
       },
-      country_code: "CN",
-      currency: "CNY",
-      timezone: "Asia/Shanghai",
-      coordinate_system: "gcj02",
-      default_units: { distance: "km", time: "seconds", speed: "km/h" },
-      routing: { weight: "time", default_transfer_seconds: 120, max_transfer_seconds: 600 },
+      country_code: 'CN',
+      currency: 'CNY',
+      timezone: 'Asia/Shanghai',
+      coordinate_system: 'gcj02',
+      default_units: { distance: 'km', time: 'seconds', speed: 'km/h' },
+      routing: { weight: 'time', default_transfer_seconds: 120, max_transfer_seconds: 600 },
       operators: [],
-      source: [],
+      source: []
     },
     lines: lineRecords,
     stations,
@@ -556,5 +590,6 @@ export function normalize(input: ShRawInput): ShCanonical {
     segments: finalSegments,
     transfers: deriveTransfers(stations, stops),
     timetables: finalTimetables,
+    officialLocations
   };
 }

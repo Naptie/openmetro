@@ -1,4 +1,4 @@
-import type { StationEncoded, StopEncoded, TransferEncoded } from "../schema/index.js";
+import type { StationEncoded, StopEncoded, TransferEncoded } from '../schema/index.js';
 
 /**
  * An officially published transfer time (e.g. Beijing's `interchange.xml`).
@@ -29,9 +29,9 @@ function key(stationId: string, fromLineId: string, toLineId: string): string {
  * `network.routing.default_transfer_seconds`.
  */
 export function deriveTransfers(
-  stations: Pick<StationEncoded, "id">[],
-  stops: Pick<StopEncoded, "id" | "station_id" | "line_id">[],
-  official: OfficialTransfer[] = [],
+  stations: Pick<StationEncoded, 'id'>[],
+  stops: Pick<StopEncoded, 'id' | 'station_id' | 'line_id'>[],
+  official: OfficialTransfer[] = []
 ): TransferEncoded[] {
   const stationIds = new Set(stations.map((s) => s.id));
   const linesByStation = new Map<string, Map<string, string>>();
@@ -64,7 +64,7 @@ export function deriveTransfers(
           to_stop_id: toStopId,
           walk_time_seconds: match?.walk_time_seconds,
           is_out_of_station: match?.is_out_of_station,
-          source_id: match?.source_id,
+          source_id: match?.source_id
         });
       }
     }

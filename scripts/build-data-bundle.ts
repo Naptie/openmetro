@@ -3,29 +3,29 @@
  *
  * Usage: `bun run scripts/build-data-bundle.ts [--out <dir>]`
  */
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
 
-const DATA_ROOT = resolve(process.env.OPENMETRO_DATA_ROOT ?? "data");
+const DATA_ROOT = resolve(process.env.OPENMETRO_DATA_ROOT ?? 'data');
 
 const CANONICAL_FILES = [
-  "network.json",
-  "lines.json",
-  "stations.json",
-  "stops.json",
-  "patterns.json",
-  "segments.json",
-  "transfers.json",
-  "timetables.json",
-  "fares.json",
+  'network.json',
+  'lines.json',
+  'stations.json',
+  'stops.json',
+  'patterns.json',
+  'segments.json',
+  'transfers.json',
+  'timetables.json',
+  'fares.json'
 ];
 
 async function main(): Promise<void> {
-  const i = process.argv.indexOf("--out");
-  const outRoot = resolve(i >= 0 ? (process.argv[i + 1] ?? "dist/data") : "dist/data");
+  const i = process.argv.indexOf('--out');
+  const outRoot = resolve(i >= 0 ? (process.argv[i + 1] ?? 'dist/data') : 'dist/data');
 
   const ids = (await readdir(DATA_ROOT, { withFileTypes: true }))
-    .filter((e) => e.isDirectory() && !e.name.startsWith("."))
+    .filter((e) => e.isDirectory() && !e.name.startsWith('.'))
     .map((e) => e.name)
     .sort();
 
@@ -46,25 +46,25 @@ async function main(): Promise<void> {
   }
 
   // Ship the content-addressed manifest alongside the data when present.
-  const manifest = await readFile(resolve("dist/data-manifest.json")).catch(() => null);
-  if (manifest) await writeFile(join(outRoot, "manifest.json"), manifest);
+  const manifest = await readFile(resolve('dist/data-manifest.json')).catch(() => null);
+  if (manifest) await writeFile(join(outRoot, 'manifest.json'), manifest);
 
   await writeFile(
-    join(outRoot, "README.md"),
+    join(outRoot, 'README.md'),
     [
-      "# Open Metro data",
-      "",
-      "Canonical metro network data (lines, stations, stops, patterns, segments,",
-      "transfers, timetables). See `manifest.json` for per-file sha256 checksums",
-      "and the `aggregate` content hash.",
-      "",
-      `Networks: ${networks.join(", ")}`,
-      "",
-    ].join("\n"),
-    "utf-8",
+      '# Open Metro data',
+      '',
+      'Canonical metro network data (lines, stations, stops, patterns, segments,',
+      'transfers, timetables). See `manifest.json` for per-file sha256 checksums',
+      'and the `aggregate` content hash.',
+      '',
+      `Networks: ${networks.join(', ')}`,
+      ''
+    ].join('\n'),
+    'utf-8'
   );
 
-  console.log(`data bundle: ${outRoot} (${networks.join(", ")})`);
+  console.log(`data bundle: ${outRoot} (${networks.join(', ')})`);
 }
 
 main().catch((err) => {

@@ -1,5 +1,5 @@
-import { Schema } from "effect";
-import { Source } from "./provenance.js";
+import { Schema } from 'effect';
+import { Source } from './provenance.js';
 
 type AnySchema = Schema.Schema<any>;
 
@@ -14,7 +14,7 @@ export const DataFile = (records: AnySchema) =>
     network_id: Schema.String,
     generated_at: Schema.String,
     source: Schema.Array(Source),
-    records: Schema.Array(records),
+    records: Schema.Array(records)
   });
 
-export type DataFileRecords = Schema.Schema.Type<typeof DataFile>["records"];
+export type DataFileRecords = Schema.Schema.Type<typeof DataFile>['records'];

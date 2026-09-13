@@ -11,13 +11,13 @@
  */
 
 /** Sync layers. Frequency is a CI policy, not an adapter concern. */
-export type SyncLayer = "topology" | "timetables" | "fares" | "enrichment";
+export type SyncLayer = 'topology' | 'timetables' | 'fares' | 'enrichment';
 
 export const SYNC_LAYERS: readonly SyncLayer[] = [
-  "topology",
-  "timetables",
-  "fares",
-  "enrichment",
+  'topology',
+  'timetables',
+  'fares',
+  'enrichment'
 ] as const;
 
 export interface SyncCtx {

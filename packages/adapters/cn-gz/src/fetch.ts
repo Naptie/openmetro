@@ -1,45 +1,45 @@
-import { spawn } from "node:child_process";
-import { officialFetchHeaders, proxyUrl } from "@openmetro/core";
-import type { GzLineCard, GzServiceTime, GzStationDetail } from "./normalize.js";
+import { spawn } from 'node:child_process';
+import { officialFetchHeaders, proxyUrl } from '@openmetro/core';
+import type { GzLineCard, GzServiceTime, GzStationDetail } from './normalize.js';
 
-const BASE = "https://apis.gzmtr.com";
-const ACCESSKEY = "247919A174804353AE72BAB00981C6E8";
-const TOKEN = "38c7e7b3ka1f3k44dak8707k806a1f8bf978";
+const BASE = 'https://apis.gzmtr.com';
+const ACCESSKEY = '247919A174804353AE72BAB00981C6E8';
+const TOKEN = '38c7e7b3ka1f3k44dak8707k806a1f8bf978';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 function curlPostJson(url: string): Promise<unknown> {
   return new Promise((resolvePromise, reject) => {
     const args = [
-      "-sS",
-      "-L",
-      "--max-time",
-      "90",
-      "-X",
-      "POST",
-      "-H",
+      '-sS',
+      '-L',
+      '--max-time',
+      '90',
+      '-X',
+      'POST',
+      '-H',
       `Authorization: Bearer ${TOKEN}`,
-      "-H",
-      "Content-Type: application/json",
-      "-H",
-      "Accept: application/json",
-      "-H",
-      "Accept-Encoding: identity",
-      url,
+      '-H',
+      'Content-Type: application/json',
+      '-H',
+      'Accept: application/json',
+      '-H',
+      'Accept-Encoding: identity',
+      url
     ];
-    const child = spawn("curl", args, { windowsHide: true });
+    const child = spawn('curl', args, { windowsHide: true });
     const chunks: Buffer[] = [];
     const errChunks: Buffer[] = [];
-    child.stdout.on("data", (d: Buffer) => chunks.push(d));
-    child.stderr.on("data", (d: Buffer) => errChunks.push(d));
-    child.on("error", reject);
-    child.on("close", (code) => {
-      const body = Buffer.concat(chunks).toString("utf-8");
+    child.stdout.on('data', (d: Buffer) => chunks.push(d));
+    child.stderr.on('data', (d: Buffer) => errChunks.push(d));
+    child.on('error', reject);
+    child.on('close', (code) => {
+      const body = Buffer.concat(chunks).toString('utf-8');
       if (code !== 0) {
         reject(
           new Error(
-            `curl exited ${code}: ${Buffer.concat(errChunks).toString("utf-8").trim()} body=${body.slice(0, 120)}`,
-          ),
+            `curl exited ${code}: ${Buffer.concat(errChunks).toString('utf-8').trim()} body=${body.slice(0, 120)}`
+          )
         );
         return;
       }
@@ -62,12 +62,12 @@ async function postJson(path: string, retries = 4): Promise<unknown> {
         return await curlPostJson(url);
       }
       const res = await fetch(url, {
-        method: "POST",
+        method: 'POST',
         headers: officialFetchHeaders({
           Authorization: `Bearer ${TOKEN}`,
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json'
         }),
-        signal: AbortSignal.timeout(90_000),
+        signal: AbortSignal.timeout(90_000)
       });
       if (!res.ok) throw new Error(`POST ${path} -> ${res.status}`);
       return await res.json();
@@ -84,7 +84,7 @@ async function postJson(path: string, retries = 4): Promise<unknown> {
 /** Fetch service times (first/last train) for every station. */
 export async function fetchServiceTimes(
   stationNames: string[],
-  opts: { delayMs?: number; concurrency?: number } = {},
+  opts: { delayMs?: number; concurrency?: number } = {}
 ): Promise<Record<string, GzServiceTime[]>> {
   const delayMs = opts.delayMs ?? 250;
   const concurrency = opts.concurrency ?? 2;
@@ -124,24 +124,24 @@ export interface GuangzhouSources {
 
 /** Fetch Guangzhou topology + service times + station details live. */
 export async function fetchGuangzhouSources(): Promise<GuangzhouSources> {
-  console.log("  fetch linestation");
-  const linestation = (await postJson("/app-map/metroweb/linestation")) as {
+  console.log('  fetch linestation');
+  const linestation = (await postJson('/app-map/metroweb/linestation')) as {
     businessObject: LinestationCard[];
   };
 
   const names = [
-    ...new Set(linestation.businessObject.flatMap((c) => c.stations.map((s) => s.stationName))),
+    ...new Set(linestation.businessObject.flatMap((c) => c.stations.map((s) => s.stationName)))
   ];
 
   console.log(`  fetch service times (${names.length} stations)`);
   const servicetimes = await fetchServiceTimes(names, { delayMs: 200, concurrency: 3 });
 
-  console.log("  fetch station details");
+  console.log('  fetch station details');
   const stationDetails: Record<string, GzStationDetail> = {};
   for (const name of names) {
     try {
       const raw = (await postJson(
-        `/app-map/station/getByNameOrCode/${encodeURIComponent(name)}`,
+        `/app-map/station/getByNameOrCode/${encodeURIComponent(name)}`
       )) as {
         businessObject?: GzStationDetail;
       };
@@ -156,6 +156,6 @@ export async function fetchGuangzhouSources(): Promise<GuangzhouSources> {
   return {
     linestation: linestation as unknown as { businessObject: GzLineCard[] },
     stationDetails,
-    servicetimes,
+    servicetimes
   };
 }

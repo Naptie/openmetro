@@ -5,20 +5,22 @@
  */
 export function deriveLineEnglishName(zhName: string, lcode?: string): string | undefined {
   // Strip a leading "地铁" prefix (subway).
-  const name = zhName.replace(/^地铁/, "");
-  const lc = (lcode ?? "").replace(/^0+/, "");
+  const name = zhName.replace(/^地铁/, '');
+  const lc = (lcode ?? '').replace(/^0+/, '');
 
   // Special named lines (not plain numbered).
   const special: Record<string, string> = {
-    S1线: "S1 Line",
-    西郊线: "Western Suburban Line",
-    房山线: "Fangshan Line",
-    昌平线: "Changping Line",
-    亦庄线: "Yizhuang Line",
-    燕房线: "Yanfang Line",
-    首都机场线: "Capital Airport Express",
-    大兴机场线: "Daxing Airport Express",
-    亦庄T1线: "Yizhuang T1 Line",
+    S1线: 'S1 Line',
+    西郊线: 'Western Suburban Line',
+    房山线: 'Fangshan Line',
+    昌平线: 'Changping Line',
+    亦庄线: 'Yizhuang Line',
+    燕房线: 'Yanfang Line',
+    首都机场线: 'Capital Airport Express',
+    大兴机场线: 'Daxing Airport Express',
+    亦庄T1线: 'Yizhuang T1 Line',
+    浦江线: 'Pujiang Line',
+    市域机场线: 'Airport Link Line'
   };
   if (special[name]) return special[name];
 
@@ -31,9 +33,9 @@ export function deriveLineEnglishName(zhName: string, lcode?: string): string | 
     if (!suffix) return base;
     // Map common suffix words.
     const suffixEn: Record<string, string> = {
-      大兴线: "Daxing",
-      八通线: "Batong",
-      知识城: "Knowledge City",
+      大兴线: 'Daxing',
+      八通线: 'Batong',
+      知识城: 'Knowledge City'
     };
     const sfx = suffixEn[suffix];
     return sfx ? `${base} (${sfx})` : `${base} ${suffix}`;
@@ -54,17 +56,17 @@ export function deriveLineEnglishName(zhName: string, lcode?: string): string | 
 export function lineSlug(code: string | undefined, enName: string | undefined): string {
   const asciiCode = code?.trim();
   if (asciiCode && /^[A-Za-z0-9-]+$/.test(asciiCode)) {
-    return asciiCode.toLowerCase().replace(/^0+(?=\d)/, "");
+    return asciiCode.toLowerCase().replace(/^0+(?=\d)/, '');
   }
   const en = enName?.trim();
   if (en && /^[A-Za-z0-9 -]+$/.test(en)) {
     return en
       .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
   }
   // Last resort: encode any remaining CJK as a stable hex token (rare).
-  return [...Buffer.from(code ?? en ?? "line", "utf-8")].map((b) => b.toString(16)).join("");
+  return [...Buffer.from(code ?? en ?? 'line', 'utf-8')].map((b) => b.toString(16)).join('');
 }
 
 /**
@@ -77,7 +79,7 @@ export function lineSlug(code: string | undefined, enName: string | undefined): 
  * `机场北（T2）` are distinct stations from `竹料` / `万胜围` / `机场北`.
  */
 export function stripDirectionAnnotation(name: string): string {
-  return name.replace(/[（(]\s*(?:内环|外环)[^)）]*[)）]/g, "").trim();
+  return name.replace(/[（(]\s*(?:内环|外环)[^)）]*[)）]/g, '').trim();
 }
 
 /**
@@ -90,8 +92,8 @@ export function readableSlug(input: string): string {
   if (/^[A-Za-z0-9 -]+$/.test(s)) {
     return s
       .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
   }
   // Compact stable hash (base-36) for non-ASCII — no long hex strings.
   let h = 0;

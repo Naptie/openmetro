@@ -1,5 +1,5 @@
-import { Schema } from "effect";
-import { MultilingualName } from "./names.js";
+import { Schema } from 'effect';
+import { MultilingualName } from './names.js';
 
 /**
  * City metadata sourced from worldwide-regions.  The `id` is the region ID
@@ -15,10 +15,10 @@ export const City = Schema.Struct({
   area: Schema.NullOr(Schema.Number),
   location: Schema.NullOr(
     Schema.Struct({
-      type: Schema.Literal("Point"),
-      coordinates: Schema.Tuple(Schema.Number, Schema.Number),
-    }),
-  ),
+      type: Schema.Literal('Point'),
+      coordinates: Schema.Tuple(Schema.Number, Schema.Number)
+    })
+  )
 });
 
 export type City = Schema.Schema.Type<typeof City>;

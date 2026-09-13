@@ -1,5 +1,5 @@
-import type { StationEncoded, StopEncoded, TimetableEncoded } from "../schema/index.js";
-import { isForcedOutOfService } from "../station-overrides.js";
+import type { StationEncoded, StopEncoded, TimetableEncoded } from '../schema/index.js';
+import { isForcedOutOfService } from '../station-overrides.js';
 
 /**
  * Demote stations that sit on a line which publishes first/last trains but
@@ -17,10 +17,10 @@ import { isForcedOutOfService } from "../station-overrides.js";
 export function applyTimetableServiceStatus<
   T extends {
     id: string;
-    status: StationEncoded["status"];
+    status: StationEncoded['status'];
     name?: string;
     names?: { zh?: string };
-  },
+  }
 >(stations: T[], stops: StopEncoded[], timetables: TimetableEncoded[]): T[] {
   const ttStations = new Set(timetables.map((t) => t.station_id));
   const ttLines = new Set(timetables.map((t) => t.line_id));
@@ -29,13 +29,13 @@ export function applyTimetableServiceStatus<
     if (ttLines.has(stop.line_id)) stationHasPublishingLine.add(stop.station_id);
   }
   return stations.map((station) => {
-    const zh = station.names?.zh ?? station.name ?? "";
+    const zh = station.names?.zh ?? station.name ?? '';
     if (isForcedOutOfService(zh)) {
-      return { ...station, status: "out_of_service" as const };
+      return { ...station, status: 'out_of_service' as const };
     }
-    if (station.status !== "operating") return station;
+    if (station.status !== 'operating') return station;
     if (ttStations.has(station.id)) return station;
     if (!stationHasPublishingLine.has(station.id)) return station;
-    return { ...station, status: "out_of_service" as const };
+    return { ...station, status: 'out_of_service' as const };
   });
 }

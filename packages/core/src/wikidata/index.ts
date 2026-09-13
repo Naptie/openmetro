@@ -1,2 +1,2 @@
-export * from "./lines.js";
-export * from "./wikidata.js";
+export * from './lines.js';
+export * from './wikidata.js';

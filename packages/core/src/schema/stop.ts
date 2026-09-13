@@ -1,9 +1,9 @@
-import { Schema } from "effect";
-import { GeoPoint, SchematicPoint } from "./geometry.js";
+import { Schema } from 'effect';
+import { GeoPoint, SchematicPoint } from './geometry.js';
 
 const Extras = Schema.Record({
   key: Schema.String,
-  value: Schema.Unknown,
+  value: Schema.Unknown
 });
 
 export const Stop = Schema.Struct({
@@ -16,11 +16,11 @@ export const Stop = Schema.Struct({
    * membership are defined by `Pattern` records (`pattern.stop_ids`), not here.
    */
   sequence: Schema.Number,
-  is_terminal: Schema.optionalWith(Schema.Boolean, { as: "Option" }),
-  location: Schema.optionalWith(GeoPoint, { as: "Option" }),
-  schematic: Schema.optionalWith(SchematicPoint, { as: "Option" }),
-  source_id: Schema.optionalWith(Schema.String, { as: "Option" }),
-  extras: Schema.optionalWith(Extras, { as: "Option" }),
+  is_terminal: Schema.optionalWith(Schema.Boolean, { as: 'Option' }),
+  location: Schema.optionalWith(GeoPoint, { as: 'Option' }),
+  schematic: Schema.optionalWith(SchematicPoint, { as: 'Option' }),
+  source_id: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  extras: Schema.optionalWith(Extras, { as: 'Option' })
 });
 
 export type Stop = Schema.Schema.Type<typeof Stop>;

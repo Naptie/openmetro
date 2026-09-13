@@ -1,4 +1,4 @@
-import { readdir } from "node:fs/promises";
+import { readdir } from 'node:fs/promises';
 
 /** List network IDs from a data root directory (one subdir per network). */
 export async function listNetworks(dataRoot: string): Promise<string[]> {
@@ -7,7 +7,7 @@ export async function listNetworks(dataRoot: string): Promise<string[]> {
     return entries
       .filter((e) => e.isDirectory())
       .map((e) => e.name)
-      .filter((n) => !n.startsWith("."))
+      .filter((n) => !n.startsWith('.'))
       .sort();
   } catch {
     return [];

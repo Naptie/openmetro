@@ -1,6 +1,6 @@
-import { createApiApp } from "../../core/src/api/app.js";
-import { createMemoryNetworkSource } from "../../core/src/data/memory.js";
-import { files } from "./data.generated.js";
+import { createApiApp } from '../../core/src/api/app.js';
+import { createMemoryNetworkSource } from '../../core/src/data/memory.js';
+import { files } from './data.generated.js';
 
 /**
  * Cloudflare Worker entry point.
@@ -21,5 +21,5 @@ function getApp(): ReturnType<typeof createApiApp> {
 }
 
 export default {
-  fetch: (request: Request) => getApp().fetch(request),
+  fetch: (request: Request) => getApp().fetch(request)
 } satisfies ExportedHandler;

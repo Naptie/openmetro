@@ -1,5 +1,5 @@
-import { Schema } from "effect";
-import { Source } from "./provenance.js";
+import { Schema } from 'effect';
+import { Source } from './provenance.js';
 
 /**
  * Origin-destination fare matrix for a network.
@@ -24,7 +24,7 @@ export const FareMatrix = Schema.Struct({
   /** Station ids in matrix index order. */
   station_ids: Schema.Array(Schema.String),
   /** Symmetric `station_ids.length` x `station_ids.length` matrix. */
-  fares: Schema.Array(Schema.Array(Schema.NullOr(Schema.Number))),
+  fares: Schema.Array(Schema.Array(Schema.NullOr(Schema.Number)))
 });
 
 export type FareMatrix = Schema.Schema.Type<typeof FareMatrix>;

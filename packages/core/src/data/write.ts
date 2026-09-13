@@ -1,5 +1,5 @@
-import { mkdir, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { mkdir, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
 
 export interface CanonicalFile<T> {
   $schema: string;
@@ -13,11 +13,11 @@ export interface CanonicalFile<T> {
 export function wrap<T>(networkId: string, records: T[]): CanonicalFile<T> {
   return {
     $schema: `https://raw.githubusercontent.com/openmetro/schemas/v1/${networkId}.schema.json`,
-    schema_version: "1.0",
+    schema_version: '1.0',
     network_id: networkId,
     generated_at: new Date().toISOString(),
     source: [],
-    records,
+    records
   };
 }
 
@@ -40,7 +40,7 @@ export async function writeCanonical<
   Se extends { id: string },
   T extends { id: string },
   Tm extends { id: string },
-  F,
+  F
 >(
   outDir: string,
   networkId: string,
@@ -55,21 +55,21 @@ export async function writeCanonical<
     timetables?: Tm[];
     /** A complete `FareMatrix` document (see `schema/fare.ts`). */
     fares?: F;
-  },
+  }
 ): Promise<void> {
   await mkdir(outDir, { recursive: true });
   const w = <A>(name: string, records: A[]) =>
-    writeFile(join(outDir, name), JSON.stringify(wrap(networkId, records), null, 2), "utf-8");
+    writeFile(join(outDir, name), JSON.stringify(wrap(networkId, records), null, 2), 'utf-8');
 
-  await writeFile(join(outDir, "network.json"), JSON.stringify(data.network, null, 2), "utf-8");
-  await w("lines.json", sorted(data.lines));
-  await w("stations.json", sorted(data.stations));
-  await w("stops.json", sorted(data.stops));
-  if (data.patterns) await w("patterns.json", sorted(data.patterns));
-  await w("segments.json", sorted(data.segments));
-  await w("transfers.json", sorted(data.transfers));
-  if (data.timetables) await w("timetables.json", sorted(data.timetables));
+  await writeFile(join(outDir, 'network.json'), JSON.stringify(data.network, null, 2), 'utf-8');
+  await w('lines.json', sorted(data.lines));
+  await w('stations.json', sorted(data.stations));
+  await w('stops.json', sorted(data.stops));
+  if (data.patterns) await w('patterns.json', sorted(data.patterns));
+  await w('segments.json', sorted(data.segments));
+  await w('transfers.json', sorted(data.transfers));
+  if (data.timetables) await w('timetables.json', sorted(data.timetables));
   if (data.fares) {
-    await writeFile(join(outDir, "fares.json"), JSON.stringify(data.fares, null, 2), "utf-8");
+    await writeFile(join(outDir, 'fares.json'), JSON.stringify(data.fares, null, 2), 'utf-8');
   }
 }

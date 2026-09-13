@@ -9,10 +9,10 @@
  * It covers metro systems only: tram/light-rail and intercity lines are absent,
  * so callers should still fall back to the POI geocoder for unmatched stations.
  */
-import type { GeoResult } from "./index.js";
+import type { GeoResult } from './index.js';
 
-const SUBWAY_URL = "https://map.amap.com/service/subway";
-const USER_AGENT = "Mozilla/5.0 (compatible; openmetro/0.1)";
+const SUBWAY_URL = 'https://map.amap.com/service/subway';
+const USER_AGENT = 'Mozilla/5.0 (compatible; openmetro/0.1)';
 
 interface CityEntry {
   spell: string;
@@ -55,7 +55,7 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 async function getJson<T>(url: string, retries = 3): Promise<T | undefined> {
   for (let attempt = 0; ; attempt++) {
     try {
-      const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
+      const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
       if (!res.ok) throw new Error(`amap subway ${res.status}`);
       return (await res.json()) as T;
     } catch {
@@ -67,7 +67,7 @@ async function getJson<T>(url: string, retries = 3): Promise<T | undefined> {
 
 /** Drop a trailing "市" so "上海市" and "上海" resolve to the same city. */
 function normalizeCity(city: string): string {
-  return city.replace(/市$/, "").trim();
+  return city.replace(/市$/, '').trim();
 }
 
 let cityListPromise: Promise<CityEntry[]> | undefined;
@@ -75,7 +75,7 @@ let cityListPromise: Promise<CityEntry[]> | undefined;
 /** Fetch (once per process) the AMap subway city list. */
 function loadCityList(): Promise<CityEntry[]> {
   cityListPromise ??= getJson<{ citylist?: CityEntry[] }>(
-    `${SUBWAY_URL}?srhdata=citylist.json`,
+    `${SUBWAY_URL}?srhdata=citylist.json`
   ).then((data) => data?.citylist ?? []);
   return cityListPromise;
 }
@@ -85,14 +85,14 @@ async function resolveCity(city: string): Promise<CityEntry | undefined> {
   const target = normalizeCity(city);
   const list = await loadCityList();
   return list.find(
-    (c) => normalizeCity(c.cityname) === target || c.spell.toLowerCase() === target.toLowerCase(),
+    (c) => normalizeCity(c.cityname) === target || c.spell.toLowerCase() === target.toLowerCase()
   );
 }
 
 function parseSl(sl: string | undefined): GeoResult | undefined {
   if (!sl) return undefined;
-  const [lon, lat] = sl.split(",").map(Number);
-  return Number.isFinite(lon) && Number.isFinite(lat) ? { lon, lat, crs: "gcj02" } : undefined;
+  const [lon, lat] = sl.split(',').map(Number);
+  return Number.isFinite(lon) && Number.isFinite(lat) ? { lon, lat, crs: 'gcj02' } : undefined;
 }
 
 /** Flatten the per-line station arrays into one entry per distinct station. */
@@ -124,7 +124,7 @@ export async function fetchSubwayStations(city: string): Promise<SubwayStation[]
 
 /** Strip a trailing parenthetical, e.g. "国家会展中心(2号线)" -> "国家会展中心". */
 function stripParenthetical(name: string): string {
-  return name.replace(/[(（][^)）]*[)）]\s*$/, "").trim();
+  return name.replace(/[(（][^)）]*[)）]\s*$/, '').trim();
 }
 
 /**
@@ -145,7 +145,7 @@ export function indexSubwayStations(stations: SubwayStation[]): Map<string, Subw
 /** Look up a station by an official Chinese name. */
 export function findSubwayStation(
   index: Map<string, SubwayStation>,
-  name: string,
+  name: string
 ): SubwayStation | undefined {
   return index.get(name) ?? index.get(stripParenthetical(name));
 }

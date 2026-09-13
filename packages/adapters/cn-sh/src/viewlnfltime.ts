@@ -1,6 +1,6 @@
-import { officialFetchHeaders, proxyUrl } from "@openmetro/core";
+import { officialFetchHeaders, proxyUrl } from '@openmetro/core';
 
-const BASE = "https://m.shmetro.com/workspace/shmetrotest/view_lnfltime.aspx";
+const BASE = 'https://m.shmetro.com/workspace/shmetrotest/view_lnfltime.aspx';
 
 export interface FlTimeRow {
   stationName: string;
@@ -18,7 +18,7 @@ async function fetchText(url: string): Promise<string> {
 
 /** Parse the station table from the per-line timetable HTML. */
 export function parseFlTimeTable(html: string): FlTimeRow[] {
-  const rows = html.split("<tr");
+  const rows = html.split('<tr');
   const out: FlTimeRow[] = [];
   let curStation: string | null = null;
   for (const r of rows) {
@@ -26,7 +26,7 @@ export function parseFlTimeTable(html: string): FlTimeRow[] {
     if (stname) curStation = stname[1];
     const dirn = /class="stdirt">.*?<span[^>]*>([^<]+)<\/span>/.exec(r);
     const sttime = /class="sttime"><div>([0-9:]+)\/<span[^>]*data-normal="([0-9:]+)"([^>]*)>/.exec(
-      r,
+      r
     );
     if (curStation && dirn && sttime) {
       const adjustMatch = /data-adjust="([^"]*)"/.exec(sttime[3]);
@@ -35,7 +35,7 @@ export function parseFlTimeTable(html: string): FlTimeRow[] {
         directionLabel: dirn[1].trim(),
         firstTime: sttime[1],
         lastTime: sttime[2],
-        adjust: adjustMatch ? adjustMatch[1] : undefined,
+        adjust: adjustMatch ? adjustMatch[1] : undefined
       });
     }
   }
@@ -52,23 +52,40 @@ export function parseBranchNote(html: string): string | undefined {
   return m ? m[1].trim() : undefined;
 }
 
-/** A line's parsed first/last table and its branch note. */
+/**
+ * Official display name for the selected line from the timetable page header
+ * (e.g. "1号线", "浦江线", "市域机场线"). The `func=lines` map endpoint only
+ * returns line numbers and colors — names live here instead.
+ */
+export function parseLineName(html: string): string | undefined {
+  const header = /class="shvsilnname">\s*<span class="stxt">([^<]+)<\/span>/.exec(html);
+  if (header?.[1]) return header[1].trim();
+  const option = /<option selected="selected" value="[^"]*">([^<]+)<\/option>/.exec(html);
+  return option?.[1]?.trim();
+}
+
+/** A line's parsed first/last table, official name, and branch note. */
 export interface LineFlTime {
   rows: FlTimeRow[];
+  name?: string;
   note?: string;
 }
 
 /** Fetch and parse the per-line first/last timetable pages. */
 export async function fetchAllLines(
   lineNos: string[],
-  opts: { delayMs?: number } = {},
+  opts: { delayMs?: number } = {}
 ): Promise<Map<string, LineFlTime>> {
   const delayMs = opts.delayMs ?? 150;
   const out = new Map<string, LineFlTime>();
   for (const ln of lineNos) {
     try {
       const html = await fetchText(`${BASE}?ln=${encodeURIComponent(ln)}`);
-      out.set(ln, { rows: parseFlTimeTable(html), note: parseBranchNote(html) });
+      out.set(ln, {
+        rows: parseFlTimeTable(html),
+        name: parseLineName(html),
+        note: parseBranchNote(html)
+      });
     } catch {
       // skip failed line
     }

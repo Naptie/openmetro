@@ -1,4 +1,4 @@
-import type { Schema } from "effect";
+import type { Schema } from 'effect';
 import type {
   FareMatrix,
   Line,
@@ -8,23 +8,23 @@ import type {
   Station,
   Stop,
   Timetable,
-  Transfer,
-} from "./index.js";
+  Transfer
+} from './index.js';
 
-export * from "./city.js";
-export * from "./fare.js";
-export * from "./file.js";
-export * from "./geometry.js";
-export * from "./line.js";
-export * from "./names.js";
-export * from "./network.js";
-export * from "./pattern.js";
-export * from "./provenance.js";
-export * from "./segment.js";
-export * from "./station.js";
-export * from "./stop.js";
-export * from "./timetable.js";
-export * from "./transfer.js";
+export * from './city.js';
+export * from './fare.js';
+export * from './file.js';
+export * from './geometry.js';
+export * from './line.js';
+export * from './names.js';
+export * from './network.js';
+export * from './pattern.js';
+export * from './provenance.js';
+export * from './segment.js';
+export * from './station.js';
+export * from './stop.js';
+export * from './timetable.js';
+export * from './transfer.js';
 
 // Encoded (serialization) types: optional fields are plain `T | undefined`,
 // not Effect `Option<T>`. Use these when constructing canonical JSON.

@@ -11,6 +11,9 @@
       "!**/dist",
       "!**/.output",
       "!**/*.generated.ts",
+      "!**/project.inlang/cache",
+      "!**/project.inlang/.lix",
+      "!**/src/lib/paraglide",
       "!data"
     ]
   },
@@ -21,12 +24,27 @@
     "lineWidth": 100,
     "formatWithErrors": false
   },
+  "html": {
+    "experimentalFullSupportEnabled": true,
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "lineWidth": 100,
+      "indentScriptAndStyle": true
+    }
+  },
   "javascript": {
     "formatter": {
-      "quoteStyle": "double",
+      "quoteStyle": "single",
       "semicolons": "always",
-      "trailingCommas": "all",
+      "trailingCommas": "none",
       "arrowParentheses": "always"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
     }
   },
   "linter": {
@@ -50,6 +68,16 @@
           "correctness": {
             "noUnusedVariables": "off",
             "noUnusedImports": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/layout.css"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "noImportantStyles": "off"
           }
         }
       }

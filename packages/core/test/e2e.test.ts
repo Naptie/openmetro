@@ -1,21 +1,21 @@
-import assert from "node:assert/strict";
-import { dirname, join } from "node:path";
-import { test } from "node:test";
-import { fileURLToPath } from "node:url";
-import { Effect } from "effect";
-import { loadNetwork, type NetworkData } from "../src/data/loader.js";
-import { buildStopGraph, type WeightKind } from "../src/graph/build.js";
-import { travelTimes } from "../src/graph/dijkstra.js";
-import { planRoute } from "../src/graph/route.js";
+import assert from 'node:assert/strict';
+import { dirname, join } from 'node:path';
+import { test } from 'node:test';
+import { fileURLToPath } from 'node:url';
+import { Effect } from 'effect';
+import { loadNetwork, type NetworkData } from '../src/data/loader.js';
+import { buildStopGraph, type WeightKind } from '../src/graph/build.js';
+import { travelTimes } from '../src/graph/dijkstra.js';
+import { planRoute } from '../src/graph/route.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const dataRoot = join(here, "../../../data");
+const dataRoot = join(here, '../../../data');
 
-const BEIJING = "cn-bj";
-const SHANGHAI = "cn-sh";
-const GUANGZHOU = "cn-gz";
+const BEIJING = 'cn-bj';
+const SHANGHAI = 'cn-sh';
+const GUANGZHOU = 'cn-gz';
 
-function graphFor(d: NetworkData, weight: WeightKind = "time") {
+function graphFor(d: NetworkData, weight: WeightKind = 'time') {
   return buildStopGraph(d.network.id, d.stops, d.segments, d.transfers, d.network.routing, weight);
 }
 
@@ -23,47 +23,47 @@ async function load(id: string): Promise<NetworkData> {
   return Effect.runPromise(loadNetwork(dataRoot, id));
 }
 
-test("Beijing routes by time across a transfer", async () => {
+test('Beijing routes by time across a transfer', async () => {
   const d = await load(BEIJING);
   assert.ok(d.lines.length > 0);
   assert.ok(d.stations.length > 0);
-  const plan = planRoute(graphFor(d), d.stops, "cn-bj-pingguoyuan", "cn-bj-xizhimen");
+  const plan = planRoute(graphFor(d), d.stops, 'cn-bj-pingguoyuan', 'cn-bj-xizhimen');
   assert.ok(plan);
   assert.ok(plan.total_seconds > 0);
   assert.ok(plan.legs.length >= 1);
 });
 
-test("Beijing distance stays connected via time fallback", async () => {
+test('Beijing distance stays connected via time fallback', async () => {
   const d = await load(BEIJING);
-  const plan = planRoute(graphFor(d, "distance"), d.stops, "cn-bj-pingguoyuan", "cn-bj-xizhimen");
+  const plan = planRoute(graphFor(d, 'distance'), d.stops, 'cn-bj-pingguoyuan', 'cn-bj-xizhimen');
   assert.ok(plan);
   assert.ok(plan.total_seconds > 0);
 });
 
-test("Shanghai routes by time", async () => {
+test('Shanghai routes by time', async () => {
   const d = await load(SHANGHAI);
   assert.ok(d.lines.length > 0);
   assert.ok(d.stations.length > 0);
-  const plan = planRoute(graphFor(d), d.stops, "cn-sh-xinzhuang", "cn-sh-people-s-square");
-  assert.ok(plan, "expected a Shanghai route");
+  const plan = planRoute(graphFor(d), d.stops, 'cn-sh-xinzhuang', 'cn-sh-people-s-square');
+  assert.ok(plan, 'expected a Shanghai route');
   assert.ok(plan.total_seconds > 0);
 });
 
-test("Guangzhou routes by time", async () => {
+test('Guangzhou routes by time', async () => {
   const d = await load(GUANGZHOU);
   assert.ok(d.lines.length > 0);
   assert.ok(d.stations.length > 0);
   const plan = planRoute(
     graphFor(d),
     d.stops,
-    "cn-gz-tiyu-xilu",
-    "cn-gz-guangzhou-south-railway-station",
+    'cn-gz-tiyu-xilu',
+    'cn-gz-guangzhou-south-railway-station'
   );
-  assert.ok(plan, "expected a Guangzhou route");
+  assert.ok(plan, 'expected a Guangzhou route');
   assert.ok(plan.total_seconds > 0);
 });
 
-test("all networks have transfers and segment travel times", async () => {
+test('all networks have transfers and segment travel times', async () => {
   for (const id of [BEIJING, SHANGHAI, GUANGZHOU]) {
     const d = await load(id);
     assert.ok(d.transfers.length > 0, `${id} should have transfer edges`);
@@ -75,27 +75,27 @@ test("all networks have transfers and segment travel times", async () => {
   }
 });
 
-test("Beijing transfers carry official walk times where the legend resolves", async () => {
+test('Beijing transfers carry official walk times where the legend resolves', async () => {
   const d = await load(BEIJING);
   const official = d.transfers.filter((t) => t.walk_time_seconds != null);
-  assert.ok(official.length > 0, "expected official Beijing transfer times");
+  assert.ok(official.length > 0, 'expected official Beijing transfer times');
 });
 
-test("Beijing keeps source segment times", async () => {
+test('Beijing keeps source segment times', async () => {
   const d = await load(BEIJING);
-  const src = d.segments.filter((s) => s.travel_time_source === "source");
+  const src = d.segments.filter((s) => s.travel_time_source === 'source');
   assert.ok(src.length > 0);
 });
 
-test("Shanghai and Guangzhou derive segment times from last train", async () => {
+test('Shanghai and Guangzhou derive segment times from last train', async () => {
   for (const id of [SHANGHAI, GUANGZHOU]) {
     const d = await load(id);
-    const derived = d.segments.filter((s) => s.travel_time_source === "last_train");
+    const derived = d.segments.filter((s) => s.travel_time_source === 'last_train');
     assert.ok(derived.length > 0, `${id} should have derived segment times`);
   }
 });
 
-test("every network has route patterns with consistent references", async () => {
+test('every network has route patterns with consistent references', async () => {
   for (const id of [BEIJING, SHANGHAI, GUANGZHOU]) {
     const d = await load(id);
     assert.ok(d.patterns.length > 0, `${id} should have patterns`);
@@ -116,68 +116,68 @@ test("every network has route patterns with consistent references", async () => 
   }
 });
 
-test("Shanghai Line 11 branch topology is correct", async () => {
+test('Shanghai Line 11 branch topology is correct', async () => {
   const d = await load(SHANGHAI);
   const pairs = new Set(d.segments.map((s) => `${s.from_stop_id}|${s.to_stop_id}`));
   // Both branches meet the junction at Jiading Xincheng.
-  assert.ok(pairs.has("cn-sh-shanghai-circuit-11|cn-sh-jiading-xincheng-11"));
-  assert.ok(pairs.has("cn-sh-baiyin-road-11|cn-sh-jiading-xincheng-11"));
+  assert.ok(pairs.has('cn-sh-shanghai-circuit-11|cn-sh-jiading-xincheng-11'));
+  assert.ok(pairs.has('cn-sh-baiyin-road-11|cn-sh-jiading-xincheng-11'));
   // The old flat-sequence phantom bridge must be gone.
-  assert.ok(!pairs.has("cn-sh-shanghai-circuit-11|cn-sh-north-jiading-11"));
+  assert.ok(!pairs.has('cn-sh-shanghai-circuit-11|cn-sh-north-jiading-11'));
   // Jiading Xincheng is a junction: three distinct neighbours on Line 11.
   const neighbours = d.segments
-    .filter((s) => s.line_id === "cn-sh-line-11")
+    .filter((s) => s.line_id === 'cn-sh-line-11')
     .flatMap((s) =>
-      s.from_stop_id === "cn-sh-jiading-xincheng-11"
+      s.from_stop_id === 'cn-sh-jiading-xincheng-11'
         ? [s.to_stop_id]
-        : s.to_stop_id === "cn-sh-jiading-xincheng-11"
+        : s.to_stop_id === 'cn-sh-jiading-xincheng-11'
           ? [s.from_stop_id]
-          : [],
+          : []
     );
   assert.equal(new Set(neighbours).size, 3);
   // Timetables identify a destination, not a forward/backward axis.
-  const line11 = d.timetables.filter((t) => t.line_id === "cn-sh-line-11");
+  const line11 = d.timetables.filter((t) => t.line_id === 'cn-sh-line-11');
   assert.ok(line11.length > 0);
   assert.ok(line11.every((t) => t.destination_stop_id != null));
 });
 
-test("Shanghai Line 11 branch is routable in both directions via the junction", async () => {
+test('Shanghai Line 11 branch is routable in both directions via the junction', async () => {
   const d = await load(SHANGHAI);
   const g = graphFor(d);
-  const out = planRoute(g, d.stops, "cn-sh-huaqiao", "cn-sh-north-jiading");
-  assert.ok(out, "Huaqiao -> North Jiading should route");
+  const out = planRoute(g, d.stops, 'cn-sh-huaqiao', 'cn-sh-north-jiading');
+  assert.ok(out, 'Huaqiao -> North Jiading should route');
   assert.ok(
-    out.legs.some((l) => l.station_ids?.includes("cn-sh-jiading-xincheng")),
-    "must pass the junction",
+    out.legs.some((l) => l.station_ids?.includes('cn-sh-jiading-xincheng')),
+    'must pass the junction'
   );
-  const back = planRoute(g, d.stops, "cn-sh-north-jiading", "cn-sh-huaqiao");
-  assert.ok(back, "North Jiading -> Huaqiao should route (reverse segments)");
+  const back = planRoute(g, d.stops, 'cn-sh-north-jiading', 'cn-sh-huaqiao');
+  assert.ok(back, 'North Jiading -> Huaqiao should route (reverse segments)');
 });
 
-test("Guangzhou Line 3 branch topology is correct", async () => {
+test('Guangzhou Line 3 branch topology is correct', async () => {
   const d = await load(GUANGZHOU);
-  const junction = "cn-gz-tiyu-xilu-cn-gz-line-3";
+  const junction = 'cn-gz-tiyu-xilu-cn-gz-line-3';
   const neighbours = d.segments
-    .filter((s) => s.line_id === "cn-gz-line-3")
+    .filter((s) => s.line_id === 'cn-gz-line-3')
     .flatMap((s) =>
       s.from_stop_id === junction
         ? [s.to_stop_id]
         : s.to_stop_id === junction
           ? [s.from_stop_id]
-          : [],
+          : []
     );
   assert.equal(new Set(neighbours).size, 3);
-  const branch = d.patterns.find((p) => p.line_id === "cn-gz-line-3" && !p.is_primary);
+  const branch = d.patterns.find((p) => p.line_id === 'cn-gz-line-3' && !p.is_primary);
   assert.ok(branch);
   assert.equal(branch.junction_stop_id, junction);
 });
 
-test("travel-times isochrone reaches known stations", async () => {
+test('travel-times isochrone reaches known stations', async () => {
   const d = await load(BEIJING);
   const g = graphFor(d);
-  const sources = d.stops.filter((s) => s.station_id === "cn-bj-pingguoyuan").map((s) => s.id);
+  const sources = d.stops.filter((s) => s.station_id === 'cn-bj-pingguoyuan').map((s) => s.id);
   const times = travelTimes(g, sources);
-  const atGucheng = d.stops.find((s) => s.station_id === "cn-bj-gucheng");
+  const atGucheng = d.stops.find((s) => s.station_id === 'cn-bj-gucheng');
   assert.ok(atGucheng);
   assert.ok((times.get(atGucheng.id) ?? Infinity) > 0);
 });

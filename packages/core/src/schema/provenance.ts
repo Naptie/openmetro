@@ -1,7 +1,7 @@
-import { Schema } from "effect";
+import { Schema } from 'effect';
 
 /** License values for a data source. */
-export const License = Schema.Literal("unknown", "cc0", "cc-by", "cc-by-sa", "odbl", "custom");
+export const License = Schema.Literal('unknown', 'cc0', 'cc-by', 'cc-by-sa', 'odbl', 'custom');
 
 export type License = Schema.Schema.Type<typeof License>;
 
@@ -17,7 +17,7 @@ export const Source = Schema.Struct({
   license: License,
   license_url: Schema.NullOr(Schema.String),
   attribution: Schema.String,
-  notes: Schema.optionalWith(Schema.String, { as: "Option" }),
+  notes: Schema.optionalWith(Schema.String, { as: 'Option' })
 });
 
 export type Source = Schema.Schema.Type<typeof Source>;

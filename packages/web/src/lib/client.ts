@@ -1,4 +1,4 @@
-import { createClient } from "openmetro-client";
+import { createClient } from 'openmetro-client';
 
 const API = (import.meta.env.VITE_API_URL as string) || window.location.origin;
 
@@ -11,7 +11,7 @@ type ExcludeError<T> = Exclude<T, { error: string }>;
  * on errors – drop-in replacement for the old `getJson<T>(path)` wrapper.
  */
 export async function get<T>(
-  res: Promise<{ data: T | null; error: unknown }>,
+  res: Promise<{ data: T | null; error: unknown }>
 ): Promise<ExcludeError<T>> {
   const { data, error } = await res;
   if (error) throw error;

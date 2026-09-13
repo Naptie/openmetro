@@ -1,10 +1,10 @@
-import type { StopEncoded as Stop } from "../schema/index.js";
-import type { StopGraph } from "./build.js";
-import { buildStationIndex, type StationIndex } from "./build.js";
-import { dijkstraMany } from "./dijkstra.js";
+import type { StopEncoded as Stop } from '../schema/index.js';
+import type { StopGraph } from './build.js';
+import { buildStationIndex, type StationIndex } from './build.js';
+import { dijkstraMany } from './dijkstra.js';
 
 export interface RouteLeg {
-  kind: "ride" | "transfer";
+  kind: 'ride' | 'transfer';
   /** Line ridden / entered; absent only for a malformed transfer. */
   line_id?: string;
   from_stop_id: string;
@@ -25,7 +25,7 @@ export interface RoutePlan {
 }
 
 interface EdgeLookup {
-  kind: "ride" | "transfer";
+  kind: 'ride' | 'transfer';
   line_id?: string;
   weight: number;
 }
@@ -50,7 +50,7 @@ export function planRoute(
   stops: Stop[],
   fromStationId: string,
   toStationId: string,
-  stationIndex: StationIndex = buildStationIndex(stops),
+  stationIndex: StationIndex = buildStationIndex(stops)
 ): RoutePlan | null {
   const sources = stationIndex.get(fromStationId) ?? [];
   const targets = stationIndex.get(toStationId) ?? [];
@@ -70,7 +70,7 @@ export function planRoute(
     const bStop = stopById.get(b);
     if (!edge || !aStop || !bStop) continue;
 
-    if (edge.kind === "ride" && current?.kind === "ride" && current.line_id === edge.line_id) {
+    if (edge.kind === 'ride' && current?.kind === 'ride' && current.line_id === edge.line_id) {
       current.to_stop_id = b;
       current.to_station_id = bStop.station_id;
       current.seconds += edge.weight;
@@ -86,10 +86,10 @@ export function planRoute(
       from_station_id: aStop.station_id,
       to_station_id: bStop.station_id,
       seconds: edge.weight,
-      ...(edge.kind === "ride" ? { station_ids: [aStop.station_id, bStop.station_id] } : {}),
+      ...(edge.kind === 'ride' ? { station_ids: [aStop.station_id, bStop.station_id] } : {})
     };
     legs.push(current);
-    if (edge.kind === "transfer") transfers++;
+    if (edge.kind === 'transfer') transfers++;
   }
 
   return {
@@ -97,6 +97,6 @@ export function planRoute(
     to_station_id: toStationId,
     total_seconds: result.totalWeight,
     transfers,
-    legs,
+    legs
   };
 }

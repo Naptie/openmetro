@@ -24,7 +24,7 @@ const toRad = (deg: number) => (deg * Math.PI) / 180;
 /** Great-circle distance in kilometres. */
 export function haversineKm(
   a: { lon: number; lat: number },
-  b: { lon: number; lat: number },
+  b: { lon: number; lat: number }
 ): number {
   const dLat = toRad(b.lat - a.lat);
   const dLon = toRad(b.lon - a.lon);
@@ -42,11 +42,11 @@ export const MAX_NEAREST_KM: Record<string, number> = {
   tram: 10,
   airport_express: 45,
   suburban_rail: 20,
-  other: 20,
+  other: 20
 };
 
 export function maxNearestKm(mode: string | undefined): number {
-  return MAX_NEAREST_KM[mode ?? "other"] ?? 20;
+  return MAX_NEAREST_KM[mode ?? 'other'] ?? 20;
 }
 
 /**
@@ -68,7 +68,7 @@ export function nearestSameLinePeerKm(
   placed: Map<string, Coordinate>,
   stopsByStation: Map<string, string[]>,
   stopsByLine: Map<string, string[]>,
-  minPeers = 2,
+  minPeers = 2
 ): number | undefined {
   const lineIds = stopsByStation.get(stationId) ?? [];
   const distances: number[] = [];
@@ -92,7 +92,7 @@ export function isConsistentWithLine(
   stopsByStation: Map<string, string[]>,
   stopsByLine: Map<string, string[]>,
   modeByLine: Map<string, string>,
-  lineIdsOf: string[],
+  lineIdsOf: string[]
 ): boolean {
   const nearest = nearestSameLinePeerKm(stationId, loc, placed, stopsByStation, stopsByLine);
   if (nearest == null) return true;

@@ -2,10 +2,10 @@ import type {
   PatternEncoded,
   SegmentEncoded,
   StopEncoded,
-  TimetableEncoded,
-} from "../schema/index.js";
-import type { DirectionType } from "../schema/timetable.js";
-import { normalizeTimetableTimes, parseHHMM } from "./time.js";
+  TimetableEncoded
+} from '../schema/index.js';
+import type { DirectionType } from '../schema/timetable.js';
+import { normalizeTimetableTimes, parseHHMM } from './time.js';
 
 export interface DerivedSegment {
   id: string;
@@ -15,7 +15,7 @@ export interface DerivedSegment {
   from_station_id: string;
   to_station_id: string;
   travel_time_seconds: number;
-  travel_time_source: "last_train";
+  travel_time_source: 'last_train';
   travel_time_derived_from: [string, string];
 }
 
@@ -44,7 +44,7 @@ function selectChain(
   order: readonly string[],
   byStop: Map<string, TimetableEncoded[]>,
   destinationStopId: string | undefined,
-  directionType: DirectionType | undefined,
+  directionType: DirectionType | undefined
 ): Chain {
   const selected = new Map<string, TimetableEncoded>();
   let prevTime: number | null = null;
@@ -62,7 +62,7 @@ function selectChain(
     let chosen: TimetableEncoded | undefined;
     let chosenTime: number | null = null;
     for (const r of pool) {
-      const t = parseHHMM(r.last_train[0] ?? "");
+      const t = parseHHMM(r.last_train[0] ?? '');
       if (t == null) continue;
       if (prevTime != null && t < prevTime) continue;
       if (!chosen || (chosenTime != null && t < chosenTime)) {
@@ -92,7 +92,7 @@ export function deriveSegmentTimes(
   patterns: PatternEncoded[],
   stops: StopEncoded[],
   timetables: TimetableEncoded[],
-  opts: DeriveOptions = {},
+  opts: DeriveOptions = {}
 ): DerivedSegment[] {
   const cfg = { ...DEFAULTS, ...opts };
   const stopById = new Map(stops.map((s) => [s.id, s]));
@@ -124,19 +124,19 @@ export function deriveSegmentTimes(
 
     if (isLoop) {
       // For loop patterns, try both inner and outer directions, pick the one with more coverage.
-      const forwardInner = selectChain(pattern.stop_ids, byStop, undefined, "loop_inner");
-      const forwardOuter = selectChain(pattern.stop_ids, byStop, undefined, "loop_outer");
+      const forwardInner = selectChain(pattern.stop_ids, byStop, undefined, 'loop_inner');
+      const forwardOuter = selectChain(pattern.stop_ids, byStop, undefined, 'loop_outer');
       const backwardInner = selectChain(
         [...pattern.stop_ids].reverse(),
         byStop,
         undefined,
-        "loop_inner",
+        'loop_inner'
       );
       const backwardOuter = selectChain(
         [...pattern.stop_ids].reverse(),
         byStop,
         undefined,
-        "loop_outer",
+        'loop_outer'
       );
 
       // Pick the best among all four options.
@@ -152,7 +152,7 @@ export function deriveSegmentTimes(
         [...pattern.stop_ids].reverse(),
         byStop,
         pattern.origin_stop_id,
-        undefined,
+        undefined
       );
     }
 
@@ -176,8 +176,8 @@ export function deriveSegmentTimes(
       const ta = best.records.get(a.id);
       const tb = best.records.get(b.id);
       if (!ta || !tb) continue;
-      const taTime = parseHHMM(ta.last_train[0] ?? "");
-      const tbTime = parseHHMM(tb.last_train[0] ?? "");
+      const taTime = parseHHMM(ta.last_train[0] ?? '');
+      const tbTime = parseHHMM(tb.last_train[0] ?? '');
       if (taTime == null || tbTime == null) continue;
       const delta = tbTime - taTime;
       if (delta < cfg.minSeconds / 60 || delta > cfg.maxSeconds / 60) continue;
@@ -191,8 +191,8 @@ export function deriveSegmentTimes(
         from_station_id: a.station_id,
         to_station_id: b.station_id,
         travel_time_seconds: delta * 60,
-        travel_time_source: "last_train",
-        travel_time_derived_from: [ta.id, tb.id],
+        travel_time_source: 'last_train',
+        travel_time_derived_from: [ta.id, tb.id]
       });
     }
   }
@@ -207,7 +207,7 @@ export function deriveSegmentTimes(
  */
 export function applyDerivedTimes(
   segments: SegmentEncoded[],
-  derived: DerivedSegment[],
+  derived: DerivedSegment[]
 ): SegmentEncoded[] {
   const byPair = new Map<string, DerivedSegment>();
   for (const d of derived) {
@@ -218,14 +218,14 @@ export function applyDerivedTimes(
     // Keep authoritative source times; override estimated/unset times with
     // derived last-train times so we never discard real data but always fill
     // gaps with a real derivation.
-    if (s.travel_time_source === "source") return s;
+    if (s.travel_time_source === 'source') return s;
     const d = byPair.get(`${s.from_stop_id}|${s.to_stop_id}`);
     if (!d) return s;
     return {
       ...s,
       travel_time_seconds: d.travel_time_seconds,
       travel_time_source: d.travel_time_source,
-      travel_time_derived_from: d.travel_time_derived_from,
+      travel_time_derived_from: d.travel_time_derived_from
     };
   });
 }
@@ -244,17 +244,17 @@ export function fillMissingSegmentTimes(
   patterns: PatternEncoded[],
   stops: StopEncoded[],
   timetables: TimetableEncoded[],
-  defaultSeconds = 120,
+  defaultSeconds = 120
 ): SegmentEncoded[] {
   const unknown = segments.map((s) =>
     s.travel_time_seconds != null && s.travel_time_seconds > 0
       ? s
-      : { ...s, travel_time_seconds: undefined, travel_time_source: undefined },
+      : { ...s, travel_time_seconds: undefined, travel_time_source: undefined }
   );
   const derived = deriveSegmentTimes(patterns, stops, timetables, {});
   return applyDerivedTimes(unknown, derived).map((s) =>
     s.travel_time_seconds != null && s.travel_time_seconds > 0
       ? s
-      : { ...s, travel_time_seconds: defaultSeconds, travel_time_source: "estimated" as const },
+      : { ...s, travel_time_seconds: defaultSeconds, travel_time_source: 'estimated' as const }
   );
 }

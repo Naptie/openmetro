@@ -19,29 +19,29 @@
  *
  * Usage: `bun run scripts/verify-data.ts [--out <path>] [--network <id>]`
  */
-import { createHash } from "node:crypto";
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
-import { dirname, join, resolve } from "node:path";
-import { Effect } from "effect";
-import { loadNetwork, type NetworkData } from "../packages/core/src/index.js";
+import { createHash } from 'node:crypto';
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, join, resolve } from 'node:path';
+import { Effect } from 'effect';
+import { loadNetwork, type NetworkData } from '../packages/core/src/index.js';
 
-const DATA_ROOT = resolve(process.env.OPENMETRO_DATA_ROOT ?? "data");
+const DATA_ROOT = resolve(process.env.OPENMETRO_DATA_ROOT ?? 'data');
 
 /** Canonical files that make up a published dataset (order is irrelevant). */
 const CANONICAL_FILES = [
-  "network.json",
-  "lines.json",
-  "stations.json",
-  "stops.json",
-  "patterns.json",
-  "segments.json",
-  "transfers.json",
-  "timetables.json",
-  "fares.json",
+  'network.json',
+  'lines.json',
+  'stations.json',
+  'stops.json',
+  'patterns.json',
+  'segments.json',
+  'transfers.json',
+  'timetables.json',
+  'fares.json'
 ];
 
 function sha256(data: string | Uint8Array): string {
-  return createHash("sha256").update(data).digest("hex");
+  return createHash('sha256').update(data).digest('hex');
 }
 
 function fail(network: string, message: string): never {
@@ -68,15 +68,15 @@ function verifyReferences(network: string, d: NetworkData): void {
   const lineById = new Map(d.lines.map((l) => [l.id, l]));
 
   // ── Network metadata ──────────────────────────────────────────
-  assert(d.network.id === network, network, "network.id mismatch");
-  assert(d.network.routing?.weight, network, "network.routing.weight missing");
+  assert(d.network.id === network, network, 'network.id mismatch');
+  assert(d.network.routing?.weight, network, 'network.routing.weight missing');
   assert(
     d.network.routing.default_transfer_seconds > 0,
     network,
-    "network.routing.default_transfer_seconds must be > 0",
+    'network.routing.default_transfer_seconds must be > 0'
   );
-  assert(d.network.currency, network, "network.currency missing");
-  assert(d.network.timezone, network, "network.timezone missing");
+  assert(d.network.currency, network, 'network.currency missing');
+  assert(d.network.timezone, network, 'network.timezone missing');
 
   // ── Lines ─────────────────────────────────────────────────────
   for (const line of d.lines) {
@@ -87,20 +87,18 @@ function verifyReferences(network: string, d: NetworkData): void {
 
   // ── Stations ──────────────────────────────────────────────────
   const stationById = new Map(d.stations.map((s) => [s.id, s]));
-  assert(stationById.size === d.stations.length, network, "duplicate station ids");
+  assert(stationById.size === d.stations.length, network, 'duplicate station ids');
   for (const station of d.stations) {
     assert(station.names?.zh, network, `station ${station.id} missing names.zh`);
     assert(station.names?.en, network, `station ${station.id} missing names.en`);
     // Coordinates must be resolved for in-service metro-class stations.
     // Tram/other modes may be absent from AMap+Overpass+Photon on a given day.
-    if (station.status === "operating") {
+    if (station.status === 'operating') {
       const lineModes = new Set(
-        d.stops
-          .filter((s) => s.station_id === station.id)
-          .map((s) => lineById.get(s.line_id)?.mode),
+        d.stops.filter((s) => s.station_id === station.id).map((s) => lineById.get(s.line_id)?.mode)
       );
       const needsCoords = [...lineModes].some(
-        (m) => m === "metro" || m === "airport_express" || m === "monorail" || m === "light_rail",
+        (m) => m === 'metro' || m === 'airport_express' || m === 'monorail' || m === 'light_rail'
       );
       if (needsCoords) {
         assert(station.location, network, `station ${station.id} missing location`);
@@ -108,7 +106,7 @@ function verifyReferences(network: string, d: NetworkData): void {
         assert(
           isPlausibleLocation(station.location.lon, station.location.lat),
           network,
-          `station ${station.id} has implausible coordinates`,
+          `station ${station.id} has implausible coordinates`
         );
       }
     }
@@ -138,12 +136,12 @@ function verifyReferences(network: string, d: NetworkData): void {
     assert(
       pattern.origin_stop_id === pattern.stop_ids[0],
       network,
-      `pattern ${pattern.id} origin_stop_id mismatch`,
+      `pattern ${pattern.id} origin_stop_id mismatch`
     );
     assert(
       pattern.terminal_stop_id === pattern.stop_ids[pattern.stop_ids.length - 1],
       network,
-      `pattern ${pattern.id} terminal_stop_id mismatch`,
+      `pattern ${pattern.id} terminal_stop_id mismatch`
     );
     for (const stopId of pattern.stop_ids) {
       const stop = stopById.get(stopId);
@@ -151,7 +149,7 @@ function verifyReferences(network: string, d: NetworkData): void {
       assert(
         stop.line_id === pattern.line_id,
         network,
-        `pattern ${pattern.id} stop ${stopId} is on line ${stop.line_id}`,
+        `pattern ${pattern.id} stop ${stopId} is on line ${stop.line_id}`
       );
       stopsInPatterns.add(stopId);
     }
@@ -159,7 +157,7 @@ function verifyReferences(network: string, d: NetworkData): void {
       assert(
         stopById.has(pattern.junction_stop_id),
         network,
-        `pattern ${pattern.id} -> unknown junction ${pattern.junction_stop_id}`,
+        `pattern ${pattern.id} -> unknown junction ${pattern.junction_stop_id}`
       );
     }
   }
@@ -167,7 +165,7 @@ function verifyReferences(network: string, d: NetworkData): void {
     assert(
       stopsInPatterns.has(stop.id),
       network,
-      `stop ${stop.id} is not referenced by any pattern`,
+      `stop ${stop.id} is not referenced by any pattern`
     );
   }
 
@@ -182,17 +180,17 @@ function verifyReferences(network: string, d: NetworkData): void {
     assert(
       from.station_id === segment.from_station_id && to.station_id === segment.to_station_id,
       network,
-      `segment ${segment.id} denormalized station ids disagree with stops`,
+      `segment ${segment.id} denormalized station ids disagree with stops`
     );
     assert(
       from.line_id === segment.line_id && to.line_id === segment.line_id,
       network,
-      `segment ${segment.id} stops are not on the segment line`,
+      `segment ${segment.id} stops are not on the segment line`
     );
     assert(
       segment.travel_time_seconds != null && segment.travel_time_seconds > 0,
       network,
-      `segment ${segment.id} missing or non-positive travel time`,
+      `segment ${segment.id} missing or non-positive travel time`
     );
     const key = `${segment.from_stop_id}|${segment.to_stop_id}`;
     assert(!segmentPairs.has(key), network, `duplicate segment ${key}`);
@@ -205,17 +203,17 @@ function verifyReferences(network: string, d: NetworkData): void {
     assert(
       stationIds.has(transfer.station_id),
       network,
-      `transfer ${transfer.id} -> unknown station`,
+      `transfer ${transfer.id} -> unknown station`
     );
     assert(
       lineIds.has(transfer.from_line_id) && lineIds.has(transfer.to_line_id),
       network,
-      `transfer ${transfer.id} -> unknown line`,
+      `transfer ${transfer.id} -> unknown line`
     );
     assert(
       transfer.from_line_id !== transfer.to_line_id,
       network,
-      `transfer ${transfer.id} is a self-transfer on one line`,
+      `transfer ${transfer.id} is a self-transfer on one line`
     );
     for (const stopId of [transfer.from_stop_id, transfer.to_stop_id]) {
       if (stopId) assert(stopById.has(stopId), network, `transfer ${transfer.id} -> unknown stop`);
@@ -234,7 +232,7 @@ function verifyReferences(network: string, d: NetworkData): void {
         assert(
           transferKeys.has(key),
           network,
-          `interchange ${stationId} missing transfer ${a} -> ${b}`,
+          `interchange ${stationId} missing transfer ${a} -> ${b}`
         );
       }
     }
@@ -252,14 +250,14 @@ function verifyReferences(network: string, d: NetworkData): void {
     assert(
       stop.station_id === timetable.station_id && stop.line_id === timetable.line_id,
       network,
-      `timetable ${timetable.id} stop disagrees with station/line`,
+      `timetable ${timetable.id} stop disagrees with station/line`
     );
     const pattern = d.patterns.find((p) => p.id === timetable.pattern_id);
     assert(pattern, network, `timetable ${timetable.id} pattern missing`);
     assert(
       pattern.stop_ids.includes(timetable.stop_id),
       network,
-      `timetable ${timetable.id} stop is not on its pattern`,
+      `timetable ${timetable.id} stop is not on its pattern`
     );
     if (timetable.destination_stop_id) {
       const dest = stopById.get(timetable.destination_stop_id);
@@ -267,34 +265,34 @@ function verifyReferences(network: string, d: NetworkData): void {
       assert(
         dest.line_id === timetable.line_id,
         network,
-        `timetable ${timetable.id} destination is on another line`,
+        `timetable ${timetable.id} destination is on another line`
       );
     }
     const isLoopDir =
-      timetable.direction_type === "loop_inner" || timetable.direction_type === "loop_outer";
+      timetable.direction_type === 'loop_inner' || timetable.direction_type === 'loop_outer';
     const line = lineById.get(timetable.line_id);
     if (isLoopDir) {
       assert(
         line?.loop || isLoopDir,
         network,
-        `timetable ${timetable.id} loop direction on non-loop line`,
+        `timetable ${timetable.id} loop direction on non-loop line`
       );
     } else {
       assert(
         timetable.destination_stop_id != null,
         network,
-        `linear timetable ${timetable.id} missing destination_stop_id`,
+        `linear timetable ${timetable.id} missing destination_stop_id`
       );
     }
     assert(
       timetable.first_train.length === 1 || timetable.first_train.length === 7,
       network,
-      `timetable ${timetable.id} first_train length`,
+      `timetable ${timetable.id} first_train length`
     );
     assert(
       timetable.last_train.length === 1 || timetable.last_train.length === 7,
       network,
-      `timetable ${timetable.id} last_train length`,
+      `timetable ${timetable.id} last_train length`
     );
     ttStops.add(timetable.stop_id);
     const set = ttByLine.get(timetable.line_id) ?? new Set();
@@ -314,37 +312,37 @@ function verifyReferences(network: string, d: NetworkData): void {
     stopsByLine.set(stop.line_id, (stopsByLine.get(stop.line_id) ?? 0) + 1);
   }
   for (const line of d.lines) {
-    if (line.status !== "operating") continue;
+    if (line.status !== 'operating') continue;
     if ((stopsByLine.get(line.id) ?? 0) === 0) continue;
     const published = ttByLine.get(line.id);
     if (!published || published.size === 0) continue;
     for (const stop of d.stops) {
       if (stop.line_id !== line.id) continue;
       const station = stationById.get(stop.station_id);
-      if (station?.status !== "operating") continue;
+      if (station?.status !== 'operating') continue;
       if (ttByStationLine.has(`${station.id}|${line.id}`)) continue;
       assert(
         stationsWithAnyTt.has(station.id),
         network,
-        `line ${line.id} publishes timetables but operating station ${station.id} has none`,
+        `line ${line.id} publishes timetables but operating station ${station.id} has none`
       );
     }
   }
 
   // ── Fares ─────────────────────────────────────────────────────
   if (!d.fares) {
-    fail(network, "fares.json missing (required for a complete dataset)");
+    fail(network, 'fares.json missing (required for a complete dataset)');
   }
   {
     const matrix = d.fares;
-    assert(matrix.network_id === network, network, "fare matrix network_id mismatch");
+    assert(matrix.network_id === network, network, 'fare matrix network_id mismatch');
     assert(
       matrix.fares.length === matrix.station_ids.length,
       network,
-      "fare matrix row count != station count",
+      'fare matrix row count != station count'
     );
     const fareIds = new Set(matrix.station_ids);
-    assert(fareIds.size === matrix.station_ids.length, network, "duplicate fare station ids");
+    assert(fareIds.size === matrix.station_ids.length, network, 'duplicate fare station ids');
     for (const stationId of matrix.station_ids) {
       assert(stationIds.has(stationId), network, `fare matrix -> unknown station ${stationId}`);
     }
@@ -368,7 +366,7 @@ function verifyReferences(network: string, d: NetworkData): void {
 interface NetworkManifest {
   files: Record<string, string>;
   stats: Record<string, number>;
-  integrity: "ok";
+  integrity: 'ok';
 }
 
 function statsOf(d: NetworkData): Record<string, number> {
@@ -386,8 +384,8 @@ function statsOf(d: NetworkData): Record<string, number> {
       : 0,
     official_transfer_times: d.transfers.filter((t) => t.walk_time_seconds != null).length,
     stations_with_coords: d.stations.filter((s) => s.location != null).length,
-    stations_out_of_service: d.stations.filter((s) => s.status === "out_of_service").length,
-    stops_with_timetables: new Set(d.timetables.map((t) => t.stop_id)).size,
+    stations_out_of_service: d.stations.filter((s) => s.status === 'out_of_service').length,
+    stops_with_timetables: new Set(d.timetables.map((t) => t.stop_id)).size
   };
 }
 
@@ -403,32 +401,32 @@ async function verifyNetwork(id: string): Promise<NetworkManifest> {
     files[file] = `sha256:${sha256(raw)}`;
   }
 
-  return { files, stats: statsOf(data), integrity: "ok" };
+  return { files, stats: statsOf(data), integrity: 'ok' };
 }
 
 function parseOut(): string {
-  const i = process.argv.indexOf("--out");
+  const i = process.argv.indexOf('--out');
   return resolve(
-    i >= 0 ? (process.argv[i + 1] ?? "dist/data-manifest.json") : "dist/data-manifest.json",
+    i >= 0 ? (process.argv[i + 1] ?? 'dist/data-manifest.json') : 'dist/data-manifest.json'
   );
 }
 
 /** Optional `--network <id>` limits verification to one network (CI matrix). */
 function parseNetworkFilter(): string | undefined {
-  const i = process.argv.indexOf("--network");
+  const i = process.argv.indexOf('--network');
   return i >= 0 ? process.argv[i + 1] : undefined;
 }
 
 async function main(): Promise<void> {
   const filter = parseNetworkFilter();
   const ids = (await readdir(DATA_ROOT, { withFileTypes: true }))
-    .filter((e) => e.isDirectory() && !e.name.startsWith("."))
+    .filter((e) => e.isDirectory() && !e.name.startsWith('.'))
     .map((e) => e.name)
     .filter((id) => !filter || id === filter)
     .sort();
 
   if (ids.length === 0) {
-    throw new Error(filter ? `network not found: ${filter}` : "no networks under data/");
+    throw new Error(filter ? `network not found: ${filter}` : 'no networks under data/');
   }
 
   const networks: Record<string, NetworkManifest> = {};
@@ -440,12 +438,12 @@ async function main(): Promise<void> {
       lines.push(`${id}/${file}:${networks[id].files[file]}`);
     }
   }
-  const aggregate = `sha256:${sha256(lines.join("\n"))}`;
+  const aggregate = `sha256:${sha256(lines.join('\n'))}`;
 
-  const manifest = { schema_version: "1.0", networks, aggregate };
+  const manifest = { schema_version: '1.0', networks, aggregate };
   const out = parseOut();
   await mkdir(dirname(out), { recursive: true });
-  await writeFile(out, `${JSON.stringify(manifest, null, 2)}\n`, "utf-8");
+  await writeFile(out, `${JSON.stringify(manifest, null, 2)}\n`, 'utf-8');
 
   for (const [id, entry] of Object.entries(networks)) {
     console.log(`${id}: ok ${JSON.stringify(entry.stats)}`);

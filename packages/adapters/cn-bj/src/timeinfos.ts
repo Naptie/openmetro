@@ -1,4 +1,4 @@
-import type { StopEncoded, TimetableEncoded } from "@openmetro/core";
+import type { StopEncoded, TimetableEncoded } from '@openmetro/core';
 
 export interface BjTimeInfoStation {
   stationName: string;
@@ -36,21 +36,21 @@ export interface BuildTimeInfosOpts {
 }
 
 function isReal(v: string | null | undefined): v is string {
-  return !!v && v !== "——" && v !== "--";
+  return !!v && v !== '——' && v !== '--';
 }
 
 /** Strip parenthetical / full-width annotations for name matching. */
 function cleanName(name: string): string {
-  return name.replace(/[（）()]/g, "").trim();
+  return name.replace(/[（）()]/g, '').trim();
 }
 
 /** Detect loop direction type from a Beijing direction label. */
 function detectLoopDirection(
-  label: string | null | undefined,
-): "loop_inner" | "loop_outer" | undefined {
+  label: string | null | undefined
+): 'loop_inner' | 'loop_outer' | undefined {
   if (!label) return undefined;
-  if (label.includes("内") || label.includes("(内)")) return "loop_inner";
-  if (label.includes("外") || label.includes("(外)")) return "loop_outer";
+  if (label.includes('内') || label.includes('(内)')) return 'loop_inner';
+  if (label.includes('外') || label.includes('(外)')) return 'loop_outer';
   return undefined;
 }
 
@@ -68,7 +68,7 @@ export function buildBeijingTimetablesFromTimeinfos(opts: BuildTimeInfosOpts): T
     stopsByLine,
     stationIdByCleanedName,
     loopLineIds,
-    networkId,
+    networkId
   } = opts;
   const lines = timeinfos.data ?? [];
   const out: TimetableEncoded[] = [];
@@ -87,8 +87,8 @@ export function buildBeijingTimetablesFromTimeinfos(opts: BuildTimeInfosOpts): T
       // Beijing lines each have a single primary pattern.
       const patternId = `${lineId}-pattern-main`;
 
-      const upDest = st.upDestName ? cleanName(st.upDestName) : "";
-      const downDest = st.downDestName ? cleanName(st.downDestName) : "";
+      const upDest = st.upDestName ? cleanName(st.upDestName) : '';
+      const downDest = st.downDestName ? cleanName(st.downDestName) : '';
       const upTermId = upDest ? stationIdByCleanedName(upDest) : undefined;
       const downTermId = downDest ? stationIdByCleanedName(downDest) : undefined;
 
@@ -109,11 +109,11 @@ export function buildBeijingTimetablesFromTimeinfos(opts: BuildTimeInfosOpts): T
             source_id: (st as { stationCode?: string }).stationCode,
             destination_stop_id: upDirType ? undefined : destination,
             pattern_id: patternId,
-            direction_type: upDirType ?? "linear",
+            direction_type: upDirType ?? 'linear',
             direction_label: st.upDestName ?? undefined,
             first_train: [st.upFirstTime],
             last_train: [st.upLastTime],
-            service: "all_days",
+            service: 'all_days'
           });
         }
       }
@@ -130,11 +130,11 @@ export function buildBeijingTimetablesFromTimeinfos(opts: BuildTimeInfosOpts): T
             source_id: (st as { stationCode?: string }).stationCode,
             destination_stop_id: downDirType ? undefined : destination,
             pattern_id: patternId,
-            direction_type: downDirType ?? "linear",
+            direction_type: downDirType ?? 'linear',
             direction_label: st.downDestName ?? undefined,
             first_train: [st.downFirstTime],
             last_train: [st.downLastTime],
-            service: "all_days",
+            service: 'all_days'
           });
         }
       }
@@ -148,7 +148,7 @@ function slugOfTab(name: string): string {
   return (
     name
       .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "") || "dest"
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'dest'
   );
 }

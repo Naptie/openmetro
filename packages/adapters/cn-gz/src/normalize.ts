@@ -16,8 +16,8 @@ import {
   type StopEncoded,
   stripDirectionAnnotation,
   type TimetableEncoded,
-  type TransferEncoded,
-} from "@openmetro/core";
+  type TransferEncoded
+} from '@openmetro/core';
 
 export interface GzRawInput {
   linestation: { businessObject: GzLineCard[] };
@@ -83,19 +83,19 @@ export interface GzCanonical {
   transfers: TransferEncoded[];
   timetables: TimetableEncoded[];
   /** Raw official getByNameOrCode coords; validated in fillCoordinates. */
-  officialLocations: Map<string, { lon: number; lat: number; crs: "gcj02" }>;
+  officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-const NETWORK_ID = "cn-gz";
+const NETWORK_ID = 'cn-gz';
 const DEFAULT_SEGMENT_SECONDS = 120;
 
 function slug(s: string): string {
   let out = s
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
   if (!out) {
-    out = [...Buffer.from(s, "utf-8")].map((b) => b.toString(16)).join("");
+    out = [...Buffer.from(s, 'utf-8')].map((b) => b.toString(16)).join('');
   }
   return out;
 }
@@ -113,12 +113,12 @@ function stationIdFor(en: string | undefined, zh: string): string {
 
 function hexToCss(hex: string | undefined): string | undefined {
   if (!hex) return undefined;
-  const m = hex.replace(/^0x/, "").replace(/^#/, "");
+  const m = hex.replace(/^0x/, '').replace(/^#/, '');
   const r = parseInt(m.slice(0, 2), 16);
   const g = parseInt(m.slice(2, 4), 16);
   const b = parseInt(m.slice(4, 6), 16);
   if ([r, g, b].some((n) => Number.isNaN(n))) return undefined;
-  return `#${[r, g, b].map((n) => n.toString(16).padStart(2, "0")).join("")}`;
+  return `#${[r, g, b].map((n) => n.toString(16).padStart(2, '0')).join('')}`;
 }
 
 function ensureUniqueTtId(
@@ -126,7 +126,7 @@ function ensureUniqueTtId(
   networkId: string,
   stationId: string,
   lineId: string,
-  suffix: string,
+  suffix: string
 ): string {
   const base = `${networkId}-${stationId}-${slug(lineId)}-${suffix}`;
   let id = base;
@@ -142,11 +142,11 @@ function ensureUniqueTtId(
 /** Detect loop direction type from a Guangzhou service time remark or toStationName. */
 function detectLoopDirection(
   remark: string | undefined,
-  toStationName: string,
-): "loop_inner" | "loop_outer" | undefined {
-  const text = `${remark ?? ""} ${toStationName}`;
-  if (text.includes("内环")) return "loop_inner";
-  if (text.includes("外环")) return "loop_outer";
+  toStationName: string
+): 'loop_inner' | 'loop_outer' | undefined {
+  const text = `${remark ?? ''} ${toStationName}`;
+  if (text.includes('内环')) return 'loop_inner';
+  if (text.includes('外环')) return 'loop_outer';
   return undefined;
 }
 
@@ -162,11 +162,11 @@ export function normalize(input: GzRawInput): GzCanonical {
       ...c,
       stations: c.stations.map((s) => ({
         ...s,
-        stationName: foldRareCharacters(s.stationName),
-      })),
+        stationName: foldRareCharacters(s.stationName)
+      }))
     }));
   const foldStationDetails = (
-    details: Record<string, GzStationDetail>,
+    details: Record<string, GzStationDetail>
   ): Record<string, GzStationDetail> => {
     const out: Record<string, GzStationDetail> = {};
     for (const [k, v] of Object.entries(details)) {
@@ -176,7 +176,7 @@ export function normalize(input: GzRawInput): GzCanonical {
     return out;
   };
   const foldServiceTimes = (
-    times: Record<string, GzServiceTime[]>,
+    times: Record<string, GzServiceTime[]>
   ): Record<string, GzServiceTime[]> => {
     const out: Record<string, GzServiceTime[]> = {};
     for (const [k, recs] of Object.entries(times)) {
@@ -184,7 +184,7 @@ export function normalize(input: GzRawInput): GzCanonical {
       const mapped = recs.map((r) => ({
         ...r,
         stationName: foldRareCharacters(r.stationName || k),
-        toStationName: foldRareCharacters(r.toStationName || ""),
+        toStationName: foldRareCharacters(r.toStationName || '')
       }));
       const existing = out[key];
       out[key] = existing ? [...existing, ...mapped] : mapped;
@@ -210,8 +210,8 @@ export function normalize(input: GzRawInput): GzCanonical {
         code,
         name: card.lineName.trim(),
         en: card.lineNameEn?.trim(),
-        color: hexToCss(card.lineColor) ?? "",
-        cards: [card],
+        color: hexToCss(card.lineColor) ?? '',
+        cards: [card]
       });
     }
   }
@@ -253,29 +253,29 @@ export function normalize(input: GzRawInput): GzCanonical {
       name: primary.lineName,
       names: {
         zh: primary.lineName,
-        en: primary.lineNameEn?.trim() || info.en || primary.lineName,
+        en: primary.lineNameEn?.trim() || info.en || primary.lineName
       },
       aliases: [...new Set(aliases)],
       mode: (() => {
         const zh = primary.lineName;
-        const en = (primary.lineNameEn ?? info.en ?? "").toLowerCase();
-        if (code.startsWith("TH") || code.startsWith("TNH") || zh.includes("有轨"))
-          return "tram" as const;
-        if (zh.includes("城际") || en.includes("intercity")) return "suburban_rail" as const;
-        if (zh.includes("APM")) return "other" as const;
-        if (/^[A-Z]{1,2}$/.test(code) && !/^[0-9]+$/.test(code) && !code.startsWith("F"))
-          return "suburban_rail" as const;
-        return "metro" as const;
+        const en = (primary.lineNameEn ?? info.en ?? '').toLowerCase();
+        if (code.startsWith('TH') || code.startsWith('TNH') || zh.includes('有轨'))
+          return 'tram' as const;
+        if (zh.includes('城际') || en.includes('intercity')) return 'suburban_rail' as const;
+        if (zh.includes('APM')) return 'other' as const;
+        if (/^[A-Z]{1,2}$/.test(code) && !/^[0-9]+$/.test(code) && !code.startsWith('F'))
+          return 'suburban_rail' as const;
+        return 'metro' as const;
       })(),
-      status: "operating",
+      status: 'operating',
       loop: loopLines.has(lineId),
-      source_ids: [{ source: "gzmtr-linestation", id: code }],
+      source_ids: [{ source: 'gzmtr-linestation', id: code }],
       color: info.color || undefined,
       extras: {
         lineShowCode: code,
         cards: info.cards.map((c) => c.lineName.trim()),
-        names_source: "source",
-      },
+        names_source: 'source'
+      }
     });
 
     // Primary first so trunk stops keep a stable order; branches follow.
@@ -303,7 +303,7 @@ export function normalize(input: GzRawInput): GzCanonical {
         line_id: lineId,
         sequence: idx,
         is_terminal: idx === 0 || idx === unique.length - 1,
-        source_id: s.stationShowCode,
+        source_id: s.stationShowCode
       };
       stops.push(stop);
       lineStops.push(stop);
@@ -323,14 +323,14 @@ export function normalize(input: GzRawInput): GzCanonical {
         name: card.lineName.trim(),
         names: {
           zh: card.lineName.trim(),
-          en: card.lineNameEn?.trim() || card.lineName.trim(),
+          en: card.lineNameEn?.trim() || card.lineName.trim()
         },
         stop_ids: stopIds,
         origin_stop_id: stopIds[0],
         terminal_stop_id: stopIds[stopIds.length - 1],
         is_primary: card === primary,
-        source_ids: [{ source: "gzmtr-linestation", id: card.orderNum }],
-        extras: { lineShowCode: code, orderNum: card.orderNum },
+        source_ids: [{ source: 'gzmtr-linestation', id: card.orderNum }],
+        extras: { lineShowCode: code, orderNum: card.orderNum }
       };
       cardPatterns.push({ card, pattern });
     }
@@ -366,10 +366,10 @@ export function normalize(input: GzRawInput): GzCanonical {
           to_stop_id: bId,
           from_station_id: aStop.station_id,
           to_station_id: bStop.station_id,
-          direction: "both",
+          direction: 'both',
           travel_time_seconds: DEFAULT_SEGMENT_SECONDS,
-          travel_time_source: "estimated" as const,
-          source_id: aStop.source_id,
+          travel_time_source: 'estimated' as const,
+          source_id: aStop.source_id
         });
       }
     }
@@ -404,7 +404,7 @@ export function normalize(input: GzRawInput): GzCanonical {
 
       const toName = stripDirectionAnnotation(r.toStationName);
       const destStop = lineStops.find(
-        (s) => s.station_id === `${NETWORK_ID}-${stationIdFor(enByZh.get(toName), toName)}`,
+        (s) => s.station_id === `${NETWORK_ID}-${stationIdFor(enByZh.get(toName), toName)}`
       );
       if (!destStop) continue;
 
@@ -414,10 +414,10 @@ export function normalize(input: GzRawInput): GzCanonical {
           (p) =>
             p.stop_ids.includes(stop.id) &&
             p.stop_ids.includes(destStop.id) &&
-            (p.terminal_stop_id === destStop.id || p.origin_stop_id === destStop.id),
+            (p.terminal_stop_id === destStop.id || p.origin_stop_id === destStop.id)
         ) ??
         linePatterns.find(
-          (p) => p.stop_ids.includes(stop.id) && p.stop_ids.includes(destStop.id),
+          (p) => p.stop_ids.includes(stop.id) && p.stop_ids.includes(destStop.id)
         ) ??
         linePatterns.find((p) => p.stop_ids.includes(stop.id));
       if (!pattern) continue;
@@ -430,7 +430,7 @@ export function normalize(input: GzRawInput): GzCanonical {
           NETWORK_ID,
           stationId,
           lineId,
-          isLoop ? (loopDir ?? "loop") : destStop.station_id,
+          isLoop ? (loopDir ?? 'loop') : destStop.station_id
         ),
         station_id: stationId,
         stop_id: stop.id,
@@ -439,11 +439,11 @@ export function normalize(input: GzRawInput): GzCanonical {
         source_id: stop.source_id,
         destination_stop_id: isLoop ? undefined : destStop.id,
         pattern_id: pattern.id,
-        direction_type: loopDir ?? (isLoop ? "linear" : undefined),
+        direction_type: loopDir ?? (isLoop ? 'linear' : undefined),
         direction_label: r.toStationName,
         first_train: [r.startTime],
         last_train: [r.endTime],
-        service: "all_days",
+        service: 'all_days'
       });
     }
   }
@@ -456,13 +456,13 @@ export function normalize(input: GzRawInput): GzCanonical {
 
   // Official getByNameOrCode coords are raw candidates — same-name POIs from
   // other cities are rejected later in fillCoordinates (bbox + line peers).
-  const officialLocations = new Map<string, { lon: number; lat: number; crs: "gcj02" }>();
+  const officialLocations = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>();
   for (const [name, detail] of Object.entries(stationDetails)) {
     if (detail?.longitude != null && detail?.latitude != null) {
       officialLocations.set(foldRareCharacters(name), {
         lon: detail.longitude,
         lat: detail.latitude,
-        crs: "gcj02",
+        crs: 'gcj02'
       });
     }
   }
@@ -477,36 +477,36 @@ export function normalize(input: GzRawInput): GzCanonical {
         id,
         name,
         names,
-        status: "operating" as const,
+        status: 'operating' as const,
         source_ids: detail?.stationRelateId
-          ? [{ source: "gzmtr-station", id: detail.stationRelateId }]
-          : [],
+          ? [{ source: 'gzmtr-station', id: detail.stationRelateId }]
+          : []
       };
     }),
     stops,
-    finalTimetables,
+    finalTimetables
   );
 
   return {
     network: {
       id: NETWORK_ID,
-      name: "广州地铁",
+      name: '广州地铁',
       city: {
-        id: "CN-4401",
-        name: { zh: "广州", en: "Guangzhou" },
-        country: "CN",
+        id: 'CN-4401',
+        name: { zh: '广州', en: 'Guangzhou' },
+        country: 'CN',
         population: 18676605,
         area: 7248.86,
-        location: { type: "Point", coordinates: [113.26, 23.13] },
+        location: { type: 'Point', coordinates: [113.26, 23.13] }
       },
-      country_code: "CN",
-      currency: "CNY",
-      timezone: "Asia/Shanghai",
-      coordinate_system: "gcj02",
-      default_units: { distance: "km", time: "seconds", speed: "km/h" },
-      routing: { weight: "time", default_transfer_seconds: 120, max_transfer_seconds: 600 },
+      country_code: 'CN',
+      currency: 'CNY',
+      timezone: 'Asia/Shanghai',
+      coordinate_system: 'gcj02',
+      default_units: { distance: 'km', time: 'seconds', speed: 'km/h' },
+      routing: { weight: 'time', default_transfer_seconds: 120, max_transfer_seconds: 600 },
       operators: [],
-      source: [],
+      source: []
     },
     lines: lineRecords,
     stations,
@@ -515,6 +515,6 @@ export function normalize(input: GzRawInput): GzCanonical {
     segments: finalSegments,
     transfers: deriveTransfers(stations, stops),
     timetables: finalTimetables,
-    officialLocations,
+    officialLocations
   };
 }

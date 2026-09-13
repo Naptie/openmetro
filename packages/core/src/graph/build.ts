@@ -1,8 +1,8 @@
 import type {
   SegmentEncoded as Segment,
   StopEncoded as Stop,
-  TransferEncoded as Transfer,
-} from "../schema/index.js";
+  TransferEncoded as Transfer
+} from '../schema/index.js';
 
 /** Encoded (JSON) routing defaults, as read from `network.json`. */
 export interface RoutingDefaultsInput {
@@ -17,7 +17,7 @@ export interface RoutingDefaultsInput {
  * secondary, best-effort weight: when a segment's distance is missing/zero,
  * the builder falls back to travel time so the graph stays connected.
  */
-export type WeightKind = "time" | "distance";
+export type WeightKind = 'time' | 'distance';
 
 /** A stop-level node. Line identity is what makes transfers explicit. */
 export interface StopNode {
@@ -29,7 +29,7 @@ export interface StopNode {
 export interface StopEdge {
   from: string;
   to: string;
-  kind: "ride" | "transfer";
+  kind: 'ride' | 'transfer';
   line_id?: string;
   seconds?: number;
   distance_km?: number;
@@ -40,7 +40,7 @@ export interface StopEdge {
 export interface StopAdjacency {
   to: string;
   weight: number;
-  kind: "ride" | "transfer";
+  kind: 'ride' | 'transfer';
   line_id?: string;
 }
 
@@ -74,11 +74,11 @@ export function buildStationIndex(stops: Stop[]): StationIndex {
 function effectiveWeight(
   seconds: number | undefined,
   distanceKm: number | undefined,
-  weightKind: WeightKind,
+  weightKind: WeightKind
 ): number | undefined {
   const time = seconds != null && seconds > 0 ? seconds : undefined;
   const distance = distanceKm != null && distanceKm > 0 ? distanceKm : undefined;
-  if (weightKind === "time") return time ?? distance;
+  if (weightKind === 'time') return time ?? distance;
   return distance ?? time;
 }
 
@@ -101,12 +101,12 @@ export function buildStopGraph(
   segments: Segment[],
   transfers: Transfer[],
   routing: RoutingDefaultsInput,
-  weightKind: WeightKind = routing.weight,
+  weightKind: WeightKind = routing.weight
 ): StopGraph {
   const nodes: StopNode[] = stops.map((s) => ({
     id: s.id,
     station_id: s.station_id,
-    line_id: s.line_id,
+    line_id: s.line_id
   }));
 
   const stopByStationLine = new Map<string, string>();
@@ -122,13 +122,13 @@ export function buildStopGraph(
         {
           from: seg.from_stop_id,
           to: seg.to_stop_id,
-          kind: "ride",
+          kind: 'ride',
           line_id: seg.line_id,
           seconds: seg.travel_time_seconds,
-          distance_km: seg.distance_km,
+          distance_km: seg.distance_km
         },
-        weightKind,
-      ),
+        weightKind
+      )
     );
   }
 
@@ -148,13 +148,13 @@ export function buildStopGraph(
         {
           from,
           to,
-          kind: "transfer",
+          kind: 'transfer',
           line_id: tr.to_line_id,
           seconds: transferSeconds(tr),
-          distance_km: tr.walk_distance_meters != null ? tr.walk_distance_meters / 1000 : undefined,
+          distance_km: tr.walk_distance_meters != null ? tr.walk_distance_meters / 1000 : undefined
         },
-        weightKind,
-      ),
+        weightKind
+      )
     );
   }
 
@@ -171,20 +171,20 @@ export function buildStopGraph(
       {
         from: seg.from_stop_id,
         to: seg.to_stop_id,
-        kind: "ride",
+        kind: 'ride',
         line_id: seg.line_id,
         seconds: seg.travel_time_seconds,
-        distance_km: seg.distance_km,
+        distance_km: seg.distance_km
       },
-      weightKind,
+      weightKind
     );
     // `from`/`to` follow the pattern order. Honor `direction` so a "both"
     // segment is traversable in either direction.
-    if (seg.direction !== "backward") addAdj(edge);
-    if (seg.direction !== "forward") addAdj({ ...edge, from: edge.to, to: edge.from });
+    if (seg.direction !== 'backward') addAdj(edge);
+    if (seg.direction !== 'forward') addAdj({ ...edge, from: edge.to, to: edge.from });
   }
   for (const edge of edges) {
-    if (edge.kind === "transfer") addAdj(edge);
+    if (edge.kind === 'transfer') addAdj(edge);
   }
 
   return { networkId, kind: weightKind, nodes, edges, adjacency };
@@ -193,6 +193,6 @@ export function buildStopGraph(
 function withWeight(edge: StopEdge, weightKind: WeightKind): StopEdge {
   return {
     ...edge,
-    weight: effectiveWeight(edge.seconds, edge.distance_km, weightKind),
+    weight: effectiveWeight(edge.seconds, edge.distance_km, weightKind)
   };
 }

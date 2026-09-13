@@ -1,11 +1,11 @@
-import { existsSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
-import { createFsNetworkSource } from "../data/fs.js";
-import { createApiApp } from "./app.js";
+import { existsSync } from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createFsNetworkSource } from '../data/fs.js';
+import { createApiApp } from './app.js';
 
-export type { App } from "./app.js";
-export { createApiApp } from "./app.js";
+export type { App } from './app.js';
+export { createApiApp } from './app.js';
 
 /**
  * Resolve the canonical data directory (defaults to `<repo-root>/data`).
@@ -26,8 +26,8 @@ function resolveDataRoot(): string {
   // Walk up from this module: packages/core/src/api -> ... -> repo root.
   let dir = dirname(fileURLToPath(import.meta.url));
   for (let i = 0; i < 8; i++) {
-    if (existsSync(join(dir, "data")) && existsSync(join(dir, "package.json"))) {
-      return join(dir, "data");
+    if (existsSync(join(dir, 'data')) && existsSync(join(dir, 'package.json'))) {
+      return join(dir, 'data');
     }
     const parent = dirname(dir);
     if (parent === dir) break;
@@ -35,7 +35,7 @@ function resolveDataRoot(): string {
   }
 
   // Fall back to cwd-relative.
-  return resolve("data");
+  return resolve('data');
 }
 
 /**
@@ -48,7 +48,7 @@ export function createApp() {
 }
 
 // Standalone entry: start listening (used by `bun run api`).
-if (process.argv[1]?.endsWith("server.ts")) {
+if (process.argv[1]?.endsWith('server.ts')) {
   const app = createApp();
   const port = Number(process.env.PORT ?? 8790);
   app.listen(port);

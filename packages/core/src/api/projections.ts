@@ -7,8 +7,8 @@ import type {
   StationEncoded,
   StopEncoded,
   TimetableEncoded,
-  TransferEncoded,
-} from "../schema/index.js";
+  TransferEncoded
+} from '../schema/index.js';
 
 /**
  * API response projections.
@@ -31,7 +31,7 @@ export function projectNetwork(n: NetworkEncoded) {
     timezone: n.timezone,
     coordinate_system: n.coordinate_system,
     default_units: n.default_units,
-    routing: n.routing,
+    routing: n.routing
   };
 }
 
@@ -44,7 +44,7 @@ export function projectLine(l: LineEncoded) {
     text_color: l.text_color,
     mode: l.mode,
     status: l.status,
-    loop: l.loop,
+    loop: l.loop
   };
 }
 
@@ -57,7 +57,7 @@ export function projectStation(s: StationEncoded, lines: string[], isInterchange
     schematic: s.schematic,
     status: s.status,
     lines,
-    is_interchange: isInterchange,
+    is_interchange: isInterchange
   };
 }
 
@@ -69,7 +69,7 @@ export function projectStop(s: StopEncoded) {
     sequence: s.sequence,
     is_terminal: s.is_terminal,
     location: s.location,
-    schematic: s.schematic,
+    schematic: s.schematic
   };
 }
 
@@ -84,7 +84,7 @@ export function projectPattern(p: PatternEncoded) {
     terminal_stop_id: p.terminal_stop_id,
     is_primary: p.is_primary,
     junction_stop_id: p.junction_stop_id,
-    color: p.color,
+    color: p.color
   };
 }
 
@@ -99,7 +99,7 @@ export function projectSegment(s: SegmentEncoded) {
     direction: s.direction,
     travel_time_seconds: s.travel_time_seconds,
     travel_time_source: s.travel_time_source,
-    distance_km: s.distance_km,
+    distance_km: s.distance_km
   };
 }
 
@@ -113,7 +113,7 @@ export function projectTransfer(t: TransferEncoded) {
     to_stop_id: t.to_stop_id,
     walk_time_seconds: t.walk_time_seconds,
     walk_distance_meters: t.walk_distance_meters,
-    is_out_of_station: t.is_out_of_station,
+    is_out_of_station: t.is_out_of_station
   };
 }
 
@@ -131,7 +131,7 @@ export function projectTimetable(t: TimetableEncoded) {
     first_train: t.first_train,
     last_train: t.last_train,
     is_arrival: t.is_arrival,
-    service: t.service,
+    service: t.service
   };
 }
 
@@ -140,6 +140,6 @@ export function projectFareMatrix(f: FareMatrixEncoded) {
     currency: f.currency,
     unit: f.unit,
     station_ids: f.station_ids,
-    fares: f.fares,
+    fares: f.fares
   };
 }

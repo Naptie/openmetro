@@ -7,8 +7,8 @@ import type {
   StationEncoded,
   StopEncoded,
   TimetableEncoded,
-  TransferEncoded,
-} from "../schema/index.js";
+  TransferEncoded
+} from '../schema/index.js';
 
 /** Fully decoded canonical data for one network. */
 export interface NetworkData {

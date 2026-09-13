@@ -1,8 +1,8 @@
-import { Schema } from "effect";
+import { Schema } from 'effect';
 
 const Extras = Schema.Record({
   key: Schema.String,
-  value: Schema.Unknown,
+  value: Schema.Unknown
 });
 
 /**
@@ -10,7 +10,7 @@ const Extras = Schema.Record({
  * and `destination_stop_id` indicates the terminal. For loop lines, this
  * indicates the direction of travel around the ring.
  */
-export const DirectionType = Schema.Literal("linear", "loop_inner", "loop_outer");
+export const DirectionType = Schema.Literal('linear', 'loop_inner', 'loop_outer');
 
 export type DirectionType = Schema.Schema.Type<typeof DirectionType>;
 
@@ -44,26 +44,26 @@ export const Timetable = Schema.Struct({
   /** Platform-level stop on `line_id`. Required — every source can resolve station+line. */
   stop_id: Schema.String,
   line_id: Schema.String,
-  station_code: Schema.optionalWith(Schema.String, { as: "Option" }),
-  source_id: Schema.optionalWith(Schema.String, { as: "Option" }),
+  station_code: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  source_id: Schema.optionalWith(Schema.String, { as: 'Option' }),
   /** Terminal stop this service heads toward (destination). Required for linear, optional for loop. */
-  destination_stop_id: Schema.optionalWith(Schema.String, { as: "Option" }),
+  destination_stop_id: Schema.optionalWith(Schema.String, { as: 'Option' }),
   /** Origin stop of the service, when the source exposes it. */
-  origin_stop_id: Schema.optionalWith(Schema.String, { as: "Option" }),
+  origin_stop_id: Schema.optionalWith(Schema.String, { as: 'Option' }),
   /** Route pattern this service runs on. Required — every line has at least a primary pattern. */
   pattern_id: Schema.String,
   /** Direction type: linear (toward terminal) or loop_inner/loop_outer (around ring). */
-  direction_type: Schema.optionalWith(DirectionType, { as: "Option" }),
-  direction_label: Schema.optionalWith(Schema.String, { as: "Option" }),
+  direction_type: Schema.optionalWith(DirectionType, { as: 'Option' }),
+  direction_label: Schema.optionalWith(Schema.String, { as: 'Option' }),
   first_train: Schema.Array(Schema.String),
   last_train: Schema.Array(Schema.String),
-  first_train_desc: Schema.optionalWith(Schema.String, { as: "Option" }),
-  last_train_desc: Schema.optionalWith(Schema.String, { as: "Option" }),
-  is_arrival: Schema.optionalWith(Schema.Boolean, { as: "Option" }),
-  service: Schema.optionalWith(Schema.String, { as: "Option" }),
-  valid_from: Schema.optionalWith(Schema.String, { as: "Option" }),
-  valid_to: Schema.optionalWith(Schema.String, { as: "Option" }),
-  extras: Schema.optionalWith(Extras, { as: "Option" }),
+  first_train_desc: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  last_train_desc: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  is_arrival: Schema.optionalWith(Schema.Boolean, { as: 'Option' }),
+  service: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  valid_from: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  valid_to: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  extras: Schema.optionalWith(Extras, { as: 'Option' })
 });
 
 export type Timetable = Schema.Schema.Type<typeof Timetable>;

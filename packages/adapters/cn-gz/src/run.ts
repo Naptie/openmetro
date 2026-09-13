@@ -1,7 +1,7 @@
-import { join } from "node:path";
-import { fillCoordinates, writeCanonical } from "@openmetro/core";
-import { fetchGuangzhouSources } from "./fetch.js";
-import { normalize } from "./normalize.js";
+import { join } from 'node:path';
+import { fillCoordinates, writeCanonical } from '@openmetro/core';
+import { fetchGuangzhouSources } from './fetch.js';
+import { normalize } from './normalize.js';
 
 type Loc = { lon: number; lat: number; crs: string };
 type LocatableStation = { names?: { zh?: string }; location?: Loc };
@@ -14,8 +14,8 @@ type LocatableStation = { names?: { zh?: string }; location?: Loc };
 function fixKnownCoordinateErrors<T extends LocatableStation>(stations: T[]): T[] {
   const byName = new Map<string | undefined, T>();
   for (const s of stations) byName.set(s.names?.zh, s);
-  const xiaode = byName.get("孝德东");
-  const luocun = byName.get("罗村");
+  const xiaode = byName.get('孝德东');
+  const luocun = byName.get('罗村');
   const xiaodeLoc = xiaode?.location;
   const luocunLoc = luocun?.location;
   if (!xiaode || !luocun || !xiaodeLoc || !luocunLoc) return stations;
@@ -32,7 +32,7 @@ export interface GuangzhouNormalizeOptions {
 
 export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}): Promise<void> {
   const root = opts.root ?? process.env.OPENMETRO_ROOT ?? process.cwd();
-  const outDir = join(root, "data/cn-gz");
+  const outDir = join(root, 'data/cn-gz');
 
   const { linestation, stationDetails, servicetimes } = await fetchGuangzhouSources();
   const canonical = normalize({ linestation, stationDetails, servicetimes });
@@ -43,19 +43,19 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
   let officialMatched = 0;
   const stations = fixKnownCoordinateErrors(
     await fillCoordinates(canonical.stations, {
-      city: "广州",
-      extraCities: ["佛山", "东莞", "惠州", "肇庆"],
+      city: '广州',
+      extraCities: ['佛山', '东莞', '惠州', '肇庆'],
       stops: canonical.stops,
       lines: canonical.lines.map((l) => ({ id: l.id, mode: l.mode })),
       officialLocations: canonical.officialLocations,
       onSubwayMatch: () => subwayMatched++,
       onOfficialMatch: () => officialMatched++,
       onOverpassMatch: () => overpassMatched++,
-      onGeocode: () => geocoded++,
-    }),
+      onGeocode: () => geocoded++
+    })
   );
 
-  await writeCanonical(outDir, "cn-gz", {
+  await writeCanonical(outDir, 'cn-gz', {
     network: canonical.network,
     lines: canonical.lines,
     stations,
@@ -63,26 +63,26 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
     patterns: canonical.patterns,
     segments: canonical.segments,
     transfers: canonical.transfers,
-    timetables: canonical.timetables,
+    timetables: canonical.timetables
   });
 
-  console.log("lines:", canonical.lines.length);
-  console.log("stations:", stations.length);
-  console.log("with coords:", stations.filter((s) => s.location).length);
-  console.log("  via subway:", subwayMatched);
-  console.log("  via official:", officialMatched);
-  console.log("  via overpass:", overpassMatched);
-  console.log("  via tencent:", geocoded);
-  console.log("stops:", canonical.stops.length);
-  console.log("segments:", canonical.segments.length);
+  console.log('lines:', canonical.lines.length);
+  console.log('stations:', stations.length);
+  console.log('with coords:', stations.filter((s) => s.location).length);
+  console.log('  via subway:', subwayMatched);
+  console.log('  via official:', officialMatched);
+  console.log('  via overpass:', overpassMatched);
+  console.log('  via tencent:', geocoded);
+  console.log('stops:', canonical.stops.length);
+  console.log('segments:', canonical.segments.length);
   console.log(
-    "segments derived:",
-    canonical.segments.filter((s) => s.travel_time_source === "last_train").length,
+    'segments derived:',
+    canonical.segments.filter((s) => s.travel_time_source === 'last_train').length
   );
-  console.log("timetables:", canonical.timetables.length);
+  console.log('timetables:', canonical.timetables.length);
 }
 
-const isDirect = process.argv[1]?.includes("run.ts");
+const isDirect = process.argv[1]?.includes('run.ts');
 if (isDirect) {
   runGuangzhouNormalize().catch((err) => {
     console.error(err);

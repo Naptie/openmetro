@@ -129,8 +129,9 @@ therefore carries a `routing` block (`weight`, `default_transfer_seconds`,
 - **Effect** for the pipeline (composable effects, typed errors, retry).
 - **`@effect/schema`** (bundled in `effect`) for data validation.
 - **Bun** workspaces · **tsup** build · **bun test** tests · **Biome** lint & format.
-- **Elysia** + **`@elysiajs/swagger`** API · **Eden Treaty** typed client.
-- **SvelteKit** (Svelte 5 + Tailwind CSS 4 + MapLibre GL) demo frontend.
+- **Elysia** + **`@elysiajs/openapi`** API · **Eden Treaty** typed client.
+- **SvelteKit** (Svelte 5 + Tailwind CSS 4 + MapLibre GL) demo frontend with
+  **shadcn-svelte** components and **Paraglide** i18n (zh/en).
 
 ## Getting started
 
@@ -172,7 +173,26 @@ bun run api
 
 # Run the demo frontend (proxies /api to the API on :8790)
 bun run web:dev
+
+# Audit the frontend i18n messages (duplicates, missing keys, placeholder
+# mismatches, key order) — non-zero exit gates CI
+bun run i18n
+bun run i18n:fix  # sort keys alphabetically and rewrite
 ```
+
+### Frontend
+
+The demo is a full-screen map app: every network is drawn at once; clicking a
+line opens its metadata, service patterns, station list and a schematic topo
+map (straight trunk, branches angling off their junction); clicking a station
+opens its details with first/last trains and lets you set it as origin or
+destination. With both endpoints set the route is computed immediately and
+drawn on the map with an animated overlay, plus a fare/time/transfer summary.
+
+Interface strings live in `packages/web/messages/{en,zh.json}` (Paraglide v2,
+compiled by a Vite plugin — no inlang account needed). Entities use their
+localized names everywhere, including map labels. The locale switch in the nav
+bar changes language in place without losing app state.
 
 Env vars:
 - `OPENMETRO_DATA_ROOT` — data directory (default `data`).
@@ -226,6 +246,25 @@ const { data: stations } = await metro.api.networks({ id: "cn-bj" }).stations.ge
 const { data: plan } = await metro.api
   .networks({ id: "cn-bj" })
   .route.get({ query: { from: "cn-bj-pingguoyuan", to: "cn-bj-xizhimen" } });
+```
+
+Response entity types are derived from the same client and exported for use in
+your own code. They are never hand-written, so a schema or handler change
+re-types every consumer automatically:
+
+```ts
+import type { ApiLine, ApiRoutePlan, ApiStation } from "openmetro-client";
+
+const mode: ApiLine["mode"] = "metro"; // "metro" | "suburban_rail" | ...
+```
+
+`ApiSuccess<Route>` unwraps the success payload of any route, covering cases the
+named aliases don't:
+
+```ts
+import type { ApiSuccess, Client } from "openmetro-client";
+
+type Networks = ApiSuccess<Client["api"]["networks"]["get"]>; // { networks: ApiNetwork[] }
 ```
 
 ## Releases

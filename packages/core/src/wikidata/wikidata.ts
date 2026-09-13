@@ -1,6 +1,6 @@
-const SEARCH_URL = "https://www.wikidata.org/w/api.php";
-const ENTITY_URL = "https://www.wikidata.org/w/api.php";
-const USER_AGENT = "openmetro/0.1 (data enrichment)";
+const SEARCH_URL = 'https://www.wikidata.org/w/api.php';
+const ENTITY_URL = 'https://www.wikidata.org/w/api.php';
+const USER_AGENT = 'openmetro/0.1 (data enrichment)';
 const WIKIDATA_TIMEOUT_MS = 4000;
 
 export interface WikidataNames {
@@ -23,8 +23,8 @@ const wbRequest = async (url: string): Promise<unknown> => {
   const timer = setTimeout(() => controller.abort(), WIKIDATA_TIMEOUT_MS);
   try {
     const res = await fetch(url, {
-      headers: { "User-Agent": USER_AGENT },
-      signal: controller.signal,
+      headers: { 'User-Agent': USER_AGENT },
+      signal: controller.signal
     });
     if (!res.ok) throw new Error(`wikidata ${res.status}`);
     return res.json();
@@ -39,14 +39,14 @@ const wbRequest = async (url: string): Promise<unknown> => {
  */
 export async function searchWikidata(
   label: string,
-  language = "zh",
+  language = 'zh'
 ): Promise<{ id: string; label?: string }[]> {
   const url = new URL(SEARCH_URL);
-  url.searchParams.set("action", "wbsearchentities");
-  url.searchParams.set("search", label);
-  url.searchParams.set("language", language);
-  url.searchParams.set("format", "json");
-  url.searchParams.set("limit", "10");
+  url.searchParams.set('action', 'wbsearchentities');
+  url.searchParams.set('search', label);
+  url.searchParams.set('language', language);
+  url.searchParams.set('format', 'json');
+  url.searchParams.set('limit', '10');
   const data = (await wbRequest(url.toString())) as SearchResponse;
   return (data.search ?? []).map((s) => ({ id: s.id, label: s.label }));
 }
@@ -57,11 +57,11 @@ export async function searchWikidata(
  */
 export async function fetchEntityLabels(qid: string): Promise<WikidataNames> {
   const url = new URL(ENTITY_URL);
-  url.searchParams.set("action", "wbgetentities");
-  url.searchParams.set("ids", qid);
-  url.searchParams.set("props", "labels");
-  url.searchParams.set("languages", "zh|en");
-  url.searchParams.set("format", "json");
+  url.searchParams.set('action', 'wbgetentities');
+  url.searchParams.set('ids', qid);
+  url.searchParams.set('props', 'labels');
+  url.searchParams.set('languages', 'zh|en');
+  url.searchParams.set('format', 'json');
   const data = (await wbRequest(url.toString())) as EntityResponse;
   const entity = data.entities?.[qid];
   if (!entity) return { qid };
@@ -76,20 +76,20 @@ export async function fetchEntityLabels(qid: string): Promise<WikidataNames> {
  * failure (network, no match) so callers can fall back.
  */
 export type WikidataLookupResult =
-  | { status: "ok"; names: WikidataNames }
-  | { status: "no_match" }
-  | { status: "unreachable" };
+  | { status: 'ok'; names: WikidataNames }
+  | { status: 'no_match' }
+  | { status: 'unreachable' };
 
 export async function lookupWikidata(label: string): Promise<WikidataLookupResult> {
   try {
     const results = await searchWikidata(label);
-    if (results.length === 0) return { status: "no_match" };
+    if (results.length === 0) return { status: 'no_match' };
     const pick = results.find((r) => r.label === label) ?? results[0];
     const names = await fetchEntityLabels(pick.id);
-    if (names.zh && names.en) return { status: "ok", names };
-    return { status: "no_match" };
+    if (names.zh && names.en) return { status: 'ok', names };
+    return { status: 'no_match' };
   } catch {
-    return { status: "unreachable" };
+    return { status: 'unreachable' };
   }
 }
 
@@ -105,7 +105,7 @@ export async function fillMissingEnglish<T extends { names: { zh: string; en?: s
   opts: {
     getLabel: (entry: T) => string;
     onLookup?: (label: string, qid?: string) => void;
-  },
+  }
 ): Promise<T[]> {
   const result: T[] = [];
   let unreachable = false;
@@ -120,12 +120,12 @@ export async function fillMissingEnglish<T extends { names: { zh: string; en?: s
     }
     const label = opts.getLabel(entry);
     const res = await lookupWikidata(label);
-    if (res.status === "unreachable") {
+    if (res.status === 'unreachable') {
       unreachable = true;
       result.push(entry);
       continue;
     }
-    const names = res.status === "ok" ? res.names : {};
+    const names = res.status === 'ok' ? res.names : {};
     opts.onLookup?.(label, names.qid);
     if (names.en) result.push({ ...entry, names: { zh: entry.names.zh, en: names.en } });
     else result.push(entry);
@@ -133,7 +133,7 @@ export async function fillMissingEnglish<T extends { names: { zh: string; en?: s
   return result;
 }
 
-import { deriveLineEnglishName } from "./lines.js";
+import { deriveLineEnglishName } from './lines.js';
 
 /**
  * Resolve an English name for a line: try Wikidata first, then fall back to a
@@ -142,16 +142,16 @@ import { deriveLineEnglishName } from "./lines.js";
  */
 export async function resolveLineEnglishName(
   zhName: string,
-  lcode?: string,
-): Promise<{ en: string; source: "wikidata" | "derived" }> {
+  lcode?: string
+): Promise<{ en: string; source: 'wikidata' | 'derived' }> {
   const res = await lookupWikidata(zhName);
-  if (res.status === "ok" && res.names.en) return { en: res.names.en, source: "wikidata" };
+  if (res.status === 'ok' && res.names.en) return { en: res.names.en, source: 'wikidata' };
   const derived = deriveLineEnglishName(zhName, lcode);
-  if (derived) return { en: derived, source: "derived" };
-  return { en: zhName, source: "derived" };
+  if (derived) return { en: derived, source: 'derived' };
+  return { en: zhName, source: 'derived' };
 }
 
-import type { LineEncoded } from "../schema/index.js";
+import type { LineEncoded } from '../schema/index.js';
 
 /**
  * Enrich line English names from Wikidata. For lines whose English name was
@@ -165,7 +165,7 @@ export async function enrichLineNamesFromWikidata(
   opts: {
     getEnglishLookupLabel: (line: LineEncoded) => string;
     onLookup?: (label: string, qid?: string) => void;
-  },
+  }
 ): Promise<LineEncoded[]> {
   const out: LineEncoded[] = [];
   let unreachable = false;
@@ -175,24 +175,24 @@ export async function enrichLineNamesFromWikidata(
       continue;
     }
     const source = (line.extras as { names_source?: string } | undefined)?.names_source;
-    if (source === "source") {
+    if (source === 'source') {
       out.push(line);
       continue;
     }
     const label = opts.getEnglishLookupLabel(line);
     const res = await lookupWikidata(label);
-    if (res.status === "unreachable") {
+    if (res.status === 'unreachable') {
       unreachable = true;
       out.push(line);
       continue;
     }
-    const names = res.status === "ok" ? res.names : {};
+    const names = res.status === 'ok' ? res.names : {};
     opts.onLookup?.(label, names.qid);
     if (names.en && names.en !== line.names.en) {
       out.push({
         ...line,
         names: { zh: line.names.zh, en: names.en },
-        extras: { ...(line.extras ?? {}), names_source: "wikidata" },
+        extras: { ...(line.extras ?? {}), names_source: 'wikidata' }
       });
     } else {
       out.push(line);

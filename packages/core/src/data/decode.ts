@@ -1,4 +1,4 @@
-import { Effect, Schema } from "effect";
+import { Effect, Schema } from 'effect';
 import {
   DataFile,
   FareMatrix,
@@ -11,9 +11,9 @@ import {
   Station,
   Stop,
   Timetable,
-  Transfer,
-} from "../schema/index.js";
-import type { NetworkData, RawNetworkFiles } from "./types.js";
+  Transfer
+} from '../schema/index.js';
+import type { NetworkData, RawNetworkFiles } from './types.js';
 
 const LineFile = DataFile(Line);
 const StationFile = DataFile(Station);
@@ -30,7 +30,7 @@ interface RecordsWrapper {
 /** Decode a wrapped canonical file into its (encoded) records. */
 function decodeRecords(schema: Schema.Schema<any>, raw: unknown): unknown[] {
   const wrapped = Schema.encodeSync(schema as Schema.Schema<unknown>)(
-    Schema.decodeUnknownSync(schema as Schema.Schema<unknown>)(raw),
+    Schema.decodeUnknownSync(schema as Schema.Schema<unknown>)(raw)
   ) as RecordsWrapper;
   return [...wrapped.records];
 }
@@ -38,14 +38,14 @@ function decodeRecords(schema: Schema.Schema<any>, raw: unknown): unknown[] {
 /** Decode and validate `network.json` (metadata only). */
 export function decodeNetworkMeta(raw: unknown): Effect.Effect<NetworkEncoded, unknown> {
   return Schema.decodeUnknown(Network)(raw).pipe(
-    Effect.map((w) => Schema.encodeSync(Network)(w) as NetworkEncoded),
+    Effect.map((w) => Schema.encodeSync(Network)(w) as NetworkEncoded)
   );
 }
 
 /** Decode and validate `fares.json` (a bare matrix document). */
 export function decodeFareMatrix(raw: unknown): Effect.Effect<FareMatrixEncoded, unknown> {
   return Schema.decodeUnknown(FareMatrix)(raw).pipe(
-    Effect.map((w) => Schema.encodeSync(FareMatrix)(w) as FareMatrixEncoded),
+    Effect.map((w) => Schema.encodeSync(FareMatrix)(w) as FareMatrixEncoded)
   );
 }
 
@@ -66,8 +66,8 @@ export function decodeNetworkData(raw: RawNetworkFiles): Effect.Effect<NetworkDa
       segments: records(SegmentFile, raw.segments),
       transfers: records(TransferFile, raw.transfers),
       timetables: optional(TimetableFile, raw.timetables),
-      fares: raw.fares == null ? Effect.succeed(undefined) : decodeFareMatrix(raw.fares),
+      fares: raw.fares == null ? Effect.succeed(undefined) : decodeFareMatrix(raw.fares)
     },
-    { concurrency: "unbounded" },
+    { concurrency: 'unbounded' }
   ) as Effect.Effect<NetworkData, unknown>;
 }

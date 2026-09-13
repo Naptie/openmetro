@@ -1,6 +1,6 @@
-import { Effect } from "effect";
-import { decodeNetworkData, decodeNetworkMeta } from "./decode.js";
-import type { NetworkSource, RawNetworkFiles } from "./source.js";
+import { Effect } from 'effect';
+import { decodeNetworkData, decodeNetworkMeta } from './decode.js';
+import type { NetworkSource, RawNetworkFiles } from './source.js';
 
 /**
  * In-memory network source. Used by runtimes without a filesystem (e.g. the
@@ -17,6 +17,6 @@ export function createMemoryNetworkSource(files: Record<string, RawNetworkFiles>
     loadMeta: (id) => {
       const raw = files[id];
       return raw ? decodeNetworkMeta(raw.network) : Effect.fail(new Error(`unknown network ${id}`));
-    },
+    }
   };
 }

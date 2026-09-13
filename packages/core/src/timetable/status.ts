@@ -1,5 +1,5 @@
-import type { TimetableEncoded } from "../schema/index.js";
-import { effectiveTime, weekdayToMonBased } from "./time.js";
+import type { TimetableEncoded } from '../schema/index.js';
+import { effectiveTime, weekdayToMonBased } from './time.js';
 
 export interface InServiceStatus {
   timetable_id: string;
@@ -22,7 +22,7 @@ const JS_DAY_BY_WEEKDAY: Record<string, number> = {
   Wed: 3,
   Thu: 4,
   Fri: 5,
-  Sat: 6,
+  Sat: 6
 };
 
 interface LocalTime {
@@ -35,12 +35,12 @@ interface LocalTime {
 }
 
 function partsFor(date: Date, timeZone: string): Intl.DateTimeFormatPart[] {
-  return new Intl.DateTimeFormat("en-US", {
+  return new Intl.DateTimeFormat('en-US', {
     timeZone,
-    hour: "2-digit",
-    minute: "2-digit",
-    weekday: "short",
-    hourCycle: "h23",
+    hour: '2-digit',
+    minute: '2-digit',
+    weekday: 'short',
+    hourCycle: 'h23'
   }).formatToParts(date);
 }
 
@@ -56,16 +56,16 @@ export function localTimeParts(now: Date, timeZone: string): LocalTime {
   try {
     parts = partsFor(now, timeZone);
   } catch {
-    parts = partsFor(now, "UTC");
+    parts = partsFor(now, 'UTC');
   }
-  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? "";
-  const hour = Number(get("hour"));
-  const minute = Number(get("minute"));
-  const jsDay = JS_DAY_BY_WEEKDAY[get("weekday")] ?? now.getUTCDay();
+  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? '';
+  const hour = Number(get('hour'));
+  const minute = Number(get('minute'));
+  const jsDay = JS_DAY_BY_WEEKDAY[get('weekday')] ?? now.getUTCDay();
   return {
     minutes: hour * 60 + minute,
     weekdayIndex: weekdayToMonBased(jsDay),
-    hhmm: `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`,
+    hhmm: `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`
   };
 }
 
@@ -89,7 +89,7 @@ function inServiceWindow(record: TimetableEncoded, minutes: number, weekdayIndex
 export function isInService(
   record: TimetableEncoded,
   nowMinutes: number,
-  weekdayIndex: number, // 0=Mon..6=Sun
+  weekdayIndex: number // 0=Mon..6=Sun
 ): boolean {
   if (inServiceWindow(record, nowMinutes, weekdayIndex)) return true;
   const previousWeekday = (weekdayIndex + 6) % 7;
@@ -100,17 +100,17 @@ export function isInService(
 export function statusForRecord(
   record: TimetableEncoded,
   now: Date = new Date(),
-  timeZone = "UTC",
+  timeZone = 'UTC'
 ): InServiceStatus {
   const { minutes, weekdayIndex, hhmm } = localTimeParts(now, timeZone);
   const isIn = isInService(record, minutes, weekdayIndex);
   const first = effectiveTime(record.first_train, weekdayIndex);
   const last = effectiveTime(record.last_train, weekdayIndex);
   const fmt = (m: number | null) => {
-    if (m == null) return "";
+    if (m == null) return '';
     const h = Math.floor(m / 60);
     const min = m % 60;
-    return `${String(h).padStart(2, "0")}:${String(min).padStart(2, "0")}`;
+    return `${String(h).padStart(2, '0')}:${String(min).padStart(2, '0')}`;
   };
   return {
     timetable_id: record.id,
@@ -121,6 +121,6 @@ export function statusForRecord(
     first_train: fmt(first),
     last_train: fmt(last),
     timezone: timeZone,
-    now: hhmm,
+    now: hhmm
   };
 }

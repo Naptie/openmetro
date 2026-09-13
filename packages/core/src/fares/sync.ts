@@ -1,7 +1,7 @@
-import { readFile, writeFile } from "node:fs/promises";
-import { join } from "node:path";
-import type { SyncCtx } from "../adapter/contract.js";
-import type { StationEncoded } from "../schema/index.js";
+import { readFile, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import type { SyncCtx } from '../adapter/contract.js';
+import type { StationEncoded } from '../schema/index.js';
 
 /**
  * Shared origin-destination fare-matrix orchestration.
@@ -69,16 +69,16 @@ async function queryWithRetry(query: FareQuery, a: string, b: string): Promise<F
 export async function syncFares(
   ctx: SyncCtx,
   spec: FareSpec,
-  opts: FareSyncOptions = {},
+  opts: FareSyncOptions = {}
 ): Promise<void> {
   const concurrency = opts.concurrency ?? 20;
   const delay = opts.delay ?? 0;
 
   const stations = (
-    JSON.parse(await readFile(join(ctx.dataDir, "stations.json"), "utf-8"))
+    JSON.parse(await readFile(join(ctx.dataDir, 'stations.json'), 'utf-8'))
       .records as StationEncoded[]
   ).sort((a, b) => a.id.localeCompare(b.id));
-  const stops = JSON.parse(await readFile(join(ctx.dataDir, "stops.json"), "utf-8")).records as {
+  const stops = JSON.parse(await readFile(join(ctx.dataDir, 'stops.json'), 'utf-8')).records as {
     station_id: string;
     source_id?: string;
   }[];
@@ -91,13 +91,13 @@ export async function syncFares(
   const n = stations.length;
 
   const matrix: (number | null)[][] = Array.from({ length: n }, (_, i) =>
-    Array.from({ length: n }, (_, j) => (i === j ? 0 : null)),
+    Array.from({ length: n }, (_, j) => (i === j ? 0 : null))
   );
 
   const pairs: [number, number][] = [];
   for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) pairs.push([i, j]);
   console.log(
-    `${spec.networkId}: ${n} stations, ${pairs.length} pairs (concurrency ${concurrency})`,
+    `${spec.networkId}: ${n} stations, ${pairs.length} pairs (concurrency ${concurrency})`
   );
 
   let done = 0;
@@ -126,7 +126,7 @@ export async function syncFares(
         const rate = done / ((Date.now() - t0) / 1000);
         console.log(
           `  ${spec.networkId}: ${done}/${pairs.length} (no-fare ${permanent}, ` +
-            `transient ${transient}, ${rate.toFixed(1)}/s)`,
+            `transient ${transient}, ${rate.toFixed(1)}/s)`
         );
       }
     }
@@ -136,18 +136,18 @@ export async function syncFares(
 
   const document = {
     $schema: `https://raw.githubusercontent.com/openmetro/schemas/v1/${spec.networkId}.fares.schema.json`,
-    schema_version: "1.0",
+    schema_version: '1.0',
     network_id: spec.networkId,
     generated_at: new Date().toISOString(),
     source: [spec.source],
     currency: spec.currency,
     unit: spec.unit,
     station_ids: stations.map((s) => s.id),
-    fares: matrix,
+    fares: matrix
   };
-  await writeFile(join(ctx.dataDir, "fares.json"), `${JSON.stringify(document)}\n`, "utf-8");
+  await writeFile(join(ctx.dataDir, 'fares.json'), `${JSON.stringify(document)}\n`, 'utf-8');
   console.log(
     `${spec.networkId}: wrote fares.json (${n}x${n}, no-fare ${permanent}, ` +
-      `transient ${transient}, ${((Date.now() - t0) / 1000).toFixed(0)}s)`,
+      `transient ${transient}, ${((Date.now() - t0) / 1000).toFixed(0)}s)`
   );
 }
