@@ -46,6 +46,9 @@ async function main(): Promise<void> {
     peerDependencies: {
       "@elysia/eden": ">=1.0.0",
       elysia: ">=1.0.0",
+      // index.d.ts imports effect's Schema/Effect types (core's schemas are
+      // effect classes), so consumers need effect resolvable for the types.
+      effect: ">=3.0.0",
     },
   };
   await writeFile(join(out, "package.json"), `${JSON.stringify(manifest, null, 2)}\n`, "utf-8");
@@ -60,7 +63,7 @@ async function main(): Promise<void> {
       "",
       "```bash",
       `npm install <path-or-url-to>/${PACKAGE_NAME}-${root.version}.tgz`,
-      "npm install elysia @elysia/eden",
+      "npm install elysia @elysia/eden effect",
       "```",
       "",
       "```ts",

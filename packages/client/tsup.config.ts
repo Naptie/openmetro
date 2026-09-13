@@ -12,5 +12,12 @@ export default defineConfig({
   dts: { only: true, resolve: true },
   tsconfig: "tsconfig.dts.json",
   noExternal: ["@openmetro/core"],
+  // `effect` types leak into the public `App` surface (core's schemas are
+  // effect `Schema` classes). They must stay a real `import from "effect"`,
+  // not be "resolved": tsup's dts resolver can't inline effect's declarations
+  // and rewrites the imports to relative chunk paths (./Effect.js) that are
+  // never emitted, publishing a broken d.ts. The staged package declares
+  // `effect` as a peer dependency so the import resolves for consumers.
+  external: [/^effect($|\/)/],
   clean: true,
 });
