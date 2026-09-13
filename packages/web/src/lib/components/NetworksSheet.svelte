@@ -135,7 +135,6 @@
       {:else}
         {#key `${locale}-${app.networks.length}`}
           <div class="flex flex-col gap-2" in:fly={{ x: -24, duration: 250 }}>
-            <p class="text-xs text-muted-foreground">{t.map_hint()}</p>
             <Accordion.Root type="single" bind:value={expandedNetwork}>
               {#each app.networks as net (net.meta.id)}
                 <Accordion.Item
@@ -143,11 +142,11 @@
                   id="network-item-{net.meta.id}"
                   class="overflow-hidden rounded-xl border shadow-xs"
                 >
-                  <div class="flex w-full items-center">
+                  <div class="relative flex w-full items-center">
                     <Accordion.Trigger
-                      class="min-w-0 flex-1 gap-2 rounded-none px-3.5 py-3 hover:no-underline"
+                      class="min-w-0 flex-1 items-center gap-2 rounded-none px-3.5 py-3 hover:no-underline"
                     >
-                      <span class="block w-full min-w-0 text-left">
+                      <span class="block w-full min-w-0 pr-10 text-left">
                         <span class="block truncate text-sm font-bold">
                           {networkName(net.meta, locale)}
                         </span>
@@ -163,7 +162,7 @@
                     <Button
                       variant="ghost"
                       size="icon-sm"
-                      class="mr-1.5 shrink-0"
+                      class="absolute top-1/2 right-9 -translate-y-1/2"
                       onclick={(e) => {
                         e.stopPropagation();
                         focusNetwork(net.meta.id);

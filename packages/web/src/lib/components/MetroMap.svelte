@@ -1,7 +1,13 @@
 <script lang="ts">
   import type { Feature, FeatureCollection, LineString } from 'geojson';
   import maplibregl from 'maplibre-gl';
-  import { smoothLine } from '$lib';
+  import { untrack } from 'svelte';
+  import {
+    routeGeometryForStationIds,
+    smoothLine,
+    smoothLineWithStops,
+    type DrawnLinePath
+  } from '$lib';
   import 'maplibre-gl/dist/maplibre-gl.css';
   import type {
     ApiLine as Line,
@@ -28,6 +34,8 @@
   // wrapped in $state proxies.
   const markers: StationMarkerSet = { selected: null, origin: null, destination: null };
   let routeAnimId = 0;
+  /** Line geometries as drawn; routes clip these so they cannot drift off-line. */
+  let drawnPathsByLine = new Map<string, DrawnLinePath[]>();
 
   function toQuadkey(z: number, x: number, y: number): string {
     let q = '';
@@ -317,6 +325,7 @@
     const lineFeatures: Feature[] = [];
     const stationFeatures: Feature[] = [];
     const coordsAll: [number, number][] = [];
+    const nextDrawnPaths = new Map<string, DrawnLinePath[]>();
 
     for (const net of networks) {
       const stationMap = new Map<string, Station>(net.stations.map((s) => [s.id, s]));
@@ -367,8 +376,13 @@
           return { ids, coords };
         };
 
-        const pushSegment = (patternId: string, coords: [number, number][]) => {
-          if (coords.length < 2) return;
+        const pushSegment = (
+          patternId: string,
+          stationIds: string[],
+          coords: [number, number][]
+        ) => {
+          if (coords.length < 2 || stationIds.length < 2) return;
+          const { smoothed, stopIndices } = smoothLineWithStops(coords);
           lineFeatures.push({
             type: 'Feature',
             properties: {
@@ -377,14 +391,21 @@
               network_id: net.meta.id,
               color: line.color ?? '#64748b'
             },
-            geometry: { type: 'LineString', coordinates: smoothLine(coords) }
+            geometry: { type: 'LineString', coordinates: smoothed }
           });
+          const list = nextDrawnPaths.get(line.id) ?? [];
+          list.push({ lineId: line.id, stationIds, smoothed, stopIndices });
+          nextDrawnPaths.set(line.id, list);
         };
 
         const trunk = seqOf(primary);
         if (trunk.coords.length < 2) continue;
-        if (line.loop && trunk.coords.length >= 3) trunk.coords.push(trunk.coords[0]);
-        pushSegment(primary.id, trunk.coords);
+        const trunkIds = [...trunk.ids];
+        if (line.loop && trunk.coords.length >= 3) {
+          trunk.coords.push(trunk.coords[0]);
+          trunkIds.push(trunkIds[0]);
+        }
+        pushSegment(primary.id, trunkIds, trunk.coords);
         const mainSet = new Set(trunk.ids);
         const stopToStation = new Map<string, string>(
           stopMap ? [...stopMap.values()].map((s) => [s.id, s.station_id]) : []
@@ -410,28 +431,49 @@
           }
           if (junctionIdx === -1) {
             // Fully disjoint branch — nothing shared with the trunk, draw whole.
-            pushSegment(pattern.id, coords);
+            pushSegment(pattern.id, ids, coords);
             continue;
           }
 
           // Walk outward from the junction on each side, stopping at the first
           // trunk station — what remains is exactly this branch's own geometry.
+          const beforeIds: string[] = [];
           const before: [number, number][] = [];
           for (let i = junctionIdx - 1; i >= 0; i--) {
             if (mainSet.has(ids[i])) break;
+            beforeIds.push(ids[i]);
             before.push(coords[i]);
           }
+          const afterIds: string[] = [];
           const after: [number, number][] = [];
           for (let i = junctionIdx + 1; i < ids.length; i++) {
             if (mainSet.has(ids[i])) break;
+            afterIds.push(ids[i]);
             after.push(coords[i]);
           }
-          for (const tail of [before, after]) {
-            pushSegment(pattern.id, [coords[junctionIdx], ...tail]);
+          if (before.length) {
+            pushSegment(
+              pattern.id,
+              [ids[junctionIdx], ...beforeIds],
+              [coords[junctionIdx], ...before]
+            );
+          }
+          if (after.length) {
+            pushSegment(
+              pattern.id,
+              [ids[junctionIdx], ...afterIds],
+              [coords[junctionIdx], ...after]
+            );
           }
         }
       }
     }
+
+    drawnPathsByLine = nextDrawnPaths;
+    // Re-clip any active route against the fresh line geometry. Untracked so
+    // this does not subscribe the sync effect to `app.route` (which would
+    // re-run the full line rebuild whenever the route changes).
+    untrack(() => applyRouteOverlay(app.route, false));
 
     const m = map;
     (m.getSource('metro-lines') as maplibregl.GeoJSONSource)?.setData({
@@ -561,9 +603,13 @@
   });
 
   // --- Route overlay with animated dashes ---
-  $effect(() => {
+  /**
+   * Draw the route by clipping already-drawn line splines.
+   * `fit` is true only when the route itself changed — line-data refreshes
+   * re-clip without stealing the camera.
+   */
+  function applyRouteOverlay(route: RoutePlan | null, fit: boolean): void {
     if (!map || !mapReady) return;
-    const route: RoutePlan | null = app.route;
     const m = map;
     stopRouteAnimation();
 
@@ -574,11 +620,19 @@
 
     const features: Feature[] = [];
     for (const leg of route.legs) {
-      if (leg.kind !== 'ride') continue;
-      const coords: [number, number][] = [];
-      for (const stationId of leg.station_ids ?? [leg.from_station_id, leg.to_station_id]) {
-        const loc = app.stationLocation(stationId);
-        if (loc) coords.push(loc);
+      if (leg.kind !== 'ride' || !leg.line_id) continue;
+      const stationIds = leg.station_ids ?? [leg.from_station_id, leg.to_station_id];
+      // Clip the already-drawn line geometry so the route follows the exact
+      // spline used for the line, not a re-interpolation of the leg subset.
+      const paths = drawnPathsByLine.get(leg.line_id) ?? [];
+      let coords = routeGeometryForStationIds(stationIds, paths);
+      if (coords.length < 2) {
+        coords = [];
+        for (const stationId of stationIds) {
+          const loc = app.stationLocation(stationId);
+          if (loc) coords.push(loc);
+        }
+        if (coords.length >= 3) coords = smoothLine(coords);
       }
       if (coords.length < 2) continue;
       features.push({
@@ -587,7 +641,7 @@
           color: app.lineColor(leg.line_id),
           leg: `${leg.from_station_id}->${leg.to_station_id}`
         },
-        geometry: { type: 'LineString', coordinates: smoothLine(coords) }
+        geometry: { type: 'LineString', coordinates: coords }
       });
     }
     (m.getSource('route-line') as maplibregl.GeoJSONSource)?.setData({
@@ -595,20 +649,28 @@
       features
     });
 
-    // Fit to the whole route once it changes.
-    const allCoords = features.flatMap(
-      (f) => (f.geometry as LineString).coordinates as [number, number][]
-    );
-    if (allCoords.length > 1) {
-      const bounds = new maplibregl.LngLatBounds();
-      for (const c of allCoords) bounds.extend(c as maplibregl.LngLatLike);
-      map.fitBounds(bounds, {
-        padding: { top: 160, bottom: 260, left: 80, right: 80 },
-        duration: 1100
-      });
+    // Fit to the whole route only when the journey itself changed.
+    if (fit) {
+      const allCoords = features.flatMap(
+        (f) => (f.geometry as LineString).coordinates as [number, number][]
+      );
+      if (allCoords.length > 1) {
+        const bounds = new maplibregl.LngLatBounds();
+        for (const c of allCoords) bounds.extend(c as maplibregl.LngLatLike);
+        map.fitBounds(bounds, {
+          padding: { top: 160, bottom: 260, left: 80, right: 80 },
+          duration: 1100
+        });
+      }
     }
 
     startRouteAnimation();
+  }
+
+  $effect(() => {
+    if (!map || !mapReady) return;
+    const route: RoutePlan | null = app.route;
+    applyRouteOverlay(route, true);
   });
 
   function startRouteAnimation(): void {
