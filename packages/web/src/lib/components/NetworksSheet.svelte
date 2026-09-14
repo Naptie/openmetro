@@ -135,7 +135,11 @@
       {:else}
         {#key `${locale}-${app.networks.length}`}
           <div in:fly={{ x: -24, duration: 250 }}>
-            <Accordion.Root class="flex flex-col gap-2.25" type="single" bind:value={expandedNetwork}>
+            <Accordion.Root
+              class="flex flex-col gap-2.25"
+              type="single"
+              bind:value={expandedNetwork}
+            >
               {#each app.networks as net (net.meta.id)}
                 <Accordion.Item
                   value={net.meta.id}
