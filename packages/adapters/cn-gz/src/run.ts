@@ -1,18 +1,68 @@
 import { join } from 'node:path';
-import { fillCoordinates, writeCanonical } from '@openmetro/core';
+import {
+  fillCoordinates,
+  type KnownLocation,
+  type TransformStations,
+  writeCanonical
+} from '@openmetro/core';
 import { fetchGuangzhouSources } from './fetch.js';
 import { normalize } from './normalize.js';
 
-type Loc = { lon: number; lat: number; crs: string };
-type LocatableStation = { names?: { zh?: string }; location?: Loc };
+/**
+ * Hand-verified coordinates for stations the automatic cascade resolves
+ * wrongly. OSM-verified GCJ-02 values are fed into `fillCoordinates` via
+ * `knownLocations` so the correct source is selected and its provenance is
+ * recorded in `extras.location_source`.
+ *
+ * The （有轨） tram stops below share their base name with a metro station;
+ * AMap's subway dataset wins the cascade before the official coords are
+ * consulted (the matcher strips the parenthetical), which pins them to the
+ * metro station. Values come from the official GZMTR station details feed
+ * (`app-map/station/getByNameOrCode`), already in GCJ-02.
+ */
+export const KNOWN_LOCATIONS: KnownLocation[] = [
+  { name: '萝峰', location: { lon: 113.512584, lat: 23.178897, crs: 'gcj02' }, source: 'osm' },
+  {
+    name: '香雪大道东',
+    location: { lon: 113.518633, lat: 23.180396, crs: 'gcj02' },
+    source: 'osm'
+  },
+  {
+    name: '开源大道东',
+    location: { lon: 113.533111, lat: 23.167857, crs: 'gcj02' },
+    source: 'osm'
+  },
+  {
+    name: '水西（有轨）',
+    location: { lon: 113.485015, lat: 23.197026, crs: 'gcj02' },
+    source: 'official'
+  },
+  {
+    name: '广州塔（有轨）',
+    location: { lon: 113.321544, lat: 23.107112, crs: 'gcj02' },
+    source: 'official'
+  },
+  {
+    name: '万胜围（有轨）',
+    location: { lon: 113.385654, lat: 23.104339, crs: 'gcj02' },
+    source: 'official'
+  },
+  {
+    name: '林岳东（有轨）',
+    location: { lon: 113.249703, lat: 22.993753, crs: 'gcj02' },
+    source: 'official'
+  }
+];
 
 /**
- * Correct known upstream coordinate errors. AMap's subway dataset has the
- * coordinates of 孝德东 and 罗村 (Foshan Line 3 / F3) swapped; the official
- * station order and OSM both place 孝德东 east of 罗村.
+ * City-specific station corrections, applied after `fillCoordinates`.
+ *
+ * AMap's subway dataset has the coordinates of 孝德东 and 罗村 (Foshan Line 3 /
+ * F3) swapped; the official station order and OSM both place 孝德东 east of
+ * 罗村. We restore the correct pairing and mark both as hand-verified.
  */
-function fixKnownCoordinateErrors<T extends LocatableStation>(stations: T[]): T[] {
-  const byName = new Map<string | undefined, T>();
+export const transformStations: TransformStations = (stations) => {
+  const byName = new Map<string | undefined, (typeof stations)[number]>();
   for (const s of stations) byName.set(s.names?.zh, s);
   const xiaode = byName.get('孝德东');
   const luocun = byName.get('罗村');
@@ -20,11 +70,23 @@ function fixKnownCoordinateErrors<T extends LocatableStation>(stations: T[]): T[
   const luocunLoc = luocun?.location;
   if (!xiaode || !luocun || !xiaodeLoc || !luocunLoc) return stations;
   return stations.map((s) => {
-    if (s === xiaode) return { ...s, location: luocunLoc };
-    if (s === luocun) return { ...s, location: xiaodeLoc };
+    if (s === xiaode) {
+      return {
+        ...s,
+        location: luocunLoc,
+        extras: { ...(s.extras ?? {}), location_source: 'known' }
+      };
+    }
+    if (s === luocun) {
+      return {
+        ...s,
+        location: xiaodeLoc,
+        extras: { ...(s.extras ?? {}), location_source: 'known' }
+      };
+    }
     return s;
   });
-}
+};
 
 export interface GuangzhouNormalizeOptions {
   root?: string;
@@ -41,18 +103,20 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
   let subwayMatched = 0;
   let overpassMatched = 0;
   let officialMatched = 0;
-  const stations = fixKnownCoordinateErrors(
+  const stations = transformStations(
     await fillCoordinates(canonical.stations, {
       city: '广州',
       extraCities: ['佛山', '东莞', '惠州', '肇庆'],
       stops: canonical.stops,
       lines: canonical.lines.map((l) => ({ id: l.id, mode: l.mode })),
       officialLocations: canonical.officialLocations,
+      knownLocations: KNOWN_LOCATIONS,
       onSubwayMatch: () => subwayMatched++,
       onOfficialMatch: () => officialMatched++,
       onOverpassMatch: () => overpassMatched++,
       onGeocode: () => geocoded++
-    })
+    }),
+    { network: canonical.network.id, city: '广州', extraCities: ['佛山', '东莞', '惠州', '肇庆'] }
   );
 
   await writeCanonical(outDir, 'cn-gz', {

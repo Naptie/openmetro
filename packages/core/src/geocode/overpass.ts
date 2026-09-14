@@ -6,7 +6,6 @@
  * coordinates, which are converted to GCJ-02 locally so they align with the
  * rest of the dataset. No API key is required.
  */
-import { foldRareCharacters } from '../station-overrides.js';
 import type { GeoResult } from './index.js';
 
 const OVERPASS_URL = process.env.OVERPASS_URL ?? 'https://overpass-api.de/api/interpreter';
@@ -264,9 +263,10 @@ function stripParenthetical(name: string): string {
   return name.replace(/[(（][^)）]*[)）]\s*$/, '').trim();
 }
 
-/** Canonical matching form: no whitespace, decomposed rare characters folded. */
+/** Canonical matching form: no whitespace. Rare-character folding is the
+ *  adapter's responsibility (names are pre-folded before geocoding). */
 function normalizeName(name: string): string {
-  return foldRareCharacters(name.replace(/\s+/g, ''));
+  return name.replace(/\s+/g, '');
 }
 
 /** All keys a name should be matchable under. */

@@ -3,10 +3,14 @@ import {
   enrichLineNamesFromWikidata,
   fillCoordinates,
   type LineEncoded,
+  type TransformStations,
   writeCanonical
 } from '@openmetro/core';
 import { fetchShanghaiSources } from './fetch.js';
 import { normalize, type ShStationInfo } from './normalize.js';
+
+/** Shanghai has no city-specific station corrections yet. */
+export const transformStations: TransformStations = (stations) => stations;
 
 export interface ShanghaiNormalizeOptions {
   root?: string;
@@ -51,16 +55,19 @@ export async function runShanghaiNormalize(opts: ShanghaiNormalizeOptions = {}):
   let officialMatched = 0;
   let overpassMatched = 0;
   let geocoded = 0;
-  const stations = await fillCoordinates(canonical.stations, {
-    city: '上海',
-    stops: canonical.stops,
-    lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
-    officialLocations: canonical.officialLocations,
-    onSubwayMatch: () => subwayMatched++,
-    onOfficialMatch: () => officialMatched++,
-    onOverpassMatch: () => overpassMatched++,
-    onGeocode: () => geocoded++
-  });
+  const stations = transformStations(
+    await fillCoordinates(canonical.stations, {
+      city: '上海',
+      stops: canonical.stops,
+      lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
+      officialLocations: canonical.officialLocations,
+      onSubwayMatch: () => subwayMatched++,
+      onOfficialMatch: () => officialMatched++,
+      onOverpassMatch: () => overpassMatched++,
+      onGeocode: () => geocoded++
+    }),
+    { network: canonical.network.id, city: '上海' }
+  );
 
   await writeCanonical(outDir, 'cn-sh', {
     network: canonical.network,

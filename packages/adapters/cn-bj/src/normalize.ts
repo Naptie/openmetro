@@ -294,7 +294,8 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
       };
     }),
     stops,
-    timetables
+    timetables,
+    ['老观里']
   );
 
   const official = input.interchangeXml

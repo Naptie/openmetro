@@ -3,10 +3,14 @@ import {
   enrichLineNamesFromWikidata,
   fillCoordinates,
   type LineEncoded,
+  type TransformStations,
   writeCanonical
 } from '@openmetro/core';
 import { fetchBeijingSources } from './fetch.js';
 import { normalize } from './normalize.js';
+
+/** Beijing has no city-specific station corrections yet. */
+export const transformStations: TransformStations = (stations) => stations;
 
 export interface BeijingNormalizeOptions {
   /** Repository root containing `data/cn-bj`. */
@@ -33,14 +37,17 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
   let subwayMatched = 0;
   let overpassMatched = 0;
   let geocoded = 0;
-  const stations = await fillCoordinates(canonical.stations, {
-    city: '北京',
-    stops: canonical.stops,
-    lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
-    onSubwayMatch: () => subwayMatched++,
-    onOverpassMatch: () => overpassMatched++,
-    onGeocode: () => geocoded++
-  });
+  const stations = transformStations(
+    await fillCoordinates(canonical.stations, {
+      city: '北京',
+      stops: canonical.stops,
+      lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
+      onSubwayMatch: () => subwayMatched++,
+      onOverpassMatch: () => overpassMatched++,
+      onGeocode: () => geocoded++
+    }),
+    { network: canonical.network.id, city: '北京' }
+  );
 
   await writeCanonical(outDir, 'cn-bj', {
     network: canonical.network,

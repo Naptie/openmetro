@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { applyDerivedTimes, deriveSegmentTimes } from '../src/timetable/derive.js';
+import { applyTimetableServiceStatus } from '../src/timetable/service-status.js';
 import { isInService, statusForRecord } from '../src/timetable/status.js';
 import {
   effectiveTime,
@@ -187,6 +188,22 @@ test("statusForRecord evaluates in the network timezone, not the server's", () =
   assert.equal(shanghai.now, '01:00');
   assert.equal(utc.is_in_service, true);
   assert.equal(utc.now, '17:00');
+});
+
+test('applyTimetableServiceStatus forces adapter-supplied out-of-service stations', () => {
+  // A station on a line that publishes timetables, but with no records of its
+  // own -> demoted. The forced list additionally demotes one even if it has
+  // records (e.g. 老观里 on Beijing Yizhuang T1).
+  const stations = [
+    { id: 'st-a', status: 'operating', names: { zh: '甲' } },
+    { id: 'st-b', status: 'operating', names: { zh: '老观里' } },
+    { id: 'st-c', status: 'operating', names: { zh: '丙' } }
+  ] as any;
+  const timetables = [{ id: 'tt-a', station_id: 'st-a', line_id: 'l1' }] as any;
+  const out = applyTimetableServiceStatus(stations, stops, timetables, ['老观里']);
+  assert.equal(out[0].status, 'operating'); // has a record -> stays
+  assert.equal(out[1].status, 'out_of_service'); // forced by the list
+  assert.equal(out[2].status, 'out_of_service'); // on line, no record
 });
 
 test('normalizeTimetableTimes rewrites 00:xx wraps to the service-day 24:xx form', () => {

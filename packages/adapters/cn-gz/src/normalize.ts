@@ -90,6 +90,16 @@ export interface GzCanonical {
 const NETWORK_ID = 'cn-gz';
 const DEFAULT_SEGMENT_SECONDS = 120;
 
+/**
+ * Guangzhou-specific rare-character fold forms. The official GZMTR feed
+ * decomposes 𧒽 into the two common glyphs "虫雷" (sometimes spaced); canonical
+ * station names use the single codepoint. Core stays city-agnostic, so this
+ * table lives here in the adapter.
+ */
+const RARE_CHAR_FORMS: readonly (readonly [string, string])[] = [['虫雷', '𧒽']];
+
+const fold = (name: string): string => foldRareCharacters(name, RARE_CHAR_FORMS);
+
 function slug(s: string): string {
   let out = s
     .toLowerCase()
@@ -163,7 +173,7 @@ export function normalize(input: GzRawInput): GzCanonical {
       ...c,
       stations: c.stations.map((s) => ({
         ...s,
-        stationName: foldRareCharacters(s.stationName)
+        stationName: fold(s.stationName)
       }))
     }));
   const foldStationDetails = (
@@ -171,8 +181,8 @@ export function normalize(input: GzRawInput): GzCanonical {
   ): Record<string, GzStationDetail> => {
     const out: Record<string, GzStationDetail> = {};
     for (const [k, v] of Object.entries(details)) {
-      out[foldRareCharacters(k)] = v;
-      if (v.nameCN) v.nameCN = foldRareCharacters(v.nameCN);
+      out[fold(k)] = v;
+      if (v.nameCN) v.nameCN = fold(v.nameCN);
     }
     return out;
   };
@@ -181,11 +191,11 @@ export function normalize(input: GzRawInput): GzCanonical {
   ): Record<string, GzServiceTime[]> => {
     const out: Record<string, GzServiceTime[]> = {};
     for (const [k, recs] of Object.entries(times)) {
-      const key = foldRareCharacters(k);
+      const key = fold(k);
       const mapped = recs.map((r) => ({
         ...r,
-        stationName: foldRareCharacters(r.stationName || k),
-        toStationName: foldRareCharacters(r.toStationName || '')
+        stationName: fold(r.stationName || k),
+        toStationName: fold(r.toStationName || '')
       }));
       const existing = out[key];
       out[key] = existing ? [...existing, ...mapped] : mapped;
@@ -464,7 +474,7 @@ export function normalize(input: GzRawInput): GzCanonical {
   const officialLocations = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>();
   for (const [name, detail] of Object.entries(stationDetails)) {
     if (detail?.longitude != null && detail?.latitude != null) {
-      officialLocations.set(foldRareCharacters(name), {
+      officialLocations.set(fold(name), {
         lon: detail.longitude,
         lat: detail.latitude,
         crs: 'gcj02'
@@ -489,7 +499,8 @@ export function normalize(input: GzRawInput): GzCanonical {
       };
     }),
     stops,
-    finalTimetables
+    finalTimetables,
+    []
   );
 
   return {

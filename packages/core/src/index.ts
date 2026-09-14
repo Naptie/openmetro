@@ -5,7 +5,7 @@ export * from './fares/index.js';
 export * from './geocode/index.js';
 export * from './graph/index.js';
 export * from './lines/short-name.js';
+export * from './name-utils.js';
 export * from './schema/index.js';
-export * from './station-overrides.js';
 export * from './timetable/index.js';
 export * from './wikidata/index.js';

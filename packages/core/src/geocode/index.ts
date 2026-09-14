@@ -6,10 +6,17 @@ import {
   bboxOf,
   fetchOverpassStations,
   findOverpassStation,
-  indexOverpassStations
+  indexOverpassStations,
+  type OverpassStation
 } from './overpass.js';
 import { geocodeViaPhoton } from './photon.js';
-import { fetchSubwayStations, findSubwayStation, indexSubwayStations } from './subway.js';
+import {
+  fetchSubwayStations,
+  findSubwayStation,
+  indexSubwayStations,
+  type SubwayStation
+} from './subway.js';
+import type { KnownLocation } from './transform.js';
 
 export { CITY_BBOX, cityBbox, isWithinCityBbox } from './city-bbox.js';
 export {
@@ -51,6 +58,17 @@ export interface LonLat {
   lat: number;
 }
 
+/** Inject free-geocoder fetchers for tests; defaults to the network fetchers. */
+export interface GeocodeFetchers {
+  fetchSubway?: (city: string) => Promise<SubwayStation[]>;
+  fetchOverpass?: (bbox: Bbox) => Promise<OverpassStation[]>;
+  geocode?: (
+    name: string,
+    city: string,
+    center?: { lon: number; lat: number }
+  ) => Promise<GeoResult | undefined>;
+}
+
 /** A coordinate in any datum; geocoding reads only `lon`/`lat`. */
 type StationLocation = { lon: number; lat: number; crs: string };
 
@@ -59,6 +77,7 @@ interface StationLike {
   name?: string;
   names?: { zh?: string };
   location?: StationLocation;
+  extras?: Record<string, unknown>;
 }
 
 interface StopRef {
@@ -113,6 +132,10 @@ export async function fillCoordinates<T extends StationLike>(
     lines?: LineRef[];
     /** Official/operator coords keyed by Chinese station name. */
     officialLocations?: Map<string, GeoResult> | Record<string, GeoResult>;
+    /** Hand-verified coords that override any geocoder; highest priority. */
+    knownLocations?: KnownLocation[];
+    /** Injectable geocoder fetchers (used by tests). */
+    fetchers?: GeocodeFetchers;
     concurrency?: number;
     delayMs?: number;
     bbox?: Bbox;
@@ -123,12 +146,17 @@ export async function fillCoordinates<T extends StationLike>(
     onOfficialMatch?: (name: string) => void;
     onOverpassMatch?: (name: string) => void;
     onGeocode?: (name: string) => void;
+    onKnownMatch?: (name: string) => void;
   }
 ): Promise<T[]> {
   const cities = [opts.city, ...(opts.extraCities ?? [])];
   const cityCenter = cityBbox(opts.city)?.center;
   const { stopsByStation, stopsByLine } = buildStopMaps(opts.stops);
   const modeByLine = new Map((opts.lines ?? []).map((l) => [l.id, l.mode]));
+  const fetchers = opts.fetchers ?? {};
+  const fetchSubway = fetchers.fetchSubway ?? fetchSubwayStations;
+  const fetchOverpass = fetchers.fetchOverpass ?? fetchOverpassStations;
+  const geocode = fetchers.geocode ?? geocodeViaPhoton;
   const official =
     opts.officialLocations instanceof Map
       ? opts.officialLocations
@@ -136,6 +164,14 @@ export async function fillCoordinates<T extends StationLike>(
 
   /** id → location, updated as we accept candidates. */
   const placed = new Map<string, StationLocation>();
+
+  /** Set a station's location and record its provenance in extras. */
+  const setLocation = (st: T, loc: StationLocation, source: string) => {
+    st.location = loc;
+    st.extras = { ...(st.extras ?? {}), location_source: source };
+    placed.set(st.id, loc);
+  };
+
   const accept = (
     st: T,
     loc: GeoResult,
@@ -157,30 +193,44 @@ export async function fillCoordinates<T extends StationLike>(
     ) {
       return false;
     }
-    placed.set(st.id, loc);
-    st.location = loc;
+    setLocation(st, loc, source);
     if (source === 'official') opts.onOfficialMatch?.(stationName(st));
     else if (source === 'overpass') opts.onOverpassMatch?.(stationName(st));
     else opts.onGeocode?.(stationName(st));
     return true;
   };
 
+  // ── 0. Hand-verified known locations ──────────────────────────
+  // These override any geocoder (including AMap subway), so a manually
+  // confirmed coordinate is always selected and its provenance recorded.
+  // Names are pre-folded by the adapter, so the core matches directly.
+  const knownByName = new Map<string, KnownLocation>();
+  for (const k of opts.knownLocations ?? []) {
+    knownByName.set(k.name, k);
+  }
+  for (const st of stations) {
+    const name = stationName(st);
+    const known = name ? knownByName.get(name) : undefined;
+    if (known) {
+      // Hand-verified coordinates win over any geocoder or pre-seeded value.
+      setLocation(st, known.location, known.source);
+      opts.onKnownMatch?.(stationName(st));
+    }
+  }
+
   // ── 1. AMap subway ────────────────────────────────────────────
   const indices = await Promise.all(
-    cities.map(async (c) => indexSubwayStations(await fetchSubwayStations(c)))
+    cities.map(async (c) => indexSubwayStations(await fetchSubway(c)))
   );
   for (const st of stations) {
-    if (st.location) {
-      placed.set(st.id, st.location);
-      continue;
-    }
+    if (placed.has(st.id)) continue; // known locations already placed in step 0
+    if (st.location) continue; // pre-seeded: validated/kept as 'source' in the drop loop
     const name = stationName(st);
     if (!name) continue;
     for (const idx of indices) {
       const hit = findSubwayStation(idx, name);
       if (hit) {
-        placed.set(st.id, hit.location);
-        st.location = hit.location;
+        setLocation(st, hit.location, 'subway');
         opts.onSubwayMatch?.(stationName(st));
         break;
       }
@@ -231,8 +281,7 @@ export async function fillCoordinates<T extends StationLike>(
         isWithinCityBbox(opts.city, subwayHit.lon, subwayHit.lat)
       ) {
         st.location = undefined;
-        placed.set(st.id, subwayHit);
-        st.location = subwayHit;
+        setLocation(st, subwayHit, 'subway');
         opts.onSubwayMatch?.(stationName(st));
         continue;
       }
@@ -244,7 +293,8 @@ export async function fillCoordinates<T extends StationLike>(
       st.location = undefined;
       continue;
     }
-    placed.set(st.id, st.location);
+    // Survived validation: it is a source-feed coordinate (not a geocoder).
+    setLocation(st, st.location, 'source');
   }
 
   // ── 3. Overpass ───────────────────────────────────────────────
@@ -259,7 +309,7 @@ export async function fillCoordinates<T extends StationLike>(
           ? bboxAround(cityCenter, 80)
           : undefined);
     if (bbox) {
-      const overpass = indexOverpassStations(await fetchOverpassStations(bbox));
+      const overpass = indexOverpassStations(await fetchOverpass(bbox));
       for (const st of stations) {
         if (st.location) continue;
         const name = stationName(st);
@@ -276,7 +326,7 @@ export async function fillCoordinates<T extends StationLike>(
     if (!name) continue;
     for (const city of cities) {
       const center = cityBbox(city)?.center ?? cityCenter;
-      const hit = await geocodeViaPhoton(name, city, center);
+      const hit = await geocode(name, city, center);
       if (hit) {
         // Photon is biased per city name; accept only if in the primary city bbox.
         if (accept(st, hit, 'photon')) break;
@@ -286,3 +336,10 @@ export async function fillCoordinates<T extends StationLike>(
 
   return stations;
 }
+
+export type {
+  KnownLocation,
+  LocatableStation,
+  TransformStations,
+  TransformStationsContext
+} from './transform.js';

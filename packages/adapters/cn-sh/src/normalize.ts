@@ -565,7 +565,12 @@ export function normalize(input: ShRawInput): ShCanonical {
   const finalSegments = applyDerivedTimes([...segmentByPair.values()], derived);
 
   const finalTimetables = timetables.map(normalizeTimetableTimes).filter(hasValidTimes);
-  const stations = applyTimetableServiceStatus([...stationMap.values()], stops, finalTimetables);
+  const stations = applyTimetableServiceStatus(
+    [...stationMap.values()],
+    stops,
+    finalTimetables,
+    []
+  );
 
   return {
     network: {
