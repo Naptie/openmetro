@@ -13,6 +13,7 @@
  *        - fares station set matches stations.json exactly; matrix is square
  *        - lines that publish any timetable cover every operating stop
  *          (tram-only networks/lines with zero published times are exempt)
+ *        - every line carries a non-empty `short_name` unless waived per network
  *
  * The manifest is content-addressed: `aggregate` is the sha256 of the sorted
  * `<network>/<file>:<sha256>` lines.
@@ -39,6 +40,14 @@ const CANONICAL_FILES = [
   'timetables.json',
   'fares.json'
 ];
+
+/**
+ * Operating lines that legitimately have no compact display code
+ * (`short_name` is null), keyed by network id: the operator publishes none
+ * for them. A stale entry after a line gains a code is harmless; a missing
+ * one fails here.
+ */
+const SHORT_NAME_WAIVERS: Partial<Record<string, ReadonlySet<string>>> = {};
 
 function sha256(data: string | Uint8Array): string {
   return createHash('sha256').update(data).digest('hex');
@@ -83,6 +92,21 @@ function verifyReferences(network: string, d: NetworkData): void {
     assert(line.names?.zh, network, `line ${line.id} missing names.zh`);
     assert(line.names?.en, network, `line ${line.id} missing names.en`);
     assert(lineIds.has(line.id), network, `line ${line.id} duplicate`);
+  }
+
+  // ── short_name coverage ───────────────────────────────────────
+  // `short_name` is mandatory on every line (schema-enforced). This check
+  // additionally rejects empty/whitespace values, which the schema would
+  // accept, and keeps the per-network waiver escape hatch for the rare case
+  // where an operator genuinely publishes no compact label.
+  const waivers = SHORT_NAME_WAIVERS[network] ?? new Set<string>();
+  for (const line of d.lines) {
+    if (line.short_name.trim().length > 0) continue;
+    assert(
+      waivers.has(line.id),
+      network,
+      `line ${line.id} has an empty short_name (add a waiver or fix the adapter)`
+    );
   }
 
   // ── Stations ──────────────────────────────────────────────────

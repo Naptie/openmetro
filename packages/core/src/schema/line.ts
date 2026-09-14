@@ -52,6 +52,7 @@ export const Line = Schema.Struct({
   aliases: Schema.Array(Schema.String),
   color: Schema.optionalWith(Schema.String, { as: 'Option' }),
   text_color: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  short_name: Schema.String,
   mode: LineMode,
   status: LineStatus,
   loop: Schema.Boolean,

@@ -11,6 +11,7 @@ import {
   normalizeTimetableTimes,
   type PatternEncoded,
   readableSlug,
+  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -271,6 +272,10 @@ export function normalize(input: GzRawInput): GzCanonical {
       loop: loopLines.has(lineId),
       source_ids: [{ source: 'gzmtr-linestation', id: code }],
       color: info.color || undefined,
+      // `lineShowCode` is the operator's own compact display code (`APM`,
+      // `F2`, `广惠`) — an exact match for short_name, no derivation needed.
+      // The resolver only guards against an empty source value.
+      short_name: resolveLineShortName(primary.lineName, code),
       extras: {
         lineShowCode: code,
         cards: info.cards.map((c) => c.lineName.trim()),

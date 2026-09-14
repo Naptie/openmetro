@@ -45,6 +45,9 @@ jobs:
       - name: Export OpenAPI document
         run: bun run openapi --out dist/openapi.json
 
+      - name: Check OpenAPI document is current
+        run: bun run openapi --check --out dist/openapi.json
+
       - name: Upload data manifest
         uses: actions/upload-artifact@v7
         with:

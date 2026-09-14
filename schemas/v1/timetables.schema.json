@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["$schema", "schema_version", "network_id", "generated_at", "source", "records"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "network_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "source": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "url",
+          "version",
+          "retrieved_at",
+          "license",
+          "license_url",
+          "attribution"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "retrieved_at": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string",
+            "enum": ["unknown", "cc0", "cc-by", "cc-by-sa", "odbl", "custom"]
+          },
+          "license_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "station_id",
+          "stop_id",
+          "line_id",
+          "pattern_id",
+          "first_train",
+          "last_train"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "station_id": {
+            "type": "string"
+          },
+          "stop_id": {
+            "type": "string"
+          },
+          "line_id": {
+            "type": "string"
+          },
+          "station_code": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "destination_stop_id": {
+            "type": "string"
+          },
+          "origin_stop_id": {
+            "type": "string"
+          },
+          "pattern_id": {
+            "type": "string"
+          },
+          "direction_type": {
+            "type": "string",
+            "enum": ["linear", "loop_inner", "loop_outer"]
+          },
+          "direction_label": {
+            "type": "string"
+          },
+          "first_train": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "last_train": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "first_train_desc": {
+            "type": "string"
+          },
+          "last_train_desc": {
+            "type": "string"
+          },
+          "is_arrival": {
+            "type": "boolean"
+          },
+          "service": {
+            "type": "string"
+          },
+          "valid_from": {
+            "type": "string"
+          },
+          "valid_to": {
+            "type": "string"
+          },
+          "extras": {
+            "type": "object",
+            "required": [],
+            "properties": {},
+            "additionalProperties": {
+              "$id": "/schemas/unknown",
+              "title": "unknown"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,226 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["$schema", "schema_version", "network_id", "generated_at", "source", "records"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "network_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "source": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "url",
+          "version",
+          "retrieved_at",
+          "license",
+          "license_url",
+          "attribution"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "retrieved_at": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string",
+            "enum": ["unknown", "cc0", "cc-by", "cc-by-sa", "odbl", "custom"]
+          },
+          "license_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "names",
+          "aliases",
+          "short_name",
+          "mode",
+          "status",
+          "loop",
+          "source_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "names": {
+            "type": "object",
+            "required": ["zh", "en"],
+            "properties": {
+              "zh": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "color": {
+            "type": "string"
+          },
+          "text_color": {
+            "type": "string"
+          },
+          "short_name": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "metro",
+              "suburban_rail",
+              "light_rail",
+              "tram",
+              "monorail",
+              "airport_express",
+              "other"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["operating", "partially_operating", "under_construction", "planned", "closed"]
+          },
+          "loop": {
+            "type": "boolean"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source", "id"],
+              "properties": {
+                "source": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "geometry": {
+            "type": "object",
+            "required": ["crs", "points"],
+            "properties": {
+              "crs": {
+                "type": "string",
+                "enum": ["wgs84", "gcj02", "bd09", "schematic"]
+              },
+              "points": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "required": ["lon", "lat", "crs"],
+                      "properties": {
+                        "lon": {
+                          "type": "number"
+                        },
+                        "lat": {
+                          "type": "number"
+                        },
+                        "crs": {
+                          "type": "string",
+                          "enum": ["wgs84", "gcj02", "bd09", "schematic", "none"]
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "required": ["x", "y", "crs"],
+                      "properties": {
+                        "x": {
+                          "type": "number"
+                        },
+                        "y": {
+                          "type": "number"
+                        },
+                        "crs": {
+                          "type": "string",
+                          "enum": ["wgs84", "gcj02", "bd09", "schematic", "none"]
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "valid_from": {
+            "type": "string"
+          },
+          "valid_to": {
+            "type": "string"
+          },
+          "extras": {
+            "type": "object",
+            "required": [],
+            "properties": {},
+            "additionalProperties": {
+              "$id": "/schemas/unknown",
+              "title": "unknown"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

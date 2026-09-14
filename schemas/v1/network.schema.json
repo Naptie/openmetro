@@ -1,0 +1,224 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "city",
+    "country_code",
+    "currency",
+    "timezone",
+    "coordinate_system",
+    "default_units",
+    "routing",
+    "operators",
+    "source"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "city": {
+      "type": "object",
+      "required": ["id", "name", "country", "population", "area", "location"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "object",
+          "required": ["zh", "en"],
+          "properties": {
+            "zh": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "country": {
+          "type": "string"
+        },
+        "population": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "area": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "location": {
+          "anyOf": [
+            {
+              "type": "object",
+              "required": ["type", "coordinates"],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["Point"]
+                },
+                "coordinates": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "additionalItems": false
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "coordinate_system": {
+      "type": "string",
+      "enum": ["wgs84", "gcj02", "bd09", "schematic", "none"]
+    },
+    "default_units": {
+      "type": "object",
+      "required": ["distance", "time", "speed"],
+      "properties": {
+        "distance": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        },
+        "speed": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "routing": {
+      "type": "object",
+      "required": ["weight", "default_transfer_seconds"],
+      "properties": {
+        "weight": {
+          "type": "string",
+          "enum": ["time", "distance"]
+        },
+        "default_transfer_seconds": {
+          "type": "number"
+        },
+        "max_transfer_seconds": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "operators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "source": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "url",
+          "version",
+          "retrieved_at",
+          "license",
+          "license_url",
+          "attribution"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "retrieved_at": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string",
+            "enum": ["unknown", "cc0", "cc-by", "cc-by-sa", "odbl", "custom"]
+          },
+          "license_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

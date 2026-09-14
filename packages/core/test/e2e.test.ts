@@ -3,6 +3,8 @@ import { dirname, join } from 'node:path';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { Effect } from 'effect';
+import { createApiApp } from '../src/api/app.js';
+import { createFsNetworkSource } from '../src/data/fs.js';
 import { loadNetwork, type NetworkData } from '../src/data/loader.js';
 import { buildStopGraph, type WeightKind } from '../src/graph/build.js';
 import { travelTimes } from '../src/graph/dijkstra.js';
@@ -180,4 +182,40 @@ test('travel-times isochrone reaches known stations', async () => {
   const atGucheng = d.stops.find((s) => s.station_id === 'cn-bj-gucheng');
   assert.ok(atGucheng);
   assert.ok((times.get(atGucheng.id) ?? Infinity) > 0);
+});
+
+test('projected lines carry short_name on the wire', { timeout: 30_000 }, async () => {
+  const app = createApiApp(createFsNetworkSource(dataRoot));
+  const shortNamesOf = async (network: string) => {
+    const res = await app.handle(new Request(`http://localhost/api/networks/${network}/lines`));
+    assert.equal(res.status, 200);
+    const body = (await res.json()) as { id: string }[];
+    assert.ok(body.length > 0);
+    // `short_name` is mandatory on every line — the key must exist and be a
+    // non-empty string.
+    for (const line of body) {
+      assert.ok('short_name' in line, `line ${line.id} is missing the short_name key`);
+      const shortName = (line as { short_name: unknown }).short_name;
+      assert.equal(typeof shortName, 'string', `line ${line.id} short_name is not a string`);
+      assert.ok((shortName as string).length > 0, `line ${line.id} short_name is empty`);
+    }
+    return new Map(body.map((l) => [l.id, (l as { short_name: string }).short_name]));
+  };
+
+  const gz = await shortNamesOf(GUANGZHOU);
+  assert.equal(gz.get('cn-gz-line-apm'), 'APM');
+  assert.equal(gz.get('cn-gz-line-1'), '1');
+  assert.equal(gz.get('cn-gz-line-guangzhou-huizhou-intercity'), '广惠');
+
+  const bj = await shortNamesOf(BEIJING);
+  assert.equal(bj.get('cn-bj-line-1'), '1');
+  assert.equal(bj.get('cn-bj-line-73'), '18'); // 18号线: lnub (73) is an internal id
+  assert.equal(bj.get('cn-bj-line-79'), '亦庄T1'); // 亦庄T1线: official slb label
+  assert.equal(bj.get('cn-bj-line-91'), 'S1'); // S1线: official slb label
+  assert.equal(bj.get('cn-bj-line-88'), '大兴机场'); // 大兴机场线: official slb label
+
+  const sh = await shortNamesOf(SHANGHAI);
+  assert.equal(sh.get('cn-sh-line-1'), '1');
+  assert.equal(sh.get('cn-sh-line-41'), '浦江线'); // no numeric code → official name
+  assert.equal(sh.get('cn-sh-line-51'), '市域机场线'); // no numeric code → official name
 });

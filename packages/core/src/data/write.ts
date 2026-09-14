@@ -1,5 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { entitySchemaUrl } from '../schema/file.js';
 
 export interface CanonicalFile<T> {
   $schema: string;
@@ -10,9 +11,13 @@ export interface CanonicalFile<T> {
   records: T[];
 }
 
-export function wrap<T>(networkId: string, records: T[]): CanonicalFile<T> {
+/**
+ * Wrap records as a canonical entity file. `documentType` is the city-agnostic
+ * document name (`lines`, `stations`, …) that names the published JSON Schema.
+ */
+export function wrap<T>(networkId: string, documentType: string, records: T[]): CanonicalFile<T> {
   return {
-    $schema: `https://raw.githubusercontent.com/openmetro/schemas/v1/${networkId}.schema.json`,
+    $schema: entitySchemaUrl(documentType),
     schema_version: '1.0',
     network_id: networkId,
     generated_at: new Date().toISOString(),
@@ -58,17 +63,23 @@ export async function writeCanonical<
   }
 ): Promise<void> {
   await mkdir(outDir, { recursive: true });
-  const w = <A>(name: string, records: A[]) =>
-    writeFile(join(outDir, name), JSON.stringify(wrap(networkId, records), null, 2), 'utf-8');
+  const w = <A>(documentType: string, records: A[]) =>
+    writeFile(
+      join(outDir, `${documentType}.json`),
+      JSON.stringify(wrap(networkId, documentType, records), null, 2),
+      'utf-8'
+    );
 
   await writeFile(join(outDir, 'network.json'), JSON.stringify(data.network, null, 2), 'utf-8');
-  await w('lines.json', sorted(data.lines));
-  await w('stations.json', sorted(data.stations));
-  await w('stops.json', sorted(data.stops));
-  if (data.patterns) await w('patterns.json', sorted(data.patterns));
-  await w('segments.json', sorted(data.segments));
-  await w('transfers.json', sorted(data.transfers));
-  if (data.timetables) await w('timetables.json', sorted(data.timetables));
+  await Promise.all([
+    w('lines', sorted(data.lines)),
+    w('stations', sorted(data.stations)),
+    w('stops', sorted(data.stops)),
+    data.patterns ? w('patterns', sorted(data.patterns)) : Promise.resolve(),
+    w('segments', sorted(data.segments)),
+    w('transfers', sorted(data.transfers)),
+    data.timetables ? w('timetables', sorted(data.timetables)) : Promise.resolve()
+  ]);
   if (data.fares) {
     await writeFile(join(outDir, 'fares.json'), JSON.stringify(data.fares, null, 2), 'utf-8');
   }

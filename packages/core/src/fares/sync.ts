@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { SyncCtx } from '../adapter/contract.js';
+import { entitySchemaUrl } from '../schema/file.js';
 import type { StationEncoded } from '../schema/index.js';
 
 /**
@@ -135,7 +136,7 @@ export async function syncFares(
   await Promise.all(Array.from({ length: Math.min(concurrency, pairs.length) }, () => worker()));
 
   const document = {
-    $schema: `https://raw.githubusercontent.com/openmetro/schemas/v1/${spec.networkId}.fares.schema.json`,
+    $schema: entitySchemaUrl('fares'),
     schema_version: '1.0',
     network_id: spec.networkId,
     generated_at: new Date().toISOString(),

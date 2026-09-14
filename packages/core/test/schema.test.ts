@@ -12,11 +12,27 @@ test('Line requires multilingual names with zh and en', () => {
     status: 'operating',
     loop: false,
     aliases: [],
-    source_ids: []
+    source_ids: [],
+    short_name: '1'
   };
   const decoded = Schema.decodeUnknownSync(Line)(ok);
   assert.equal(decoded.names.zh, '1号线');
   assert.equal(decoded.names.en, 'Line 1');
+  assert.equal(decoded.short_name, '1');
+});
+
+test('Line requires short_name', () => {
+  const bad = {
+    id: 'l1',
+    name: '1号线',
+    names: { zh: '1号线', en: 'Line 1' },
+    mode: 'metro',
+    status: 'operating',
+    loop: false,
+    aliases: [],
+    source_ids: []
+  };
+  assert.throws(() => Schema.decodeUnknownSync(Line)(bad));
 });
 
 test('Line with missing en is rejected', () => {

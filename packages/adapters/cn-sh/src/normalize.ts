@@ -10,6 +10,7 @@ import {
   normalizeTimetableTimes,
   type PatternEncoded,
   readableSlug,
+  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -394,6 +395,10 @@ export function normalize(input: ShRawInput): ShCanonical {
       loop: loopLines.has(lineNo),
       source_ids: [{ source: 'shmetro-lines', id: String(meta.line_no) }],
       color: meta.color,
+      // Numbered lines derive their badge from the name; `浦江线` /
+      // `市域机场线` have no numeric code, so they fall back to the official
+      // line name as their short label.
+      short_name: resolveLineShortName(meta.description),
       extras: { names_source: 'derived' }
     });
   }

@@ -12,11 +12,13 @@ import type {
 import {
   applyTimetableServiceStatus,
   deriveLineEnglishName,
+  deriveLineShortName,
   deriveTransfers,
   fillMissingSegmentTimes,
   hasValidTimes,
   lineSlug,
-  normalizeTimetableTimes
+  normalizeTimetableTimes,
+  resolveLineShortName
 } from '@openmetro/core';
 import { XMLParser } from 'fast-xml-parser';
 import { buildBeijingTimetablesFromTimeinfos } from './timeinfos.js';
@@ -54,6 +56,31 @@ const parser = new XMLParser({
  */
 const FORCE_NON_LOOP_LINES = new Set(['11']);
 
+/**
+ * Curated `short_name` values for lines whose compact display code cannot or
+ * must not be derived from the name, keyed by source `lcode`.
+ *
+ * The source's own `slb` short label is authoritative and used by default;
+ * this table only pins the rare cases where `slb` is wrong or absent. An entry
+ * bypasses the `lnub` cross-check below, so any new divergence needs an entry
+ * here (or a fix at the source).
+ */
+const SHORT_NAME_OVERRIDES: Partial<Record<string, string>> = {
+  '73': '18'
+};
+
+/**
+ * Official short label from the source's `slb` attribute.
+ *
+ * `slb` is a comma-separated list of per-segment labels (`1,1,八通` for
+ * `1号线八通线`); the first token is the line's badge (`1`). Returns
+ * `undefined` when the source publishes none.
+ */
+function officialShortLabel(slb: string | undefined): string | undefined {
+  const first = slb?.split(',')[0]?.trim();
+  return first || undefined;
+}
+
 interface ApiStation {
   id: number;
   c_name: string;
@@ -71,6 +98,7 @@ interface RawLine {
   '@_lc': string;
   '@_lnub': string;
   '@_lcode': string;
+  '@_slb'?: string;
   p?: RawPoint | RawPoint[];
 }
 
@@ -146,6 +174,24 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
     const color = hexToCss(rl['@_lc']);
     const isLoop = rl['@_loop'] === 'true' && !FORCE_NON_LOOP_LINES.has(rl['@_lcode']);
 
+    // `lnub` is an internal source id that happens to equal the badge number on
+    // purely numbered lines — cross-check them and fail loudly on divergence.
+    // The source's `slb` short label is authoritative; specials come from the
+    // curated override table above.
+    const lnub = rl['@_lnub'];
+    const override = SHORT_NAME_OVERRIDES[rl['@_lcode']];
+    const derived = deriveLineShortName(lb);
+    if (
+      override === undefined &&
+      derived != null &&
+      /^\d+$/.test(derived) &&
+      lnub &&
+      derived !== lnub
+    ) {
+      throw new Error(`cn-bj line ${lid} (${lb}): derived short_name ${derived} != lnub ${lnub}`);
+    }
+    const shortName = override ?? resolveLineShortName(lb, officialShortLabel(rl['@_slb']));
+
     lineRecords.push({
       id: lineId,
       name: lb,
@@ -156,9 +202,11 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
       loop: isLoop,
       source_ids: [{ source: 'bjsubway-beijing-xml', id: lid }],
       color: color ?? undefined,
+      short_name: shortName,
       extras: {
         lcode: rl['@_lcode'],
         lnub: rl['@_lnub'],
+        slb: rl['@_slb'],
         names_source: 'derived'
       }
     });

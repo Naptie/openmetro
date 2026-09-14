@@ -39,7 +39,7 @@ Two-tier topology: a **Station** (physical place) and a **Stop** (a station's
 presence on a specific line). This mirrors GTFS and handles per-line station
 codes and line-to-line transfer walk times.
 
-- `lines.json` — line metadata (names, color, mode, loop, geometry)
+- `lines.json` — line metadata (names, color, mandatory `short_name`, mode, loop, geometry)
 - `stations.json` — station identity + names (zh/en) + real-world location (GCJ-02)
 - `stops.json` — per-line stop, official per-line code, sequence
 - `patterns.json` — route alignments (service patterns): a line may branch, so it owns one
@@ -165,6 +165,9 @@ bun run data:verify
 # Export the OpenAPI document
 bun run openapi
 
+# Regenerate published JSON Schemas (schemas/v1/) from the Effect schemas
+bun run json-schemas
+
 # Run tests
 bun test
 
@@ -211,7 +214,11 @@ every dataset and every derived artifact is reachable.
 - `GET /api/health` — liveness probe
 - `GET /api/networks` — list available networks (`cn-bj`, `cn-sh`, `cn-gz`) with metadata
 - `GET /api/networks/:id` — one network's metadata (city, currency, timezone, routing defaults)
-- `GET /api/networks/:id/lines`
+- `GET /api/networks/:id/lines` — every line carries `short_name`, the compact
+  display code used for map-style badges (`1`, `S1`, `APM`, `广惠`). It is
+  **mandatory**: when the operator publishes no numeric code, the official
+  short label (e.g. `浦江线`, `首都机场`) is used instead. Not guaranteed
+  ASCII — badge components must handle CJK
 - `GET /api/networks/:id/stations` — station coords + `lines` + computed `is_interchange`
 - `GET /api/networks/:id/stations/:stationId` — detail + transfers + timetables + in-service status
 - `GET /api/networks/:id/stops` — per-line stop occurrences
@@ -229,8 +236,28 @@ Routing endpoints default `weight` to the network's `routing.weight`. CORS is
 unrestricted (any origin may call the public read-only API; methods are
 `GET`/`OPTIONS`, no credentials).
 
-Interactive OpenAPI 3.0 docs are served at `/swagger` (JSON at `/swagger/json`).
-The document is also exported to `dist/openapi.json` on every release.
+**Error contract.** Every non-2xx response body is `{ "error": "<message>" }`.
+Unknown network ids are `404` on every `/api/networks/:id/*` route (collection
+routes used to 500 on an id that did not exist); unknown stations are `404` on
+the detail, fare-row, route and travel-times routes.
+
+**Schemas are the compatibility surface.** Every response body is validated
+against the named schemas in `components.schemas` before it is sent — the
+server cannot emit a shape that violates its own doc. The projected entity
+schemas are `ApiLine`, `ApiNetwork`, `ApiStation`, `ApiStop`, `ApiPattern`,
+`ApiSegment`, `ApiTransfer`, `ApiTimetable`, `ApiStationDetail`, `ApiFareMatrix`
+/ `ApiFareRow`, `ApiStopGraph`, `ApiRoutePlan`, `ApiTravelTimes`,
+`ApiNearestStations`, plus list wrappers (`ApiLineList`, …) and `ApiError`.
+Fields whose value may be absent on the wire are optional keys (`color?`,
+`location?`, …); `null` is used only where a value is *expected but unknown*
+(e.g. `fare`, `within`).
+
+Interactive OpenAPI docs are served at `/swagger` (JSON at `/swagger/json`).
+The document is exported to `dist/openapi.json` on every release with all
+`$ref`s normalized to `#/components/schemas/<name>` pointers — this is the
+artifact consumers codegen from (`openapi-typescript`, `zod-openapi`, …).
+`bun run openapi --check` fails CI when the committed document has drifted
+from the running app.
 
 ## Typed client
 
