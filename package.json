@@ -18,6 +18,7 @@
     "data:verify": "bun run scripts/verify-data.ts",
     "openapi": "bun run scripts/export-openapi.ts",
     "json-schemas": "bun run scripts/export-json-schemas.ts",
+    "client:schemas": "bun run scripts/generate-client-schemas.ts",
     "i18n": "bun run scripts/manage-messages.ts",
     "i18n:fix": "bun run scripts/manage-messages.ts --fix",
     "api": "bun run --cwd packages/core api",

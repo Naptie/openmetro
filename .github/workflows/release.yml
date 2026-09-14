@@ -93,6 +93,7 @@ jobs:
           OPENAPI_SHA=$(sha256sum dist/openapi.json | awk '{print $1}')
           CLIENT_SHA=$(
             cat dist/client/package.json dist/client/index.d.ts dist/client/index.js \
+              dist/client/schemas.d.ts dist/client/schemas.js \
               dist/client/README.md \
               | sha256sum | awk '{print $1}'
           )

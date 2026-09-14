@@ -307,6 +307,36 @@ import type { ApiSuccess, Client } from "openmetro-client";
 type Networks = ApiSuccess<Client["api"]["networks"]["get"]>; // { networks: ApiNetwork[] }
 ```
 
+### Runtime validation schemas (`openmetro-client/schemas`)
+
+The same package ships zod schemas for every documented response shape via the
+`./schemas` subpath. They are **generated** from the wire schemas in
+`packages/core/src/api/schema.ts` — the exact shapes the server validates its
+responses against and `openapi.json` documents — so a runtime check here is the
+single source of truth, not a hand-written revalidation layer:
+
+```bash
+npm install openmetro-client zod  # zod is an optional peer, only needed for ./schemas
+```
+
+```ts
+import { apiRoutePlanSchema } from "openmetro-client/schemas";
+
+const { data: plan } = await metro.api
+  .networks({ id: "cn-bj" })
+  .route.get({ query: { from: "cn-bj-pingguoyuan", to: "cn-bj-xizhimen" } });
+
+const result = apiRoutePlanSchema.safeParse(plan);
+if (!result.success) {
+  // result.error — typed validation issues, walkable like zod errors
+}
+```
+
+Every schema is also reachable through the `apiSchemas` map keyed by the wire
+name it documents (`apiSchemas.ApiLine`, `apiSchemas.ApiRoutePlan`, …). The main
+entry (`import "openmetro-client"`) does **not** import zod, so it stays
+installable without it.
+
 ## Releases
 
 Pushes to `main` that touch release inputs (`data/`, `packages/core`,
