@@ -496,6 +496,7 @@ export function normalize(input: GzRawInput): GzCanonical {
     network: {
       id: NETWORK_ID,
       name: '广州地铁',
+      names: { zh: '广州地铁', en: 'Guangzhou Metro' },
       city: {
         id: 'CN-4401',
         name: { zh: '广州', en: 'Guangzhou' },

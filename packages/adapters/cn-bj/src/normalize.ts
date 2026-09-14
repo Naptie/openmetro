@@ -309,6 +309,7 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
     network: {
       id: NETWORK_ID,
       name: '北京地铁',
+      names: { zh: '北京地铁', en: 'Beijing Subway' },
       city: {
         id: 'CN-11',
         name: { zh: '北京', en: 'Beijing' },

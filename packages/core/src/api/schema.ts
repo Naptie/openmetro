@@ -321,12 +321,12 @@ export const ApiRoutingDefaults = t.Object(
   { $id: 'ApiRoutingDefaults' }
 );
 
-/** One network's metadata. `name_en` is absent when the source has no English name. */
+/** One network's metadata. `name` is the primary (Chinese) name; `names` always carries zh + en. */
 export const ApiNetwork = t.Object(
   {
     id: t.String(),
     name: t.String(),
-    name_en: t.Optional(t.String()),
+    names: t.Ref(ApiNames),
     city: t.Ref(ApiCity),
     country_code: t.String(),
     currency: t.String(),

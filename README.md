@@ -70,6 +70,8 @@ City metadata (multilingual name, unique ID, currency, timezone) lives in
 
 ```json
 {
+  "name": "北京地铁",
+  "names": { "zh": "北京地铁", "en": "Beijing Subway" },
   "city": {
     "id": "CN-11",
     "name": { "zh": "北京", "en": "Beijing" },

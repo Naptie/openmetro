@@ -8,6 +8,7 @@
  *
  * Usage: `bun run scripts/export-json-schemas.ts [--out <dir>]`
  */
+import { spawnSync } from 'node:child_process';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { JSONSchema } from 'effect';
@@ -47,6 +48,15 @@ async function main(): Promise<void> {
     const file = join(outDir, `${name}.schema.json`);
     await writeFile(file, `${JSON.stringify(json, null, 2)}\n`, 'utf-8');
     console.log(`wrote ${file}`);
+  }
+
+  // Keep published schemas Biome-clean so `bun run lint` stays green.
+  const fmt = spawnSync('bunx', ['biome', 'format', '--write', outDir], {
+    stdio: 'inherit',
+    shell: process.platform === 'win32'
+  });
+  if (fmt.status !== 0) {
+    throw new Error(`biome format failed (exit ${fmt.status})`);
   }
 }
 

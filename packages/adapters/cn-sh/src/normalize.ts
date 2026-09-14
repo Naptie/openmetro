@@ -571,6 +571,7 @@ export function normalize(input: ShRawInput): ShCanonical {
     network: {
       id: NETWORK_ID,
       name: '上海地铁',
+      names: { zh: '上海地铁', en: 'Shanghai Metro' },
       city: {
         id: 'CN-31',
         name: { zh: '上海', en: 'Shanghai' },

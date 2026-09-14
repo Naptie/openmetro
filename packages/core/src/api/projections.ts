@@ -40,7 +40,7 @@ export function projectNetwork(n: NetworkEncoded): Static<typeof ApiNetwork> {
   return {
     id: n.id,
     name: n.name,
-    name_en: n.name_en,
+    names: n.names,
     // Effect tuples are readonly; the wire declares a plain mutable pair.
     city: {
       ...n.city,

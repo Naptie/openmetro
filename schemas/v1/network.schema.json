@@ -4,6 +4,7 @@
   "required": [
     "id",
     "name",
+    "names",
     "city",
     "country_code",
     "currency",
@@ -21,8 +22,18 @@
     "name": {
       "type": "string"
     },
-    "name_en": {
-      "type": "string"
+    "names": {
+      "type": "object",
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     },
     "city": {
       "type": "object",

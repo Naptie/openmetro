@@ -1,6 +1,7 @@
 import { Schema } from 'effect';
 import { City } from './city.js';
 import { Crs } from './geometry.js';
+import { MultilingualName } from './names.js';
 import { Source } from './provenance.js';
 
 export const DefaultUnits = Schema.Struct({
@@ -39,8 +40,10 @@ export type RoutingDefaults = Schema.Schema.Type<typeof RoutingDefaults>;
 
 export const Network = Schema.Struct({
   id: Schema.String,
+  /** Primary (Chinese) name for consumers that skip localization. */
   name: Schema.String,
-  name_en: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  /** Hand-maintained official network names (e.g. 北京地铁 / Beijing Subway). */
+  names: MultilingualName,
   city: City,
   country_code: Schema.String,
   currency: Schema.String,

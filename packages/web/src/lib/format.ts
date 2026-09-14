@@ -19,18 +19,14 @@ export function localizedName(
   return names?.en ?? fallback;
 }
 
-/** English display name for a network (falls back to "<City> Metro"). */
-export function networkEnName(meta: {
-  name: string;
-  name_en?: string;
-  city: { name: { en: string } };
-}): string {
-  return meta.name_en ?? `${meta.city.name.en} Metro`;
+/** English display name for a network. */
+export function networkEnName(meta: { names: { en: string } }): string {
+  return meta.names.en;
 }
 
 /** Localized network name. */
 export function networkName(
-  meta: { name: string; name_en?: string; city: { name: { zh: string; en: string } } },
+  meta: { name: string; names: { zh: string; en: string } },
   locale: string
 ): string {
   if (locale === 'zh') return meta.name;
