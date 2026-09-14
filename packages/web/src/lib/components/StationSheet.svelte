@@ -321,7 +321,7 @@
                       {#if row.isLoop && row.direction}
                         <span class="font-normal text-muted-foreground">
                           ·
-                          {t.station_direction({ name: row.direction.main })}{row.direction.qualifier}
+                          {row.direction.main}{row.direction.qualifier}
                         </span>
                       {:else if row.destination}
                         <span class="font-normal text-muted-foreground">→ {row.destination}</span>
