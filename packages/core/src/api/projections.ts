@@ -36,7 +36,7 @@ import type {
  * error here means the projection drifted from the documented wire shape.
  */
 
-export function projectNetwork(n: NetworkEncoded): Static<typeof ApiNetwork> {
+export function projectNetwork(n: NetworkEncoded, generatedAt?: string): Static<typeof ApiNetwork> {
   return {
     id: n.id,
     name: n.name,
@@ -53,7 +53,8 @@ export function projectNetwork(n: NetworkEncoded): Static<typeof ApiNetwork> {
     timezone: n.timezone,
     coordinate_system: n.coordinate_system,
     default_units: n.default_units,
-    routing: n.routing
+    routing: n.routing,
+    ...(generatedAt ? { synced_at: generatedAt } : {})
   };
 }
 

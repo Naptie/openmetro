@@ -336,7 +336,9 @@ export const ApiNetwork = t.Object(
       { distance: t.String(), time: t.String(), speed: t.String() },
       { $id: 'ApiDefaultUnits' }
     ),
-    routing: t.Ref(ApiRoutingDefaults)
+    routing: t.Ref(ApiRoutingDefaults),
+    /** Last sync time (max file `generated_at`); detail route only. */
+    synced_at: t.Optional(t.String())
   },
   { $id: 'ApiNetwork' }
 );
@@ -389,7 +391,11 @@ export const ApiRideLeg = t.Object(
     from_station_id: t.String(),
     to_station_id: t.String(),
     seconds: t.Number(),
-    station_ids: t.Optional(t.Array(t.String()))
+    station_ids: t.Optional(t.Array(t.String())),
+    // Headsign comes from published timetables; absent on loop lines.
+    pattern_id: t.Optional(t.String()),
+    headsign_station_id: t.Optional(t.String()),
+    headsign_names: t.Optional(t.Ref(ApiNames))
   },
   { $id: 'ApiRideLeg' }
 );
@@ -402,7 +408,9 @@ export const ApiTransferLeg = t.Object(
     to_stop_id: t.String(),
     from_station_id: t.String(),
     to_station_id: t.String(),
-    seconds: t.Number()
+    seconds: t.Number(),
+    /** Same-station direction change when the boarding service cannot ride through. */
+    same_line_direction_change: t.Optional(t.Boolean())
   },
   { $id: 'ApiTransferLeg' }
 );

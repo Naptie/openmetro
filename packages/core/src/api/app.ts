@@ -10,6 +10,7 @@ import { planRoute } from '../graph/route.js';
 import { buildSpatialIndex, type SpatialIndex } from '../graph/spatial.js';
 import type { FareMatrixEncoded, StationEncoded } from '../schema/index.js';
 import { statusForRecord } from '../timetable/status.js';
+import { enrichRoutePlan } from './headsigns.js';
 import {
   projectFareMatrix,
   projectLine,
@@ -228,7 +229,11 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
       .get(
         '/api/networks/:id',
         ({ params, set }) =>
-          withNetwork<Static<typeof ApiNetwork>>(params.id, (d) => projectNetwork(d.network), set),
+          withNetwork<Static<typeof ApiNetwork>>(
+            params.id,
+            (d) => projectNetwork(d.network, d.generated_at),
+            set
+          ),
         {
           params: NetworkParams,
           detail: { tags: ['Networks'], summary: "Get one network's metadata" },
@@ -472,8 +477,9 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
                 set.status = 404;
                 return { error: 'no route found' };
               }
+              const enriched = enrichRoutePlan(d, plan);
               return {
-                ...plan,
+                ...enriched,
                 fare: d.fares ? lookupFare(d.fares, from, to) : null,
                 currency: d.fares?.currency ?? null
               };

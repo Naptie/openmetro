@@ -65,7 +65,7 @@ export const apiCitySchema = z.object({ "id": z.string(), "name": apiNamesSchema
 
 export const apiRoutingDefaultsSchema = z.object({ "weight": z.enum(["time", "distance"]), "default_transfer_seconds": z.number(), "max_transfer_seconds": z.number().optional() });
 
-export const apiNetworkSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "city": apiCitySchema, "country_code": z.string(), "currency": z.string(), "timezone": z.string(), "coordinate_system": z.enum(["wgs84", "gcj02", "bd09", "schematic", "none"]), "default_units": z.object({ "distance": z.string(), "time": z.string(), "speed": z.string() }), "routing": apiRoutingDefaultsSchema });
+export const apiNetworkSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "city": apiCitySchema, "country_code": z.string(), "currency": z.string(), "timezone": z.string(), "coordinate_system": z.enum(["wgs84", "gcj02", "bd09", "schematic", "none"]), "default_units": z.object({ "distance": z.string(), "time": z.string(), "speed": z.string() }), "routing": apiRoutingDefaultsSchema, "synced_at": z.string().optional() });
 
 export const apiNetworkListSchema = z.object({ "networks": z.array(apiNetworkSchema) });
 
@@ -75,9 +75,9 @@ export const apiStopEdgeSchema = z.object({ "from": z.string(), "to": z.string()
 
 export const apiStopGraphSchema = z.object({ "network_id": z.string(), "weight": z.enum(["seconds", "km"]), "routing": apiRoutingDefaultsSchema, "nodes": z.array(apiStopNodeSchema), "edges": z.array(apiStopEdgeSchema) });
 
-export const apiRideLegSchema = z.object({ "kind": z.literal("ride"), "line_id": z.string().optional(), "from_stop_id": z.string(), "to_stop_id": z.string(), "from_station_id": z.string(), "to_station_id": z.string(), "seconds": z.number(), "station_ids": z.array(z.string()).optional() });
+export const apiRideLegSchema = z.object({ "kind": z.literal("ride"), "line_id": z.string().optional(), "from_stop_id": z.string(), "to_stop_id": z.string(), "from_station_id": z.string(), "to_station_id": z.string(), "seconds": z.number(), "station_ids": z.array(z.string()).optional(), "pattern_id": z.string().optional(), "headsign_station_id": z.string().optional(), "headsign_names": apiNamesSchema.optional() });
 
-export const apiTransferLegSchema = z.object({ "kind": z.literal("transfer"), "line_id": z.string().optional(), "from_stop_id": z.string(), "to_stop_id": z.string(), "from_station_id": z.string(), "to_station_id": z.string(), "seconds": z.number() });
+export const apiTransferLegSchema = z.object({ "kind": z.literal("transfer"), "line_id": z.string().optional(), "from_stop_id": z.string(), "to_stop_id": z.string(), "from_station_id": z.string(), "to_station_id": z.string(), "seconds": z.number(), "same_line_direction_change": z.boolean().optional() });
 
 export const apiRouteLegSchema = z.discriminatedUnion("kind", [apiRideLegSchema, apiTransferLegSchema]);
 

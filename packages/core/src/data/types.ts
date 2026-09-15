@@ -22,6 +22,8 @@ export interface NetworkData {
   timetables: TimetableEncoded[];
   /** Origin-destination fare matrix; absent when the network has no fares. */
   fares: FareMatrixEncoded | undefined;
+  /** Latest `generated_at` stamp among the network's canonical files. */
+  generated_at: string;
 }
 
 /**

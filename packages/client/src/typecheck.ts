@@ -50,6 +50,19 @@ const transferLeg: Extract<ApiRoutePlan['legs'][number], { kind: 'transfer' }> =
   to_station_id: 'y',
   seconds: 90
 };
+const rideHeadsign: Extract<ApiRoutePlan['legs'][number], { kind: 'ride' }>['headsign_station_id'] =
+  'cn-gz-airport-n-t2';
+const rideHeadsignNames: Extract<ApiRoutePlan['legs'][number], { kind: 'ride' }>['headsign_names'] =
+  {
+    zh: '机场北（T2）',
+    en: 'Airport N.(T2)'
+  };
+const ridePattern: Extract<ApiRoutePlan['legs'][number], { kind: 'ride' }>['pattern_id'] =
+  'cn-gz-line-3-pattern-0031';
+const directionChange: Extract<
+  ApiRoutePlan['legs'][number],
+  { kind: 'transfer' }
+>['same_line_direction_change'] = true;
 const totalSeconds: ApiRoutePlan['total_seconds'] = 300;
 const fare: ApiRoutePlan['fare'] = 5;
 const noFare: ApiRoutePlan['fare'] = null;
@@ -98,6 +111,10 @@ async function main() {
     interchange,
     rideLeg,
     transferLeg,
+    rideHeadsign,
+    rideHeadsignNames,
+    ridePattern,
+    directionChange,
     totalSeconds,
     fare,
     noFare

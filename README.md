@@ -215,7 +215,10 @@ every dataset and every derived artifact is reachable.
 
 - `GET /api/health` — liveness probe
 - `GET /api/networks` — list available networks (`cn-bj`, `cn-sh`, `cn-gz`) with metadata
-- `GET /api/networks/:id` — one network's metadata (city, currency, timezone, routing defaults)
+- `GET /api/networks/:id` — one network's metadata (city, currency, timezone,
+  routing defaults) plus `synced_at`, when the canonical data was last
+  synchronized (max `generated_at` across its files; only filled by the detail
+  route — the list route does not load full data)
 - `GET /api/networks/:id/lines` — every line carries `short_name`, the compact
   display code used for map-style badges (`1`, `S1`, `APM`, `广惠`). It is
   **mandatory**: when the operator publishes no numeric code, the official
@@ -231,7 +234,16 @@ every dataset and every derived artifact is reachable.
 - `GET /api/networks/:id/fares` — symmetric origin-destination fare matrix (`?from=<stationId>` for one row)
 - `GET /api/networks/:id/nearest?lon=&lat=&k=` — nearest stations to an arbitrary coordinate
 - `GET /api/networks/:id/graph?weight=time|distance` — assembled **stop graph** (nodes + ride/transfer edges); the index artifact
-- `GET /api/networks/:id/route?from=<stationId>&to=<stationId>&weight=time|distance` — legs with line + transfer breakdown + fare
+- `GET /api/networks/:id/route?from=<stationId>&to=<stationId>&weight=time|distance` — legs with line + transfer breakdown + fare.
+  Ride legs carry **service-aware fields**: `pattern_id` (the route alignment
+  the leg rides; on shared trunks the primary pattern), and a headsign —
+  `headsign_station_id` + `headsign_names` — which is the destination the
+  operator's published timetables give for the train you board at the leg's
+  first stop (absent on loop lines). Legs are **split at junctions** where the
+  boarding service cannot carry them through: a same-station transfer with
+  `same_line_direction_change: true` separates the two services (e.g. Line 11
+  花桥 → 嘉定北 becomes "ride to 嘉定新城 toward 迪士尼, direction change, ride
+  toward 嘉定北" — there is no through train)
 - `GET /api/networks/:id/travel-times?from=<stationId>&within=<seconds>&weight=time` — isochrone: seconds from one station to every other
 
 Routing endpoints default `weight` to the network's `routing.weight`. CORS is

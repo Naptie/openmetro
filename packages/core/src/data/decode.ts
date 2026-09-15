@@ -56,6 +56,27 @@ export function decodeNetworkData(raw: RawNetworkFiles): Effect.Effect<NetworkDa
   const optional = (schema: Schema.Schema<any>, value: unknown) =>
     value == null ? Effect.succeed([]) : records(schema, value);
 
+  // Max `generated_at` across canonical file wrappers (ISO-8601 sorts lexicographically).
+  const stampOf = (value: unknown): string | undefined =>
+    value != null &&
+    typeof value === 'object' &&
+    typeof (value as { generated_at?: unknown }).generated_at === 'string'
+      ? ((value as { generated_at: string }).generated_at as string)
+      : undefined;
+  const generatedAt = [
+    raw.lines,
+    raw.stations,
+    raw.stops,
+    raw.patterns,
+    raw.segments,
+    raw.transfers,
+    raw.timetables,
+    raw.fares
+  ]
+    .map(stampOf)
+    .filter((s): s is string => s != null)
+    .reduce((a, b) => (a > b ? a : b), '');
+
   return Effect.all(
     {
       network: decodeNetworkMeta(raw.network),
@@ -69,5 +90,5 @@ export function decodeNetworkData(raw: RawNetworkFiles): Effect.Effect<NetworkDa
       fares: raw.fares == null ? Effect.succeed(undefined) : decodeFareMatrix(raw.fares)
     },
     { concurrency: 'unbounded' }
-  ) as Effect.Effect<NetworkData, unknown>;
+  ).pipe(Effect.map((data) => ({ ...data, generated_at: generatedAt }) as NetworkData));
 }
