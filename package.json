@@ -1,0 +1,36 @@
+{
+  "name": "openmetro-client",
+  "version": "0.1.0",
+  "description": "Typed Eden Treaty client for the Open Metro API",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./schemas": {
+      "types": "./schemas.d.ts",
+      "import": "./schemas.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "schemas.js",
+    "schemas.d.ts",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@elysia/eden": ">=1.0.0",
+    "elysia": ">=1.0.0",
+    "effect": ">=3.0.0",
+    "zod": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  }
+}
