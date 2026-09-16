@@ -130,7 +130,7 @@ export async function fillCoordinates<T extends StationLike>(
     extraCities?: string[];
     stops?: StopRef[];
     lines?: LineRef[];
-    /** Official/operator coords keyed by Chinese station name. */
+    /** Official/operator coords keyed by station id (preferred) or Chinese name. */
     officialLocations?: Map<string, GeoResult> | Record<string, GeoResult>;
     /** Hand-verified coords that override any geocoder; highest priority. */
     knownLocations?: KnownLocation[];
@@ -222,11 +222,22 @@ export async function fillCoordinates<T extends StationLike>(
   const indices = await Promise.all(
     cities.map(async (c) => indexSubwayStations(await fetchSubway(c)))
   );
+  // Count stations sharing a Chinese name so homonyms that were split into
+  // distinct physical stations (and carry id-keyed official coords) are not
+  // collapsed again by a bare-name AMap hit.
+  const nameCounts = new Map<string, number>();
+  for (const st of stations) {
+    const n = stationName(st);
+    if (n) nameCounts.set(n, (nameCounts.get(n) ?? 0) + 1);
+  }
   for (const st of stations) {
     if (placed.has(st.id)) continue; // known locations already placed in step 0
     if (st.location) continue; // pre-seeded: validated/kept as 'source' in the drop loop
     const name = stationName(st);
     if (!name) continue;
+    // Split same-name platforms: prefer station-id official coords over the
+    // first AMap bare-name hit (e.g. 浦东南路 Line 2 vs Line 14).
+    if (official.has(st.id) && (nameCounts.get(name) ?? 0) > 1) continue;
     for (const idx of indices) {
       const hit = findSubwayStation(idx, name);
       if (hit) {
@@ -245,8 +256,7 @@ export async function fillCoordinates<T extends StationLike>(
   const officialCandidates = new Map<string, GeoResult>();
   for (const st of stations) {
     const name = stationName(st);
-    if (!name) continue;
-    const off = official.get(name);
+    const off = official.get(st.id) ?? (name ? official.get(name) : undefined);
     if (!off) continue;
     if (!isWithinCityBbox(opts.city, off.lon, off.lat)) continue;
     if (isCoarseCoordinate(off.lon, off.lat)) continue;

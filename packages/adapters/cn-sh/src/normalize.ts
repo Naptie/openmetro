@@ -27,7 +27,8 @@ export interface ShRawInput {
   fltimeRows: Record<string, FlTimeRow[]>;
   /** line_no -> human-readable branch note parsed from the timetable page. */
   lineNotes?: Record<string, string | undefined>;
-  nameToCode: Record<string, string>;
+  /** Chinese title → every distinct official map code for that title. */
+  nameToCodes: Record<string, string[]>;
 }
 
 export interface ShStationInfo {
@@ -55,7 +56,10 @@ export interface ShCanonical {
   transfers: TransferEncoded[];
   timetables: TimetableEncoded[];
   /**
-   * Official stationInfo coords as GCJ-02, keyed by Chinese name.
+   * Official stationInfo coords as GCJ-02, keyed by **station id** (not
+   * Chinese name). Same-name platforms that are not one physical station
+   * (e.g. 浦东南路 Line 2 vs Line 14) each need their own coordinate;
+   * name-keyed lookup would put both stops on one platform.
    * Prefers `gao_lng`/`gao_lat` (already GCJ-02); falls back to converting
    * the BD-09 `longitude`/`latitude` pair.
    */
@@ -64,6 +68,17 @@ export interface ShCanonical {
 
 const NETWORK_ID = 'cn-sh';
 const DEFAULT_SEGMENT_SECONDS = 120;
+
+/**
+ * Same public Chinese name, distinct official map codes, NOT a passenger
+ * transfer. Line 2's 浦东南路 (formerly 东昌路) and Line 14's 浦东南路 sit
+ * ~680 m apart with no connecting passage; merging them invents a fake
+ * interchange and bends Line 14 geometry toward the Line 2 platform.
+ *
+ * Other multi-code names in Shanghai (国家会展中心, 虹桥2号航站楼,
+ * 浦东1号2号航站楼) are real distant transfers and stay merged.
+ */
+const SAME_NAME_SEPARATE = new Set(['浦东南路']);
 
 const isUsable = (v: number | undefined): v is number => Number.isFinite(v) && v !== 0;
 
@@ -215,7 +230,7 @@ function reconstructPatterns(
   flatNames: string[],
   note: string | undefined,
   stopIdByName: Map<string, string>,
-  xyByName: Map<string, XY>
+  getXY: (name: string) => XY | undefined
 ): PatternEncoded[] {
   const stopsFor = (names: string[]): string[] =>
     names.map((n) => stopIdByName.get(n)).filter((id): id is string => id !== undefined);
@@ -242,10 +257,10 @@ function reconstructPatterns(
 
   const { main, branch } = parsed;
   const [P, Q] = branch;
-  const axisA = xyByName.get(main[0]);
-  const axisB = xyByName.get(main[1]);
-  const pXY = xyByName.get(P);
-  const qXY = xyByName.get(Q);
+  const axisA = getXY(main[0]);
+  const axisB = getXY(main[1]);
+  const pXY = getXY(P);
+  const qXY = getXY(Q);
   if (!axisA || !axisB || !pXY || !qXY) return single();
 
   // The junction lies on the main axis; the branch terminus is off to one side.
@@ -346,32 +361,142 @@ export function normalize(input: ShRawInput): ShCanonical {
 
   // station_code -> canonical station id (from station info).
   const codeToStationId = new Map<string, string>();
+  /** `name` or `name|lineNo` → schematic XY (split stations need per-line). */
   const xyByName = new Map<string, XY>();
-  // Official stationInfo coords: `gao_*` is GCJ-02; `longitude`/`latitude` is BD-09.
+  // Official stationInfo coords keyed by station id (see ShCanonical).
   const officialLocations = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>();
+  /** Chinese name → station id for every physical station under that name. */
+  const stationIdsByName = new Map<string, string[]>();
+  /** `name|lineNo` → station id (authoritative for stop assignment). */
+  const stationIdByNameLine = new Map<string, string>();
+  /** Names that were split into multiple physical stations. */
+  const splitNames = new Set<string>();
+
+  type Cluster = {
+    name: string;
+    nameEn: string;
+    codes: Set<string>;
+    infos: ShStationInfo[];
+  };
+
+  const clustersByName = new Map<string, Cluster[]>();
   for (const infos of Object.values(input.stations)) {
     for (const info of infos) {
       const name = info.name_cn.trim();
-      const id = `${NETWORK_ID}-${slug(info.name_en || name)}`;
-      if (!stationMap.has(name)) {
-        stationMap.set(name, {
-          id,
+      if (!name) continue;
+      const list = clustersByName.get(name) ?? [];
+      const existing = list.find((c) => c.codes.has(info.station_code));
+      if (existing) {
+        existing.infos.push(info);
+      } else {
+        list.push({
           name,
-          names: { zh: name, en: info.name_en },
-          status: 'operating',
-          source_ids: [{ source: 'shmetro-stationInfo', id: info.station_code }]
+          nameEn: info.name_en,
+          codes: new Set([info.station_code]),
+          infos: [info]
         });
       }
-      if (!officialLocations.has(name)) {
-        const loc = officialGcj02(info);
-        if (loc) officialLocations.set(name, loc);
-      }
-      if (!xyByName.has(name) && Number.isFinite(info.x) && Number.isFinite(info.y)) {
-        xyByName.set(name, { x: info.x, y: info.y });
-      }
-      codeToStationId.set(info.station_code, id);
+      clustersByName.set(name, list);
     }
   }
+
+  for (const [name, rawClusters] of clustersByName) {
+    // One map code = one physical station. Multiple codes stay merged unless
+    // the name is a known same-name non-transfer (see SAME_NAME_SEPARATE).
+    const clusters =
+      rawClusters.length > 1 && SAME_NAME_SEPARATE.has(name)
+        ? rawClusters
+        : [
+            {
+              name,
+              nameEn: rawClusters[0]?.nameEn ?? name,
+              codes: new Set(rawClusters.flatMap((c) => [...c.codes])),
+              infos: rawClusters.flatMap((c) => c.infos)
+            }
+          ];
+    if (clusters.length > 1) splitNames.add(name);
+
+    // Lowest line number keeps the unsuffixed id so existing stop ids
+    // (`…-2`, `…-14`) and consumer references stay stable for the primary.
+    const ordered = [...clusters].sort((a, b) => {
+      const la = Math.min(...a.infos.map((i) => Number(i.lines.split(',')[0]) || 99));
+      const lb = Math.min(...b.infos.map((i) => Number(i.lines.split(',')[0]) || 99));
+      return la - lb || a.infos[0].station_code.localeCompare(b.infos[0].station_code);
+    });
+
+    const ids: string[] = [];
+    ordered.forEach((cluster, idx) => {
+      const sample = cluster.infos[0];
+      // Official name_en sometimes carries a trailing space (e.g. Line 2 NECC).
+      const nameEn = (sample.name_en || name).trim();
+      const base = slug(nameEn || name);
+      const lowestLine = [...cluster.infos]
+        .flatMap((i) =>
+          i.lines
+            .split(',')
+            .map((s) => s.trim())
+            .filter(Boolean)
+        )
+        .sort((a, b) => Number(a) - Number(b))[0];
+      const id =
+        clusters.length === 1
+          ? `${NETWORK_ID}-${base}`
+          : idx === 0
+            ? `${NETWORK_ID}-${base}`
+            : `${NETWORK_ID}-${base}-${lowestLine}`;
+      ids.push(id);
+
+      const sourceIds = [...cluster.codes].map((code) => ({
+        source: 'shmetro-stationInfo',
+        id: code
+      }));
+      stationMap.set(id, {
+        id,
+        name,
+        names: { zh: name, en: nameEn },
+        status: 'operating',
+        source_ids: sourceIds,
+        ...(clusters.length > 1
+          ? { extras: { same_name_split: true, map_codes: [...cluster.codes] } }
+          : {})
+      });
+
+      const loc = officialGcj02(sample);
+      if (loc) officialLocations.set(id, loc);
+
+      if (Number.isFinite(sample.x) && Number.isFinite(sample.y)) {
+        const xy = { x: sample.x, y: sample.y };
+        if (clusters.length > 1) {
+          for (const info of cluster.infos) {
+            for (const ln of info.lines
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean)) {
+              xyByName.set(`${name}|${ln}`, xy);
+            }
+          }
+        } else if (!xyByName.has(name)) {
+          xyByName.set(name, xy);
+        }
+      }
+
+      for (const code of cluster.codes) codeToStationId.set(code, id);
+      for (const info of cluster.infos) {
+        for (const ln of info.lines
+          .split(',')
+          .map((s) => s.trim())
+          .filter(Boolean)) {
+          stationIdByNameLine.set(`${name}|${ln}`, id);
+        }
+      }
+    });
+    stationIdsByName.set(name, ids);
+  }
+
+  const resolveStation = (name: string, lineNo: string): StationEncoded | undefined => {
+    const id = stationIdByNameLine.get(`${name}|${lineNo}`) ?? stationIdsByName.get(name)?.[0];
+    return id ? stationMap.get(id) : undefined;
+  };
 
   // Detect loop lines from timetable direction labels.
   const loopLines = new Set<string>();
@@ -411,9 +536,15 @@ export function normalize(input: ShRawInput): ShCanonical {
     const stopIdByName = new Map<string, string>();
 
     unique.forEach((s, idx) => {
-      const station = stationMap.get(s.name);
+      const station = resolveStation(s.name, lineNo);
       if (!station) return;
-      const stopId = `${station.id}-${lineNo}`;
+      // Split names: the primary cluster keeps `id-lineNo`; a secondary whose
+      // id already ends with the line number (…-14) uses the id itself so we
+      // do not produce `…-14-14`.
+      const stopId =
+        splitNames.has(s.name) && station.id.endsWith(`-${lineNo}`)
+          ? station.id
+          : `${station.id}-${lineNo}`;
       stopIdByName.set(s.name, stopId);
       lineStops.push({
         id: stopId,
@@ -425,13 +556,14 @@ export function normalize(input: ShRawInput): ShCanonical {
       });
     });
     const flatNames = unique.map((s) => s.name).filter((n) => stopIdByName.has(n));
+    const getXY = (n: string) => xyByName.get(`${n}|${lineNo}`) ?? xyByName.get(n);
     const linePatterns = reconstructPatterns(
       lineId,
       lineNo,
       flatNames,
       input.lineNotes?.[lineNo],
       stopIdByName,
-      xyByName
+      getXY
     );
     patterns.push(...linePatterns);
 
@@ -477,11 +609,13 @@ export function normalize(input: ShRawInput): ShCanonical {
     const lineId = `${NETWORK_ID}-line-${lineNo}`;
     const lineStops = stopsByLine.get(lineId) ?? [];
     const linePatterns = patternsByLine.get(lineId) ?? [];
-    const stopByName = (name: string) =>
-      lineStops.find((s) => s.station_id === stationMap.get(name)?.id);
+    const stopByName = (name: string) => {
+      const station = resolveStation(name, lineNo);
+      return station ? lineStops.find((s) => s.station_id === station.id) : undefined;
+    };
 
     for (const row of rows) {
-      const station = stationMap.get(row.stationName.trim());
+      const station = resolveStation(row.stationName.trim(), lineNo);
       if (!station) continue;
       const stop = lineStops.find((s) => s.station_id === station.id);
       if (!stop) continue;

@@ -96,7 +96,7 @@ async function fetchStationCode(code: string, func: string): Promise<unknown[]> 
 /** Fetch Shanghai per-line station sequences and station info. */
 export async function fetchShanghai(
   lineNos: readonly string[],
-  nameToCode: Record<string, string>,
+  nameToCodes: Record<string, string[]>,
   opts: { delayMs?: number; concurrency?: number } = {}
 ): Promise<ShFetchResult> {
   const delayMs = opts.delayMs ?? 200;
@@ -114,8 +114,8 @@ export async function fetchShanghai(
     await sleep(delayMs);
   }
 
-  // 2) Station info for each unique code.
-  const codes = [...new Set(Object.values(nameToCode))];
+  // 2) Station info for each unique map code (a name may own several).
+  const codes = [...new Set(Object.values(nameToCodes).flat())];
   const stations: Record<string, unknown[]> = {};
   let idx = 0;
   async function worker() {
@@ -141,7 +141,8 @@ interface Mapplic {
 }
 
 export interface ShanghaiSources {
-  nameToCode: Record<string, string>;
+  /** Chinese title → every distinct official map code for that title. */
+  nameToCodes: Record<string, string[]>;
   lines: Record<string, { line_no: number; description: string; desc_en: string; color: string }>;
   lineSequences: Record<string, { code: string; name: string }[]>;
   stations: Record<string, unknown[]>;
@@ -154,9 +155,15 @@ export async function fetchShanghaiSources(): Promise<ShanghaiSources> {
   console.log('  fetch lineInfo (map locations)');
   const lineInfo = await getText(`${BASE}/interface/metromap/metromap.aspx?func=lineInfo`);
   const mapplic = JSON.parse(lineInfo.replace(/^\uFEFF/, '')) as Mapplic;
-  const nameToCode: Record<string, string> = {};
+  // Keep every map code: the same public name can sit on several physical
+  // stations (e.g. 浦东南路 on Line 2 vs Line 14). Overwriting by title
+  // would drop all but the last code and hide the split.
+  const nameToCodes: Record<string, string[]> = {};
   for (const loc of mapplic.levels[0].locations) {
-    if (loc.id.startsWith('ST')) nameToCode[loc.title] = loc.id.slice(2);
+    if (!loc.id.startsWith('ST')) continue;
+    const code = loc.id.slice(2);
+    const list = (nameToCodes[loc.title] ??= []);
+    if (!list.includes(code)) list.push(code);
   }
 
   console.log('  fetch lines (colors)');
@@ -173,7 +180,7 @@ export async function fetchShanghaiSources(): Promise<ShanghaiSources> {
   }
 
   console.log('  fetch line sequences + station info');
-  const { lineSequences, stations } = await fetchShanghai(LINE_NOS, nameToCode, {
+  const { lineSequences, stations } = await fetchShanghai(LINE_NOS, nameToCodes, {
     delayMs: 150,
     concurrency: 3
   });
@@ -193,5 +200,5 @@ export async function fetchShanghaiSources(): Promise<ShanghaiSources> {
     }
   }
 
-  return { nameToCode, lines, lineSequences, stations, fltimeRows, lineNotes };
+  return { nameToCodes, lines, lineSequences, stations, fltimeRows, lineNotes };
 }

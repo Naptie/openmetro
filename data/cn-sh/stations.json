@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-sh",
-  "generated_at": "2026-09-14T18:27:00.454Z",
+  "generated_at": "2026-09-16T07:03:30.593Z",
   "source": [],
   "records": [
     {
@@ -1896,7 +1896,7 @@
       "name": "抚顺路",
       "names": {
         "zh": "抚顺路",
-        "en": "Fushun Road "
+        "en": "Fushun Road"
       },
       "status": "operating",
       "source_ids": [
@@ -2471,7 +2471,7 @@
       "name": "衡山路",
       "names": {
         "zh": "衡山路",
-        "en": "Hengshan Road "
+        "en": "Hengshan Road"
       },
       "status": "operating",
       "source_ids": [
@@ -2659,6 +2659,10 @@
       },
       "status": "operating",
       "source_ids": [
+        {
+          "source": "shmetro-stationInfo",
+          "id": "202-HQHZL2H"
+        },
         {
           "source": "shmetro-stationInfo",
           "id": "4000000000000-HQHZL2H"
@@ -5076,6 +5080,10 @@
       "source_ids": [
         {
           "source": "shmetro-stationInfo",
+          "id": "2-GJHZZX"
+        },
+        {
+          "source": "shmetro-stationInfo",
           "id": "10000-GJHZZX"
         }
       ],
@@ -5484,7 +5492,7 @@
       "name": "平凉路",
       "names": {
         "zh": "平凉路",
-        "en": "Pingliang Road "
+        "en": "Pingliang Road"
       },
       "status": "operating",
       "source_ids": [
@@ -5534,6 +5542,10 @@
       },
       "status": "operating",
       "source_ids": [
+        {
+          "source": "shmetro-stationInfo",
+          "id": "2-PDGJJC"
+        },
         {
           "source": "shmetro-stationInfo",
           "id": "4000000000000-PDGJJC"
@@ -7031,16 +7043,47 @@
       "source_ids": [
         {
           "source": "shmetro-stationInfo",
+          "id": "2-PDNL"
+        }
+      ],
+      "extras": {
+        "same_name_split": true,
+        "map_codes": [
+          "2-PDNL"
+        ],
+        "location_source": "official"
+      },
+      "location": {
+        "lon": 121.515414375127,
+        "lat": 31.2333250506287,
+        "crs": "gcj02"
+      }
+    },
+    {
+      "id": "cn-sh-south-pudong-road-14",
+      "name": "浦东南路",
+      "names": {
+        "zh": "浦东南路",
+        "en": "South Pudong Road"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "shmetro-stationInfo",
           "id": "2000-PDNL"
         }
       ],
-      "location": {
-        "lon": 121.515556,
-        "lat": 31.23327,
-        "crs": "gcj02"
-      },
       "extras": {
-        "location_source": "subway"
+        "same_name_split": true,
+        "map_codes": [
+          "2000-PDNL"
+        ],
+        "location_source": "official"
+      },
+      "location": {
+        "lon": 121.510684966671,
+        "lat": 31.2378913769095,
+        "crs": "gcj02"
       }
     },
     {
@@ -9003,7 +9046,7 @@
       "name": "张华浜",
       "names": {
         "zh": "张华浜",
-        "en": "Zhanghuabang "
+        "en": "Zhanghuabang"
       },
       "status": "operating",
       "source_ids": [

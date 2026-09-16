@@ -21,7 +21,7 @@ export async function runShanghaiNormalize(opts: ShanghaiNormalizeOptions = {}):
   const outDir = join(root, 'data/cn-sh');
 
   const {
-    nameToCode,
+    nameToCodes,
     lines: linesMeta,
     lineSequences,
     stations: stationRecords,
@@ -29,20 +29,18 @@ export async function runShanghaiNormalize(opts: ShanghaiNormalizeOptions = {}):
     lineNotes
   } = await fetchShanghaiSources();
 
-  const stationsByName: Record<string, ShStationInfo[]> = {};
-  for (const infos of Object.values(stationRecords as Record<string, ShStationInfo[]>)) {
-    for (const info of infos) {
-      (stationsByName[info.name_cn] ??= []).push(info);
-    }
+  const stationsByCode: Record<string, ShStationInfo[]> = {};
+  for (const [code, infos] of Object.entries(stationRecords as Record<string, ShStationInfo[]>)) {
+    stationsByCode[code] = infos;
   }
 
   const canonical = normalize({
     lineSequences,
     lines: linesMeta,
-    stations: stationsByName,
+    stations: stationsByCode,
     fltimeRows,
     lineNotes,
-    nameToCode
+    nameToCodes
   });
 
   const lines = await enrichLineNamesFromWikidata(canonical.lines, {
