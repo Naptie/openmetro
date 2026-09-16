@@ -6,7 +6,7 @@ export const SegmentDirection = Schema.Literal('both', 'forward', 'backward');
 export type SegmentDirection = Schema.Schema.Type<typeof SegmentDirection>;
 
 /** How a segment's travel time was obtained. */
-export const TravelTimeSource = Schema.Literal('source', 'last_train', 'estimated');
+export const TravelTimeSource = Schema.Literal('source', 'planner', 'last_train', 'estimated');
 
 export type TravelTimeSource = Schema.Schema.Type<typeof TravelTimeSource>;
 

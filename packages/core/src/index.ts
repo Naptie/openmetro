@@ -7,5 +7,6 @@ export * from './graph/index.js';
 export * from './lines/short-name.js';
 export * from './name-utils.js';
 export * from './schema/index.js';
+export * from './times/index.js';
 export * from './timetable/index.js';
 export * from './wikidata/index.js';

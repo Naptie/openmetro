@@ -41,7 +41,7 @@ export const apiPatternListSchema = z.array(apiPatternSchema);
 
 export const apiSegmentDirectionSchema = z.enum(["both", "forward", "backward"]);
 
-export const apiTravelTimeSourceSchema = z.enum(["source", "last_train", "estimated"]);
+export const apiTravelTimeSourceSchema = z.enum(["source", "planner", "last_train", "estimated"]);
 
 export const apiSegmentSchema = z.object({ "id": z.string(), "line_id": z.string(), "from_stop_id": z.string(), "to_stop_id": z.string(), "from_station_id": z.string(), "to_station_id": z.string(), "direction": z.enum(["both", "forward", "backward"]), "travel_time_seconds": z.number().optional(), "travel_time_source": apiTravelTimeSourceSchema.optional(), "distance_km": z.number().optional() });
 

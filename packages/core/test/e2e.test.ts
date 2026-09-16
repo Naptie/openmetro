@@ -89,12 +89,24 @@ test('Beijing keeps source segment times', async () => {
   assert.ok(src.length > 0);
 });
 
-test('Shanghai and Guangzhou derive segment times from last train', async () => {
-  for (const id of [SHANGHAI, GUANGZHOU]) {
-    const d = await load(id);
-    const derived = d.segments.filter((s) => s.travel_time_source === 'last_train');
-    assert.ok(derived.length > 0, `${id} should have derived segment times`);
-  }
+test('Guangzhou derives segment times from last train', async () => {
+  const d = await load(GUANGZHOU);
+  const derived = d.segments.filter((s) => s.travel_time_source === 'last_train');
+  assert.ok(derived.length > 0, `${GUANGZHOU} should have derived segment times`);
+});
+
+test('Shanghai segments use planner or last-train times', async () => {
+  const d = await load(SHANGHAI);
+  const timed = d.segments.filter(
+    (s) => s.travel_time_source === 'planner' || s.travel_time_source === 'last_train'
+  );
+  assert.ok(timed.length > 0, `${SHANGHAI} should have planner/last_train segment times`);
+});
+
+test('Shanghai transfers carry official walk times', async () => {
+  const d = await load(SHANGHAI);
+  const timed = d.transfers.filter((t) => t.walk_time_seconds != null);
+  assert.ok(timed.length > 0, 'expected harvested Shanghai transfer times');
 });
 
 test('every network has route patterns with consistent references', async () => {

@@ -185,7 +185,7 @@ export const ApiSegmentDirection = t.Union(
 
 /** How a segment's travel time was obtained. */
 export const ApiTravelTimeSource = t.Union(
-  [t.Literal('source'), t.Literal('last_train'), t.Literal('estimated')],
+  [t.Literal('source'), t.Literal('planner'), t.Literal('last_train'), t.Literal('estimated')],
   { $id: 'ApiTravelTimeSource' }
 );
 

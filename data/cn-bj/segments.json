@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-bj",
-  "generated_at": "2026-09-14T18:24:20.028Z",
+  "generated_at": "2026-09-16T14:30:04.743Z",
   "source": [],
   "records": [
     {
@@ -351,14 +351,13 @@
       "from_station_id": "cn-bj-beijingnan-zhan",
       "to_station_id": "cn-bj-jingfengmen",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 143,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150998573",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-14-cn-bj-beijingnan-zhan-down-dest",
-        "cn-bj-cn-bj-line-14-cn-bj-jingfengmen-down-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-beijingnan-zhan-4-cn-bj-majiapu-4",
@@ -654,14 +653,13 @@
       "from_station_id": "cn-bj-caoqiao",
       "to_station_id": "cn-bj-xinfadi",
       "direction": "both",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 214,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150999843",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-19-cn-bj-caoqiao-up-dest",
-        "cn-bj-cn-bj-line-19-cn-bj-xinfadi-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-caoqiao-88-cn-bj-daxing-xincheng-88",
@@ -1971,14 +1969,13 @@
       "from_station_id": "cn-bj-gaoloujin",
       "to_station_id": "cn-bj-huazhuang",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 148,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150996811",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-7-cn-bj-gaoloujin-up-dest",
-        "cn-bj-cn-bj-line-7-cn-bj-huazhuang-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-gaomidian-bei-4-cn-bj-gaomidian-nan-4",
@@ -2261,10 +2258,13 @@
       "from_station_id": "cn-bj-guojia-tushuguan",
       "to_station_id": "cn-bj-baishiqiaonan",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated",
+      "travel_time_seconds": 100,
+      "travel_time_source": "planner",
       "distance_km": 0,
-      "source_id": "150997269"
+      "source_id": "150997269",
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-guomao-1-cn-bj-dawang-lu-1",
@@ -2404,14 +2404,13 @@
       "from_station_id": "cn-bj-heizhuanghu",
       "to_station_id": "cn-bj-wansheng-xi",
       "direction": "both",
-      "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 214,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150996803",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-7-cn-bj-heizhuanghu-up-dest",
-        "cn-bj-cn-bj-line-7-cn-bj-wansheng-xi-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-heping-men-2-cn-bj-xuanwu-men-2",
@@ -2564,14 +2563,13 @@
       "from_station_id": "cn-bj-huangchang",
       "to_station_id": "cn-bj-langxinzhuang",
       "direction": "both",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 161,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150996799",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-7-cn-bj-huangchang-up-dest",
-        "cn-bj-cn-bj-line-7-cn-bj-langxinzhuang-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-huangcun-railway-station-4-cn-bj-yihezhuang-4",
@@ -2646,10 +2644,13 @@
       "from_station_id": "cn-bj-huazhuang",
       "to_station_id": "cn-bj-universal-resort",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated",
+      "travel_time_seconds": 155,
+      "travel_time_source": "planner",
       "distance_km": 0,
-      "source_id": "151019791"
+      "source_id": "151019791",
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-huazhuang-7-cn-bj-universal-resort-7",
@@ -2659,10 +2660,13 @@
       "from_station_id": "cn-bj-huazhuang",
       "to_station_id": "cn-bj-universal-resort",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated",
+      "travel_time_seconds": 155,
+      "travel_time_source": "planner",
       "distance_km": 0,
-      "source_id": "150996813"
+      "source_id": "150996813",
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-hufangqiao-7-cn-bj-zhushikou-7",
@@ -2932,14 +2936,13 @@
       "from_station_id": "cn-bj-jiaohua-chang",
       "to_station_id": "cn-bj-huangchang",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 155,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150996797",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-7-cn-bj-jiaohua-chang-up-dest",
-        "cn-bj-cn-bj-line-7-cn-bj-huangchang-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-jiaomen-dong-10-cn-bj-jiaomen-xi-10",
@@ -3183,14 +3186,13 @@
       "from_station_id": "cn-bj-jinyu-hutong",
       "to_station_id": "cn-bj-wangfujing",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 115,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150997035",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-8-cn-bj-jinyu-hutong-up-dest",
-        "cn-bj-cn-bj-line-8-cn-bj-wangfujing-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-jishuitan-19-cn-bj-ping-anli-19",
@@ -3343,14 +3345,13 @@
       "from_station_id": "cn-bj-langxinzhuang",
       "to_station_id": "cn-bj-heizhuanghu",
       "direction": "both",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 193,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150996801",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-7-cn-bj-langxinzhuang-up-dest",
-        "cn-bj-cn-bj-line-7-cn-bj-heizhuanghu-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-liangma-qiao-10-cn-bj-agricultural-exhibition-center-10",
@@ -3724,10 +3725,13 @@
       "from_station_id": "cn-bj-lucheng",
       "to_station_id": "cn-bj-luyang",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated",
+      "travel_time_seconds": 228,
+      "travel_time_source": "planner",
       "distance_km": 0,
-      "source_id": "150996557"
+      "source_id": "150996557",
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-lujuan-dong-79-cn-bj-taihe-lu-79",
@@ -3997,14 +4001,13 @@
       "from_station_id": "cn-bj-nanluogu-xiang",
       "to_station_id": "cn-bj-zhongguo-meishuguan",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 196,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150997031",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-8-cn-bj-nanluogu-xiang-up-dest",
-        "cn-bj-cn-bj-line-8-cn-bj-zhongguo-meishuguan-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-nanshao-94-cn-bj-beishaowa-94",
@@ -4131,14 +4134,13 @@
       "from_station_id": "cn-bj-ping-anli",
       "to_station_id": "cn-bj-taipingqiao",
       "direction": "both",
-      "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 211,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150999835",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-19-cn-bj-ping-anli-up-dest",
-        "cn-bj-cn-bj-line-19-cn-bj-taipingqiao-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-ping-anli-4-cn-bj-xisi-4",
@@ -4434,14 +4436,13 @@
       "from_station_id": "cn-bj-qunfang",
       "to_station_id": "cn-bj-gaoloujin",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 126,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150996809",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-7-cn-bj-qunfang-up-dest",
-        "cn-bj-cn-bj-line-7-cn-bj-gaoloujin-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-raole-fu-92-cn-bj-magezhuang-92",
@@ -4945,14 +4946,13 @@
       "from_station_id": "cn-bj-sihui-dong",
       "to_station_id": "cn-bj-gaobeidian",
       "direction": "both",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 150,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150995225",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-1-cn-bj-sihui-dong-up-dest",
-        "cn-bj-cn-bj-line-1-cn-bj-gaobeidian-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-sijiqing-qiao-12-cn-bj-landianchang-12",
@@ -5378,14 +5378,13 @@
       "from_station_id": "cn-bj-tu-qiao",
       "to_station_id": "cn-bj-huazhuang",
       "direction": "both",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 190,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "151019789",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-1-cn-bj-tu-qiao-up-dest",
-        "cn-bj-cn-bj-line-1-cn-bj-huazhuang-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-tuanjiehu-10-cn-bj-hujialou-10",
@@ -5603,14 +5602,13 @@
       "from_station_id": "cn-bj-wansheng-dong",
       "to_station_id": "cn-bj-qunfang",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 123,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150996807",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-7-cn-bj-wansheng-dong-up-dest",
-        "cn-bj-cn-bj-line-7-cn-bj-qunfang-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-wansheng-xi-7-cn-bj-wansheng-dong-7",
@@ -5620,14 +5618,13 @@
       "from_station_id": "cn-bj-wansheng-xi",
       "to_station_id": "cn-bj-wansheng-dong",
       "direction": "both",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 174,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150996805",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-7-cn-bj-wansheng-xi-up-dest",
-        "cn-bj-cn-bj-line-7-cn-bj-wansheng-dong-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-wanshou-lu-1-cn-bj-gongzhufen-1",
@@ -6651,14 +6648,13 @@
       "from_station_id": "cn-bj-zhongguo-meishuguan",
       "to_station_id": "cn-bj-jinyu-hutong",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 123,
+      "travel_time_source": "planner",
       "distance_km": 0,
       "source_id": "150997033",
-      "travel_time_derived_from": [
-        "cn-bj-cn-bj-line-8-cn-bj-zhongguo-meishuguan-up-dest",
-        "cn-bj-cn-bj-line-8-cn-bj-jinyu-hutong-up-dest"
-      ]
+      "extras": {
+        "planner_time_source": "bjsubway-searchstartend"
+      }
     },
     {
       "id": "cn-bj-seg-cn-bj-zhoujiazhuang-17-cn-bj-shibalidian-17",

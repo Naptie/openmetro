@@ -1,5 +1,7 @@
 import { join } from 'node:path';
 import {
+  applyHarvestedSegmentTimes,
+  applyHarvestedTransferTimes,
   enrichLineNamesFromWikidata,
   fillCoordinates,
   type LineEncoded,
@@ -8,6 +10,7 @@ import {
 } from '@openmetro/core';
 import { fetchBeijingSources } from './fetch.js';
 import { normalize } from './normalize.js';
+import { collectBeijingPlannerTimes } from './times.js';
 
 /** Beijing has no city-specific station corrections yet. */
 export const transformStations: TransformStations = (stations) => stations;
@@ -15,6 +18,8 @@ export const transformStations: TransformStations = (stations) => stations;
 export interface BeijingNormalizeOptions {
   /** Repository root containing `data/cn-bj`. */
   root?: string;
+  /** Skip live searchstartend harvest (offline / partial rebuilds). */
+  skipPlannerTimes?: boolean;
 }
 
 export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): Promise<void> {
@@ -49,14 +54,35 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
     { network: canonical.network.id, city: '北京' }
   );
 
+  let segments = canonical.segments;
+  let transfers = canonical.transfers;
+  if (!opts.skipPlannerTimes) {
+    console.log('  harvest searchstartend segment/transfer times');
+    const nameByStationId = new Map(canonical.stations.map((s) => [s.id, s.name]));
+    const nameByStopId = new Map(
+      canonical.stops.map((s) => [s.id, nameByStationId.get(s.station_id)])
+    );
+    const harvested = await collectBeijingPlannerTimes({
+      patterns: canonical.patterns,
+      stops: canonical.stops,
+      transfers: canonical.transfers,
+      stopName: (stopId) => nameByStopId.get(stopId)
+    });
+    const seg = applyHarvestedSegmentTimes(segments, harvested.segments);
+    const xfer = applyHarvestedTransferTimes(transfers, harvested.transfers);
+    segments = seg.segments;
+    transfers = xfer.transfers;
+    console.log(`  applied planner times: ${seg.applied} segments, ${xfer.applied} transfers`);
+  }
+
   await writeCanonical(outDir, 'cn-bj', {
     network: canonical.network,
     lines,
     stations,
     stops: canonical.stops,
     patterns: canonical.patterns,
-    segments: canonical.segments,
-    transfers: canonical.transfers,
+    segments,
+    transfers,
     timetables: canonical.timetables
   });
 
@@ -67,8 +93,18 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
   console.log('  via overpass:', overpassMatched);
   console.log('  via tencent:', geocoded);
   console.log('stops:', canonical.stops.length);
-  console.log('segments:', canonical.segments.length);
-  console.log('transfers:', canonical.transfers.length);
+  console.log('segments:', segments.length);
+  const bySrc: Record<string, number> = {};
+  for (const s of segments) {
+    const k = s.travel_time_source ?? 'none';
+    bySrc[k] = (bySrc[k] ?? 0) + 1;
+  }
+  console.log('segments by time source:', bySrc);
+  console.log('transfers:', transfers.length);
+  console.log(
+    'transfers with walk_time:',
+    transfers.filter((t) => t.walk_time_seconds != null).length
+  );
   console.log('timetables:', canonical.timetables.length);
 }
 
