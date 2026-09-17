@@ -11,9 +11,7 @@
     "timezone",
     "coordinate_system",
     "default_units",
-    "routing",
-    "operators",
-    "source"
+    "routing"
   ],
   "properties": {
     "id": {
@@ -158,74 +156,255 @@
       },
       "additionalProperties": false
     },
-    "operators": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["id", "name"],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "website": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      }
-    },
-    "source": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "name",
-          "url",
-          "version",
-          "retrieved_at",
-          "license",
-          "license_url",
-          "attribution"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          },
-          "retrieved_at": {
-            "type": "string"
-          },
-          "license": {
-            "type": "string",
-            "enum": ["unknown", "cc0", "cc-by", "cc-by-sa", "odbl", "custom"]
-          },
-          "license_url": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
+    "quality": {
+      "type": "object",
+      "required": [
+        "topology",
+        "coordinates",
+        "names",
+        "segment_times",
+        "segment_distances",
+        "transfer_times",
+        "timetables",
+        "schematic"
+      ],
+      "properties": {
+        "topology": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
               }
-            ]
+            }
           },
-          "attribution": {
-            "type": "string"
-          },
-          "notes": {
-            "type": "string"
-          }
+          "additionalProperties": false
         },
-        "additionalProperties": false
-      }
+        "coordinates": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "names": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "segment_times": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "segment_distances": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "transfer_times": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "timetables": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "schematic": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "fares": {
+          "type": "object",
+          "required": ["precision", "coverage", "status", "counts"],
+          "properties": {
+            "precision": {
+              "type": "string",
+              "enum": ["official", "derived", "default"]
+            },
+            "coverage": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["complete", "partial", "derived", "unavailable"]
+            },
+            "counts": {
+              "type": "object",
+              "required": [],
+              "properties": {},
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     },
     "notes": {
       "type": "string"

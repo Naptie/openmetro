@@ -27,6 +27,7 @@ import {
   type SyncLayer
 } from '../packages/core/src/index.js';
 import { type DiscoveredAdapter, discoverAdapters } from './discover-adapters.js';
+import { writeQualityReport } from './write-quality-report.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -169,6 +170,12 @@ async function main() {
   if (failed.length > 0) {
     console.error(`sync failed for: ${failed.join(', ')}`);
     process.exit(1);
+  }
+  try {
+    const report = await writeQualityReport(ROOT);
+    console.log(`quality report: ${report}`);
+  } catch (err) {
+    console.warn(`quality report failed: ${err instanceof Error ? err.message : String(err)}`);
   }
   console.log('sync complete');
 }

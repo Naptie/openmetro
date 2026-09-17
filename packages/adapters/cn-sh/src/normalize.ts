@@ -724,9 +724,7 @@ export function normalize(input: ShRawInput): ShCanonical {
       timezone: 'Asia/Shanghai',
       coordinate_system: 'gcj02',
       default_units: { distance: 'km', time: 'seconds', speed: 'km/h' },
-      routing: { weight: 'time', default_transfer_seconds: 120, max_transfer_seconds: 600 },
-      operators: [],
-      source: []
+      routing: { weight: 'time', default_transfer_seconds: 120, max_transfer_seconds: 600 }
     },
     lines: lineRecords,
     stations,

@@ -65,9 +65,7 @@ const networkBase = {
   timezone: 'Asia/Shanghai',
   coordinate_system: 'gcj02' as const,
   default_units: { distance: 'km', time: 'seconds', speed: 'km/h' },
-  routing: { weight: 'time' as const, default_transfer_seconds: 120, max_transfer_seconds: 600 },
-  operators: [],
-  source: []
+  routing: { weight: 'time' as const, default_transfer_seconds: 120, max_transfer_seconds: 600 }
 };
 
 test('Network keeps primary name and requires multilingual names', () => {

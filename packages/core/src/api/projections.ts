@@ -54,6 +54,7 @@ export function projectNetwork(n: NetworkEncoded, generatedAt?: string): Static<
     coordinate_system: n.coordinate_system,
     default_units: n.default_units,
     routing: n.routing,
+    ...(n.quality ? { quality: n.quality } : {}),
     ...(generatedAt ? { synced_at: generatedAt } : {})
   };
 }

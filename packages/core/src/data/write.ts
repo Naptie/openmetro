@@ -1,6 +1,8 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { entitySchemaUrl } from '../schema/file.js';
+import type { FareMatrixEncoded } from '../schema/index.js';
+import { computeNetworkQuality, type QualityInput } from './quality.js';
 
 export interface CanonicalFile<T> {
   $schema: string;
@@ -31,13 +33,25 @@ function sorted<A extends { id: string }>(records: A[]): A[] {
   return [...records].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 }
 
+async function loadExistingFares(outDir: string): Promise<FareMatrixEncoded | undefined> {
+  try {
+    const raw = JSON.parse(await readFile(join(outDir, 'fares.json'), 'utf-8'));
+    return raw as FareMatrixEncoded;
+  } catch {
+    return undefined;
+  }
+}
+
 /**
  * Write a canonical dataset to `data/<networkId>/`. Each entity file is
  * wrapped via `wrap`. `network.json` and the `fares.json` matrix document are
  * written as bare objects.
+ *
+ * `network.quality` is recomputed from the records being written (and the
+ * on-disk fares matrix when present) so precision/coverage cannot drift.
  */
 export async function writeCanonical<
-  N,
+  N extends Record<string, unknown>,
   L extends { id: string },
   S extends { id: string },
   St extends { id: string },
@@ -70,7 +84,20 @@ export async function writeCanonical<
       'utf-8'
     );
 
-  await writeFile(join(outDir, 'network.json'), JSON.stringify(data.network, null, 2), 'utf-8');
+  const faresDoc =
+    (data.fares as FareMatrixEncoded | undefined) ?? (await loadExistingFares(outDir));
+  const quality = computeNetworkQuality({
+    lines: data.lines as QualityInput['lines'],
+    stations: data.stations as QualityInput['stations'],
+    stops: data.stops as QualityInput['stops'],
+    segments: data.segments as QualityInput['segments'],
+    transfers: data.transfers as QualityInput['transfers'],
+    timetables: (data.timetables ?? []) as QualityInput['timetables'],
+    fares: faresDoc
+  });
+  const networkDoc = { ...data.network, quality };
+
+  await writeFile(join(outDir, 'network.json'), JSON.stringify(networkDoc, null, 2), 'utf-8');
   await Promise.all([
     w('lines', sorted(data.lines)),
     w('stations', sorted(data.stations)),

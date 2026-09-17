@@ -321,6 +321,45 @@ export const ApiRoutingDefaults = t.Object(
   { $id: 'ApiRoutingDefaults' }
 );
 
+/** Precision of one published metric value. */
+export const ApiValuePrecision = t.Union([
+  t.Literal('official'),
+  t.Literal('derived'),
+  t.Literal('default')
+]);
+
+/** Aggregate quality of one data layer. */
+export const ApiLayerQuality = t.Object(
+  {
+    precision: ApiValuePrecision,
+    coverage: t.Number(),
+    status: t.Union([
+      t.Literal('complete'),
+      t.Literal('partial'),
+      t.Literal('derived'),
+      t.Literal('unavailable')
+    ]),
+    counts: t.Record(t.String(), t.Number())
+  },
+  { $id: 'ApiLayerQuality' }
+);
+
+/** Per-layer precision / coverage derived from canonical records. */
+export const ApiNetworkQuality = t.Object(
+  {
+    topology: t.Ref(ApiLayerQuality),
+    coordinates: t.Ref(ApiLayerQuality),
+    names: t.Ref(ApiLayerQuality),
+    segment_times: t.Ref(ApiLayerQuality),
+    segment_distances: t.Ref(ApiLayerQuality),
+    transfer_times: t.Ref(ApiLayerQuality),
+    timetables: t.Ref(ApiLayerQuality),
+    schematic: t.Ref(ApiLayerQuality),
+    fares: t.Optional(t.Ref(ApiLayerQuality))
+  },
+  { $id: 'ApiNetworkQuality' }
+);
+
 /** One network's metadata. `name` is the primary (Chinese) name; `names` always carries zh + en. */
 export const ApiNetwork = t.Object(
   {
@@ -337,6 +376,8 @@ export const ApiNetwork = t.Object(
       { $id: 'ApiDefaultUnits' }
     ),
     routing: t.Ref(ApiRoutingDefaults),
+    /** Per-layer data quality; present when the canonical network carries it. */
+    quality: t.Optional(t.Ref(ApiNetworkQuality)),
     /** Last sync time (max file `generated_at`); detail route only. */
     synced_at: t.Optional(t.String())
   },
@@ -508,6 +549,8 @@ export const ApiModels = {
   ApiFareRow,
   ApiCity,
   ApiRoutingDefaults,
+  ApiLayerQuality,
+  ApiNetworkQuality,
   ApiNetwork,
   ApiNetworkList,
   ApiStopNode,

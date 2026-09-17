@@ -2,7 +2,6 @@ import { Schema } from 'effect';
 import { City } from './city.js';
 import { Crs } from './geometry.js';
 import { MultilingualName } from './names.js';
-import { Source } from './provenance.js';
 
 export const DefaultUnits = Schema.Struct({
   distance: Schema.String,
@@ -11,14 +10,6 @@ export const DefaultUnits = Schema.Struct({
 });
 
 export type DefaultUnits = Schema.Schema.Type<typeof DefaultUnits>;
-
-export const Operator = Schema.Struct({
-  id: Schema.String,
-  name: Schema.String,
-  website: Schema.optionalWith(Schema.String, { as: 'Option' })
-});
-
-export type Operator = Schema.Schema.Type<typeof Operator>;
 
 /**
  * Routing defaults for a network. These are part of the canonical data (single
@@ -38,6 +29,56 @@ export const RoutingDefaults = Schema.Struct({
 
 export type RoutingDefaults = Schema.Schema.Type<typeof RoutingDefaults>;
 
+/**
+ * Precision of a published metric value.
+ *
+ * - `official` — operator publishes this exact field (including direct
+ *   route-planner fields such as plantrip wait/transfer minutes)
+ * - `derived`  — inferred from another official series (last-train diffs,
+ *   searchstartend cumulative jumps)
+ * - `default`  — network constant; source published nothing
+ */
+export const ValuePrecision = Schema.Literal('official', 'derived', 'default');
+
+export type ValuePrecision = Schema.Schema.Type<typeof ValuePrecision>;
+
+/** Aggregate quality of one data layer (segment times, transfer times, fares). */
+export const LayerStatus = Schema.Literal('complete', 'partial', 'derived', 'unavailable');
+
+export type LayerStatus = Schema.Schema.Type<typeof LayerStatus>;
+
+export const LayerQuality = Schema.Struct({
+  precision: ValuePrecision,
+  /** Fraction of entities with a non-default value (0–1). */
+  coverage: Schema.Number,
+  status: LayerStatus,
+  counts: Schema.Record({ key: Schema.String, value: Schema.Number })
+});
+
+export type LayerQuality = Schema.Schema.Type<typeof LayerQuality>;
+
+/**
+ * Computed at write time from canonical records. Do not hand-edit; re-running
+ * the adapter overwrites this block.
+ *
+ * Layers cover every published metric family:
+ * topology, coordinates, names, segment_times, segment_distances,
+ * transfer_times, timetables, schematic (stops), fares.
+ */
+export const NetworkQuality = Schema.Struct({
+  topology: LayerQuality,
+  coordinates: LayerQuality,
+  names: LayerQuality,
+  segment_times: LayerQuality,
+  segment_distances: LayerQuality,
+  transfer_times: LayerQuality,
+  timetables: LayerQuality,
+  schematic: LayerQuality,
+  fares: Schema.optionalWith(LayerQuality, { as: 'Option' })
+});
+
+export type NetworkQuality = Schema.Schema.Type<typeof NetworkQuality>;
+
 export const Network = Schema.Struct({
   id: Schema.String,
   /** Primary (Chinese) name for consumers that skip localization. */
@@ -51,8 +92,8 @@ export const Network = Schema.Struct({
   coordinate_system: Crs,
   default_units: DefaultUnits,
   routing: RoutingDefaults,
-  operators: Schema.Array(Operator),
-  source: Schema.Array(Source),
+  /** Per-layer precision / coverage, derived from canonical records. */
+  quality: Schema.optionalWith(NetworkQuality, { as: 'Option' }),
   notes: Schema.optionalWith(Schema.String, { as: 'Option' })
 });
 

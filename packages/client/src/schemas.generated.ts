@@ -65,7 +65,11 @@ export const apiCitySchema = z.object({ "id": z.string(), "name": apiNamesSchema
 
 export const apiRoutingDefaultsSchema = z.object({ "weight": z.enum(["time", "distance"]), "default_transfer_seconds": z.number(), "max_transfer_seconds": z.number().optional() });
 
-export const apiNetworkSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "city": apiCitySchema, "country_code": z.string(), "currency": z.string(), "timezone": z.string(), "coordinate_system": z.enum(["wgs84", "gcj02", "bd09", "schematic", "none"]), "default_units": z.object({ "distance": z.string(), "time": z.string(), "speed": z.string() }), "routing": apiRoutingDefaultsSchema, "synced_at": z.string().optional() });
+export const apiLayerQualitySchema = z.object({ "precision": z.enum(["official", "derived", "default"]), "coverage": z.number(), "status": z.enum(["complete", "partial", "derived", "unavailable"]), "counts": z.record(z.string(), z.number()) });
+
+export const apiNetworkQualitySchema = z.object({ "topology": apiLayerQualitySchema, "coordinates": apiLayerQualitySchema, "names": apiLayerQualitySchema, "segment_times": apiLayerQualitySchema, "segment_distances": apiLayerQualitySchema, "transfer_times": apiLayerQualitySchema, "timetables": apiLayerQualitySchema, "schematic": apiLayerQualitySchema, "fares": apiLayerQualitySchema.optional() });
+
+export const apiNetworkSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "city": apiCitySchema, "country_code": z.string(), "currency": z.string(), "timezone": z.string(), "coordinate_system": z.enum(["wgs84", "gcj02", "bd09", "schematic", "none"]), "default_units": z.object({ "distance": z.string(), "time": z.string(), "speed": z.string() }), "routing": apiRoutingDefaultsSchema, "quality": apiNetworkQualitySchema.optional(), "synced_at": z.string().optional() });
 
 export const apiNetworkListSchema = z.object({ "networks": z.array(apiNetworkSchema) });
 
@@ -127,6 +131,8 @@ export const apiSchemas = {
   ApiFareRow: apiFareRowSchema,
   ApiCity: apiCitySchema,
   ApiRoutingDefaults: apiRoutingDefaultsSchema,
+  ApiLayerQuality: apiLayerQualitySchema,
+  ApiNetworkQuality: apiNetworkQualitySchema,
   ApiNetwork: apiNetworkSchema,
   ApiNetworkList: apiNetworkListSchema,
   ApiStopNode: apiStopNodeSchema,
