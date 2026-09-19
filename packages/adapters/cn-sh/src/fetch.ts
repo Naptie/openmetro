@@ -127,7 +127,7 @@ export async function fetchShanghai(
 
   // 2) Station info for each unique map code (a name may own several).
   //    A silent skip here drops stations from the rebuild — always fatal.
-  const codes = [...new Set(Object.values(nameToCodes).flat())];
+  const codes = [...new Set(Object.values(nameToCodes).flat())].filter(Boolean);
   if (codes.length === 0) {
     failures.push('lineInfo produced zero station map codes');
   }
@@ -181,6 +181,9 @@ export async function fetchShanghaiSources(): Promise<ShanghaiSources> {
   for (const loc of mapplic.levels[0].locations) {
     if (!loc.id.startsWith('ST')) continue;
     const code = loc.id.slice(2);
+    // Line 4 loop direction labels use id="ST" (hidden map pins, e.g. 内圈/外圈).
+    // station_code= returns an HTML error page — not a station, never fetch.
+    if (!code) continue;
     const list = (nameToCodes[loc.title] ??= []);
     if (!list.includes(code)) list.push(code);
   }
