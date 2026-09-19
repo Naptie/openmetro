@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-gz",
-  "generated_at": "2026-09-19T08:57:10.647Z",
+  "generated_at": "2026-09-14T18:26:16.423Z",
   "source": [],
   "records": [
     {
@@ -1133,9 +1133,13 @@
       "from_station_id": "cn-gz-daojiao",
       "to_station_id": "cn-gz-xipingxi",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated",
-      "source_id": "7307"
+      "travel_time_seconds": 660,
+      "travel_time_source": "last_train",
+      "source_id": "7307",
+      "travel_time_derived_from": [
+        "cn-gz-cn-gz-daojiao-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-huizhoubei",
+        "cn-gz-cn-gz-xipingxi-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-huizhoubei"
+      ]
     },
     {
       "id": "cn-gz-seg-cn-gz-dashadi-cn-gz-line-5-cn-gz-yuzhu-cn-gz-line-5",
@@ -1429,7 +1433,7 @@
       "from_station_id": "cn-gz-dongguanxi",
       "to_station_id": "cn-gz-daojiao",
       "direction": "both",
-      "travel_time_seconds": 960,
+      "travel_time_seconds": 420,
       "travel_time_source": "last_train",
       "source_id": "7306",
       "travel_time_derived_from": [
@@ -7697,7 +7701,7 @@
       "from_station_id": "cn-gz-xipingxi",
       "to_station_id": "cn-gz-dongchengnan",
       "direction": "both",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "last_train",
       "source_id": "7308",
       "travel_time_derived_from": [

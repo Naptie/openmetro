@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-sh",
-  "generated_at": "2026-09-19T08:47:45.063Z",
+  "generated_at": "2026-09-16T14:35:09.457Z",
   "source": [],
   "records": [
     {
@@ -9127,6 +9127,29 @@
       "location": {
         "lon": 121.150315,
         "lat": 31.289048,
+        "crs": "gcj02"
+      },
+      "extras": {
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-sh-zhaojiabang-road",
+      "name": "肇嘉浜路",
+      "names": {
+        "zh": "肇嘉浜路",
+        "en": "Zhaojiabang Road"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "shmetro-stationInfo",
+          "id": "140-ZJBL"
+        }
+      ],
+      "location": {
+        "lon": 121.450212,
+        "lat": 31.199436,
         "crs": "gcj02"
       },
       "extras": {
