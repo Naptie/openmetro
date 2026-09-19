@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-sh",
-  "generated_at": "2026-09-16T14:35:09.459Z",
+  "generated_at": "2026-09-19T08:47:45.065Z",
   "source": [],
   "records": [
     {
@@ -561,12 +561,12 @@
       }
     },
     {
-      "id": "cn-sh-seg-cn-sh-changshu-road-7-cn-sh-zhaojiabang-road-7",
+      "id": "cn-sh-seg-cn-sh-changshu-road-7-cn-sh-dong-an-road-7",
       "line_id": "cn-sh-line-7",
       "from_stop_id": "cn-sh-changshu-road-7",
-      "to_stop_id": "cn-sh-zhaojiabang-road-7",
+      "to_stop_id": "cn-sh-dong-an-road-7",
       "from_station_id": "cn-sh-changshu-road",
-      "to_station_id": "cn-sh-zhaojiabang-road",
+      "to_station_id": "cn-sh-dong-an-road",
       "direction": "both",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
@@ -3673,12 +3673,13 @@
       "from_station_id": "cn-sh-loushanguan-road",
       "to_station_id": "cn-sh-zhongshan-park",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
       "source_id": "0240",
-      "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+      "travel_time_derived_from": [
+        "cn-sh-loushanguan-road-2-to-pudong-airport-terminal-1-2-avmooc",
+        "cn-sh-zhongshan-park-2-to-pudong-airport-terminal-1-2-avmooc"
+      ]
     },
     {
       "id": "cn-sh-seg-cn-sh-luban-road-4-cn-sh-damuqiao-road-4",
@@ -5098,12 +5099,13 @@
       "from_station_id": "cn-sh-shanghai-swimming-center",
       "to_station_id": "cn-sh-longhua",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
       "source_id": "1150",
-      "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+      "travel_time_derived_from": [
+        "cn-sh-shanghai-swimming-center-11-to-disney-resort-cn54t7",
+        "cn-sh-longhua-11-to-disney-resort-cn54t7"
+      ]
     },
     {
       "id": "cn-sh-seg-cn-sh-shanghai-university-7-cn-sh-nanchen-road-7",
@@ -6758,12 +6760,12 @@
       }
     },
     {
-      "id": "cn-sh-seg-cn-sh-xujiahui-9-cn-sh-zhaojiabang-road-9",
+      "id": "cn-sh-seg-cn-sh-xujiahui-9-cn-sh-jiashan-road-9",
       "line_id": "cn-sh-line-9",
       "from_stop_id": "cn-sh-xujiahui-9",
-      "to_stop_id": "cn-sh-zhaojiabang-road-9",
+      "to_stop_id": "cn-sh-jiashan-road-9",
       "from_station_id": "cn-sh-xujiahui",
-      "to_station_id": "cn-sh-zhaojiabang-road",
+      "to_station_id": "cn-sh-jiashan-road",
       "direction": "both",
       "travel_time_seconds": 60,
       "travel_time_source": "planner",
@@ -6930,12 +6932,13 @@
       "from_station_id": "cn-sh-yindu-road",
       "to_station_id": "cn-sh-zhuanqiao",
       "direction": "both",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
       "source_id": "0503",
-      "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+      "travel_time_derived_from": [
+        "cn-sh-yindu-road-5-to-fengxian-xincheng-u3ik7t",
+        "cn-sh-zhuanqiao-5-to-fengxian-xincheng-u3ik7t"
+      ]
     },
     {
       "id": "cn-sh-seg-cn-sh-yingao-road-18-cn-sh-south-changjiang-road-18",
@@ -7295,36 +7298,6 @@
       }
     },
     {
-      "id": "cn-sh-seg-cn-sh-zhaojiabang-road-7-cn-sh-dong-an-road-7",
-      "line_id": "cn-sh-line-7",
-      "from_stop_id": "cn-sh-zhaojiabang-road-7",
-      "to_stop_id": "cn-sh-dong-an-road-7",
-      "from_station_id": "cn-sh-zhaojiabang-road",
-      "to_station_id": "cn-sh-dong-an-road",
-      "direction": "both",
-      "travel_time_seconds": 60,
-      "travel_time_source": "planner",
-      "source_id": "0741",
-      "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
-    },
-    {
-      "id": "cn-sh-seg-cn-sh-zhaojiabang-road-9-cn-sh-jiashan-road-9",
-      "line_id": "cn-sh-line-9",
-      "from_stop_id": "cn-sh-zhaojiabang-road-9",
-      "to_stop_id": "cn-sh-jiashan-road-9",
-      "from_station_id": "cn-sh-zhaojiabang-road",
-      "to_station_id": "cn-sh-jiashan-road",
-      "direction": "both",
-      "travel_time_seconds": 60,
-      "travel_time_source": "planner",
-      "source_id": "0935",
-      "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
-    },
-    {
       "id": "cn-sh-seg-cn-sh-zhaoxiang-17-cn-sh-huijin-road-17",
       "line_id": "cn-sh-line-17",
       "from_stop_id": "cn-sh-zhaoxiang-17",
@@ -7602,12 +7575,13 @@
       "from_station_id": "cn-sh-zhongxing-road",
       "to_station_id": "cn-sh-north-xizang-road",
       "direction": "both",
-      "travel_time_seconds": 60,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
       "source_id": "0837",
-      "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+      "travel_time_derived_from": [
+        "cn-sh-zhongxing-road-8-to-shiguang-road-cfsybs",
+        "cn-sh-north-xizang-road-8-to-shiguang-road-cfsybs"
+      ]
     },
     {
       "id": "cn-sh-seg-cn-sh-zhouhai-road-6-cn-sh-south-waigaoqiao-free-trade-zone-6",
@@ -7662,12 +7636,13 @@
       "from_station_id": "cn-sh-zhuanqiao",
       "to_station_id": "cn-sh-yindu-road",
       "direction": "both",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
       "source_id": "0505",
-      "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+      "travel_time_derived_from": [
+        "cn-sh-zhuanqiao-5-to-xinzhuang-emgz0",
+        "cn-sh-yindu-road-5-to-xinzhuang-emgz0"
+      ]
     },
     {
       "id": "cn-sh-seg-cn-sh-zhujiajiao-17-cn-sh-oriental-land-17",
