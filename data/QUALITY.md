@@ -4,7 +4,7 @@
 
 Generated from each network’s `network.json.quality` after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-19T17:26:59.387Z_
+_Updated 2026-09-19T19:45:35.966Z_
 
 ## 北京地铁 / Beijing Subway (`cn-bj`)
 
@@ -41,9 +41,9 @@ _Updated 2026-09-19T17:26:59.387Z_
 | Topology | ✅ complete | official | 100% | official=1 |
 | Coordinates | ✅ complete | official | 100% | official=417 |
 | Names | ✅ complete | official | 100% | official=417 |
-| Segment times | ✅ complete | official | 100% | official=513, derived=2, default=1 |
+| Segment times | ✅ complete | official | 100% | official=516 |
 | Segment distances | ❌ unavailable | default | 0% | default=516 |
-| Transfer times | 🟡 partial | official | 75% | official=206, default=70 |
+| Transfer times | ✅ complete | official | 100% | official=276 |
 | Timetables | ✅ complete | official | 100% | official=1241 |
 | Schematic | ❌ unavailable | default | 0% | default=530 |
 | Fares | 🟡 partial | official | 99% | official=171212, default=2260 |

@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-sh",
-  "generated_at": "2026-09-16T14:35:09.459Z",
+  "generated_at": "2026-09-19T19:45:35.954Z",
   "source": [],
   "records": [
     {
@@ -5327,7 +5327,7 @@
       "travel_time_source": "planner",
       "source_id": "1070",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
+        "planner_time_source": "shmetro-plantrip-reverse"
       }
     },
     {
@@ -6103,13 +6103,12 @@
       "from_station_id": "cn-sh-west-changjiang-road",
       "to_station_id": "cn-sh-aihui-road",
       "direction": "both",
-      "travel_time_seconds": 300,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "source_id": "1848",
-      "travel_time_derived_from": [
-        "cn-sh-west-changjiang-road-18-to-kangwen-road-cg04hr",
-        "cn-sh-aihui-road-18-to-kangwen-road-cg04hr"
-      ]
+      "extras": {
+        "planner_time_source": "shmetro-plantrip-derived"
+      }
     },
     {
       "id": "cn-sh-seg-cn-sh-west-gaoke-road-6-cn-sh-linyi-xincun-6",
@@ -6569,13 +6568,12 @@
       "from_station_id": "cn-sh-xiepu-road",
       "to_station_id": "cn-sh-yunshan-road",
       "direction": "both",
-      "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "source_id": "1443",
-      "travel_time_derived_from": [
-        "cn-sh-xiepu-road-14-to-guiqiao-road-chexkc",
-        "cn-sh-yunshan-road-14-to-guiqiao-road-chexkc"
-      ]
+      "extras": {
+        "planner_time_source": "shmetro-plantrip-derived"
+      }
     },
     {
       "id": "cn-sh-seg-cn-sh-xinchang-16-cn-sh-wild-animal-park-16",
@@ -6990,9 +6988,12 @@
       "from_station_id": "cn-sh-yishan-road",
       "to_station_id": "cn-sh-hongqiao-road",
       "direction": "both",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated",
-      "source_id": "0402"
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "0402",
+      "extras": {
+        "planner_time_source": "shmetro-plantrip"
+      }
     },
     {
       "id": "cn-sh-seg-cn-sh-yishan-road-9-cn-sh-xujiahui-9",
@@ -7467,7 +7468,7 @@
       "from_station_id": "cn-sh-zhongchun-road",
       "to_station_id": "cn-sh-jinghong-road",
       "direction": "both",
-      "travel_time_seconds": 60,
+      "travel_time_seconds": 2160,
       "travel_time_source": "planner",
       "source_id": "5132",
       "extras": {

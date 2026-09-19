@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-sh",
-  "generated_at": "2026-09-16T14:35:09.460Z",
+  "generated_at": "2026-09-19T19:45:35.955Z",
   "source": [],
   "records": [
     {
@@ -11,7 +11,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-baoshan-road-3",
-      "to_stop_id": "cn-sh-baoshan-road-4"
+      "to_stop_id": "cn-sh-baoshan-road-4",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-baoshan-road-4-cn-sh-baoshan-road-3",
@@ -19,7 +21,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-baoshan-road-4",
-      "to_stop_id": "cn-sh-baoshan-road-3"
+      "to_stop_id": "cn-sh-baoshan-road-3",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-caobao-road-1-cn-sh-caobao-road-12",
@@ -27,7 +31,9 @@
       "from_line_id": "cn-sh-line-1",
       "to_line_id": "cn-sh-line-12",
       "from_stop_id": "cn-sh-caobao-road-1",
-      "to_stop_id": "cn-sh-caobao-road-12"
+      "to_stop_id": "cn-sh-caobao-road-12",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-caobao-road-12-cn-sh-caobao-road-1",
@@ -105,7 +111,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-11",
       "from_stop_id": "cn-sh-caoyang-road-3",
-      "to_stop_id": "cn-sh-caoyang-road-11"
+      "to_stop_id": "cn-sh-caoyang-road-11",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-caoyang-road-3-cn-sh-caoyang-road-14",
@@ -113,7 +121,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-14",
       "from_stop_id": "cn-sh-caoyang-road-3",
-      "to_stop_id": "cn-sh-caoyang-road-14"
+      "to_stop_id": "cn-sh-caoyang-road-14",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-caoyang-road-3-cn-sh-caoyang-road-4",
@@ -121,7 +131,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-caoyang-road-3",
-      "to_stop_id": "cn-sh-caoyang-road-4"
+      "to_stop_id": "cn-sh-caoyang-road-4",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-caoyang-road-4-cn-sh-caoyang-road-11",
@@ -129,7 +141,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-11",
       "from_stop_id": "cn-sh-caoyang-road-4",
-      "to_stop_id": "cn-sh-caoyang-road-11"
+      "to_stop_id": "cn-sh-caoyang-road-11",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-caoyang-road-4-cn-sh-caoyang-road-14",
@@ -137,7 +151,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-14",
       "from_stop_id": "cn-sh-caoyang-road-4",
-      "to_stop_id": "cn-sh-caoyang-road-14"
+      "to_stop_id": "cn-sh-caoyang-road-14",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-caoyang-road-4-cn-sh-caoyang-road-3",
@@ -145,7 +161,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-caoyang-road-4",
-      "to_stop_id": "cn-sh-caoyang-road-3"
+      "to_stop_id": "cn-sh-caoyang-road-3",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-century-avenue-2-cn-sh-century-avenue-4",
@@ -333,7 +351,9 @@
       "from_line_id": "cn-sh-line-14",
       "to_line_id": "cn-sh-line-18",
       "from_stop_id": "cn-sh-changyi-road-14",
-      "to_stop_id": "cn-sh-changyi-road-18"
+      "to_stop_id": "cn-sh-changyi-road-18",
+      "walk_time_seconds": 60,
+      "source_id": "shmetro-plantrip-reverse"
     },
     {
       "id": "xfer-cn-sh-changyi-road-18-cn-sh-changyi-road-14",
@@ -351,7 +371,9 @@
       "from_line_id": "cn-sh-line-13",
       "to_line_id": "cn-sh-line-8",
       "from_stop_id": "cn-sh-chengshan-road-13",
-      "to_stop_id": "cn-sh-chengshan-road-8"
+      "to_stop_id": "cn-sh-chengshan-road-8",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-chengshan-road-8-cn-sh-chengshan-road-13",
@@ -409,7 +431,9 @@
       "from_line_id": "cn-sh-line-12",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-damuqiao-road-12",
-      "to_stop_id": "cn-sh-damuqiao-road-4"
+      "to_stop_id": "cn-sh-damuqiao-road-4",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-damuqiao-road-4-cn-sh-damuqiao-road-12",
@@ -427,7 +451,9 @@
       "from_line_id": "cn-sh-line-14",
       "to_line_id": "cn-sh-line-8",
       "from_stop_id": "cn-sh-dashijie-14",
-      "to_stop_id": "cn-sh-dashijie-8"
+      "to_stop_id": "cn-sh-dashijie-8",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-dashijie-8-cn-sh-dashijie-14",
@@ -435,7 +461,9 @@
       "from_line_id": "cn-sh-line-8",
       "to_line_id": "cn-sh-line-14",
       "from_stop_id": "cn-sh-dashijie-8",
-      "to_stop_id": "cn-sh-dashijie-14"
+      "to_stop_id": "cn-sh-dashijie-14",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-dong-an-road-4-cn-sh-dong-an-road-7",
@@ -443,7 +471,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-7",
       "from_stop_id": "cn-sh-dong-an-road-4",
-      "to_stop_id": "cn-sh-dong-an-road-7"
+      "to_stop_id": "cn-sh-dong-an-road-7",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-dong-an-road-7-cn-sh-dong-an-road-4",
@@ -481,7 +511,9 @@
       "from_line_id": "cn-sh-line-10",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-east-nanjing-road-10",
-      "to_stop_id": "cn-sh-east-nanjing-road-2"
+      "to_stop_id": "cn-sh-east-nanjing-road-2",
+      "walk_time_seconds": 480,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-east-nanjing-road-2-cn-sh-east-nanjing-road-10",
@@ -499,7 +531,9 @@
       "from_line_id": "cn-sh-line-10",
       "to_line_id": "cn-sh-line-6",
       "from_stop_id": "cn-sh-gangcheng-road-10",
-      "to_stop_id": "cn-sh-gangcheng-road-6"
+      "to_stop_id": "cn-sh-gangcheng-road-6",
+      "walk_time_seconds": 60,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-gangcheng-road-6-cn-sh-gangcheng-road-10",
@@ -527,7 +561,9 @@
       "from_line_id": "cn-sh-line-7",
       "to_line_id": "cn-sh-line-15",
       "from_stop_id": "cn-sh-gucun-park-7",
-      "to_stop_id": "cn-sh-gucun-park-15"
+      "to_stop_id": "cn-sh-gucun-park-15",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-guilin-park-12-cn-sh-guilin-park-15",
@@ -545,7 +581,9 @@
       "from_line_id": "cn-sh-line-15",
       "to_line_id": "cn-sh-line-12",
       "from_stop_id": "cn-sh-guilin-park-15",
-      "to_stop_id": "cn-sh-guilin-park-12"
+      "to_stop_id": "cn-sh-guilin-park-12",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-guilin-road-15-cn-sh-guilin-road-9",
@@ -643,7 +681,9 @@
       "from_line_id": "cn-sh-line-12",
       "to_line_id": "cn-sh-line-13",
       "from_stop_id": "cn-sh-hanzhong-road-12",
-      "to_stop_id": "cn-sh-hanzhong-road-13"
+      "to_stop_id": "cn-sh-hanzhong-road-13",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-hanzhong-road-13-cn-sh-hanzhong-road-1",
@@ -691,7 +731,9 @@
       "from_line_id": "cn-sh-line-10",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-hongqiao-airport-terminal-2-10",
-      "to_stop_id": "cn-sh-hongqiao-airport-terminal-2-2"
+      "to_stop_id": "cn-sh-hongqiao-airport-terminal-2-2",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hongqiao-airport-terminal-2-10-cn-sh-hongqiao-airport-terminal-2-51",
@@ -709,7 +751,9 @@
       "from_line_id": "cn-sh-line-2",
       "to_line_id": "cn-sh-line-10",
       "from_stop_id": "cn-sh-hongqiao-airport-terminal-2-2",
-      "to_stop_id": "cn-sh-hongqiao-airport-terminal-2-10"
+      "to_stop_id": "cn-sh-hongqiao-airport-terminal-2-10",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-hongqiao-airport-terminal-2-2-cn-sh-hongqiao-airport-terminal-2-51",
@@ -727,7 +771,9 @@
       "from_line_id": "cn-sh-line-51",
       "to_line_id": "cn-sh-line-10",
       "from_stop_id": "cn-sh-hongqiao-airport-terminal-2-51",
-      "to_stop_id": "cn-sh-hongqiao-airport-terminal-2-10"
+      "to_stop_id": "cn-sh-hongqiao-airport-terminal-2-10",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hongqiao-airport-terminal-2-51-cn-sh-hongqiao-airport-terminal-2-2",
@@ -735,7 +781,9 @@
       "from_line_id": "cn-sh-line-51",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-hongqiao-airport-terminal-2-51",
-      "to_stop_id": "cn-sh-hongqiao-airport-terminal-2-2"
+      "to_stop_id": "cn-sh-hongqiao-airport-terminal-2-2",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hongqiao-railway-station-10-cn-sh-hongqiao-railway-station-17",
@@ -743,7 +791,9 @@
       "from_line_id": "cn-sh-line-10",
       "to_line_id": "cn-sh-line-17",
       "from_stop_id": "cn-sh-hongqiao-railway-station-10",
-      "to_stop_id": "cn-sh-hongqiao-railway-station-17"
+      "to_stop_id": "cn-sh-hongqiao-railway-station-17",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hongqiao-railway-station-10-cn-sh-hongqiao-railway-station-2",
@@ -751,7 +801,9 @@
       "from_line_id": "cn-sh-line-10",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-hongqiao-railway-station-10",
-      "to_stop_id": "cn-sh-hongqiao-railway-station-2"
+      "to_stop_id": "cn-sh-hongqiao-railway-station-2",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hongqiao-railway-station-17-cn-sh-hongqiao-railway-station-10",
@@ -759,7 +811,9 @@
       "from_line_id": "cn-sh-line-17",
       "to_line_id": "cn-sh-line-10",
       "from_stop_id": "cn-sh-hongqiao-railway-station-17",
-      "to_stop_id": "cn-sh-hongqiao-railway-station-10"
+      "to_stop_id": "cn-sh-hongqiao-railway-station-10",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hongqiao-railway-station-17-cn-sh-hongqiao-railway-station-2",
@@ -767,7 +821,9 @@
       "from_line_id": "cn-sh-line-17",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-hongqiao-railway-station-17",
-      "to_stop_id": "cn-sh-hongqiao-railway-station-2"
+      "to_stop_id": "cn-sh-hongqiao-railway-station-2",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hongqiao-railway-station-2-cn-sh-hongqiao-railway-station-10",
@@ -775,7 +831,9 @@
       "from_line_id": "cn-sh-line-2",
       "to_line_id": "cn-sh-line-10",
       "from_stop_id": "cn-sh-hongqiao-railway-station-2",
-      "to_stop_id": "cn-sh-hongqiao-railway-station-10"
+      "to_stop_id": "cn-sh-hongqiao-railway-station-10",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-hongqiao-railway-station-2-cn-sh-hongqiao-railway-station-17",
@@ -823,7 +881,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-hongqiao-road-3",
-      "to_stop_id": "cn-sh-hongqiao-road-4"
+      "to_stop_id": "cn-sh-hongqiao-road-4",
+      "walk_time_seconds": 300,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hongqiao-road-4-cn-sh-hongqiao-road-10",
@@ -841,7 +901,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-hongqiao-road-4",
-      "to_stop_id": "cn-sh-hongqiao-road-3"
+      "to_stop_id": "cn-sh-hongqiao-road-3",
+      "walk_time_seconds": 300,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-hulan-road-1-cn-sh-hulan-road-18",
@@ -1059,7 +1121,9 @@
       "from_line_id": "cn-sh-line-9",
       "to_line_id": "cn-sh-line-12",
       "from_stop_id": "cn-sh-jinhai-road-9",
-      "to_stop_id": "cn-sh-jinhai-road-12"
+      "to_stop_id": "cn-sh-jinhai-road-12",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-jinshajiang-road-13-cn-sh-jinshajiang-road-3",
@@ -1097,7 +1161,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-jinshajiang-road-3",
-      "to_stop_id": "cn-sh-jinshajiang-road-4"
+      "to_stop_id": "cn-sh-jinshajiang-road-4",
+      "walk_time_seconds": 300,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-jinshajiang-road-4-cn-sh-jinshajiang-road-13",
@@ -1115,7 +1181,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-jinshajiang-road-4",
-      "to_stop_id": "cn-sh-jinshajiang-road-3"
+      "to_stop_id": "cn-sh-jinshajiang-road-3",
+      "walk_time_seconds": 300,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-jufeng-road-12-cn-sh-jufeng-road-6",
@@ -1243,7 +1311,9 @@
       "from_line_id": "cn-sh-line-11",
       "to_line_id": "cn-sh-line-13",
       "from_stop_id": "cn-sh-longde-road-11",
-      "to_stop_id": "cn-sh-longde-road-13"
+      "to_stop_id": "cn-sh-longde-road-13",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-longde-road-13-cn-sh-longde-road-11",
@@ -1281,7 +1351,9 @@
       "from_line_id": "cn-sh-line-16",
       "to_line_id": "cn-sh-line-18",
       "from_stop_id": "cn-sh-longyang-road-16",
-      "to_stop_id": "cn-sh-longyang-road-18"
+      "to_stop_id": "cn-sh-longyang-road-18",
+      "walk_time_seconds": 60,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-longyang-road-16-cn-sh-longyang-road-2",
@@ -1289,7 +1361,9 @@
       "from_line_id": "cn-sh-line-16",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-longyang-road-16",
-      "to_stop_id": "cn-sh-longyang-road-2"
+      "to_stop_id": "cn-sh-longyang-road-2",
+      "walk_time_seconds": 420,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-longyang-road-16-cn-sh-longyang-road-7",
@@ -1297,7 +1371,9 @@
       "from_line_id": "cn-sh-line-16",
       "to_line_id": "cn-sh-line-7",
       "from_stop_id": "cn-sh-longyang-road-16",
-      "to_stop_id": "cn-sh-longyang-road-7"
+      "to_stop_id": "cn-sh-longyang-road-7",
+      "walk_time_seconds": 420,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-longyang-road-18-cn-sh-longyang-road-16",
@@ -1525,7 +1601,9 @@
       "from_line_id": "cn-sh-line-7",
       "to_line_id": "cn-sh-line-12",
       "from_stop_id": "cn-sh-middle-longhua-road-7",
-      "to_stop_id": "cn-sh-middle-longhua-road-12"
+      "to_stop_id": "cn-sh-middle-longhua-road-12",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-middle-yanggao-road-18-cn-sh-middle-yanggao-road-9",
@@ -1543,7 +1621,9 @@
       "from_line_id": "cn-sh-line-9",
       "to_line_id": "cn-sh-line-18",
       "from_stop_id": "cn-sh-middle-yanggao-road-9",
-      "to_stop_id": "cn-sh-middle-yanggao-road-18"
+      "to_stop_id": "cn-sh-middle-yanggao-road-18",
+      "walk_time_seconds": 60,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-minsheng-road-18-cn-sh-minsheng-road-6",
@@ -1571,7 +1651,9 @@
       "from_line_id": "cn-sh-line-17",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-national-exhibition-and-convention-center-17",
-      "to_stop_id": "cn-sh-national-exhibition-and-convention-center-2"
+      "to_stop_id": "cn-sh-national-exhibition-and-convention-center-2",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-national-exhibition-and-convention-center-2-cn-sh-national-exhibition-and-convention-center-17",
@@ -1609,7 +1691,9 @@
       "from_line_id": "cn-sh-line-6",
       "to_line_id": "cn-sh-line-11",
       "from_stop_id": "cn-sh-oriental-sports-center-6",
-      "to_stop_id": "cn-sh-oriental-sports-center-11"
+      "to_stop_id": "cn-sh-oriental-sports-center-11",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-oriental-sports-center-6-cn-sh-oriental-sports-center-8",
@@ -1617,7 +1701,9 @@
       "from_line_id": "cn-sh-line-6",
       "to_line_id": "cn-sh-line-8",
       "from_stop_id": "cn-sh-oriental-sports-center-6",
-      "to_stop_id": "cn-sh-oriental-sports-center-8"
+      "to_stop_id": "cn-sh-oriental-sports-center-8",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-oriental-sports-center-8-cn-sh-oriental-sports-center-11",
@@ -1675,7 +1761,9 @@
       "from_line_id": "cn-sh-line-2",
       "to_line_id": "cn-sh-line-8",
       "from_stop_id": "cn-sh-people-s-square-2",
-      "to_stop_id": "cn-sh-people-s-square-8"
+      "to_stop_id": "cn-sh-people-s-square-8",
+      "walk_time_seconds": 300,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-people-s-square-8-cn-sh-people-s-square-1",
@@ -1703,7 +1791,9 @@
       "from_line_id": "cn-sh-line-2",
       "to_line_id": "cn-sh-line-51",
       "from_stop_id": "cn-sh-pudong-airport-terminal-1-2-2",
-      "to_stop_id": "cn-sh-pudong-airport-terminal-1-2-51"
+      "to_stop_id": "cn-sh-pudong-airport-terminal-1-2-51",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-pudong-airport-terminal-1-2-51-cn-sh-pudong-airport-terminal-1-2-2",
@@ -1711,7 +1801,9 @@
       "from_line_id": "cn-sh-line-51",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-pudong-airport-terminal-1-2-51",
-      "to_stop_id": "cn-sh-pudong-airport-terminal-1-2-2"
+      "to_stop_id": "cn-sh-pudong-airport-terminal-1-2-2",
+      "walk_time_seconds": 480,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-sh-pudong-avenue-14-cn-sh-pudong-avenue-4",
@@ -1769,7 +1861,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-1",
       "from_stop_id": "cn-sh-shanghai-indoor-stadium-4",
-      "to_stop_id": "cn-sh-shanghai-indoor-stadium-1"
+      "to_stop_id": "cn-sh-shanghai-indoor-stadium-1",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-shanghai-railway-station-1-cn-sh-shanghai-railway-station-3",
@@ -1807,7 +1901,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-shanghai-railway-station-3",
-      "to_stop_id": "cn-sh-shanghai-railway-station-4"
+      "to_stop_id": "cn-sh-shanghai-railway-station-4",
+      "walk_time_seconds": 720,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-shanghai-railway-station-4-cn-sh-shanghai-railway-station-1",
@@ -1825,7 +1921,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-shanghai-railway-station-4",
-      "to_stop_id": "cn-sh-shanghai-railway-station-3"
+      "to_stop_id": "cn-sh-shanghai-railway-station-3",
+      "walk_time_seconds": 720,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-shanghai-south-railway-station-1-cn-sh-shanghai-south-railway-station-15",
@@ -1873,7 +1971,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-1",
       "from_stop_id": "cn-sh-shanghai-south-railway-station-3",
-      "to_stop_id": "cn-sh-shanghai-south-railway-station-1"
+      "to_stop_id": "cn-sh-shanghai-south-railway-station-1",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-shanghai-south-railway-station-3-cn-sh-shanghai-south-railway-station-15",
@@ -1881,7 +1981,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-15",
       "from_stop_id": "cn-sh-shanghai-south-railway-station-3",
-      "to_stop_id": "cn-sh-shanghai-south-railway-station-15"
+      "to_stop_id": "cn-sh-shanghai-south-railway-station-15",
+      "walk_time_seconds": 540,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-shanghai-west-railway-station-11-cn-sh-shanghai-west-railway-station-15",
@@ -1899,7 +2001,9 @@
       "from_line_id": "cn-sh-line-15",
       "to_line_id": "cn-sh-line-11",
       "from_stop_id": "cn-sh-shanghai-west-railway-station-15",
-      "to_stop_id": "cn-sh-shanghai-west-railway-station-11"
+      "to_stop_id": "cn-sh-shanghai-west-railway-station-11",
+      "walk_time_seconds": 60,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-shendu-highway-41-cn-sh-shendu-highway-8",
@@ -1907,7 +2011,9 @@
       "from_line_id": "cn-sh-line-41",
       "to_line_id": "cn-sh-line-8",
       "from_stop_id": "cn-sh-shendu-highway-41",
-      "to_stop_id": "cn-sh-shendu-highway-8"
+      "to_stop_id": "cn-sh-shendu-highway-8",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-shendu-highway-8-cn-sh-shendu-highway-41",
@@ -1915,7 +2021,9 @@
       "from_line_id": "cn-sh-line-8",
       "to_line_id": "cn-sh-line-41",
       "from_stop_id": "cn-sh-shendu-highway-8",
-      "to_stop_id": "cn-sh-shendu-highway-41"
+      "to_stop_id": "cn-sh-shendu-highway-41",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-siping-road-10-cn-sh-siping-road-8",
@@ -1953,7 +2061,9 @@
       "from_line_id": "cn-sh-line-14",
       "to_line_id": "cn-sh-line-1",
       "from_stop_id": "cn-sh-site-of-the-first-cpc-national-congress-south-huangpi-road-14",
-      "to_stop_id": "cn-sh-site-of-the-first-cpc-national-congress-south-huangpi-road-1"
+      "to_stop_id": "cn-sh-site-of-the-first-cpc-national-congress-south-huangpi-road-1",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-site-of-the-first-cpc-national-congress-xintiandi-10-cn-sh-site-of-the-first-cpc-national-congress-xintiandi-13",
@@ -2151,7 +2261,9 @@
       "from_line_id": "cn-sh-line-12",
       "to_line_id": "cn-sh-line-2",
       "from_stop_id": "cn-sh-west-nanjing-road-12",
-      "to_stop_id": "cn-sh-west-nanjing-road-2"
+      "to_stop_id": "cn-sh-west-nanjing-road-2",
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-west-nanjing-road-13-cn-sh-west-nanjing-road-12",
@@ -2159,7 +2271,9 @@
       "from_line_id": "cn-sh-line-13",
       "to_line_id": "cn-sh-line-12",
       "from_stop_id": "cn-sh-west-nanjing-road-13",
-      "to_stop_id": "cn-sh-west-nanjing-road-12"
+      "to_stop_id": "cn-sh-west-nanjing-road-12",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-west-nanjing-road-13-cn-sh-west-nanjing-road-2",
@@ -2197,7 +2311,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-west-yan-an-road-3",
-      "to_stop_id": "cn-sh-west-yan-an-road-4"
+      "to_stop_id": "cn-sh-west-yan-an-road-4",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-west-yan-an-road-4-cn-sh-west-yan-an-road-3",
@@ -2205,7 +2321,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-west-yan-an-road-4",
-      "to_stop_id": "cn-sh-west-yan-an-road-3"
+      "to_stop_id": "cn-sh-west-yan-an-road-3",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-wuning-road-13-cn-sh-wuning-road-14",
@@ -2233,7 +2351,9 @@
       "from_line_id": "cn-sh-line-1",
       "to_line_id": "cn-sh-line-5",
       "from_stop_id": "cn-sh-xinzhuang-1",
-      "to_stop_id": "cn-sh-xinzhuang-5"
+      "to_stop_id": "cn-sh-xinzhuang-5",
+      "walk_time_seconds": 300,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-xinzhuang-5-cn-sh-xinzhuang-1",
@@ -2331,7 +2451,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-yishan-road-3",
-      "to_stop_id": "cn-sh-yishan-road-4"
+      "to_stop_id": "cn-sh-yishan-road-4",
+      "walk_time_seconds": 720,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-yishan-road-3-cn-sh-yishan-road-9",
@@ -2349,7 +2471,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-yishan-road-4",
-      "to_stop_id": "cn-sh-yishan-road-3"
+      "to_stop_id": "cn-sh-yishan-road-3",
+      "walk_time_seconds": 720,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-yishan-road-4-cn-sh-yishan-road-9",
@@ -2357,7 +2481,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-9",
       "from_stop_id": "cn-sh-yishan-road-4",
-      "to_stop_id": "cn-sh-yishan-road-9"
+      "to_stop_id": "cn-sh-yishan-road-9",
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-yishan-road-9-cn-sh-yishan-road-3",
@@ -2385,7 +2511,9 @@
       "from_line_id": "cn-sh-line-14",
       "to_line_id": "cn-sh-line-6",
       "from_stop_id": "cn-sh-yunshan-road-14",
-      "to_stop_id": "cn-sh-yunshan-road-6"
+      "to_stop_id": "cn-sh-yunshan-road-6",
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-sh-yunshan-road-6-cn-sh-yunshan-road-14",
@@ -2463,7 +2591,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-zhenping-road-3",
-      "to_stop_id": "cn-sh-zhenping-road-4"
+      "to_stop_id": "cn-sh-zhenping-road-4",
+      "walk_time_seconds": 480,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-zhenping-road-3-cn-sh-zhenping-road-7",
@@ -2481,7 +2611,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-zhenping-road-4",
-      "to_stop_id": "cn-sh-zhenping-road-3"
+      "to_stop_id": "cn-sh-zhenping-road-3",
+      "walk_time_seconds": 480,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-zhenping-road-4-cn-sh-zhenping-road-7",
@@ -2589,7 +2721,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-zhongshan-park-3",
-      "to_stop_id": "cn-sh-zhongshan-park-4"
+      "to_stop_id": "cn-sh-zhongshan-park-4",
+      "walk_time_seconds": 900,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-zhongshan-park-4-cn-sh-zhongshan-park-2",
@@ -2607,7 +2741,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-zhongshan-park-4",
-      "to_stop_id": "cn-sh-zhongshan-park-3"
+      "to_stop_id": "cn-sh-zhongshan-park-3",
+      "walk_time_seconds": 900,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-zhongtan-road-3-cn-sh-zhongtan-road-4",
@@ -2615,7 +2751,9 @@
       "from_line_id": "cn-sh-line-3",
       "to_line_id": "cn-sh-line-4",
       "from_stop_id": "cn-sh-zhongtan-road-3",
-      "to_stop_id": "cn-sh-zhongtan-road-4"
+      "to_stop_id": "cn-sh-zhongtan-road-4",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-derived"
     },
     {
       "id": "xfer-cn-sh-zhongtan-road-4-cn-sh-zhongtan-road-3",
@@ -2623,7 +2761,9 @@
       "from_line_id": "cn-sh-line-4",
       "to_line_id": "cn-sh-line-3",
       "from_stop_id": "cn-sh-zhongtan-road-4",
-      "to_stop_id": "cn-sh-zhongtan-road-3"
+      "to_stop_id": "cn-sh-zhongtan-road-3",
+      "walk_time_seconds": 120,
+      "source_id": "shmetro-plantrip-derived"
     }
   ]
 }
