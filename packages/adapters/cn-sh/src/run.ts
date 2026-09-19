@@ -82,12 +82,22 @@ export async function runShanghaiNormalize(opts: ShanghaiNormalizeOptions = {}):
       canonical.stops.filter((s) => s.source_id).map((s) => [s.id, s.source_id as string])
     );
     const stationNameById = new Map(canonical.stations.map((s) => [s.id, s.name]));
+    const codesByStationId = new Map<string, string[]>();
+    for (const stop of canonical.stops) {
+      const code = stop.source_id as string | undefined;
+      if (!code) continue;
+      const list = codesByStationId.get(stop.station_id) ?? [];
+      if (!list.includes(code)) list.push(code);
+      codesByStationId.set(stop.station_id, list);
+    }
     const harvested = await collectShanghaiPlannerTimes({
       patterns: canonical.patterns,
       stops: canonical.stops,
       transfers: canonical.transfers,
       stopCode: (id) => stopCodeById.get(id),
-      stationName: (id) => stationNameById.get(id)
+      stationName: (id) => stationNameById.get(id),
+      stationCodes: (id) => codesByStationId.get(id) ?? [],
+      defaultWalkSeconds: canonical.network.routing?.default_transfer_seconds
     });
     const seg = applyHarvestedSegmentTimes(segments, harvested.segments);
     const xfer = applyHarvestedTransferTimes(transfers, harvested.transfers);
