@@ -95,6 +95,18 @@ function effectiveWeight(
  * When its `walk_time_seconds` is unknown, `routing.default_transfer_seconds`
  * is used so the graph never gets a free or missing transfer.
  */
+/**
+ * Extra routing cost charged on out-of-station / auto cross-station transfer
+ * edges. OSI typically includes gates, security, or unstaffed walkways that
+ * in-station transfers do not; without a penalty, optimistic intercity segment
+ * times can beat a direct metro ride on paper.
+ */
+export const OOS_TRANSFER_PENALTY_SECONDS = 600;
+
+function isCrossStationTransfer(t: Transfer): boolean {
+  return t.is_out_of_station === true || String(t.source_id ?? '').startsWith('auto-xfer/');
+}
+
 export function buildStopGraph(
   networkId: string,
   stops: Stop[],
@@ -136,7 +148,12 @@ export function buildStopGraph(
   const maxTransfer = routing.max_transfer_seconds;
   const transferSeconds = (t: Transfer): number => {
     const raw = t.walk_time_seconds ?? defaultTransfer;
-    return maxTransfer != null && raw > maxTransfer ? maxTransfer : raw;
+    const penalized = isCrossStationTransfer(t) ? raw + OOS_TRANSFER_PENALTY_SECONDS : raw;
+    if (maxTransfer == null) return penalized;
+    const cap = isCrossStationTransfer(t)
+      ? maxTransfer + OOS_TRANSFER_PENALTY_SECONDS
+      : maxTransfer;
+    return penalized > cap ? cap : penalized;
   };
 
   for (const tr of transfers) {

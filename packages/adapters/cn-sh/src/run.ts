@@ -2,6 +2,7 @@ import { join } from 'node:path';
 import {
   applyHarvestedSegmentTimes,
   applyHarvestedTransferTimes,
+  deriveTransfers,
   enrichLineNamesFromWikidata,
   fillCoordinates,
   type LineEncoded,
@@ -83,7 +84,12 @@ export async function runShanghaiNormalize(opts: ShanghaiNormalizeOptions = {}):
   // Planner harvest: adjacent ODs for segment minutes + targeted ODs for
   // transferStationTime. Independent of the full fares matrix.
   let segments = canonical.segments;
-  let transfers = canonical.transfers;
+  let transfers = deriveTransfers(stations, canonical.stops, [], {
+    patterns: canonical.patterns,
+    lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
+    routing: canonical.network.routing,
+    crossStation: true
+  });
   if (!opts.skipPlannerTimes) {
     console.log('  harvest plantrip segment/transfer times');
     const stopCodeById = new Map(
@@ -101,7 +107,7 @@ export async function runShanghaiNormalize(opts: ShanghaiNormalizeOptions = {}):
     const harvested = await collectShanghaiPlannerTimes({
       patterns: canonical.patterns,
       stops: canonical.stops,
-      transfers: canonical.transfers,
+      transfers: transfers,
       stopCode: (id) => stopCodeById.get(id),
       stationName: (id) => stationNameById.get(id),
       stationCodes: (id) => codesByStationId.get(id) ?? [],

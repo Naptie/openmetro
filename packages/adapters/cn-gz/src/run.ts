@@ -1,5 +1,6 @@
 import { join } from 'node:path';
 import {
+  deriveTransfers,
   fillCoordinates,
   type KnownLocation,
   type TransformStations,
@@ -127,6 +128,13 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
     { network: canonical.network.id, city: '广州', extraCities: ['佛山', '东莞', '惠州', '肇庆'] }
   );
 
+  const transfers = deriveTransfers(stations, canonical.stops, [], {
+    patterns: canonical.patterns,
+    lines: canonical.lines.map((l) => ({ id: l.id, mode: l.mode })),
+    routing: canonical.network.routing,
+    crossStation: true
+  });
+
   await writeCanonical(outDir, 'cn-gz', {
     network: canonical.network,
     lines: canonical.lines,
@@ -134,7 +142,7 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
     stops: canonical.stops,
     patterns: canonical.patterns,
     segments: canonical.segments,
-    transfers: canonical.transfers,
+    transfers,
     timetables: canonical.timetables
   });
 
@@ -147,6 +155,11 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
   console.log('  via tencent:', geocoded);
   console.log('stops:', canonical.stops.length);
   console.log('segments:', canonical.segments.length);
+  console.log('transfers:', transfers.length);
+  console.log(
+    'transfers cross-station:',
+    transfers.filter((t) => String(t.source_id ?? '').startsWith('auto-xfer/v1')).length
+  );
   console.log(
     'segments derived:',
     canonical.segments.filter((s) => s.travel_time_source === 'last_train').length

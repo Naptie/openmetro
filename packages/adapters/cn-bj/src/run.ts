@@ -2,6 +2,7 @@ import { join } from 'node:path';
 import {
   applyHarvestedSegmentTimes,
   applyHarvestedTransferTimes,
+  deriveTransfers,
   enrichLineNamesFromWikidata,
   fillCoordinates,
   type LineEncoded,
@@ -62,8 +63,24 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
     { network: canonical.network.id, city: '北京' }
   );
 
+  const officialFromCanonical = canonical.transfers
+    .filter((t) => t.source_id && !String(t.source_id).startsWith('auto-xfer/v1'))
+    .map((t) => ({
+      station_id: t.station_id,
+      from_line_id: t.from_line_id,
+      to_line_id: t.to_line_id,
+      walk_time_seconds: t.walk_time_seconds,
+      is_out_of_station: t.is_out_of_station,
+      source_id: t.source_id
+    }));
+
   let segments = canonical.segments;
-  let transfers = canonical.transfers;
+  let transfers = deriveTransfers(stations, canonical.stops, officialFromCanonical, {
+    patterns: canonical.patterns,
+    lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
+    routing: canonical.network.routing,
+    crossStation: true
+  });
   if (!opts.skipPlannerTimes) {
     console.log('  harvest searchstartend segment/transfer times');
     const nameByStationId = new Map(canonical.stations.map((s) => [s.id, s.name]));
@@ -73,7 +90,7 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
     const harvested = await collectBeijingPlannerTimes({
       patterns: canonical.patterns,
       stops: canonical.stops,
-      transfers: canonical.transfers,
+      transfers: transfers,
       stopName: (stopId) => nameByStopId.get(stopId)
     });
     const seg = applyHarvestedSegmentTimes(segments, harvested.segments);
