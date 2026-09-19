@@ -2,9 +2,53 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-gz",
-  "generated_at": "2026-09-19T19:41:06.836Z",
+  "generated_at": "2026-09-19T20:33:22.991Z",
   "source": [],
   "records": [
+    {
+      "id": "xfer-cn-gz-airport-n-t2-cn-gz-line-3-cn-gz-baiyun-airport-north-t2-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-airport-n-t2",
+      "from_line_id": "cn-gz-line-3",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-airport-n-t2-cn-gz-line-3",
+      "to_stop_id": "cn-gz-baiyun-airport-north-t2-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 134,
+      "walk_distance_meters": 58,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_AIRPORT/cn-gz-airport-n-t2__cn-gz-baiyun-airport-north-t2",
+      "extras": {
+        "rule": "NAME_AIRPORT",
+        "rules_fired": [
+          "NAME_AIRPORT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 58,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-baiyun-airport-north-t2-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-airport-n-t2-cn-gz-line-3",
+      "station_id": "cn-gz-baiyun-airport-north-t2",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-3",
+      "from_stop_id": "cn-gz-baiyun-airport-north-t2-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-airport-n-t2-cn-gz-line-3",
+      "walk_time_seconds": 134,
+      "walk_distance_meters": 58,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_AIRPORT/cn-gz-airport-n-t2__cn-gz-baiyun-airport-north-t2",
+      "extras": {
+        "rule": "NAME_AIRPORT",
+        "rules_fired": [
+          "NAME_AIRPORT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 58,
+        "walk_model": "auto-v1"
+      }
+    },
     {
       "id": "xfer-cn-gz-baiyun-culture-square-cn-gz-line-12-cn-gz-baiyun-culture-square-cn-gz-line-2",
       "station_id": "cn-gz-baiyun-culture-square",
@@ -38,6 +82,50 @@
       "to_stop_id": "cn-gz-beijiao-park-cn-gz-line-7"
     },
     {
+      "id": "xfer-cn-gz-beijiao-west-railway-station-cn-gz-line-f3-cn-gz-beijiaoxi-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "station_id": "cn-gz-beijiao-west-railway-station",
+      "from_line_id": "cn-gz-line-f3",
+      "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "from_stop_id": "cn-gz-beijiao-west-railway-station-cn-gz-line-f3",
+      "to_stop_id": "cn-gz-beijiaoxi-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "walk_time_seconds": 121,
+      "walk_distance_meters": 41,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_STA_SUFFIX/cn-gz-beijiao-west-railway-station__cn-gz-beijiaoxi",
+      "extras": {
+        "rule": "NAME_STA_SUFFIX",
+        "rules_fired": [
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 41,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-beijiaoxi-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-beijiao-west-railway-station-cn-gz-line-f3",
+      "station_id": "cn-gz-beijiaoxi",
+      "from_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_line_id": "cn-gz-line-f3",
+      "from_stop_id": "cn-gz-beijiaoxi-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_stop_id": "cn-gz-beijiao-west-railway-station-cn-gz-line-f3",
+      "walk_time_seconds": 121,
+      "walk_distance_meters": 41,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_STA_SUFFIX/cn-gz-beijiao-west-railway-station__cn-gz-beijiaoxi",
+      "extras": {
+        "rule": "NAME_STA_SUFFIX",
+        "rules_fired": [
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 41,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-caihong-bridge-cn-gz-line-11-cn-gz-caihong-bridge-cn-gz-line-8",
       "station_id": "cn-gz-caihong-bridge",
       "from_line_id": "cn-gz-line-11",
@@ -62,12 +150,100 @@
       "to_stop_id": "cn-gz-canton-tower-cn-gz-line-apm"
     },
     {
+      "id": "xfer-cn-gz-canton-tower-cn-gz-line-3-cn-gz-canton-tower-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "station_id": "cn-gz-canton-tower",
+      "from_line_id": "cn-gz-line-3",
+      "to_line_id": "cn-gz-line-thz1",
+      "from_stop_id": "cn-gz-canton-tower-cn-gz-line-3",
+      "to_stop_id": "cn-gz-canton-tower-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "walk_time_seconds": 250,
+      "walk_distance_meters": 208,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-canton-tower__cn-gz-canton-tower-thz1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 208,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-canton-tower-cn-gz-line-apm-cn-gz-canton-tower-cn-gz-line-3",
       "station_id": "cn-gz-canton-tower",
       "from_line_id": "cn-gz-line-apm",
       "to_line_id": "cn-gz-line-3",
       "from_stop_id": "cn-gz-canton-tower-cn-gz-line-apm",
       "to_stop_id": "cn-gz-canton-tower-cn-gz-line-3"
+    },
+    {
+      "id": "xfer-cn-gz-canton-tower-cn-gz-line-apm-cn-gz-canton-tower-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "station_id": "cn-gz-canton-tower",
+      "from_line_id": "cn-gz-line-apm",
+      "to_line_id": "cn-gz-line-thz1",
+      "from_stop_id": "cn-gz-canton-tower-cn-gz-line-apm",
+      "to_stop_id": "cn-gz-canton-tower-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "walk_time_seconds": 250,
+      "walk_distance_meters": 208,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-canton-tower__cn-gz-canton-tower-thz1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 208,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-canton-tower-thz1-e69c89e8bda8-cn-gz-line-thz1-cn-gz-canton-tower-cn-gz-line-3",
+      "station_id": "cn-gz-canton-tower-thz1-e69c89e8bda8",
+      "from_line_id": "cn-gz-line-thz1",
+      "to_line_id": "cn-gz-line-3",
+      "from_stop_id": "cn-gz-canton-tower-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "to_stop_id": "cn-gz-canton-tower-cn-gz-line-3",
+      "walk_time_seconds": 250,
+      "walk_distance_meters": 208,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-canton-tower__cn-gz-canton-tower-thz1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 208,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-canton-tower-thz1-e69c89e8bda8-cn-gz-line-thz1-cn-gz-canton-tower-cn-gz-line-apm",
+      "station_id": "cn-gz-canton-tower-thz1-e69c89e8bda8",
+      "from_line_id": "cn-gz-line-thz1",
+      "to_line_id": "cn-gz-line-apm",
+      "from_stop_id": "cn-gz-canton-tower-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "to_stop_id": "cn-gz-canton-tower-cn-gz-line-apm",
+      "walk_time_seconds": 250,
+      "walk_distance_meters": 208,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-canton-tower__cn-gz-canton-tower-thz1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 208,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-changgang-cn-gz-line-2-cn-gz-changgang-cn-gz-line-8",
@@ -84,6 +260,50 @@
       "to_line_id": "cn-gz-line-2",
       "from_stop_id": "cn-gz-changgang-cn-gz-line-8",
       "to_stop_id": "cn-gz-changgang-cn-gz-line-2"
+    },
+    {
+      "id": "xfer-cn-gz-changping-cn-gz-line-21-cn-gz-changping-subway-station-cn-gz-line-thp1",
+      "station_id": "cn-gz-changping",
+      "from_line_id": "cn-gz-line-21",
+      "to_line_id": "cn-gz-line-thp1",
+      "from_stop_id": "cn-gz-changping-cn-gz-line-21",
+      "to_stop_id": "cn-gz-changping-subway-station-cn-gz-line-thp1",
+      "walk_time_seconds": 183,
+      "walk_distance_meters": 120,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-changping__cn-gz-changping-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 120,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-changping-subway-station-cn-gz-line-thp1-cn-gz-changping-cn-gz-line-21",
+      "station_id": "cn-gz-changping-subway-station",
+      "from_line_id": "cn-gz-line-thp1",
+      "to_line_id": "cn-gz-line-21",
+      "from_stop_id": "cn-gz-changping-subway-station-cn-gz-line-thp1",
+      "to_stop_id": "cn-gz-changping-cn-gz-line-21",
+      "walk_time_seconds": 183,
+      "walk_distance_meters": 120,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-changping__cn-gz-changping-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 120,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-chebei-cn-gz-line-13-cn-gz-chebei-cn-gz-line-4",
@@ -134,6 +354,48 @@
       "to_stop_id": "cn-gz-chen-clan-academy-cn-gz-line-1"
     },
     {
+      "id": "xfer-cn-gz-chencun-cn-gz-line-7-cn-gz-chencun-intercity-e59f8ee99985-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "station_id": "cn-gz-chencun",
+      "from_line_id": "cn-gz-line-7",
+      "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "from_stop_id": "cn-gz-chencun-cn-gz-line-7",
+      "to_stop_id": "cn-gz-chencun-intercity-e59f8ee99985-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "walk_time_seconds": 343,
+      "walk_distance_meters": 328,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-chencun__cn-gz-chencun-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 328,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-chencun-intercity-e59f8ee99985-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-chencun-cn-gz-line-7",
+      "station_id": "cn-gz-chencun-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_line_id": "cn-gz-line-7",
+      "from_stop_id": "cn-gz-chencun-intercity-e59f8ee99985-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_stop_id": "cn-gz-chencun-cn-gz-line-7",
+      "walk_time_seconds": 343,
+      "walk_distance_meters": 328,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-chencun__cn-gz-chencun-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 328,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-chigang-cn-gz-line-12-cn-gz-chigang-cn-gz-line-8",
       "station_id": "cn-gz-chigang",
       "from_line_id": "cn-gz-line-12",
@@ -166,6 +428,46 @@
       "to_stop_id": "cn-gz-chisha-cn-gz-line-11"
     },
     {
+      "id": "xfer-cn-gz-civic-square-cn-gz-line-thp1-cn-gz-luogang-cn-gz-line-6",
+      "station_id": "cn-gz-civic-square",
+      "from_line_id": "cn-gz-line-thp1",
+      "to_line_id": "cn-gz-line-6",
+      "from_stop_id": "cn-gz-civic-square-cn-gz-line-thp1",
+      "to_stop_id": "cn-gz-luogang-cn-gz-line-6",
+      "walk_time_seconds": 348,
+      "walk_distance_meters": 335,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-civic-square__cn-gz-luogang",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 335,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-civic-square-cn-gz-line-thp1-cn-gz-luogang-cn-gz-line-7",
+      "station_id": "cn-gz-civic-square",
+      "from_line_id": "cn-gz-line-thp1",
+      "to_line_id": "cn-gz-line-7",
+      "from_stop_id": "cn-gz-civic-square-cn-gz-line-thp1",
+      "to_stop_id": "cn-gz-luogang-cn-gz-line-7",
+      "walk_time_seconds": 348,
+      "walk_distance_meters": 335,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-civic-square__cn-gz-luogang",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 335,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-cultural-park-cn-gz-line-6-cn-gz-cultural-park-cn-gz-line-8",
       "station_id": "cn-gz-cultural-park",
       "from_line_id": "cn-gz-line-6",
@@ -196,6 +498,48 @@
       "to_line_id": "cn-gz-line-5",
       "from_stop_id": "cn-gz-dashadong-cn-gz-line-7",
       "to_stop_id": "cn-gz-dashadong-cn-gz-line-5"
+    },
+    {
+      "id": "xfer-cn-gz-dashi-cn-gz-line-3-cn-gz-dashidong-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-dashi",
+      "from_line_id": "cn-gz-line-3",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-dashi-cn-gz-line-3",
+      "to_stop_id": "cn-gz-dashidong-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 259,
+      "walk_distance_meters": 220,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_DIR/cn-gz-dashi__cn-gz-dashidong",
+      "extras": {
+        "rule": "NAME_DIR",
+        "rules_fired": [
+          "NAME_DIR",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 220,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-dashidong-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-dashi-cn-gz-line-3",
+      "station_id": "cn-gz-dashidong",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-3",
+      "from_stop_id": "cn-gz-dashidong-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-dashi-cn-gz-line-3",
+      "walk_time_seconds": 259,
+      "walk_distance_meters": 220,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_DIR/cn-gz-dashi__cn-gz-dashidong",
+      "extras": {
+        "rule": "NAME_DIR",
+        "rules_fired": [
+          "NAME_DIR",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 220,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-datang-cn-gz-line-11-cn-gz-datang-cn-gz-line-3",
@@ -342,6 +686,50 @@
       "to_stop_id": "cn-gz-fangcun-cn-gz-line-11"
     },
     {
+      "id": "xfer-cn-gz-foshan-west-railway-station-cn-gz-line-f3-cn-gz-foshanxi-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "station_id": "cn-gz-foshan-west-railway-station",
+      "from_line_id": "cn-gz-line-f3",
+      "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "from_stop_id": "cn-gz-foshan-west-railway-station-cn-gz-line-f3",
+      "to_stop_id": "cn-gz-foshanxi-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 133,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_STA_SUFFIX/cn-gz-foshan-west-railway-station__cn-gz-foshanxi",
+      "extras": {
+        "rule": "NAME_STA_SUFFIX",
+        "rules_fired": [
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 133,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-foshanxi-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-foshan-west-railway-station-cn-gz-line-f3",
+      "station_id": "cn-gz-foshanxi",
+      "from_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_line_id": "cn-gz-line-f3",
+      "from_stop_id": "cn-gz-foshanxi-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_stop_id": "cn-gz-foshan-west-railway-station-cn-gz-line-f3",
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 133,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_STA_SUFFIX/cn-gz-foshan-west-railway-station__cn-gz-foshanxi",
+      "extras": {
+        "rule": "NAME_STA_SUFFIX",
+        "rules_fired": [
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 133,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-gaozeng-cn-gz-line-3-cn-gz-gaozeng-cn-gz-line-9",
       "station_id": "cn-gz-gaozeng",
       "from_line_id": "cn-gz-line-3",
@@ -372,6 +760,28 @@
       "to_line_id": "cn-gz-line-1",
       "from_stop_id": "cn-gz-gongyuanqian-cn-gz-line-2",
       "to_stop_id": "cn-gz-gongyuanqian-cn-gz-line-1"
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-baiyun-railway-station-cn-gz-line-12-cn-gz-guangzhoubaiyun-cn-gz-line-guangzhou-qingyuan-intercity",
+      "station_id": "cn-gz-guangzhou-baiyun-railway-station",
+      "from_line_id": "cn-gz-line-12",
+      "to_line_id": "cn-gz-line-guangzhou-qingyuan-intercity",
+      "from_stop_id": "cn-gz-guangzhou-baiyun-railway-station-cn-gz-line-12",
+      "to_stop_id": "cn-gz-guangzhoubaiyun-cn-gz-line-guangzhou-qingyuan-intercity",
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 133,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_STA_SUFFIX/cn-gz-guangzhou-baiyun-railway-station__cn-gz-guangzhoubaiyun",
+      "extras": {
+        "rule": "NAME_STA_SUFFIX",
+        "rules_fired": [
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 133,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-guangzhou-east-railway-station-cn-gz-line-1-cn-gz-guangzhou-east-railway-station-cn-gz-line-11",
@@ -422,6 +832,46 @@
       "to_stop_id": "cn-gz-guangzhou-east-railway-station-cn-gz-line-11"
     },
     {
+      "id": "xfer-cn-gz-guangzhou-north-railway-station-cn-gz-line-9-cn-gz-huadu-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-guangzhou-north-railway-station",
+      "from_line_id": "cn-gz-line-9",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-guangzhou-north-railway-station-cn-gz-line-9",
+      "to_stop_id": "cn-gz-huadu-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 151,
+      "walk_distance_meters": 80,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-north-railway-station__cn-gz-huadu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 80,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-north-railway-station-cn-gz-line-9-cn-gz-huadu-cn-gz-line-guangzhou-qingyuan-intercity",
+      "station_id": "cn-gz-guangzhou-north-railway-station",
+      "from_line_id": "cn-gz-line-9",
+      "to_line_id": "cn-gz-line-guangzhou-qingyuan-intercity",
+      "from_stop_id": "cn-gz-guangzhou-north-railway-station-cn-gz-line-9",
+      "to_stop_id": "cn-gz-huadu-cn-gz-line-guangzhou-qingyuan-intercity",
+      "walk_time_seconds": 151,
+      "walk_distance_meters": 80,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-north-railway-station__cn-gz-huadu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 80,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-guangzhou-railway-station-cn-gz-line-2-cn-gz-guangzhou-railway-station-cn-gz-line-5",
       "station_id": "cn-gz-guangzhou-railway-station",
       "from_line_id": "cn-gz-line-2",
@@ -462,6 +912,66 @@
       "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2"
     },
     {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-2-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-2",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-2-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-2",
+      "to_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-2-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-2",
+      "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-22-cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
       "station_id": "cn-gz-guangzhou-south-railway-station",
       "from_line_id": "cn-gz-line-22",
@@ -484,6 +994,66 @@
       "to_line_id": "cn-gz-line-f2",
       "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
       "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2"
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-22-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-22",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-22-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-22",
+      "to_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-22-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-22",
+      "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-7-cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
@@ -510,6 +1080,66 @@
       "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2"
     },
     {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-7-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-7",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-7-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-7",
+      "to_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-7-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-7",
+      "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-f2-cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
       "station_id": "cn-gz-guangzhou-south-railway-station",
       "from_line_id": "cn-gz-line-f2",
@@ -532,6 +1162,130 @@
       "to_line_id": "cn-gz-line-7",
       "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
       "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-7"
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-f2-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-f2",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-f2-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-f2",
+      "to_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhou-south-railway-station-cn-gz-line-f2-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "station_id": "cn-gz-guangzhou-south-railway-station",
+      "from_line_id": "cn-gz-line-f2",
+      "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "from_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhoubaiyun-cn-gz-line-guangzhou-qingyuan-intercity-cn-gz-guangzhou-baiyun-railway-station-cn-gz-line-12",
+      "station_id": "cn-gz-guangzhoubaiyun",
+      "from_line_id": "cn-gz-line-guangzhou-qingyuan-intercity",
+      "to_line_id": "cn-gz-line-12",
+      "from_stop_id": "cn-gz-guangzhoubaiyun-cn-gz-line-guangzhou-qingyuan-intercity",
+      "to_stop_id": "cn-gz-guangzhou-baiyun-railway-station-cn-gz-line-12",
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 133,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_STA_SUFFIX/cn-gz-guangzhou-baiyun-railway-station__cn-gz-guangzhoubaiyun",
+      "extras": {
+        "rule": "NAME_STA_SUFFIX",
+        "rules_fired": [
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 133,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhouchanglong-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-hanxi-changlong-cn-gz-line-3",
+      "station_id": "cn-gz-guangzhouchanglong",
+      "from_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "to_line_id": "cn-gz-line-3",
+      "from_stop_id": "cn-gz-guangzhouchanglong-cn-gz-line-guangzhou-huizhou-intercity",
+      "to_stop_id": "cn-gz-hanxi-changlong-cn-gz-line-3",
+      "walk_time_seconds": 253,
+      "walk_distance_meters": 212,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_TOKEN/cn-gz-guangzhouchanglong__cn-gz-hanxi-changlong",
+      "extras": {
+        "rule": "NAME_TOKEN",
+        "rules_fired": [
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 212,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-guangzhouchanglong-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-hanxi-changlong-cn-gz-line-7",
+      "station_id": "cn-gz-guangzhouchanglong",
+      "from_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "to_line_id": "cn-gz-line-7",
+      "from_stop_id": "cn-gz-guangzhouchanglong-cn-gz-line-guangzhou-huizhou-intercity",
+      "to_stop_id": "cn-gz-hanxi-changlong-cn-gz-line-7",
+      "walk_time_seconds": 253,
+      "walk_distance_meters": 212,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_TOKEN/cn-gz-guangzhouchanglong__cn-gz-hanxi-changlong",
+      "extras": {
+        "rule": "NAME_TOKEN",
+        "rules_fired": [
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 212,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-guangzhoulianhuashan-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-guangzhoulianhuashan-cn-gz-line-pazhou-lianhuashan-intercity",
@@ -614,12 +1368,54 @@
       "to_stop_id": "cn-gz-haizhu-square-cn-gz-line-2"
     },
     {
+      "id": "xfer-cn-gz-hanxi-changlong-cn-gz-line-3-cn-gz-guangzhouchanglong-cn-gz-line-guangzhou-huizhou-intercity",
+      "station_id": "cn-gz-hanxi-changlong",
+      "from_line_id": "cn-gz-line-3",
+      "to_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "from_stop_id": "cn-gz-hanxi-changlong-cn-gz-line-3",
+      "to_stop_id": "cn-gz-guangzhouchanglong-cn-gz-line-guangzhou-huizhou-intercity",
+      "walk_time_seconds": 253,
+      "walk_distance_meters": 212,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_TOKEN/cn-gz-guangzhouchanglong__cn-gz-hanxi-changlong",
+      "extras": {
+        "rule": "NAME_TOKEN",
+        "rules_fired": [
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 212,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-hanxi-changlong-cn-gz-line-3-cn-gz-hanxi-changlong-cn-gz-line-7",
       "station_id": "cn-gz-hanxi-changlong",
       "from_line_id": "cn-gz-line-3",
       "to_line_id": "cn-gz-line-7",
       "from_stop_id": "cn-gz-hanxi-changlong-cn-gz-line-3",
       "to_stop_id": "cn-gz-hanxi-changlong-cn-gz-line-7"
+    },
+    {
+      "id": "xfer-cn-gz-hanxi-changlong-cn-gz-line-7-cn-gz-guangzhouchanglong-cn-gz-line-guangzhou-huizhou-intercity",
+      "station_id": "cn-gz-hanxi-changlong",
+      "from_line_id": "cn-gz-line-7",
+      "to_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "from_stop_id": "cn-gz-hanxi-changlong-cn-gz-line-7",
+      "to_stop_id": "cn-gz-guangzhouchanglong-cn-gz-line-guangzhou-huizhou-intercity",
+      "walk_time_seconds": 253,
+      "walk_distance_meters": 212,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_TOKEN/cn-gz-guangzhouchanglong__cn-gz-hanxi-changlong",
+      "extras": {
+        "rule": "NAME_TOKEN",
+        "rules_fired": [
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 212,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-hanxi-changlong-cn-gz-line-7-cn-gz-hanxi-changlong-cn-gz-line-3",
@@ -694,12 +1490,92 @@
       "to_stop_id": "cn-gz-higher-education-mega-center-s-cn-gz-line-4"
     },
     {
+      "id": "xfer-cn-gz-huacheng-dadao-cn-gz-line-apm-cn-gz-zhujiang-new-town-cn-gz-line-3",
+      "station_id": "cn-gz-huacheng-dadao",
+      "from_line_id": "cn-gz-line-apm",
+      "to_line_id": "cn-gz-line-3",
+      "from_stop_id": "cn-gz-huacheng-dadao-cn-gz-line-apm",
+      "to_stop_id": "cn-gz-zhujiang-new-town-cn-gz-line-3",
+      "walk_time_seconds": 351,
+      "walk_distance_meters": 340,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-huacheng-dadao__cn-gz-zhujiang-new-town",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 340,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-huacheng-dadao-cn-gz-line-apm-cn-gz-zhujiang-new-town-cn-gz-line-5",
+      "station_id": "cn-gz-huacheng-dadao",
+      "from_line_id": "cn-gz-line-apm",
+      "to_line_id": "cn-gz-line-5",
+      "from_stop_id": "cn-gz-huacheng-dadao-cn-gz-line-apm",
+      "to_stop_id": "cn-gz-zhujiang-new-town-cn-gz-line-5",
+      "walk_time_seconds": 351,
+      "walk_distance_meters": 340,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-huacheng-dadao__cn-gz-zhujiang-new-town",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 340,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-huadu-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-guangzhou-north-railway-station-cn-gz-line-9",
+      "station_id": "cn-gz-huadu",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-9",
+      "from_stop_id": "cn-gz-huadu-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-guangzhou-north-railway-station-cn-gz-line-9",
+      "walk_time_seconds": 151,
+      "walk_distance_meters": 80,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-north-railway-station__cn-gz-huadu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 80,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-huadu-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-huadu-cn-gz-line-guangzhou-qingyuan-intercity",
       "station_id": "cn-gz-huadu",
       "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
       "to_line_id": "cn-gz-line-guangzhou-qingyuan-intercity",
       "from_stop_id": "cn-gz-huadu-cn-gz-line-guangzhou-east-ring-intercity",
       "to_stop_id": "cn-gz-huadu-cn-gz-line-guangzhou-qingyuan-intercity"
+    },
+    {
+      "id": "xfer-cn-gz-huadu-cn-gz-line-guangzhou-qingyuan-intercity-cn-gz-guangzhou-north-railway-station-cn-gz-line-9",
+      "station_id": "cn-gz-huadu",
+      "from_line_id": "cn-gz-line-guangzhou-qingyuan-intercity",
+      "to_line_id": "cn-gz-line-9",
+      "from_stop_id": "cn-gz-huadu-cn-gz-line-guangzhou-qingyuan-intercity",
+      "to_stop_id": "cn-gz-guangzhou-north-railway-station-cn-gz-line-9",
+      "walk_time_seconds": 151,
+      "walk_distance_meters": 80,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-north-railway-station__cn-gz-huadu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 80,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-huadu-cn-gz-line-guangzhou-qingyuan-intercity-cn-gz-huadu-cn-gz-line-guangzhou-east-ring-intercity",
@@ -838,6 +1714,46 @@
       "to_stop_id": "cn-gz-kecun-cn-gz-line-3"
     },
     {
+      "id": "xfer-cn-gz-keyun-lu-cn-gz-line-5-cn-gz-keyunlu-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-keyun-lu",
+      "from_line_id": "cn-gz-line-5",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-keyun-lu-cn-gz-line-5",
+      "to_stop_id": "cn-gz-keyunlu-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 481,
+      "walk_distance_meters": 509,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-keyun-lu__cn-gz-keyunlu-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 509,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-keyunlu-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-keyun-lu-cn-gz-line-5",
+      "station_id": "cn-gz-keyunlu-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-5",
+      "from_stop_id": "cn-gz-keyunlu-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-keyun-lu-cn-gz-line-5",
+      "walk_time_seconds": 481,
+      "walk_distance_meters": 509,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-keyun-lu__cn-gz-keyunlu-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 509,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-kuiqi-lu-cn-gz-line-f2-cn-gz-kuiqi-lu-cn-gz-line-gf",
       "station_id": "cn-gz-kuiqi-lu",
       "from_line_id": "cn-gz-line-f2",
@@ -852,6 +1768,48 @@
       "to_line_id": "cn-gz-line-f2",
       "from_stop_id": "cn-gz-kuiqi-lu-cn-gz-line-gf",
       "to_stop_id": "cn-gz-kuiqi-lu-cn-gz-line-f2"
+    },
+    {
+      "id": "xfer-cn-gz-leigang-cn-gz-line-gf-cn-gz-leigang-tnh1-e69c89e8bda8-cn-gz-line-tnh1",
+      "station_id": "cn-gz-leigang",
+      "from_line_id": "cn-gz-line-gf",
+      "to_line_id": "cn-gz-line-tnh1",
+      "from_stop_id": "cn-gz-leigang-cn-gz-line-gf",
+      "to_stop_id": "cn-gz-leigang-tnh1-e69c89e8bda8-cn-gz-line-tnh1",
+      "walk_time_seconds": 236,
+      "walk_distance_meters": 190,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-leigang__cn-gz-leigang-tnh1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 190,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-leigang-tnh1-e69c89e8bda8-cn-gz-line-tnh1-cn-gz-leigang-cn-gz-line-gf",
+      "station_id": "cn-gz-leigang-tnh1-e69c89e8bda8",
+      "from_line_id": "cn-gz-line-tnh1",
+      "to_line_id": "cn-gz-line-gf",
+      "from_stop_id": "cn-gz-leigang-tnh1-e69c89e8bda8-cn-gz-line-tnh1",
+      "to_stop_id": "cn-gz-leigang-cn-gz-line-gf",
+      "walk_time_seconds": 236,
+      "walk_distance_meters": 190,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-leigang__cn-gz-leigang-tnh1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 190,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-lijiao-cn-gz-line-3-cn-gz-lijiao-cn-gz-line-gf",
@@ -886,6 +1844,28 @@
       "to_stop_id": "cn-gz-linhexi-cn-gz-line-3"
     },
     {
+      "id": "xfer-cn-gz-linyue-dong-cn-gz-line-f2-cn-gz-linyuedong-tnh1-e69c89e8bda8-cn-gz-line-tnh1",
+      "station_id": "cn-gz-linyue-dong",
+      "from_line_id": "cn-gz-line-f2",
+      "to_line_id": "cn-gz-line-tnh1",
+      "from_stop_id": "cn-gz-linyue-dong-cn-gz-line-f2",
+      "to_stop_id": "cn-gz-linyuedong-tnh1-e69c89e8bda8-cn-gz-line-tnh1",
+      "walk_time_seconds": 120,
+      "walk_distance_meters": 17,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-linyue-dong__cn-gz-linyuedong-tnh1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 17,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-linyue-xi-cn-gz-line-f2-cn-gz-linyue-xi-cn-gz-line-tnh1",
       "station_id": "cn-gz-linyue-xi",
       "from_line_id": "cn-gz-line-f2",
@@ -900,6 +1880,70 @@
       "to_line_id": "cn-gz-line-f2",
       "from_stop_id": "cn-gz-linyue-xi-cn-gz-line-tnh1",
       "to_stop_id": "cn-gz-linyue-xi-cn-gz-line-f2"
+    },
+    {
+      "id": "xfer-cn-gz-linyuedong-tnh1-e69c89e8bda8-cn-gz-line-tnh1-cn-gz-linyue-dong-cn-gz-line-f2",
+      "station_id": "cn-gz-linyuedong-tnh1-e69c89e8bda8",
+      "from_line_id": "cn-gz-line-tnh1",
+      "to_line_id": "cn-gz-line-f2",
+      "from_stop_id": "cn-gz-linyuedong-tnh1-e69c89e8bda8-cn-gz-line-tnh1",
+      "to_stop_id": "cn-gz-linyue-dong-cn-gz-line-f2",
+      "walk_time_seconds": 120,
+      "walk_distance_meters": 17,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-linyue-dong__cn-gz-linyuedong-tnh1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 17,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-longdong-cn-gz-line-6-cn-gz-longdong-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-longdong",
+      "from_line_id": "cn-gz-line-6",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-longdong-cn-gz-line-6",
+      "to_stop_id": "cn-gz-longdong-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 314,
+      "walk_distance_meters": 291,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-longdong__cn-gz-longdong-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 291,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-longdong-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-longdong-cn-gz-line-6",
+      "station_id": "cn-gz-longdong-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-6",
+      "from_stop_id": "cn-gz-longdong-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-longdong-cn-gz-line-6",
+      "walk_time_seconds": 314,
+      "walk_distance_meters": 291,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-longdong__cn-gz-longdong-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 291,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-longtan-cn-gz-line-11-cn-gz-longtan-cn-gz-line-18",
@@ -918,12 +1962,52 @@
       "to_stop_id": "cn-gz-longtan-cn-gz-line-11"
     },
     {
+      "id": "xfer-cn-gz-luogang-cn-gz-line-6-cn-gz-civic-square-cn-gz-line-thp1",
+      "station_id": "cn-gz-luogang",
+      "from_line_id": "cn-gz-line-6",
+      "to_line_id": "cn-gz-line-thp1",
+      "from_stop_id": "cn-gz-luogang-cn-gz-line-6",
+      "to_stop_id": "cn-gz-civic-square-cn-gz-line-thp1",
+      "walk_time_seconds": 348,
+      "walk_distance_meters": 335,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-civic-square__cn-gz-luogang",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 335,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-luogang-cn-gz-line-6-cn-gz-luogang-cn-gz-line-7",
       "station_id": "cn-gz-luogang",
       "from_line_id": "cn-gz-line-6",
       "to_line_id": "cn-gz-line-7",
       "from_stop_id": "cn-gz-luogang-cn-gz-line-6",
       "to_stop_id": "cn-gz-luogang-cn-gz-line-7"
+    },
+    {
+      "id": "xfer-cn-gz-luogang-cn-gz-line-7-cn-gz-civic-square-cn-gz-line-thp1",
+      "station_id": "cn-gz-luogang",
+      "from_line_id": "cn-gz-line-7",
+      "to_line_id": "cn-gz-line-thp1",
+      "from_stop_id": "cn-gz-luogang-cn-gz-line-7",
+      "to_stop_id": "cn-gz-civic-square-cn-gz-line-thp1",
+      "walk_time_seconds": 348,
+      "walk_distance_meters": 335,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-civic-square__cn-gz-luogang",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 335,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-luogang-cn-gz-line-7-cn-gz-luogang-cn-gz-line-6",
@@ -998,6 +2082,86 @@
       "to_stop_id": "cn-gz-ouzhuang-cn-gz-line-5"
     },
     {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-2",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-22",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-7",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-f2",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
       "station_id": "cn-gz-panyu",
       "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
@@ -1014,6 +2178,86 @@
       "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity"
     },
     {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "to_line_id": "cn-gz-line-2",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "to_line_id": "cn-gz-line-22",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "to_line_id": "cn-gz-line-7",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
+      "to_line_id": "cn-gz-line-f2",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
       "station_id": "cn-gz-panyu",
       "from_line_id": "cn-gz-line-guangzhou-huizhou-intercity",
@@ -1028,6 +2272,86 @@
       "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
       "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-huizhou-intercity",
       "to_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity"
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_line_id": "cn-gz-line-2",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-2",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_line_id": "cn-gz-line-22",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-22",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_line_id": "cn-gz-line-7",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-7",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "station_id": "cn-gz-panyu",
+      "from_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_line_id": "cn-gz-line-f2",
+      "from_stop_id": "cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_stop_id": "cn-gz-guangzhou-south-railway-station-cn-gz-line-f2",
+      "walk_time_seconds": 392,
+      "walk_distance_meters": 392,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-guangzhou-south-railway-station__cn-gz-panyu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 392,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-panyu-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-panyu-cn-gz-line-guangzhou-east-ring-intercity",
@@ -1102,6 +2426,46 @@
       "to_stop_id": "cn-gz-pazhou-cn-gz-line-8"
     },
     {
+      "id": "xfer-cn-gz-pazhou-cn-gz-line-11-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-pazhou",
+      "from_line_id": "cn-gz-line-11",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-pazhou-cn-gz-line-11",
+      "to_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 805,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-pazhou__cn-gz-pazhou-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 805,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-pazhou-cn-gz-line-11-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "station_id": "cn-gz-pazhou",
+      "from_line_id": "cn-gz-line-11",
+      "to_line_id": "cn-gz-line-pazhou-lianhuashan-intercity",
+      "from_stop_id": "cn-gz-pazhou-cn-gz-line-11",
+      "to_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 805,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-pazhou__cn-gz-pazhou-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 805,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-pazhou-cn-gz-line-8-cn-gz-pazhou-cn-gz-line-11",
       "station_id": "cn-gz-pazhou",
       "from_line_id": "cn-gz-line-8",
@@ -1110,12 +2474,132 @@
       "to_stop_id": "cn-gz-pazhou-cn-gz-line-11"
     },
     {
+      "id": "xfer-cn-gz-pazhou-cn-gz-line-8-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-pazhou",
+      "from_line_id": "cn-gz-line-8",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-pazhou-cn-gz-line-8",
+      "to_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 805,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-pazhou__cn-gz-pazhou-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 805,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-pazhou-cn-gz-line-8-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "station_id": "cn-gz-pazhou",
+      "from_line_id": "cn-gz-line-8",
+      "to_line_id": "cn-gz-line-pazhou-lianhuashan-intercity",
+      "from_stop_id": "cn-gz-pazhou-cn-gz-line-8",
+      "to_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 805,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-pazhou__cn-gz-pazhou-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 805,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-pazhou-cn-gz-line-11",
+      "station_id": "cn-gz-pazhou-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-11",
+      "from_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-pazhou-cn-gz-line-11",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 805,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-pazhou__cn-gz-pazhou-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 805,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-pazhou-cn-gz-line-8",
+      "station_id": "cn-gz-pazhou-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-8",
+      "from_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-pazhou-cn-gz-line-8",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 805,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-pazhou__cn-gz-pazhou-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 805,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
       "station_id": "cn-gz-pazhou-intercity-e59f8ee99985",
       "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
       "to_line_id": "cn-gz-line-pazhou-lianhuashan-intercity",
       "from_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
       "to_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity"
+    },
+    {
+      "id": "xfer-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity-cn-gz-pazhou-cn-gz-line-11",
+      "station_id": "cn-gz-pazhou-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-pazhou-lianhuashan-intercity",
+      "to_line_id": "cn-gz-line-11",
+      "from_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "to_stop_id": "cn-gz-pazhou-cn-gz-line-11",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 805,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-pazhou__cn-gz-pazhou-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 805,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity-cn-gz-pazhou-cn-gz-line-8",
+      "station_id": "cn-gz-pazhou-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-pazhou-lianhuashan-intercity",
+      "to_line_id": "cn-gz-line-8",
+      "from_stop_id": "cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "to_stop_id": "cn-gz-pazhou-cn-gz-line-8",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 805,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-pazhou__cn-gz-pazhou-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 805,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity-cn-gz-pazhou-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
@@ -1190,6 +2674,48 @@
       "to_stop_id": "cn-gz-shayuan-cn-gz-line-8"
     },
     {
+      "id": "xfer-cn-gz-shenjing-cn-gz-line-7-cn-gz-shenjing-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "station_id": "cn-gz-shenjing",
+      "from_line_id": "cn-gz-line-7",
+      "to_line_id": "cn-gz-line-pazhou-lianhuashan-intercity",
+      "from_stop_id": "cn-gz-shenjing-cn-gz-line-7",
+      "to_stop_id": "cn-gz-shenjing-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "walk_time_seconds": 288,
+      "walk_distance_meters": 258,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-shenjing__cn-gz-shenjing-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 258,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-shenjing-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity-cn-gz-shenjing-cn-gz-line-7",
+      "station_id": "cn-gz-shenjing-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-pazhou-lianhuashan-intercity",
+      "to_line_id": "cn-gz-line-7",
+      "from_stop_id": "cn-gz-shenjing-intercity-e59f8ee99985-cn-gz-line-pazhou-lianhuashan-intercity",
+      "to_stop_id": "cn-gz-shenjing-cn-gz-line-7",
+      "walk_time_seconds": 288,
+      "walk_distance_meters": 258,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-shenjing__cn-gz-shenjing-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 258,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-shibi-cn-gz-line-2-cn-gz-shibi-cn-gz-line-7",
       "station_id": "cn-gz-shibi",
       "from_line_id": "cn-gz-line-2",
@@ -1214,12 +2740,104 @@
       "to_stop_id": "cn-gz-shuixi-cn-gz-line-7"
     },
     {
+      "id": "xfer-cn-gz-shuixi-cn-gz-line-21-cn-gz-shuixi-subway-station-cn-gz-line-thp1",
+      "station_id": "cn-gz-shuixi",
+      "from_line_id": "cn-gz-line-21",
+      "to_line_id": "cn-gz-line-thp1",
+      "from_stop_id": "cn-gz-shuixi-cn-gz-line-21",
+      "to_stop_id": "cn-gz-shuixi-subway-station-cn-gz-line-thp1",
+      "walk_time_seconds": 148,
+      "walk_distance_meters": 75,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-shuixi__cn-gz-shuixi-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 75,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-shuixi-cn-gz-line-7-cn-gz-shuixi-cn-gz-line-21",
       "station_id": "cn-gz-shuixi",
       "from_line_id": "cn-gz-line-7",
       "to_line_id": "cn-gz-line-21",
       "from_stop_id": "cn-gz-shuixi-cn-gz-line-7",
       "to_stop_id": "cn-gz-shuixi-cn-gz-line-21"
+    },
+    {
+      "id": "xfer-cn-gz-shuixi-cn-gz-line-7-cn-gz-shuixi-subway-station-cn-gz-line-thp1",
+      "station_id": "cn-gz-shuixi",
+      "from_line_id": "cn-gz-line-7",
+      "to_line_id": "cn-gz-line-thp1",
+      "from_stop_id": "cn-gz-shuixi-cn-gz-line-7",
+      "to_stop_id": "cn-gz-shuixi-subway-station-cn-gz-line-thp1",
+      "walk_time_seconds": 148,
+      "walk_distance_meters": 75,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-shuixi__cn-gz-shuixi-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 75,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-shuixi-subway-station-cn-gz-line-thp1-cn-gz-shuixi-cn-gz-line-21",
+      "station_id": "cn-gz-shuixi-subway-station",
+      "from_line_id": "cn-gz-line-thp1",
+      "to_line_id": "cn-gz-line-21",
+      "from_stop_id": "cn-gz-shuixi-subway-station-cn-gz-line-thp1",
+      "to_stop_id": "cn-gz-shuixi-cn-gz-line-21",
+      "walk_time_seconds": 148,
+      "walk_distance_meters": 75,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-shuixi__cn-gz-shuixi-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 75,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-shuixi-subway-station-cn-gz-line-thp1-cn-gz-shuixi-cn-gz-line-7",
+      "station_id": "cn-gz-shuixi-subway-station",
+      "from_line_id": "cn-gz-line-thp1",
+      "to_line_id": "cn-gz-line-7",
+      "from_stop_id": "cn-gz-shuixi-subway-station-cn-gz-line-thp1",
+      "to_stop_id": "cn-gz-shuixi-cn-gz-line-7",
+      "walk_time_seconds": 148,
+      "walk_distance_meters": 75,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-shuixi__cn-gz-shuixi-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 75,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-south-china-normal-university-cn-gz-line-11-cn-gz-south-china-normal-university-cn-gz-line-3",
@@ -1334,12 +2952,132 @@
       "to_stop_id": "cn-gz-tianhe-park-cn-gz-line-13"
     },
     {
+      "id": "xfer-cn-gz-tianhe-sports-center-cn-gz-line-1-cn-gz-tianhe-sports-center-south-cn-gz-line-apm",
+      "station_id": "cn-gz-tianhe-sports-center",
+      "from_line_id": "cn-gz-line-1",
+      "to_line_id": "cn-gz-line-apm",
+      "from_stop_id": "cn-gz-tianhe-sports-center-cn-gz-line-1",
+      "to_stop_id": "cn-gz-tianhe-sports-center-south-cn-gz-line-apm",
+      "walk_time_seconds": 449,
+      "walk_distance_meters": 467,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_DIR/cn-gz-tianhe-sports-center__cn-gz-tianhe-sports-center-south",
+      "extras": {
+        "rule": "NAME_DIR",
+        "rules_fired": [
+          "NAME_DIR"
+        ],
+        "dist_m": 467,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-tianhe-sports-center-south-cn-gz-line-apm-cn-gz-tianhe-sports-center-cn-gz-line-1",
+      "station_id": "cn-gz-tianhe-sports-center-south",
+      "from_line_id": "cn-gz-line-apm",
+      "to_line_id": "cn-gz-line-1",
+      "from_stop_id": "cn-gz-tianhe-sports-center-south-cn-gz-line-apm",
+      "to_stop_id": "cn-gz-tianhe-sports-center-cn-gz-line-1",
+      "walk_time_seconds": 449,
+      "walk_distance_meters": 467,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_DIR/cn-gz-tianhe-sports-center__cn-gz-tianhe-sports-center-south",
+      "extras": {
+        "rule": "NAME_DIR",
+        "rules_fired": [
+          "NAME_DIR"
+        ],
+        "dist_m": 467,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-tianhenan-cn-gz-line-apm-cn-gz-tiyu-xilu-cn-gz-line-1",
+      "station_id": "cn-gz-tianhenan",
+      "from_line_id": "cn-gz-line-apm",
+      "to_line_id": "cn-gz-line-1",
+      "from_stop_id": "cn-gz-tianhenan-cn-gz-line-apm",
+      "to_stop_id": "cn-gz-tiyu-xilu-cn-gz-line-1",
+      "walk_time_seconds": 327,
+      "walk_distance_meters": 308,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-tianhenan__cn-gz-tiyu-xilu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 308,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-tianhenan-cn-gz-line-apm-cn-gz-tiyu-xilu-cn-gz-line-3",
+      "station_id": "cn-gz-tianhenan",
+      "from_line_id": "cn-gz-line-apm",
+      "to_line_id": "cn-gz-line-3",
+      "from_stop_id": "cn-gz-tianhenan-cn-gz-line-apm",
+      "to_stop_id": "cn-gz-tiyu-xilu-cn-gz-line-3",
+      "walk_time_seconds": 327,
+      "walk_distance_meters": 308,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-tianhenan__cn-gz-tiyu-xilu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 308,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-tiyu-xilu-cn-gz-line-1-cn-gz-tianhenan-cn-gz-line-apm",
+      "station_id": "cn-gz-tiyu-xilu",
+      "from_line_id": "cn-gz-line-1",
+      "to_line_id": "cn-gz-line-apm",
+      "from_stop_id": "cn-gz-tiyu-xilu-cn-gz-line-1",
+      "to_stop_id": "cn-gz-tianhenan-cn-gz-line-apm",
+      "walk_time_seconds": 327,
+      "walk_distance_meters": 308,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-tianhenan__cn-gz-tiyu-xilu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 308,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-tiyu-xilu-cn-gz-line-1-cn-gz-tiyu-xilu-cn-gz-line-3",
       "station_id": "cn-gz-tiyu-xilu",
       "from_line_id": "cn-gz-line-1",
       "to_line_id": "cn-gz-line-3",
       "from_stop_id": "cn-gz-tiyu-xilu-cn-gz-line-1",
       "to_stop_id": "cn-gz-tiyu-xilu-cn-gz-line-3"
+    },
+    {
+      "id": "xfer-cn-gz-tiyu-xilu-cn-gz-line-3-cn-gz-tianhenan-cn-gz-line-apm",
+      "station_id": "cn-gz-tiyu-xilu",
+      "from_line_id": "cn-gz-line-3",
+      "to_line_id": "cn-gz-line-apm",
+      "from_stop_id": "cn-gz-tiyu-xilu-cn-gz-line-3",
+      "to_stop_id": "cn-gz-tianhenan-cn-gz-line-apm",
+      "walk_time_seconds": 327,
+      "walk_distance_meters": 308,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-tianhenan__cn-gz-tiyu-xilu",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 308,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-tiyu-xilu-cn-gz-line-3-cn-gz-tiyu-xilu-cn-gz-line-1",
@@ -1374,12 +3112,92 @@
       "to_stop_id": "cn-gz-wanshengwei-cn-gz-line-8"
     },
     {
+      "id": "xfer-cn-gz-wanshengwei-cn-gz-line-4-cn-gz-wanshengwei-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "station_id": "cn-gz-wanshengwei",
+      "from_line_id": "cn-gz-line-4",
+      "to_line_id": "cn-gz-line-thz1",
+      "from_stop_id": "cn-gz-wanshengwei-cn-gz-line-4",
+      "to_stop_id": "cn-gz-wanshengwei-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 742,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-wanshengwei__cn-gz-wanshengwei-thz1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 742,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-wanshengwei-cn-gz-line-8-cn-gz-wanshengwei-cn-gz-line-4",
       "station_id": "cn-gz-wanshengwei",
       "from_line_id": "cn-gz-line-8",
       "to_line_id": "cn-gz-line-4",
       "from_stop_id": "cn-gz-wanshengwei-cn-gz-line-8",
       "to_stop_id": "cn-gz-wanshengwei-cn-gz-line-4"
+    },
+    {
+      "id": "xfer-cn-gz-wanshengwei-cn-gz-line-8-cn-gz-wanshengwei-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "station_id": "cn-gz-wanshengwei",
+      "from_line_id": "cn-gz-line-8",
+      "to_line_id": "cn-gz-line-thz1",
+      "from_stop_id": "cn-gz-wanshengwei-cn-gz-line-8",
+      "to_stop_id": "cn-gz-wanshengwei-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 742,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-wanshengwei__cn-gz-wanshengwei-thz1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 742,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-wanshengwei-thz1-e69c89e8bda8-cn-gz-line-thz1-cn-gz-wanshengwei-cn-gz-line-4",
+      "station_id": "cn-gz-wanshengwei-thz1-e69c89e8bda8",
+      "from_line_id": "cn-gz-line-thz1",
+      "to_line_id": "cn-gz-line-4",
+      "from_stop_id": "cn-gz-wanshengwei-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "to_stop_id": "cn-gz-wanshengwei-cn-gz-line-4",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 742,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-wanshengwei__cn-gz-wanshengwei-thz1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 742,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-wanshengwei-thz1-e69c89e8bda8-cn-gz-line-thz1-cn-gz-wanshengwei-cn-gz-line-8",
+      "station_id": "cn-gz-wanshengwei-thz1-e69c89e8bda8",
+      "from_line_id": "cn-gz-line-thz1",
+      "to_line_id": "cn-gz-line-8",
+      "from_stop_id": "cn-gz-wanshengwei-thz1-e69c89e8bda8-cn-gz-line-thz1",
+      "to_stop_id": "cn-gz-wanshengwei-cn-gz-line-8",
+      "walk_time_seconds": 600,
+      "walk_distance_meters": 742,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-wanshengwei__cn-gz-wanshengwei-thz1-e69c89e8bda8",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT"
+        ],
+        "dist_m": 742,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-wufeng-cn-gz-line-10-cn-gz-wufeng-cn-gz-line-11",
@@ -1414,12 +3232,104 @@
       "to_stop_id": "cn-gz-wuyangcun-cn-gz-line-10"
     },
     {
+      "id": "xfer-cn-gz-xiangxue-cn-gz-line-6-cn-gz-xiangxue-subway-station-cn-gz-line-thp1",
+      "station_id": "cn-gz-xiangxue",
+      "from_line_id": "cn-gz-line-6",
+      "to_line_id": "cn-gz-line-thp1",
+      "from_stop_id": "cn-gz-xiangxue-cn-gz-line-6",
+      "to_stop_id": "cn-gz-xiangxue-subway-station-cn-gz-line-thp1",
+      "walk_time_seconds": 241,
+      "walk_distance_meters": 196,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-xiangxue__cn-gz-xiangxue-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 196,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-xiangxue-cn-gz-line-6-cn-gz-xiangxue-subway-station-cn-gz-line-thp2",
+      "station_id": "cn-gz-xiangxue",
+      "from_line_id": "cn-gz-line-6",
+      "to_line_id": "cn-gz-line-thp2",
+      "from_stop_id": "cn-gz-xiangxue-cn-gz-line-6",
+      "to_stop_id": "cn-gz-xiangxue-subway-station-cn-gz-line-thp2",
+      "walk_time_seconds": 241,
+      "walk_distance_meters": 196,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-xiangxue__cn-gz-xiangxue-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 196,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-xiangxue-subway-station-cn-gz-line-thp1-cn-gz-xiangxue-cn-gz-line-6",
+      "station_id": "cn-gz-xiangxue-subway-station",
+      "from_line_id": "cn-gz-line-thp1",
+      "to_line_id": "cn-gz-line-6",
+      "from_stop_id": "cn-gz-xiangxue-subway-station-cn-gz-line-thp1",
+      "to_stop_id": "cn-gz-xiangxue-cn-gz-line-6",
+      "walk_time_seconds": 241,
+      "walk_distance_meters": 196,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-xiangxue__cn-gz-xiangxue-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 196,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-xiangxue-subway-station-cn-gz-line-thp1-cn-gz-xiangxue-subway-station-cn-gz-line-thp2",
       "station_id": "cn-gz-xiangxue-subway-station",
       "from_line_id": "cn-gz-line-thp1",
       "to_line_id": "cn-gz-line-thp2",
       "from_stop_id": "cn-gz-xiangxue-subway-station-cn-gz-line-thp1",
       "to_stop_id": "cn-gz-xiangxue-subway-station-cn-gz-line-thp2"
+    },
+    {
+      "id": "xfer-cn-gz-xiangxue-subway-station-cn-gz-line-thp2-cn-gz-xiangxue-cn-gz-line-6",
+      "station_id": "cn-gz-xiangxue-subway-station",
+      "from_line_id": "cn-gz-line-thp2",
+      "to_line_id": "cn-gz-line-6",
+      "from_stop_id": "cn-gz-xiangxue-subway-station-cn-gz-line-thp2",
+      "to_stop_id": "cn-gz-xiangxue-cn-gz-line-6",
+      "walk_time_seconds": 241,
+      "walk_distance_meters": 196,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-xiangxue__cn-gz-xiangxue-subway-station",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_METRO_ACCESS",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 196,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-xiangxue-subway-station-cn-gz-line-thp2-cn-gz-xiangxue-subway-station-cn-gz-line-thp1",
@@ -1574,6 +3484,50 @@
       "to_stop_id": "cn-gz-xinshixu-cn-gz-line-12"
     },
     {
+      "id": "xfer-cn-gz-xintang-cn-gz-line-13-cn-gz-xintangnan-cn-gz-line-guangzhou-shenzhen-intercity",
+      "station_id": "cn-gz-xintang",
+      "from_line_id": "cn-gz-line-13",
+      "to_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
+      "from_stop_id": "cn-gz-xintang-cn-gz-line-13",
+      "to_stop_id": "cn-gz-xintangnan-cn-gz-line-guangzhou-shenzhen-intercity",
+      "walk_time_seconds": 181,
+      "walk_distance_meters": 119,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_DIR/cn-gz-xintang__cn-gz-xintangnan",
+      "extras": {
+        "rule": "NAME_DIR",
+        "rules_fired": [
+          "NAME_DIR",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 119,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-xintangnan-cn-gz-line-guangzhou-shenzhen-intercity-cn-gz-xintang-cn-gz-line-13",
+      "station_id": "cn-gz-xintangnan",
+      "from_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
+      "to_line_id": "cn-gz-line-13",
+      "from_stop_id": "cn-gz-xintangnan-cn-gz-line-guangzhou-shenzhen-intercity",
+      "to_stop_id": "cn-gz-xintang-cn-gz-line-13",
+      "walk_time_seconds": 181,
+      "walk_distance_meters": 119,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_DIR/cn-gz-xintang__cn-gz-xintangnan",
+      "extras": {
+        "rule": "NAME_DIR",
+        "rules_fired": [
+          "NAME_DIR",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 119,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-xunfenggang-cn-gz-line-12-cn-gz-xunfenggang-cn-gz-line-6",
       "station_id": "cn-gz-xunfenggang",
       "from_line_id": "cn-gz-line-12",
@@ -1686,6 +3640,48 @@
       "to_stop_id": "cn-gz-yuzhu-cn-gz-line-13"
     },
     {
+      "id": "xfer-cn-gz-zhangcha-cn-gz-line-f2-cn-gz-zhangcha-intercity-e59f8ee99985-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "station_id": "cn-gz-zhangcha",
+      "from_line_id": "cn-gz-line-f2",
+      "to_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "from_stop_id": "cn-gz-zhangcha-cn-gz-line-f2",
+      "to_stop_id": "cn-gz-zhangcha-intercity-e59f8ee99985-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "walk_time_seconds": 233,
+      "walk_distance_meters": 186,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhangcha__cn-gz-zhangcha-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 186,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-zhangcha-intercity-e59f8ee99985-cn-gz-line-guangzhou-zhaoqing-intercity-cn-gz-zhangcha-cn-gz-line-f2",
+      "station_id": "cn-gz-zhangcha-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_line_id": "cn-gz-line-f2",
+      "from_stop_id": "cn-gz-zhangcha-intercity-e59f8ee99985-cn-gz-line-guangzhou-zhaoqing-intercity",
+      "to_stop_id": "cn-gz-zhangcha-cn-gz-line-f2",
+      "walk_time_seconds": 233,
+      "walk_distance_meters": 186,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhangcha__cn-gz-zhangcha-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 186,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-zhenlong-cn-gz-line-14-cn-gz-zhenlong-cn-gz-line-21",
       "station_id": "cn-gz-zhenlong",
       "from_line_id": "cn-gz-line-14",
@@ -1694,12 +3690,100 @@
       "to_stop_id": "cn-gz-zhenlong-cn-gz-line-21"
     },
     {
+      "id": "xfer-cn-gz-zhenlong-cn-gz-line-14-cn-gz-zhenlong-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "station_id": "cn-gz-zhenlong",
+      "from_line_id": "cn-gz-line-14",
+      "to_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
+      "from_stop_id": "cn-gz-zhenlong-cn-gz-line-14",
+      "to_stop_id": "cn-gz-zhenlong-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "walk_time_seconds": 242,
+      "walk_distance_meters": 197,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhenlong__cn-gz-zhenlong-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 197,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-zhenlong-cn-gz-line-21-cn-gz-zhenlong-cn-gz-line-14",
       "station_id": "cn-gz-zhenlong",
       "from_line_id": "cn-gz-line-21",
       "to_line_id": "cn-gz-line-14",
       "from_stop_id": "cn-gz-zhenlong-cn-gz-line-21",
       "to_stop_id": "cn-gz-zhenlong-cn-gz-line-14"
+    },
+    {
+      "id": "xfer-cn-gz-zhenlong-cn-gz-line-21-cn-gz-zhenlong-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "station_id": "cn-gz-zhenlong",
+      "from_line_id": "cn-gz-line-21",
+      "to_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
+      "from_stop_id": "cn-gz-zhenlong-cn-gz-line-21",
+      "to_stop_id": "cn-gz-zhenlong-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "walk_time_seconds": 242,
+      "walk_distance_meters": 197,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhenlong__cn-gz-zhenlong-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 197,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-zhenlong-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity-cn-gz-zhenlong-cn-gz-line-14",
+      "station_id": "cn-gz-zhenlong-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
+      "to_line_id": "cn-gz-line-14",
+      "from_stop_id": "cn-gz-zhenlong-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "to_stop_id": "cn-gz-zhenlong-cn-gz-line-14",
+      "walk_time_seconds": 242,
+      "walk_distance_meters": 197,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhenlong__cn-gz-zhenlong-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 197,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-zhenlong-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity-cn-gz-zhenlong-cn-gz-line-21",
+      "station_id": "cn-gz-zhenlong-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
+      "to_line_id": "cn-gz-line-21",
+      "from_stop_id": "cn-gz-zhenlong-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "to_stop_id": "cn-gz-zhenlong-cn-gz-line-21",
+      "walk_time_seconds": 242,
+      "walk_distance_meters": 197,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhenlong__cn-gz-zhenlong-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 197,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-zhongshanba-cn-gz-line-11-cn-gz-zhongshanba-cn-gz-line-5",
@@ -1718,12 +3802,52 @@
       "to_stop_id": "cn-gz-zhongshanba-cn-gz-line-11"
     },
     {
+      "id": "xfer-cn-gz-zhujiang-new-town-cn-gz-line-3-cn-gz-huacheng-dadao-cn-gz-line-apm",
+      "station_id": "cn-gz-zhujiang-new-town",
+      "from_line_id": "cn-gz-line-3",
+      "to_line_id": "cn-gz-line-apm",
+      "from_stop_id": "cn-gz-zhujiang-new-town-cn-gz-line-3",
+      "to_stop_id": "cn-gz-huacheng-dadao-cn-gz-line-apm",
+      "walk_time_seconds": 351,
+      "walk_distance_meters": 340,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-huacheng-dadao__cn-gz-zhujiang-new-town",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 340,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-zhujiang-new-town-cn-gz-line-3-cn-gz-zhujiang-new-town-cn-gz-line-5",
       "station_id": "cn-gz-zhujiang-new-town",
       "from_line_id": "cn-gz-line-3",
       "to_line_id": "cn-gz-line-5",
       "from_stop_id": "cn-gz-zhujiang-new-town-cn-gz-line-3",
       "to_stop_id": "cn-gz-zhujiang-new-town-cn-gz-line-5"
+    },
+    {
+      "id": "xfer-cn-gz-zhujiang-new-town-cn-gz-line-5-cn-gz-huacheng-dadao-cn-gz-line-apm",
+      "station_id": "cn-gz-zhujiang-new-town",
+      "from_line_id": "cn-gz-line-5",
+      "to_line_id": "cn-gz-line-apm",
+      "from_stop_id": "cn-gz-zhujiang-new-town-cn-gz-line-5",
+      "to_stop_id": "cn-gz-huacheng-dadao-cn-gz-line-apm",
+      "walk_time_seconds": 351,
+      "walk_distance_meters": 340,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/HUB_NEAR/cn-gz-huacheng-dadao__cn-gz-zhujiang-new-town",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 340,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-zhujiang-new-town-cn-gz-line-5-cn-gz-zhujiang-new-town-cn-gz-line-3",
@@ -1734,12 +3858,100 @@
       "to_stop_id": "cn-gz-zhujiang-new-town-cn-gz-line-3"
     },
     {
+      "id": "xfer-cn-gz-zhuliao-cn-gz-line-14-cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "station_id": "cn-gz-zhuliao",
+      "from_line_id": "cn-gz-line-14",
+      "to_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "from_stop_id": "cn-gz-zhuliao-cn-gz-line-14",
+      "to_stop_id": "cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "walk_time_seconds": 232,
+      "walk_distance_meters": 184,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhuliao__cn-gz-zhuliao-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 184,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-zhuliao-cn-gz-line-14-cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "station_id": "cn-gz-zhuliao",
+      "from_line_id": "cn-gz-line-14",
+      "to_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
+      "from_stop_id": "cn-gz-zhuliao-cn-gz-line-14",
+      "to_stop_id": "cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "walk_time_seconds": 232,
+      "walk_distance_meters": 184,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhuliao__cn-gz-zhuliao-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 184,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-zhuliao-cn-gz-line-14",
+      "station_id": "cn-gz-zhuliao-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
+      "to_line_id": "cn-gz-line-14",
+      "from_stop_id": "cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
+      "to_stop_id": "cn-gz-zhuliao-cn-gz-line-14",
+      "walk_time_seconds": 232,
+      "walk_distance_meters": 184,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhuliao__cn-gz-zhuliao-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 184,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
       "id": "xfer-cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity-cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
       "station_id": "cn-gz-zhuliao-intercity-e59f8ee99985",
       "from_line_id": "cn-gz-line-guangzhou-east-ring-intercity",
       "to_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
       "from_stop_id": "cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
       "to_stop_id": "cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity"
+    },
+    {
+      "id": "xfer-cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity-cn-gz-zhuliao-cn-gz-line-14",
+      "station_id": "cn-gz-zhuliao-intercity-e59f8ee99985",
+      "from_line_id": "cn-gz-line-guangzhou-shenzhen-intercity",
+      "to_line_id": "cn-gz-line-14",
+      "from_stop_id": "cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity",
+      "to_stop_id": "cn-gz-zhuliao-cn-gz-line-14",
+      "walk_time_seconds": 232,
+      "walk_distance_meters": 184,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_EXACT/cn-gz-zhuliao__cn-gz-zhuliao-intercity-e59f8ee99985",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 184,
+        "walk_model": "auto-v1"
+      }
     },
     {
       "id": "xfer-cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-shenzhen-intercity-cn-gz-zhuliao-intercity-e59f8ee99985-cn-gz-line-guangzhou-east-ring-intercity",
