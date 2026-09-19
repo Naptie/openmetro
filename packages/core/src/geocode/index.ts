@@ -428,7 +428,7 @@ export async function fillCoordinates<T extends StationLike>(
   return stations;
 }
 
-const CASCADE_SOURCE_ORDER = [
+export const CASCADE_SOURCE_ORDER = [
   'known',
   'subway',
   'source',
@@ -438,9 +438,30 @@ const CASCADE_SOURCE_ORDER = [
   'photon'
 ] as const;
 
-function sourcePriority(source: string): number {
-  const i = CASCADE_SOURCE_ORDER.indexOf(source as (typeof CASCADE_SOURCE_ORDER)[number]);
-  return i >= 0 ? i : CASCADE_SOURCE_ORDER.length;
+/**
+ * Fallback level for a failing station during speed validation.
+ * 0 = keep the cascade assignment; 1 = overpass; 2 = photon.
+ */
+export type FallbackLevel = 0 | 1 | 2;
+
+const OVERPASS_SOURCES = new Set(['overpass', 'osm']);
+
+/** All k-subsets of `items`, in stable lexicographic order of indices. */
+function* combinations<T>(items: readonly T[], k: number): Generator<T[]> {
+  if (k < 0 || k > items.length) return;
+  if (k === 0) {
+    yield [];
+    return;
+  }
+  const idx = Array.from({ length: k }, (_, i) => i);
+  for (;;) {
+    yield idx.map((i) => items[i]);
+    let i = k - 1;
+    while (i >= 0 && idx[i] === items.length - k + i) i--;
+    if (i < 0) return;
+    idx[i]++;
+    for (let j = i + 1; j < k; j++) idx[j] = idx[j - 1] + 1;
+  }
 }
 
 async function speedValidateWithFallback<T extends StationLike>(
@@ -459,22 +480,6 @@ async function speedValidateWithFallback<T extends StationLike>(
   }
 ): Promise<void> {
   const byId = new Map(stations.map((s) => [s.id, s]));
-  /** Sources already rejected by speed validation for a station. */
-  const rejected = new Map<string, Set<string>>();
-  const reject = (stationId: string, source: string) => {
-    const set = rejected.get(stationId) ?? new Set<string>();
-    set.add(source);
-    rejected.set(stationId, set);
-  };
-  const rejectedSet = (stationId: string) => rejected.get(stationId) ?? new Set<string>();
-
-  const locations = () => {
-    const map = new Map<string, { lon: number; lat: number; crs: string }>();
-    for (const st of stations) {
-      if (st.location) map.set(st.id, st.location);
-    }
-    return map;
-  };
 
   const ensurePhotonCandidate = async (stationId: string): Promise<void> => {
     const st = byId.get(stationId);
@@ -489,125 +494,161 @@ async function speedValidateWithFallback<T extends StationLike>(
       if (!hit) continue;
       if (!isWithinCityBbox(ctx.city, hit.lon, hit.lat)) continue;
       if (isCoarseCoordinate(hit.lon, hit.lat)) continue;
-      const next = [...list, { source: 'photon', location: hit }];
-      ctx.candidates.set(stationId, next);
+      ctx.candidates.set(stationId, [...list, { source: 'photon', location: hit }]);
       return;
     }
   };
 
-  const orderedCandidates = (stationId: string) => {
-    return [...(ctx.candidates.get(stationId) ?? [])].sort(
-      (a, b) => sourcePriority(a.source) - sourcePriority(b.source)
-    );
+  const overpassCandidate = (stationId: string) =>
+    ctx.candidates.get(stationId)?.find((c) => OVERPASS_SOURCES.has(c.source));
+
+  const photonCandidate = (stationId: string) =>
+    ctx.candidates.get(stationId)?.find((c) => c.source === 'photon');
+
+  type Snapshot = {
+    id: string;
+    location?: { lon: number; lat: number; crs: string };
+    extras?: Record<string, unknown>;
+  };
+  const snapshotAll = (): Snapshot[] =>
+    stations.map((s) => ({
+      id: s.id,
+      location: s.location ? { ...s.location } : undefined,
+      extras: s.extras ? { ...s.extras } : undefined
+    }));
+  const restoreAll = (snap: Snapshot[]) => {
+    for (const row of snap) {
+      const st = byId.get(row.id);
+      if (!st) continue;
+      st.location = row.location ? { ...row.location } : undefined;
+      st.extras = row.extras ? { ...row.extras } : undefined;
+    }
   };
 
-  /** Apply the next unused candidate in cascade order; false when exhausted. */
-  const advanceCandidate = async (stationId: string): Promise<boolean> => {
-    const st = byId.get(stationId);
-    if (!st) return false;
-    const banned = rejectedSet(stationId);
-    const currentSource = (st.extras?.location_source as string | undefined) ?? undefined;
-    const list = orderedCandidates(stationId).filter(
-      (c) => c.source !== currentSource && !banned.has(c.source)
+  const stationIdsWithSegments = new Set<string>();
+  for (const seg of ctx.segments) {
+    stationIdsWithSegments.add(seg.from_station_id);
+    stationIdsWithSegments.add(seg.to_station_id);
+  }
+
+  const evalAll = (): StationSpeedReport[] =>
+    [...stationIdsWithSegments].map((id) =>
+      evaluateStationSpeed(stations, ctx.segments, id, { lines: ctx.lines })
     );
-    if (list.length > 0) {
-      ctx.setLocation(st, list[0].location, list[0].source);
-      return true;
+
+  const reports = evalAll();
+  for (const r of reports) ctx.onSpeedValidate?.(r);
+
+  const failing = reports
+    .filter((r) => !r.ok)
+    .map((r) => r.station_id)
+    .sort();
+  if (failing.length === 0) return;
+
+  const formatFailures = (rs: StationSpeedReport[]) =>
+    rs
+      .filter((r) => !r.ok)
+      .map((r) => formatSpeedReport(r))
+      .join('\n  ');
+
+  /** Resolve coords for (station, level); undefined when that level is unavailable. */
+  const resolveLevel = async (
+    stationId: string,
+    level: FallbackLevel
+  ): Promise<{ source: string; location: GeoResult } | undefined> => {
+    if (level === 0) {
+      const st = byId.get(stationId);
+      if (!st?.location) return undefined;
+      return {
+        source: String((st.extras?.location_source as string | undefined) ?? 'source'),
+        location: { lon: st.location.lon, lat: st.location.lat, crs: 'gcj02' }
+      };
+    }
+    if (level === 1) {
+      const c = overpassCandidate(stationId);
+      return c ? { source: 'overpass', location: c.location } : undefined;
     }
     await ensurePhotonCandidate(stationId);
-    const photon = (ctx.candidates.get(stationId) ?? []).find(
-      (c) => c.source === 'photon' && c.source !== currentSource && !banned.has(c.source)
-    );
-    if (photon) {
-      ctx.setLocation(st, photon.location, photon.source);
+    const c = photonCandidate(stationId);
+    return c ? { source: 'photon', location: c.location } : undefined;
+  };
+
+  /**
+   * Apply levels to the failing set (0 = leave as-is), re-check the whole
+   * network, restore on failure. Returns true when every station passes.
+   */
+  const tryAssignment = async (assign: Map<string, FallbackLevel>): Promise<boolean> => {
+    const snap = snapshotAll();
+    for (const [id, level] of assign) {
+      if (level === 0) continue;
+      const cand = await resolveLevel(id, level);
+      if (!cand) {
+        restoreAll(snap);
+        return false;
+      }
+      ctx.setLocation(byId.get(id) as T, cand.location, cand.source);
+    }
+    const next = evalAll();
+    const bad = next.filter((r) => !r.ok);
+    if (bad.length === 0) {
+      for (const r of next) ctx.onSpeedValidate?.(r);
       return true;
     }
+    restoreAll(snap);
     return false;
   };
 
-  const evalStation = (stationId: string) =>
-    evaluateStationSpeed(stations, ctx.segments, stationId, { lines: ctx.lines });
-
-  // Initial evaluation of every station that participates in timed adjacency.
-  let reports = new Map<string, StationSpeedReport>();
-  const refreshReports = () => {
-    const locs = locations();
-    const next = new Map<string, StationSpeedReport>();
-    for (const seg of ctx.segments) {
-      for (const id of [seg.from_station_id, seg.to_station_id]) {
-        if (next.has(id)) continue;
-        next.set(id, evalStation(id));
-      }
-    }
-    void locs;
-    reports = next;
+  const baseAssign = (): Map<string, FallbackLevel> => {
+    const m = new Map<string, FallbackLevel>();
+    for (const id of failing) m.set(id, 0);
+    return m;
   };
-  refreshReports();
 
-  const failing = () =>
-    [...reports.values()]
-      .filter((r) => !r.ok)
-      .sort((a, b) => {
-        // Worst leave-one-out ratio first — the most implausible coords.
-        const ar = Math.min(...a.violations.map((v) => v.ratio), Number.POSITIVE_INFINITY);
-        const br = Math.min(...b.violations.map((v) => v.ratio), Number.POSITIVE_INFINITY);
-        if (ar !== br) return ar - br;
-        return (
-          Math.max(...b.violations.map((v) => v.ratio), 0) -
-          Math.max(...a.violations.map((v) => v.ratio), 0)
-        );
-      });
+  const n = failing.length;
+  const maxEvaluations = 4096;
+  let evaluations = 0;
 
-  const maxPasses = stations.length * CASCADE_SOURCE_ORDER.length + 8;
-  for (let pass = 0; pass < maxPasses; pass++) {
-    refreshReports();
-    for (const report of reports.values()) ctx.onSpeedValidate?.(report);
+  const evaluateAssign = async (assign: Map<string, FallbackLevel>): Promise<boolean> => {
+    evaluations++;
+    if (evaluations > maxEvaluations) {
+      throw new Error(
+        `Coordinate speed validation exceeded ${maxEvaluations} fallback combinations (${n} failing stations)`
+      );
+    }
+    return tryAssignment(assign);
+  };
 
-    const bad = failing();
-    if (bad.length === 0) return;
-
-    const worst = bad[0];
-    const st = byId.get(worst.station_id);
-    if (!st) return;
-    const currentSource = (st.extras?.location_source as string | undefined) ?? '';
-    // Current candidate failed speed validation — reject it and move on.
-    if (currentSource) reject(worst.station_id, currentSource);
-    const advanced = await advanceCandidate(worst.station_id);
-    if (!advanced) {
-      const remaining = bad.filter((r) => {
-        const src = (byId.get(r.station_id)?.extras?.location_source as string | undefined) ?? '';
-        const banned = rejectedSet(r.station_id);
-        return (
-          !src || !banned.has(src) || banned.size < (ctx.candidates.get(r.station_id)?.length ?? 0)
-        );
-      });
-      // Try other failing stations before declaring failure.
-      let progressed = false;
-      for (const r of bad.slice(1)) {
-        const src = (byId.get(r.station_id)?.extras?.location_source as string | undefined) ?? '';
-        if (src) reject(r.station_id, src);
-        if (await advanceCandidate(r.station_id)) {
-          progressed = true;
-          break;
-        }
-      }
-      if (!progressed) {
-        const details = bad.map((r) => formatSpeedReport(r)).join('\n  ');
-        const err = new Error(
-          `Coordinate speed validation failed — no source candidate passed leave-one-out checks:\n  ${details}`
-        );
-        if (ctx.failOnInvalid) throw err;
-        return;
-      }
-      void remaining;
+  // Phase 1: only k=1 on a growing subset of failing stations; others stay k=0.
+  for (let m = 1; m <= n; m++) {
+    for (const subset of combinations(failing, m)) {
+      const assign = baseAssign();
+      for (const id of subset) assign.set(id, 1);
+      if (await evaluateAssign(assign)) return;
     }
   }
 
-  refreshReports();
-  const stillBad = failing();
+  // Phase 2: introduce k=2 stations; remaining stations enumerate k∈{0,1}
+  // in the same "more k=1 first-subsets later" order as phase 1.
+  for (let m2 = 1; m2 <= n; m2++) {
+    for (const twoSet of combinations(failing, m2)) {
+      const rest = failing.filter((id) => !twoSet.includes(id));
+      for (let m1 = 0; m1 <= rest.length; m1++) {
+        for (const oneSet of combinations(rest, m1)) {
+          const assign = baseAssign();
+          for (const id of oneSet) assign.set(id, 1);
+          for (const id of twoSet) assign.set(id, 2);
+          if (await evaluateAssign(assign)) return;
+        }
+      }
+    }
+  }
+
+  const finalReports = evalAll();
+  const stillBad = finalReports.filter((r) => !r.ok);
   if (stillBad.length > 0 && ctx.failOnInvalid) {
-    const details = stillBad.map((r) => formatSpeedReport(r)).join('\n  ');
-    throw new Error(`Coordinate speed validation failed after source fallback:\n  ${details}`);
+    throw new Error(
+      `Coordinate speed validation failed — no fallback assignment (k∈{0,1,2}) passed:\n  ${formatFailures(finalReports)}`
+    );
   }
 }
 

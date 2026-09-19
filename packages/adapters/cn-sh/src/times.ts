@@ -167,10 +167,7 @@ function totalSeconds(path: PlantripPath | undefined): number | undefined {
   return minutesToSeconds(path?.time);
 }
 
-function transferSeconds(
-  path: PlantripPath | undefined,
-  hubName?: string
-): number | undefined {
+function transferSeconds(path: PlantripPath | undefined, hubName?: string): number | undefined {
   const hits = (path?.transferStationList ?? []).filter(
     (t) => minutesToSeconds(t.transferStationTime) != null
   );
@@ -296,9 +293,7 @@ export interface ShanghaiTimesInput {
   delayMs?: number;
 }
 
-export async function collectShanghaiPlannerTimes(
-  input: ShanghaiTimesInput
-): Promise<{
+export async function collectShanghaiPlannerTimes(input: ShanghaiTimesInput): Promise<{
   segments: HarvestedSegmentTime[];
   transfers: HarvestedTransferTime[];
   stats: {
@@ -587,10 +582,14 @@ export async function collectShanghaiPlannerTimes(
       `infra=${stats.segmentInfra + stats.transferInfra}`
   );
   if (unresolvedSeg.length) {
-    console.log(`  unresolved segments (${unresolvedSeg.length}): ${unresolvedSeg.slice(0, 12).join(', ')}${unresolvedSeg.length > 12 ? '…' : ''}`);
+    console.log(
+      `  unresolved segments (${unresolvedSeg.length}): ${unresolvedSeg.slice(0, 12).join(', ')}${unresolvedSeg.length > 12 ? '…' : ''}`
+    );
   }
   if (stillUnresolved.length) {
-    console.log(`  unresolved transfers (${stillUnresolved.length}): ${stillUnresolved.slice(0, 12).join(', ')}${stillUnresolved.length > 12 ? '…' : ''}`);
+    console.log(
+      `  unresolved transfers (${stillUnresolved.length}): ${stillUnresolved.slice(0, 12).join(', ')}${stillUnresolved.length > 12 ? '…' : ''}`
+    );
   }
 
   // Fail only on infrastructure collapse or when a large share of edges stay
