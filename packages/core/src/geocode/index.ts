@@ -11,6 +11,13 @@ import {
 } from './overpass.js';
 import { geocodeViaPhoton } from './photon.js';
 import {
+  evaluateStationSpeed,
+  formatSpeedReport,
+  type LineModeRef,
+  type SegmentAdjacency,
+  type StationSpeedReport
+} from './speed-validate.js';
+import {
   fetchSubwayStations,
   findSubwayStation,
   indexSubwayStations,
@@ -40,6 +47,21 @@ export {
 } from './overpass.js';
 export { geocodeViaPhoton } from './photon.js';
 export { officialFetchHeaders, proxyUrl } from './proxy.js';
+export {
+  evaluateNetworkSpeeds,
+  evaluateStationSpeed,
+  formatSpeedReport,
+  type LineModeRef,
+  type LocatableLike,
+  MODE_MAX_SPEED_KMH,
+  meanLeaveOneOutSpeedKmh,
+  modeMaxSpeedKmh,
+  type SegmentAdjacency,
+  SPEED_VALIDATE,
+  type SpeedViolation,
+  type StationSpeedReport,
+  UNTRUSTED_TIME_SOURCES
+} from './speed-validate.js';
 export {
   fetchSubwayStations,
   findSubwayStation,
@@ -147,6 +169,17 @@ export async function fillCoordinates<T extends StationLike>(
     onOverpassMatch?: (name: string) => void;
     onGeocode?: (name: string) => void;
     onKnownMatch?: (name: string) => void;
+    /** Adjacent-stop travel times; enables leave-one-out speed validation. */
+    segments?: SegmentAdjacency[];
+    /**
+     * After the cascade assignment, re-check each station against leave-one-out
+     * segment speeds and fall back through remaining sources until the
+     * coordinate passes. Throws when no candidate source is acceptable.
+     */
+    speedValidate?: boolean;
+    /** Default true when `speedValidate` is on. */
+    failOnInvalidCoordinates?: boolean;
+    onSpeedValidate?: (report: StationSpeedReport) => void;
   }
 ): Promise<T[]> {
   const cities = [opts.city, ...(opts.extraCities ?? [])];
@@ -164,6 +197,18 @@ export async function fillCoordinates<T extends StationLike>(
 
   /** id → location, updated as we accept candidates. */
   const placed = new Map<string, StationLocation>();
+
+  /** All discovered source candidates per station, used by speed fallback. */
+  const candidates = new Map<string, { source: string; location: GeoResult }[]>();
+  const addCandidate = (st: T, loc: { lon: number; lat: number; crs?: string }, source: string) => {
+    const list = candidates.get(st.id) ?? [];
+    if (list.some((c) => c.source === source)) return;
+    list.push({
+      source,
+      location: { lon: loc.lon, lat: loc.lat, crs: 'gcj02' }
+    });
+    candidates.set(st.id, list);
+  };
 
   /** Set a station's location and record its provenance in extras. */
   const setLocation = (st: T, loc: StationLocation, source: string) => {
@@ -193,6 +238,7 @@ export async function fillCoordinates<T extends StationLike>(
     ) {
       return false;
     }
+    addCandidate(st, loc, source);
     setLocation(st, loc, source);
     if (source === 'official') opts.onOfficialMatch?.(stationName(st));
     else if (source === 'overpass') opts.onOverpassMatch?.(stationName(st));
@@ -213,6 +259,7 @@ export async function fillCoordinates<T extends StationLike>(
     const known = name ? knownByName.get(name) : undefined;
     if (known) {
       // Hand-verified coordinates win over any geocoder or pre-seeded value.
+      addCandidate(st, known.location, known.source);
       setLocation(st, known.location, known.source);
       opts.onKnownMatch?.(stationName(st));
     }
@@ -231,20 +278,23 @@ export async function fillCoordinates<T extends StationLike>(
     if (n) nameCounts.set(n, (nameCounts.get(n) ?? 0) + 1);
   }
   for (const st of stations) {
-    if (placed.has(st.id)) continue; // known locations already placed in step 0
-    if (st.location) continue; // pre-seeded: validated/kept as 'source' in the drop loop
     const name = stationName(st);
     if (!name) continue;
     // Split same-name platforms: prefer station-id official coords over the
     // first AMap bare-name hit (e.g. 浦东南路 Line 2 vs Line 14).
-    if (official.has(st.id) && (nameCounts.get(name) ?? 0) > 1) continue;
+    const skipAssignForHomonym = official.has(st.id) && (nameCounts.get(name) ?? 0) > 1;
     for (const idx of indices) {
       const hit = findSubwayStation(idx, name);
-      if (hit) {
+      if (!hit) continue;
+      if (!isCoarseCoordinate(hit.location.lon, hit.location.lat)) {
+        addCandidate(st, hit.location, 'subway');
+      }
+      const alreadyPlaced = placed.has(st.id) || !!st.location;
+      if (!alreadyPlaced && !skipAssignForHomonym) {
         setLocation(st, hit.location, 'subway');
         opts.onSubwayMatch?.(stationName(st));
-        break;
       }
+      break;
     }
   }
 
@@ -263,9 +313,10 @@ export async function fillCoordinates<T extends StationLike>(
     officialCandidates.set(st.id, off);
   }
   for (const st of stations) {
-    if (st.location) continue;
     const off = officialCandidates.get(st.id);
     if (!off) continue;
+    addCandidate(st, off, 'official');
+    if (st.location) continue;
     const peerPool = new Map(placed);
     for (const [id, loc] of officialCandidates) {
       if (id !== st.id && !peerPool.has(id)) peerPool.set(id, loc);
@@ -290,7 +341,7 @@ export async function fillCoordinates<T extends StationLike>(
         !isCoarseCoordinate(subwayHit.lon, subwayHit.lat) &&
         isWithinCityBbox(opts.city, subwayHit.lon, subwayHit.lat)
       ) {
-        st.location = undefined;
+        addCandidate(st, subwayHit, 'subway');
         setLocation(st, subwayHit, 'subway');
         opts.onSubwayMatch?.(stationName(st));
         continue;
@@ -304,11 +355,16 @@ export async function fillCoordinates<T extends StationLike>(
       continue;
     }
     // Survived validation: it is a source-feed coordinate (not a geocoder).
+    addCandidate(st, st.location, 'source');
     setLocation(st, st.location, 'source');
   }
 
   // ── 3. Overpass ───────────────────────────────────────────────
-  if (stations.some((st) => !st.location && stationName(st))) {
+  // Fetch whenever stations remain unplaced OR speed validation needs
+  // fallback candidates beyond the cascade winner.
+  const needOverpass =
+    opts.speedValidate === true || stations.some((st) => !st.location && stationName(st));
+  if (needOverpass) {
     const known = [...placed.values()];
     const bbox =
       opts.bbox ??
@@ -321,15 +377,24 @@ export async function fillCoordinates<T extends StationLike>(
     if (bbox) {
       const overpass = indexOverpassStations(await fetchOverpass(bbox));
       for (const st of stations) {
-        if (st.location) continue;
         const name = stationName(st);
         const hit = name ? findOverpassStation(overpass, name) : undefined;
-        if (hit) accept(st, hit.location, 'overpass');
+        if (!hit) continue;
+        if (
+          isCoarseCoordinate(hit.location.lon, hit.location.lat) ||
+          !isWithinCityBbox(opts.city, hit.location.lon, hit.location.lat)
+        ) {
+          continue;
+        }
+        addCandidate(st, hit.location, 'overpass');
+        if (!st.location) accept(st, hit.location, 'overpass');
       }
     }
   }
 
   // ── 4. Photon ─────────────────────────────────────────────────
+  // Only unplaced stations during the cascade; speed fallback queries photon
+  // lazily when a station has exhausted higher-priority candidates.
   for (const st of stations) {
     if (st.location) continue;
     const name = stationName(st);
@@ -344,7 +409,206 @@ export async function fillCoordinates<T extends StationLike>(
     }
   }
 
+  // ── 5. Leave-one-out speed validation + source fallback ───────
+  if (opts.speedValidate && opts.segments?.length) {
+    await speedValidateWithFallback(stations, {
+      segments: opts.segments,
+      candidates,
+      lines: opts.lines,
+      cities,
+      city: opts.city,
+      cityCenter,
+      geocode,
+      failOnInvalid: opts.failOnInvalidCoordinates !== false,
+      onSpeedValidate: opts.onSpeedValidate,
+      setLocation
+    });
+  }
+
   return stations;
+}
+
+const CASCADE_SOURCE_ORDER = [
+  'known',
+  'subway',
+  'source',
+  'official',
+  'overpass',
+  'osm',
+  'photon'
+] as const;
+
+function sourcePriority(source: string): number {
+  const i = CASCADE_SOURCE_ORDER.indexOf(source as (typeof CASCADE_SOURCE_ORDER)[number]);
+  return i >= 0 ? i : CASCADE_SOURCE_ORDER.length;
+}
+
+async function speedValidateWithFallback<T extends StationLike>(
+  stations: T[],
+  ctx: {
+    segments: SegmentAdjacency[];
+    candidates: Map<string, { source: string; location: GeoResult }[]>;
+    lines?: LineModeRef[];
+    cities: string[];
+    city: string;
+    cityCenter?: { lon: number; lat: number };
+    geocode: NonNullable<GeocodeFetchers['geocode']>;
+    failOnInvalid: boolean;
+    onSpeedValidate?: (report: StationSpeedReport) => void;
+    setLocation: (st: T, loc: StationLocation, source: string) => void;
+  }
+): Promise<void> {
+  const byId = new Map(stations.map((s) => [s.id, s]));
+  /** Sources already rejected by speed validation for a station. */
+  const rejected = new Map<string, Set<string>>();
+  const reject = (stationId: string, source: string) => {
+    const set = rejected.get(stationId) ?? new Set<string>();
+    set.add(source);
+    rejected.set(stationId, set);
+  };
+  const rejectedSet = (stationId: string) => rejected.get(stationId) ?? new Set<string>();
+
+  const locations = () => {
+    const map = new Map<string, { lon: number; lat: number; crs: string }>();
+    for (const st of stations) {
+      if (st.location) map.set(st.id, st.location);
+    }
+    return map;
+  };
+
+  const ensurePhotonCandidate = async (stationId: string): Promise<void> => {
+    const st = byId.get(stationId);
+    if (!st) return;
+    const list = ctx.candidates.get(stationId) ?? [];
+    if (list.some((c) => c.source === 'photon')) return;
+    const name = stationName(st);
+    if (!name) return;
+    for (const city of ctx.cities) {
+      const center = cityBbox(city)?.center ?? ctx.cityCenter;
+      const hit = await ctx.geocode(name, city, center);
+      if (!hit) continue;
+      if (!isWithinCityBbox(ctx.city, hit.lon, hit.lat)) continue;
+      if (isCoarseCoordinate(hit.lon, hit.lat)) continue;
+      const next = [...list, { source: 'photon', location: hit }];
+      ctx.candidates.set(stationId, next);
+      return;
+    }
+  };
+
+  const orderedCandidates = (stationId: string) => {
+    return [...(ctx.candidates.get(stationId) ?? [])].sort(
+      (a, b) => sourcePriority(a.source) - sourcePriority(b.source)
+    );
+  };
+
+  /** Apply the next unused candidate in cascade order; false when exhausted. */
+  const advanceCandidate = async (stationId: string): Promise<boolean> => {
+    const st = byId.get(stationId);
+    if (!st) return false;
+    const banned = rejectedSet(stationId);
+    const currentSource = (st.extras?.location_source as string | undefined) ?? undefined;
+    const list = orderedCandidates(stationId).filter(
+      (c) => c.source !== currentSource && !banned.has(c.source)
+    );
+    if (list.length > 0) {
+      ctx.setLocation(st, list[0].location, list[0].source);
+      return true;
+    }
+    await ensurePhotonCandidate(stationId);
+    const photon = (ctx.candidates.get(stationId) ?? []).find(
+      (c) => c.source === 'photon' && c.source !== currentSource && !banned.has(c.source)
+    );
+    if (photon) {
+      ctx.setLocation(st, photon.location, photon.source);
+      return true;
+    }
+    return false;
+  };
+
+  const evalStation = (stationId: string) =>
+    evaluateStationSpeed(stations, ctx.segments, stationId, { lines: ctx.lines });
+
+  // Initial evaluation of every station that participates in timed adjacency.
+  let reports = new Map<string, StationSpeedReport>();
+  const refreshReports = () => {
+    const locs = locations();
+    const next = new Map<string, StationSpeedReport>();
+    for (const seg of ctx.segments) {
+      for (const id of [seg.from_station_id, seg.to_station_id]) {
+        if (next.has(id)) continue;
+        next.set(id, evalStation(id));
+      }
+    }
+    void locs;
+    reports = next;
+  };
+  refreshReports();
+
+  const failing = () =>
+    [...reports.values()]
+      .filter((r) => !r.ok)
+      .sort((a, b) => {
+        // Worst leave-one-out ratio first — the most implausible coords.
+        const ar = Math.min(...a.violations.map((v) => v.ratio), Number.POSITIVE_INFINITY);
+        const br = Math.min(...b.violations.map((v) => v.ratio), Number.POSITIVE_INFINITY);
+        if (ar !== br) return ar - br;
+        return (
+          Math.max(...b.violations.map((v) => v.ratio), 0) -
+          Math.max(...a.violations.map((v) => v.ratio), 0)
+        );
+      });
+
+  const maxPasses = stations.length * CASCADE_SOURCE_ORDER.length + 8;
+  for (let pass = 0; pass < maxPasses; pass++) {
+    refreshReports();
+    for (const report of reports.values()) ctx.onSpeedValidate?.(report);
+
+    const bad = failing();
+    if (bad.length === 0) return;
+
+    const worst = bad[0];
+    const st = byId.get(worst.station_id);
+    if (!st) return;
+    const currentSource = (st.extras?.location_source as string | undefined) ?? '';
+    // Current candidate failed speed validation — reject it and move on.
+    if (currentSource) reject(worst.station_id, currentSource);
+    const advanced = await advanceCandidate(worst.station_id);
+    if (!advanced) {
+      const remaining = bad.filter((r) => {
+        const src = (byId.get(r.station_id)?.extras?.location_source as string | undefined) ?? '';
+        const banned = rejectedSet(r.station_id);
+        return (
+          !src || !banned.has(src) || banned.size < (ctx.candidates.get(r.station_id)?.length ?? 0)
+        );
+      });
+      // Try other failing stations before declaring failure.
+      let progressed = false;
+      for (const r of bad.slice(1)) {
+        const src = (byId.get(r.station_id)?.extras?.location_source as string | undefined) ?? '';
+        if (src) reject(r.station_id, src);
+        if (await advanceCandidate(r.station_id)) {
+          progressed = true;
+          break;
+        }
+      }
+      if (!progressed) {
+        const details = bad.map((r) => formatSpeedReport(r)).join('\n  ');
+        const err = new Error(
+          `Coordinate speed validation failed — no source candidate passed leave-one-out checks:\n  ${details}`
+        );
+        if (ctx.failOnInvalid) throw err;
+        return;
+      }
+      void remaining;
+    }
+  }
+
+  refreshReports();
+  const stillBad = failing();
+  if (stillBad.length > 0 && ctx.failOnInvalid) {
+    const details = stillBad.map((r) => formatSpeedReport(r)).join('\n  ');
+    throw new Error(`Coordinate speed validation failed after source fallback:\n  ${details}`);
+  }
 }
 
 export type {

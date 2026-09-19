@@ -111,6 +111,14 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
       lines: canonical.lines.map((l) => ({ id: l.id, mode: l.mode })),
       officialLocations: canonical.officialLocations,
       knownLocations: KNOWN_LOCATIONS,
+      segments: canonical.segments.map((s) => ({
+        from_station_id: s.from_station_id,
+        to_station_id: s.to_station_id,
+        line_id: s.line_id,
+        travel_time_seconds: s.travel_time_seconds,
+        travel_time_source: s.travel_time_source
+      })),
+      speedValidate: true,
       onSubwayMatch: () => subwayMatched++,
       onOfficialMatch: () => officialMatched++,
       onOverpassMatch: () => overpassMatched++,
