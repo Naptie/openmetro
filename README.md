@@ -130,9 +130,9 @@ therefore carries a `routing` block (`weight`, `default_transfer_seconds`,
 Each network records per-layer precision and coverage in `network.json.quality`.
 Per-layer detail lives in [data/QUALITY.md](data/QUALITY.md); the dashboard
 below is the generated SVG asset (regenerated on data sync, not by editing
-this README).
+this README). A copy also sits at [data/quality.svg](data/quality.svg).
 
-![Open Metro data quality](docs/quality.svg)
+![Open Metro data quality](data/quality.svg)
 
 ## Tech stack
 

@@ -1,10 +1,10 @@
 # Data quality
 
-![Data quality](../docs/quality.svg)
+![Data quality](./quality.svg)
 
 Generated from each network’s `network.json.quality` after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-19T09:40:37.063Z_
+_Updated 2026-09-19T13:32:00.179Z_
 
 ## 北京地铁 / Beijing Subway (`cn-bj`)
 

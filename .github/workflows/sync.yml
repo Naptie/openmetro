@@ -258,7 +258,8 @@ jobs:
           fi
 
           # Refresh quality summary from the overlayed network.json.quality
-          # blocks (data/QUALITY.md + docs/quality.svg). README is not touched.
+          # blocks (data/QUALITY.md + data/quality.svg + docs/quality.svg).
+          # README is not touched.
           bun run scripts/write-quality-report.ts
 
           git add -A data docs/quality.svg

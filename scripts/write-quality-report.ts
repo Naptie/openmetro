@@ -1,6 +1,7 @@
 /**
  * Generate the data-quality summary:
- * - `docs/quality.svg` — GitHub-renderable dashboard
+ * - `docs/quality.svg` — GitHub-renderable dashboard (README embed)
+ * - `data/quality.svg` — same dashboard next to QUALITY.md (data branch)
  * - `data/QUALITY.md` — full per-network markdown detail
  *
  * Does not touch README.md (no generated markers / timestamps there).
@@ -256,15 +257,19 @@ function detailSections(networks: NetworkDoc[]): string[] {
 export async function writeQualityReport(root: string): Promise<string[]> {
   const networks = await loadNetworks(root);
   const generatedAt = new Date().toISOString();
+  const svgBody = `${buildQualitySvg(networks, generatedAt)}\n`;
 
-  const svgPath = join(root, 'docs', 'quality.svg');
-  await mkdir(dirname(svgPath), { recursive: true });
-  await writeFile(svgPath, `${buildQualitySvg(networks, generatedAt)}\n`, 'utf-8');
+  const docsSvgPath = join(root, 'docs', 'quality.svg');
+  await mkdir(dirname(docsSvgPath), { recursive: true });
+  await writeFile(docsSvgPath, svgBody, 'utf-8');
+
+  const dataSvgPath = join(root, 'data', 'quality.svg');
+  await writeFile(dataSvgPath, svgBody, 'utf-8');
 
   const full: string[] = [
     '# Data quality',
     '',
-    '![Data quality](../docs/quality.svg)',
+    '![Data quality](./quality.svg)',
     '',
     'Generated from each network’s `network.json.quality` after data sync. ' +
       'Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).',
@@ -286,7 +291,7 @@ export async function writeQualityReport(root: string): Promise<string[]> {
   const qualityPath = join(root, 'data', 'QUALITY.md');
   await writeFile(qualityPath, `${full.join('\n')}\n`, 'utf-8');
 
-  return [svgPath, qualityPath];
+  return [docsSvgPath, dataSvgPath, qualityPath];
 }
 
 const isDirect = process.argv[1]?.includes('write-quality-report');
