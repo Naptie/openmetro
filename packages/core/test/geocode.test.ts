@@ -10,6 +10,7 @@ import {
   type OverpassStation,
   wgs84ToGcj02
 } from '../src/geocode/overpass.js';
+import { findSubwayStation, indexSubwayStations } from '../src/geocode/subway.js';
 import { foldRareCharacters } from '../src/name-utils.js';
 
 test('wgs84ToGcj02 converts a known point inside China', () => {
@@ -160,4 +161,58 @@ test('fillCoordinates drops pre-seeded coords outside the city bbox', async () =
     }
   });
   assert.equal(out[0].location, undefined);
+});
+
+function subwayHit(name: string, lon: number, lat: number) {
+  return {
+    name,
+    location: { lon, lat, crs: 'gcj02' as const },
+    poiid: `poi-${name}`
+  };
+}
+
+test('indexSubwayStations still indexes AMap line-suffixed names by bare key', () => {
+  const idx = indexSubwayStations([
+    subwayHit('国家会展中心(2号线)', 121.299, 31.188),
+    subwayHit('林岳东(2号线)', 113.249693, 22.993909)
+  ]);
+  assert.equal(findSubwayStation(idx, '国家会展中心(2号线)')?.name, '国家会展中心(2号线)');
+  assert.equal(findSubwayStation(idx, '国家会展中心')?.name, '国家会展中心(2号线)');
+  assert.equal(findSubwayStation(idx, '林岳东')?.name, '林岳东(2号线)');
+});
+
+test('findSubwayStation does not strip official query names onto AMap metro twins', () => {
+  // AMap is metro-only; 陈村(城际) must not resolve to the metro POI 陈村.
+  const metroLoc = subwayHit('陈村', 113.236869, 22.967991);
+  const idx = indexSubwayStations([metroLoc]);
+  assert.equal(findSubwayStation(idx, '陈村')?.name, '陈村');
+  assert.equal(findSubwayStation(idx, '陈村(城际)'), undefined);
+  assert.equal(findSubwayStation(idx, '科韵路（城际）'), undefined);
+  assert.equal(findSubwayStation(idx, '竹料（城际）'), undefined);
+});
+
+test('fillCoordinates keeps intercity twins off the AMap metro POI', async () => {
+  const stations = [
+    { id: 'cn-gz-chencun', names: { zh: '陈村' } } as any,
+    { id: 'cn-gz-chencun-intercity', names: { zh: '陈村(城际)' } } as any
+  ];
+  const official = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>([
+    ['陈村(城际)', { lon: 113.239612, lat: 22.96952, crs: 'gcj02' }]
+  ]);
+  const out = await fillCoordinates(stations, {
+    city: '广州',
+    officialLocations: official,
+    fetchers: {
+      fetchSubway: async () => [subwayHit('陈村', 113.236869, 22.967991)],
+      fetchOverpass: async () => [],
+      geocode: async () => undefined
+    }
+  });
+  const metro = out.find((s) => s.id === 'cn-gz-chencun');
+  const intercity = out.find((s) => s.id === 'cn-gz-chencun-intercity');
+  assert.equal(metro?.extras?.location_source, 'subway');
+  assert.equal(metro?.location?.lon, 113.236869);
+  assert.equal(intercity?.extras?.location_source, 'official');
+  assert.equal(intercity?.location?.lon, 113.239612);
+  assert.notDeepEqual(intercity?.location, metro?.location);
 });

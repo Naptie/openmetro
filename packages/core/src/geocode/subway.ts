@@ -128,9 +128,9 @@ function stripParenthetical(name: string): string {
 }
 
 /**
- * Build a name -> station lookup. Both exact and parenthetical-stripped keys are
- * indexed, so official names match AMap's disambiguated variants (e.g. the two
- * "国家会展中心(2号线)"/"(17号线)" records resolve to "国家会展中心").
+ * Build a name -> station lookup. Both exact and parenthetical-stripped keys
+ * are indexed so official names without parentheses can still hit AMap's
+ * line-disambiguated variants (e.g. 国家会展中心 -> 国家会展中心(2号线)).
  */
 export function indexSubwayStations(stations: SubwayStation[]): Map<string, SubwayStation> {
   const index = new Map<string, SubwayStation>();
@@ -142,10 +142,17 @@ export function indexSubwayStations(stations: SubwayStation[]): Map<string, Subw
   return index;
 }
 
-/** Look up a station by an official Chinese name. */
+/**
+ * Look up a station by its official Chinese name, exact match only.
+ *
+ * The query is intentionally NOT parenthetical-stripped: AMap's subway dataset
+ * is metro-only, so stripping would pin intercity/tram twins like 陈村(城际)
+ * onto the metro POI 陈村 (0 m collision). AMap-side index stripping remains
+ * so bare official names still resolve line-suffixed AMap entries.
+ */
 export function findSubwayStation(
   index: Map<string, SubwayStation>,
   name: string
 ): SubwayStation | undefined {
-  return index.get(name) ?? index.get(stripParenthetical(name));
+  return index.get(name);
 }
