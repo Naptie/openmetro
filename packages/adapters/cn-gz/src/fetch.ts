@@ -85,10 +85,11 @@ async function postJson(path: string, retries = 4): Promise<unknown> {
 export async function fetchServiceTimes(
   stationNames: string[],
   opts: { delayMs?: number; concurrency?: number } = {}
-): Promise<Record<string, GzServiceTime[]>> {
+): Promise<{ servicetimes: Record<string, GzServiceTime[]>; failures: string[] }> {
   const delayMs = opts.delayMs ?? 250;
   const concurrency = opts.concurrency ?? 2;
   const result: Record<string, GzServiceTime[]> = {};
+  const failures: string[] = [];
   let idx = 0;
 
   async function worker() {
@@ -101,15 +102,15 @@ export async function fetchServiceTimes(
           businessObject?: GzServiceTime[];
         };
         result[name] = raw.businessObject ?? [];
-      } catch {
-        // skip failed station
+      } catch (err) {
+        failures.push(`serviceTime ${name}: ${err instanceof Error ? err.message : String(err)}`);
       }
       await sleep(delayMs);
     }
   }
 
   await Promise.all(Array.from({ length: concurrency }, () => worker()));
-  return result;
+  return { servicetimes: result, failures };
 }
 
 interface LinestationCard {
@@ -134,7 +135,10 @@ export async function fetchGuangzhouSources(): Promise<GuangzhouSources> {
   ];
 
   console.log(`  fetch service times (${names.length} stations)`);
-  const servicetimes = await fetchServiceTimes(names, { delayMs: 200, concurrency: 3 });
+  const { servicetimes, failures } = await fetchServiceTimes(names, {
+    delayMs: 200,
+    concurrency: 3
+  });
 
   console.log('  fetch station details');
   const stationDetails: Record<string, GzStationDetail> = {};
@@ -147,11 +151,15 @@ export async function fetchGuangzhouSources(): Promise<GuangzhouSources> {
       };
       const detail = raw.businessObject ?? (raw as unknown as GzStationDetail);
       if (detail?.nameCN) stationDetails[detail.nameCN] = detail;
-    } catch {
-      // optional enrichment
+    } catch (err) {
+      failures.push(`stationDetail ${name}: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
   console.log(`  fetched ${Object.keys(stationDetails).length} station detail(s)`);
+
+  if (failures.length > 0) {
+    throw new Error(`Guangzhou fetch failed (${failures.length}):\n  - ${failures.join('\n  - ')}`);
+  }
 
   return {
     linestation: linestation as unknown as { businessObject: GzLineCard[] },

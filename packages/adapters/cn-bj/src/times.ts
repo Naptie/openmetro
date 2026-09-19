@@ -36,6 +36,11 @@ interface BjRouteResponse {
   price?: number;
 }
 
+/**
+ * Query the official route planner. Network/proxy/HTML/JSON failures throw
+ * after retries so a flaky sync cannot silently drop harvested times.
+ * A successful JSON body with no route still returns the parsed response.
+ */
 async function querySearchStartEnd(
   start: string,
   end: string,
@@ -46,6 +51,7 @@ async function querySearchStartEnd(
       start
     )}&end=${encodeURIComponent(end)}&mintype=1&time=12:00`
   );
+  let lastErr: unknown;
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const res = await fetch(url, {
@@ -56,11 +62,14 @@ async function querySearchStartEnd(
       const text = await res.text();
       if (text.startsWith('<')) throw new Error('html body');
       return JSON.parse(text) as BjRouteResponse;
-    } catch {
+    } catch (err) {
+      lastErr = err;
       await sleep(400 * 2 ** attempt);
     }
   }
-  return undefined;
+  throw new Error(
+    `searchstartend ${start}->${end}: ${lastErr instanceof Error ? lastErr.message : String(lastErr)}`
+  );
 }
 
 function allLegs(j: BjRouteResponse | undefined): BjPathRow[][] {
@@ -107,47 +116,56 @@ export async function collectBeijingPlannerTimes(
   });
   console.log(`  searchstartend adjacent ODs: ${pairs.length}`);
   let segDone = 0;
+  const failures: string[] = [];
   const segResults = await mapPool(
     pairs,
     async (p) => {
       const a = input.stopName(p.from_stop_id);
       const b = input.stopName(p.to_stop_id);
       if (!a || !b) return undefined;
-      const path = firstLeg(await querySearchStartEnd(a, b));
-      segDone++;
-      if (segDone % 100 === 0) console.log(`    adjacent ${segDone}/${pairs.length}`);
-      if (!path || path.length < 2) return undefined;
-      // Single-hop responses are the common case for adjacent pairs.
-      if (path.length === 2) {
-        const t0 = cumSeconds(path[0]);
-        const t1 = cumSeconds(path[1]);
-        if (t0 != null && t1 != null && t1 > t0) {
+      try {
+        const path = firstLeg(await querySearchStartEnd(a, b));
+        if (!path || path.length < 2) return undefined;
+        // Single-hop responses are the common case for adjacent pairs.
+        if (path.length === 2) {
+          const t0 = cumSeconds(path[0]);
+          const t1 = cumSeconds(path[1]);
+          if (t0 != null && t1 != null && t1 > t0) {
+            return {
+              from_stop_id: p.from_stop_id,
+              to_stop_id: p.to_stop_id,
+              travel_time_seconds: t1 - t0,
+              source_id: SOURCE_ID
+            } satisfies HarvestedSegmentTime;
+          }
+        }
+        // Multi-stop first leg: find the hop matching the requested pair.
+        for (let i = 0; i < path.length - 1; i++) {
+          const n0 = stationName(path[i]);
+          const n1 = stationName(path[i + 1]);
+          if (!((n0 === a && n1 === b) || (n0 === b && n1 === a))) continue;
+          const t0 = cumSeconds(path[i]);
+          const t1 = cumSeconds(path[i + 1]);
+          if (t0 == null || t1 == null) continue;
+          const dt = t1 - t0;
+          if (!(dt > 0)) continue;
           return {
             from_stop_id: p.from_stop_id,
             to_stop_id: p.to_stop_id,
-            travel_time_seconds: t1 - t0,
+            travel_time_seconds: dt,
             source_id: SOURCE_ID
           } satisfies HarvestedSegmentTime;
         }
+        return undefined;
+      } catch (err) {
+        failures.push(
+          `segment ${p.from_stop_id}->${p.to_stop_id}: ${err instanceof Error ? err.message : String(err)}`
+        );
+        return undefined;
+      } finally {
+        segDone++;
+        if (segDone % 100 === 0) console.log(`    adjacent ${segDone}/${pairs.length}`);
       }
-      // Multi-stop first leg: find the hop matching the requested pair.
-      for (let i = 0; i < path.length - 1; i++) {
-        const n0 = stationName(path[i]);
-        const n1 = stationName(path[i + 1]);
-        if (!((n0 === a && n1 === b) || (n0 === b && n1 === a))) continue;
-        const t0 = cumSeconds(path[i]);
-        const t1 = cumSeconds(path[i + 1]);
-        if (t0 == null || t1 == null) continue;
-        const dt = t1 - t0;
-        if (!(dt > 0)) continue;
-        return {
-          from_stop_id: p.from_stop_id,
-          to_stop_id: p.to_stop_id,
-          travel_time_seconds: dt,
-          source_id: SOURCE_ID
-        } satisfies HarvestedSegmentTime;
-      }
-      return undefined;
     },
     { concurrency, delayMs }
   );
@@ -197,36 +215,50 @@ export async function collectBeijingPlannerTimes(
   const xferResults = await mapPool(
     jobs,
     async (job) => {
-      const legs = allLegs(await querySearchStartEnd(job.startName, job.endName));
-      xferDone++;
-      if (xferDone % 50 === 0) console.log(`    transfer ${xferDone}/${jobs.length}`);
-      if (legs.length < 2) return undefined;
-      // Transfer walk = t_cum(first row of leg i+1) − t_cum(last row of leg i)
-      // when both endpoints are the hub.
-      for (let i = 0; i < legs.length - 1; i++) {
-        const a = legs[i][legs[i].length - 1];
-        const b = legs[i + 1][0];
-        if (!a || !b) continue;
-        if (stationName(a) !== job.hubName || stationName(b) !== job.hubName) continue;
-        const t0 = cumSeconds(a);
-        const t1 = cumSeconds(b);
-        if (t0 == null || t1 == null) continue;
-        const dt = t1 - t0;
-        // Sanity: metro transfer walks are tens of seconds to ~10 minutes.
-        if (!(dt >= 30 && dt <= 600)) continue;
-        return {
-          station_id: job.station_id,
-          from_line_id: job.from_line_id,
-          to_line_id: job.to_line_id,
-          walk_time_seconds: dt,
-          source_id: SOURCE_ID
-        } satisfies HarvestedTransferTime;
+      try {
+        const legs = allLegs(await querySearchStartEnd(job.startName, job.endName));
+        if (legs.length < 2) return undefined;
+        // Transfer walk = t_cum(first row of leg i+1) − t_cum(last row of leg i)
+        // when both endpoints are the hub.
+        for (let i = 0; i < legs.length - 1; i++) {
+          const a = legs[i][legs[i].length - 1];
+          const b = legs[i + 1][0];
+          if (!a || !b) continue;
+          if (stationName(a) !== job.hubName || stationName(b) !== job.hubName) continue;
+          const t0 = cumSeconds(a);
+          const t1 = cumSeconds(b);
+          if (t0 == null || t1 == null) continue;
+          const dt = t1 - t0;
+          // Sanity: metro transfer walks are tens of seconds to ~10 minutes.
+          if (!(dt >= 30 && dt <= 600)) continue;
+          return {
+            station_id: job.station_id,
+            from_line_id: job.from_line_id,
+            to_line_id: job.to_line_id,
+            walk_time_seconds: dt,
+            source_id: SOURCE_ID
+          } satisfies HarvestedTransferTime;
+        }
+        return undefined;
+      } catch (err) {
+        failures.push(
+          `transfer ${job.station_id} ${job.from_line_id}->${job.to_line_id}: ${err instanceof Error ? err.message : String(err)}`
+        );
+        return undefined;
+      } finally {
+        xferDone++;
+        if (xferDone % 50 === 0) console.log(`    transfer ${xferDone}/${jobs.length}`);
       }
-      return undefined;
     },
     { concurrency, delayMs }
   );
   const transfers = xferResults.filter((x): x is HarvestedTransferTime => x != null);
+
+  if (failures.length > 0) {
+    throw new Error(
+      `Beijing searchstartend fetch failed (${failures.length}):\n  - ${failures.slice(0, 40).join('\n  - ')}${failures.length > 40 ? `\n  … and ${failures.length - 40} more` : ''}`
+    );
+  }
 
   console.log(
     `  searchstartend harvest: ${segments.length} segment times, ${transfers.length} transfer times`

@@ -46,6 +46,11 @@ interface PlantripPath {
   transferStationList?: PlantripTransfer[];
 }
 
+/**
+ * Query the official plantrip planner. Network/proxy/HTML/JSON failures throw
+ * after retries — silent `undefined` lets a flaky sync erase previously
+ * harvested times. A successful JSON body with no path still returns undefined.
+ */
 async function queryPlantrip(
   startId: string,
   endId: string,
@@ -56,6 +61,7 @@ async function queryPlantrip(
       startId
     )}&endId=${encodeURIComponent(endId)}&planTime=00:59&week=1&ticket=oneWay&type=0`
   );
+  let lastErr: unknown;
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const res = await fetch(url, {
@@ -72,11 +78,14 @@ async function queryPlantrip(
       if (text.startsWith('<')) throw new Error('html body');
       const j = JSON.parse(text) as { pathList?: PlantripPath[] };
       return j.pathList?.[0];
-    } catch {
+    } catch (err) {
+      lastErr = err;
       await sleep(400 * 2 ** attempt);
     }
   }
-  return undefined;
+  throw new Error(
+    `plantrip ${startId}->${endId}: ${lastErr instanceof Error ? lastErr.message : String(lastErr)}`
+  );
 }
 
 function minutesToSeconds(v: string | number | undefined): number | undefined {
@@ -112,26 +121,35 @@ export async function collectShanghaiPlannerTimes(
   });
   console.log(`  plantrip adjacent ODs: ${pairs.length}`);
   let segDone = 0;
+  const failures: string[] = [];
   const segResults = await mapPool(
     pairs,
     async (p) => {
       const a = input.stopCode(p.from_stop_id);
       const b = input.stopCode(p.to_stop_id);
       if (!a || !b) return undefined;
-      const path = await queryPlantrip(a, b);
-      segDone++;
-      if (segDone % 100 === 0) console.log(`    adjacent ${segDone}/${pairs.length}`);
-      const stops = path?.passStationList ?? [];
-      if (stops.length < 2) return undefined;
-      // Origin is stop[0]; waitTime on stop[1] is the ride time for this hop.
-      const seconds = minutesToSeconds(stops[1].waitTime);
-      if (seconds == null) return undefined;
-      return {
-        from_stop_id: p.from_stop_id,
-        to_stop_id: p.to_stop_id,
-        travel_time_seconds: seconds,
-        source_id: SOURCE_ID
-      } satisfies HarvestedSegmentTime;
+      try {
+        const path = await queryPlantrip(a, b);
+        const stops = path?.passStationList ?? [];
+        if (stops.length < 2) return undefined;
+        // Origin is stop[0]; waitTime on stop[1] is the ride time for this hop.
+        const seconds = minutesToSeconds(stops[1].waitTime);
+        if (seconds == null) return undefined;
+        return {
+          from_stop_id: p.from_stop_id,
+          to_stop_id: p.to_stop_id,
+          travel_time_seconds: seconds,
+          source_id: SOURCE_ID
+        } satisfies HarvestedSegmentTime;
+      } catch (err) {
+        failures.push(
+          `segment ${p.from_stop_id}->${p.to_stop_id}: ${err instanceof Error ? err.message : String(err)}`
+        );
+        return undefined;
+      } finally {
+        segDone++;
+        if (segDone % 100 === 0) console.log(`    adjacent ${segDone}/${pairs.length}`);
+      }
     },
     { concurrency, delayMs }
   );
@@ -182,28 +200,42 @@ export async function collectShanghaiPlannerTimes(
   const xferResults = await mapPool(
     jobs,
     async (job) => {
-      const path = await queryPlantrip(job.startCode, job.endCode);
-      xferDone++;
-      if (xferDone % 50 === 0) console.log(`    transfer ${xferDone}/${jobs.length}`);
-      const hits = (path?.transferStationList ?? []).filter(
-        (t) => minutesToSeconds(t.transferStationTime) != null
-      );
-      // Prefer the hub we targeted; otherwise first timed entry.
-      const hit =
-        (job.hubName ? hits.find((h) => h.stationName === job.hubName) : undefined) ?? hits[0];
-      const seconds = minutesToSeconds(hit?.transferStationTime);
-      if (seconds == null) return undefined;
-      return {
-        station_id: job.station_id,
-        from_line_id: job.from_line_id,
-        to_line_id: job.to_line_id,
-        walk_time_seconds: seconds,
-        source_id: SOURCE_ID
-      } satisfies HarvestedTransferTime;
+      try {
+        const path = await queryPlantrip(job.startCode, job.endCode);
+        const hits = (path?.transferStationList ?? []).filter(
+          (t) => minutesToSeconds(t.transferStationTime) != null
+        );
+        // Prefer the hub we targeted; otherwise first timed entry.
+        const hit =
+          (job.hubName ? hits.find((h) => h.stationName === job.hubName) : undefined) ?? hits[0];
+        const seconds = minutesToSeconds(hit?.transferStationTime);
+        if (seconds == null) return undefined;
+        return {
+          station_id: job.station_id,
+          from_line_id: job.from_line_id,
+          to_line_id: job.to_line_id,
+          walk_time_seconds: seconds,
+          source_id: SOURCE_ID
+        } satisfies HarvestedTransferTime;
+      } catch (err) {
+        failures.push(
+          `transfer ${job.station_id} ${job.from_line_id}->${job.to_line_id}: ${err instanceof Error ? err.message : String(err)}`
+        );
+        return undefined;
+      } finally {
+        xferDone++;
+        if (xferDone % 50 === 0) console.log(`    transfer ${xferDone}/${jobs.length}`);
+      }
     },
     { concurrency, delayMs }
   );
   const transfers = xferResults.filter((x): x is HarvestedTransferTime => x != null);
+
+  if (failures.length > 0) {
+    throw new Error(
+      `Shanghai plantrip fetch failed (${failures.length}):\n  - ${failures.slice(0, 40).join('\n  - ')}${failures.length > 40 ? `\n  … and ${failures.length - 40} more` : ''}`
+    );
+  }
 
   console.log(
     `  plantrip harvest: ${segments.length} segment times, ${transfers.length} transfer times`

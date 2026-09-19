@@ -102,20 +102,35 @@ export async function fetchShanghai(
   const delayMs = opts.delayMs ?? 200;
   const concurrency = opts.concurrency ?? 3;
 
+  const failures: string[] = [];
+
   // 1) Line sequences.
   const lineSequences: Record<string, { code: string; name: string }[]> = {};
   for (const ln of lineNos) {
-    const html = await postForm('/core/shmetro/mdstationinfoback_new.ashx', {
-      act: 'slsddl',
-      ln: ln,
-      sc: ''
-    });
-    lineSequences[ln] = parseSlsddl(html);
+    try {
+      const html = await postForm('/core/shmetro/mdstationinfoback_new.ashx', {
+        act: 'slsddl',
+        ln: ln,
+        sc: ''
+      });
+      const seq = parseSlsddl(html);
+      if (seq.length === 0) {
+        failures.push(`slsddl line ${ln}: empty station sequence`);
+      } else {
+        lineSequences[ln] = seq;
+      }
+    } catch (err) {
+      failures.push(`slsddl line ${ln}: ${err instanceof Error ? err.message : String(err)}`);
+    }
     await sleep(delayMs);
   }
 
   // 2) Station info for each unique map code (a name may own several).
+  //    A silent skip here drops stations from the rebuild — always fatal.
   const codes = [...new Set(Object.values(nameToCodes).flat())];
+  if (codes.length === 0) {
+    failures.push('lineInfo produced zero station map codes');
+  }
   const stations: Record<string, unknown[]> = {};
   let idx = 0;
   async function worker() {
@@ -125,13 +140,17 @@ export async function fetchShanghai(
       const code = codes[i];
       try {
         stations[code] = await fetchStationCode(code, 'stationInfo');
-      } catch {
-        // skip failed station; leave absent
+      } catch (err) {
+        failures.push(`stationInfo ${code}: ${err instanceof Error ? err.message : String(err)}`);
       }
       await sleep(delayMs);
     }
   }
   await Promise.all(Array.from({ length: concurrency }, () => worker()));
+
+  if (failures.length > 0) {
+    throw new Error(`Shanghai fetch failed (${failures.length}):\n  - ${failures.join('\n  - ')}`);
+  }
 
   return { lineSequences, stations };
 }

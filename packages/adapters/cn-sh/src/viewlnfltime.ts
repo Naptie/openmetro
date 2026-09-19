@@ -78,18 +78,31 @@ export async function fetchAllLines(
 ): Promise<Map<string, LineFlTime>> {
   const delayMs = opts.delayMs ?? 150;
   const out = new Map<string, LineFlTime>();
+  const failures: string[] = [];
   for (const ln of lineNos) {
     try {
       const html = await fetchText(`${BASE}?ln=${encodeURIComponent(ln)}`);
-      out.set(ln, {
-        rows: parseFlTimeTable(html),
-        name: parseLineName(html),
-        note: parseBranchNote(html)
-      });
-    } catch {
-      // skip failed line
+      const rows = parseFlTimeTable(html);
+      if (rows.length === 0) {
+        failures.push(`view_lnfltime line ${ln}: empty timetable rows`);
+      } else {
+        out.set(ln, {
+          rows,
+          name: parseLineName(html),
+          note: parseBranchNote(html)
+        });
+      }
+    } catch (err) {
+      failures.push(
+        `view_lnfltime line ${ln}: ${err instanceof Error ? err.message : String(err)}`
+      );
     }
     await new Promise((r) => setTimeout(r, delayMs));
+  }
+  if (failures.length > 0) {
+    throw new Error(
+      `Shanghai fltime fetch failed (${failures.length}):\n  - ${failures.join('\n  - ')}`
+    );
   }
   return out;
 }
