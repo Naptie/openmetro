@@ -1,9 +1,9 @@
 /**
  * Generate the data-quality summary:
- * - `docs/quality.svg` — GitHub-renderable dashboard (embedded in README)
+ * - `docs/quality.svg` — GitHub-renderable dashboard
  * - `data/QUALITY.md` — full per-network markdown detail
- * - `README.md` — image + pointer between GENERATED markers
  *
+ * Does not touch README.md (no generated markers / timestamps there).
  * Run after a sync (or standalone) so the summary cannot drift from
  * `network.json.quality`.
  *
@@ -37,9 +37,6 @@ interface NetworkDoc {
   names?: { en?: string };
   quality?: NetworkQuality;
 }
-
-const BEGIN = '<!-- BEGIN GENERATED: data-quality -->';
-const END = '<!-- END GENERATED: data-quality -->';
 
 const LAYERS = [
   ['topology', 'Topology'],
@@ -256,18 +253,6 @@ function detailSections(networks: NetworkDoc[]): string[] {
   return lines;
 }
 
-async function injectReadme(root: string, body: string[]): Promise<void> {
-  const readmePath = join(root, 'README.md');
-  const readme = await readFile(readmePath, 'utf-8');
-  const start = readme.indexOf(BEGIN);
-  const end = readme.indexOf(END);
-  if (start < 0 || end < 0 || end < start) {
-    throw new Error(`README.md missing ${BEGIN} … ${END} markers`);
-  }
-  const next = `${readme.slice(0, start + BEGIN.length)}\n\n${body.join('\n')}\n${readme.slice(end)}`;
-  await writeFile(readmePath, next, 'utf-8');
-}
-
 export async function writeQualityReport(root: string): Promise<string[]> {
   const networks = await loadNetworks(root);
   const generatedAt = new Date().toISOString();
@@ -301,21 +286,7 @@ export async function writeQualityReport(root: string): Promise<string[]> {
   const qualityPath = join(root, 'data', 'QUALITY.md');
   await writeFile(qualityPath, `${full.join('\n')}\n`, 'utf-8');
 
-  const readmeBody = [
-    '![Open Metro data quality](docs/quality.svg)',
-    '',
-    `Per-layer precision, coverage, and counts: [data/QUALITY.md](data/QUALITY.md) · _Updated ${generatedAt}_`,
-    '',
-    '| Status | Meaning |',
-    '| --- | --- |',
-    '| complete | Full coverage, official values |',
-    '| partial | Some entities still use network defaults |',
-    '| derived | Full coverage but only derived values |',
-    '| unavailable | No source values |'
-  ];
-  await injectReadme(root, readmeBody);
-
-  return [svgPath, qualityPath, join(root, 'README.md')];
+  return [svgPath, qualityPath];
 }
 
 const isDirect = process.argv[1]?.includes('write-quality-report');

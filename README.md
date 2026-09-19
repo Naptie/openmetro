@@ -128,22 +128,11 @@ therefore carries a `routing` block (`weight`, `default_transfer_seconds`,
 ## Data quality
 
 Each network records per-layer precision and coverage in `network.json.quality`.
-The dashboard below is generated after every data sync — do not edit it by hand.
-Full counts live in [data/QUALITY.md](data/QUALITY.md).
-
-<!-- BEGIN GENERATED: data-quality -->
+Per-layer detail lives in [data/QUALITY.md](data/QUALITY.md); the dashboard
+below is the generated SVG asset (regenerated on data sync, not by editing
+this README).
 
 ![Open Metro data quality](docs/quality.svg)
-
-Per-layer precision, coverage, and counts: [data/QUALITY.md](data/QUALITY.md) · _Updated 2026-09-16T19:27:24.746Z_
-
-| Status | Meaning |
-| --- | --- |
-| complete | Full coverage, official values |
-| partial | Some entities still use network defaults |
-| derived | Full coverage but only derived values |
-| unavailable | No source values |
-<!-- END GENERATED: data-quality -->
 
 ## Tech stack
 
