@@ -14,11 +14,10 @@
 # each network is an independent matrix job so one city failing does not block others.
 #
 # Dest branch is unified: every successful sync is staged as an artifact and
-# pushed onto the single long-lived branch `data` (merge into main manually).
-# Before applying this run's artifacts, an existing `data` branch is merged
-# with `main` so it cannot silently diverge. Merge conflicts outside `data/`
-# fail the job; conflicts under `data/` are resolved then fully overwritten
-# by this run's staged results.
+# published onto the long-lived branch `data` (merge into main manually).
+# Publish always rebuilds `data` from `main`, overlays this run's artifacts,
+# then force-pushes with lease — no merge, so shallow clones cannot hit
+# unrelated-histories errors.
 name: Sync metro data
 
 on:
@@ -222,60 +221,16 @@ jobs:
             exit 0
           fi
 
-          # Accumulate on the living data branch when it exists; otherwise fork from main.
+          # Always rebuild data from main; never merge. A shallow checkout has
+          # no merge-base with an existing data tip and would fail with
+          # "refusing to merge unrelated histories".
           git fetch origin main "$BRANCH" || true
 
           git config user.name "openmetro-sync-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          merged_main=false
-          if git show-ref --verify --quiet "refs/remotes/origin/${BRANCH}"; then
-            git checkout -B "$BRANCH" "origin/${BRANCH}"
-            # Keep the long-lived data branch current with main before staging
-            # this run, so a later data→main merge cannot reintroduce stale
-            # non-data content or surprise conflicts.
-            head_before_merge=$(git rev-parse HEAD)
-            if git merge --no-edit origin/main; then
-              if [ "$(git rev-parse HEAD)" != "$head_before_merge" ]; then
-                merged_main=true
-                echo "Merged main into data (fast-forward or merge commit)"
-              else
-                echo "Data branch already contains main"
-              fi
-            else
-              conflicts=$(git diff --name-only --diff-filter=U || true)
-              if [ -z "$conflicts" ]; then
-                echo "::error::Merge with main failed but reported no conflicted files"
-                exit 1
-              fi
-              outside=$(printf '%s\n' "$conflicts" | grep -v '^data/' || true)
-              if [ -n "$outside" ]; then
-                echo "::error::Merge conflicts outside data/; refusing to auto-resolve:"
-                printf '%s\n' "$outside"
-                echo "Conflicted paths:"
-                printf '%s\n' "$conflicts"
-                exit 1
-              fi
-              echo "All merge conflicts are under data/; preferring main, then this run overwrites"
-              while IFS= read -r path; do
-                [ -z "$path" ] && continue
-                # Prefer main's blob so non-synced networks keep the latest merged
-                # content; this run's artifacts fully overwrite synced networks below.
-                git checkout --theirs -- "$path" 2>/dev/null || true
-                if [ -e "$path" ]; then
-                  git add -- "$path"
-                else
-                  # deleted on main, or checkout could not restore a side
-                  git rm -f -- "$path" 2>/dev/null || git add -- "$path"
-                fi
-              done <<< "$conflicts"
-              git commit --no-edit
-              merged_main=true
-              echo "Resolved data/-only conflicts from main"
-            fi
-          else
-            git checkout -B "$BRANCH" origin/main
-          fi
+          git checkout -B "$BRANCH" origin/main
+          echo "Rebuilt ${BRANCH} from origin/main"
 
           shopt -s nullglob
           applied=0
@@ -287,24 +242,17 @@ jobs:
               applied=$((applied + 1))
             fi
           done
+
           if [ "$applied" -eq 0 ]; then
-            if [ "$merged_main" = true ]; then
-              echo "No data/ trees in artifacts; pushing merge so data is current with main"
-              git push -u origin "$BRANCH" --force-with-lease
-            else
-              echo "No data/ trees in artifacts; nothing to publish"
-            fi
+            echo "No data/ trees in artifacts; nothing to publish"
             exit 0
           fi
 
           git add -A data
           if git diff --cached --quiet; then
-            if [ "$merged_main" = true ]; then
-              echo "Artifacts matched post-merge tree; pushing merge so data is current with main"
-              git push -u origin "$BRANCH" --force-with-lease
-            else
-              echo "Applied artifacts produced no tree changes"
-            fi
+            # Tree already matches main; still publish so data tracks main tip.
+            echo "Artifacts produced no tree changes; pushing ${BRANCH} to match main"
+            git push -u origin "$BRANCH" --force-with-lease
             exit 0
           fi
 
