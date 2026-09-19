@@ -190,11 +190,15 @@ jobs:
   publish:
     name: Publish to data branch
     needs: [topology, fares]
-    # Run whenever at least one sync leg produced data (matrix legs may
-    # fail independently; skipped fares on weekly cron is normal).
+    # Per-network matrix legs fail independently. Publish when any leg
+    # finished (success or failure) — a failed city contributes no artifact
+    # and is simply absent from this publish; the script no-ops if nothing
+    # was staged. Do not require the aggregate topology job to be success.
     if: >
       always() &&
-      (needs.topology.result == 'success' || needs.fares.result == 'success')
+      !cancelled() &&
+      (needs.topology.result == 'success' || needs.topology.result == 'failure' ||
+       needs.fares.result == 'success' || needs.fares.result == 'failure')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -204,6 +208,7 @@ jobs:
 
       - name: Download staged sync data
         uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
           path: artifacts
           pattern: sync-*
