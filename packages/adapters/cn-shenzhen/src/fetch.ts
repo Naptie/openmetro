@@ -277,6 +277,76 @@ export interface MinTimeResponse {
   }[];
 }
 
+/** One calendar bucket of Shenzhen station-detail first/last + headways. */
+export interface ZdxxDayRow {
+  xinshifangxiang?: string;
+  xinshifangxiangen?: string;
+  shoubanche?: string;
+  mobanche?: string;
+  xinshifangxiangxia?: string;
+  xinshifangxiangxiaen?: string;
+  shoubanchexia?: string;
+  mobanchexia?: string;
+  suoshuluxian?: string;
+  suoshuluxianen?: string;
+  gaofenjiange?: string;
+  pingjunjiange?: string;
+  gaofenjiangeen?: string;
+  pingjunjiangeen?: string;
+}
+
+/**
+ * Official station detail from `POST /zdxx` (site query iframe).
+ * Fields: workDay / dayoff / holidays — each may list multi-line interchanges.
+ */
+export interface ZdxxStationResponse {
+  siteName?: string;
+  siteCode?: string;
+  workDay?: ZdxxDayRow[];
+  dayoff?: ZdxxDayRow[];
+  holidays?: ZdxxDayRow[];
+  outAndText?: { outt?: string; textt?: string }[];
+  busInof?: unknown[];
+}
+
+/**
+ * Official station detail + first/last trains + headways.
+ * Used by `styles/index/zdWeb/js/base.js` as `{ StieCode }`.
+ */
+export async function fetchZdxxStation(
+  stationCode: string,
+  retries = 4
+): Promise<ZdxxStationResponse | null> {
+  const url = proxyUrl(`${SITE}/zdxx`);
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < retries; attempt++) {
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: officialFetchHeaders({
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Referer: `${SITE}/styles/index/zdWeb/luohu.html`,
+          Origin: SITE
+        }),
+        body: `StieCode=${encodeURIComponent(stationCode)}`,
+        signal: AbortSignal.timeout(45_000)
+      });
+      if (!res.ok) {
+        if (res.status === 404) return null;
+        throw new Error(`zdxx ${stationCode} -> ${res.status}`);
+      }
+      const text = await res.text();
+      if (!text.trim().startsWith('{')) return null;
+      return JSON.parse(text) as ZdxxStationResponse;
+    } catch (err) {
+      lastErr = err;
+      await sleep(300 * 2 ** attempt);
+    }
+  }
+  void lastErr;
+  return null;
+}
+
 /**
  * Official path/fare planner. Station keys are official codes (`0101`) or
  * Chinese names. `ridingType=0` min-time, `1` min-transfer.

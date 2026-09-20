@@ -17,9 +17,10 @@ import {
   writeCanonical
 } from '@openmetro/core';
 import { fareSpec } from './fares.js';
-import { fetchMinTime, fetchShenzhenSources } from './fetch.js';
+import { fetchMinTime, fetchShenzhenSources, fetchZdxxStation } from './fetch.js';
 import { normalize } from './normalize.js';
 import { collectShenzhenPlannerTimes, collectShenzhenTransferTimes } from './times.js';
+import { buildTimetablesFromZdxx } from './timetable-zdxx.js';
 
 export const transformStations: TransformStations = (stations) => stations;
 
@@ -29,6 +30,8 @@ export interface ShenzhenNormalizeOptions {
   skipGeocode?: boolean;
   skipFares?: boolean;
   skipEnTimetables?: boolean;
+  /** Official station-detail API (`POST /zdxx`) is the primary timetable source. */
+  skipZdxxTimetables?: boolean;
 }
 
 function rootOfDefault(): string {
@@ -128,6 +131,55 @@ export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}):
     if (sid) stationIdByCode.set(code, sid);
   }
 
+  // Primary timetable source: official station detail `POST /zdxx`.
+  // Schema mapping: Mon–Fri=workDay, Sat–Sun=dayoff as length-7 arrays;
+  // holiday calendar lives in extras (schema has no holiday slot).
+  let zdxxTimetableCount = 0;
+  if (!opts.skipZdxxTimetables) {
+    console.log('  fetch official station detail timetables (/zdxx)');
+    // Query every official code: interchange arms often return empty on the
+    // first code (e.g. 国展 1230 empty / 2003 has Line 20).
+    const codes: string[] = [];
+    for (const st of stations) {
+      const official = (st.extras as { official_codes?: string[] } | undefined)?.official_codes;
+      for (const code of official ?? []) {
+        if (code && !codes.includes(code)) codes.push(code);
+      }
+    }
+    const zdxxRecords = new Map<string, Awaited<ReturnType<typeof fetchZdxxStation>>>();
+    let nextCode = 0;
+    const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+    async function zdxxWorker(): Promise<void> {
+      while (true) {
+        const i = nextCode++;
+        if (i >= codes.length) return;
+        const code = codes[i];
+        zdxxRecords.set(code, await fetchZdxxStation(code));
+        await sleep(120);
+      }
+    }
+    await Promise.all(Array.from({ length: 3 }, () => zdxxWorker()));
+    // Drop empty payloads so the builder does not prefer a blank first code.
+    for (const [code, resp] of zdxxRecords) {
+      if (!resp || (!resp.siteName && !resp.workDay?.length && !resp.dayoff?.length)) {
+        zdxxRecords.delete(code);
+      }
+    }
+    const zdxxTt = buildTimetablesFromZdxx({
+      networkId: canonical.network.id,
+      records: zdxxRecords,
+      stations,
+      stops: canonical.stops,
+      patterns: canonical.patterns
+    });
+    zdxxTimetableCount = zdxxTt.length;
+    console.log(`  zdxx timetables: ${zdxxTt.length} (stations queried: ${codes.length})`);
+    if (zdxxTt.length > 0) {
+      // Replace EN/planner-derived tables with official per-station detail.
+      canonical.timetables = zdxxTt;
+    }
+  }
+
   let transfers = deriveTransfers(stations, canonical.stops, [], {
     patterns: canonical.patterns,
     lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
@@ -145,6 +197,9 @@ export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}):
     canonical.timetables
   );
 
+  // Planner harvest remains for segment/transfer times. Skip EN/planner
+  // timetable fill when /zdxx already provided official station details.
+  const useZdxxOnly = zdxxTimetableCount > 0;
   if (!opts.skipPlannerTimes) {
     console.log('  harvest MinTimeJson adjacent segment times');
     const harvested = await collectShenzhenPlannerTimes({
@@ -160,36 +215,37 @@ export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}):
     segments = seg.segments;
     console.log(`  applied planner segment times: ${seg.applied}/${segments.length}`);
 
-    // Prefer official planner first/last when the English table is incomplete.
+    // Prefer official /zdxx tables; only fall back to planner TT hints when needed.
     const haveTt = new Set(
       canonical.timetables.map((t) => `${t.stop_id}|${t.destination_stop_id}|${t.line_id}`)
     );
     const extraTt = [];
     const stopById = new Map(canonical.stops.map((s) => [s.id, s]));
-    for (const hint of harvested.timetableHints) {
-      if (!hint.station_id || !hint.stop_id || !hint.line_id || !hint.pattern_id) continue;
-      if (!hint.first_train || !hint.last_train) continue;
-      const destStopId = hint.destination_stop_id;
-      const key = `${hint.stop_id}|${destStopId}|${hint.line_id}`;
-      if (haveTt.has(key)) continue;
-      // Only accept destination stops that exist on the same line.
-      const destStop = stopById.get(destStopId);
-      if (!destStop || destStop.line_id !== hint.line_id) continue;
-      haveTt.add(key);
-      extraTt.push({
-        id: `${canonical.network.id}-${hint.stop_id}-to-${destStopId}-planner`,
-        station_id: hint.station_id,
-        stop_id: hint.stop_id,
-        line_id: hint.line_id,
-        station_code: hint.station_code,
-        source_id: 'szmc-mintime',
-        destination_stop_id: destStopId,
-        pattern_id: hint.pattern_id,
-        first_train: [hint.first_train],
-        last_train: [hint.last_train],
-        service: 'all_days',
-        direction_type: 'linear' as const
-      });
+    if (!useZdxxOnly) {
+      for (const hint of harvested.timetableHints) {
+        if (!hint.station_id || !hint.stop_id || !hint.line_id || !hint.pattern_id) continue;
+        if (!hint.first_train || !hint.last_train) continue;
+        const destStopId = hint.destination_stop_id;
+        const key = `${hint.stop_id}|${destStopId}|${hint.line_id}`;
+        if (haveTt.has(key)) continue;
+        const destStop = stopById.get(destStopId);
+        if (!destStop || destStop.line_id !== hint.line_id) continue;
+        haveTt.add(key);
+        extraTt.push({
+          id: `${canonical.network.id}-${hint.stop_id}-to-${destStopId}-planner`,
+          station_id: hint.station_id,
+          stop_id: hint.stop_id,
+          line_id: hint.line_id,
+          station_code: hint.station_code,
+          source_id: 'szmc-mintime',
+          destination_stop_id: destStopId,
+          pattern_id: hint.pattern_id,
+          first_train: [hint.first_train],
+          last_train: [hint.last_train],
+          service: 'all_days',
+          direction_type: 'linear' as const
+        });
+      }
     }
 
     console.log('  harvest MinTimeJson transfer walk times');
@@ -204,106 +260,73 @@ export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}):
     transfers = xfer.transfers;
     console.log(`  applied planner transfer times: ${xfer.applied}/${transfers.length}`);
 
-    if (extraTt.length > 0) {
-      canonical.timetables = [...canonical.timetables, ...extraTt];
-      console.log(`  planner timetable hints merged: +${extraTt.length}`);
-    }
-
-    // Fill first/last for operating stops that still have no timetable at all
-    // (newer stations absent from the English Time_Table pages).
-    const stationsWithTt = new Set(canonical.timetables.map((t) => t.station_id));
-    const stopsByLine = new Map<string, typeof canonical.stops>();
-    for (const stop of canonical.stops) {
-      const list = stopsByLine.get(stop.line_id) ?? [];
-      list.push(stop);
-      stopsByLine.set(stop.line_id, list);
-    }
-    const patternByLine = new Map(canonical.patterns.map((p) => [p.line_id, p]));
-    const missingStops = canonical.stops.filter((stop) => {
-      const st = stations.find((s) => s.id === stop.station_id);
-      return st?.status === 'operating' && !stationsWithTt.has(stop.station_id);
-    });
-    console.log(`  fill missing timetables via planner: ${missingStops.length} stops`);
-    const filled: typeof canonical.timetables = [];
-    const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-    for (const stop of missingStops) {
-      const pattern = patternByLine.get(stop.line_id);
-      if (!pattern) continue;
-      const code = codeByStopId.get(stop.id);
-      if (!code) continue;
-      const termini = [pattern.origin_stop_id, pattern.terminal_stop_id].filter(
-        (id) => id && id !== stop.id
-      );
-      for (const destStopId of termini) {
-        const destCode = codeByStopId.get(destStopId);
-        if (!destCode) continue;
-        const resp = await fetchMinTime(code, destCode, 0);
-        await sleep(160);
-        if (!resp) continue;
-        const legs = resp.lineList ?? [];
-        const firstLeg = legs.find((l) => String(l.code || '').trim() === code) ?? legs[0];
-        const first = firstLeg?.firstTime?.trim();
-        const last = firstLeg?.endTime?.trim();
-        const toHH = (v?: string) => {
-          if (!v || v === '--') return undefined;
-          const m = /^(\d{1,2}):(\d{2})/.exec(v);
-          return m ? `${m[1].padStart(2, '0')}:${m[2]}` : undefined;
-        };
-        const f = toHH(first);
-        const l = toHH(last);
-        const key = `${stop.id}|${destStopId}|${stop.line_id}`;
-        if (haveTt.has(key)) continue;
-
-        if (f || l) {
-          haveTt.add(key);
-          filled.push({
-            id: `${canonical.network.id}-${stop.id}-to-${destStopId}-planner-fill`,
-            station_id: stop.station_id,
-            stop_id: stop.id,
-            line_id: stop.line_id,
-            station_code: code,
-            source_id: 'szmc-mintime',
-            destination_stop_id: destStopId,
-            pattern_id: pattern.id,
-            first_train: f ? [f] : [],
-            last_train: l ? [l] : [],
-            service: 'all_days',
-            direction_type: 'linear' as const
-          });
-          break;
-        }
-
-        // Planner may not know brand-new termini — inherit neighbour times.
-        const neigh = pattern.stop_ids.find((sid) => {
-          if (sid === stop.id) return false;
-          return canonical.timetables.some((t) => t.stop_id === sid && t.line_id === stop.line_id);
-        });
-        const neighTt = canonical.timetables.find(
-          (t) => t.stop_id === neigh && t.line_id === stop.line_id
-        );
-        if (!neighTt) continue;
-        haveTt.add(key);
-        filled.push({
-          id: `${canonical.network.id}-${stop.id}-to-${destStopId}-derived`,
-          station_id: stop.station_id,
-          stop_id: stop.id,
-          line_id: stop.line_id,
-          station_code: code,
-          source_id: 'szmc-neighbor-inherit',
-          destination_stop_id: destStopId,
-          pattern_id: pattern.id,
-          first_train: neighTt.first_train.length ? [...neighTt.first_train] : [],
-          last_train: neighTt.last_train.length ? [...neighTt.last_train] : [],
-          service: 'all_days',
-          direction_type: 'linear' as const,
-          extras: { inherited_from_stop_id: neigh }
-        });
-        break;
+    if (!useZdxxOnly) {
+      if (extraTt.length > 0) {
+        canonical.timetables = [...canonical.timetables, ...extraTt];
+        console.log(`  planner timetable hints merged: +${extraTt.length}`);
       }
-    }
-    if (filled.length > 0) {
-      canonical.timetables = [...canonical.timetables, ...filled];
-      console.log(`  planner filled timetables: +${filled.length}`);
+
+      // Fallback fill for operating stops still missing any timetable.
+      const stationsWithTt = new Set(canonical.timetables.map((t) => t.station_id));
+      const patternByLine = new Map(canonical.patterns.map((p) => [p.line_id, p]));
+      const missingStops = canonical.stops.filter((stop) => {
+        const st = stations.find((s) => s.id === stop.station_id);
+        return st?.status === 'operating' && !stationsWithTt.has(stop.station_id);
+      });
+      console.log(`  fill missing timetables via planner: ${missingStops.length} stops`);
+      const filled: typeof canonical.timetables = [];
+      const sleepFill = (ms: number) => new Promise((r) => setTimeout(r, ms));
+      for (const stop of missingStops) {
+        const pattern = patternByLine.get(stop.line_id);
+        if (!pattern) continue;
+        const code = codeByStopId.get(stop.id);
+        if (!code) continue;
+        const termini = [pattern.origin_stop_id, pattern.terminal_stop_id].filter(
+          (id) => id && id !== stop.id
+        );
+        for (const destStopId of termini) {
+          const destCode = codeByStopId.get(destStopId);
+          if (!destCode) continue;
+          const resp = await fetchMinTime(code, destCode, 0);
+          await sleepFill(160);
+          if (!resp) continue;
+          const legs = resp.lineList ?? [];
+          const firstLeg = legs.find((l) => String(l.code || '').trim() === code) ?? legs[0];
+          const first = firstLeg?.firstTime?.trim();
+          const last = firstLeg?.endTime?.trim();
+          const toHH = (v?: string) => {
+            if (!v || v === '--') return undefined;
+            const m = /^(\d{1,2}):(\d{2})/.exec(v);
+            return m ? `${m[1].padStart(2, '0')}:${m[2]}` : undefined;
+          };
+          const f = toHH(first);
+          const l = toHH(last);
+          const key = `${stop.id}|${destStopId}|${stop.line_id}`;
+          if (haveTt.has(key)) continue;
+          if (f || l) {
+            haveTt.add(key);
+            filled.push({
+              id: `${canonical.network.id}-${stop.id}-to-${destStopId}-planner-fill`,
+              station_id: stop.station_id,
+              stop_id: stop.id,
+              line_id: stop.line_id,
+              station_code: code,
+              source_id: 'szmc-mintime',
+              destination_stop_id: destStopId,
+              pattern_id: pattern.id,
+              first_train: f ? [f] : [],
+              last_train: l ? [l] : [],
+              service: 'all_days',
+              direction_type: 'linear' as const
+            });
+            break;
+          }
+        }
+      }
+      if (filled.length > 0) {
+        canonical.timetables = [...canonical.timetables, ...filled];
+        console.log(`  planner filled timetables: +${filled.length}`);
+      }
     }
   }
 

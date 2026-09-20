@@ -30,7 +30,9 @@ export const adapter: AdapterManifest = {
         root,
         skipGeocode: false,
         skipPlannerTimes: false,
-        skipFares: !wantFares
+        skipFares: !wantFares,
+        skipEnTimetables: true,
+        skipZdxxTimetables: false
       });
     } else if (wantFares) {
       // Fares-only must never rewrite topology/timetables/planner times.
