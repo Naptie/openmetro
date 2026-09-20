@@ -5,6 +5,7 @@ import {
   deriveTransfers,
   enrichLineNamesFromWikidata,
   fillCoordinates,
+  fillMissingSegmentTimes,
   type LineEncoded,
   type TransformStations,
   writeCanonical
@@ -119,6 +120,19 @@ export async function runShanghaiNormalize(opts: ShanghaiNormalizeOptions = {}):
     transfers = xfer.transfers;
     console.log(`  applied planner times: ${seg.applied} segments, ${xfer.applied} transfers`);
   }
+
+  // Fallback only: last_train derivation for planner/source gaps.
+  const beforeFill = segments;
+  const filledAll = fillMissingSegmentTimes(
+    segments,
+    canonical.patterns,
+    canonical.stops,
+    canonical.timetables
+  );
+  segments = beforeFill.map((s, i) => {
+    if (s.travel_time_seconds != null && s.travel_time_seconds > 0) return s;
+    return filledAll[i] ?? s;
+  });
 
   await writeCanonical(outDir, 'cn-shanghai', {
     network: canonical.network,

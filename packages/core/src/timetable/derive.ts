@@ -201,9 +201,11 @@ export function deriveSegmentTimes(
 }
 
 /**
- * Merge derived segment times into existing segment records (by stop pair).
- * Returns new segment records (does not mutate inputs). Existing segments keep
- * their `source` travel_time when present; derived times fill the gaps.
+ * Merge last-train-derived segment times into existing records (by stop pair).
+ *
+ * **Priority (high → low):** `source` → `planner` → derived `last_train` →
+ * `estimated`. Official and planner measurements are never discarded here;
+ * derivation only fills remaining gaps.
  */
 export function applyDerivedTimes(
   segments: SegmentEncoded[],
@@ -215,10 +217,9 @@ export function applyDerivedTimes(
     if (!byPair.has(key)) byPair.set(key, d);
   }
   return segments.map((s) => {
-    // Keep authoritative source times; override estimated/unset times with
-    // derived last-train times so we never discard real data but always fill
-    // gaps with a real derivation.
-    if (s.travel_time_source === 'source') return s;
+    // Keep authoritative official/planner times; override estimated/unset/last_train
+    // gaps with derived values so we never discard real measurements.
+    if (s.travel_time_source === 'source' || s.travel_time_source === 'planner') return s;
     const d = byPair.get(`${s.from_stop_id}|${s.to_stop_id}`);
     if (!d) return s;
     return {
@@ -233,11 +234,9 @@ export function applyDerivedTimes(
 /**
  * Ensure every segment has a positive travel time.
  *
- * Some sources publish `0` as a placeholder for a segment they have not
- * measured yet (Beijing does this for newly opened sections). A zero-time edge
- * would be dropped by the graph builder and silently disconnect the network, so
- * such values are treated as unknown, filled from the last-train derivation,
- * and finally fall back to `defaultSeconds`.
+ * Priority when filling: keep `source` / `planner`; else last-train
+ * derivation; else `defaultSeconds` as `estimated`. Some sources publish `0`
+ * as a placeholder (Beijing new sections) — treated as unknown.
  */
 export function fillMissingSegmentTimes(
   segments: SegmentEncoded[],

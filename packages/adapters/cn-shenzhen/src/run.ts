@@ -1,10 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import {
-  applyDerivedTimes,
   applyHarvestedSegmentTimes,
   applyHarvestedTransferTimes,
-  deriveSegmentTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
   fillCoordinates,
@@ -188,17 +186,10 @@ export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}):
   });
 
   let segments = canonical.segments;
-  const derived = deriveSegmentTimes(canonical.patterns, canonical.stops, canonical.timetables, {});
-  segments = applyDerivedTimes(segments, derived);
-  segments = fillMissingSegmentTimes(
-    segments,
-    canonical.patterns,
-    canonical.stops,
-    canonical.timetables
-  );
 
-  // Planner harvest remains for segment/transfer times. Skip EN/planner
-  // timetable fill when /zdxx already provided official station details.
+  // Segment-time priority: official source (none from map JS) → MinTimeJson
+  // planner → last_train derivation → estimated. Run planner before last-train
+  // fill so derivation never pre-empts a measured planner hop.
   const useZdxxOnly = zdxxTimetableCount > 0;
   if (!opts.skipPlannerTimes) {
     console.log('  harvest MinTimeJson adjacent segment times');
@@ -329,6 +320,19 @@ export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}):
       }
     }
   }
+
+  // Priority fallback after planner: last_train → estimated for remaining gaps only.
+  const beforeFill = segments;
+  const filledSegs = fillMissingSegmentTimes(
+    segments,
+    canonical.patterns,
+    canonical.stops,
+    canonical.timetables
+  );
+  segments = beforeFill.map((s, i) => {
+    if (s.travel_time_seconds != null && s.travel_time_seconds > 0) return s;
+    return filledSegs[i] ?? s;
+  });
 
   // Distance estimates from official GCJ-02 coordinates when available.
   const locById = new Map(

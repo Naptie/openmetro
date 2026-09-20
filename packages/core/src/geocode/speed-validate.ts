@@ -96,8 +96,30 @@ export const UNTRUSTED_TIME_SOURCES: ReadonlySet<string> = new Set([
   'none'
 ]);
 
+/** Coordinate provenance we trust even when an official runtime looks impossible. */
+const TRUSTED_COORD_SOURCES: ReadonlySet<string> = new Set([
+  'subway',
+  'official',
+  'known',
+  'source',
+  'operator',
+  'amap',
+  'osm',
+  'overpass'
+]);
+
 function stationNameOf(st: LocatableLike): string | undefined {
   return st.names?.zh ?? st.name;
+}
+
+function coordSourceOf(st: LocatableLike | undefined): string | undefined {
+  const src = st?.extras?.location_source;
+  return typeof src === 'string' ? src : undefined;
+}
+
+function isTrustedCoordSource(src: string | undefined): boolean {
+  if (!src) return false;
+  return TRUSTED_COORD_SOURCES.has(src);
 }
 
 function isTrustedTime(source: string | undefined, seconds: number | undefined): boolean {
@@ -236,11 +258,19 @@ export function evaluateStationSpeed(
     const timeS = seg.travel_time_seconds as number;
     const mode = modeOfLine(opts.lines, seg.line_id);
     if (timeImplausible(distKm, timeS, mode)) {
-      // Trusted runtime + impossible distance for that runtime = bad coordinate
-      // (or a feed placeholder). Previously skipped, which made LOO blind to
-      // official placeholder coords reused across many stations.
-      const maxV = modeMaxSpeedKmh(mode) * SPEED_VALIDATE.timePlausibilityFactor;
+      // Impossibility can mean either a placeholder coordinate or a bad
+      // official runtime (e.g. Beijing Line 88 publishes 110s on ~12–25 km
+      // airport segments). Only treat it as a coordinate failure when the
+      // endpoint provenance is untrusted; AMap/official/known points keep
+      // their location and the source time is simply suspect.
+      const thisSt = stations.find((s) => s.id === stationId);
       const otherSt = stations.find((s) => s.id === otherId);
+      const thisTrusted = isTrustedCoordSource(coordSourceOf(thisSt));
+      const otherTrusted = isTrustedCoordSource(coordSourceOf(otherSt));
+      if (thisTrusted && (otherTrusted || !coordSourceOf(otherSt))) {
+        continue;
+      }
+      const maxV = modeMaxSpeedKmh(mode) * SPEED_VALIDATE.timePlausibilityFactor;
       violations.push({
         kind: 'too_far',
         line_id: seg.line_id,

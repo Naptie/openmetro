@@ -82,8 +82,18 @@ function pairKey(a: string, b: string): string {
 }
 
 /**
- * Overwrite non-authoritative segment times (`last_train` / `estimated`) with
- * planner values. Official `source` times are left untouched.
+ * Merge planner-harvested ride times into segment records.
+ *
+ * **Priority for travel time (high → low):**
+ *  1. `source` — official published metric (e.g. beijing.xml `@_ut`,
+ *     sz-mtr station detail). Never overwritten by planner.
+ *  2. `planner` — official route planner (searchstartend / plantrip /
+ *     MinTimeJson). Overwrites non-source values, including weaker
+ *     derivations written earlier in the same run.
+ *  3. `last_train` / `estimated` — derived fallbacks; filled only when
+ *     both official and planner values are missing.
+ *
+ * This function implements step 2. Step 3 is `fillMissingSegmentTimes`.
  */
 export function applyHarvestedSegmentTimes(
   segments: SegmentEncoded[],

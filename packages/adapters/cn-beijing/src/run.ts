@@ -5,7 +5,12 @@ import {
   deriveTransfers,
   enrichLineNamesFromWikidata,
   fillCoordinates,
+  fillMissingSegmentTimes,
+  haversineKm,
   type LineEncoded,
+  MODE_MAX_SPEED_KMH,
+  type SegmentEncoded,
+  type StationEncoded,
   type TransformStations,
   writeCanonical
 } from '@openmetro/core';
@@ -21,6 +26,47 @@ export interface BeijingNormalizeOptions {
   root?: string;
   /** Skip live searchstartend harvest (offline / partial rebuilds). */
   skipPlannerTimes?: boolean;
+}
+
+/**
+ * Clear official `@ut` values that are physically impossible vs trusted
+ * station coordinates (e.g. Line 88 大兴机场线 publishes 110s on ~12 km and
+ * ~25 km hops). `applyHarvestedSegmentTimes` only overwrites non-`source`
+ * rows, so these must be demoted first for the planner harvest to repair them.
+ */
+function demoteImplausibleSourceTimes(
+  segments: SegmentEncoded[],
+  stations: StationEncoded[],
+  lines: LineEncoded[]
+): { segments: SegmentEncoded[]; demoted: number } {
+  const byId = new Map(stations.map((s) => [s.id, s] as const));
+  const modeByLine = new Map(lines.map((l) => [l.id, l.mode] as const));
+  let demoted = 0;
+  const out = segments.map((s) => {
+    const t = s.travel_time_seconds;
+    if (s.travel_time_source !== 'source' || !(t && t > 0)) return s;
+    const a = byId.get(s.from_station_id)?.location;
+    const b = byId.get(s.to_station_id)?.location;
+    if (!a || !b) return s;
+    const km = haversineKm(a, b);
+    if (!(km > 0.5)) return s;
+    const mode = modeByLine.get(s.line_id);
+    const maxV = MODE_MAX_SPEED_KMH[mode ?? 'other'] ?? 120;
+    const speed = km / (t / 3600);
+    if (speed <= maxV) return s;
+    demoted++;
+    return {
+      ...s,
+      travel_time_seconds: undefined,
+      travel_time_source: undefined,
+      extras: {
+        ...(s.extras ?? {}),
+        demoted_source_time_seconds: t,
+        demote_reason: 'implausible_vs_coords'
+      }
+    };
+  });
+  return { segments: out, demoted };
 }
 
 export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): Promise<void> {
@@ -56,9 +102,20 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
         travel_time_source: s.travel_time_source
       })),
       speedValidate: true,
+      // Official beijing.xml publishes airport-express run times that are
+      // impossible vs AMap coords (Line 88 草桥–大兴新城 ~12 km / 110s).
+      failOnInvalidCoordinates: false,
       onSubwayMatch: () => subwayMatched++,
       onOverpassMatch: () => overpassMatched++,
-      onGeocode: () => geocoded++
+      onGeocode: () => geocoded++,
+      onSpeedValidate: (report) => {
+        if (!report.ok) {
+          console.log(
+            `  speed-validate FAIL ${report.station_name ?? report.station_id}: ` +
+              (report.violations[0]?.detail ?? '')
+          );
+        }
+      }
     }),
     { network: canonical.network.id, city: '北京' }
   );
@@ -81,6 +138,13 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
     routing: canonical.network.routing,
     crossStation: true
   });
+
+  const demoted = demoteImplausibleSourceTimes(segments, stations, lines);
+  segments = demoted.segments;
+  if (demoted.demoted > 0) {
+    console.log(`  demoted implausible official segment times: ${demoted.demoted}`);
+  }
+
   if (!opts.skipPlannerTimes) {
     console.log('  harvest searchstartend segment/transfer times');
     const nameByStationId = new Map(canonical.stations.map((s) => [s.id, s.name]));
@@ -99,6 +163,20 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
     transfers = xfer.transfers;
     console.log(`  applied planner times: ${seg.applied} segments, ${xfer.applied} transfers`);
   }
+
+  // Any remaining gap falls back to last-train / default without clobbering
+  // planner/source values already applied.
+  const beforeFill = segments;
+  const filledAll = fillMissingSegmentTimes(
+    segments,
+    canonical.patterns,
+    canonical.stops,
+    canonical.timetables
+  );
+  segments = beforeFill.map((s, i) => {
+    if (s.travel_time_seconds != null && s.travel_time_seconds > 0) return s;
+    return filledAll[i] ?? s;
+  });
 
   await writeCanonical(outDir, 'cn-beijing', {
     network: canonical.network,
