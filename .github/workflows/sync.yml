@@ -112,7 +112,9 @@ jobs:
         env:
           NETWORK: ${{ matrix.network }}
         run: |
-          if git diff --quiet -- "data/${NETWORK}"; then
+          # `git diff` ignores untracked files — a brand-new network (e.g. cn-sz
+          # on its first CI sync) would look "unchanged" and never publish.
+          if [ -z "$(git status --porcelain -- "data/${NETWORK}")" ]; then
             echo "No data changes for ${NETWORK}"
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
@@ -168,7 +170,7 @@ jobs:
         env:
           NETWORK: ${{ matrix.network }}
         run: |
-          if git diff --quiet -- "data/${NETWORK}/fares.json"; then
+          if [ -z "$(git status --porcelain -- "data/${NETWORK}/fares.json")" ]; then
             echo "No fare changes for ${NETWORK}"
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
