@@ -1,1 +1,280 @@
-# Periodic sync of canonical metro data. # # Schedules: #   - Weekly (Mon 03:17 UTC): topology + timetables + enrichment per city #   - Monthly (1st 04:41 UTC): fares per city (OD matrix via operator planners) # # Note on network egress: #   Chinese official metro APIs are not reliably reachable from GitHub-hosted #   runners. When `OPENMETRO_REVERSE_PROXY` is set (repo secret `REVERSE_PROXY`), #   adapters rewrite origin URLs to `{proxy}/?url={encoded}`. Every sync #   fetches the official APIs live. # # Discovery is static from packages/adapters/<id>/package.json (`openmetro.networkId`); # each network is an independent matrix job so one city failing does not block others. # # Dest branch is unified: every successful sync is staged as an artifact and # published onto the long-lived branch `data` (merge into main manually). # Publish always rebuilds `data` from `main`, overlays this run's artifacts, # then force-pushes with lease — no merge, so shallow clones cannot hit # unrelated-histories errors. name: Sync metro data  on:   schedule:     - cron: "17 3 * * 1"     - cron: "41 4 1 * *"   workflow_dispatch:     inputs:       layers:         description: "Comma-separated layers (topology,timetables,fares,enrichment)"         required: false         default: "topology,timetables,enrichment"       networks:         description: "Comma-separated network ids or 'all'"         required: false         default: "all"  permissions:   contents: write  defaults:   run:     shell: bash  concurrency:   group: sync-${{ github.event_name }}-${{ github.event.inputs.networks || github.event.schedule }}   cancel-in-progress: false  jobs:   discover:     name: Discover adapters     runs-on: ubuntu-latest     outputs:       networks: ${{ steps.list.outputs.networks }}     steps:       - uses: actions/checkout@v6       - uses: oven-sh/setup-bun@v2         with:           bun-version: latest       - run: bun install --frozen-lockfile       - id: list         run: |           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.networks }}" != "all" ]; then             NETS=$(echo "${{ inputs.networks }}" | tr ',' '\n' | sed 's/^ *//;s/ *$//' | grep -v '^$' | jq -R . | jq -s -c .)           else             NETS=$(bun run scripts/discover-adapters.ts --json | jq -c '[.[].networkId]')           fi           echo "networks=$NETS" >> "$GITHUB_OUTPUT"           echo "Discovered: $NETS"    topology:     name: Topology (${{ matrix.network }})     needs: discover     if: >       (github.event_name == 'schedule' && github.event.schedule == '17 3 * * 1') ||       (github.event_name == 'workflow_dispatch' &&        (contains(inputs.layers, 'topology') || contains(inputs.layers, 'timetables')))     runs-on: ubuntu-latest     timeout-minutes: 30     strategy:       fail-fast: false       max-parallel: 3       matrix:         network: ${{ fromJson(needs.discover.outputs.networks) }}     steps:       - uses: actions/checkout@v6        - uses: oven-sh/setup-bun@v2         with:           bun-version: latest        - name: Install dependencies         run: bun install --frozen-lockfile        - name: Build core (adapters import @openmetro/core)         run: bun run --cwd packages/core build        - name: Sync topology         env:           AMAP_KEY: ${{ secrets.AMAP_KEY }}           OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}         run: |           echo "proxy=${OPENMETRO_REVERSE_PROXY:-none}"           bun run data:sync --network "${{ matrix.network }}" \             --layer topology,timetables,enrichment        - name: Verify this network         run: bun run scripts/verify-data.ts --network "${{ matrix.network }}"        - name: Stage data artifact if changed         id: stage         env:           NETWORK: ${{ matrix.network }}         run: |           # `git diff` ignores untracked files — a brand-new network (e.g. cn-suzhou           # on its first CI sync) would look "unchanged" and never publish.           if [ -z "$(git status --porcelain -- "data/${NETWORK}")" ]; then             echo "No data changes for ${NETWORK}"             echo "changed=false" >> "$GITHUB_OUTPUT"             exit 0           fi           mkdir -p .staging/data           cp -a "data/${NETWORK}" ".staging/data/"           echo "changed=true" >> "$GITHUB_OUTPUT"           echo "Staged data/${NETWORK} for publish"        - uses: actions/upload-artifact@v4         if: steps.stage.outputs.changed == 'true'         with:           name: sync-data-${{ matrix.network }}           path: .staging           retention-days: 1           if-no-files-found: error           include-hidden-files: true    fares:     name: Fares (${{ matrix.network }})     needs: discover     # Fare planners are also CN-restricted from GHA; skip on schedule and only     # run when explicitly requested (with reachable egress).     if: >       github.event_name == 'workflow_dispatch' && contains(inputs.layers, 'fares')     runs-on: ubuntu-latest     timeout-minutes: 360     strategy:       fail-fast: false       max-parallel: 3       matrix:         network: ${{ fromJson(needs.discover.outputs.networks) }}     steps:       - uses: actions/checkout@v6        - uses: oven-sh/setup-bun@v2         with:           bun-version: latest        - name: Install dependencies         run: bun install --frozen-lockfile        - name: Sync fare matrix         env:           OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}         run: bun run data:sync --network "${{ matrix.network }}" --layer fares        - name: Verify network (including fares.json)         run: bun run scripts/verify-data.ts --network "${{ matrix.network }}"        - name: Stage data artifact if changed         id: stage         env:           NETWORK: ${{ matrix.network }}         run: |           if [ -z "$(git status --porcelain -- "data/${NETWORK}/fares.json")" ]; then             echo "No fare changes for ${NETWORK}"             echo "changed=false" >> "$GITHUB_OUTPUT"             exit 0           fi           mkdir -p ".staging/data/${NETWORK}"           cp -a "data/${NETWORK}/fares.json" ".staging/data/${NETWORK}/"           echo "changed=true" >> "$GITHUB_OUTPUT"           echo "Staged data/${NETWORK}/fares.json for publish"        - uses: actions/upload-artifact@v4         if: steps.stage.outputs.changed == 'true'         with:           name: sync-fares-${{ matrix.network }}           path: .staging           retention-days: 1           if-no-files-found: error           include-hidden-files: true    publish:     name: Publish to data branch     needs: [topology, fares]     # Per-network matrix legs fail independently. Publish when any leg     # finished (success or failure) — a failed city contributes no artifact     # and is simply absent from this publish; the script no-ops if nothing     # was staged. Do not require the aggregate topology job to be success.     if: >       always() &&       !cancelled() &&       (needs.topology.result == 'success' || needs.topology.result == 'failure' ||        needs.fares.result == 'success' || needs.fares.result == 'failure')     runs-on: ubuntu-latest     timeout-minutes: 15     steps:       - uses: actions/checkout@v6         with:           ref: main        - name: Download staged sync data         uses: actions/download-artifact@v4         continue-on-error: true         with:           path: artifacts           pattern: sync-*           merge-multiple: false        - uses: oven-sh/setup-bun@v2         with:           bun-version: latest        - name: Commit onto data branch         env:           BRANCH: data         run: |           set -euo pipefail            # Artifacts nest as artifacts/sync-*/data/<network>/...           if ! find artifacts -mindepth 2 -maxdepth 2 -type d -name 'data' 2>/dev/null | grep -q .; then             echo "No staged data artifacts; nothing to publish"             exit 0           fi            # Always rebuild data from main; never merge. A shallow checkout has           # no merge-base with an existing data tip and would fail with           # "refusing to merge unrelated histories".           git fetch origin main "$BRANCH" || true            git config user.name "openmetro-sync-bot"           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"            git checkout -B "$BRANCH" origin/main           echo "Rebuilt ${BRANCH} from origin/main"            shopt -s nullglob           applied=0           # Apply data/* artifacts first, then fares-* so fares.json wins on overlap.           for root in artifacts/sync-data-*/ artifacts/sync-fares-*/; do             if [ -d "${root}data" ]; then               mkdir -p data               cp -a "${root}data/." data/               applied=$((applied + 1))             fi           done            if [ "$applied" -eq 0 ]; then             echo "No data/ trees in artifacts; nothing to publish"             exit 0           fi            # Refresh quality summary from the overlayed network.json.quality           # blocks (data/QUALITY.md + data/quality.svg + docs/quality.svg).           # README is not touched.           bun run scripts/write-quality-report.ts            git add -A data docs/quality.svg           if git diff --cached --quiet; then             # Tree already matches main; still publish so data tracks main tip.             echo "Artifacts produced no tree changes; pushing ${BRANCH} to match main"             git push -u origin "$BRANCH" --force-with-lease             exit 0           fi            NETWORKS=$(git diff --cached --name-only -- data \             | sed -n 's|^data/\([^/]*\)/.*|\1|p' \             | sort -u | paste -sd', ' -)           git commit -m "data: automated sync (${NETWORKS:-mixed})"           git push -u origin "$BRANCH" --force-with-lease           echo "Pushed sync for [${NETWORKS:-mixed}] to ${BRANCH}; merge into main manually."
+# Periodic sync of canonical metro data.
+#
+# Schedules:
+#   - Weekly (Mon 03:17 UTC): topology + timetables + enrichment per city
+#   - Monthly (1st 04:41 UTC): fares per city (OD matrix via operator planners)
+#
+# Note on network egress:
+#   Chinese official metro APIs are not reliably reachable from GitHub-hosted
+#   runners. When `OPENMETRO_REVERSE_PROXY` is set (repo secret `REVERSE_PROXY`),
+#   adapters rewrite origin URLs to `{proxy}/?url={encoded}`. Every sync
+#   fetches the official APIs live.
+#
+# Discovery is static from packages/adapters/<id>/package.json (`openmetro.networkId`);
+# each network is an independent matrix job so one city failing does not block others.
+#
+# Dest branch is unified: every successful sync is staged as an artifact and
+# published onto the long-lived branch `data` (merge into main manually).
+# Publish always rebuilds `data` from `main`, overlays this run's artifacts,
+# then force-pushes with lease — no merge, so shallow clones cannot hit
+# unrelated-histories errors.
+name: Sync metro data
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+    - cron: "41 4 1 * *"
+  workflow_dispatch:
+    inputs:
+      layers:
+        description: "Comma-separated layers (topology,timetables,fares,enrichment)"
+        required: false
+        default: "topology,timetables,enrichment"
+      networks:
+        description: "Comma-separated network ids or 'all'"
+        required: false
+        default: "all"
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: sync-${{ github.event_name }}-${{ github.event.inputs.networks || github.event.schedule }}
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    name: Discover adapters
+    runs-on: ubuntu-latest
+    outputs:
+      networks: ${{ steps.list.outputs.networks }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - id: list
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.networks }}" != "all" ]; then
+            NETS=$(echo "${{ inputs.networks }}" | tr ',' '\n' | sed 's/^ *//;s/ *$//' | grep -v '^$' | jq -R . | jq -s -c .)
+          else
+            NETS=$(bun run scripts/discover-adapters.ts --json | jq -c '[.[].networkId]')
+          fi
+          echo "networks=$NETS" >> "$GITHUB_OUTPUT"
+          echo "Discovered: $NETS"
+
+  topology:
+    name: Topology (${{ matrix.network }})
+    needs: discover
+    if: >
+      (github.event_name == 'schedule' && github.event.schedule == '17 3 * * 1') ||
+      (github.event_name == 'workflow_dispatch' &&
+       (contains(inputs.layers, 'topology') || contains(inputs.layers, 'timetables')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        network: ${{ fromJson(needs.discover.outputs.networks) }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build core (adapters import @openmetro/core)
+        run: bun run --cwd packages/core build
+
+      - name: Sync topology
+        env:
+          AMAP_KEY: ${{ secrets.AMAP_KEY }}
+          OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}
+        run: |
+          echo "proxy=${OPENMETRO_REVERSE_PROXY:-none}"
+          bun run data:sync --network "${{ matrix.network }}" \
+            --layer topology,timetables,enrichment
+
+      - name: Verify this network
+        run: bun run scripts/verify-data.ts --network "${{ matrix.network }}"
+
+      - name: Stage data artifact if changed
+        id: stage
+        env:
+          NETWORK: ${{ matrix.network }}
+        run: |
+          # `git diff` ignores untracked files — a brand-new network (e.g. cn-suzhou
+          # on its first CI sync) would look "unchanged" and never publish.
+          if [ -z "$(git status --porcelain -- "data/${NETWORK}")" ]; then
+            echo "No data changes for ${NETWORK}"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          mkdir -p .staging/data
+          cp -a "data/${NETWORK}" ".staging/data/"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "Staged data/${NETWORK} for publish"
+
+      - uses: actions/upload-artifact@v4
+        if: steps.stage.outputs.changed == 'true'
+        with:
+          name: sync-data-${{ matrix.network }}
+          path: .staging
+          retention-days: 1
+          if-no-files-found: error
+          include-hidden-files: true
+
+  fares:
+    name: Fares (${{ matrix.network }})
+    needs: discover
+    # Fare planners are also CN-restricted from GHA; skip on schedule and only
+    # run when explicitly requested (with reachable egress).
+    if: >
+      github.event_name == 'workflow_dispatch' && contains(inputs.layers, 'fares')
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        network: ${{ fromJson(needs.discover.outputs.networks) }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Sync fare matrix
+        env:
+          OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}
+        run: bun run data:sync --network "${{ matrix.network }}" --layer fares
+
+      - name: Verify network (including fares.json)
+        run: bun run scripts/verify-data.ts --network "${{ matrix.network }}"
+
+      - name: Stage data artifact if changed
+        id: stage
+        env:
+          NETWORK: ${{ matrix.network }}
+        run: |
+          if [ -z "$(git status --porcelain -- "data/${NETWORK}/fares.json")" ]; then
+            echo "No fare changes for ${NETWORK}"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          mkdir -p ".staging/data/${NETWORK}"
+          cp -a "data/${NETWORK}/fares.json" ".staging/data/${NETWORK}/"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "Staged data/${NETWORK}/fares.json for publish"
+
+      - uses: actions/upload-artifact@v4
+        if: steps.stage.outputs.changed == 'true'
+        with:
+          name: sync-fares-${{ matrix.network }}
+          path: .staging
+          retention-days: 1
+          if-no-files-found: error
+          include-hidden-files: true
+
+  publish:
+    name: Publish to data branch
+    needs: [topology, fares]
+    # Per-network matrix legs fail independently. Publish when any leg
+    # finished (success or failure) — a failed city contributes no artifact
+    # and is simply absent from this publish; the script no-ops if nothing
+    # was staged. Do not require the aggregate topology job to be success.
+    if: >
+      always() &&
+      !cancelled() &&
+      (needs.topology.result == 'success' || needs.topology.result == 'failure' ||
+       needs.fares.result == 'success' || needs.fares.result == 'failure')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Download staged sync data
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          path: artifacts
+          pattern: sync-*
+          merge-multiple: false
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Commit onto data branch
+        env:
+          BRANCH: data
+        run: |
+          set -euo pipefail
+
+          # Artifacts nest as artifacts/sync-*/data/<network>/...
+          if ! find artifacts -mindepth 2 -maxdepth 2 -type d -name 'data' 2>/dev/null | grep -q .; then
+            echo "No staged data artifacts; nothing to publish"
+            exit 0
+          fi
+
+          # Always rebuild data from main; never merge. A shallow checkout has
+          # no merge-base with an existing data tip and would fail with
+          # "refusing to merge unrelated histories".
+          git fetch origin main "$BRANCH" || true
+
+          git config user.name "openmetro-sync-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -B "$BRANCH" origin/main
+          echo "Rebuilt ${BRANCH} from origin/main"
+
+          shopt -s nullglob
+          applied=0
+          # Apply data/* artifacts first, then fares-* so fares.json wins on overlap.
+          for root in artifacts/sync-data-*/ artifacts/sync-fares-*/; do
+            if [ -d "${root}data" ]; then
+              mkdir -p data
+              cp -a "${root}data/." data/
+              applied=$((applied + 1))
+            fi
+          done
+
+          if [ "$applied" -eq 0 ]; then
+            echo "No data/ trees in artifacts; nothing to publish"
+            exit 0
+          fi
+
+          # Refresh quality summary from the overlayed network.json.quality
+          # blocks (data/QUALITY.md + data/quality.svg + docs/quality.svg).
+          # README is not touched.
+          bun run scripts/write-quality-report.ts
+
+          git add -A data docs/quality.svg
+          if git diff --cached --quiet; then
+            # Tree already matches main; still publish so data tracks main tip.
+            echo "Artifacts produced no tree changes; pushing ${BRANCH} to match main"
+            git push -u origin "$BRANCH" --force-with-lease
+            exit 0
+          fi
+
+          NETWORKS=$(git diff --cached --name-only -- data \
+            | sed -n 's|^data/\([^/]*\)/.*|\1|p' \
+            | sort -u | paste -sd', ' -)
+          git commit -m "data: automated sync (${NETWORKS:-mixed})"
+          git push -u origin "$BRANCH" --force-with-lease
+          echo "Pushed sync for [${NETWORKS:-mixed}] to ${BRANCH}; merge into main manually."
