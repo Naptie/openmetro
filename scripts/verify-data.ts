@@ -354,10 +354,11 @@ function verifyReferences(network: string, d: NetworkData): void {
   }
 
   // ── Fares ─────────────────────────────────────────────────────
+  // Fares are optional: topology-only sync jobs (and brand-new networks)
+  // legitimately have no `fares.json` until the monthly fares layer runs.
   if (!d.fares) {
-    fail(network, 'fares.json missing (required for a complete dataset)');
-  }
-  {
+    // skip — not a topology integrity failure
+  } else {
     const matrix = d.fares;
     assert(matrix.network_id === network, network, 'fare matrix network_id mismatch');
     assert(
