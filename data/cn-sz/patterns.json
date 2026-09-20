@@ -1,0 +1,564 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-sz",
+  "generated_at": "2026-09-20T15:37:32.129Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-sz-line-1-pattern-main",
+      "line_id": "cn-sz-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-sz-mudu-1",
+        "cn-sz-jinfenglu-1",
+        "cn-sz-fenhulu-1",
+        "cn-sz-yushanlu-1",
+        "cn-sz-shizishan-1",
+        "cn-sz-tayuanlu-1",
+        "cn-sz-binhelu-1",
+        "cn-sz-xihuanlu-1",
+        "cn-sz-tongjingbeilu-1",
+        "cn-sz-1hdm59c-1",
+        "cn-sz-ncn62f-1",
+        "cn-sz-leqiao-1",
+        "cn-sz-lindunlu-1",
+        "cn-sz-xiangmen-1",
+        "cn-sz-donghuanlu-1",
+        "cn-sz-1k8r10e-1",
+        "cn-sz-enwj9u-1",
+        "cn-sz-mwj5aq-1",
+        "cn-sz-1fifi8q-1",
+        "cn-sz-shidaiguangchang-1",
+        "cn-sz-xinghujie-1",
+        "cn-sz-nanshijie-1",
+        "cn-sz-xingtangjie-1",
+        "cn-sz-zhongnanjie-1"
+      ],
+      "origin_stop_id": "cn-sz-mudu-1",
+      "terminal_stop_id": "cn-sz-zhongnanjie-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "1"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "1号线"
+      }
+    },
+    {
+      "id": "cn-sz-line-11-pattern-main",
+      "line_id": "cn-sz-line-11",
+      "name": "11号线",
+      "names": {
+        "zh": "11号线",
+        "en": "Line 11"
+      },
+      "stop_ids": [
+        "cn-sz-weiting-11",
+        "cn-sz-caoxieshan-11",
+        "cn-sz-yangchenghueast-11",
+        "cn-sz-zhengyi-11",
+        "cn-sz-lianhugongyuan-11",
+        "cn-sz-zuchongzhigongyuan-11",
+        "cn-sz-kunshanwenhuayishuzhongxin-11",
+        "cn-sz-gongqing-11",
+        "cn-sz-jiangpu-11",
+        "cn-sz-baimajing-11",
+        "cn-sz-yushanguangchang-11",
+        "cn-sz-xiuyi-11",
+        "cn-sz-kunshanchengshiguangchang-11",
+        "cn-sz-jinpudaqiaoeast-11",
+        "cn-sz-shunfanbeilu-11",
+        "cn-sz-yuchijing-11",
+        "cn-sz-baihetan-11",
+        "cn-sz-bingxi-11",
+        "cn-sz-xiajiahegongyuan-11",
+        "cn-sz-shengzhuang-11",
+        "cn-sz-zhangjilusouth-11",
+        "cn-sz-xiaqiao-11",
+        "cn-sz-shentongjing-11",
+        "cn-sz-lujia-11",
+        "cn-sz-huaqiaobolanzhongxin-11",
+        "cn-sz-jishan-11",
+        "cn-sz-huaxigongyuan-11",
+        "cn-sz-huaqiao-11"
+      ],
+      "origin_stop_id": "cn-sz-weiting-11",
+      "terminal_stop_id": "cn-sz-huaqiao-11",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "11"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "3号线/11号线",
+        "through_run_with": "3/11"
+      }
+    },
+    {
+      "id": "cn-sz-line-2-pattern-main",
+      "line_id": "cn-sz-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-sz-qihe-2",
+        "cn-sz-fuxianglu-2",
+        "cn-sz-q98m8i-2",
+        "cn-sz-dawan-2",
+        "cn-sz-fuyuanlu-2",
+        "cn-sz-likou-2",
+        "cn-sz-xutugang-2",
+        "cn-sz-yangchenghuzhonglu-2",
+        "cn-sz-lumu-2",
+        "cn-sz-pinglonglueast-2",
+        "cn-sz-pinghelu-2",
+        "cn-sz-suzhourailwaystation-2",
+        "cn-sz-shantangjie-2",
+        "cn-sz-shilu-2",
+        "cn-sz-1hdm59c-2",
+        "cn-sz-1i5b1f3-2",
+        "cn-sz-laodonglu-2",
+        "cn-sz-xujianglu-2",
+        "cn-sz-1a2br65-2",
+        "cn-sz-youlian-2",
+        "cn-sz-panlilu-2",
+        "cn-sz-xinjiaqiao-2",
+        "cn-sz-koswu3-2",
+        "cn-sz-13wicsg-2",
+        "cn-sz-yinzhonglu-2",
+        "cn-sz-guoxiang-2",
+        "cn-sz-guoyuanlu-2",
+        "cn-sz-yinshanhu-2",
+        "cn-sz-xft09m-2",
+        "cn-sz-4oiu7y-2",
+        "cn-sz-yueliangwan-2",
+        "cn-sz-songtaojie-2",
+        "cn-sz-jingulu-2",
+        "cn-sz-jinshanglu-2",
+        "cn-sz-sangtiandao-2"
+      ],
+      "origin_stop_id": "cn-sz-qihe-2",
+      "terminal_stop_id": "cn-sz-sangtiandao-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "2"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "2号线"
+      }
+    },
+    {
+      "id": "cn-sz-line-3-pattern-main",
+      "line_id": "cn-sz-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "stop_ids": [
+        "cn-sz-suzhou-xinqu-railway-station-3",
+        "cn-sz-huichanglu-3",
+        "cn-sz-wenchanglu-3",
+        "cn-sz-changting-3",
+        "cn-sz-tongdun-3",
+        "cn-sz-mayunlu-3",
+        "cn-sz-xijinqiao-3",
+        "cn-sz-heshan-3",
+        "cn-sz-shizishan-3",
+        "cn-sz-shishanlu-3",
+        "cn-sz-shajinqiao-3",
+        "cn-sz-197k3jd-3",
+        "cn-sz-hengshan-3",
+        "cn-sz-hengtang-3",
+        "cn-sz-shihunorth-3",
+        "cn-sz-xinguo-3",
+        "cn-sz-panlilu-3",
+        "cn-sz-baodailu-3",
+        "cn-sz-yingchunlu-3",
+        "cn-sz-beiganglu-3",
+        "cn-sz-tongyuanlu-south-3",
+        "cn-sz-shupulunorth-3",
+        "cn-sz-dongzhenlu-3",
+        "cn-sz-jinsheqiao-3",
+        "cn-sz-ligongdi-west-3",
+        "cn-sz-mwj5aq-3",
+        "cn-sz-yanyuqiao-3",
+        "cn-sz-nibang-3",
+        "cn-sz-tangzhuang-3",
+        "cn-sz-kuatang-3",
+        "cn-sz-fgmqnt-3",
+        "cn-sz-fangwanjie-3",
+        "cn-sz-fenghelu-3",
+        "cn-sz-shuangmajie-3",
+        "cn-sz-1n6na0c-3",
+        "cn-sz-gexiangjie-3",
+        "cn-sz-weiting-3"
+      ],
+      "origin_stop_id": "cn-sz-suzhou-xinqu-railway-station-3",
+      "terminal_stop_id": "cn-sz-weiting-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "3"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "3号线/11号线",
+        "through_run_with": "3/11"
+      }
+    },
+    {
+      "id": "cn-sz-line-4-pattern-main",
+      "line_id": "cn-sz-line-4",
+      "name": "4号线",
+      "names": {
+        "zh": "4号线",
+        "en": "Line 4"
+      },
+      "stop_ids": [
+        "cn-sz-longdaobang-4",
+        "cn-sz-zhangzhuang-4",
+        "cn-sz-yaoxiang-4",
+        "cn-sz-huolidao-4",
+        "cn-sz-sx7w1h-4",
+        "cn-sz-pinglongluwest-4",
+        "cn-sz-sujin-4",
+        "cn-sz-suzhourailwaystation-4",
+        "cn-sz-beisita-4",
+        "cn-sz-chayuanchang-4",
+        "cn-sz-leqiao-4",
+        "cn-sz-sanyuanfang-4",
+        "cn-sz-nanmen-4",
+        "cn-sz-renminqiaosouth-4",
+        "cn-sz-tuanjieqiao-4",
+        "cn-sz-baodailu-4",
+        "cn-sz-koswu3-4",
+        "cn-sz-hongzhuang-4",
+        "cn-sz-qingshuwan-4",
+        "cn-sz-huagang-4",
+        "cn-sz-jianglingxilu-4",
+        "cn-sz-jiangxingxilu-4",
+        "cn-sz-liuhonglu-4",
+        "cn-sz-lizelu-4",
+        "cn-sz-gujiadang-4",
+        "cn-sz-suzhouwaneast-4",
+        "cn-sz-1y12aa9-4",
+        "cn-sz-14zrfqc-4",
+        "cn-sz-35rtlu-4",
+        "cn-sz-pangjinlu-4",
+        "cn-sz-tongli-4"
+      ],
+      "origin_stop_id": "cn-sz-longdaobang-4",
+      "terminal_stop_id": "cn-sz-tongli-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "4"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "4号线"
+      }
+    },
+    {
+      "id": "cn-sz-line-5-pattern-main",
+      "line_id": "cn-sz-line-5",
+      "name": "5号线",
+      "names": {
+        "zh": "5号线",
+        "en": "Line 5"
+      },
+      "stop_ids": [
+        "cn-sz-taihuxiangshan-5",
+        "cn-sz-huadun-5",
+        "cn-sz-jinqiao-5",
+        "cn-sz-xukou-5",
+        "cn-sz-maopenglueast-5",
+        "cn-sz-xujiaqiao-5",
+        "cn-sz-lingyanshan-5",
+        "cn-sz-duchuanqiao-5",
+        "cn-sz-dazhiqiao-5",
+        "cn-sz-xikuatang-5",
+        "cn-sz-shicheng-5",
+        "cn-sz-luoxingqiao-5",
+        "cn-sz-197k3jd-5",
+        "cn-sz-shuangqiao-5",
+        "cn-sz-laodonglu-5",
+        "cn-sz-xinshiqiao-5",
+        "cn-sz-nanmen-5",
+        "cn-sz-fel11g-5",
+        "cn-sz-zhuhuiqiao-5",
+        "cn-sz-hehuadang-5",
+        "cn-sz-huangtiandang-5",
+        "cn-sz-jinsheqiao-5",
+        "cn-sz-xingbojie-5",
+        "cn-sz-1iak8dd-5",
+        "cn-sz-jinhu-5",
+        "cn-sz-hualian-5",
+        "cn-sz-xietang-5",
+        "cn-sz-suzhou-olympic-sports-centre-5",
+        "cn-sz-fangzhougongyuan-5",
+        "cn-sz-xingtangjie-5",
+        "cn-sz-longdun-5",
+        "cn-sz-dongshahu-5",
+        "cn-sz-1n6na0c-5",
+        "cn-sz-yangchenghusouth-5"
+      ],
+      "origin_stop_id": "cn-sz-taihuxiangshan-5",
+      "terminal_stop_id": "cn-sz-yangchenghusouth-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "5"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "5号线"
+      }
+    },
+    {
+      "id": "cn-sz-line-6-pattern-ext-hykf",
+      "line_id": "cn-sz-line-6",
+      "name": "6延线",
+      "names": {
+        "zh": "6延线",
+        "en": "Line 6 Extension"
+      },
+      "stop_ids": [
+        "cn-sz-sangtiandao-6",
+        "cn-sz-huayun-6"
+      ],
+      "origin_stop_id": "cn-sz-sangtiandao-6",
+      "terminal_stop_id": "cn-sz-huayun-6",
+      "is_primary": false,
+      "junction_stop_id": "cn-sz-sangtiandao-6",
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "9"
+        }
+      ],
+      "extras": {
+        "pattern_status": "under_construction",
+        "map_corridor": "6延线",
+        "parent_line_id": "cn-sz-line-6",
+        "connector_station_id": "cn-sz-sangtiandao",
+        "official_extension": true
+      }
+    },
+    {
+      "id": "cn-sz-line-6-pattern-main",
+      "line_id": "cn-sz-line-6",
+      "name": "6号线",
+      "names": {
+        "zh": "6号线",
+        "en": "Line 6"
+      },
+      "stop_ids": [
+        "cn-sz-suzhou-xinqu-railway-station-6",
+        "cn-sz-baofeng-6",
+        "cn-sz-fuqiang-6",
+        "cn-sz-changjing-6",
+        "cn-sz-1uoswo0-6",
+        "cn-sz-jinjidun-6",
+        "cn-sz-huqiu-6",
+        "cn-sz-qingshanqiaobang-6",
+        "cn-sz-1s42a21-6",
+        "cn-sz-sujin-6",
+        "cn-sz-pinghelu-6",
+        "cn-sz-meixiang-6",
+        "cn-sz-1bfo4lo-6",
+        "cn-sz-xuanqiaoxiang-6",
+        "cn-sz-lindunlu-6",
+        "cn-sz-1o68rd6-6",
+        "cn-sz-xujiabang-6",
+        "cn-sz-reyunqiao-6",
+        "cn-sz-qiutangbang-6",
+        "cn-sz-ligongdi-west-6",
+        "cn-sz-qiongjidun-6",
+        "cn-sz-1oeqktd-6",
+        "cn-sz-suzhou-olympic-sports-centre-6",
+        "cn-sz-1t4fosv-6",
+        "cn-sz-hanqingqiao-6",
+        "cn-sz-jinjiayan-6",
+        "cn-sz-beixiebu-6",
+        "cn-sz-nanxiebu-6",
+        "cn-sz-jinshanglu-6",
+        "cn-sz-sangtiandao-6"
+      ],
+      "origin_stop_id": "cn-sz-suzhou-xinqu-railway-station-6",
+      "terminal_stop_id": "cn-sz-sangtiandao-6",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "6"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "6号线"
+      }
+    },
+    {
+      "id": "cn-sz-line-7-pattern-ext-hzb4",
+      "line_id": "cn-sz-line-7",
+      "name": "7延线",
+      "names": {
+        "zh": "7延线",
+        "en": "Line 7 Extension"
+      },
+      "stop_ids": [
+        "cn-sz-moyang-7",
+        "cn-sz-zhujing-7",
+        "cn-sz-xuenan-7",
+        "cn-sz-changlou-7"
+      ],
+      "origin_stop_id": "cn-sz-moyang-7",
+      "terminal_stop_id": "cn-sz-changlou-7",
+      "is_primary": false,
+      "junction_stop_id": "cn-sz-changlou-7",
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "12"
+        }
+      ],
+      "extras": {
+        "pattern_status": "under_construction",
+        "map_corridor": "7延线",
+        "parent_line_id": "cn-sz-line-7",
+        "connector_station_id": "cn-sz-changlou",
+        "official_extension": true
+      }
+    },
+    {
+      "id": "cn-sz-line-7-pattern-main",
+      "line_id": "cn-sz-line-7",
+      "name": "7号线",
+      "names": {
+        "zh": "7号线",
+        "en": "Line 7"
+      },
+      "stop_ids": [
+        "cn-sz-changlou-7",
+        "cn-sz-dengyun-7",
+        "cn-sz-litanghelu-7",
+        "cn-sz-chunshenhudonglu-7",
+        "cn-sz-huayuanlu-east-7",
+        "cn-sz-baidang-north-7",
+        "cn-sz-banjing-7",
+        "cn-sz-yangjing-7",
+        "cn-sz-jicuiqiao-7",
+        "cn-sz-1k8r10e-7",
+        "cn-sz-reyunqiao-7",
+        "cn-sz-huangtiandang-7",
+        "cn-sz-loufeng-7",
+        "cn-sz-qunli-7",
+        "cn-sz-tongyuanlu-south-7",
+        "cn-sz-linjiatan-7",
+        "cn-sz-guoxiang-7",
+        "cn-sz-yinshan-7",
+        "cn-sz-jinjiaqiao-south-7",
+        "cn-sz-fengjinlu-7",
+        "cn-sz-hongzhuang-7",
+        "cn-sz-lishu-7",
+        "cn-sz-shihumoshe-7",
+        "cn-sz-yuexi-7",
+        "cn-sz-wenxilu-7",
+        "cn-sz-hnqt5r-7",
+        "cn-sz-suzhouwannorth-7",
+        "cn-sz-muli-7"
+      ],
+      "origin_stop_id": "cn-sz-changlou-7",
+      "terminal_stop_id": "cn-sz-muli-7",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "7"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "7号线"
+      }
+    },
+    {
+      "id": "cn-sz-line-8-pattern-main",
+      "line_id": "cn-sz-line-8",
+      "name": "8号线",
+      "names": {
+        "zh": "8号线",
+        "en": "Line 8"
+      },
+      "stop_ids": [
+        "cn-sz-xijinqiao-8",
+        "cn-sz-xinyuan-8",
+        "cn-sz-shijiaqiao-8",
+        "cn-sz-1uoswo0-8",
+        "cn-sz-hubeilu-8",
+        "cn-sz-wb6k5s-8",
+        "cn-sz-sx7w1h-8",
+        "cn-sz-yuyao-8",
+        "cn-sz-1aqm58d-8",
+        "cn-sz-yangchenghuzhonglu-8",
+        "cn-sz-xiawei-8",
+        "cn-sz-baidang-north-8",
+        "cn-sz-wucongjing-8",
+        "cn-sz-guxiangwei-8",
+        "cn-sz-nanzezhuang-8",
+        "cn-sz-tangzhuang-8",
+        "cn-sz-gulou-8",
+        "cn-sz-fgmqnt-8",
+        "cn-sz-huachibang-8",
+        "cn-sz-shidaiguangchang-8",
+        "cn-sz-1jfh17q-8",
+        "cn-sz-qiongjidun-8",
+        "cn-sz-xietang-8",
+        "cn-sz-lianchiqiao-8",
+        "cn-sz-1qzd5ml-8",
+        "cn-sz-songtaojie-8",
+        "cn-sz-yuxinlu-8",
+        "cn-sz-chefang-8"
+      ],
+      "origin_stop_id": "cn-sz-xijinqiao-8",
+      "terminal_stop_id": "cn-sz-chefang-8",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "sz-mtr-map-js",
+          "id": "8"
+        }
+      ],
+      "extras": {
+        "line_status": "operating",
+        "virtual_line_name": "8号线"
+      }
+    }
+  ]
+}
