@@ -1,6 +1,10 @@
-import type { StopEncoded as Stop } from '../schema/index.js';
+import type { StopEncoded } from '../schema/index.js';
 import type { StopGraph } from './build.js';
-import { buildStationIndex, type StationIndex } from './build.js';
+import {
+  buildStationIndex,
+  type GraphFilterOptions,
+  type StationIndex
+} from './build.js';
 import { dijkstraMany } from './dijkstra.js';
 
 export interface RouteLeg {
@@ -44,16 +48,22 @@ function edgeBetween(graph: StopGraph, from: string, to: string): EdgeLookup | u
  * Plan a station-to-station journey over the stop graph and return it as
  * human-readable legs (consecutive rides on one line collapse into a single
  * ride leg; every line change is an explicit transfer leg).
+ *
+ * `stationIndex` may be a prebuilt index or graph filter options; when
+ * station statuses are supplied, non-operating stations are not usable as
+ * origins/destinations.
  */
 export function planRoute(
   graph: StopGraph,
-  stops: Stop[],
+  stops: StopEncoded[],
   fromStationId: string,
   toStationId: string,
-  stationIndex: StationIndex = buildStationIndex(stops)
+  stationIndex: StationIndex | GraphFilterOptions = buildStationIndex(stops)
 ): RoutePlan | null {
-  const sources = stationIndex.get(fromStationId) ?? [];
-  const targets = stationIndex.get(toStationId) ?? [];
+  const index: StationIndex =
+    stationIndex instanceof Map ? stationIndex : buildStationIndex(stops, stationIndex);
+  const sources = index.get(fromStationId) ?? [];
+  const targets = index.get(toStationId) ?? [];
   const result = dijkstraMany(graph, sources, targets);
   if (!result) return null;
 

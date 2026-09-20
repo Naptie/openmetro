@@ -6,7 +6,7 @@
   import { Button } from '$lib/components/ui/button/index.js';
   import * as Command from '$lib/components/ui/command/index.js';
   import * as Popover from '$lib/components/ui/popover/index.js';
-  import { localizedName } from '$lib/format';
+  import { isRoutableStation, localizedName } from '$lib/format';
   import { i18n } from '$lib/i18n.svelte';
   import type { NetworkData } from '$lib/state.svelte';
   import { cn } from '$lib/utils';
@@ -48,6 +48,7 @@
     const q = search.trim().toLowerCase();
     const out: Station[] = [];
     for (const station of network.stations) {
+      if (!isRoutableStation(station.status)) continue;
       const zh = station.names?.zh ?? station.name;
       const en = station.names?.en ?? '';
       if (

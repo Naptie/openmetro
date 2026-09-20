@@ -93,17 +93,22 @@ async function loadNetworks(root: string): Promise<NetworkDoc[]> {
 /**
  * Self-contained SVG dashboard. No external fonts/CDN — GitHub raw/README
  * rendering stays reliable; system UI stack covers CJK on typical clients.
+ *
+ * Layout: **fixed two columns**. Network cards wrap into rows so the canvas
+ * width stays constant as cities are added; only height grows (ceil(n/2)).
  */
 function buildQualitySvg(networks: NetworkDoc[], generatedAt: string): string {
   const pad = 28;
   const gap = 18;
+  const COLS = 2;
   const cardW = 340;
-  const headerH = 72;
+  const headerH = 88;
   const rowH = 28;
   const rows = LAYERS.length;
   const cardH = 56 + rows * rowH + 36;
-  const width = pad * 2 + cardW * networks.length + gap * (networks.length - 1);
-  const height = headerH + cardH + 48;
+  const gridRows = Math.max(1, Math.ceil(networks.length / COLS));
+  const width = pad * 2 + cardW * COLS + gap * (COLS - 1);
+  const height = headerH + gridRows * (cardH + gap) - gap + 48;
 
   const parts: string[] = [];
   parts.push(
@@ -129,30 +134,32 @@ function buildQualitySvg(networks: NetworkDoc[], generatedAt: string): string {
     `<text x="${pad}" y="36" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="600">Open Metro · Data quality</text>`
   );
   parts.push(
-    `<text x="${pad}" y="56" fill="#64748b" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, PingFang SC, Microsoft YaHei, sans-serif" font-size="12">Per-layer precision &amp; coverage from network.json.quality · ${escapeXml(generatedAt.slice(0, 10))}</text>`
+    `<text x="${pad}" y="56" fill="#64748b" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, PingFang SC, Microsoft YaHei, sans-serif" font-size="12">Per-layer precision &amp; coverage overview · ${escapeXml(generatedAt.slice(0, 10))} · ${networks.length} network(s)</text>`
   );
 
-  // legend chips
-  let lx = width - pad;
-  const legendItems = ['complete', 'partial', 'derived', 'unavailable'] as const;
-  for (const key of [...legendItems].reverse()) {
-    const st = STATUS[key];
-    const label = st.label;
-    const w = 14 + label.length * 6.2 + 18;
-    lx -= w;
-    parts.push(
-      `<rect x="${lx}" y="24" width="${w}" height="20" rx="10" fill="${st.soft}" stroke="${st.fill}" stroke-opacity="0.35"/>`
-    );
-    parts.push(`<circle cx="${lx + 12}" cy="34" r="3.5" fill="${st.fill}"/>`);
-    parts.push(
-      `<text x="${lx + 22}" y="38" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">${label}</text>`
-    );
-    lx -= 8;
-  }
+  // legend chips — compact, right-aligned on the title row
+  // let lx = width - pad;
+  // const legendItems = ['complete', 'partial', 'derived', 'unavailable'] as const;
+  // for (const key of [...legendItems].reverse()) {
+  //   const st = STATUS[key];
+  //   const label = st.label;
+  //   const w = 14 + label.length * 5.8 + 14;
+  //   lx -= w;
+  //   parts.push(
+  //     `<rect x="${lx}" y="24" width="${w}" height="20" rx="10" fill="${st.soft}" stroke="${st.fill}" stroke-opacity="0.35"/>`
+  //   );
+  //   parts.push(`<circle cx="${lx + 12}" cy="34" r="3.5" fill="${st.fill}"/>`);
+  //   parts.push(
+  //     `<text x="${lx + 22}" y="38" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">${label}</text>`
+  //   );
+  //   lx -= 6;
+  // }
 
   networks.forEach((n, i) => {
-    const x = pad + i * (cardW + gap);
-    const y = headerH;
+    const col = i % COLS;
+    const row = Math.floor(i / COLS);
+    const x = pad + col * (cardW + gap);
+    const y = headerH + row * (cardH + gap);
     parts.push(
       `<rect x="${x}" y="${y}" width="${cardW}" height="${cardH}" rx="14" fill="#111827" stroke="#1f2937"/>`
     );
@@ -165,9 +172,9 @@ function buildQualitySvg(networks: NetworkDoc[], generatedAt: string): string {
       `<text x="${x + 18}" y="${y + 48}" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">${escapeXml(n.id)}</text>`
     );
 
-    LAYERS.forEach(([key, label], row) => {
+    LAYERS.forEach(([key, label], rowIdx) => {
       const q = n.quality?.[key as keyof NetworkQuality] as LayerQuality | undefined;
-      const ry = y + 64 + row * rowH;
+      const ry = y + 64 + rowIdx * rowH;
       const color = statusColor(q?.status);
       const pct = q ? Math.round(q.coverage * 100) : 0;
       const barW = 72;

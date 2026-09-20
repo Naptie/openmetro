@@ -8,8 +8,10 @@
  *   interchange.xml `t`, plantrip `waitTime` / `transferStationTime`, fare
  *   price, AMap/official/known coordinates, published names & first/last trains)
  * - `derived`  — inferred from another official series (last-train diffs,
- *   searchstartend cumulative-time jumps, Overpass/Photon coords)
+ *   searchstartend cumulative-time jumps, Overpass/Photon coords; any resolved
+ *   coordinate whose provenance is untagged or from a community geocoder)
  * - `default`  — network-wide constant; the source published nothing
+ *   (for coordinates: station has no location at all)
  *
  * Status (for UI / quick glance):
  * - `complete`    — full coverage, official values
@@ -88,29 +90,42 @@ function precisionFromTransfer(t: {
 }): Precision {
   if (t.walk_time_seconds == null) return 'default';
   const src = t.source_id ?? '';
+  // Operator-published interchange times and route-planner waits are official.
   if (src.includes('interchange')) return 'official';
   if (src.includes('plantrip')) return 'official';
   if (src.includes('searchstartend')) return 'derived';
+  // A documented network average is still an operator value, but not a
+  // measured station-pair walk — count as derived.
   return 'derived';
 }
 
 /**
  * Coordinate provenance. Operator/AMap subways and hand-verified points are
  * official; community geocoders (Overpass / Photon / OSM) are derived.
+ *
+ * Presence of a `location` is the coverage signal. An unrecognized or missing
+ * `location_source` tag still means a real-world point was resolved — count it
+ * as `derived` rather than treating the station as coordinate-less.
  */
-function precisionFromCoordSource(src: string | undefined): Precision {
+function precisionFromCoordSource(src: string | undefined, hasLocation: boolean): Precision {
+  if (!hasLocation) return 'default';
   switch (src) {
     case 'subway':
     case 'official':
     case 'known':
     case 'source':
+    case 'operator':
+    case 'amap':
       return 'official';
     case 'overpass':
     case 'photon':
     case 'osm':
+    case 'tencent':
+    case 'geocode':
       return 'derived';
     default:
-      return 'default';
+      // Location exists but provenance is untagged / alternate geocoder.
+      return 'derived';
   }
 }
 
@@ -170,12 +185,9 @@ export function computeNetworkQuality(input: QualityInput): NetworkQualityJson {
   const coordCounts = emptyCounts();
   const nameCounts = emptyCounts();
   for (const s of input.stations) {
-    if (s.location) {
-      const src = s.extras?.location_source;
-      coordCounts[precisionFromCoordSource(typeof src === 'string' ? src : undefined)]++;
-    } else {
-      coordCounts.default++;
-    }
+    const hasLocation = s.location != null;
+    const src = s.extras?.location_source;
+    coordCounts[precisionFromCoordSource(typeof src === 'string' ? src : undefined, hasLocation)]++;
     const zh = s.names?.zh;
     const en = s.names?.en;
     if (zh && en) nameCounts.official++;

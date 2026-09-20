@@ -9,7 +9,7 @@
   import { Badge } from '$lib/components/ui/badge/index.js';
   import { Button } from '$lib/components/ui/button/index.js';
   import * as Sheet from '$lib/components/ui/sheet/index.js';
-  import { localizedName, networkName } from '$lib/format';
+  import { lineStatusKey, localizedName, networkName } from '$lib/format';
   import { createSheetSizer } from '$lib/hooks/use-sheet-resize.svelte';
   import { i18n } from '$lib/i18n.svelte';
   import { app } from '$lib/state.svelte';
@@ -198,7 +198,9 @@
                           {/if}
                           {#if line.status && line.status !== "operating"}
                             <Badge variant="destructive" class="px-1.5 py-0 text-[10px]">
-                              {t.status_other({ status: line.status })}
+                              {(t as unknown as Record<string, () => string>)[
+                                lineStatusKey(line.status)
+                              ]?.() ?? t.status_other({ status: line.status })}
                             </Badge>
                           {/if}
                         </button>

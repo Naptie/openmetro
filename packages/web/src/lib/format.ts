@@ -1,4 +1,8 @@
-import type { ApiLineMode as LineMode, ApiLineStatus as LineStatus } from 'openmetro-client';
+import type { ApiLine, ApiLineMode, ApiStation } from 'openmetro-client';
+
+type LineMode = ApiLineMode;
+type LineStatus = NonNullable<ApiLine['status']>;
+type StationStatus = NonNullable<ApiStation['status']>;
 
 /**
  * Loosest input contract for localized entity names — every API entity's
@@ -45,20 +49,41 @@ export function formatDuration(seconds: number, locale: string): string {
 }
 
 /**
- * Status → message key. Keyed by the schema-derived LineStatus union so a new
- * status in packages/core/src/schema/line.ts fails typecheck here until it is
- * handled. Unknown runtime values fall back to status_other.
+ * Line status → message key. Keyed by the schema-derived LineStatus union so a
+ * new status in packages/core/src/schema/line.ts fails typecheck here until it
+ * is handled. Unknown runtime values fall back to status_other.
  */
 const LINE_STATUS_KEYS: Record<LineStatus, string> = {
   operating: 'status_operating',
-  partially_operating: 'status_partially_operating',
-  under_construction: 'status_under_construction',
-  planned: 'status_planned',
-  closed: 'status_closed'
+  under_construction: 'status_under_construction'
 };
 
 export function lineStatusKey(status: string | undefined): string {
   return (status && LINE_STATUS_KEYS[status as LineStatus]) || 'status_other';
+}
+
+/** True when a line is in passenger service (usable for routing / badges). */
+export function isOperatingLine(status: string | undefined): boolean {
+  return status == null || status === 'operating';
+}
+
+/**
+ * Station status → message key. Distinct prefixes from line status and from
+ * timetable in-service flags (`station_in_service` / `station_out_of_service`).
+ */
+const STATION_STATUS_KEYS: Record<StationStatus, string> = {
+  operating: 'station_status_operating',
+  out_of_service: 'station_status_out_of_service',
+  under_construction: 'station_status_under_construction'
+};
+
+export function stationStatusKey(status: string | undefined): string {
+  return (status && STATION_STATUS_KEYS[status as StationStatus]) || 'station_status_other';
+}
+
+/** Stations usable as route endpoints by default. */
+export function isRoutableStation(status: string | undefined): boolean {
+  return status == null || status === 'operating';
 }
 
 /**

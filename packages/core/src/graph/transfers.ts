@@ -239,6 +239,7 @@ function walkSeconds(distM: number, defaultSec: number, maxSec: number): number 
 }
 
 export interface CrossStationInput {
+  /** `status` is honored when present: non-operating stations get no auto edges. */
   stations: Pick<StationEncoded, 'id' | 'name' | 'names' | 'location' | 'status'>[];
   stops: Pick<StopEncoded, 'id' | 'station_id' | 'line_id'>[];
   patterns?: { id: string; stop_ids?: readonly string[] }[];
@@ -291,7 +292,10 @@ export function deriveCrossStationTransfers(input: CrossStationInput): TransferE
   }
 
   const locatable = stations.filter(
-    (s) => locOf.has(s.id) && (stopsByStation.get(s.id)?.length ?? 0) > 0
+    (s) =>
+      (s.status == null || s.status === 'operating') &&
+      locOf.has(s.id) &&
+      (stopsByStation.get(s.id)?.length ?? 0) > 0
   );
 
   const isConsecutive = (a: string, b: string): boolean => {
@@ -523,7 +527,7 @@ export function deriveCrossStationTransfers(input: CrossStationInput): TransferE
  * then automatic cross-station out-of-station edges from names + geometry.
  */
 export function deriveTransfers(
-  stations: Pick<StationEncoded, 'id'>[],
+  stations: { id: string; status?: StationEncoded['status'] }[],
   stops: Pick<StopEncoded, 'id' | 'station_id' | 'line_id'>[],
   official: OfficialTransfer[] = [],
   opts?: {
@@ -534,7 +538,9 @@ export function deriveTransfers(
     crossStation?: boolean;
   }
 ): TransferEncoded[] {
-  const stationIds = new Set(stations.map((s) => s.id));
+  const stationIds = new Set(
+    stations.filter((s) => s.status == null || s.status === 'operating').map((s) => s.id)
+  );
   const linesByStation = new Map<string, Map<string, string>>();
   for (const stop of stops) {
     if (!stationIds.has(stop.station_id)) continue;

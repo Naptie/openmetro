@@ -14,15 +14,36 @@ export const LineMode = Schema.Literal(
 
 export type LineMode = Schema.Schema.Type<typeof LineMode>;
 
-export const LineStatus = Schema.Literal(
-  'operating',
-  'partially_operating',
-  'under_construction',
-  'planned',
-  'closed'
-);
+/**
+ * Canonical line service status.
+ *
+ * - `operating` — line is in passenger service (fully or essentially).
+ * - `under_construction` — planned / under construction / not yet open.
+ */
+export const LineStatus = Schema.Literal('operating', 'under_construction');
 
 export type LineStatus = Schema.Schema.Type<typeof LineStatus>;
+
+const LINE_STATUS_VALUES = new Set<string>(['operating', 'under_construction']);
+
+/** True when a line is in published passenger service. */
+export function isLineOperating(status: LineStatus | undefined): boolean {
+  return status == null || status === 'operating';
+}
+
+/**
+ * Map loose source status strings onto the two-value enum.
+ * `planned` / `closed` / `under construction` → `under_construction`.
+ * `partially_operating` still has passenger service → `operating`.
+ */
+export function coerceLineStatus(raw: string | undefined | null): LineStatus {
+  if (raw && LINE_STATUS_VALUES.has(raw)) return raw as LineStatus;
+  if (raw === 'partially_operating') return 'operating';
+  if (raw === 'planned' || raw === 'closed' || raw === 'under construction') {
+    return 'under_construction';
+  }
+  return 'operating';
+}
 
 /** A source reference: which source file/record produced this entity. */
 export const SourceIdRef = Schema.Struct({

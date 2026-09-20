@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { buildStopGraph } from '../src/graph/build.js';
+import { buildStationIndex, buildStopGraph } from '../src/graph/build.js';
 import { dijkstra, travelTimes } from '../src/graph/dijkstra.js';
 import { planRoute } from '../src/graph/route.js';
 
@@ -135,4 +135,58 @@ test('distance weight is best-effort and falls back to time', () => {
   const r = dijkstra(g, 'cn-bj-a-l1', 'cn-bj-c-l1');
   assert.ok(r);
   assert.equal(r.totalWeight, 3.0);
+});
+
+test('non-operating stations are excluded from the stop graph', () => {
+  const stationStatuses = [
+    { id: 'cn-bj-a', status: 'operating' as const },
+    { id: 'cn-bj-b', status: 'out_of_service' as const },
+    { id: 'cn-bj-c', status: 'operating' as const }
+  ];
+  const g = buildStopGraph('cn-bj', stops, segments, transfers, routing, 'time', {
+    stations: stationStatuses
+  });
+  assert.deepEqual(
+    [...new Set(g.nodes.map((n) => n.station_id))].sort(),
+    ['cn-bj-a', 'cn-bj-c']
+  );
+  // b is offline: no ride through b, no transfer at b.
+  const r = dijkstra(g, 'cn-bj-a-l1', 'cn-bj-c-l1');
+  assert.equal(r, null);
+  const index = buildStationIndex(stops, { stations: stationStatuses });
+  assert.equal(index.has('cn-bj-b'), false);
+});
+
+test('non-operating lines are excluded from the stop graph', () => {
+  const g = buildStopGraph('cn-bj', stops, segments, transfers, routing, 'time', {
+    stations: [
+      { id: 'cn-bj-a', status: 'operating' as const },
+      { id: 'cn-bj-b', status: 'operating' as const },
+      { id: 'cn-bj-c', status: 'operating' as const }
+    ],
+    lines: [
+      { id: 'cn-bj-l1', status: 'operating' },
+      { id: 'cn-bj-l2', status: 'under_construction' }
+    ]
+  });
+  assert.deepEqual(
+    [...new Set(g.nodes.map((n) => n.line_id))].sort(),
+    ['cn-bj-l1']
+  );
+  // Transfer onto the planned corridor is not offered.
+  const r = dijkstra(g, 'cn-bj-a-l1', 'cn-bj-c-l2');
+  assert.equal(r, null);
+  const onLine = dijkstra(g, 'cn-bj-a-l1', 'cn-bj-c-l1');
+  assert.ok(onLine);
+});
+
+test('through-running transfer with zero walk time stays traversable', () => {
+  const xfers = [
+    { ...transfers[0], walk_time_seconds: 0 },
+    { ...transfers[1], walk_time_seconds: 0 }
+  ] as any;
+  const g = buildStopGraph('cn-bj', stops, segments, xfers, routing, 'time');
+  const r = dijkstra(g, 'cn-bj-a-l1', 'cn-bj-c-l2');
+  assert.ok(r);
+  assert.equal(r.totalWeight, 100 + 0 + 50);
 });

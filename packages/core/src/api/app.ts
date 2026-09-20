@@ -424,13 +424,19 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
           withNetwork<Static<typeof ApiStopGraph>>(
             params.id,
             (d) => {
+              const filter = {
+                stations: d.stations,
+                lines: d.lines,
+                includeNonOperating: query.include_non_operating === true
+              };
               const graph = buildStopGraph(
                 d.network.id,
                 d.stops,
                 d.segments,
                 d.transfers,
                 d.network.routing,
-                resolveWeight(query.weight, d)
+                resolveWeight(query.weight, d),
+                filter
               );
               return {
                 network_id: d.network.id,
@@ -444,7 +450,10 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
           ),
         {
           params: NetworkParams,
-          query: t.Object({ weight: WeightQuery }),
+          query: t.Object({
+            weight: WeightQuery,
+            include_non_operating: t.Optional(t.Boolean())
+          }),
           detail: {
             tags: ['Routing'],
             summary: 'Assembled stop graph (nodes + weighted ride/transfer edges)'
@@ -459,10 +468,15 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
             params.id,
             (d) => {
               const { from, to } = query;
-              const index = buildStationIndex(d.stops);
+              const filter = {
+                stations: d.stations,
+                lines: d.lines,
+                includeNonOperating: false
+              };
+              const index = buildStationIndex(d.stops, filter);
               if (!index.has(from) || !index.has(to)) {
                 set.status = 404;
-                return { error: `unknown station ${!index.has(from) ? from : to}` };
+                return { error: `unknown or non-operating station ${!index.has(from) ? from : to}` };
               }
               const graph = buildStopGraph(
                 d.network.id,
@@ -470,7 +484,8 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
                 d.segments,
                 d.transfers,
                 d.network.routing,
-                resolveWeight(query.weight, d)
+                resolveWeight(query.weight, d),
+                filter
               );
               const plan = planRoute(graph, d.stops, from, to, index);
               if (!plan) {
@@ -507,11 +522,16 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
             params.id,
             (d) => {
               const { from } = query;
-              const index = buildStationIndex(d.stops);
+              const filter = {
+                stations: d.stations,
+                lines: d.lines,
+                includeNonOperating: false
+              };
+              const index = buildStationIndex(d.stops, filter);
               const sources = index.get(from);
               if (!sources || sources.length === 0) {
                 set.status = 404;
-                return { error: `unknown station ${from}` };
+                return { error: `unknown or non-operating station ${from}` };
               }
               const graph = buildStopGraph(
                 d.network.id,
@@ -519,7 +539,8 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
                 d.segments,
                 d.transfers,
                 d.network.routing,
-                resolveWeight(query.weight, d)
+                resolveWeight(query.weight, d),
+                filter
               );
               const stationByStop = new Map(d.stops.map((s) => [s.id, s.station_id]));
               const stopTimes = travelTimes(graph, sources);

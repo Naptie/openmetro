@@ -122,8 +122,11 @@
       const y = side * BRANCH_H;
 
       // Extend the branch towards the side its stations actually lie on:
-      // if the unique stops precede the junction in the branch sequence,
-      // they branch off to the left of the trunk.
+      // if the unique stops precede the junction in the branch sequence
+      // (e.g. 7延线: 莫阳→朱泾→雪南→常楼), they branch off to the left of the
+      // trunk. On that side the **last** branch-only station sits next to the
+      // junction — placing branchOnly[0] nearest would draw 莫阳—常楼 and skip
+      // the intermediate stations.
       const junctionIdx = junctionStation ? branchSeq.indexOf(junctionStation) : -1;
       const goLeft = branchOnly.length > 0 && junctionIdx > 0 && branchSeq[0] !== junctionStation;
       const dir = goLeft ? -1 : 1;
@@ -138,9 +141,13 @@
       });
 
       branchOnly.forEach((stationId, i) => {
+        // Distance from the trunk junction along the spur.
+        // goLeft: seq[0] is the outer terminus → farthest from the knee.
+        // goRight: seq[0] is adjacent to the trunk → nearest the knee.
+        const stepsFromKnee = goLeft ? branchOnly.length - i : i + 1;
         nodes.push({
           stationId,
-          x: kneeX + (i + 1) * SPACING * dir,
+          x: kneeX + stepsFromKnee * SPACING * dir,
           y,
           interchange: stationById.get(stationId)?.is_interchange ?? false,
           terminal: goLeft ? i === 0 : i === branchOnly.length - 1,

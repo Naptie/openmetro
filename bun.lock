@@ -50,6 +50,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-sz": {
+      "name": "@openmetro/adapter-cn-sz",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/api-worker": {
       "name": "@openmetro/api-worker",
       "version": "0.1.0",
@@ -345,6 +357,8 @@
     "@openmetro/adapter-cn-gz": ["@openmetro/adapter-cn-gz@workspace:packages/adapters/cn-gz"],
 
     "@openmetro/adapter-cn-sh": ["@openmetro/adapter-cn-sh@workspace:packages/adapters/cn-sh"],
+
+    "@openmetro/adapter-cn-sz": ["@openmetro/adapter-cn-sz@workspace:packages/adapters/cn-sz"],
 
     "@openmetro/api-worker": ["@openmetro/api-worker@workspace:packages/api-worker"],
 

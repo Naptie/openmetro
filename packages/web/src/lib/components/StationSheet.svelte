@@ -14,7 +14,7 @@
   import { Separator } from '$lib/components/ui/separator/index.js';
   import * as Sheet from '$lib/components/ui/sheet/index.js';
   import { Skeleton } from '$lib/components/ui/skeleton/index.js';
-  import { formatDuration, localizedName } from '$lib/format';
+  import { formatDuration, localizedName, stationStatusKey } from '$lib/format';
   import { createSheetSizer } from '$lib/hooks/use-sheet-resize.svelte';
   import { i18n } from '$lib/i18n.svelte';
   import { app } from '$lib/state.svelte';
@@ -230,6 +230,12 @@
             {#if station.is_interchange}
               <Badge variant="secondary">{t.station_interchange()}</Badge>
             {/if}
+            {#if station.status && station.status !== "operating"}
+              <Badge variant="destructive">
+                {(t as unknown as Record<string, () => string>)[stationStatusKey(station.status)]?.() ??
+                  station.status}
+              </Badge>
+            {/if}
             {#each lineBadges as line (line.id)}
               <button
                 type="button"
@@ -264,6 +270,7 @@
               class="gap-1.5 transition-all {isOrigin
                 ? 'animate-in fade-in-0 zoom-in-95 bg-route-origin hover:bg-route-origin text-white'
                 : ''}"
+              disabled={station.status !== undefined && station.status !== 'operating'}
               onclick={() => app.setOrigin(station.id)}
             >
               <CircleArrowUpIcon class="size-4" />
@@ -274,6 +281,7 @@
               class="gap-1.5 transition-all {isDestination
                 ? 'animate-in fade-in-0 zoom-in-95 bg-route-destination hover:bg-route-destination text-white'
                 : ''}"
+              disabled={station.status !== undefined && station.status !== 'operating'}
               onclick={() => app.setDestination(station.id)}
             >
               {#if isDestination}

@@ -10,7 +10,7 @@
  *        - interchange stations have a complete directional transfer pair
  *        - every segment has a positive travel time
  *        - linear timetables name a destination; loops use direction_type
- *        - fares station set matches stations.json exactly; matrix is square
+ *        - fares cover every operating station; matrix is square
  *        - lines that publish any timetable cover every operating stop
  *          (tram-only networks/lines with zero published times are exempt)
  *        - every line carries a non-empty `short_name` unless waived per network
@@ -371,7 +371,14 @@ function verifyReferences(network: string, d: NetworkData): void {
       assert(stationIds.has(stationId), network, `fare matrix -> unknown station ${stationId}`);
     }
     for (const stationId of stationIds) {
-      assert(fareIds.has(stationId), network, `station ${stationId} missing from fare matrix`);
+      const status = stationById.get(stationId)?.status;
+      // Fares are harvested for routable stations; planned/under-construction
+      // rows may be absent from the matrix.
+      assert(
+        fareIds.has(stationId) || status !== 'operating',
+        network,
+        `station ${stationId} missing from fare matrix`
+      );
     }
     matrix.station_ids.forEach((_, i) => {
       const row = matrix.fares[i] ?? [];

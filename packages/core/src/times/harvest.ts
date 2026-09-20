@@ -140,7 +140,8 @@ export function applyHarvestedTransferTimes(
     return {
       ...t,
       walk_time_seconds: hit.walk_time_seconds,
-      source_id: t.source_id ?? hit.source_id
+      // Provenance of the walk time (not of the edge itself).
+      source_id: hit.source_id
     };
   });
   return { transfers: out, applied };

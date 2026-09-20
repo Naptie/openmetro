@@ -21,7 +21,7 @@ const client = createClient('http://127.0.0.1:8790');
 const metro: ApiLineMode = 'metro';
 const airportExpress: ApiLineMode = 'airport_express';
 const operating: ApiLine['status'] = 'operating';
-const closed: ApiLine['status'] = 'closed';
+const underConstruction: ApiLine['status'] = 'under_construction';
 // `short_name` is mandatory and not guaranteed ASCII/numeric.
 const badge: ApiLine['short_name'] = 'APM';
 const numericBadge: ApiLine['short_name'] = '1';
@@ -101,7 +101,7 @@ async function main() {
     metro,
     airportExpress,
     operating,
-    closed,
+    underConstruction,
     badge,
     numericBadge,
     maybeColor,

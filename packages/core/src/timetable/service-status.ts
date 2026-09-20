@@ -7,8 +7,9 @@ import type { StationEncoded, StopEncoded, TimetableEncoded } from '../schema/in
  *
  * Rationale: official sources often omit stations that are not in passenger
  * service (renovating, not yet open) while still listing them on the map.
- * We cannot distinguish planned / under_construction / closed from the
- * timetable feed alone, so they become a single `out_of_service` status.
+ * The timetable feed alone cannot distinguish construction vs temporary
+ * offline, so these become `out_of_service`. Adapters that know a stop is
+ * not yet open should write `under_construction` directly instead.
  *
  * Lines with **zero** published timetables (e.g. trams the operator does not
  * feed) leave every station as `operating` unless forced by the override list.

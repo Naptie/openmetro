@@ -15,15 +15,15 @@ export const apiSchematicPointSchema = z.object({ "x": z.number(), "y": z.number
 
 export const apiLineModeSchema = z.enum(["metro", "suburban_rail", "light_rail", "tram", "monorail", "airport_express", "other"]);
 
-export const apiLineStatusSchema = z.enum(["operating", "partially_operating", "under_construction", "planned", "closed"]);
+export const apiLineStatusSchema = z.enum(["operating", "under_construction"]);
 
-export const apiLineSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "color": z.string().optional(), "text_color": z.string().optional(), "short_name": z.string(), "mode": z.enum(["metro", "suburban_rail", "light_rail", "tram", "monorail", "airport_express", "other"]), "status": z.enum(["operating", "partially_operating", "under_construction", "planned", "closed"]), "loop": z.boolean() });
+export const apiLineSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "color": z.string().optional(), "text_color": z.string().optional(), "short_name": z.string(), "mode": z.enum(["metro", "suburban_rail", "light_rail", "tram", "monorail", "airport_express", "other"]), "status": z.enum(["operating", "under_construction"]), "loop": z.boolean() });
 
 export const apiLineListSchema = z.array(apiLineSchema);
 
-export const apiStationStatusSchema = z.enum(["operating", "out_of_service", "closed", "under_construction", "planned"]);
+export const apiStationStatusSchema = z.enum(["operating", "out_of_service", "under_construction"]);
 
-export const apiStationSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "location": apiGeoPointSchema.optional(), "schematic": apiSchematicPointSchema.optional(), "status": z.enum(["operating", "out_of_service", "closed", "under_construction", "planned"]), "lines": z.array(z.string()), "is_interchange": z.boolean() });
+export const apiStationSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "location": apiGeoPointSchema.optional(), "schematic": apiSchematicPointSchema.optional(), "status": z.enum(["operating", "out_of_service", "under_construction"]), "lines": z.array(z.string()), "is_interchange": z.boolean() });
 
 export const apiStationListSchema = z.array(apiStationSchema);
 

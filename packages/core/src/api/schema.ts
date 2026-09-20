@@ -63,13 +63,7 @@ export const ApiLineMode = t.Union(
 
 /** Operating status of a line (canonical `LineStatus`). */
 export const ApiLineStatus = t.Union(
-  [
-    t.Literal('operating'),
-    t.Literal('partially_operating'),
-    t.Literal('under_construction'),
-    t.Literal('planned'),
-    t.Literal('closed')
-  ],
+  [t.Literal('operating'), t.Literal('under_construction')],
   { $id: 'ApiLineStatus' }
 );
 
@@ -96,9 +90,7 @@ export const ApiStationStatus = t.Union(
   [
     t.Literal('operating'),
     t.Literal('out_of_service'),
-    t.Literal('closed'),
-    t.Literal('under_construction'),
-    t.Literal('planned')
+    t.Literal('under_construction')
   ],
   { $id: 'ApiStationStatus' }
 );
