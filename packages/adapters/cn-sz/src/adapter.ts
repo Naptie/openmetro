@@ -12,8 +12,8 @@ export const adapter: AdapterManifest = {
   layers: {
     topology: { supported: true, estimatedMinutes: 5 },
     timetables: { supported: true, estimatedMinutes: 3 },
-    // One-to-all getTransTickets — far cheaper than per-OD planners.
-    fares: { supported: true, estimatedMinutes: 15 },
+    // One-to-all getTransTickets — seconds, unlike per-OD planners in other cities.
+    fares: { supported: true, estimatedMinutes: 5 },
     enrichment: { supported: true, estimatedMinutes: 8 }
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
@@ -22,11 +22,12 @@ export const adapter: AdapterManifest = {
     const wantTopology = layers.some(
       (l) => l === 'topology' || l === 'timetables' || l === 'enrichment'
     );
+    // Always write fares.json: verify requires it for a complete network, and
+    // Suzhou's one-to-all endpoint is cheap enough to run on every sync.
     await runSuzhouNormalize({
       root,
-      // Fares layer only: reuse existing topology; skip geocode re-fetch.
       skipGeocode: !wantTopology,
-      skipFares: !layers.includes('fares')
+      skipFares: false
     });
   }
 };

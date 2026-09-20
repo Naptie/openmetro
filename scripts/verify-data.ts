@@ -28,7 +28,11 @@ import { loadNetwork, type NetworkData } from '../packages/core/src/index.js';
 
 const DATA_ROOT = resolve(process.env.OPENMETRO_DATA_ROOT ?? 'data');
 
-/** Canonical files that make up a published dataset (order is irrelevant). */
+/**
+ * Canonical files that make up a published dataset (order is irrelevant).
+ * Every network must ship a fares matrix after a complete sync; adapters that
+ * only implement topology must still emit `fares.json` (even all-null rows).
+ */
 const CANONICAL_FILES = [
   'network.json',
   'lines.json',
@@ -354,11 +358,10 @@ function verifyReferences(network: string, d: NetworkData): void {
   }
 
   // ── Fares ─────────────────────────────────────────────────────
-  // Fares are optional: topology-only sync jobs (and brand-new networks)
-  // legitimately have no `fares.json` until the monthly fares layer runs.
   if (!d.fares) {
-    // skip — not a topology integrity failure
-  } else {
+    fail(network, 'fares.json missing (required for a complete dataset)');
+  }
+  {
     const matrix = d.fares;
     assert(matrix.network_id === network, network, 'fare matrix network_id mismatch');
     assert(
