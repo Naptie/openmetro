@@ -11,9 +11,9 @@ packages/
   core/       # city-agnostic: schema, graph builder, Dijkstra routing, HTTP API,
               # geocoding (AMap subway → Overpass → Photon), Wikidata enrichment
   adapters/   # city-specific scrapers/normalizers (one package per network id)
-    cn-bj/
-    cn-sh/
-    cn-gz/
+    cn-beijing/
+    cn-shanghai/
+    cn-guangzhou/
     ...
   client/     # typed Eden Treaty client generated from the API app type
   api-worker/ # Cloudflare Worker build of the API
@@ -162,13 +162,13 @@ bun run format
 # Regenerate canonical data for every discovered adapter (fetches official APIs)
 bun run data:sync --list
 bun run data:sync --layer topology,timetables,enrichment
-bun run data:sync --network cn-sh --layer topology,timetables,enrichment
+bun run data:sync --network cn-shanghai --layer topology,timetables,enrichment
 bun run data:sync --layer fares  # opt-in only: one planner query per OD pair, takes hours
 
 # Or per package:
-bun run --cwd packages/adapters/cn-bj normalize
-bun run --cwd packages/adapters/cn-sh normalize
-bun run --cwd packages/adapters/cn-gz normalize
+bun run --cwd packages/adapters/cn-beijing normalize
+bun run --cwd packages/adapters/cn-shanghai normalize
+bun run --cwd packages/adapters/cn-guangzhou normalize
 
 # Validate every dataset and write a checksummed manifest
 bun run data:verify
@@ -223,7 +223,7 @@ Responses are **lean projections** of the canonical records: provenance
 every dataset and every derived artifact is reachable.
 
 - `GET /api/health` — liveness probe
-- `GET /api/networks` — list available networks (`cn-bj`, `cn-sh`, `cn-gz`) with metadata
+- `GET /api/networks` — list available networks (`cn-beijing`, `cn-shanghai`, `cn-guangzhou`) with metadata
 - `GET /api/networks/:id` — one network's metadata (city, currency, timezone,
   routing defaults) plus `synced_at`, when the canonical data was last
   synchronized (max `generated_at` across its files; only filled by the detail
@@ -303,10 +303,10 @@ The same package is also attached to each GitHub Release as
 import { createClient } from "openmetro-client";
 
 const metro = createClient("http://127.0.0.1:8790");
-const { data: stations } = await metro.api.networks({ id: "cn-bj" }).stations.get();
+const { data: stations } = await metro.api.networks({ id: "cn-beijing" }).stations.get();
 const { data: plan } = await metro.api
-  .networks({ id: "cn-bj" })
-  .route.get({ query: { from: "cn-bj-pingguoyuan", to: "cn-bj-xizhimen" } });
+  .networks({ id: "cn-beijing" })
+  .route.get({ query: { from: "cn-beijing-pingguoyuan", to: "cn-beijing-xizhimen" } });
 ```
 
 Response entity types are derived from the same client and exported for use in
@@ -344,8 +344,8 @@ npm install openmetro-client zod  # zod is an optional peer, only needed for ./s
 import { apiRoutePlanSchema } from "openmetro-client/schemas";
 
 const { data: plan } = await metro.api
-  .networks({ id: "cn-bj" })
-  .route.get({ query: { from: "cn-bj-pingguoyuan", to: "cn-bj-xizhimen" } });
+  .networks({ id: "cn-beijing" })
+  .route.get({ query: { from: "cn-beijing-pingguoyuan", to: "cn-beijing-xizhimen" } });
 
 const result = apiRoutePlanSchema.safeParse(plan);
 if (!result.success) {

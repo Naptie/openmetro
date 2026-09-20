@@ -1,0 +1,386 @@
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import {
+  applyDerivedTimes,
+  applyHarvestedSegmentTimes,
+  applyHarvestedTransferTimes,
+  deriveSegmentTimes,
+  deriveTransfers,
+  enrichLineNamesFromWikidata,
+  fillCoordinates,
+  fillMissingSegmentTimes,
+  type LineEncoded,
+  type SegmentEncoded,
+  type StationEncoded,
+  syncFares,
+  type TransformStations,
+  writeCanonical
+} from '@openmetro/core';
+import { fareSpec } from './fares.js';
+import { fetchMinTime, fetchShenzhenSources } from './fetch.js';
+import { normalize } from './normalize.js';
+import { collectShenzhenPlannerTimes, collectShenzhenTransferTimes } from './times.js';
+
+export const transformStations: TransformStations = (stations) => stations;
+
+export interface ShenzhenNormalizeOptions {
+  root?: string;
+  skipPlannerTimes?: boolean;
+  skipGeocode?: boolean;
+  skipFares?: boolean;
+  skipEnTimetables?: boolean;
+}
+
+function rootOfDefault(): string {
+  return process.env.OPENMETRO_ROOT ?? process.cwd();
+}
+
+export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}): Promise<void> {
+  const root = opts.root ?? rootOfDefault();
+  const outDir = join(root, 'data/cn-shenzhen');
+
+  const sources = await fetchShenzhenSources({ skipEnTimetables: opts.skipEnTimetables });
+  const canonical = normalize(sources);
+
+  const lines = await enrichLineNamesFromWikidata(canonical.lines, {
+    getEnglishLookupLabel: (line: LineEncoded) => line.names.en || line.name
+  });
+
+  let subwayMatched = 0;
+  let officialMatched = 0;
+  let overpassMatched = 0;
+  let geocoded = 0;
+  let stations = canonical.stations;
+  if (!opts.skipGeocode) {
+    stations = transformStations(
+      await fillCoordinates(canonical.stations, {
+        city: '深圳',
+        stops: canonical.stops,
+        lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
+        officialLocations: canonical.officialLocations,
+        knownLocations: [
+          {
+            name: '宝安客运站',
+            location: { lon: 113.883674, lat: 22.589332, crs: 'gcj02' },
+            source: 'known'
+          }
+        ],
+        segments: canonical.segments.map((s) => ({
+          from_station_id: s.from_station_id,
+          to_station_id: s.to_station_id,
+          line_id: s.line_id,
+          travel_time_seconds: s.travel_time_seconds,
+          travel_time_source: s.travel_time_source
+        })),
+        speedValidate: true,
+        failOnInvalidCoordinates: false,
+        onSubwayMatch: () => subwayMatched++,
+        onOfficialMatch: () => officialMatched++,
+        onOverpassMatch: () => overpassMatched++,
+        onGeocode: () => geocoded++,
+        onSpeedValidate: (report) => {
+          if (!report.ok) {
+            console.log(
+              `  speed-validate FAIL ${report.station_name ?? report.station_id}: ` +
+                (report.violations[0]?.detail ?? '')
+            );
+          }
+        }
+      }),
+      { network: canonical.network.id, city: '深圳' }
+    );
+  } else {
+    try {
+      const prev = JSON.parse(await readFile(join(outDir, 'stations.json'), 'utf-8')) as {
+        records?: StationEncoded[];
+      };
+      const prevById = new Map((prev.records ?? []).map((s) => [s.id, s] as const));
+      stations = canonical.stations.map((s) => {
+        const old = prevById.get(s.id);
+        if (!old?.location) return s;
+        return { ...s, location: old.location, schematic: old.schematic ?? s.schematic };
+      });
+    } catch {
+      // no previous dataset
+    }
+  }
+  stations = transformStations(stations, { network: canonical.network.id, city: '深圳' });
+
+  const codeByStopId = new Map<string, string>();
+  const stationIdByStopId = new Map<string, string>();
+  const stopByCode = new Map<string, string>();
+  const patternIdByLine = new Map<string, string>();
+  for (const stop of canonical.stops) {
+    stationIdByStopId.set(stop.id, stop.station_id);
+    const code = stop.source_id;
+    if (code) {
+      codeByStopId.set(stop.id, code);
+      if (!stopByCode.has(code)) stopByCode.set(code, stop.id);
+    }
+  }
+  for (const p of canonical.patterns) {
+    if (!patternIdByLine.has(p.line_id)) patternIdByLine.set(p.line_id, p.id);
+  }
+  const stationNameById = new Map(stations.map((s) => [s.id, s.name]));
+  const stationIdByCode = new Map<string, string>();
+  for (const [code, stopId] of stopByCode) {
+    const sid = stationIdByStopId.get(stopId);
+    if (sid) stationIdByCode.set(code, sid);
+  }
+
+  let transfers = deriveTransfers(stations, canonical.stops, [], {
+    patterns: canonical.patterns,
+    lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
+    routing: canonical.network.routing,
+    crossStation: true
+  });
+
+  let segments = canonical.segments;
+  const derived = deriveSegmentTimes(canonical.patterns, canonical.stops, canonical.timetables, {});
+  segments = applyDerivedTimes(segments, derived);
+  segments = fillMissingSegmentTimes(
+    segments,
+    canonical.patterns,
+    canonical.stops,
+    canonical.timetables
+  );
+
+  if (!opts.skipPlannerTimes) {
+    console.log('  harvest MinTimeJson adjacent segment times');
+    const harvested = await collectShenzhenPlannerTimes({
+      patterns: canonical.patterns,
+      stops: canonical.stops,
+      transfers,
+      codeOf: (stopId) => codeByStopId.get(stopId),
+      stationIdOf: (stopId) => stationIdByStopId.get(stopId),
+      stationName: (stationId) => stationNameById.get(stationId),
+      patternIdByLine
+    });
+    const seg = applyHarvestedSegmentTimes(segments, harvested.segments);
+    segments = seg.segments;
+    console.log(`  applied planner segment times: ${seg.applied}/${segments.length}`);
+
+    // Prefer official planner first/last when the English table is incomplete.
+    const haveTt = new Set(
+      canonical.timetables.map((t) => `${t.stop_id}|${t.destination_stop_id}|${t.line_id}`)
+    );
+    const extraTt = [];
+    const stopById = new Map(canonical.stops.map((s) => [s.id, s]));
+    for (const hint of harvested.timetableHints) {
+      if (!hint.station_id || !hint.stop_id || !hint.line_id || !hint.pattern_id) continue;
+      if (!hint.first_train || !hint.last_train) continue;
+      const destStopId = hint.destination_stop_id;
+      const key = `${hint.stop_id}|${destStopId}|${hint.line_id}`;
+      if (haveTt.has(key)) continue;
+      // Only accept destination stops that exist on the same line.
+      const destStop = stopById.get(destStopId);
+      if (!destStop || destStop.line_id !== hint.line_id) continue;
+      haveTt.add(key);
+      extraTt.push({
+        id: `${canonical.network.id}-${hint.stop_id}-to-${destStopId}-planner`,
+        station_id: hint.station_id,
+        stop_id: hint.stop_id,
+        line_id: hint.line_id,
+        station_code: hint.station_code,
+        source_id: 'szmc-mintime',
+        destination_stop_id: destStopId,
+        pattern_id: hint.pattern_id,
+        first_train: [hint.first_train],
+        last_train: [hint.last_train],
+        service: 'all_days',
+        direction_type: 'linear' as const
+      });
+    }
+
+    console.log('  harvest MinTimeJson transfer walk times');
+    const xferHarvest = await collectShenzhenTransferTimes({
+      transfers,
+      stops: canonical.stops,
+      patterns: canonical.patterns,
+      codeOf: (stopId) => codeByStopId.get(stopId),
+      stationName: (stationId) => stationNameById.get(stationId)
+    });
+    const xfer = applyHarvestedTransferTimes(transfers, xferHarvest);
+    transfers = xfer.transfers;
+    console.log(`  applied planner transfer times: ${xfer.applied}/${transfers.length}`);
+
+    if (extraTt.length > 0) {
+      canonical.timetables = [...canonical.timetables, ...extraTt];
+      console.log(`  planner timetable hints merged: +${extraTt.length}`);
+    }
+
+    // Fill first/last for operating stops that still have no timetable at all
+    // (newer stations absent from the English Time_Table pages).
+    const stationsWithTt = new Set(canonical.timetables.map((t) => t.station_id));
+    const stopsByLine = new Map<string, typeof canonical.stops>();
+    for (const stop of canonical.stops) {
+      const list = stopsByLine.get(stop.line_id) ?? [];
+      list.push(stop);
+      stopsByLine.set(stop.line_id, list);
+    }
+    const patternByLine = new Map(canonical.patterns.map((p) => [p.line_id, p]));
+    const missingStops = canonical.stops.filter((stop) => {
+      const st = stations.find((s) => s.id === stop.station_id);
+      return st?.status === 'operating' && !stationsWithTt.has(stop.station_id);
+    });
+    console.log(`  fill missing timetables via planner: ${missingStops.length} stops`);
+    const filled: typeof canonical.timetables = [];
+    const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+    for (const stop of missingStops) {
+      const pattern = patternByLine.get(stop.line_id);
+      if (!pattern) continue;
+      const code = codeByStopId.get(stop.id);
+      if (!code) continue;
+      const termini = [pattern.origin_stop_id, pattern.terminal_stop_id].filter(
+        (id) => id && id !== stop.id
+      );
+      for (const destStopId of termini) {
+        const destCode = codeByStopId.get(destStopId);
+        if (!destCode) continue;
+        const resp = await fetchMinTime(code, destCode, 0);
+        await sleep(160);
+        if (!resp) continue;
+        const legs = resp.lineList ?? [];
+        const firstLeg = legs.find((l) => String(l.code || '').trim() === code) ?? legs[0];
+        const first = firstLeg?.firstTime?.trim();
+        const last = firstLeg?.endTime?.trim();
+        const toHH = (v?: string) => {
+          if (!v || v === '--') return undefined;
+          const m = /^(\d{1,2}):(\d{2})/.exec(v);
+          return m ? `${m[1].padStart(2, '0')}:${m[2]}` : undefined;
+        };
+        const f = toHH(first);
+        const l = toHH(last);
+        const key = `${stop.id}|${destStopId}|${stop.line_id}`;
+        if (haveTt.has(key)) continue;
+
+        if (f || l) {
+          haveTt.add(key);
+          filled.push({
+            id: `${canonical.network.id}-${stop.id}-to-${destStopId}-planner-fill`,
+            station_id: stop.station_id,
+            stop_id: stop.id,
+            line_id: stop.line_id,
+            station_code: code,
+            source_id: 'szmc-mintime',
+            destination_stop_id: destStopId,
+            pattern_id: pattern.id,
+            first_train: f ? [f] : [],
+            last_train: l ? [l] : [],
+            service: 'all_days',
+            direction_type: 'linear' as const
+          });
+          break;
+        }
+
+        // Planner may not know brand-new termini — inherit neighbour times.
+        const neigh = pattern.stop_ids.find((sid) => {
+          if (sid === stop.id) return false;
+          return canonical.timetables.some((t) => t.stop_id === sid && t.line_id === stop.line_id);
+        });
+        const neighTt = canonical.timetables.find(
+          (t) => t.stop_id === neigh && t.line_id === stop.line_id
+        );
+        if (!neighTt) continue;
+        haveTt.add(key);
+        filled.push({
+          id: `${canonical.network.id}-${stop.id}-to-${destStopId}-derived`,
+          station_id: stop.station_id,
+          stop_id: stop.id,
+          line_id: stop.line_id,
+          station_code: code,
+          source_id: 'szmc-neighbor-inherit',
+          destination_stop_id: destStopId,
+          pattern_id: pattern.id,
+          first_train: neighTt.first_train.length ? [...neighTt.first_train] : [],
+          last_train: neighTt.last_train.length ? [...neighTt.last_train] : [],
+          service: 'all_days',
+          direction_type: 'linear' as const,
+          extras: { inherited_from_stop_id: neigh }
+        });
+        break;
+      }
+    }
+    if (filled.length > 0) {
+      canonical.timetables = [...canonical.timetables, ...filled];
+      console.log(`  planner filled timetables: +${filled.length}`);
+    }
+  }
+
+  // Distance estimates from official GCJ-02 coordinates when available.
+  const locById = new Map(
+    stations
+      .filter((s) => s.location)
+      .map((s) => [s.id, s.location as { lon: number; lat: number }] as const)
+  );
+  function haversineKm(a: { lon: number; lat: number }, b: { lon: number; lat: number }): number {
+    const R = 6371;
+    const toRad = (d: number) => (d * Math.PI) / 180;
+    const dLat = toRad(b.lat - a.lat);
+    const dLon = toRad(b.lon - a.lon);
+    const lat1 = toRad(a.lat);
+    const lat2 = toRad(b.lat);
+    const h = Math.sin(dLat / 2) ** 2 + Math.sin(dLon / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
+    return 2 * R * Math.asin(Math.sqrt(h));
+  }
+  segments = segments.map((s: SegmentEncoded) => {
+    if (s.distance_km != null) return s;
+    const a = locById.get(s.from_station_id);
+    const b = locById.get(s.to_station_id);
+    if (!a || !b) return s;
+    const km = haversineKm(a, b);
+    if (!(km > 0.05) || km > 30) return s;
+    return {
+      ...s,
+      distance_km: Math.round(km * 1000) / 1000,
+      extras: { ...(s.extras ?? {}), distance_source: 'gcj02-coords' }
+    };
+  });
+
+  await writeCanonical(outDir, 'cn-shenzhen', {
+    network: canonical.network,
+    lines,
+    stations,
+    stops: canonical.stops,
+    patterns: canonical.patterns,
+    segments,
+    transfers,
+    timetables: canonical.timetables
+  });
+
+  if (!opts.skipFares) {
+    console.log('  harvest full OD fares via MinTimeJson');
+    await syncFares({ dataDir: outDir }, fareSpec, { concurrency: 8, delay: 80 });
+  }
+
+  console.log('lines:', lines.length);
+  console.log('stations:', stations.length);
+  console.log('with coords:', stations.filter((s) => s.location).length);
+  console.log('  via subway:', subwayMatched);
+  console.log('  via official:', officialMatched);
+  console.log('  via overpass:', overpassMatched);
+  console.log('  via tencent:', geocoded);
+  console.log('stops:', canonical.stops.length);
+  console.log('patterns:', canonical.patterns.length);
+  console.log('segments:', segments.length);
+  const bySrc: Record<string, number> = {};
+  for (const s of segments) {
+    const k = s.travel_time_source ?? 'none';
+    bySrc[k] = (bySrc[k] ?? 0) + 1;
+  }
+  console.log('segments by time source:', bySrc);
+  console.log('transfers:', transfers.length);
+  console.log(
+    'transfers with walk_time:',
+    transfers.filter((t) => t.walk_time_seconds != null).length
+  );
+  console.log('timetables:', canonical.timetables.length);
+}
+
+const isDirect = process.argv[1]?.includes('run.ts');
+if (isDirect) {
+  runShenzhenNormalize().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

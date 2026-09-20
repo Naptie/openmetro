@@ -33,7 +33,7 @@ export interface LocatableStation {
 }
 
 export interface TransformStationsContext {
-  /** Canonical network id, e.g. 'cn-gz'. */
+  /** Canonical network id, e.g. 'cn-guangzhou'. */
   network: string;
   /** Primary city name. */
   city: string;

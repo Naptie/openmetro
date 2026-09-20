@@ -1,9 +1,9 @@
-import { isStationRoutable, type StationStatus } from '../schema/index.js';
 import type {
   SegmentEncoded as Segment,
   StopEncoded as Stop,
   TransferEncoded as Transfer
 } from '../schema/index.js';
+import { isStationRoutable, type StationStatus } from '../schema/index.js';
 
 /** Encoded (JSON) routing defaults, as read from `network.json`. */
 export interface RoutingDefaultsInput {
@@ -106,10 +106,7 @@ export interface StopGraph {
 /** Station id -> the stops (line occurrences) that belong to it. */
 export type StationIndex = Map<string, string[]>;
 
-export function buildStationIndex(
-  stops: Stop[],
-  options?: GraphFilterOptions
-): StationIndex {
+export function buildStationIndex(stops: Stop[], options?: GraphFilterOptions): StationIndex {
   const routable = filterRoutableStops(stops, options);
   const index: StationIndex = new Map();
   for (const stop of routable) {
@@ -187,9 +184,14 @@ export function buildStopGraph(
   }));
 
   const stopByStationLine = new Map<string, string>();
-  for (const stop of usableStops) stopByStationLine.set(`${stop.station_id}|${stop.line_id}`, stop.id);
+  for (const stop of usableStops)
+    stopByStationLine.set(`${stop.station_id}|${stop.line_id}`, stop.id);
 
-  const resolveStop = (stationId: string, lineId: string, explicit?: string): string | undefined => {
+  const resolveStop = (
+    stationId: string,
+    lineId: string,
+    explicit?: string
+  ): string | undefined => {
     const candidate = explicit ?? stopByStationLine.get(`${stationId}|${lineId}`);
     if (!candidate || !stopIds.has(candidate)) return undefined;
     return candidate;

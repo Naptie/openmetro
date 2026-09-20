@@ -92,7 +92,7 @@ async function main(): Promise<void> {
       `import { createClient } from "${PACKAGE_NAME}";`,
       '',
       'const metro = createClient("http://127.0.0.1:8790");',
-      'const { data } = await metro.api.networks({ id: "cn-bj" }).stations.get();',
+      'const { data } = await metro.api.networks({ id: "cn-beijing" }).stations.get();',
       '```',
       '',
       '## Derived entity types',

@@ -80,23 +80,23 @@ test('live responses validate against the registered schemas (no 500s)', {
   const probes = [
     '/api/health',
     '/api/networks',
-    '/api/networks/cn-bj',
-    '/api/networks/cn-gz/lines',
-    '/api/networks/cn-bj/stations',
-    '/api/networks/cn-bj/stations/cn-bj-xizhimen',
-    '/api/networks/cn-bj/stops',
-    '/api/networks/cn-bj/patterns',
-    '/api/networks/cn-bj/segments',
-    '/api/networks/cn-bj/transfers',
-    '/api/networks/cn-bj/timetables',
-    '/api/networks/cn-bj/fares',
-    '/api/networks/cn-bj/graph',
-    '/api/networks/cn-bj/route?from=cn-bj-pingguoyuan&to=cn-bj-xizhimen',
-    '/api/networks/cn-bj/travel-times?from=cn-bj-pingguoyuan&within=600',
-    '/api/networks/cn-bj/nearest?lon=116.4&lat=39.9',
+    '/api/networks/cn-beijing',
+    '/api/networks/cn-guangzhou/lines',
+    '/api/networks/cn-beijing/stations',
+    '/api/networks/cn-beijing/stations/cn-beijing-xizhimen',
+    '/api/networks/cn-beijing/stops',
+    '/api/networks/cn-beijing/patterns',
+    '/api/networks/cn-beijing/segments',
+    '/api/networks/cn-beijing/transfers',
+    '/api/networks/cn-beijing/timetables',
+    '/api/networks/cn-beijing/fares',
+    '/api/networks/cn-beijing/graph',
+    '/api/networks/cn-beijing/route?from=cn-beijing-pingguoyuan&to=cn-beijing-xizhimen',
+    '/api/networks/cn-beijing/travel-times?from=cn-beijing-pingguoyuan&within=600',
+    '/api/networks/cn-beijing/nearest?lon=116.4&lat=39.9',
     // Unknown network ids are the documented 404 error shape, not a 500.
     '/api/networks/zzz/lines',
-    '/api/networks/cn-bj/stations/zzz'
+    '/api/networks/cn-beijing/stations/zzz'
   ];
   for (const path of probes) {
     const res = await app.handle(new Request(`http://localhost${path}`));

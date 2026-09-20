@@ -34,7 +34,7 @@ const interchange: ApiStation['is_interchange'] = true;
 // Route-plan legs are a discriminated union on `kind`.
 const rideLeg: Extract<ApiRoutePlan['legs'][number], { kind: 'ride' }> = {
   kind: 'ride',
-  line_id: 'cn-bj-line-1',
+  line_id: 'cn-beijing-line-1',
   from_stop_id: 'a',
   to_stop_id: 'b',
   from_station_id: 'x',
@@ -51,14 +51,14 @@ const transferLeg: Extract<ApiRoutePlan['legs'][number], { kind: 'transfer' }> =
   seconds: 90
 };
 const rideHeadsign: Extract<ApiRoutePlan['legs'][number], { kind: 'ride' }>['headsign_station_id'] =
-  'cn-gz-airport-n-t2';
+  'cn-guangzhou-airport-n-t2';
 const rideHeadsignNames: Extract<ApiRoutePlan['legs'][number], { kind: 'ride' }>['headsign_names'] =
   {
     zh: '机场北（T2）',
     en: 'Airport N.(T2)'
   };
 const ridePattern: Extract<ApiRoutePlan['legs'][number], { kind: 'ride' }>['pattern_id'] =
-  'cn-gz-line-3-pattern-0031';
+  'cn-guangzhou-line-3-pattern-0031';
 const directionChange: Extract<
   ApiRoutePlan['legs'][number],
   { kind: 'transfer' }
@@ -69,24 +69,24 @@ const noFare: ApiRoutePlan['fare'] = null;
 
 async function main() {
   const networks = await client.api.networks.get();
-  const network = await client.api.networks({ id: 'cn-bj' }).get();
-  const stations = await client.api.networks({ id: 'cn-bj' }).stations.get();
+  const network = await client.api.networks({ id: 'cn-beijing' }).get();
+  const stations = await client.api.networks({ id: 'cn-beijing' }).stations.get();
   const station = await client.api
-    .networks({ id: 'cn-bj' })
-    .stations({ stationId: 'cn-bj-xizhimen' })
+    .networks({ id: 'cn-beijing' })
+    .stations({ stationId: 'cn-beijing-xizhimen' })
     .get();
-  const graph = await client.api.networks({ id: 'cn-bj' }).graph.get({
+  const graph = await client.api.networks({ id: 'cn-beijing' }).graph.get({
     query: { weight: 'time' }
   });
-  const plan = await client.api.networks({ id: 'cn-bj' }).route.get({
-    query: { from: 'cn-bj-pingguoyuan', to: 'cn-bj-xizhimen' }
+  const plan = await client.api.networks({ id: 'cn-beijing' }).route.get({
+    query: { from: 'cn-beijing-pingguoyuan', to: 'cn-beijing-xizhimen' }
   });
-  const isochrone = await client.api.networks({ id: 'cn-bj' })['travel-times'].get({
-    query: { from: 'cn-bj-pingguoyuan', within: 600 }
+  const isochrone = await client.api.networks({ id: 'cn-beijing' })['travel-times'].get({
+    query: { from: 'cn-beijing-pingguoyuan', within: 600 }
   });
-  const fares = await client.api.networks({ id: 'cn-bj' }).fares.get();
-  const fareRow = await client.api.networks({ id: 'cn-bj' }).fares.get({
-    query: { from: 'cn-bj-pingguoyuan' }
+  const fares = await client.api.networks({ id: 'cn-beijing' }).fares.get();
+  const fareRow = await client.api.networks({ id: 'cn-beijing' }).fares.get({
+    query: { from: 'cn-beijing-pingguoyuan' }
   });
   return {
     networks,

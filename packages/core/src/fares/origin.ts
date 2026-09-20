@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { SyncCtx } from '../adapter/contract.js';
 import { entitySchemaUrl } from '../schema/file.js';
-import { type StationEncoded, isStationRoutable } from '../schema/index.js';
+import { isStationRoutable, type StationEncoded } from '../schema/index.js';
 
 /**
  * City-agnostic fare harvest when the operator publishes **one origin → all

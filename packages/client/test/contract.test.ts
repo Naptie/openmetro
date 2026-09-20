@@ -25,21 +25,27 @@ const app = createApiApp(createFsNetworkSource(dataRoot));
 const ROUTES: Array<[string, string]> = [
   ['/api/health', 'ApiHealth'],
   ['/api/networks', 'ApiNetworkList'],
-  ['/api/networks/cn-bj', 'ApiNetwork'],
-  ['/api/networks/cn-gz/lines', 'ApiLineList'],
-  ['/api/networks/cn-bj/stations', 'ApiStationList'],
-  ['/api/networks/cn-bj/stations/cn-bj-xizhimen', 'ApiStationDetail'],
-  ['/api/networks/cn-bj/stops', 'ApiStopList'],
-  ['/api/networks/cn-bj/patterns', 'ApiPatternList'],
-  ['/api/networks/cn-bj/segments', 'ApiSegmentList'],
-  ['/api/networks/cn-bj/transfers', 'ApiTransferList'],
-  ['/api/networks/cn-bj/timetables', 'ApiTimetableList'],
-  ['/api/networks/cn-bj/fares', 'ApiFareMatrix'],
-  ['/api/networks/cn-bj/fares?from=cn-bj-pingguoyuan', 'ApiFareRow'],
-  ['/api/networks/cn-bj/graph', 'ApiStopGraph'],
-  ['/api/networks/cn-bj/route?from=cn-bj-pingguoyuan&to=cn-bj-xizhimen', 'ApiRoutePlan'],
-  ['/api/networks/cn-bj/travel-times?from=cn-bj-pingguoyuan&within=600', 'ApiTravelTimes'],
-  ['/api/networks/cn-bj/nearest?lon=116.4&lat=39.9', 'ApiNearestStations']
+  ['/api/networks/cn-beijing', 'ApiNetwork'],
+  ['/api/networks/cn-guangzhou/lines', 'ApiLineList'],
+  ['/api/networks/cn-beijing/stations', 'ApiStationList'],
+  ['/api/networks/cn-beijing/stations/cn-beijing-xizhimen', 'ApiStationDetail'],
+  ['/api/networks/cn-beijing/stops', 'ApiStopList'],
+  ['/api/networks/cn-beijing/patterns', 'ApiPatternList'],
+  ['/api/networks/cn-beijing/segments', 'ApiSegmentList'],
+  ['/api/networks/cn-beijing/transfers', 'ApiTransferList'],
+  ['/api/networks/cn-beijing/timetables', 'ApiTimetableList'],
+  ['/api/networks/cn-beijing/fares', 'ApiFareMatrix'],
+  ['/api/networks/cn-beijing/fares?from=cn-beijing-pingguoyuan', 'ApiFareRow'],
+  ['/api/networks/cn-beijing/graph', 'ApiStopGraph'],
+  [
+    '/api/networks/cn-beijing/route?from=cn-beijing-pingguoyuan&to=cn-beijing-xizhimen',
+    'ApiRoutePlan'
+  ],
+  [
+    '/api/networks/cn-beijing/travel-times?from=cn-beijing-pingguoyuan&within=600',
+    'ApiTravelTimes'
+  ],
+  ['/api/networks/cn-beijing/nearest?lon=116.4&lat=39.9', 'ApiNearestStations']
 ];
 
 test('every route response validates against its generated zod schema', {
@@ -66,7 +72,7 @@ test('route-plan legs are discriminated on kind and match the wire', {
 }, async () => {
   const res = await app.handle(
     new Request(
-      'http://localhost/api/networks/cn-bj/route?from=cn-bj-pingguoyuan&to=cn-bj-xizhimen'
+      'http://localhost/api/networks/cn-beijing/route?from=cn-beijing-pingguoyuan&to=cn-beijing-xizhimen'
     )
   );
   assert.equal(res.status, 200);

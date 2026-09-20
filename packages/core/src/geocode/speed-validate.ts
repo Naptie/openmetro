@@ -7,7 +7,7 @@
  * stations essentially co-located with a non-trivial runtime (too close), or
  * implied speeds far above the baseline (too far).
  *
- * Thresholds are calibrated on cn-bj/cn-gz/cn-sh canonical data:
+ * Thresholds are calibrated on cn-beijing/cn-guangzhou/cn-shanghai canonical data:
  * trusted-ratio p5≈0.56 p50≈0.98 p95≈1.51 p99≈2.91; the Guangqing 神山/江高
  * collision sits at ratio≈0.001 with d≈5 m / t=360 s.
  */
@@ -235,7 +235,27 @@ export function evaluateStationSpeed(
     const distKm = haversineKm(otherLoc, loc);
     const timeS = seg.travel_time_seconds as number;
     const mode = modeOfLine(opts.lines, seg.line_id);
-    if (timeImplausible(distKm, timeS, mode)) continue;
+    if (timeImplausible(distKm, timeS, mode)) {
+      // Trusted runtime + impossible distance for that runtime = bad coordinate
+      // (or a feed placeholder). Previously skipped, which made LOO blind to
+      // official placeholder coords reused across many stations.
+      const maxV = modeMaxSpeedKmh(mode) * SPEED_VALIDATE.timePlausibilityFactor;
+      const otherSt = stations.find((s) => s.id === otherId);
+      violations.push({
+        kind: 'too_far',
+        line_id: seg.line_id,
+        other_station_id: otherId,
+        other_station_name: otherSt ? stationNameOf(otherSt) : undefined,
+        distance_km: distKm,
+        travel_time_seconds: timeS,
+        speed_kmh: distKm / (timeS / 3600),
+        baseline_kmh: loo.mean,
+        ratio: distKm / ((loo.mean * timeS) / 3600),
+        travel_time_source: seg.travel_time_source,
+        detail: `implausible distance ${distKm.toFixed(2)} km for travel_time=${timeS}s (max ${maxV} km/h)`
+      });
+      continue;
+    }
 
     const speedKmh = distKm / (timeS / 3600);
     const ratio = loo.mean > 0 ? speedKmh / loo.mean : Number.POSITIVE_INFINITY;

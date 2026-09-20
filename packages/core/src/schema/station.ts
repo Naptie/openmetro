@@ -14,15 +14,15 @@ import { MultilingualName } from './names.js';
  *
  * Routing treats only `operating` stations as boardable/alightable by default.
  */
-export const StationStatus = Schema.Literal(
-  'operating',
-  'out_of_service',
-  'under_construction'
-);
+export const StationStatus = Schema.Literal('operating', 'out_of_service', 'under_construction');
 
 export type StationStatus = Schema.Schema.Type<typeof StationStatus>;
 
-const STATION_STATUS_VALUES = new Set<string>(['operating', 'out_of_service', 'under_construction']);
+const STATION_STATUS_VALUES = new Set<string>([
+  'operating',
+  'out_of_service',
+  'under_construction'
+]);
 
 /** True when a station may appear as an origin/destination or transfer node. */
 export function isStationRoutable(status: StationStatus | undefined): boolean {

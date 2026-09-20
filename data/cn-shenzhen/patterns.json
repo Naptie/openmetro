@@ -1,0 +1,833 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-shenzhen",
+  "generated_at": "2026-09-20T14:44:36.644Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-shenzhen-line-1-pattern-main",
+      "line_id": "cn-shenzhen-line-1",
+      "name": "1号线(罗宝线)",
+      "names": {
+        "zh": "1号线(罗宝线)",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-shenzhen-luohu-1",
+        "cn-shenzhen-guomao-1",
+        "cn-shenzhen-laojie-1",
+        "cn-shenzhen-dajuyuan-1",
+        "cn-shenzhen-kexueguan-1",
+        "cn-shenzhen-huaqianglu-1",
+        "cn-shenzhen-gangxia-1",
+        "cn-shenzhen-huizhanzhongxin-1",
+        "cn-shenzhen-gouwugongyuan-1",
+        "cn-shenzhen-xiangmihu-1",
+        "cn-shenzhen-chegongmiao-1",
+        "cn-shenzhen-zhuzilin-1",
+        "cn-shenzhen-qiaochengdong-1",
+        "cn-shenzhen-huaqiaocheng-1",
+        "cn-shenzhen-shijiezhichuang-1",
+        "cn-shenzhen-baishizhou-1",
+        "cn-shenzhen-gaoxinyuan-1",
+        "cn-shenzhen-shenda-1",
+        "cn-shenzhen-taoyuan-1",
+        "cn-shenzhen-daxin-1",
+        "cn-shenzhen-liyumen-1",
+        "cn-shenzhen-qianhaiwan-1",
+        "cn-shenzhen-xinan-1",
+        "cn-shenzhen-baoanzhongxin-1",
+        "cn-shenzhen-baoti-1",
+        "cn-shenzhen-pingzhou-1",
+        "cn-shenzhen-xixiang-1",
+        "cn-shenzhen-gushu-1",
+        "cn-shenzhen-hourui-1",
+        "cn-shenzhen-jichangdong-1"
+      ],
+      "origin_stop_id": "cn-shenzhen-luohu-1",
+      "terminal_stop_id": "cn-shenzhen-jichangdong-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "1"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-10-pattern-main",
+      "line_id": "cn-shenzhen-line-10",
+      "name": "10号线(坂田线)",
+      "names": {
+        "zh": "10号线(坂田线)",
+        "en": "Line 10"
+      },
+      "stop_ids": [
+        "cn-shenzhen-shuangyongjie-10",
+        "cn-shenzhen-pinghu-10",
+        "cn-shenzhen-hehua-10",
+        "cn-shenzhen-huanancheng-10",
+        "cn-shenzhen-mugu-10",
+        "cn-shenzhen-shanglilang-10",
+        "cn-shenzhen-liangmaoshan-10",
+        "cn-shenzhen-gankeng-10",
+        "cn-shenzhen-xuexiang-10",
+        "cn-shenzhen-gangtou-10",
+        "cn-shenzhen-huawei-10",
+        "cn-shenzhen-beierlu-10",
+        "cn-shenzhen-bantianbei-10",
+        "cn-shenzhen-wuhe-10",
+        "cn-shenzhen-guangyayuan-10",
+        "cn-shenzhen-nankeng-10",
+        "cn-shenzhen-yabao-10",
+        "cn-shenzhen-maling-10",
+        "cn-shenzhen-donggualing-10",
+        "cn-shenzhen-lianhuacun-10",
+        "cn-shenzhen-gangxiabei-10",
+        "cn-shenzhen-gangxia-10",
+        "cn-shenzhen-fumin-10",
+        "cn-shenzhen-futiankouan-10"
+      ],
+      "origin_stop_id": "cn-shenzhen-shuangyongjie-10",
+      "terminal_stop_id": "cn-shenzhen-futiankouan-10",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "10"
+        }
+      ],
+      "extras": {
+        "line_short_name": "10"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-11-pattern-main",
+      "line_id": "cn-shenzhen-line-11",
+      "name": "11号线",
+      "names": {
+        "zh": "11号线",
+        "en": "Line 11"
+      },
+      "stop_ids": [
+        "cn-shenzhen-bitou-11",
+        "cn-shenzhen-songgang-11",
+        "cn-shenzhen-houting-11",
+        "cn-shenzhen-shajing-11",
+        "cn-shenzhen-maanshan-11",
+        "cn-shenzhen-tangwei-11",
+        "cn-shenzhen-qiaotou-11",
+        "cn-shenzhen-fuyong-11",
+        "cn-shenzhen-jichangbei-11",
+        "cn-shenzhen-jichang-11",
+        "cn-shenzhen-bihaiwan-11",
+        "cn-shenzhen-baoan-11",
+        "cn-shenzhen-qianhaiwan-11",
+        "cn-shenzhen-nanshan-11",
+        "cn-shenzhen-houhai-11",
+        "cn-shenzhen-hongshuwannan-11",
+        "cn-shenzhen-chegongmiao-11",
+        "cn-shenzhen-futian-11",
+        "cn-shenzhen-gangxiabei-11",
+        "cn-shenzhen-fuxing-11",
+        "cn-shenzhen-huaqiangnan-11",
+        "cn-shenzhen-honglingnan-11"
+      ],
+      "origin_stop_id": "cn-shenzhen-bitou-11",
+      "terminal_stop_id": "cn-shenzhen-honglingnan-11",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "11"
+        }
+      ],
+      "extras": {
+        "line_short_name": "11"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-12-pattern-main",
+      "line_id": "cn-shenzhen-line-12",
+      "name": "12号线",
+      "names": {
+        "zh": "12号线",
+        "en": "Line 12"
+      },
+      "stop_ids": [
+        "cn-shenzhen-zuopaotaidong-12",
+        "cn-shenzhen-taiziwan-12",
+        "cn-shenzhen-haishangshijie-12",
+        "cn-shenzhen-huaguoshan-12",
+        "cn-shenzhen-sihai-12",
+        "cn-shenzhen-nanyou-12",
+        "cn-shenzhen-nanguang-12",
+        "cn-shenzhen-nanshan-12",
+        "cn-shenzhen-taoyuan-12",
+        "cn-shenzhen-nantougucheng-12",
+        "cn-shenzhen-zhongshangongyuan-12",
+        "cn-shenzhen-tonglenan-12",
+        "cn-shenzhen-xinangongyuan-12",
+        "cn-shenzhen-lingzhi-12",
+        "cn-shenzhen-shangchuan-12",
+        "cn-shenzhen-liutang-12",
+        "cn-shenzhen-baoankeyunzhan-12",
+        "cn-shenzhen-baotianyilu-12",
+        "cn-shenzhen-pingluanshan-12",
+        "cn-shenzhen-xixiangtaoyuan-12",
+        "cn-shenzhen-zhongwunan-12",
+        "cn-shenzhen-huangtian-12",
+        "cn-shenzhen-xingwei-12",
+        "cn-shenzhen-jichangdong-12",
+        "cn-shenzhen-fuwei-12",
+        "cn-shenzhen-huaide-12",
+        "cn-shenzhen-fuyong-12",
+        "cn-shenzhen-qiaotouxi-12",
+        "cn-shenzhen-fuhaixi-12",
+        "cn-shenzhen-guozhan-12",
+        "cn-shenzhen-guozhanbei-12",
+        "cn-shenzhen-haishangtianyuannan-12",
+        "cn-shenzhen-haishangtianyuandong-12",
+        "cn-shenzhen-haoxiang-12",
+        "cn-shenzhen-shahao-12",
+        "cn-shenzhen-shajingguxu-12",
+        "cn-shenzhen-buyong-12",
+        "cn-shenzhen-langxia-12",
+        "cn-shenzhen-songgang-12"
+      ],
+      "origin_stop_id": "cn-shenzhen-zuopaotaidong-12",
+      "terminal_stop_id": "cn-shenzhen-songgang-12",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "12"
+        }
+      ],
+      "extras": {
+        "line_short_name": "12"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-13-pattern-main",
+      "line_id": "cn-shenzhen-line-13",
+      "name": "13号线",
+      "names": {
+        "zh": "13号线",
+        "en": "Line 13"
+      },
+      "stop_ids": [
+        "cn-shenzhen-shenzhenwankouan-13",
+        "cn-shenzhen-rencaigongyuan-13",
+        "cn-shenzhen-houhai-13",
+        "cn-shenzhen-keyuan-13",
+        "cn-shenzhen-yuehaimen-13",
+        "cn-shenzhen-shenda-13",
+        "cn-shenzhen-gaoxinzhong-13",
+        "cn-shenzhen-gaoxinbei-13",
+        "cn-shenzhen-shigu-13",
+        "cn-shenzhen-liuxiandong-13",
+        "cn-shenzhen-baiwanggangda-13",
+        "cn-shenzhen-yingrenshi-13",
+        "cn-shenzhen-luozu-13",
+        "cn-shenzhen-shiyan-13",
+        "cn-shenzhen-shangwu-13",
+        "cn-shenzhen-hongaogongyuan-13",
+        "cn-shenzhen-guangmingcheng-13",
+        "cn-shenzhen-deyalu-13",
+        "cn-shenzhen-fenghuangcheng-13",
+        "cn-shenzhen-yuelianglu-13",
+        "cn-shenzhen-jiangwei-13",
+        "cn-shenzhen-xinzhuang-13",
+        "cn-shenzhen-gongmingguangchang-13",
+        "cn-shenzhen-shangcun-13",
+        "cn-shenzhen-xiacun-13",
+        "cn-shenzhen-lisonglang-13"
+      ],
+      "origin_stop_id": "cn-shenzhen-shenzhenwankouan-13",
+      "terminal_stop_id": "cn-shenzhen-lisonglang-13",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "13"
+        }
+      ],
+      "extras": {
+        "line_short_name": "13"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-14-pattern-main",
+      "line_id": "cn-shenzhen-line-14",
+      "name": "14号线",
+      "names": {
+        "zh": "14号线",
+        "en": "Line 14"
+      },
+      "stop_ids": [
+        "cn-shenzhen-gangxiabei-14",
+        "cn-shenzhen-huangmugang-14",
+        "cn-shenzhen-luohubei-14",
+        "cn-shenzhen-buji-14",
+        "cn-shenzhen-shiyaling-14",
+        "cn-shenzhen-liuyuebei-14",
+        "cn-shenzhen-silian-14",
+        "cn-shenzhen-aobei-14",
+        "cn-shenzhen-dayun-14",
+        "cn-shenzhen-zhangbei-14",
+        "cn-shenzhen-nanyue-14",
+        "cn-shenzhen-baolong-14",
+        "cn-shenzhen-jinlong-14",
+        "cn-shenzhen-pingshanwei-14",
+        "cn-shenzhen-e59daae5b1b1e5b9bfe59cba-14",
+        "cn-shenzhen-pingshanzhongxin-14",
+        "cn-shenzhen-kengzi-14",
+        "cn-shenzhen-shatian-14"
+      ],
+      "origin_stop_id": "cn-shenzhen-gangxiabei-14",
+      "terminal_stop_id": "cn-shenzhen-shatian-14",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "14"
+        }
+      ],
+      "extras": {
+        "line_short_name": "14"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-16-pattern-main",
+      "line_id": "cn-shenzhen-line-16",
+      "name": "16号线",
+      "names": {
+        "zh": "16号线",
+        "en": "Line 16"
+      },
+      "stop_ids": [
+        "cn-shenzhen-yuanshanxikeng-16",
+        "cn-shenzhen-anliang-16",
+        "cn-shenzhen-fukeng-16",
+        "cn-shenzhen-dakang-16",
+        "cn-shenzhen-yuanshan-16",
+        "cn-shenzhen-daan-16",
+        "cn-shenzhen-jixi-16",
+        "cn-shenzhen-jinyuan-16",
+        "cn-shenzhen-dayun-16",
+        "cn-shenzhen-dayunzhongxin-16",
+        "cn-shenzhen-longchenggongyuan-16",
+        "cn-shenzhen-huanggekeng-16",
+        "cn-shenzhen-yuyuan-16",
+        "cn-shenzhen-hulongpu-16",
+        "cn-shenzhen-shangjing-16",
+        "cn-shenzhen-shengping-16",
+        "cn-shenzhen-longyuan-16",
+        "cn-shenzhen-shuanglong-16",
+        "cn-shenzhen-xintangwei-16",
+        "cn-shenzhen-longdong-16",
+        "cn-shenzhen-baolongtongle-16",
+        "cn-shenzhen-pingshan-16",
+        "cn-shenzhen-xinhe-16",
+        "cn-shenzhen-liuhe-16",
+        "cn-shenzhen-pingshanwei-16",
+        "cn-shenzhen-pinghuan-16",
+        "cn-shenzhen-dongzongjinianguan-16",
+        "cn-shenzhen-shabo-16",
+        "cn-shenzhen-yanzihu-16",
+        "cn-shenzhen-shijing-16",
+        "cn-shenzhen-jishudaxue-16",
+        "cn-shenzhen-tianxin-16"
+      ],
+      "origin_stop_id": "cn-shenzhen-yuanshanxikeng-16",
+      "terminal_stop_id": "cn-shenzhen-tianxin-16",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "16"
+        }
+      ],
+      "extras": {
+        "line_short_name": "16"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-2-pattern-main",
+      "line_id": "cn-shenzhen-line-2",
+      "name": "2号线(蛇口线)",
+      "names": {
+        "zh": "2号线(蛇口线)",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-shenzhen-chiwan-2",
+        "cn-shenzhen-shekougang-2",
+        "cn-shenzhen-haishangshijie-2",
+        "cn-shenzhen-shuiwan-2",
+        "cn-shenzhen-dongjiaotou-2",
+        "cn-shenzhen-wanxia-2",
+        "cn-shenzhen-haiyue-2",
+        "cn-shenzhen-dengliang-2",
+        "cn-shenzhen-houhai-2",
+        "cn-shenzhen-keyuan-2",
+        "cn-shenzhen-hongshuwan-2",
+        "cn-shenzhen-shijiezhichuang-2",
+        "cn-shenzhen-qiaochengbie-2",
+        "cn-shenzhen-shenkang-2",
+        "cn-shenzhen-antuoshan-2",
+        "cn-shenzhen-qiaoxiang-2",
+        "cn-shenzhen-xiangmi-2",
+        "cn-shenzhen-xiangmeibei-2",
+        "cn-shenzhen-jingtian-2",
+        "cn-shenzhen-lianhuaxi-2",
+        "cn-shenzhen-futian-2",
+        "cn-shenzhen-shiminzhongxin-2",
+        "cn-shenzhen-gangxiabei-2",
+        "cn-shenzhen-huaqiangbei-2",
+        "cn-shenzhen-yannan-2",
+        "cn-shenzhen-dajuyuan-2",
+        "cn-shenzhen-hubei-2",
+        "cn-shenzhen-huangbeiling-2",
+        "cn-shenzhen-xinxiu-2",
+        "cn-shenzhen-liantangkoan-2",
+        "cn-shenzhen-xianhulu-2",
+        "cn-shenzhen-liantang-2"
+      ],
+      "origin_stop_id": "cn-shenzhen-chiwan-2",
+      "terminal_stop_id": "cn-shenzhen-liantang-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "2"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-20-pattern-main",
+      "line_id": "cn-shenzhen-line-20",
+      "name": "20号线",
+      "names": {
+        "zh": "20号线",
+        "en": "Line 20"
+      },
+      "stop_ids": [
+        "cn-shenzhen-huizhancheng-20",
+        "cn-shenzhen-guozhanbei-20",
+        "cn-shenzhen-guozhan-20",
+        "cn-shenzhen-guozhannan-20",
+        "cn-shenzhen-jichangbei-20"
+      ],
+      "origin_stop_id": "cn-shenzhen-huizhancheng-20",
+      "terminal_stop_id": "cn-shenzhen-jichangbei-20",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "20"
+        }
+      ],
+      "extras": {
+        "line_short_name": "20"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-3-pattern-main",
+      "line_id": "cn-shenzhen-line-3",
+      "name": "3号线(龙岗线)",
+      "names": {
+        "zh": "3号线(龙岗线)",
+        "en": "Line 3"
+      },
+      "stop_ids": [
+        "cn-shenzhen-fubao-3",
+        "cn-shenzhen-yitian-3",
+        "cn-shenzhen-shixia-3",
+        "cn-shenzhen-gouwugongyuan-3",
+        "cn-shenzhen-futian-3",
+        "cn-shenzhen-shaoniangong-3",
+        "cn-shenzhen-lianhuacun-3",
+        "cn-shenzhen-huaxin-3",
+        "cn-shenzhen-tongxinling-3",
+        "cn-shenzhen-hongling-3",
+        "cn-shenzhen-laojie-3",
+        "cn-shenzhen-shaibu-3",
+        "cn-shenzhen-cuizhu-3",
+        "cn-shenzhen-tianbei-3",
+        "cn-shenzhen-shuibei-3",
+        "cn-shenzhen-caopu-3",
+        "cn-shenzhen-buji-3",
+        "cn-shenzhen-mumianwan-3",
+        "cn-shenzhen-dafen-3",
+        "cn-shenzhen-danzhutou-3",
+        "cn-shenzhen-liuyue-3",
+        "cn-shenzhen-tangkeng-3",
+        "cn-shenzhen-henggang-3",
+        "cn-shenzhen-yonghu-3",
+        "cn-shenzhen-heao-3",
+        "cn-shenzhen-dayun-3",
+        "cn-shenzhen-ailian-3",
+        "cn-shenzhen-jixiang-3",
+        "cn-shenzhen-longchengguangchang-3",
+        "cn-shenzhen-nanlian-3",
+        "cn-shenzhen-shuanglong-3",
+        "cn-shenzhen-liyuan-3",
+        "cn-shenzhen-xinsheng-3",
+        "cn-shenzhen-pingxi-3",
+        "cn-shenzhen-ditancheng-3",
+        "cn-shenzhen-baishitang-3",
+        "cn-shenzhen-fuping-3",
+        "cn-shenzhen-pingdiliulian-3"
+      ],
+      "origin_stop_id": "cn-shenzhen-fubao-3",
+      "terminal_stop_id": "cn-shenzhen-pingdiliulian-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "3"
+        }
+      ],
+      "extras": {
+        "line_short_name": "3"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-4-pattern-main",
+      "line_id": "cn-shenzhen-line-4",
+      "name": "4号线(龙华线)",
+      "names": {
+        "zh": "4号线(龙华线)",
+        "en": "Line 4"
+      },
+      "stop_ids": [
+        "cn-shenzhen-futiankouan-4",
+        "cn-shenzhen-fumin-4",
+        "cn-shenzhen-huizhanzhongxin-4",
+        "cn-shenzhen-shiminzhongxin-4",
+        "cn-shenzhen-shaoniangong-4",
+        "cn-shenzhen-lianhuabei-4",
+        "cn-shenzhen-shangmeilin-4",
+        "cn-shenzhen-minle-4",
+        "cn-shenzhen-baishilong-4",
+        "cn-shenzhen-shenzhenbei-4",
+        "cn-shenzhen-hongshan-4",
+        "cn-shenzhen-shangtang-4",
+        "cn-shenzhen-longsheng-4",
+        "cn-shenzhen-longhua-4",
+        "cn-shenzhen-qinghu-4",
+        "cn-shenzhen-qinhubei-4",
+        "cn-shenzhen-zhucun-4",
+        "cn-shenzhen-xikeng-4",
+        "cn-shenzhen-changhu-4",
+        "cn-shenzhen-guanlan-4",
+        "cn-shenzhen-songyuanxia-4",
+        "cn-shenzhen-guanlanhu-4",
+        "cn-shenzhen-niuhu-4"
+      ],
+      "origin_stop_id": "cn-shenzhen-futiankouan-4",
+      "terminal_stop_id": "cn-shenzhen-niuhu-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "4"
+        }
+      ],
+      "extras": {
+        "line_short_name": "4"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-5-pattern-main",
+      "line_id": "cn-shenzhen-line-5",
+      "name": "5号线(环中线)",
+      "names": {
+        "zh": "5号线(环中线)",
+        "en": "Line 5"
+      },
+      "stop_ids": [
+        "cn-shenzhen-chiwan-5",
+        "cn-shenzhen-liwan-5",
+        "cn-shenzhen-tielugongyuan-5",
+        "cn-shenzhen-mawan-5",
+        "cn-shenzhen-qianwangongyuan-5",
+        "cn-shenzhen-qianwan-5",
+        "cn-shenzhen-guiwan-5",
+        "cn-shenzhen-qianhaiwan-5",
+        "cn-shenzhen-linhai-5",
+        "cn-shenzhen-baohua-5",
+        "cn-shenzhen-baoanzhongxin-5",
+        "cn-shenzhen-fanshen-5",
+        "cn-shenzhen-lingzhi-5",
+        "cn-shenzhen-honglangbei-5",
+        "cn-shenzhen-xingdong-5",
+        "cn-shenzhen-liuxiandong-5",
+        "cn-shenzhen-xili-5",
+        "cn-shenzhen-daxuecheng-5",
+        "cn-shenzhen-tanglang-5",
+        "cn-shenzhen-changlingpo-5",
+        "cn-shenzhen-shenzhenbei-5",
+        "cn-shenzhen-minzhi-5",
+        "cn-shenzhen-wuhe-5",
+        "cn-shenzhen-bantian-5",
+        "cn-shenzhen-yangmei-5",
+        "cn-shenzhen-shangshuijing-5",
+        "cn-shenzhen-xiashuijing-5",
+        "cn-shenzhen-changlong-5",
+        "cn-shenzhen-buji-5",
+        "cn-shenzhen-baigelong-5",
+        "cn-shenzhen-buxin-5",
+        "cn-shenzhen-taian-5",
+        "cn-shenzhen-yijing-5",
+        "cn-shenzhen-huangbeiling-5",
+        "cn-shenzhen-hubei-5",
+        "cn-shenzhen-dongmen-5",
+        "cn-shenzhen-dajuyuan-5"
+      ],
+      "origin_stop_id": "cn-shenzhen-chiwan-5",
+      "terminal_stop_id": "cn-shenzhen-dajuyuan-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "5"
+        }
+      ],
+      "extras": {
+        "line_short_name": "5"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-6-pattern-main",
+      "line_id": "cn-shenzhen-line-6",
+      "name": "6号线(光明线)",
+      "names": {
+        "zh": "6号线(光明线)",
+        "en": "Line 6"
+      },
+      "stop_ids": [
+        "cn-shenzhen-songgang-6",
+        "cn-shenzhen-xitou-6",
+        "cn-shenzhen-songganggongyuan-6",
+        "cn-shenzhen-shutianpu-6",
+        "cn-shenzhen-heshuikou-6",
+        "cn-shenzhen-gongmingguangchang-6",
+        "cn-shenzhen-honghuashan-6",
+        "cn-shenzhen-loucun-6",
+        "cn-shenzhen-kexuegongyuan-6",
+        "cn-shenzhen-guangming-6",
+        "cn-shenzhen-guangmingdajie-6",
+        "cn-shenzhen-fenghuangcheng-6",
+        "cn-shenzhen-changzhen-6",
+        "cn-shenzhen-shangwu-6",
+        "cn-shenzhen-guantian-6",
+        "cn-shenzhen-yangtaishangdong-6",
+        "cn-shenzhen-yuanfen-6",
+        "cn-shenzhen-shangfen-6",
+        "cn-shenzhen-hongshan-6",
+        "cn-shenzhen-shenzhenbei-6",
+        "cn-shenzhen-meilinguan-6",
+        "cn-shenzhen-hanling-6",
+        "cn-shenzhen-yinhu-6",
+        "cn-shenzhen-bagualing-6",
+        "cn-shenzhen-tiyuzhongxin-6",
+        "cn-shenzhen-tongxinling-6",
+        "cn-shenzhen-kexueguan-6"
+      ],
+      "origin_stop_id": "cn-shenzhen-songgang-6",
+      "terminal_stop_id": "cn-shenzhen-kexueguan-6",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "6"
+        }
+      ],
+      "extras": {
+        "line_short_name": "6"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-6z-pattern-main",
+      "line_id": "cn-shenzhen-line-6z",
+      "name": "6号线支线",
+      "names": {
+        "zh": "6号线支线",
+        "en": "Line 6 Branch"
+      },
+      "stop_ids": [
+        "cn-shenzhen-guangmingcheng-6z",
+        "cn-shenzhen-hongqiaogongyuan-6z",
+        "cn-shenzhen-biyan-6z",
+        "cn-shenzhen-guangming-6z",
+        "cn-shenzhen-shenmei-6z",
+        "cn-shenzhen-zhongda-6z",
+        "cn-shenzhen-shenligong-6z"
+      ],
+      "origin_stop_id": "cn-shenzhen-guangmingcheng-6z",
+      "terminal_stop_id": "cn-shenzhen-shenligong-6z",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "6支"
+        }
+      ],
+      "extras": {
+        "line_short_name": "6支"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-7-pattern-main",
+      "line_id": "cn-shenzhen-line-7",
+      "name": "7号线",
+      "names": {
+        "zh": "7号线",
+        "en": "Line 7"
+      },
+      "stop_ids": [
+        "cn-shenzhen-shendalihu-7",
+        "cn-shenzhen-beida-7",
+        "cn-shenzhen-xilihu-7",
+        "cn-shenzhen-xili-7",
+        "cn-shenzhen-chaguang-7",
+        "cn-shenzhen-zhuguang-7",
+        "cn-shenzhen-longjing-7",
+        "cn-shenzhen-taoyuancun-7",
+        "cn-shenzhen-shenyun-7",
+        "cn-shenzhen-antuoshan-7",
+        "cn-shenzhen-nonglin-7",
+        "cn-shenzhen-chegongmiao-7",
+        "cn-shenzhen-shangsha-7",
+        "cn-shenzhen-shawei-7",
+        "cn-shenzhen-shixia-7",
+        "cn-shenzhen-huanggangcun-7",
+        "cn-shenzhen-fumin-7",
+        "cn-shenzhen-huanggangkouan-7",
+        "cn-shenzhen-chiwei-7",
+        "cn-shenzhen-huaqiangnan-7",
+        "cn-shenzhen-huaqiangbei-7",
+        "cn-shenzhen-huaxin-7",
+        "cn-shenzhen-huangmugang-7",
+        "cn-shenzhen-bagualing-7",
+        "cn-shenzhen-honglingbei-7",
+        "cn-shenzhen-sungang-7",
+        "cn-shenzhen-honghu-7",
+        "cn-shenzhen-tianbei-7",
+        "cn-shenzhen-taian-7"
+      ],
+      "origin_stop_id": "cn-shenzhen-shendalihu-7",
+      "terminal_stop_id": "cn-shenzhen-taian-7",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "7"
+        }
+      ],
+      "extras": {
+        "line_short_name": "7"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-8-pattern-main",
+      "line_id": "cn-shenzhen-line-8",
+      "name": "8号线",
+      "names": {
+        "zh": "8号线",
+        "en": "Line 8"
+      },
+      "stop_ids": [
+        "cn-shenzhen-liantang-8",
+        "cn-shenzhen-wutongshannan-8",
+        "cn-shenzhen-shatoujiao-8",
+        "cn-shenzhen-haishan-8",
+        "cn-shenzhen-yantiangangxi-8",
+        "cn-shenzhen-shenwaigaozhong-8",
+        "cn-shenzhen-yantianlu-8",
+        "cn-shenzhen-honganwei-8",
+        "cn-shenzhen-yantianxu-8",
+        "cn-shenzhen-dameisha-8",
+        "cn-shenzhen-xiaomeisha-8",
+        "cn-shenzhen-xichong-8"
+      ],
+      "origin_stop_id": "cn-shenzhen-liantang-8",
+      "terminal_stop_id": "cn-shenzhen-xichong-8",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "8"
+        }
+      ],
+      "extras": {
+        "line_short_name": "8"
+      }
+    },
+    {
+      "id": "cn-shenzhen-line-9-pattern-main",
+      "line_id": "cn-shenzhen-line-9",
+      "name": "9号线",
+      "names": {
+        "zh": "9号线",
+        "en": "Line 9"
+      },
+      "stop_ids": [
+        "cn-shenzhen-qianwan-9",
+        "cn-shenzhen-menghai-9",
+        "cn-shenzhen-yihai-9",
+        "cn-shenzhen-lilin-9",
+        "cn-shenzhen-nanyouxi-9",
+        "cn-shenzhen-nanyou-9",
+        "cn-shenzhen-nanshanshucheng-9",
+        "cn-shenzhen-shendanan-9",
+        "cn-shenzhen-yuehaimen-9",
+        "cn-shenzhen-gaoxinnan-9",
+        "cn-shenzhen-hongshuwannan-9",
+        "cn-shenzhen-shenwan-9",
+        "cn-shenzhen-shenzhenwangongyuan-9",
+        "cn-shenzhen-xiasha-9",
+        "cn-shenzhen-chegongmiao-9",
+        "cn-shenzhen-xiangmei-9",
+        "cn-shenzhen-jingtian-9",
+        "cn-shenzhen-meijing-9",
+        "cn-shenzhen-xiameilin-9",
+        "cn-shenzhen-meicun-9",
+        "cn-shenzhen-shangmeilin-9",
+        "cn-shenzhen-maling-9",
+        "cn-shenzhen-yinhu-9",
+        "cn-shenzhen-nigang-9",
+        "cn-shenzhen-honglingbei-9",
+        "cn-shenzhen-yuanling-9",
+        "cn-shenzhen-hongling-9",
+        "cn-shenzhen-honglingnan-9",
+        "cn-shenzhen-ludancun-9",
+        "cn-shenzhen-renminnan-9",
+        "cn-shenzhen-xiangxicun-9",
+        "cn-shenzhen-wenjin-9"
+      ],
+      "origin_stop_id": "cn-shenzhen-qianwan-9",
+      "terminal_stop_id": "cn-shenzhen-wenjin-9",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "szmc-shentie-json",
+          "id": "9"
+        }
+      ],
+      "extras": {
+        "line_short_name": "9"
+      }
+    }
+  ]
+}

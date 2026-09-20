@@ -13,9 +13,9 @@ import { planRoute } from '../src/graph/route.js';
 const here = dirname(fileURLToPath(import.meta.url));
 const dataRoot = join(here, '../../../data');
 
-const BEIJING = 'cn-bj';
-const SHANGHAI = 'cn-sh';
-const GUANGZHOU = 'cn-gz';
+const BEIJING = 'cn-beijing';
+const SHANGHAI = 'cn-shanghai';
+const GUANGZHOU = 'cn-guangzhou';
 
 function graphFor(d: NetworkData, weight: WeightKind = 'time') {
   return buildStopGraph(d.network.id, d.stops, d.segments, d.transfers, d.network.routing, weight);
@@ -29,7 +29,7 @@ test('Beijing routes by time across a transfer', async () => {
   const d = await load(BEIJING);
   assert.ok(d.lines.length > 0);
   assert.ok(d.stations.length > 0);
-  const plan = planRoute(graphFor(d), d.stops, 'cn-bj-pingguoyuan', 'cn-bj-xizhimen');
+  const plan = planRoute(graphFor(d), d.stops, 'cn-beijing-pingguoyuan', 'cn-beijing-xizhimen');
   assert.ok(plan);
   assert.ok(plan.total_seconds > 0);
   assert.ok(plan.legs.length >= 1);
@@ -37,7 +37,12 @@ test('Beijing routes by time across a transfer', async () => {
 
 test('Beijing distance stays connected via time fallback', async () => {
   const d = await load(BEIJING);
-  const plan = planRoute(graphFor(d, 'distance'), d.stops, 'cn-bj-pingguoyuan', 'cn-bj-xizhimen');
+  const plan = planRoute(
+    graphFor(d, 'distance'),
+    d.stops,
+    'cn-beijing-pingguoyuan',
+    'cn-beijing-xizhimen'
+  );
   assert.ok(plan);
   assert.ok(plan.total_seconds > 0);
 });
@@ -46,7 +51,12 @@ test('Shanghai routes by time', async () => {
   const d = await load(SHANGHAI);
   assert.ok(d.lines.length > 0);
   assert.ok(d.stations.length > 0);
-  const plan = planRoute(graphFor(d), d.stops, 'cn-sh-xinzhuang', 'cn-sh-people-s-square');
+  const plan = planRoute(
+    graphFor(d),
+    d.stops,
+    'cn-shanghai-xinzhuang',
+    'cn-shanghai-people-s-square'
+  );
   assert.ok(plan, 'expected a Shanghai route');
   assert.ok(plan.total_seconds > 0);
 });
@@ -58,8 +68,8 @@ test('Guangzhou routes by time', async () => {
   const plan = planRoute(
     graphFor(d),
     d.stops,
-    'cn-gz-tiyu-xilu',
-    'cn-gz-guangzhou-south-railway-station'
+    'cn-guangzhou-tiyu-xilu',
+    'cn-guangzhou-guangzhou-south-railway-station'
   );
   assert.ok(plan, 'expected a Guangzhou route');
   assert.ok(plan.total_seconds > 0);
@@ -134,23 +144,23 @@ test('Shanghai Line 11 branch topology is correct', async () => {
   const d = await load(SHANGHAI);
   const pairs = new Set(d.segments.map((s) => `${s.from_stop_id}|${s.to_stop_id}`));
   // Both branches meet the junction at Jiading Xincheng.
-  assert.ok(pairs.has('cn-sh-shanghai-circuit-11|cn-sh-jiading-xincheng-11'));
-  assert.ok(pairs.has('cn-sh-baiyin-road-11|cn-sh-jiading-xincheng-11'));
+  assert.ok(pairs.has('cn-shanghai-shanghai-circuit-11|cn-shanghai-jiading-xincheng-11'));
+  assert.ok(pairs.has('cn-shanghai-baiyin-road-11|cn-shanghai-jiading-xincheng-11'));
   // The old flat-sequence phantom bridge must be gone.
-  assert.ok(!pairs.has('cn-sh-shanghai-circuit-11|cn-sh-north-jiading-11'));
+  assert.ok(!pairs.has('cn-shanghai-shanghai-circuit-11|cn-shanghai-north-jiading-11'));
   // Jiading Xincheng is a junction: three distinct neighbours on Line 11.
   const neighbours = d.segments
-    .filter((s) => s.line_id === 'cn-sh-line-11')
+    .filter((s) => s.line_id === 'cn-shanghai-line-11')
     .flatMap((s) =>
-      s.from_stop_id === 'cn-sh-jiading-xincheng-11'
+      s.from_stop_id === 'cn-shanghai-jiading-xincheng-11'
         ? [s.to_stop_id]
-        : s.to_stop_id === 'cn-sh-jiading-xincheng-11'
+        : s.to_stop_id === 'cn-shanghai-jiading-xincheng-11'
           ? [s.from_stop_id]
           : []
     );
   assert.equal(new Set(neighbours).size, 3);
   // Timetables identify a destination, not a forward/backward axis.
-  const line11 = d.timetables.filter((t) => t.line_id === 'cn-sh-line-11');
+  const line11 = d.timetables.filter((t) => t.line_id === 'cn-shanghai-line-11');
   assert.ok(line11.length > 0);
   assert.ok(line11.every((t) => t.destination_stop_id != null));
 });
@@ -158,21 +168,21 @@ test('Shanghai Line 11 branch topology is correct', async () => {
 test('Shanghai Line 11 branch is routable in both directions via the junction', async () => {
   const d = await load(SHANGHAI);
   const g = graphFor(d);
-  const out = planRoute(g, d.stops, 'cn-sh-huaqiao', 'cn-sh-north-jiading');
+  const out = planRoute(g, d.stops, 'cn-shanghai-huaqiao', 'cn-shanghai-north-jiading');
   assert.ok(out, 'Huaqiao -> North Jiading should route');
   assert.ok(
-    out.legs.some((l) => l.station_ids?.includes('cn-sh-jiading-xincheng')),
+    out.legs.some((l) => l.station_ids?.includes('cn-shanghai-jiading-xincheng')),
     'must pass the junction'
   );
-  const back = planRoute(g, d.stops, 'cn-sh-north-jiading', 'cn-sh-huaqiao');
+  const back = planRoute(g, d.stops, 'cn-shanghai-north-jiading', 'cn-shanghai-huaqiao');
   assert.ok(back, 'North Jiading -> Huaqiao should route (reverse segments)');
 });
 
 test('Guangzhou Line 3 branch topology is correct', async () => {
   const d = await load(GUANGZHOU);
-  const junction = 'cn-gz-tiyu-xilu-cn-gz-line-3';
+  const junction = 'cn-guangzhou-tiyu-xilu-cn-guangzhou-line-3';
   const neighbours = d.segments
-    .filter((s) => s.line_id === 'cn-gz-line-3')
+    .filter((s) => s.line_id === 'cn-guangzhou-line-3')
     .flatMap((s) =>
       s.from_stop_id === junction
         ? [s.to_stop_id]
@@ -181,7 +191,7 @@ test('Guangzhou Line 3 branch topology is correct', async () => {
           : []
     );
   assert.equal(new Set(neighbours).size, 3);
-  const branch = d.patterns.find((p) => p.line_id === 'cn-gz-line-3' && !p.is_primary);
+  const branch = d.patterns.find((p) => p.line_id === 'cn-guangzhou-line-3' && !p.is_primary);
   assert.ok(branch);
   assert.equal(branch.junction_stop_id, junction);
 });
@@ -189,9 +199,9 @@ test('Guangzhou Line 3 branch topology is correct', async () => {
 test('travel-times isochrone reaches known stations', async () => {
   const d = await load(BEIJING);
   const g = graphFor(d);
-  const sources = d.stops.filter((s) => s.station_id === 'cn-bj-pingguoyuan').map((s) => s.id);
+  const sources = d.stops.filter((s) => s.station_id === 'cn-beijing-pingguoyuan').map((s) => s.id);
   const times = travelTimes(g, sources);
-  const atGucheng = d.stops.find((s) => s.station_id === 'cn-bj-gucheng');
+  const atGucheng = d.stops.find((s) => s.station_id === 'cn-beijing-gucheng');
   assert.ok(atGucheng);
   assert.ok((times.get(atGucheng.id) ?? Infinity) > 0);
 });
@@ -215,19 +225,19 @@ test('projected lines carry short_name on the wire', { timeout: 30_000 }, async 
   };
 
   const gz = await shortNamesOf(GUANGZHOU);
-  assert.equal(gz.get('cn-gz-line-apm'), 'APM');
-  assert.equal(gz.get('cn-gz-line-1'), '1');
-  assert.equal(gz.get('cn-gz-line-guangzhou-huizhou-intercity'), '广惠');
+  assert.equal(gz.get('cn-guangzhou-line-apm'), 'APM');
+  assert.equal(gz.get('cn-guangzhou-line-1'), '1');
+  assert.equal(gz.get('cn-guangzhou-line-guangzhou-huizhou-intercity'), '广惠');
 
   const bj = await shortNamesOf(BEIJING);
-  assert.equal(bj.get('cn-bj-line-1'), '1');
-  assert.equal(bj.get('cn-bj-line-73'), '18'); // 18号线: lnub (73) is an internal id
-  assert.equal(bj.get('cn-bj-line-79'), '亦庄T1'); // 亦庄T1线: official slb label
-  assert.equal(bj.get('cn-bj-line-91'), 'S1'); // S1线: official slb label
-  assert.equal(bj.get('cn-bj-line-88'), '大兴机场'); // 大兴机场线: official slb label
+  assert.equal(bj.get('cn-beijing-line-1'), '1');
+  assert.equal(bj.get('cn-beijing-line-73'), '18'); // 18号线: lnub (73) is an internal id
+  assert.equal(bj.get('cn-beijing-line-79'), '亦庄T1'); // 亦庄T1线: official slb label
+  assert.equal(bj.get('cn-beijing-line-91'), 'S1'); // S1线: official slb label
+  assert.equal(bj.get('cn-beijing-line-88'), '大兴机场'); // 大兴机场线: official slb label
 
   const sh = await shortNamesOf(SHANGHAI);
-  assert.equal(sh.get('cn-sh-line-1'), '1');
-  assert.equal(sh.get('cn-sh-line-41'), '浦江线'); // no numeric code → official name
-  assert.equal(sh.get('cn-sh-line-51'), '市域机场线'); // no numeric code → official name
+  assert.equal(sh.get('cn-shanghai-line-1'), '1');
+  assert.equal(sh.get('cn-shanghai-line-41'), '浦江线'); // no numeric code → official name
+  assert.equal(sh.get('cn-shanghai-line-51'), '市域机场线'); // no numeric code → official name
 });

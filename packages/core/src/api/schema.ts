@@ -62,10 +62,9 @@ export const ApiLineMode = t.Union(
 );
 
 /** Operating status of a line (canonical `LineStatus`). */
-export const ApiLineStatus = t.Union(
-  [t.Literal('operating'), t.Literal('under_construction')],
-  { $id: 'ApiLineStatus' }
-);
+export const ApiLineStatus = t.Union([t.Literal('operating'), t.Literal('under_construction')], {
+  $id: 'ApiLineStatus'
+});
 
 /** A metro line. `short_name` is mandatory and not guaranteed ASCII or numeric. */
 export const ApiLine = t.Object(
@@ -87,11 +86,7 @@ export const ApiLineList = t.Array(t.Ref(ApiLine), { $id: 'ApiLineList' });
 
 /** Operating status of a station (canonical `StationStatus`). */
 export const ApiStationStatus = t.Union(
-  [
-    t.Literal('operating'),
-    t.Literal('out_of_service'),
-    t.Literal('under_construction')
-  ],
+  [t.Literal('operating'), t.Literal('out_of_service'), t.Literal('under_construction')],
   { $id: 'ApiStationStatus' }
 );
 

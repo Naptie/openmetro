@@ -23,10 +23,10 @@ export type { App };
  *
  * const metro = createClient("http://127.0.0.1:8790");
  *
- * const { data: stations } = await metro.api.networks({ id: "cn-bj" }).stations.get();
+ * const { data: stations } = await metro.api.networks({ id: "cn-beijing" }).stations.get();
  * const { data: plan } = await metro.api
- *   .networks({ id: "cn-bj" })
- *   .route.get({ query: { from: "cn-bj-pingguoyuan", to: "cn-bj-xizhimen" } });
+ *   .networks({ id: "cn-beijing" })
+ *   .route.get({ query: { from: "cn-beijing-pingguoyuan", to: "cn-beijing-xizhimen" } });
  * ```
  */
 export const createClient = (baseUrl: string, config?: Treaty.Config): Treaty.Create<App> =>

@@ -50,7 +50,7 @@ test('Line with missing en is rejected', () => {
 });
 
 const networkBase = {
-  id: 'cn-bj',
+  id: 'cn-beijing',
   name: '北京地铁',
   city: {
     id: 'CN-11',
@@ -122,7 +122,7 @@ test('Station with missing en is rejected', () => {
 const fareMatrix = {
   $schema: 'x',
   schema_version: '1.0',
-  network_id: 'cn-bj',
+  network_id: 'cn-beijing',
   generated_at: '2026-09-09T00:00:00.000Z',
   source: [],
   currency: 'CNY',

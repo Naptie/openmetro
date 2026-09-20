@@ -7,7 +7,7 @@ import { join } from 'node:path';
 import { computeNetworkQuality } from '../packages/core/src/data/quality.js';
 
 const ROOT = process.cwd();
-const CITIES = ['cn-bj', 'cn-sh', 'cn-gz'];
+const CITIES = ['cn-beijing', 'cn-shanghai', 'cn-guangzhou'];
 
 async function records(city: string, file: string): Promise<unknown[]> {
   return JSON.parse(await readFile(join(ROOT, 'data', city, file), 'utf-8')).records ?? [];

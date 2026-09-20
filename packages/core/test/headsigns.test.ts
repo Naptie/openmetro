@@ -35,69 +35,78 @@ function rides(plan: EnrichedRoutePlan) {
 }
 
 test('GZ3 airport branch: a forward leg carries the airport headsign', async () => {
-  const plan = await planFor('cn-gz', 'cn-gz-tiyu-xilu', 'cn-gz-airport-n-t2');
+  const plan = await planFor('cn-guangzhou', 'cn-guangzhou-tiyu-xilu', 'cn-guangzhou-airport-n-t2');
   const ride = rides(plan);
   assert.equal(ride.length, 1);
-  assert.equal(ride[0].headsign_station_id, 'cn-gz-airport-n-t2');
+  assert.equal(ride[0].headsign_station_id, 'cn-guangzhou-airport-n-t2');
   assert.equal(ride[0].headsign_names?.en, 'Airport N.(T2)');
   assert.ok(ride[0].headsign_names?.zh);
   assert.ok(ride[0].pattern_id?.includes('line-3-pattern-0031'), 'should ride the branch pattern');
 });
 
 test('GZ3 reverse leg headsign is the far end, not the airport', async () => {
-  const plan = await planFor('cn-gz', 'cn-gz-airport-n-t2', 'cn-gz-tiyu-xilu');
+  const plan = await planFor('cn-guangzhou', 'cn-guangzhou-airport-n-t2', 'cn-guangzhou-tiyu-xilu');
   const ride = rides(plan);
   assert.equal(ride.length, 1);
-  assert.equal(ride[0].headsign_station_id, 'cn-gz-tiyu-xilu');
+  assert.equal(ride[0].headsign_station_id, 'cn-guangzhou-tiyu-xilu');
 });
 
 test('GZ3 through-junction leg splits at the published service terminal', async () => {
-  const plan = await planFor('cn-gz', 'cn-gz-airport-n-t2', 'cn-gz-datang');
+  const plan = await planFor('cn-guangzhou', 'cn-guangzhou-airport-n-t2', 'cn-guangzhou-datang');
   // Airport branch service terminates at Tiyu Xilu in the published data, so
   // the through-ride must split there: ride -> same-station direction change
   // -> ride (now on the trunk service toward the south).
   assert.equal(plan.legs.length, 3);
   const [first, transfer, second] = plan.legs;
   assert.equal(first.kind, 'ride');
-  assert.equal(first.to_station_id, 'cn-gz-tiyu-xilu');
-  assert.equal((first as { headsign_station_id?: string }).headsign_station_id, 'cn-gz-tiyu-xilu');
+  assert.equal(first.to_station_id, 'cn-guangzhou-tiyu-xilu');
+  assert.equal(
+    (first as { headsign_station_id?: string }).headsign_station_id,
+    'cn-guangzhou-tiyu-xilu'
+  );
   assert.equal(transfer.kind, 'transfer');
   assert.equal(transfer.from_stop_id, transfer.to_stop_id);
-  assert.equal(transfer.from_station_id, 'cn-gz-tiyu-xilu');
+  assert.equal(transfer.from_station_id, 'cn-guangzhou-tiyu-xilu');
   assert.equal(
     (transfer as { same_line_direction_change?: boolean }).same_line_direction_change,
     true
   );
   assert.equal(second.kind, 'ride');
-  assert.equal(second.from_station_id, 'cn-gz-tiyu-xilu');
-  assert.equal(second.to_station_id, 'cn-gz-datang');
-  assert.equal((second as { headsign_station_id?: string }).headsign_station_id, 'cn-gz-haibang');
+  assert.equal(second.from_station_id, 'cn-guangzhou-tiyu-xilu');
+  assert.equal(second.to_station_id, 'cn-guangzhou-datang');
+  assert.equal(
+    (second as { headsign_station_id?: string }).headsign_station_id,
+    'cn-guangzhou-haibang'
+  );
   assert.equal(plan.transfers, 1);
 });
 
 test('SH11 花桥 -> 嘉定北 splits at 嘉定新城 (no phantom through-ride)', async () => {
-  const plan = await planFor('cn-sh', 'cn-sh-huaqiao', 'cn-sh-north-jiading');
+  const plan = await planFor('cn-shanghai', 'cn-shanghai-huaqiao', 'cn-shanghai-north-jiading');
   // Real operations: ride a 迪士尼-bound train to 嘉定新城, then a 嘉定北-bound
   // train from there. The old planner fabricated one continuous L11 ride.
   assert.equal(plan.legs.length, 3);
   const [first, transfer, second] = plan.legs;
   assert.equal(first.kind, 'ride');
-  assert.equal((first as { to_station_id: string }).to_station_id, 'cn-sh-jiading-xincheng');
+  assert.equal((first as { to_station_id: string }).to_station_id, 'cn-shanghai-jiading-xincheng');
   assert.equal(
     (first as { headsign_station_id?: string }).headsign_station_id,
-    'cn-sh-disney-resort'
+    'cn-shanghai-disney-resort'
   );
   assert.equal(transfer.kind, 'transfer');
   assert.equal(
     (transfer as { same_line_direction_change?: boolean }).same_line_direction_change,
     true
   );
-  assert.equal((transfer as { line_id?: string }).line_id, 'cn-sh-line-11');
+  assert.equal((transfer as { line_id?: string }).line_id, 'cn-shanghai-line-11');
   assert.equal(second.kind, 'ride');
-  assert.equal((second as { from_station_id: string }).from_station_id, 'cn-sh-jiading-xincheng');
+  assert.equal(
+    (second as { from_station_id: string }).from_station_id,
+    'cn-shanghai-jiading-xincheng'
+  );
   assert.equal(
     (second as { headsign_station_id?: string }).headsign_station_id,
-    'cn-sh-north-jiading'
+    'cn-shanghai-north-jiading'
   );
   assert.equal(plan.transfers, 1);
   // Leg seconds still reconcile with the total.
@@ -106,18 +115,22 @@ test('SH11 花桥 -> 嘉定北 splits at 嘉定新城 (no phantom through-ride)'
 });
 
 test('SH11 shared trunk keeps a single leg with the common headsign', async () => {
-  const plan = await planFor('cn-sh', 'cn-sh-jiading-xincheng', 'cn-sh-disney-resort');
+  const plan = await planFor(
+    'cn-shanghai',
+    'cn-shanghai-jiading-xincheng',
+    'cn-shanghai-disney-resort'
+  );
   const ride = rides(plan);
   assert.equal(ride.length, 1);
   assert.equal(plan.transfers, 0);
-  assert.equal(ride[0].headsign_station_id, 'cn-sh-disney-resort');
+  assert.equal(ride[0].headsign_station_id, 'cn-shanghai-disney-resort');
   // Both patterns cover the trunk; the primary one is reported.
-  assert.equal(ride[0].pattern_id, 'cn-sh-line-11-pattern-main');
+  assert.equal(ride[0].pattern_id, 'cn-shanghai-line-11-pattern-main');
 });
 
 test('loop-line ride legs carry no headsign and do not split', async () => {
   // Shanghai Line 4 is a loop: find an OD the planner rides on it.
-  const d = await Effect.runPromise(loadNetwork(dataRoot, 'cn-sh'));
+  const d = await Effect.runPromise(loadNetwork(dataRoot, 'cn-shanghai'));
   const graph = buildStopGraph(
     d.network.id,
     d.stops,
@@ -127,16 +140,16 @@ test('loop-line ride legs carry no headsign and do not split', async () => {
     'time'
   );
   const candidates: Array<[string, string]> = [
-    ['cn-sh-zhongshan-park', 'cn-sh-hailun-road'],
-    ['cn-sh-zhongshan-park', 'cn-sh-caoyang-road'],
-    ['cn-sh-jinshajiang-road', 'cn-sh-damuqiao-road']
+    ['cn-shanghai-zhongshan-park', 'cn-shanghai-hailun-road'],
+    ['cn-shanghai-zhongshan-park', 'cn-shanghai-caoyang-road'],
+    ['cn-shanghai-jinshajiang-road', 'cn-shanghai-damuqiao-road']
   ];
   for (const [from, to] of candidates) {
     const plan = planRoute(graph, d.stops, from, to);
     if (!plan) continue;
     const enriched = enrichRoutePlan(d, plan);
     const loopRides = enriched.legs.filter(
-      (l) => l.kind === 'ride' && l.line_id === 'cn-sh-line-4'
+      (l) => l.kind === 'ride' && l.line_id === 'cn-shanghai-line-4'
     ) as Array<Record<string, unknown> & { kind: 'ride' }>;
     if (loopRides.length === 0) continue;
     for (const leg of loopRides) {
@@ -152,9 +165,11 @@ test('loop-line ride legs carry no headsign and do not split', async () => {
 });
 
 test('decoded network carries the latest generated_at stamp', async () => {
-  const sh = await Effect.runPromise(loadNetwork(dataRoot, 'cn-sh'));
+  const sh = await Effect.runPromise(loadNetwork(dataRoot, 'cn-shanghai'));
   const raw = async (f: string): Promise<{ generated_at?: string }> =>
-    JSON.parse(await Bun.file(join(dataRoot, `cn-sh/${f}`)).text()) as { generated_at?: string };
+    JSON.parse(await Bun.file(join(dataRoot, `cn-shanghai/${f}`)).text()) as {
+      generated_at?: string;
+    };
   const stamps = (
     await Promise.all([
       raw('lines.json'),
@@ -178,7 +193,7 @@ test('API surface: /route legs expose headsigns and the split; network detail ca
 
   const route = await app.handle(
     new Request(
-      'http://localhost/api/networks/cn-sh/route?from=cn-sh-huaqiao&to=cn-sh-north-jiading'
+      'http://localhost/api/networks/cn-shanghai/route?from=cn-shanghai-huaqiao&to=cn-shanghai-north-jiading'
     )
   );
   assert.equal(route.status, 200);
@@ -188,11 +203,11 @@ test('API surface: /route legs expose headsigns and the split; network detail ca
   };
   assert.equal(body.transfers, 1);
   assert.equal(body.legs.length, 3);
-  assert.equal(body.legs[0].headsign_station_id, 'cn-sh-disney-resort');
+  assert.equal(body.legs[0].headsign_station_id, 'cn-shanghai-disney-resort');
   assert.equal(body.legs[1].same_line_direction_change, true);
-  assert.equal(body.legs[2].headsign_station_id, 'cn-sh-north-jiading');
+  assert.equal(body.legs[2].headsign_station_id, 'cn-shanghai-north-jiading');
 
-  for (const network of ['cn-bj', 'cn-sh', 'cn-gz']) {
+  for (const network of ['cn-beijing', 'cn-shanghai', 'cn-guangzhou']) {
     const net = await app.handle(new Request(`http://localhost/api/networks/${network}`));
     assert.equal(net.status, 200, network);
     const meta = (await net.json()) as { synced_at?: unknown; generated_at?: unknown };

@@ -4,9 +4,9 @@
 
 Generated from each network’s `network.json.quality` after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-20T15:49:15.415Z_
+_Updated 2026-09-20T16:22:57.894Z_
 
-## 北京地铁 / Beijing Subway (`cn-bj`)
+## 北京地铁 / Beijing Subway (`cn-beijing`)
 
 | Layer | Status | Precision | Coverage | Counts |
 | --- | --- | --- | --- | --- |
@@ -20,7 +20,7 @@ _Updated 2026-09-20T15:49:15.415Z_
 | Schematic | ✅ complete | official | 100% | official=543 |
 | Fares | 🟡 partial | official | 99% | official=179352, default=1698 |
 
-## 广州地铁 / Guangzhou Metro (`cn-gz`)
+## 广州地铁 / Guangzhou Metro (`cn-guangzhou`)
 
 | Layer | Status | Precision | Coverage | Counts |
 | --- | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ _Updated 2026-09-20T15:49:15.415Z_
 | Schematic | ❌ unavailable | default | 0% | default=599 |
 | Fares | 🟡 partial | official | 94% | official=236520, default=15986 |
 
-## 上海地铁 / Shanghai Metro (`cn-sh`)
+## 上海地铁 / Shanghai Metro (`cn-shanghai`)
 
 | Layer | Status | Precision | Coverage | Counts |
 | --- | --- | --- | --- | --- |
@@ -48,7 +48,21 @@ _Updated 2026-09-20T15:49:15.415Z_
 | Schematic | ❌ unavailable | default | 0% | default=530 |
 | Fares | 🟡 partial | official | 99% | official=171212, default=2260 |
 
-## 苏州轨道交通 / Suzhou Rail Transit (`cn-sz`)
+## 深圳地铁 / Shenzhen Metro (`cn-shenzhen`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ complete | official | 100% | official=1 |
+| Coordinates | ✅ complete | official | 100% | official=351 |
+| Names | ✅ complete | official | 100% | official=351 |
+| Segment times | ✅ complete | official | 100% | official=416 |
+| Segment distances | ✅ complete | official | 100% | official=416 |
+| Transfer times | 🟡 partial | official | 82% | official=160, default=34 |
+| Timetables | ✅ complete | official | 100% | official=660 |
+| Schematic | ✅ complete | official | 100% | official=433 |
+| Fares | 🟡 partial | official | 99% | official=121452, default=1398 |
+
+## 苏州轨道交通 / Suzhou Rail Transit (`cn-suzhou`)
 
 | Layer | Status | Precision | Coverage | Counts |
 | --- | --- | --- | --- | --- |

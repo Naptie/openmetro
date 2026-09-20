@@ -62,7 +62,8 @@ function emptyCounts(): Record<Precision, number> {
 function plannerTagPrecision(tag: string | undefined): Precision {
   if (!tag) return 'derived';
   if (tag.includes('searchstartend')) return 'derived';
-  if (tag.includes('plantrip')) return 'official';
+  // Direct official route-planner fields (plantrip, SZMC MinTimeJson, …).
+  if (tag.includes('plantrip') || tag.includes('mintime')) return 'official';
   return 'derived';
 }
 
@@ -92,7 +93,7 @@ function precisionFromTransfer(t: {
   const src = t.source_id ?? '';
   // Operator-published interchange times and route-planner waits are official.
   if (src.includes('interchange')) return 'official';
-  if (src.includes('plantrip')) return 'official';
+  if (src.includes('plantrip') || src.includes('mintime')) return 'official';
   if (src.includes('searchstartend')) return 'derived';
   // A documented network average is still an operator value, but not a
   // measured station-pair walk — count as derived.

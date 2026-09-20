@@ -83,12 +83,15 @@ function lookupFare(matrix: FareMatrixEncoded, from: string, to: string): number
 }
 
 const NetworkParams = t.Object({
-  id: t.String({ description: 'Network id', examples: ['cn-bj', 'cn-sh', 'cn-gz'] })
+  id: t.String({
+    description: 'Network id',
+    examples: ['cn-beijing', 'cn-shanghai', 'cn-guangzhou']
+  })
 });
 
 const StationParams = t.Object({
-  id: t.String({ description: 'Network id', examples: ['cn-bj'] }),
-  stationId: t.String({ description: 'Station id', examples: ['cn-bj-xizhimen'] })
+  id: t.String({ description: 'Network id', examples: ['cn-beijing'] }),
+  stationId: t.String({ description: 'Station id', examples: ['cn-beijing-xizhimen'] })
 });
 
 const WeightQuery = t.Optional(
@@ -404,7 +407,7 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
             from: t.Optional(
               t.String({
                 description: "Return only this origin station's fare row.",
-                examples: ['cn-bj-pingguoyuan']
+                examples: ['cn-beijing-pingguoyuan']
               })
             )
           }),
@@ -476,7 +479,9 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
               const index = buildStationIndex(d.stops, filter);
               if (!index.has(from) || !index.has(to)) {
                 set.status = 404;
-                return { error: `unknown or non-operating station ${!index.has(from) ? from : to}` };
+                return {
+                  error: `unknown or non-operating station ${!index.has(from) ? from : to}`
+                };
               }
               const graph = buildStopGraph(
                 d.network.id,
@@ -504,8 +509,14 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
         {
           params: NetworkParams,
           query: t.Object({
-            from: t.String({ description: 'Origin station id', examples: ['cn-bj-pingguoyuan'] }),
-            to: t.String({ description: 'Destination station id', examples: ['cn-bj-xizhimen'] }),
+            from: t.String({
+              description: 'Origin station id',
+              examples: ['cn-beijing-pingguoyuan']
+            }),
+            to: t.String({
+              description: 'Destination station id',
+              examples: ['cn-beijing-xizhimen']
+            }),
             weight: WeightQuery
           }),
           detail: {
@@ -570,7 +581,10 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
         {
           params: NetworkParams,
           query: t.Object({
-            from: t.String({ description: 'Origin station id', examples: ['cn-bj-pingguoyuan'] }),
+            from: t.String({
+              description: 'Origin station id',
+              examples: ['cn-beijing-pingguoyuan']
+            }),
             within: t.Optional(
               t.Numeric({
                 description: 'Only return stations reachable within this many seconds.',

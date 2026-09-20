@@ -12,62 +12,62 @@ import {
 function guangqingFixture() {
   const stations = [
     {
-      id: 'cn-gz-huadu',
+      id: 'cn-guangzhou-huadu',
       names: { zh: '花都' },
       location: { lon: 113.201384, lat: 23.377115, crs: 'gcj02' as const },
       extras: { location_source: 'official' }
     },
     {
-      id: 'cn-gz-shenshan',
+      id: 'cn-guangzhou-shenshan',
       names: { zh: '神山' },
       location: { lon: 113.223422, lat: 23.27669, crs: 'gcj02' as const },
       extras: { location_source: 'official' }
     },
     {
-      id: 'cn-gz-jianggao',
+      id: 'cn-guangzhou-jianggao',
       names: { zh: '江高' },
       location: { lon: 113.22339, lat: 23.276722, crs: 'gcj02' as const },
       extras: { location_source: 'official' }
     },
     {
-      id: 'cn-gz-baiyunhu',
+      id: 'cn-guangzhou-baiyunhu',
       names: { zh: '白云湖' },
       location: { lon: 113.237968, lat: 23.225409, crs: 'gcj02' as const },
       extras: { location_source: 'official' }
     },
     {
-      id: 'cn-gz-guangzhoubaiyun',
+      id: 'cn-guangzhou-guangzhoubaiyun',
       names: { zh: '广州白云' },
       location: { lon: 113.246341, lat: 23.19091, crs: 'gcj02' as const },
       extras: { location_source: 'official' }
     }
   ];
-  const lineId = 'cn-gz-line-guangzhou-qingyuan-intercity';
+  const lineId = 'cn-guangzhou-line-guangzhou-qingyuan-intercity';
   const segments: SegmentAdjacency[] = [
     {
-      from_station_id: 'cn-gz-huadu',
-      to_station_id: 'cn-gz-shenshan',
+      from_station_id: 'cn-guangzhou-huadu',
+      to_station_id: 'cn-guangzhou-shenshan',
       line_id: lineId,
       travel_time_seconds: 360,
       travel_time_source: 'last_train'
     },
     {
-      from_station_id: 'cn-gz-shenshan',
-      to_station_id: 'cn-gz-jianggao',
+      from_station_id: 'cn-guangzhou-shenshan',
+      to_station_id: 'cn-guangzhou-jianggao',
       line_id: lineId,
       travel_time_seconds: 360,
       travel_time_source: 'last_train'
     },
     {
-      from_station_id: 'cn-gz-jianggao',
-      to_station_id: 'cn-gz-baiyunhu',
+      from_station_id: 'cn-guangzhou-jianggao',
+      to_station_id: 'cn-guangzhou-baiyunhu',
       line_id: lineId,
       travel_time_seconds: 360,
       travel_time_source: 'last_train'
     },
     {
-      from_station_id: 'cn-gz-baiyunhu',
-      to_station_id: 'cn-gz-guangzhoubaiyun',
+      from_station_id: 'cn-guangzhou-baiyunhu',
+      to_station_id: 'cn-guangzhou-guangzhoubaiyun',
       line_id: lineId,
       travel_time_seconds: 360,
       travel_time_source: 'last_train'
@@ -81,7 +81,7 @@ test('meanLeaveOneOutSpeedKmh excludes the station under test', () => {
   const locations = new Map(
     stations.map((s) => [s.id, { lon: s.location!.lon, lat: s.location!.lat }])
   );
-  const loo = meanLeaveOneOutSpeedKmh(segments, 'cn-gz-jianggao', [lineId], locations);
+  const loo = meanLeaveOneOutSpeedKmh(segments, 'cn-guangzhou-jianggao', [lineId], locations);
   assert.ok(loo);
   // Remaining pairs: 花都-神山 (wrong, very fast) + 白云湖-广州白云.
   assert.equal(loo.n, 2);
@@ -90,7 +90,7 @@ test('meanLeaveOneOutSpeedKmh excludes the station under test', () => {
 
 test('evaluateStationSpeed flags colliding official coords as too_close', () => {
   const { stations, segments, lineId } = guangqingFixture();
-  const report = evaluateStationSpeed(stations, segments, 'cn-gz-shenshan', {
+  const report = evaluateStationSpeed(stations, segments, 'cn-guangzhou-shenshan', {
     lines: [{ id: lineId, mode: 'suburban_rail' }]
   });
   assert.equal(report.ok, false);
@@ -101,7 +101,7 @@ test('evaluateStationSpeed flags colliding official coords as too_close', () => 
 test('evaluateStationSpeed passes after 神山 is moved to Overpass coords', () => {
   const { stations, segments, lineId } = guangqingFixture();
   const fixed = stations.map((s) =>
-    s.id === 'cn-gz-shenshan'
+    s.id === 'cn-guangzhou-shenshan'
       ? {
           ...s,
           location: { lon: 113.201363, lat: 23.32917, crs: 'gcj02' as const },
@@ -109,7 +109,7 @@ test('evaluateStationSpeed passes after 神山 is moved to Overpass coords', () 
         }
       : s
   );
-  const report = evaluateStationSpeed(fixed, segments, 'cn-gz-shenshan', {
+  const report = evaluateStationSpeed(fixed, segments, 'cn-guangzhou-shenshan', {
     lines: [{ id: lineId, mode: 'suburban_rail' }]
   });
   assert.equal(report.ok, true, JSON.stringify(report.violations));
@@ -179,11 +179,11 @@ test('evaluateStationSpeed skips untrusted default travel times', () => {
 test('fillCoordinates falls back official → overpass when speed validation fails', async () => {
   const { segments, lineId } = guangqingFixture();
   const stations = [
-    { id: 'cn-gz-huadu', names: { zh: '花都' } } as any,
-    { id: 'cn-gz-shenshan', names: { zh: '神山' } } as any,
-    { id: 'cn-gz-jianggao', names: { zh: '江高' } } as any,
-    { id: 'cn-gz-baiyunhu', names: { zh: '白云湖' } } as any,
-    { id: 'cn-gz-guangzhoubaiyun', names: { zh: '广州白云' } } as any
+    { id: 'cn-guangzhou-huadu', names: { zh: '花都' } } as any,
+    { id: 'cn-guangzhou-shenshan', names: { zh: '神山' } } as any,
+    { id: 'cn-guangzhou-jianggao', names: { zh: '江高' } } as any,
+    { id: 'cn-guangzhou-baiyunhu', names: { zh: '白云湖' } } as any,
+    { id: 'cn-guangzhou-guangzhoubaiyun', names: { zh: '广州白云' } } as any
   ];
   const official = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>([
     ['花都', { lon: 113.201384, lat: 23.377115, crs: 'gcj02' }],
@@ -238,11 +238,11 @@ test('fillCoordinates falls back official → overpass when speed validation fai
   const out = await fillCoordinates(stations, {
     city: '广州',
     stops: [
-      { station_id: 'cn-gz-huadu', line_id: lineId },
-      { station_id: 'cn-gz-shenshan', line_id: lineId },
-      { station_id: 'cn-gz-jianggao', line_id: lineId },
-      { station_id: 'cn-gz-baiyunhu', line_id: lineId },
-      { station_id: 'cn-gz-guangzhoubaiyun', line_id: lineId }
+      { station_id: 'cn-guangzhou-huadu', line_id: lineId },
+      { station_id: 'cn-guangzhou-shenshan', line_id: lineId },
+      { station_id: 'cn-guangzhou-jianggao', line_id: lineId },
+      { station_id: 'cn-guangzhou-baiyunhu', line_id: lineId },
+      { station_id: 'cn-guangzhou-guangzhoubaiyun', line_id: lineId }
     ],
     lines: [{ id: lineId, mode: 'suburban_rail' }],
     officialLocations: official,
@@ -255,11 +255,11 @@ test('fillCoordinates falls back official → overpass when speed validation fai
     }
   });
 
-  const shenshan = out.find((s) => s.id === 'cn-gz-shenshan');
+  const shenshan = out.find((s) => s.id === 'cn-guangzhou-shenshan');
   assert.ok(shenshan?.location);
   assert.equal(shenshan.extras?.location_source, 'overpass');
   assert.ok(Math.abs(shenshan.location!.lat - 23.32917) < 1e-6);
-  const jianggao = out.find((s) => s.id === 'cn-gz-jianggao');
+  const jianggao = out.find((s) => s.id === 'cn-guangzhou-jianggao');
   assert.ok(jianggao?.location);
   // Either official or overpass 江高 is acceptable once 神山 is fixed.
   assert.ok(['official', 'overpass'].includes(String(jianggao.extras?.location_source)));
@@ -268,11 +268,11 @@ test('fillCoordinates falls back official → overpass when speed validation fai
 test('fillCoordinates throws when no source candidate passes speed validation', async () => {
   const { segments, lineId } = guangqingFixture();
   const stations = [
-    { id: 'cn-gz-huadu', names: { zh: '花都' } } as any,
-    { id: 'cn-gz-shenshan', names: { zh: '神山' } } as any,
-    { id: 'cn-gz-jianggao', names: { zh: '江高' } } as any,
-    { id: 'cn-gz-baiyunhu', names: { zh: '白云湖' } } as any,
-    { id: 'cn-gz-guangzhoubaiyun', names: { zh: '广州白云' } } as any
+    { id: 'cn-guangzhou-huadu', names: { zh: '花都' } } as any,
+    { id: 'cn-guangzhou-shenshan', names: { zh: '神山' } } as any,
+    { id: 'cn-guangzhou-jianggao', names: { zh: '江高' } } as any,
+    { id: 'cn-guangzhou-baiyunhu', names: { zh: '白云湖' } } as any,
+    { id: 'cn-guangzhou-guangzhoubaiyun', names: { zh: '广州白云' } } as any
   ];
   const official = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>([
     ['花都', { lon: 113.201384, lat: 23.377115, crs: 'gcj02' }],
@@ -288,11 +288,11 @@ test('fillCoordinates throws when no source candidate passes speed validation', 
       fillCoordinates(stations, {
         city: '广州',
         stops: [
-          { station_id: 'cn-gz-huadu', line_id: lineId },
-          { station_id: 'cn-gz-shenshan', line_id: lineId },
-          { station_id: 'cn-gz-jianggao', line_id: lineId },
-          { station_id: 'cn-gz-baiyunhu', line_id: lineId },
-          { station_id: 'cn-gz-guangzhoubaiyun', line_id: lineId }
+          { station_id: 'cn-guangzhou-huadu', line_id: lineId },
+          { station_id: 'cn-guangzhou-shenshan', line_id: lineId },
+          { station_id: 'cn-guangzhou-jianggao', line_id: lineId },
+          { station_id: 'cn-guangzhou-baiyunhu', line_id: lineId },
+          { station_id: 'cn-guangzhou-guangzhoubaiyun', line_id: lineId }
         ],
         lines: [{ id: lineId, mode: 'suburban_rail' }],
         officialLocations: official,
@@ -315,11 +315,11 @@ test('fillCoordinates enumeration is order-independent (fixes 神山 via k=1)', 
   // (tried when 江高-only k=1 still fails), with 江高 left at official.
   const { segments, lineId } = guangqingFixture();
   const stations = [
-    { id: 'cn-gz-huadu', names: { zh: '花都' } } as any,
-    { id: 'cn-gz-shenshan', names: { zh: '神山' } } as any,
-    { id: 'cn-gz-jianggao', names: { zh: '江高' } } as any,
-    { id: 'cn-gz-baiyunhu', names: { zh: '白云湖' } } as any,
-    { id: 'cn-gz-guangzhoubaiyun', names: { zh: '广州白云' } } as any
+    { id: 'cn-guangzhou-huadu', names: { zh: '花都' } } as any,
+    { id: 'cn-guangzhou-shenshan', names: { zh: '神山' } } as any,
+    { id: 'cn-guangzhou-jianggao', names: { zh: '江高' } } as any,
+    { id: 'cn-guangzhou-baiyunhu', names: { zh: '白云湖' } } as any,
+    { id: 'cn-guangzhou-guangzhoubaiyun', names: { zh: '广州白云' } } as any
   ];
   const official = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>([
     ['花都', { lon: 113.201384, lat: 23.377115, crs: 'gcj02' }],
@@ -381,11 +381,11 @@ test('fillCoordinates enumeration is order-independent (fixes 神山 via k=1)', 
   const out = await fillCoordinates(stations, {
     city: '广州',
     stops: [
-      { station_id: 'cn-gz-huadu', line_id: lineId },
-      { station_id: 'cn-gz-shenshan', line_id: lineId },
-      { station_id: 'cn-gz-jianggao', line_id: lineId },
-      { station_id: 'cn-gz-baiyunhu', line_id: lineId },
-      { station_id: 'cn-gz-guangzhoubaiyun', line_id: lineId }
+      { station_id: 'cn-guangzhou-huadu', line_id: lineId },
+      { station_id: 'cn-guangzhou-shenshan', line_id: lineId },
+      { station_id: 'cn-guangzhou-jianggao', line_id: lineId },
+      { station_id: 'cn-guangzhou-baiyunhu', line_id: lineId },
+      { station_id: 'cn-guangzhou-guangzhoubaiyun', line_id: lineId }
     ],
     lines: [{ id: lineId, mode: 'suburban_rail' }],
     officialLocations: official,
@@ -398,10 +398,10 @@ test('fillCoordinates enumeration is order-independent (fixes 神山 via k=1)', 
     }
   });
 
-  const shenshan = out.find((s) => s.id === 'cn-gz-shenshan');
+  const shenshan = out.find((s) => s.id === 'cn-guangzhou-shenshan');
   assert.equal(shenshan?.extras?.location_source, 'overpass');
   assert.ok(Math.abs(shenshan!.location!.lat - 23.32917) < 1e-6);
-  const jianggao = out.find((s) => s.id === 'cn-gz-jianggao');
+  const jianggao = out.find((s) => s.id === 'cn-guangzhou-jianggao');
   // 江高 stays on official once 神山 is corrected — not the photon town POI.
   assert.equal(jianggao?.extras?.location_source, 'official');
   assert.ok(Math.abs(jianggao!.location!.lat - 23.276722) < 1e-6);

@@ -3,7 +3,7 @@
  * sources live.
  *
  *   bun run data:sync --list
- *   bun run data:sync --network cn-sh --layer topology,timetables,enrichment
+ *   bun run data:sync --network cn-shanghai --layer topology,timetables,enrichment
  *   bun run data:sync --layer fares
  *
  * Layers:

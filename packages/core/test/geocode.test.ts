@@ -96,8 +96,8 @@ test('fillCoordinates applies knownLocations before any geocoder', async () => {
   // 广州 is inside the CN-GZ bbox; the official coords for 萝峰 are wrong
   // (a neighbouring POI). The KnownLocation must win and record provenance.
   const stations = [
-    { id: 'cn-gz-luofeng', names: { zh: '萝峰' } } as any,
-    { id: 'cn-gz-other', names: { zh: '香雪' } } as any
+    { id: 'cn-guangzhou-luofeng', names: { zh: '萝峰' } } as any,
+    { id: 'cn-guangzhou-other', names: { zh: '香雪' } } as any
   ];
   const known: KnownLocation[] = [
     {
@@ -126,7 +126,7 @@ test('fillCoordinates records provenance for pre-seeded source coords', async ()
   // recorded as a source-feed location (not a geocoder match).
   const stations = [
     {
-      id: 'cn-gz-seeded',
+      id: 'cn-guangzhou-seeded',
       names: { zh: '香雪公园' },
       location: { lon: 113.501224, lat: 23.172382, crs: 'gcj02' }
     } as any
@@ -147,7 +147,7 @@ test('fillCoordinates drops pre-seeded coords outside the city bbox', async () =
   // lat 31.14 is Shanghai, far outside CN-GZ's bbox -> dropped, not kept.
   const stations = [
     {
-      id: 'cn-gz-seeded',
+      id: 'cn-guangzhou-seeded',
       names: { zh: '香雪公园' },
       location: { lon: 113.532013, lat: 31.139563, crs: 'gcj02' }
     } as any
@@ -193,8 +193,8 @@ test('findSubwayStation does not strip official query names onto AMap metro twin
 
 test('fillCoordinates keeps intercity twins off the AMap metro POI', async () => {
   const stations = [
-    { id: 'cn-gz-chencun', names: { zh: '陈村' } } as any,
-    { id: 'cn-gz-chencun-intercity', names: { zh: '陈村(城际)' } } as any
+    { id: 'cn-guangzhou-chencun', names: { zh: '陈村' } } as any,
+    { id: 'cn-guangzhou-chencun-intercity', names: { zh: '陈村(城际)' } } as any
   ];
   const official = new Map<string, { lon: number; lat: number; crs: 'gcj02' }>([
     ['陈村(城际)', { lon: 113.239612, lat: 22.96952, crs: 'gcj02' }]
@@ -208,8 +208,8 @@ test('fillCoordinates keeps intercity twins off the AMap metro POI', async () =>
       geocode: async () => undefined
     }
   });
-  const metro = out.find((s) => s.id === 'cn-gz-chencun');
-  const intercity = out.find((s) => s.id === 'cn-gz-chencun-intercity');
+  const metro = out.find((s) => s.id === 'cn-guangzhou-chencun');
+  const intercity = out.find((s) => s.id === 'cn-guangzhou-chencun-intercity');
   assert.equal(metro?.extras?.location_source, 'subway');
   assert.equal(metro?.location?.lon, 113.236869);
   assert.equal(intercity?.extras?.location_source, 'official');

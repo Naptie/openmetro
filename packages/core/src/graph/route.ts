@@ -1,10 +1,6 @@
 import type { StopEncoded } from '../schema/index.js';
 import type { StopGraph } from './build.js';
-import {
-  buildStationIndex,
-  type GraphFilterOptions,
-  type StationIndex
-} from './build.js';
+import { buildStationIndex, type GraphFilterOptions, type StationIndex } from './build.js';
 import { dijkstraMany } from './dijkstra.js';
 
 export interface RouteLeg {
