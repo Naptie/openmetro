@@ -37,16 +37,31 @@ export interface SuzhouCanonical {
 }
 
 /**
- * Map compound official labels used on the schematic (e.g. `苏州园区/火车站`)
- * onto a single geocodable station name. City-specific; core stays generic.
+ * Map compound official labels used on the schematic onto a **display** name.
+ * City-specific; core stays generic.
+ *
+ * Do NOT fold `陆慕/古巷` onto Line 2's `陆慕` — they are different stations
+ * (codes 0848 vs 0246) and collapsing them steals Line 2 coordinates.
  */
-const NAME_GEOCODE_OVERRIDES: Record<string, string> = {
-  '陆慕/古巷': '陆慕',
-  '苏州园区/火车站': '苏州园区火车站'
+const NAME_CANONICAL: Record<string, { zh: string; en?: string }> = {
+  '陆慕/古巷': { zh: '陆慕古巷', en: 'Lumu Guxiang' },
+  '苏州园区/火车站': { zh: '苏州园区火车站' }
 };
 
-function geocodeName(zh: string): string {
-  return NAME_GEOCODE_OVERRIDES[zh] ?? (zh.split('/')[0].trim() || zh);
+function canonicalStationLabel(zhRaw: string): { zh: string; en?: string } {
+  const raw = zhRaw.trim();
+  const hit = NAME_CANONICAL[raw];
+  if (hit) return hit;
+  // Keep multi-part official names intact (陆慕/古巷 ≠ 陆慕). Only unwrap
+  // single-element leftovers.
+  if (raw.includes('/') && !NAME_CANONICAL[raw]) {
+    const parts = raw
+      .split('/')
+      .map((s) => s.trim())
+      .filter(Boolean);
+    if (parts.length === 1) return { zh: parts[0]! };
+  }
+  return { zh: raw };
 }
 
 const NETWORK_ID = 'cn-suzhou';
@@ -385,13 +400,20 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
         isOffline || meta.status !== 'operating' ? 'under_construction' : 'operating'
       );
 
-      let phys = physByName.get(zh);
+      let phys = physByName.get(zh) ?? physByName.get(canonicalStationLabel(zh).zh);
       if (!phys) {
-        const canonicalZh = geocodeName(zh);
+        const label = canonicalStationLabel(zh);
+        const canonicalZh = label.zh;
+        // Prefer the curated English label; do not keep the first slash segment
+        // of a compound official name (`Lumu/Guxiang` → `Lumu`).
+        const en =
+          label.en ??
+          ((nm?.en?.trim() ? nm.en.trim().replace(/\//g, ' ').replace(/\s+/g, ' ').trim() : '') ||
+            canonicalZh);
         phys = {
-          id: `${NETWORK_ID}-${stationIdFor(nm?.en, canonicalZh)}`,
+          id: `${NETWORK_ID}-${stationIdFor(label.en ?? (/^[A-Za-z]/.test(en) ? en : undefined), canonicalZh)}`,
           zh: canonicalZh,
-          en: (nm?.en?.trim() || canonicalZh).split('/')[0].trim() || canonicalZh,
+          en,
           pinyin: nm?.pinyin ?? '',
           mapIds: new Set(),
           codes: new Set(),
@@ -399,6 +421,7 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
           lineNos: new Set()
         };
         physByName.set(zh, phys);
+        physByName.set(canonicalZh, phys);
       }
       phys.mapIds.add(node.id);
       if (/^\d+$/.test(code)) phys.codes.add(code);
@@ -466,9 +489,19 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
   const ttIds = new Set<string>();
 
   // Destination map-id → station id for timetable destination_stop_id.
+  // Official times use bare codes (`0340`); map nodes are prefixed (`s16_0340`).
   const stationIdByMapId = new Map<string, string>();
+  const stationIdByCode = new Map<string, string>();
+  const stopIdByCode = new Map<string, string>();
   for (const phys of physByName.values()) {
     for (const mid of phys.mapIds) stationIdByMapId.set(mid, phys.id);
+    for (const c of phys.codes) {
+      stationIdByCode.set(c, phys.id);
+      // First line to claim a code wins for stop lookup; line-specific keys beat this.
+      if (!stopIdByCode.has(c)) {
+        /* filled below after stops exist */
+      }
+    }
     const preferred = [...phys.codes].sort()[0] ?? '';
     if (preferred) fareCodesByStationId.set(phys.id, preferred);
   }
@@ -497,11 +530,13 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
       const phys = physByName.get(names.get(mapId)?.zh?.trim() ?? '');
       if (!phys) continue;
       const stopId = `${phys.id}-${short}`;
+      const code = baseCode(mapId);
       stopIdByMapId.set(mapId, stopId);
       stopByLineMapId.set(`${lineId}|${mapId}`, stopId);
+      stopByLineMapId.set(`${lineId}|${code}`, stopId);
+      stopIdByCode.set(code, stopId);
       patternStopIds.push(stopId);
       patternStationIds.push(phys.id);
-      const code = baseCode(mapId);
       const sch = schematicByMapId.get(mapId);
       const isPlanned = phys.status === 'under_construction';
       stops.push({
@@ -539,10 +574,37 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
       extras: {
         line_status: seq.meta.status,
         virtual_line_name: virtualLineNames.get(seq.meta.sourceId),
+        pattern_role: 'direction',
         through_run_with:
           seq.meta.sourceId === '3' || seq.meta.sourceId === '11' ? '3/11' : undefined
       }
     });
+
+    // Reverse alignment — official times publish both up/down termini.
+    const revStopIds = [...patternStopIds].reverse();
+    const revId = `${patternId}-rev`;
+    if (revStopIds.length >= 2) {
+      patterns.push({
+        id: revId,
+        line_id: lineId,
+        name: seq.meta.nameZh,
+        names: {
+          zh: seq.meta.nameZh,
+          en: officialLineEnglishName(seq.meta.nameZh, seq.meta.nameEn)
+        },
+        stop_ids: revStopIds,
+        origin_stop_id: revStopIds[0],
+        terminal_stop_id: revStopIds[revStopIds.length - 1],
+        is_primary: false,
+        source_ids: [{ source: 'sz-mtr-map-js', id: `${seq.meta.sourceId}-rev` }],
+        extras: {
+          direction: 'reverse',
+          pattern_role: 'reverse',
+          reverse_of: patternId,
+          line_status: seq.meta.status
+        }
+      });
+    }
 
     for (let i = 0; i < patternStopIds.length - 1; i++) {
       const a = patternStationIds[i];
@@ -575,16 +637,36 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
       if (seq.meta.status !== 'operating') continue;
       const lineSourceId = seq.meta.sourceId;
       const blocks = times.get(mapId) ?? times.get(baseCode(mapId)) ?? [];
+      const resolveDestStop = (destMapId: string): string | undefined => {
+        const code = baseCode(destMapId);
+        return (
+          stopByLineMapId.get(`${lineId}|${destMapId}`) ??
+          stopByLineMapId.get(`${lineId}|${code}`) ??
+          stopIdByMapId.get(destMapId) ??
+          stopIdByMapId.get(code) ??
+          (() => {
+            const sid = stationIdByMapId.get(destMapId) ?? stationIdByCode.get(code);
+            if (!sid) return undefined;
+            return patternStopIds.find((stopId) => {
+              const st = stops.find((s) => s.id === stopId);
+              return st?.station_id === sid;
+            });
+          })()
+        );
+      };
       for (const block of blocks) {
         if (block.lineID !== lineSourceId && block.lineID !== String(lineSourceId)) continue;
-        const destCandidates: [string | undefined, string | undefined][] = [
-          [block.downDirectionID, block.down_begintime],
-          [block.upDirectionID, block.up_begintime]
+        const destCandidates: [string | undefined, string | undefined, string][] = [
+          [block.downDirectionID, block.down_begintime, 'down'],
+          [block.upDirectionID, block.up_begintime, 'up']
         ];
-        for (const [destMapId, first] of destCandidates) {
+        for (const [destMapId, first, dir] of destCandidates) {
           if (!destMapId) continue;
+          const destCode = baseCode(destMapId);
           const destStation =
-            stationIdByMapId.get(destMapId) ?? stationIdByMapId.get(baseCode(destMapId));
+            stationIdByMapId.get(destMapId) ??
+            stationIdByCode.get(destCode) ??
+            stationIdByMapId.get(destCode);
           const firstT = firstTime(first);
           const lastT =
             destMapId === block.downDirectionID
@@ -593,14 +675,23 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
           if (!firstT && !lastT) continue;
           const aligned = alignTimes(firstT, lastT);
           if (aligned.first.length === 0 || aligned.last.length === 0) continue;
-          const destStop =
-            stopByLineMapId.get(`${lineId}|${destMapId}`) ??
-            stopIdByMapId.get(destMapId) ??
-            patternStopIds.find((sid) => {
-              const st = stops.find((s) => s.id === sid);
-              return st?.station_id === destStation;
-            });
-          const id = `${NETWORK_ID}-${phys.id}-${short}-to-${asciiSlug(destMapId)}-${i}`;
+          const destStop = resolveDestStop(destMapId) ?? patternStopIds[patternStopIds.length - 1];
+          const destPhys =
+            destStation != null
+              ? [...physByName.values()].find((p) => p.id === destStation)
+              : undefined;
+          const destName = destPhys?.zh ?? destCode;
+          // Bind the reverse alignment when this direction targets the origin end.
+          const reversePattern = patterns.find(
+            (p) =>
+              p.line_id === lineId &&
+              p.extras &&
+              (p.extras as { reverse_of?: string }).reverse_of === patternId
+          );
+          const usesReverse =
+            reversePattern != null && destStop === patternStopIds[0] && patternStopIds.length > 1;
+          const boundPatternId = usesReverse ? reversePattern.id : patternId;
+          const id = `${NETWORK_ID}-${phys.id}-${short}-to-${asciiSlug(destMapId)}-${dir}`;
           if (ttIds.has(id)) continue;
           ttIds.add(id);
           timetables.push({
@@ -610,12 +701,18 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
             line_id: lineId,
             station_code: baseCode(mapId),
             source_id: mapId,
-            destination_stop_id: destStop ?? patternStopIds[patternStopIds.length - 1],
-            pattern_id: patternId,
+            destination_stop_id: destStop,
+            pattern_id: boundPatternId,
+            direction_label: destName ? `往${destName}方向` : undefined,
             first_train: aligned.first,
             last_train: aligned.last,
             service: 'all_days',
-            direction_type: 'linear'
+            direction_type: 'linear',
+            extras: {
+              direction_role: dir,
+              dest_map_id: destMapId,
+              dest_code: destCode
+            }
           });
         }
       }
@@ -819,8 +916,11 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
     if (line && !list.includes(line.name)) list.push(line.name);
     stopLinesByStation.set(s.station_id, list);
   }
+  const emittedStationIds = new Set<string>();
   for (const phys of physByName.values()) {
     if (!stopStationIds.has(phys.id)) continue;
+    if (emittedStationIds.has(phys.id)) continue;
+    emittedStationIds.add(phys.id);
     // Stops sit on the parent operating line; official map corridor stays in extras.
     const displayLines =
       stopLinesByStation.get(phys.id) ?? [...phys.lineNos].filter((n) => !n.includes('延线'));

@@ -22,6 +22,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   type AdapterManifest,
+  computeNetworkQuality,
   SYNC_LAYERS,
   type SyncCtx,
   type SyncLayer
@@ -109,6 +110,38 @@ async function reconcileFares(networkId: string): Promise<void> {
   console.log(`[${networkId}] reconciled fares: ${oldIds.length}x${oldIds.length} -> ${n}x${n}`);
 }
 
+/** Recompute `network.json.quality` from on-disk canonical records + fares. */
+async function refreshNetworkQuality(networkId: string): Promise<void> {
+  const dir = join(ROOT, 'data', networkId);
+  const loadRecords = async (name: string) => {
+    try {
+      const doc = JSON.parse(await readFile(join(dir, name), 'utf-8')) as { records?: unknown[] };
+      return doc.records ?? [];
+    } catch {
+      return [];
+    }
+  };
+  const netPath = join(dir, 'network.json');
+  const net = JSON.parse(await readFile(netPath, 'utf-8')) as Record<string, unknown>;
+  let fares: unknown;
+  try {
+    fares = JSON.parse(await readFile(join(dir, 'fares.json'), 'utf-8'));
+  } catch {
+    fares = undefined;
+  }
+  const quality = computeNetworkQuality({
+    lines: (await loadRecords('lines.json')) as { id: string }[],
+    stations: (await loadRecords('stations.json')) as never,
+    stops: (await loadRecords('stops.json')) as never,
+    segments: (await loadRecords('segments.json')) as never,
+    transfers: (await loadRecords('transfers.json')) as never,
+    timetables: (await loadRecords('timetables.json')) as never,
+    fares: fares as never
+  });
+  await writeFile(netPath, `${JSON.stringify({ ...net, quality }, null, 2)}\n`, 'utf-8');
+  console.log(`[${networkId}] refreshed network quality`);
+}
+
 async function main() {
   const args = parseArgs();
   let adapters = await discoverAdapters();
@@ -159,6 +192,11 @@ async function main() {
         if (wanted.some((l) => l === 'topology')) {
           await reconcileFares(manifest.networkId);
         }
+        // Fares-only sync writes fares.json but does not touch network.json;
+        // recompute quality so the report reflects the new matrix.
+        if (wanted.some((l) => l === 'fares')) {
+          await refreshNetworkQuality(manifest.networkId);
+        }
       }
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
@@ -180,7 +218,9 @@ async function main() {
   console.log('sync complete');
 }
 
-main().catch((err) => {
-  console.error(err instanceof Error ? err.message : err);
-  process.exit(1);
-});
+if (import.meta.main) {
+  main().catch((err) => {
+    console.error(err instanceof Error ? err.message : err);
+    process.exit(1);
+  });
+}

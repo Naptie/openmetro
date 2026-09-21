@@ -10,6 +10,7 @@
   import * as Tabs from '$lib/components/ui/tabs/index.js';
   import { lineModeKey, lineStatusKey, localizedName, networkName } from '$lib/format';
   import { i18n } from '$lib/i18n.svelte';
+  import { patternVariantKey } from '$lib/patterns.js';
   import { app, type NetworkData } from '$lib/state.svelte';
 
   let { line, network }: { line: Line; network: NetworkData } = $props();
@@ -18,6 +19,22 @@
   const locale = $derived(i18n.locale);
   const linePatterns = $derived(network.patterns.filter((p) => p.line_id === line.id));
   const mainPattern = $derived(linePatterns.find((p) => p.is_primary) ?? linePatterns[0]);
+  // Hide pure reverse alignments — they are not map branches.
+  const displayPatterns = $derived.by(() => {
+    return linePatterns.filter((p) => patternVariantKey(p, mainPattern) !== 'reverse');
+  });
+  const patternLabel = $derived(
+    (pattern: {
+      id: string;
+      is_primary?: boolean;
+      stop_ids: string[];
+      extras?: Record<string, unknown> | null;
+    }) => {
+      const kind = patternVariantKey(pattern, mainPattern);
+      if (kind === 'primary') return t.line_pattern_primary();
+      return t.line_pattern_branch();
+    }
+  );
 
   // Which pattern's station list is shown; follows the main pattern by default
   // and resets whenever another line is opened. Empty string matches no tab
@@ -196,16 +213,16 @@
     <h3 class="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
       {t.line_stations()}
     </h3>
-    {#if linePatterns.length > 1 && mainPattern}
+    {#if displayPatterns.length > 1 && mainPattern}
       <Tabs.Root bind:value={selectedPatternId}>
         <Tabs.List class="w-full">
-          {#each linePatterns as pattern (pattern.id)}
+          {#each displayPatterns as pattern (pattern.id)}
             <Tabs.Trigger value={pattern.id} class="flex-1 gap-1.5 text-xs">
               <Badge
                 variant={pattern.is_primary ? "default" : "outline"}
                 class="px-1.5 py-0 text-[10px]"
               >
-                {pattern.is_primary ? t.line_pattern_primary() : t.line_pattern_branch()}
+                {patternLabel(pattern)}
               </Badge>
               <span class="min-w-0 truncate">
                 {localizedName(pattern.names, pattern.name ?? line.name, locale)}
@@ -225,7 +242,7 @@
           variant={selectedPattern.is_primary ? "default" : "outline"}
           class="mr-1 px-1.5 py-0 text-[10px]"
         >
-          {selectedPattern.is_primary ? t.line_pattern_primary() : t.line_pattern_branch()}
+          {patternLabel(selectedPattern)}
         </Badge>
         {#if terminalStation}
           {t.line_pattern_terminal({

@@ -269,6 +269,22 @@ function verifyReferences(network: string, d: NetworkData): void {
   // ── Timetables ────────────────────────────────────────────────
   const ttStops = new Set<string>();
   const ttByLine = new Map<string, Set<string>>();
+  const patternById = new Map(d.patterns.map((p) => [p.id, p]));
+  // Same station + line + direction must not repeat; same dest+label neither.
+  const ttDirKeys = new Set<string>();
+  const ttDestKeys = new Set<string>();
+  // stop.sequence must be unique within a line (map/order consumers rely on it).
+  const lineSeqSeen = new Map<string, Set<number>>();
+  for (const stop of d.stops) {
+    const seen = lineSeqSeen.get(stop.line_id) ?? new Set<number>();
+    assert(
+      !seen.has(stop.sequence),
+      network,
+      `stop ${stop.id} duplicates sequence ${stop.sequence} on line ${stop.line_id}`
+    );
+    seen.add(stop.sequence);
+    lineSeqSeen.set(stop.line_id, seen);
+  }
   for (const timetable of d.timetables) {
     assert(stationIds.has(timetable.station_id), network, `timetable ${timetable.id} -> station`);
     assert(lineIds.has(timetable.line_id), network, `timetable ${timetable.id} -> line`);
@@ -280,7 +296,7 @@ function verifyReferences(network: string, d: NetworkData): void {
       network,
       `timetable ${timetable.id} stop disagrees with station/line`
     );
-    const pattern = d.patterns.find((p) => p.id === timetable.pattern_id);
+    const pattern = patternById.get(timetable.pattern_id);
     assert(pattern, network, `timetable ${timetable.id} pattern missing`);
     assert(
       pattern.stop_ids.includes(timetable.stop_id),
@@ -295,6 +311,39 @@ function verifyReferences(network: string, d: NetworkData): void {
         network,
         `timetable ${timetable.id} destination is on another line`
       );
+      // Destination must lie on the attached pattern — a reverse or branch
+      // direction collapsed onto the primary pattern otherwise points at a
+      // terminal the train never reaches from this station.
+      assert(
+        pattern.stop_ids.includes(timetable.destination_stop_id),
+        network,
+        `timetable ${timetable.id} destination ${timetable.destination_stop_id} is not on pattern ${pattern.id}`
+      );
+    }
+    if (timetable.direction_label) {
+      // Same station+line+direction+pattern is only illegal for identical time
+      // payloads. Operators publish calendar variants (weekday vs weekend
+      // last-train arrays) under one public direction name.
+      const timeSig = `${timetable.first_train.join(',')}|${timetable.last_train.join(',')}`;
+      const dirKey = `${timetable.station_id}|${timetable.line_id}|${timetable.direction_label}|${timetable.pattern_id}|${timeSig}`;
+      assert(
+        !ttDirKeys.has(dirKey),
+        network,
+        `timetable duplicate direction+pattern+times at station ${timetable.station_id} line ${timetable.line_id}: ${timetable.direction_label} / ${timetable.pattern_id}`
+      );
+      ttDirKeys.add(dirKey);
+    }
+    {
+      // Calendar variants (weekday vs weekend last-train arrays) are legal
+      // under the same dest+label; only identical time payloads are duplicates.
+      const timeSig = `${timetable.first_train.join(',')}|${timetable.last_train.join(',')}`;
+      const destKey = `${timetable.station_id}|${timetable.line_id}|${timetable.destination_stop_id ?? ''}|${timetable.direction_label ?? ''}|${timeSig}`;
+      assert(
+        !ttDestKeys.has(destKey),
+        network,
+        `timetable duplicate dest+direction+times at station ${timetable.station_id} line ${timetable.line_id} dest=${timetable.destination_stop_id} label=${timetable.direction_label ?? ''}`
+      );
+      ttDestKeys.add(destKey);
     }
     const isLoopDir =
       timetable.direction_type === 'loop_inner' || timetable.direction_type === 'loop_outer';
@@ -326,6 +375,173 @@ function verifyReferences(network: string, d: NetworkData): void {
     const set = ttByLine.get(timetable.line_id) ?? new Set();
     set.add(timetable.stop_id);
     ttByLine.set(timetable.line_id, set);
+  }
+
+  // Branch patterns that share stops with their primary must expose a junction
+  // so map renderers can draw the spur (through-running branches include trunk).
+  for (const pattern of d.patterns) {
+    if (pattern.is_primary) continue;
+    const primary = d.patterns.find((p) => p.line_id === pattern.line_id && p.is_primary);
+    if (!primary) continue;
+    const trunk = new Set(primary.stop_ids);
+    const shared = pattern.stop_ids.filter((id) => trunk.has(id));
+    if (shared.length === 0 || shared.length === pattern.stop_ids.length) continue;
+    // Pure reverse of the primary alignment — no spur geometry of its own.
+    const rev = [...primary.stop_ids].reverse().join('|');
+    if (pattern.stop_ids.join('|') === rev) continue;
+    if (pattern.junction_stop_id) {
+      assert(
+        stopById.has(pattern.junction_stop_id),
+        network,
+        `pattern ${pattern.id} junction_stop_id unknown`
+      );
+      assert(
+        trunk.has(pattern.junction_stop_id),
+        network,
+        `pattern ${pattern.id} junction_stop_id is not on the primary alignment`
+      );
+      continue;
+    }
+    const hasBranchOnlyNeighbour = pattern.stop_ids.some((id, i) => {
+      if (!trunk.has(id)) return false;
+      const prev = i > 0 ? pattern.stop_ids[i - 1] : undefined;
+      const next = i + 1 < pattern.stop_ids.length ? pattern.stop_ids[i + 1] : undefined;
+      return Boolean((prev && !trunk.has(prev)) || (next && !trunk.has(next)));
+    });
+    assert(
+      hasBranchOnlyNeighbour,
+      network,
+      `pattern ${pattern.id} is a branch but has no junction_stop_id and no trunk↔spur adjacency`
+    );
+  }
+
+  // Homonym stations that are NOT a physical interchange must not share
+  // coordinates — name-based geocoding otherwise copies a twin station's point
+  // (Suzhou L8 陆慕古巷 vs L2 陆慕).
+  {
+    const byLoc = new Map<string, typeof d.stations>();
+    for (const s of d.stations) {
+      if (!s.location) continue;
+      const key = `${s.location.lon.toFixed(5)},${s.location.lat.toFixed(5)}`;
+      const list = byLoc.get(key) ?? [];
+      list.push(s);
+      byLoc.set(key, list);
+    }
+    for (const [key, group] of byLoc) {
+      if (group.length < 2) continue;
+      const names = new Set(group.map((s) => s.names?.zh ?? s.name));
+      // Same display name co-located → true interchange / split platforms.
+      if (names.size === 1) continue;
+      // Multi-line station extras mean one physical node under several lines.
+      const allMultiLine = group.every((s) => {
+        const lines = (s.extras as { lines?: string[] } | undefined)?.lines ?? [];
+        return lines.length > 1;
+      });
+      if (allMultiLine) continue;
+      const codes = group.map((s) => {
+        const c = (s.extras as { official_codes?: string[] } | undefined)?.official_codes ?? [];
+        return c.join(',');
+      });
+      // Distinct official codes + distinct names + shared coords = collision.
+      const codeSet = new Set(codes.filter(Boolean));
+      if (codeSet.size <= 1 && names.size <= 1) continue;
+      const linesOverlap = group.every((s, i) => {
+        if (i === 0) return true;
+        const a = new Set((group[0]!.extras as { lines?: string[] } | undefined)?.lines ?? []);
+        const b = new Set((s.extras as { lines?: string[] } | undefined)?.lines ?? []);
+        return [...b].some((l) => a.has(l));
+      });
+      if (
+        linesOverlap &&
+        group.every(
+          (s) => ((s.extras as { lines?: string[] } | undefined)?.lines?.length ?? 0) >= 2
+        )
+      ) {
+        continue;
+      }
+      fail(
+        network,
+        `homonym coordinate collision at ${key}: ${group
+          .map((s, i) => `${s.names?.zh ?? s.name} (${s.id}, codes=${codes[i] || '—'})`)
+          .join(' vs ')}`
+      );
+    }
+  }
+
+  // Reverse alignments must be tagged so UI can hide them as branches.
+  for (const pattern of d.patterns) {
+    const linePatterns = d.patterns.filter((p) => p.line_id === pattern.line_id);
+    const role = (pattern.extras as { pattern_role?: string } | undefined)?.pattern_role;
+    const reverseOf = (pattern.extras as { reverse_of?: string } | undefined)?.reverse_of;
+    const sig = pattern.stop_ids.join('|');
+    const isReverseOfSomePattern = linePatterns.some(
+      (other) => other.id !== pattern.id && [...other.stop_ids].reverse().join('|') === sig
+    );
+    if (role === 'reverse') {
+      assert(
+        isReverseOfSomePattern,
+        network,
+        `pattern ${pattern.id} is tagged pattern_role=reverse but is not the reverse of any pattern on ${pattern.line_id}`
+      );
+      if (reverseOf) {
+        assert(
+          linePatterns.some((p) => p.id === reverseOf),
+          network,
+          `pattern ${pattern.id} reverse_of=${reverseOf} is not on the same line`
+        );
+        const src = linePatterns.find((p) => p.id === reverseOf);
+        if (src) {
+          assert(
+            [...src.stop_ids].reverse().join('|') === sig,
+            network,
+            `pattern ${pattern.id} reverse_of=${reverseOf} but stop_ids are not that pattern reversed`
+          );
+        }
+      }
+    } else {
+      const primary = linePatterns.find((p) => p.is_primary);
+      if (primary && pattern.id !== primary.id) {
+        const isExactPrimaryReverse = [...primary.stop_ids].reverse().join('|') === sig;
+        if (isExactPrimaryReverse) {
+          fail(
+            network,
+            `pattern ${pattern.id} is an exact reverse of primary ${primary.id} but extras.pattern_role=${role ?? 'missing'} (want 'reverse')`
+          );
+        }
+      }
+    }
+  }
+
+  // Reverse-direction coverage: when a linear primary publishes any timetable
+  // and stations sit away from both termini, at least two distinct destination
+  // stations must appear — otherwise every row collapsed onto one direction.
+  for (const line of d.lines) {
+    if (line.status !== 'operating') continue;
+    const primary = d.patterns.find((p) => p.line_id === line.id && p.is_primary);
+    if (!primary || primary.stop_ids.length < 2) continue;
+    const lineTts = d.timetables.filter((t) => t.line_id === line.id);
+    if (lineTts.length === 0) continue;
+    const destStationIds = new Set<string>();
+    for (const t of lineTts) {
+      if (!t.destination_stop_id) continue;
+      const dest = stopById.get(t.destination_stop_id);
+      if (dest) destStationIds.add(dest.station_id);
+    }
+    if (destStationIds.size === 0) continue;
+    const originStop = stopById.get(primary.origin_stop_id);
+    const termStop = stopById.get(primary.terminal_stop_id);
+    const termini = new Set(
+      [originStop?.station_id, termStop?.station_id].filter((x): x is string => Boolean(x))
+    );
+    if (termini.size < 2) continue;
+    // Intermediate stations exist and every timetable points at one terminus only.
+    const covered = [...termini].filter((id) => destStationIds.has(id));
+    if (destStationIds.size === 1 && covered.length === 1 && lineTts.length >= 2) {
+      fail(
+        network,
+        `line ${line.id} timetables all target one direction (dest stations=${destStationIds.size}); reverse direction missing`
+      );
+    }
   }
 
   // Coverage: on a line that publishes any timetable, every operating station

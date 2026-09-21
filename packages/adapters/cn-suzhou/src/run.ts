@@ -101,6 +101,15 @@ export async function runSuzhouNormalize(opts: SuzhouNormalizeOptions = {}): Pro
       extraCities: ['昆山'],
       stops: canonical.stops,
       lines: lines.map((l) => ({ id: l.id, mode: l.mode })),
+      // Line 8「陆慕古巷」must not inherit Line 2「陆慕」coordinates.
+      // Placed between 御窑 (120.6095,31.3623) and 阳澄湖中路 (120.6269,31.3668).
+      knownLocations: [
+        {
+          name: '陆慕古巷',
+          location: { lon: 120.6182, lat: 31.3645, crs: 'gcj02' },
+          source: 'known'
+        }
+      ],
       segments: canonical.segments.map((s) => ({
         from_station_id: s.from_station_id,
         to_station_id: s.to_station_id,
@@ -108,7 +117,7 @@ export async function runSuzhouNormalize(opts: SuzhouNormalizeOptions = {}): Pro
         travel_time_seconds: s.travel_time_seconds,
         travel_time_source: s.travel_time_source
       })),
-      speedValidate: false,
+      speedValidate: true,
       onSubwayMatch: () => subwayMatched++,
       onOverpassMatch: () => overpassMatched++,
       onGeocode: () => geocoded++

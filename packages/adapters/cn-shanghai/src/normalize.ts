@@ -328,6 +328,20 @@ function reconstructPatterns(
   return patterns;
 }
 
+/**
+ * Official labels may append a trailing 站 that the station record omits
+ * (`往虹桥2号航站楼站` vs `虹桥2号航站楼`), but 站 can also be part of the real
+ * name (`虹桥火车站`). Try both forms; never strip blindly.
+ */
+function stationLabelCandidates(name: string): string[] {
+  const t = name.trim();
+  if (!t) return [];
+  const out = [t];
+  if (t.endsWith('站') && t.length > 1) out.push(t.slice(0, -1));
+  else out.push(`${t}站`);
+  return [...new Set(out)];
+}
+
 /** Parse a source direction label into origin/destination names. */
 function parseDirectionLabel(label: string): { dest?: string; origin?: string } {
   const l = label.trim();
@@ -610,8 +624,13 @@ export function normalize(input: ShRawInput): ShCanonical {
     const lineStops = stopsByLine.get(lineId) ?? [];
     const linePatterns = patternsByLine.get(lineId) ?? [];
     const stopByName = (name: string) => {
-      const station = resolveStation(name, lineNo);
-      return station ? lineStops.find((s) => s.station_id === station.id) : undefined;
+      for (const candidate of stationLabelCandidates(name)) {
+        const station = resolveStation(candidate, lineNo);
+        if (!station) continue;
+        const stop = lineStops.find((s) => s.station_id === station.id);
+        if (stop) return stop;
+      }
+      return undefined;
     };
 
     for (const row of rows) {
@@ -698,7 +717,35 @@ export function normalize(input: ShRawInput): ShCanonical {
   const derived = deriveSegmentTimes(patterns, stops, timetables, {});
   const finalSegments = applyDerivedTimes([...segmentByPair.values()], derived);
 
-  const finalTimetables = timetables.map(normalizeTimetableTimes).filter(hasValidTimes);
+  const finalTimetables = timetables
+    .map(normalizeTimetableTimes)
+    .filter(hasValidTimes)
+    .filter((t, _i, all) => {
+      // Official feed occasionally repeats a branch row verbatim (Line 10 航中路).
+      const key = [
+        t.station_id,
+        t.line_id,
+        t.pattern_id,
+        t.destination_stop_id ?? '',
+        t.direction_label ?? '',
+        t.first_train.join(','),
+        t.last_train.join(',')
+      ].join('|');
+      return (
+        all.findIndex(
+          (u) =>
+            [
+              u.station_id,
+              u.line_id,
+              u.pattern_id,
+              u.destination_stop_id ?? '',
+              u.direction_label ?? '',
+              u.first_train.join(','),
+              u.last_train.join(',')
+            ].join('|') === key
+        ) === all.indexOf(t)
+      );
+    });
   const stations = applyTimetableServiceStatus(
     [...stationMap.values()],
     stops,

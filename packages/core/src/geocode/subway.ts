@@ -95,20 +95,33 @@ function parseSl(sl: string | undefined): GeoResult | undefined {
   return Number.isFinite(lon) && Number.isFinite(lat) ? { lon, lat, crs: 'gcj02' } : undefined;
 }
 
+/**
+ * AMap city subway files sometimes bundle adjacent systems (Hangzhou's feed
+ * includes 绍兴1号线 / 杭海城际). Same Chinese names then collide — e.g. 奥体中心
+ * exists on both Shaoxing Line 1 and Hangzhou Line 6/7 with different coords.
+ * Prefer core metro badges (`6号线`) over branded intercity rows.
+ */
+function coreMetroLineRank(lineName: string): number {
+  return /^(\d+号线|S\d+线|APM线?)$/.test(lineName.trim()) ? 0 : 1;
+}
+
 /** Flatten the per-line station arrays into one entry per distinct station. */
 function parseSubway(raw: RawSubway | undefined): SubwayStation[] {
   if (!raw?.l) return [];
-  const out = new Map<string, SubwayStation>();
+  const out = new Map<string, SubwayStation & { rank: number }>();
   for (const line of raw.l) {
+    const rank = coreMetroLineRank(String(line.ln ?? ''));
     for (const st of line.st ?? []) {
       const name = st.n?.trim();
-      if (!name || out.has(name)) continue;
+      if (!name) continue;
       const location = parseSl(st.sl);
       if (!location) continue;
-      out.set(name, { name, pinyin: st.sp, poiid: st.poiid, location });
+      const existing = out.get(name);
+      if (existing && existing.rank <= rank) continue;
+      out.set(name, { name, pinyin: st.sp, poiid: st.poiid, location, rank });
     }
   }
-  return [...out.values()];
+  return [...out.values()].map(({ rank: _rank, ...st }) => st);
 }
 
 async function fetchRaw(city: string): Promise<RawSubway | undefined> {

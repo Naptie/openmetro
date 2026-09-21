@@ -4,7 +4,7 @@
 
 Generated from each network’s `network.json.quality` after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-20T18:39:56.391Z_
+_Updated 2026-09-21T07:35:56.090Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -34,6 +34,20 @@ _Updated 2026-09-20T18:39:56.391Z_
 | Schematic | ❌ unavailable | default | 0% | default=599 |
 | Fares | 🟡 partial | official | 94% | official=236520, default=15986 |
 
+## 杭州地铁 / Hangzhou Metro (`cn-hangzhou`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ complete | official | 100% | official=1 |
+| Coordinates | ✅ complete | official | 100% | official=260, derived=1 |
+| Names | ✅ complete | official | 100% | official=261 |
+| Segment times | 🟡 partial | derived | 91% | derived=273, default=26 |
+| Segment distances | ❌ unavailable | default | 0% | default=299 |
+| Transfer times | 🟠 derived | derived | 100% | derived=104 |
+| Timetables | ✅ complete | official | 100% | official=749 |
+| Schematic | ✅ complete | official | 100% | official=308, default=1 |
+| Fares | ✅ complete | official | 100% | official=67860 |
+
 ## 上海地铁 / Shanghai Metro (`cn-shanghai`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -44,7 +58,7 @@ _Updated 2026-09-20T18:39:56.391Z_
 | Segment times | ✅ complete | official | 100% | official=516 |
 | Segment distances | ❌ unavailable | default | 0% | default=516 |
 | Transfer times | ✅ complete | official | 100% | official=276 |
-| Timetables | ✅ complete | official | 100% | official=1241 |
+| Timetables | ✅ complete | official | 100% | official=1238 |
 | Schematic | ❌ unavailable | default | 0% | default=530 |
 | Fares | 🟡 partial | official | 99% | official=171212, default=2260 |
 
@@ -74,7 +88,7 @@ _Updated 2026-09-20T18:39:56.391Z_
 | Transfer times | 🟠 derived | derived | 100% | derived=80 |
 | Timetables | ✅ complete | official | 100% | official=457 |
 | Schematic | ✅ complete | official | 100% | official=279 |
-| Fares | — | — | — | — |
+| Fares | 🟡 partial | official | 97% | official=54990, default=1892 |
 
 ### Legend
 

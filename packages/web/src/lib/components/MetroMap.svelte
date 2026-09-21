@@ -18,6 +18,7 @@
   } from 'openmetro-client';
   import { localizedName } from '$lib/format';
   import { i18n } from '$lib/i18n.svelte';
+  import { patternVariantKey } from '$lib/patterns.js';
   import { app } from '$lib/state.svelte';
 
   let container: HTMLDivElement;
@@ -360,6 +361,9 @@
         const primary =
           linePatterns.find((p) => p.is_primary) ??
           [...linePatterns].sort((a, b) => b.stop_ids.length - a.stop_ids.length)[0];
+        // Reverse alignments share the trunk geometry — drawing them invents
+        // a second overlapping "branch".
+        const drawable = linePatterns.filter((p) => patternVariantKey(p, primary) !== 'reverse');
 
         // Ordered unique station ids + coordinates along a pattern.
         const seqOf = (pattern: Pattern): { ids: string[]; coords: [number, number][] } => {
@@ -411,17 +415,32 @@
           stopMap ? [...stopMap.values()].map((s) => [s.id, s.station_id]) : []
         );
 
-        for (const pattern of linePatterns) {
+        for (const pattern of drawable) {
           if (pattern.id === primary.id) continue;
           const { ids, coords } = seqOf(pattern);
           if (coords.length < 2) continue;
 
-          // Junction: explicit junction stop, else the last station this branch
-          // shares with the trunk.
+          // Junction: explicit junction stop, else the trunk station that has a
+          // branch-only neighbour on this pattern. Through-running branch
+          // patterns include the shared trunk, so "last station shared with
+          // the trunk" would pin the junction at the far terminus and drop the
+          // spur (e.g. Hangzhou L6 双浦/霞鸣街 off 美院象山).
           let junctionIdx = pattern.junction_stop_id
             ? ids.indexOf(stopToStation.get(pattern.junction_stop_id) ?? '')
             : -1;
           if (junctionIdx === -1) {
+            for (let i = 0; i < ids.length; i++) {
+              if (!mainSet.has(ids[i])) continue;
+              const prev = i > 0 ? ids[i - 1] : undefined;
+              const next = i + 1 < ids.length ? ids[i + 1] : undefined;
+              if ((prev && !mainSet.has(prev)) || (next && !mainSet.has(next))) {
+                junctionIdx = i;
+                break;
+              }
+            }
+          }
+          if (junctionIdx === -1) {
+            // Fully disjoint or a pure reverse of the trunk: fall back to last shared.
             for (let i = ids.length - 1; i >= 0; i--) {
               if (mainSet.has(ids[i])) {
                 junctionIdx = i;

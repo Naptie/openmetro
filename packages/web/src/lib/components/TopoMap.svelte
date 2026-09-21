@@ -7,6 +7,7 @@
   } from 'openmetro-client';
   import { localizedName } from '$lib/format';
   import { i18n } from '$lib/i18n.svelte';
+  import { patternVariantKey } from '$lib/patterns.js';
 
   let {
     line,
@@ -97,7 +98,10 @@
     }));
 
     const branches: TopoBranch[] = [];
-    const others = patterns.filter((p) => p.id !== mainPattern.id);
+    // Reverse-direction alignments are not map spurs (every line publishes them).
+    const others = patterns.filter(
+      (p) => p.id !== mainPattern.id && patternVariantKey(p, mainPattern) !== 'reverse'
+    );
 
     for (const [branchIdx, pattern] of others.entries()) {
       const branchSeq = seq(pattern);

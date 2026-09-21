@@ -1,24 +1,24 @@
 {
-  "id": "cn-suzhou",
-  "name": "苏州轨道交通",
+  "id": "cn-hangzhou",
+  "name": "杭州地铁",
   "names": {
-    "zh": "苏州轨道交通",
-    "en": "Suzhou Rail Transit"
+    "zh": "杭州地铁",
+    "en": "Hangzhou Metro"
   },
   "city": {
-    "id": "CN-32",
+    "id": "CN-3301",
     "name": {
-      "zh": "苏州",
-      "en": "Suzhou"
+      "zh": "杭州",
+      "en": "Hangzhou"
     },
     "country": "CN",
-    "population": 12911000,
-    "area": 8657.32,
+    "population": 12376000,
+    "area": 16850,
     "location": {
       "type": "Point",
       "coordinates": [
-        120.58529,
-        31.29888
+        120.1551,
+        30.2741
       ]
     }
   },
@@ -33,10 +33,10 @@
   },
   "routing": {
     "weight": "time",
-    "default_transfer_seconds": 300,
-    "max_transfer_seconds": 900
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
   },
-  "notes": "3号线与11号线贯通运营，常规列车无需在唯亭下车换乘。票价：起步价2元可乘6公里；6～16公里每1元可乘5公里；16～30公里每1元可乘7公里；30公里以上每1元可乘9公里。",
+  "notes": "拓扑与首末班来自杭州地铁官网 operation/all（工作日时刻表口径）；线色/坐标/英文名来自官网线网图所使用的 AMap Subway 数据。",
   "quality": {
     "topology": {
       "precision": "official",
@@ -53,8 +53,8 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 235,
-        "derived": 4,
+        "official": 260,
+        "derived": 1,
         "default": 0
       }
     },
@@ -63,29 +63,29 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 239,
+        "official": 261,
         "derived": 0,
         "default": 0
       }
     },
     "segment_times": {
-      "precision": "official",
-      "coverage": 0.99,
+      "precision": "derived",
+      "coverage": 0.91,
       "status": "partial",
       "counts": {
-        "official": 266,
-        "derived": 0,
-        "default": 4
+        "official": 0,
+        "derived": 273,
+        "default": 26
       }
     },
     "segment_distances": {
-      "precision": "official",
-      "coverage": 0.99,
-      "status": "partial",
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
       "counts": {
-        "official": 266,
+        "official": 0,
         "derived": 0,
-        "default": 4
+        "default": 299
       }
     },
     "transfer_times": {
@@ -94,7 +94,7 @@
       "status": "derived",
       "counts": {
         "official": 0,
-        "derived": 80,
+        "derived": 104,
         "default": 0
       }
     },
@@ -103,7 +103,7 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 457,
+        "official": 749,
         "derived": 0,
         "default": 0
       }
@@ -113,19 +113,19 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 279,
+        "official": 308,
         "derived": 0,
-        "default": 0
+        "default": 1
       }
     },
     "fares": {
       "precision": "official",
-      "coverage": 0.97,
-      "status": "partial",
+      "coverage": 1,
+      "status": "complete",
       "counts": {
-        "official": 54990,
+        "official": 67860,
         "derived": 0,
-        "default": 1892
+        "default": 0
       }
     }
   }
