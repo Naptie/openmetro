@@ -260,9 +260,8 @@ unrestricted (any origin may call the public read-only API; methods are
 `GET`/`OPTIONS`, no credentials).
 
 **Error contract.** Every non-2xx response body is `{ "error": "<message>" }`.
-Unknown network ids are `404` on every `/api/networks/:id/*` route (collection
-routes used to 500 on an id that did not exist); unknown stations are `404` on
-the detail, fare-row, route and travel-times routes.
+Unknown network ids are `404` on every `/api/networks/:id/*` route; unknown
+stations are `404` on the detail, fare-row, route and travel-times routes.
 
 **Schemas are the compatibility surface.** Every response body is validated
 against the named schemas in `components.schemas` before it is sent — the
@@ -408,7 +407,7 @@ compared against a release.
 
 Live:
 
-- Site + API — <https://openmetro.vercel.app> (OpenAPI at `/swagger`)
+- Site + API — <https://openmetro.phi.zone> (OpenAPI at `/swagger`)
 
 Frontend (`packages/web`, SvelteKit static) and API (`api/index.ts` →
 `createApiApp`) ship in **one Vercel project**, same origin. Canonical JSON is
@@ -427,6 +426,3 @@ VITE_API_URL=http://127.0.0.1:8790 bun run web:dev
 # Production deploy (optional manual path; needs vercel login)
 bun run vercel:deploy
 ```
-
-Cloudflare Workers/Pages configs and deploy workflows that used to live here were
-moved out of this repo (historical copies kept outside the tree).
