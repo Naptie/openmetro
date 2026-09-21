@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "bun install",
-  "buildCommand": "bun run scripts/build-worker-data.ts && bun run --cwd packages/web build",
+  "installCommand": "bun install --frozen-lockfile",
+  "buildCommand": "bun run scripts/build-worker-data.ts && bun run --cwd packages/web build && bun run scripts/ensure-vercel-static.mjs",
   "outputDirectory": "packages/web/build",
   "functions": {
     "api/index.ts": {

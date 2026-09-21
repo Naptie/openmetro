@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
+import { files } from '../packages/api-worker/src/data.generated.js';
 import { createApiApp } from '../packages/core/src/api/app.js';
 import { createMemoryNetworkSource } from '../packages/core/src/data/memory.js';
-import { files } from '../packages/api-worker/src/data.generated.js';
 
 /**
  * Vercel Node function entry (shared by `/api` and `/api/*`).
