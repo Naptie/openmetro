@@ -97,7 +97,6 @@ jobs:
 
       - name: Sync topology
         env:
-          AMAP_KEY: ${{ secrets.AMAP_KEY }}
           OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}
         run: |
           echo "proxy=${OPENMETRO_REVERSE_PROXY:-none}"
