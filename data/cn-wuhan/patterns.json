@@ -1,0 +1,1394 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-wuhan",
+  "generated_at": "2026-09-21T15:40:15.889Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-wuhan-line-1-pattern-hankou-north-1-to-jinghe-1",
+      "line_id": "cn-wuhan-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-wuhan-hankou-north-1",
+        "cn-wuhan-shekouxincheng-1",
+        "cn-wuhan-tengzigang-1",
+        "cn-wuhan-dijiao-1",
+        "cn-wuhan-xinrong-1",
+        "cn-wuhan-danshuichi-1",
+        "cn-wuhan-xuzhouxincun-1",
+        "cn-wuhan-erqilu-1",
+        "cn-wuhan-tou-dao-street-1",
+        "cn-wuhan-huangpu-road-1",
+        "cn-wuhan-sanyang-road-1",
+        "cn-wuhan-dazhi-road-1",
+        "cn-wuhan-xunlimen-1",
+        "cn-wuhan-youyi-road-1",
+        "cn-wuhan-liji-north-road-1",
+        "cn-wuhan-chongren-road-1",
+        "cn-wuhan-qiaokou-road-1",
+        "cn-wuhan-taipingyang-1",
+        "cn-wuhan-zong-guan-1",
+        "cn-wuhan-hanxi-1st-road-1",
+        "cn-wuhan-gutian-4th-road-1",
+        "cn-wuhan-gutian-3rd-road-1",
+        "cn-wuhan-gutian-2nd-road-1",
+        "cn-wuhan-gutian-1st-road-1",
+        "cn-wuhan-duoluokou-1",
+        "cn-wuhan-zhuyehai-1",
+        "cn-wuhan-etouwan-1",
+        "cn-wuhan-wuhuan-boulevard-1",
+        "cn-wuhan-dongwu-boulevard-1",
+        "cn-wuhan-matoutan-park-1",
+        "cn-wuhan-sandian-1",
+        "cn-wuhan-jinghe-1"
+      ],
+      "origin_stop_id": "cn-wuhan-hankou-north-1",
+      "terminal_stop_id": "cn-wuhan-jinghe-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通1号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往径河方向",
+        "origin_name": "汉口北",
+        "terminal_name": "径河",
+        "line_short_name": "1",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-1-pattern-jinghe-1-to-hankou-north-1",
+      "line_id": "cn-wuhan-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-wuhan-jinghe-1",
+        "cn-wuhan-sandian-1",
+        "cn-wuhan-matoutan-park-1",
+        "cn-wuhan-dongwu-boulevard-1",
+        "cn-wuhan-wuhuan-boulevard-1",
+        "cn-wuhan-etouwan-1",
+        "cn-wuhan-zhuyehai-1",
+        "cn-wuhan-duoluokou-1",
+        "cn-wuhan-gutian-1st-road-1",
+        "cn-wuhan-gutian-2nd-road-1",
+        "cn-wuhan-gutian-3rd-road-1",
+        "cn-wuhan-gutian-4th-road-1",
+        "cn-wuhan-hanxi-1st-road-1",
+        "cn-wuhan-zong-guan-1",
+        "cn-wuhan-taipingyang-1",
+        "cn-wuhan-qiaokou-road-1",
+        "cn-wuhan-chongren-road-1",
+        "cn-wuhan-liji-north-road-1",
+        "cn-wuhan-youyi-road-1",
+        "cn-wuhan-xunlimen-1",
+        "cn-wuhan-dazhi-road-1",
+        "cn-wuhan-sanyang-road-1",
+        "cn-wuhan-huangpu-road-1",
+        "cn-wuhan-tou-dao-street-1",
+        "cn-wuhan-erqilu-1",
+        "cn-wuhan-xuzhouxincun-1",
+        "cn-wuhan-danshuichi-1",
+        "cn-wuhan-xinrong-1",
+        "cn-wuhan-dijiao-1",
+        "cn-wuhan-tengzigang-1",
+        "cn-wuhan-shekouxincheng-1",
+        "cn-wuhan-hankou-north-1"
+      ],
+      "origin_stop_id": "cn-wuhan-jinghe-1",
+      "terminal_stop_id": "cn-wuhan-hankou-north-1",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通1号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往汉口北方向",
+        "origin_name": "径河",
+        "terminal_name": "汉口北",
+        "line_short_name": "1",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-1-pattern-hankou-north-1-to-jinghe-1"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-11-pattern-gediannan-railway-station-11-to-jiang-an-road-11",
+      "line_id": "cn-wuhan-line-11",
+      "name": "11号线",
+      "names": {
+        "zh": "11号线",
+        "en": "Line 11"
+      },
+      "stop_ids": [
+        "cn-wuhan-gediannan-railway-station-11",
+        "cn-wuhan-zuoling-11",
+        "cn-wuhan-future-3rd-road-11",
+        "cn-wuhan-weilai-1st-road-11",
+        "cn-wuhan-changlingshan-11",
+        "cn-wuhan-guanggu-7th-road-11",
+        "cn-wuhan-baoxie-11",
+        "cn-wuhan-guanggu-6th-road-11",
+        "cn-wuhan-guanggu-5th-road-11",
+        "cn-wuhan-guanggu-4th-road-11",
+        "cn-wuhan-guanggu-shengwuyuan-11",
+        "cn-wuhan-tongji-hospital-11",
+        "cn-wuhan-hukou-11",
+        "cn-wuhan-wuhandong-railway-station-11",
+        "cn-wuhan-guanshan-boulevard-11",
+        "cn-wuhan-optics-valley-square-11",
+        "cn-wuhan-wuhan-sports-university-11",
+        "cn-wuhan-huquan-11",
+        "cn-wuhan-mafangshan-11",
+        "cn-wuhan-dingziqiao-11",
+        "cn-wuhan-east-square-of-wuchang-railway-statiion-11",
+        "cn-wuhan-ziyanghu-11",
+        "cn-wuhan-jiang-an-road-11"
+      ],
+      "origin_stop_id": "cn-wuhan-gediannan-railway-station-11",
+      "terminal_stop_id": "cn-wuhan-jiang-an-road-11",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通11号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往江安路方向",
+        "origin_name": "葛店南站",
+        "terminal_name": "江安路",
+        "line_short_name": "11",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-11-pattern-jiang-an-road-11-to-gediannan-railway-station-11"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-11-pattern-jiang-an-road-11-to-gediannan-railway-station-11",
+      "line_id": "cn-wuhan-line-11",
+      "name": "11号线",
+      "names": {
+        "zh": "11号线",
+        "en": "Line 11"
+      },
+      "stop_ids": [
+        "cn-wuhan-jiang-an-road-11",
+        "cn-wuhan-ziyanghu-11",
+        "cn-wuhan-east-square-of-wuchang-railway-statiion-11",
+        "cn-wuhan-dingziqiao-11",
+        "cn-wuhan-mafangshan-11",
+        "cn-wuhan-huquan-11",
+        "cn-wuhan-wuhan-sports-university-11",
+        "cn-wuhan-optics-valley-square-11",
+        "cn-wuhan-guanshan-boulevard-11",
+        "cn-wuhan-wuhandong-railway-station-11",
+        "cn-wuhan-hukou-11",
+        "cn-wuhan-tongji-hospital-11",
+        "cn-wuhan-guanggu-shengwuyuan-11",
+        "cn-wuhan-guanggu-4th-road-11",
+        "cn-wuhan-guanggu-5th-road-11",
+        "cn-wuhan-guanggu-6th-road-11",
+        "cn-wuhan-baoxie-11",
+        "cn-wuhan-guanggu-7th-road-11",
+        "cn-wuhan-changlingshan-11",
+        "cn-wuhan-weilai-1st-road-11",
+        "cn-wuhan-future-3rd-road-11",
+        "cn-wuhan-zuoling-11",
+        "cn-wuhan-gediannan-railway-station-11"
+      ],
+      "origin_stop_id": "cn-wuhan-jiang-an-road-11",
+      "terminal_stop_id": "cn-wuhan-gediannan-railway-station-11",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通11号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往葛店南站方向",
+        "origin_name": "江安路",
+        "terminal_name": "葛店南站",
+        "line_short_name": "11",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-12-pattern-gangduhuayuan-12-to-moshuihu-park-12",
+      "line_id": "cn-wuhan-line-12",
+      "name": "12号线",
+      "names": {
+        "zh": "12号线",
+        "en": "Line 12"
+      },
+      "stop_ids": [
+        "cn-wuhan-gangduhuayuan-12",
+        "cn-wuhan-yuanlin-road-12",
+        "cn-wuhan-tuanjie-boulevard-12",
+        "cn-wuhan-wangjiadun-12",
+        "cn-wuhan-qinyuan-middle-road-12",
+        "cn-wuhan-gongzheng-road-12",
+        "cn-wuhan-hejialong-12",
+        "cn-wuhan-no-15-senior-middle-school-12",
+        "cn-wuhan-east-square-of-wuchang-railway-statiion-12",
+        "cn-wuhan-rui-an-street-east-12",
+        "cn-wuhan-fu-an-street-12",
+        "cn-wuhan-chuxiang-boulevard-12",
+        "cn-wuhan-hubei-academy-of-agricultural-sciences-south-12",
+        "cn-wuhan-guangxia-12",
+        "cn-wuhan-wuhan-academy-of-agricultural-sciences-12",
+        "cn-wuhan-jiataohe-12",
+        "cn-wuhan-south-international-expo-center-12",
+        "cn-wuhan-guoboxincheng-12",
+        "cn-wuhan-sixin-south-road-12",
+        "cn-wuhan-sixin-middle-road-12",
+        "cn-wuhan-fangcao-road-12",
+        "cn-wuhan-gangkoucun-12",
+        "cn-wuhan-moshuihu-park-12"
+      ],
+      "origin_stop_id": "cn-wuhan-gangduhuayuan-12",
+      "terminal_stop_id": "cn-wuhan-moshuihu-park-12",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通12号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往墨水湖公园方向",
+        "origin_name": "钢都花园",
+        "terminal_name": "墨水湖公园",
+        "line_short_name": "12",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-12-pattern-moshuihu-park-12-to-gangduhuayuan-12"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-12-pattern-moshuihu-park-12-to-gangduhuayuan-12",
+      "line_id": "cn-wuhan-line-12",
+      "name": "12号线",
+      "names": {
+        "zh": "12号线",
+        "en": "Line 12"
+      },
+      "stop_ids": [
+        "cn-wuhan-moshuihu-park-12",
+        "cn-wuhan-gangkoucun-12",
+        "cn-wuhan-fangcao-road-12",
+        "cn-wuhan-sixin-middle-road-12",
+        "cn-wuhan-sixin-south-road-12",
+        "cn-wuhan-guoboxincheng-12",
+        "cn-wuhan-south-international-expo-center-12",
+        "cn-wuhan-jiataohe-12",
+        "cn-wuhan-wuhan-academy-of-agricultural-sciences-12",
+        "cn-wuhan-guangxia-12",
+        "cn-wuhan-hubei-academy-of-agricultural-sciences-south-12",
+        "cn-wuhan-chuxiang-boulevard-12",
+        "cn-wuhan-fu-an-street-12",
+        "cn-wuhan-rui-an-street-east-12",
+        "cn-wuhan-east-square-of-wuchang-railway-statiion-12",
+        "cn-wuhan-no-15-senior-middle-school-12",
+        "cn-wuhan-hejialong-12",
+        "cn-wuhan-gongzheng-road-12",
+        "cn-wuhan-qinyuan-middle-road-12",
+        "cn-wuhan-wangjiadun-12",
+        "cn-wuhan-tuanjie-boulevard-12",
+        "cn-wuhan-yuanlin-road-12",
+        "cn-wuhan-gangduhuayuan-12"
+      ],
+      "origin_stop_id": "cn-wuhan-moshuihu-park-12",
+      "terminal_stop_id": "cn-wuhan-gangduhuayuan-12",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通12号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往钢都花园方向",
+        "origin_name": "墨水湖公园",
+        "terminal_name": "钢都花园",
+        "line_short_name": "12",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-16-pattern-south-international-expo-center-16-to-tonghang-airport-16",
+      "line_id": "cn-wuhan-line-16",
+      "name": "16号线",
+      "names": {
+        "zh": "16号线",
+        "en": "Line 16"
+      },
+      "stop_ids": [
+        "cn-wuhan-south-international-expo-center-16",
+        "cn-wuhan-laoguancun-16",
+        "cn-wuhan-south-taizihu-16",
+        "cn-wuhan-zhuankou-16",
+        "cn-wuhan-xiaojunshan-16",
+        "cn-wuhan-fenglin-16",
+        "cn-wuhan-dajunshan-16",
+        "cn-wuhan-guizihu-16",
+        "cn-wuhan-mayinghe-16",
+        "cn-wuhan-xiezihe-16",
+        "cn-wuhan-wanhu-16",
+        "cn-wuhan-zhoujiahe-16",
+        "cn-wuhan-shamao-16",
+        "cn-wuhan-tonghang-airport-16"
+      ],
+      "origin_stop_id": "cn-wuhan-south-international-expo-center-16",
+      "terminal_stop_id": "cn-wuhan-tonghang-airport-16",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通16号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往通航机场方向",
+        "origin_name": "国博中心南",
+        "terminal_name": "通航机场",
+        "line_short_name": "16",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-16-pattern-tonghang-airport-16-to-south-international-expo-center-16",
+      "line_id": "cn-wuhan-line-16",
+      "name": "16号线",
+      "names": {
+        "zh": "16号线",
+        "en": "Line 16"
+      },
+      "stop_ids": [
+        "cn-wuhan-tonghang-airport-16",
+        "cn-wuhan-shamao-16",
+        "cn-wuhan-zhoujiahe-16",
+        "cn-wuhan-wanhu-16",
+        "cn-wuhan-xiezihe-16",
+        "cn-wuhan-mayinghe-16",
+        "cn-wuhan-guizihu-16",
+        "cn-wuhan-dajunshan-16",
+        "cn-wuhan-fenglin-16",
+        "cn-wuhan-xiaojunshan-16",
+        "cn-wuhan-zhuankou-16",
+        "cn-wuhan-south-taizihu-16",
+        "cn-wuhan-laoguancun-16",
+        "cn-wuhan-south-international-expo-center-16"
+      ],
+      "origin_stop_id": "cn-wuhan-tonghang-airport-16",
+      "terminal_stop_id": "cn-wuhan-south-international-expo-center-16",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通16号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往国博中心南方向",
+        "origin_name": "通航机场",
+        "terminal_name": "国博中心南",
+        "line_short_name": "16",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-16-pattern-south-international-expo-center-16-to-tonghang-airport-16"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-19-pattern-west-square-of-wuhan-railway-station-19-to-xinyuexi-park-19",
+      "line_id": "cn-wuhan-line-19",
+      "name": "19号线",
+      "names": {
+        "zh": "19号线",
+        "en": "Line 19"
+      },
+      "stop_ids": [
+        "cn-wuhan-west-square-of-wuhan-railway-station-19",
+        "cn-wuhan-wudong-19",
+        "cn-wuhan-gujiashan-19",
+        "cn-wuhan-huashanxincheng-19",
+        "cn-wuhan-huashanhe-19",
+        "cn-wuhan-guanggu-5th-road-19",
+        "cn-wuhan-xinyuexi-park-19"
+      ],
+      "origin_stop_id": "cn-wuhan-west-square-of-wuhan-railway-station-19",
+      "terminal_stop_id": "cn-wuhan-xinyuexi-park-19",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通19号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往新月溪公园方向",
+        "origin_name": "武汉站西广场",
+        "terminal_name": "新月溪公园",
+        "line_short_name": "19",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-19-pattern-xinyuexi-park-19-to-west-square-of-wuhan-railway-station-19",
+      "line_id": "cn-wuhan-line-19",
+      "name": "19号线",
+      "names": {
+        "zh": "19号线",
+        "en": "Line 19"
+      },
+      "stop_ids": [
+        "cn-wuhan-xinyuexi-park-19",
+        "cn-wuhan-guanggu-5th-road-19",
+        "cn-wuhan-huashanhe-19",
+        "cn-wuhan-huashanxincheng-19",
+        "cn-wuhan-gujiashan-19",
+        "cn-wuhan-wudong-19",
+        "cn-wuhan-west-square-of-wuhan-railway-station-19"
+      ],
+      "origin_stop_id": "cn-wuhan-xinyuexi-park-19",
+      "terminal_stop_id": "cn-wuhan-west-square-of-wuhan-railway-station-19",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通19号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往武汉站西广场方向",
+        "origin_name": "新月溪公园",
+        "terminal_name": "武汉站西广场",
+        "line_short_name": "19",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-19-pattern-west-square-of-wuhan-railway-station-19-to-xinyuexi-park-19"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-2-pattern-fozuling-2-to-tianhe-airport-2",
+      "line_id": "cn-wuhan-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-wuhan-fozuling-2",
+        "cn-wuhan-canglong-east-street-2",
+        "cn-wuhan-xiuhu-2",
+        "cn-wuhan-jinronggang-north-2",
+        "cn-wuhan-huanglongshan-road-2",
+        "cn-wuhan-wuhandong-railway-station-2",
+        "cn-wuhan-jiayuan-road-2",
+        "cn-wuhan-guanggu-boulevard-2",
+        "cn-wuhan-huazhong-university-of-sci-and-tech-2",
+        "cn-wuhan-luoxiong-road-2",
+        "cn-wuhan-optics-valley-square-2",
+        "cn-wuhan-yangjiawan-2",
+        "cn-wuhan-huquan-2",
+        "cn-wuhan-guangbutun-2",
+        "cn-wuhan-jiedaokou-2",
+        "cn-wuhan-baotong-temple-2",
+        "cn-wuhan-zhongnan-road-2",
+        "cn-wuhan-hongshan-square-2",
+        "cn-wuhan-xiaoguishan-2",
+        "cn-wuhan-pangxiejia-2",
+        "cn-wuhan-jiyuqiao-2",
+        "cn-wuhan-jianghan-road-2",
+        "cn-wuhan-xunlimen-2",
+        "cn-wuhan-zhongshan-park-2",
+        "cn-wuhan-qingnianlu-2",
+        "cn-wuhan-wangjiadun-east-2",
+        "cn-wuhan-fanhu-2",
+        "cn-wuhan-hankou-railway-station-2",
+        "cn-wuhan-changgang-road-2",
+        "cn-wuhan-changqing-huayuan-2",
+        "cn-wuhan-jinyintan-2",
+        "cn-wuhan-changqingcheng-2",
+        "cn-wuhan-hongtu-boulevard-2",
+        "cn-wuhan-panlongcheng-2",
+        "cn-wuhan-julong-boulevard-2",
+        "cn-wuhan-songjiagang-2",
+        "cn-wuhan-hangkongzongbu-2",
+        "cn-wuhan-tianhe-airport-2"
+      ],
+      "origin_stop_id": "cn-wuhan-fozuling-2",
+      "terminal_stop_id": "cn-wuhan-tianhe-airport-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通2号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往天河机场方向",
+        "origin_name": "佛祖岭",
+        "terminal_name": "天河机场",
+        "line_short_name": "2",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-2-pattern-tianhe-airport-2-to-fozuling-2",
+      "line_id": "cn-wuhan-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-wuhan-tianhe-airport-2",
+        "cn-wuhan-hangkongzongbu-2",
+        "cn-wuhan-songjiagang-2",
+        "cn-wuhan-julong-boulevard-2",
+        "cn-wuhan-panlongcheng-2",
+        "cn-wuhan-hongtu-boulevard-2",
+        "cn-wuhan-changqingcheng-2",
+        "cn-wuhan-jinyintan-2",
+        "cn-wuhan-changqing-huayuan-2",
+        "cn-wuhan-changgang-road-2",
+        "cn-wuhan-hankou-railway-station-2",
+        "cn-wuhan-fanhu-2",
+        "cn-wuhan-wangjiadun-east-2",
+        "cn-wuhan-qingnianlu-2",
+        "cn-wuhan-zhongshan-park-2",
+        "cn-wuhan-xunlimen-2",
+        "cn-wuhan-jianghan-road-2",
+        "cn-wuhan-jiyuqiao-2",
+        "cn-wuhan-pangxiejia-2",
+        "cn-wuhan-xiaoguishan-2",
+        "cn-wuhan-hongshan-square-2",
+        "cn-wuhan-zhongnan-road-2",
+        "cn-wuhan-baotong-temple-2",
+        "cn-wuhan-jiedaokou-2",
+        "cn-wuhan-guangbutun-2",
+        "cn-wuhan-huquan-2",
+        "cn-wuhan-yangjiawan-2",
+        "cn-wuhan-optics-valley-square-2",
+        "cn-wuhan-luoxiong-road-2",
+        "cn-wuhan-huazhong-university-of-sci-and-tech-2",
+        "cn-wuhan-guanggu-boulevard-2",
+        "cn-wuhan-jiayuan-road-2",
+        "cn-wuhan-wuhandong-railway-station-2",
+        "cn-wuhan-huanglongshan-road-2",
+        "cn-wuhan-jinronggang-north-2",
+        "cn-wuhan-xiuhu-2",
+        "cn-wuhan-canglong-east-street-2",
+        "cn-wuhan-fozuling-2"
+      ],
+      "origin_stop_id": "cn-wuhan-tianhe-airport-2",
+      "terminal_stop_id": "cn-wuhan-fozuling-2",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通2号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往佛祖岭方向",
+        "origin_name": "天河机场",
+        "terminal_name": "佛祖岭",
+        "line_short_name": "2",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-2-pattern-fozuling-2-to-tianhe-airport-2"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-21-pattern-houhu-boulevard-21-to-jintai-21",
+      "line_id": "cn-wuhan-line-21",
+      "name": "21号线（阳逻线）",
+      "names": {
+        "zh": "21号线（阳逻线）",
+        "en": "Line 21 （阳逻线）"
+      },
+      "stop_ids": [
+        "cn-wuhan-houhu-boulevard-21",
+        "cn-wuhan-baibutinghuayuan-road-21",
+        "cn-wuhan-xinrong-21",
+        "cn-wuhan-xingfuwan-21",
+        "cn-wuhan-zhujiahe-21",
+        "cn-wuhan-shenjiaji-21",
+        "cn-wuhan-qinglung-21",
+        "cn-wuhan-gaoche-21",
+        "cn-wuhan-wuhu-21",
+        "cn-wuhan-shakou-21",
+        "cn-wuhan-junmincun-21",
+        "cn-wuhan-wuhan-bioengineering-institute-21",
+        "cn-wuhan-yangluo-21",
+        "cn-wuhan-yangluo-development-zone-21",
+        "cn-wuhan-shigang-21",
+        "cn-wuhan-jintai-21"
+      ],
+      "origin_stop_id": "cn-wuhan-houhu-boulevard-21",
+      "terminal_stop_id": "cn-wuhan-jintai-21",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通21号线(阳逻线)"
+        }
+      ],
+      "extras": {
+        "direction_title": "往金台方向",
+        "origin_name": "后湖大道",
+        "terminal_name": "金台",
+        "line_short_name": "21",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-21-pattern-jintai-21-to-houhu-boulevard-21",
+      "line_id": "cn-wuhan-line-21",
+      "name": "21号线（阳逻线）",
+      "names": {
+        "zh": "21号线（阳逻线）",
+        "en": "Line 21 （阳逻线）"
+      },
+      "stop_ids": [
+        "cn-wuhan-jintai-21",
+        "cn-wuhan-shigang-21",
+        "cn-wuhan-yangluo-development-zone-21",
+        "cn-wuhan-yangluo-21",
+        "cn-wuhan-wuhan-bioengineering-institute-21",
+        "cn-wuhan-junmincun-21",
+        "cn-wuhan-shakou-21",
+        "cn-wuhan-wuhu-21",
+        "cn-wuhan-gaoche-21",
+        "cn-wuhan-qinglung-21",
+        "cn-wuhan-shenjiaji-21",
+        "cn-wuhan-zhujiahe-21",
+        "cn-wuhan-xingfuwan-21",
+        "cn-wuhan-xinrong-21",
+        "cn-wuhan-baibutinghuayuan-road-21",
+        "cn-wuhan-houhu-boulevard-21"
+      ],
+      "origin_stop_id": "cn-wuhan-jintai-21",
+      "terminal_stop_id": "cn-wuhan-houhu-boulevard-21",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通21号线(阳逻线)"
+        }
+      ],
+      "extras": {
+        "direction_title": "往后湖大道方向",
+        "origin_name": "金台",
+        "terminal_name": "后湖大道",
+        "line_short_name": "21",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-21-pattern-houhu-boulevard-21-to-jintai-21"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-3-pattern-hongtu-boulevard-3-to-zhuanyang-boulevard-3",
+      "line_id": "cn-wuhan-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "stop_ids": [
+        "cn-wuhan-hongtu-boulevard-3",
+        "cn-wuhan-citizens-home-3",
+        "cn-wuhan-houhu-boulevard-3",
+        "cn-wuhan-xingye-road-3",
+        "cn-wuhan-erqi-branch-road-3",
+        "cn-wuhan-luojiazhuang-3",
+        "cn-wuhan-zhaojiatiao-3",
+        "cn-wuhan-huiji-2nd-road-3",
+        "cn-wuhan-xianggang-road-3",
+        "cn-wuhan-lingjiaohu-3",
+        "cn-wuhan-fanhu-3",
+        "cn-wuhan-yunfei-road-3",
+        "cn-wuhan-wuhan-business-district-3",
+        "cn-wuhan-shuangdun-3",
+        "cn-wuhan-zong-guan-3",
+        "cn-wuhan-wangjiawan-3",
+        "cn-wuhan-longyangcun-3",
+        "cn-wuhan-taojialing-3",
+        "cn-wuhan-sixin-boulevard-3",
+        "cn-wuhan-hanyang-long-distance-bus-station-3",
+        "cn-wuhan-sanjiaohu-3",
+        "cn-wuhan-sports-center-3",
+        "cn-wuhan-dongfeng-motor-corporation-3",
+        "cn-wuhan-zhuanyang-boulevard-3"
+      ],
+      "origin_stop_id": "cn-wuhan-hongtu-boulevard-3",
+      "terminal_stop_id": "cn-wuhan-zhuanyang-boulevard-3",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通3号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往沌阳大道方向",
+        "origin_name": "宏图大道",
+        "terminal_name": "沌阳大道",
+        "line_short_name": "3",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-3-pattern-zhuanyang-boulevard-3-to-hongtu-boulevard-3"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-3-pattern-zhuanyang-boulevard-3-to-hongtu-boulevard-3",
+      "line_id": "cn-wuhan-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "stop_ids": [
+        "cn-wuhan-zhuanyang-boulevard-3",
+        "cn-wuhan-dongfeng-motor-corporation-3",
+        "cn-wuhan-sports-center-3",
+        "cn-wuhan-sanjiaohu-3",
+        "cn-wuhan-hanyang-long-distance-bus-station-3",
+        "cn-wuhan-sixin-boulevard-3",
+        "cn-wuhan-taojialing-3",
+        "cn-wuhan-longyangcun-3",
+        "cn-wuhan-wangjiawan-3",
+        "cn-wuhan-zong-guan-3",
+        "cn-wuhan-shuangdun-3",
+        "cn-wuhan-wuhan-business-district-3",
+        "cn-wuhan-yunfei-road-3",
+        "cn-wuhan-fanhu-3",
+        "cn-wuhan-lingjiaohu-3",
+        "cn-wuhan-xianggang-road-3",
+        "cn-wuhan-huiji-2nd-road-3",
+        "cn-wuhan-zhaojiatiao-3",
+        "cn-wuhan-luojiazhuang-3",
+        "cn-wuhan-erqi-branch-road-3",
+        "cn-wuhan-xingye-road-3",
+        "cn-wuhan-houhu-boulevard-3",
+        "cn-wuhan-citizens-home-3",
+        "cn-wuhan-hongtu-boulevard-3"
+      ],
+      "origin_stop_id": "cn-wuhan-zhuanyang-boulevard-3",
+      "terminal_stop_id": "cn-wuhan-hongtu-boulevard-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通3号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往宏图大道方向",
+        "origin_name": "沌阳大道",
+        "terminal_name": "宏图大道",
+        "line_short_name": "3",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-4-pattern-bailin-4-to-wuhan-railway-station-4",
+      "line_id": "cn-wuhan-line-4",
+      "name": "4号线",
+      "names": {
+        "zh": "4号线",
+        "en": "Line 4"
+      },
+      "stop_ids": [
+        "cn-wuhan-bailin-4",
+        "cn-wuhan-xinmiaocun-4",
+        "cn-wuhan-linzhang-avenue-4",
+        "cn-wuhan-caidian-square-4",
+        "cn-wuhan-fenghuang-road-4",
+        "cn-wuhan-xinnong-4",
+        "cn-wuhan-zhiyin-4",
+        "cn-wuhan-jixian-4",
+        "cn-wuhan-xintian-4",
+        "cn-wuhan-huangjinkou-4",
+        "cn-wuhan-mengjiapu-4",
+        "cn-wuhan-yongantang-4",
+        "cn-wuhan-yulong-road-4",
+        "cn-wuhan-wangjiawan-4",
+        "cn-wuhan-shilipu-4",
+        "cn-wuhan-qilimiao-4",
+        "cn-wuhan-wulidun-4",
+        "cn-wuhan-hanyang-railway-station-4",
+        "cn-wuhan-zhongjiacun-4",
+        "cn-wuhan-lanjiang-road-4",
+        "cn-wuhan-fuxing-road-4",
+        "cn-wuhan-shouyi-road-4",
+        "cn-wuhan-wuchang-railway-station-4",
+        "cn-wuhan-meiyuanxiaoqu-4",
+        "cn-wuhan-zhongnan-road-4",
+        "cn-wuhan-hongshan-square-4",
+        "cn-wuhan-chuhehanjie-4",
+        "cn-wuhan-qingyuzui-4",
+        "cn-wuhan-dongting-4",
+        "cn-wuhan-yuejiazui-4",
+        "cn-wuhan-tieji-road-4",
+        "cn-wuhan-luojiagang-4",
+        "cn-wuhan-yuanlin-road-4",
+        "cn-wuhan-renhe-road-4",
+        "cn-wuhan-gongye-4th-road-4",
+        "cn-wuhan-yangchunhu-4",
+        "cn-wuhan-wuhan-railway-station-4"
+      ],
+      "origin_stop_id": "cn-wuhan-bailin-4",
+      "terminal_stop_id": "cn-wuhan-wuhan-railway-station-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通4号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往武汉火车站方向",
+        "origin_name": "柏林",
+        "terminal_name": "武汉火车站",
+        "line_short_name": "4",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-4-pattern-wuhan-railway-station-4-to-bailin-4",
+      "line_id": "cn-wuhan-line-4",
+      "name": "4号线",
+      "names": {
+        "zh": "4号线",
+        "en": "Line 4"
+      },
+      "stop_ids": [
+        "cn-wuhan-wuhan-railway-station-4",
+        "cn-wuhan-yangchunhu-4",
+        "cn-wuhan-gongye-4th-road-4",
+        "cn-wuhan-renhe-road-4",
+        "cn-wuhan-yuanlin-road-4",
+        "cn-wuhan-luojiagang-4",
+        "cn-wuhan-tieji-road-4",
+        "cn-wuhan-yuejiazui-4",
+        "cn-wuhan-dongting-4",
+        "cn-wuhan-qingyuzui-4",
+        "cn-wuhan-chuhehanjie-4",
+        "cn-wuhan-hongshan-square-4",
+        "cn-wuhan-zhongnan-road-4",
+        "cn-wuhan-meiyuanxiaoqu-4",
+        "cn-wuhan-wuchang-railway-station-4",
+        "cn-wuhan-shouyi-road-4",
+        "cn-wuhan-fuxing-road-4",
+        "cn-wuhan-lanjiang-road-4",
+        "cn-wuhan-zhongjiacun-4",
+        "cn-wuhan-hanyang-railway-station-4",
+        "cn-wuhan-wulidun-4",
+        "cn-wuhan-qilimiao-4",
+        "cn-wuhan-shilipu-4",
+        "cn-wuhan-wangjiawan-4",
+        "cn-wuhan-yulong-road-4",
+        "cn-wuhan-yongantang-4",
+        "cn-wuhan-mengjiapu-4",
+        "cn-wuhan-huangjinkou-4",
+        "cn-wuhan-xintian-4",
+        "cn-wuhan-jixian-4",
+        "cn-wuhan-zhiyin-4",
+        "cn-wuhan-xinnong-4",
+        "cn-wuhan-fenghuang-road-4",
+        "cn-wuhan-caidian-square-4",
+        "cn-wuhan-linzhang-avenue-4",
+        "cn-wuhan-xinmiaocun-4",
+        "cn-wuhan-bailin-4"
+      ],
+      "origin_stop_id": "cn-wuhan-wuhan-railway-station-4",
+      "terminal_stop_id": "cn-wuhan-bailin-4",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通4号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往柏林方向",
+        "origin_name": "武汉火车站",
+        "terminal_name": "柏林",
+        "line_short_name": "4",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-4-pattern-bailin-4-to-wuhan-railway-station-4"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-5-pattern-east-square-of-wuhan-railway-station-5-to-hongxia-5",
+      "line_id": "cn-wuhan-line-5",
+      "name": "5号线",
+      "names": {
+        "zh": "5号线",
+        "en": "Line 5"
+      },
+      "stop_ids": [
+        "cn-wuhan-east-square-of-wuhan-railway-station-5",
+        "cn-wuhan-changqian-5",
+        "cn-wuhan-wugang-5",
+        "cn-wuhan-gongrencun-5",
+        "cn-wuhan-qingyiju-5",
+        "cn-wuhan-honggangcheng-5",
+        "cn-wuhan-heping-park-5",
+        "cn-wuhan-jianshe-2nd-road-5",
+        "cn-wuhan-science-park-5",
+        "cn-wuhan-yujiatou-5",
+        "cn-wuhan-yangyuan-and-tiesiyuan-5",
+        "cn-wuhan-xujiapeng-5",
+        "cn-wuhan-sanjiao-road-5",
+        "cn-wuhan-sancenglou-5",
+        "cn-wuhan-jiyuqiao-5",
+        "cn-wuhan-tanhualin-and-wushengmen-5",
+        "cn-wuhan-simenkou-and-yellow-crane-tower-5",
+        "cn-wuhan-pengliuyang-5",
+        "cn-wuhan-fuxing-road-5",
+        "cn-wuhan-bapu-street-5",
+        "cn-wuhan-fenghuocun-5",
+        "cn-wuhan-zhangjiawan-5",
+        "cn-wuhan-guangxia-5",
+        "cn-wuhan-baisha-6th-road-5",
+        "cn-wuhan-hubei-university-of-chinese-mideicine-5",
+        "cn-wuhan-huangjiahu-wuhan-university-of-sci-and-tech-5",
+        "cn-wuhan-hongxia-5"
+      ],
+      "origin_stop_id": "cn-wuhan-east-square-of-wuhan-railway-station-5",
+      "terminal_stop_id": "cn-wuhan-hongxia-5",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通5号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往红霞方向",
+        "origin_name": "武汉站东广场",
+        "terminal_name": "红霞",
+        "line_short_name": "5",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-5-pattern-hongxia-5-to-east-square-of-wuhan-railway-station-5"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-5-pattern-hongxia-5-to-east-square-of-wuhan-railway-station-5",
+      "line_id": "cn-wuhan-line-5",
+      "name": "5号线",
+      "names": {
+        "zh": "5号线",
+        "en": "Line 5"
+      },
+      "stop_ids": [
+        "cn-wuhan-hongxia-5",
+        "cn-wuhan-huangjiahu-wuhan-university-of-sci-and-tech-5",
+        "cn-wuhan-hubei-university-of-chinese-mideicine-5",
+        "cn-wuhan-baisha-6th-road-5",
+        "cn-wuhan-guangxia-5",
+        "cn-wuhan-zhangjiawan-5",
+        "cn-wuhan-fenghuocun-5",
+        "cn-wuhan-bapu-street-5",
+        "cn-wuhan-fuxing-road-5",
+        "cn-wuhan-pengliuyang-5",
+        "cn-wuhan-simenkou-and-yellow-crane-tower-5",
+        "cn-wuhan-tanhualin-and-wushengmen-5",
+        "cn-wuhan-jiyuqiao-5",
+        "cn-wuhan-sancenglou-5",
+        "cn-wuhan-sanjiao-road-5",
+        "cn-wuhan-xujiapeng-5",
+        "cn-wuhan-yangyuan-and-tiesiyuan-5",
+        "cn-wuhan-yujiatou-5",
+        "cn-wuhan-science-park-5",
+        "cn-wuhan-jianshe-2nd-road-5",
+        "cn-wuhan-heping-park-5",
+        "cn-wuhan-honggangcheng-5",
+        "cn-wuhan-qingyiju-5",
+        "cn-wuhan-gongrencun-5",
+        "cn-wuhan-wugang-5",
+        "cn-wuhan-changqian-5",
+        "cn-wuhan-east-square-of-wuhan-railway-station-5"
+      ],
+      "origin_stop_id": "cn-wuhan-hongxia-5",
+      "terminal_stop_id": "cn-wuhan-east-square-of-wuhan-railway-station-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通5号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往武汉站东广场方向",
+        "origin_name": "红霞",
+        "terminal_name": "武汉站东广场",
+        "line_short_name": "5",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-6-pattern-dongfeng-motor-corporation-6-to-xincheng-11th-road-6",
+      "line_id": "cn-wuhan-line-6",
+      "name": "6号线",
+      "names": {
+        "zh": "6号线",
+        "en": "Line 6"
+      },
+      "stop_ids": [
+        "cn-wuhan-dongfeng-motor-corporation-6",
+        "cn-wuhan-checheng-east-road-6",
+        "cn-wuhan-jiangcheng-boulevard-6",
+        "cn-wuhan-laoguancun-6",
+        "cn-wuhan-south-international-expo-center-6",
+        "cn-wuhan-north-international-expo-center-6",
+        "cn-wuhan-qianjincun-6",
+        "cn-wuhan-jiangang-6",
+        "cn-wuhan-maying-road-6",
+        "cn-wuhan-zhongjiacun-6",
+        "cn-wuhan-qintai-6",
+        "cn-wuhan-wusheng-road-6",
+        "cn-wuhan-hanzheng-street-6",
+        "cn-wuhan-liuduqiao-6",
+        "cn-wuhan-jianghan-road-6",
+        "cn-wuhan-dazhi-road-6",
+        "cn-wuhan-miaoli-road-6",
+        "cn-wuhan-xianggang-road-6",
+        "cn-wuhan-sanyanqiao-6",
+        "cn-wuhan-tangjiadun-6",
+        "cn-wuhan-shiqiao-6",
+        "cn-wuhan-yangchahu-6",
+        "cn-wuhan-changqing-huayuan-6",
+        "cn-wuhan-polytechnic-university-6",
+        "cn-wuhan-garden-expo-north-6",
+        "cn-wuhan-jinyinhu-6",
+        "cn-wuhan-jinyinhu-park-6",
+        "cn-wuhan-haikou-3rd-road-6",
+        "cn-wuhan-erya-road-6",
+        "cn-wuhan-five-rings-sports-center-6",
+        "cn-wuhan-matoutan-park-6",
+        "cn-wuhan-xincheng-11th-road-6"
+      ],
+      "origin_stop_id": "cn-wuhan-dongfeng-motor-corporation-6",
+      "terminal_stop_id": "cn-wuhan-xincheng-11th-road-6",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通6号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往新城十一路方向",
+        "origin_name": "东风公司",
+        "terminal_name": "新城十一路",
+        "line_short_name": "6",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-6-pattern-xincheng-11th-road-6-to-dongfeng-motor-corporation-6"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-6-pattern-xincheng-11th-road-6-to-dongfeng-motor-corporation-6",
+      "line_id": "cn-wuhan-line-6",
+      "name": "6号线",
+      "names": {
+        "zh": "6号线",
+        "en": "Line 6"
+      },
+      "stop_ids": [
+        "cn-wuhan-xincheng-11th-road-6",
+        "cn-wuhan-matoutan-park-6",
+        "cn-wuhan-five-rings-sports-center-6",
+        "cn-wuhan-erya-road-6",
+        "cn-wuhan-haikou-3rd-road-6",
+        "cn-wuhan-jinyinhu-park-6",
+        "cn-wuhan-jinyinhu-6",
+        "cn-wuhan-garden-expo-north-6",
+        "cn-wuhan-polytechnic-university-6",
+        "cn-wuhan-changqing-huayuan-6",
+        "cn-wuhan-yangchahu-6",
+        "cn-wuhan-shiqiao-6",
+        "cn-wuhan-tangjiadun-6",
+        "cn-wuhan-sanyanqiao-6",
+        "cn-wuhan-xianggang-road-6",
+        "cn-wuhan-miaoli-road-6",
+        "cn-wuhan-dazhi-road-6",
+        "cn-wuhan-jianghan-road-6",
+        "cn-wuhan-liuduqiao-6",
+        "cn-wuhan-hanzheng-street-6",
+        "cn-wuhan-wusheng-road-6",
+        "cn-wuhan-qintai-6",
+        "cn-wuhan-zhongjiacun-6",
+        "cn-wuhan-maying-road-6",
+        "cn-wuhan-jiangang-6",
+        "cn-wuhan-qianjincun-6",
+        "cn-wuhan-north-international-expo-center-6",
+        "cn-wuhan-south-international-expo-center-6",
+        "cn-wuhan-laoguancun-6",
+        "cn-wuhan-jiangcheng-boulevard-6",
+        "cn-wuhan-checheng-east-road-6",
+        "cn-wuhan-dongfeng-motor-corporation-6"
+      ],
+      "origin_stop_id": "cn-wuhan-xincheng-11th-road-6",
+      "terminal_stop_id": "cn-wuhan-dongfeng-motor-corporation-6",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通6号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往东风公司方向",
+        "origin_name": "新城十一路",
+        "terminal_name": "东风公司",
+        "line_short_name": "6",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-7-pattern-huangpi-plaza-7-to-qinglongshan-ditiexiaozhen-7",
+      "line_id": "cn-wuhan-line-7",
+      "name": "7号线",
+      "names": {
+        "zh": "7号线",
+        "en": "Line 7"
+      },
+      "stop_ids": [
+        "cn-wuhan-huangpi-plaza-7",
+        "cn-wuhan-baitai-road-7",
+        "cn-wuhan-qingzaicun-railway-industrial-base-7",
+        "cn-wuhan-hengdian-7",
+        "cn-wuhan-yufu-road-7",
+        "cn-wuhan-tianyang-avenue-7",
+        "cn-wuhan-tenglong-avenue-7",
+        "cn-wuhan-julong-boulevard-7",
+        "cn-wuhan-tangyunhai-road-7",
+        "cn-wuhan-machi-7",
+        "cn-wuhan-garden-expo-north-7",
+        "cn-wuhan-garden-expo-7",
+        "cn-wuhan-changmatou-7",
+        "cn-wuhan-wuhan-business-district-7",
+        "cn-wuhan-wangjiadun-east-7",
+        "cn-wuhan-qushuilou-7",
+        "cn-wuhan-xianggang-road-7",
+        "cn-wuhan-sanyang-road-7",
+        "cn-wuhan-xujiapeng-7",
+        "cn-wuhan-hubei-university-7",
+        "cn-wuhan-xinhe-street-7",
+        "cn-wuhan-pangxiejia-7",
+        "cn-wuhan-xiaodongmen-7",
+        "cn-wuhan-wuchang-railway-station-7",
+        "cn-wuhan-ruian-street-7",
+        "cn-wuhan-jianan-street-7",
+        "cn-wuhan-hubei-university-of-technology-7",
+        "cn-wuhan-banqiao-7",
+        "cn-wuhan-yezhihu-7",
+        "cn-wuhan-xinlucun-7",
+        "cn-wuhan-dahualing-7",
+        "cn-wuhan-jiangxiaketing-7",
+        "cn-wuhan-tanxinpei-park-7",
+        "cn-wuhan-beihua-street-7",
+        "cn-wuhan-zhifang-avenue-7",
+        "cn-wuhan-qinglongshan-ditiexiaozhen-7"
+      ],
+      "origin_stop_id": "cn-wuhan-huangpi-plaza-7",
+      "terminal_stop_id": "cn-wuhan-qinglongshan-ditiexiaozhen-7",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通7号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往青龙山地铁小镇方向",
+        "origin_name": "黄陂广场",
+        "terminal_name": "青龙山地铁小镇",
+        "line_short_name": "7",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-7-pattern-qinglongshan-ditiexiaozhen-7-to-huangpi-plaza-7",
+      "line_id": "cn-wuhan-line-7",
+      "name": "7号线",
+      "names": {
+        "zh": "7号线",
+        "en": "Line 7"
+      },
+      "stop_ids": [
+        "cn-wuhan-qinglongshan-ditiexiaozhen-7",
+        "cn-wuhan-zhifang-avenue-7",
+        "cn-wuhan-beihua-street-7",
+        "cn-wuhan-tanxinpei-park-7",
+        "cn-wuhan-jiangxiaketing-7",
+        "cn-wuhan-dahualing-7",
+        "cn-wuhan-xinlucun-7",
+        "cn-wuhan-yezhihu-7",
+        "cn-wuhan-banqiao-7",
+        "cn-wuhan-hubei-university-of-technology-7",
+        "cn-wuhan-jianan-street-7",
+        "cn-wuhan-ruian-street-7",
+        "cn-wuhan-wuchang-railway-station-7",
+        "cn-wuhan-xiaodongmen-7",
+        "cn-wuhan-pangxiejia-7",
+        "cn-wuhan-xinhe-street-7",
+        "cn-wuhan-hubei-university-7",
+        "cn-wuhan-xujiapeng-7",
+        "cn-wuhan-sanyang-road-7",
+        "cn-wuhan-xianggang-road-7",
+        "cn-wuhan-qushuilou-7",
+        "cn-wuhan-wangjiadun-east-7",
+        "cn-wuhan-wuhan-business-district-7",
+        "cn-wuhan-changmatou-7",
+        "cn-wuhan-garden-expo-7",
+        "cn-wuhan-garden-expo-north-7",
+        "cn-wuhan-machi-7",
+        "cn-wuhan-tangyunhai-road-7",
+        "cn-wuhan-julong-boulevard-7",
+        "cn-wuhan-tenglong-avenue-7",
+        "cn-wuhan-tianyang-avenue-7",
+        "cn-wuhan-yufu-road-7",
+        "cn-wuhan-hengdian-7",
+        "cn-wuhan-qingzaicun-railway-industrial-base-7",
+        "cn-wuhan-baitai-road-7",
+        "cn-wuhan-huangpi-plaza-7"
+      ],
+      "origin_stop_id": "cn-wuhan-qinglongshan-ditiexiaozhen-7",
+      "terminal_stop_id": "cn-wuhan-huangpi-plaza-7",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通7号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往黄陂广场方向",
+        "origin_name": "青龙山地铁小镇",
+        "terminal_name": "黄陂广场",
+        "line_short_name": "7",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-7-pattern-huangpi-plaza-7-to-qinglongshan-ditiexiaozhen-7"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-8-pattern-jintan-road-8-to-military-athletes-village-8",
+      "line_id": "cn-wuhan-line-8",
+      "name": "8号线",
+      "names": {
+        "zh": "8号线",
+        "en": "Line 8"
+      },
+      "stop_ids": [
+        "cn-wuhan-jintan-road-8",
+        "cn-wuhan-hongtu-boulevard-8",
+        "cn-wuhan-tazihu-8",
+        "cn-wuhan-zhongyi-road-8",
+        "cn-wuhan-zhuyeshan-8",
+        "cn-wuhan-zhaojiatiao-8",
+        "cn-wuhan-huangpu-road-8",
+        "cn-wuhan-xujiapeng-8",
+        "cn-wuhan-xudong-8",
+        "cn-wuhan-wangjiadun-8",
+        "cn-wuhan-yuejiazui-8",
+        "cn-wuhan-liyuan-8",
+        "cn-wuhan-hubei-provincial-museum-and-hubei-daily-8",
+        "cn-wuhan-zhongnan-hospital-8",
+        "cn-wuhan-shuiguohu-8",
+        "cn-wuhan-hongshan-road-8",
+        "cn-wuhan-xiaohongshan-8",
+        "cn-wuhan-jiedaokou-8",
+        "cn-wuhan-mafangshan-8",
+        "cn-wuhan-wenzhi-street-8",
+        "cn-wuhan-wenchang-road-8",
+        "cn-wuhan-hubei-academy-of-agricultural-sciences-8",
+        "cn-wuhan-mahu-8",
+        "cn-wuhan-yezhihu-8",
+        "cn-wuhan-huangjiahu-ditiexiaozhen-8",
+        "cn-wuhan-military-athletes-village-8"
+      ],
+      "origin_stop_id": "cn-wuhan-jintan-road-8",
+      "terminal_stop_id": "cn-wuhan-military-athletes-village-8",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通8号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往军运村方向",
+        "origin_name": "金潭路",
+        "terminal_name": "军运村",
+        "line_short_name": "8",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-wuhan-line-8-pattern-military-athletes-village-8-to-jintan-road-8",
+      "line_id": "cn-wuhan-line-8",
+      "name": "8号线",
+      "names": {
+        "zh": "8号线",
+        "en": "Line 8"
+      },
+      "stop_ids": [
+        "cn-wuhan-military-athletes-village-8",
+        "cn-wuhan-huangjiahu-ditiexiaozhen-8",
+        "cn-wuhan-yezhihu-8",
+        "cn-wuhan-mahu-8",
+        "cn-wuhan-hubei-academy-of-agricultural-sciences-8",
+        "cn-wuhan-wenchang-road-8",
+        "cn-wuhan-wenzhi-street-8",
+        "cn-wuhan-mafangshan-8",
+        "cn-wuhan-jiedaokou-8",
+        "cn-wuhan-xiaohongshan-8",
+        "cn-wuhan-hongshan-road-8",
+        "cn-wuhan-shuiguohu-8",
+        "cn-wuhan-zhongnan-hospital-8",
+        "cn-wuhan-hubei-provincial-museum-and-hubei-daily-8",
+        "cn-wuhan-liyuan-8",
+        "cn-wuhan-yuejiazui-8",
+        "cn-wuhan-wangjiadun-8",
+        "cn-wuhan-xudong-8",
+        "cn-wuhan-xujiapeng-8",
+        "cn-wuhan-huangpu-road-8",
+        "cn-wuhan-zhaojiatiao-8",
+        "cn-wuhan-zhuyeshan-8",
+        "cn-wuhan-zhongyi-road-8",
+        "cn-wuhan-tazihu-8",
+        "cn-wuhan-hongtu-boulevard-8",
+        "cn-wuhan-jintan-road-8"
+      ],
+      "origin_stop_id": "cn-wuhan-military-athletes-village-8",
+      "terminal_stop_id": "cn-wuhan-jintan-road-8",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "wuhanrt-helios",
+          "id": "轨道交通8号线"
+        }
+      ],
+      "extras": {
+        "direction_title": "往金潭路方向",
+        "origin_name": "军运村",
+        "terminal_name": "金潭路",
+        "line_short_name": "8",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-wuhan-line-8-pattern-jintan-road-8-to-military-athletes-village-8"
+      }
+    }
+  ]
+}

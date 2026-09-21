@@ -1,0 +1,132 @@
+{
+  "id": "cn-wuhan",
+  "name": "武汉地铁",
+  "names": {
+    "zh": "武汉地铁",
+    "en": "Wuhan Metro"
+  },
+  "city": {
+    "id": "CN-4201",
+    "name": {
+      "zh": "武汉",
+      "en": "Wuhan"
+    },
+    "country": "CN",
+    "population": 13739000,
+    "area": 8569,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        114.3055,
+        30.5928
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑与官方站码来自武汉地铁官网 helios 接线图/站点接口；首末班来自官网运营时刻表栏目文章（工作日为主，2号线含分日型）；坐标与英文名来自官网线网图所用 AMap Subway 数据。12号线由武汉轨道交通十二号线建设运营有限公司运营。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 289,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 289,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 322,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 322
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 72,
+        "derived": 28,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 612,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 335,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 83232,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}
