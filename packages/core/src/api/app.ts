@@ -200,8 +200,8 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
             },
             servers: [
               {
-                url: 'https://openmetro.phi.zone',
-                description: 'Production (Cloudflare Worker)'
+                url: 'https://openmetro.vercel.app',
+                description: 'Production (Vercel)'
               },
               { url: 'http://localhost:8790', description: 'Local development' }
             ],

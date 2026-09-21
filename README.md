@@ -16,7 +16,7 @@ packages/
     cn-guangzhou/
     ...
   client/     # typed Eden Treaty client generated from the API app type
-  api-worker/ # Cloudflare Worker build of the API
+  api-worker/ # shared canonical JSON bundle module used by the Vercel API function
   web/        # SvelteKit demo frontend (Svelte 5 + Tailwind 4 + MapLibre GL)
 data/
   <network-id>/
@@ -403,46 +403,30 @@ compared against a release.
 - `release.yml` — release bundle when release inputs change and artifacts
   differ from the latest release; also force-pushes the typed client onto the
   `client` branch (below).
-- `deploy-workers.yml` / `deploy-pages.yml` — deploy on push to `main`
-  (path-filtered) and on manual dispatch (below).
 
-## Deployment (Cloudflare)
+## Deployment (Vercel)
 
 Live:
 
-- API — <https://openmetro.phi.zone/api> (OpenAPI at `/swagger`)
-- Frontend — <https://openmetro.phi.zone>
+- Site + API — <https://openmetro.vercel.app> (OpenAPI at `/swagger`)
 
-The API runs as a Cloudflare Worker (`packages/api-worker`) and the demo as a
-Cloudflare Pages static site (`packages/web`). Both use the same `createApiApp`
-over a pluggable data source: Node/Bun reads `data/` from disk, the Worker gets
-the canonical JSON bundled at build time (no filesystem at the edge).
+Frontend (`packages/web`, SvelteKit static) and API (`api/index.ts` →
+`createApiApp`) ship in **one Vercel project**, same origin. Canonical JSON is
+generated at build time into `packages/api-worker/src/data.generated.ts` and
+bundled into the Node function (no filesystem required at runtime).
+
+Vercel Git integration deploys on push to `main` using `vercel.json`
+(`installCommand` / `buildCommand` / `outputDirectory`). No GitHub Actions
+deploy workflow is required.
 
 ```bash
-# API worker (local workerd, no account needed)
-bun run worker:dev            # http://127.0.0.1:8787
-bun run worker:build          # dry-run bundle (size check)
+# Local frontend against local API
+bun run api                      # http://127.0.0.1:8790
+VITE_API_URL=http://127.0.0.1:8790 bun run web:dev
 
-# Frontend (point it at a running API)
-VITE_API_URL=http://127.0.0.1:8787 bun run web:build
-
-# Deploy (needs CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID)
-# Pages project names are globally unique (*.pages.dev) — set yours first:
-export PAGES_PROJECT=your-unique-pages-project
-bun run worker:deploy
-bun run web:deploy
+# Production deploy (optional manual path; needs vercel login)
+bun run vercel:deploy
 ```
 
-CI/CD: `.github/workflows/deploy-workers.yml` and `deploy-pages.yml` deploy on
-push to `main` (path-filtered) and on manual dispatch; see **CI/CD** above for
-the full workflow list.
-
-Required repository secrets:
-
-- `CLOUDFLARE_API_TOKEN` — Workers Scripts:Edit + Cloudflare Pages:Edit
-- `CLOUDFLARE_ACCOUNT_ID` — the target account id
-
-Required repository variables:
-
-- `PAGES_PROJECT` — Cloudflare Pages project name (globally unique); used by
-  `deploy-pages.yml` and `packages/web` deploy
+Cloudflare Workers/Pages configs and deploy workflows that used to live here were
+moved out of this repo (historical copies kept outside the tree).

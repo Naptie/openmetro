@@ -1,6 +1,0 @@
-# Committed without `name` on purpose: Pages project names are globally
-# unique (*.pages.dev) and wrangler does not expand env vars in `name`.
-# `bun run web:deploy` (scripts/deploy.ts) writes PAGES_PROJECT here for
-# the deploy, then restores this file.
-pages_build_output_dir = "build"
-compatibility_date = "2025-06-27"

@@ -5,13 +5,14 @@ import type { NetworkSource, RawNetworkFiles } from './source.js';
 import type { NetworkData } from './types.js';
 
 /**
- * In-memory network source. Used by runtimes without a filesystem (e.g. the
- * Cloudflare Worker), where the canonical JSON is bundled at build time.
+ * In-memory network source. Used by runtimes where loading files at request
+ * time is awkward (e.g. the Vercel function), where the canonical JSON is
+ * bundled at build time.
  *
  * Decoded results are cached per network id for the lifetime of the isolate.
  * Effect Schema validation of the full dataset is expensive (hundreds of ms
- * of CPU on Workers); without this cache every request re-pays that cost and
- * Free-plan Workers die with Error 1102 (`exceededResources`).
+ * of CPU); without this cache every request re-pays that cost. Bundled-data
+ * serverless runtimes should keep this per-isolate cache.
  */
 export function createMemoryNetworkSource(files: Record<string, RawNetworkFiles>): NetworkSource {
   const ids = Object.keys(files).sort();

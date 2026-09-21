@@ -33,9 +33,6 @@ jobs:
       - name: Check generated client schemas are current
         run: bun run client:schemas --check
 
-      - name: Build Cloudflare Worker bundle (dry run)
-        run: bun run worker:build
-
       - name: Typecheck
         run: bun run typecheck
 

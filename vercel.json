@@ -1,0 +1,49 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "bun install",
+  "buildCommand": "bun run scripts/build-worker-data.ts && bun run --cwd packages/web build",
+  "outputDirectory": "packages/web/build",
+  "functions": {
+    "api/index.ts": {
+      "maxDuration": 60,
+      "includeFiles": "data/**"
+    },
+    "api/[[...path]].ts": {
+      "maxDuration": 60,
+      "includeFiles": "data/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/swagger",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/swagger/:path*",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/json",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/openapi.json",
+      "destination": "/api/index"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    }
+  ]
+}

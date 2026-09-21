@@ -2,7 +2,9 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "noEmit": true,
-    "types": ["@cloudflare/workers-types"]
+    "resolveJsonModule": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
   },
   "include": ["src"]
 }
