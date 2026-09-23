@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-hangzhou",
-  "generated_at": "2026-09-21T08:46:41.189Z",
+  "generated_at": "2026-09-22T19:30:48.989Z",
   "source": [],
   "records": [
     {
@@ -19,7 +19,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-aoti-zhongxin-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-expo-center-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 0.991,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-aoti-zhongxin-7-cn-hangzhou-xingyi-7",
@@ -35,7 +39,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-aoti-zhongxin-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-xingyi-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 1.433,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-asian-games-village-6-cn-hangzhou-sanbao-6",
@@ -51,7 +59,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-asian-games-village-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-sanbao-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 2.125,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-babaili-16-cn-hangzhou-qingshanhu-16",
@@ -62,8 +74,18 @@
       "to_station_id": "cn-hangzhou-qingshanhu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 2.092,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 225,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-baiyang-2-cn-hangzhou-jinjiadu-2",
@@ -79,7 +101,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-baiyang-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-jinjiadu-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.708,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-baoshan-bridge-5-cn-hangzhou-north-jianguo-road-5",
@@ -95,7 +121,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-baoshan-bridge-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-north-jianguo-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 0.81,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-beida-bridge-10-cn-hangzhou-cuibai-road-10",
@@ -111,7 +141,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-beida-bridge-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-cuibai-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 1.461,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-binhe-road-1-cn-hangzhou-jiangling-road-1",
@@ -127,7 +161,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-binhe-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-jiangling-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.055,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-binkang-road-1-cn-hangzhou-xixing-1",
@@ -143,7 +181,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-binkang-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-xixing-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.086,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-binkang-road-5-cn-hangzhou-boao-road-5",
@@ -159,7 +201,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-binkang-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-boao-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.276,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-boao-road-5-cn-hangzhou-jinji-road-5",
@@ -175,7 +221,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-boao-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-jinji-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 0.891,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-cangbeicun-8-cn-hangzhou-middle-qingliu-road-8",
@@ -191,7 +241,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-cangbeicun-8-to-cn-hangzhou-south-wenhai-road-mm688w",
         "cn-hangzhou-cn-hangzhou-middle-qingliu-road-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ]
+      ],
+      "distance_km": 1.618,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-cangqian-campus-hangzhou-normal-university-5-cn-hangzhou-yongfu-5",
@@ -207,7 +261,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-cangqian-campus-hangzhou-normal-university-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-yongfu-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.002,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-caojiaqiao-2-cn-hangzhou-chaoyang-2",
@@ -218,8 +276,18 @@
       "to_station_id": "cn-hangzhou-chaoyang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.369,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 30.4
+      },
+      "travel_time_seconds": 162,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_30_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-changhe-5-cn-hangzhou-jucai-road-5",
@@ -235,7 +303,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-changhe-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-jucai-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.713,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-changhe-6-cn-hangzhou-jianghan-road-6",
@@ -251,7 +323,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-changhe-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-jianghan-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.226,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chaowang-road-3-cn-hangzhou-xiangji-temple-3",
@@ -267,7 +343,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chaowang-road-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-xiangji-temple-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.441,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chengxing-road-4-cn-hangzhou-jinjiang-4",
@@ -283,7 +363,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chengxing-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-jinjiang-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.317,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chengye-road-6-cn-hangzhou-jianye-road-6",
@@ -299,7 +383,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chengye-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-jianye-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 0.937,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chengzhan-1-cn-hangzhou-dingan-road-1",
@@ -315,7 +403,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chengzhan-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-dingan-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.26,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chengzhan-5-cn-hangzhou-jiangcheng-road-5",
@@ -331,7 +423,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chengzhan-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-jiangcheng-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 0.712,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chihua-street-4-cn-hangzhou-jinjiadu-4",
@@ -347,7 +443,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chihua-street-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-jinjiadu-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.955,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chuangjing-road-19-cn-hangzhou-haichuangyuan-19",
@@ -363,7 +463,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chuangjing-road-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-haichuangyuan-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 2.182,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chuangjing-road-5-cn-hangzhou-liangmu-road-5",
@@ -379,7 +483,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chuangjing-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-liangmu-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.229,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chuangming-road-3-cn-hangzhou-lvting-lu-3",
@@ -390,8 +498,18 @@
       "to_station_id": "cn-hangzhou-lvting-lu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.071,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 31.8
+      },
+      "travel_time_seconds": 121,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_32_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chuyun-road-4-cn-hangzhou-pingan-bridge-4",
@@ -407,7 +525,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-chuyun-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-pingan-bridge-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.538,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-citizen-center-4-cn-hangzhou-chengxing-road-4",
@@ -423,7 +545,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-citizen-center-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-chengxing-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 0.705,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-citizen-center-7-cn-hangzhou-aoti-zhongxin-7",
@@ -439,7 +565,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-citizen-center-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-aoti-zhongxin-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 3.113,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-coach-center-1-cn-hangzhou-west-xiasha-1",
@@ -455,7 +585,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-coach-center-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-west-xiasha-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 3.238,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-coach-center-9-cn-hangzhou-jiumu-road-9",
@@ -471,7 +605,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-coach-center-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-jiumu-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 0.95,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-cuibai-road-10-cn-hangzhou-xueyuan-road-10",
@@ -487,7 +625,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-cuibai-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-xueyuan-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 0.836,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-daguan-3-cn-hangzhou-shanxian-3",
@@ -503,7 +645,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-daguan-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-shanxian-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.541,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-datieguan-1-cn-hangzhou-zhalongkou-1",
@@ -519,7 +665,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-datieguan-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-zhalongkou-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.516,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-datieguan-5-cn-hangzhou-baoshan-bridge-5",
@@ -535,7 +685,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-datieguan-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-baoshan-bridge-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.545,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-dingan-road-1-cn-hangzhou-longxiangqiao-1",
@@ -551,7 +705,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-dingan-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-longxiangqiao-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.029,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-dongxinyuan-5-cn-hangzhou-hangyang-5",
@@ -567,7 +725,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-dongxinyuan-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-hangyang-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.452,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-dongyue-3-cn-hangzhou-gudun-road-3",
@@ -583,7 +745,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-dongyue-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-gudun-road-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.247,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-ducheng-shengtaigongyuan-4-cn-hangzhou-wujiajiaogang-4",
@@ -599,7 +765,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-ducheng-shengtaigongyuan-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-wujiajiaogang-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.013,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-dufucun-2-cn-hangzhou-baiyang-2",
@@ -615,7 +785,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-dufucun-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-baiyang-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.797,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-dujiaqiao-10-cn-hangzhou-huayuangang-10",
@@ -631,7 +805,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-dujiaqiao-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-huayuangang-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 1.053,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-dunxiang-street-2-cn-hangzhou-sandun-2",
@@ -647,7 +825,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-dunxiang-street-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-sandun-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.394,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-east-gongchen-bridge-5-cn-hangzhou-shanxian-5",
@@ -663,7 +845,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-east-gongchen-bridge-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-shanxian-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.217,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-east-railway-station-1-cn-hangzhou-pengbu-1",
@@ -679,7 +865,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-east-railway-station-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-pengbu-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.084,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-east-railway-station-4-cn-hangzhou-xinfeng-4",
@@ -695,7 +885,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-east-railway-station-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-xinfeng-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 0.632,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-east-railway-station-east-square-6-cn-hangzhou-goujulong-6",
@@ -706,8 +900,18 @@
       "to_station_id": "cn-hangzhou-goujulong",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "distance_km": 1.203,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 36.2
+      },
       "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_36_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-east-safari-park-6-cn-hangzhou-yinhu-6",
@@ -723,7 +927,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-east-safari-park-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-yinhu-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 1.486,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-expo-center-6-cn-hangzhou-qianjiang-century-city-6",
@@ -739,7 +947,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-expo-center-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-qianjiang-century-city-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.168,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-feihong-road-2-cn-hangzhou-zhenning-road-2",
@@ -755,7 +967,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-feihong-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-zhenning-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.579,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fengbei-6-cn-hangzhou-asian-games-village-6",
@@ -771,7 +987,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-fengbei-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-asian-games-village-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 0.892,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fengloucun-8-cn-hangzhou-cangbeicun-8",
@@ -787,7 +1007,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-fengloucun-8-to-cn-hangzhou-south-wenhai-road-mm688w",
         "cn-hangzhou-cn-hangzhou-cangbeicun-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ]
+      ],
+      "distance_km": 1.312,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fengqi-road-1-cn-hangzhou-wulin-square-1",
@@ -803,7 +1027,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-fengqi-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-wulin-square-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 0.965,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fengqi-road-2-cn-hangzhou-north-zhonghe-road-2",
@@ -819,7 +1047,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-fengqi-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-north-zhonghe-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 0.922,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fengtan-road-2-cn-hangzhou-gucui-road-2",
@@ -835,7 +1067,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-fengtan-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-gucui-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 0.797,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fengxin-road-16-cn-hangzhou-yuhang-road-16",
@@ -846,8 +1082,18 @@
       "to_station_id": "cn-hangzhou-yuhang-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.797,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 193,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fuxing-road-4-cn-hangzhou-shuichengqiao-4",
@@ -863,7 +1109,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-fuxing-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-shuichengqiao-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.3,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fuyang-coach-center-6-cn-hangzhou-gaoqiao-6",
@@ -879,7 +1129,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-fuyang-coach-center-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-gaoqiao-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 1.884,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gangcheng-avenue-1-cn-hangzhou-nanyang-1",
@@ -895,7 +1149,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gangcheng-avenue-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-nanyang-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 0.992,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gaojiao-road-3-cn-hangzhou-liansheng-road-3",
@@ -911,7 +1169,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gaojiao-road-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-liansheng-road-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.264,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gaoqiao-6-cn-hangzhou-yangbeihu-6",
@@ -927,7 +1189,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gaoqiao-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-yangbeihu-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 1.464,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gaosha-road-1-cn-hangzhou-wenze-road-1",
@@ -943,7 +1209,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gaosha-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-wenze-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.408,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gaotingba-4-cn-hangzhou-xintiandi-street-4",
@@ -959,7 +1229,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gaotingba-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-xintiandi-street-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.248,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gengwen-road-19-cn-hangzhou-pinglan-road-19",
@@ -975,7 +1249,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gengwen-road-19-to-cn-hangzhou-west-railway-station-1ph41ot",
         "cn-hangzhou-cn-hangzhou-pinglan-road-19-to-cn-hangzhou-west-railway-station-1ph41ot"
-      ]
+      ],
+      "distance_km": 4.681,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gexiang-5-cn-hangzhou-chuangjing-road-5",
@@ -991,7 +1269,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gexiang-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-chuangjing-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 0.866,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gongshang-university-yunbin-8-cn-hangzhou-south-wenhai-road-8",
@@ -1007,7 +1289,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gongshang-university-yunbin-8-to-cn-hangzhou-south-wenhai-road-mm688w",
         "cn-hangzhou-cn-hangzhou-south-wenhai-road-8-to-cn-hangzhou-xinwan-road-1if2nix"
-      ]
+      ],
+      "distance_km": 1.724,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gongwang-street-6-cn-hangzhou-west-guihua-road-6",
@@ -1018,8 +1304,18 @@
       "to_station_id": "cn-hangzhou-west-guihua-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.904,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 36.2
+      },
+      "travel_time_seconds": 189,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_36_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-guanyintang-7-cn-hangzhou-citizen-center-7",
@@ -1035,7 +1331,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-guanyintang-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-citizen-center-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 0.956,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gucui-road-2-cn-hangzhou-xueyuan-road-2",
@@ -1051,7 +1351,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gucui-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-xueyuan-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.121,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gudang-3-cn-hangzhou-huanglong-sports-center-3",
@@ -1067,7 +1371,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gudang-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-huanglong-sports-center-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 0.773,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gudang-xincun-3-cn-hangzhou-gudang-3",
@@ -1083,7 +1391,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gudang-xincun-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-gudang-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.085,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-gudun-road-3-cn-hangzhou-gudang-xincun-3",
@@ -1099,7 +1411,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-gudun-road-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-gudang-xincun-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.016,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-haichuangyuan-19-cn-hangzhou-jingchang-lu-19",
@@ -1115,7 +1431,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-haichuangyuan-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-jingchang-lu-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 2.299,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hangfachang-2-cn-hangzhou-renmin-road-2",
@@ -1131,7 +1451,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hangfachang-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-renmin-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.273,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hangxing-road-10-cn-hangzhou-xiangyuan-road-10",
@@ -1147,7 +1471,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hangxing-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-xiangyuan-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 1.875,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hangxing-road-4-cn-hangzhou-chuyun-road-4",
@@ -1163,7 +1491,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hangxing-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-chuyun-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.324,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hangyang-5-cn-hangzhou-datieguan-5",
@@ -1179,7 +1511,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hangyang-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-datieguan-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.144,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hangzhou-grand-convention-and-exhibition-center-1-cn-hangzhou-gangcheng-avenue-1",
@@ -1195,7 +1531,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hangzhou-grand-convention-and-exhibition-center-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-gangcheng-avenue-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.294,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-haoyun-street-4-cn-hangzhou-hangxing-road-4",
@@ -1211,7 +1551,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-haoyun-street-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-hangxing-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.431,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hehuan-road-7-cn-hangzhou-yingzhong-7",
@@ -1227,7 +1571,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hehuan-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-yingzhong-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 1.863,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hemu-10-cn-hangzhou-beida-bridge-10",
@@ -1243,7 +1591,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hemu-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-beida-bridge-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 1.16,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hemu-5-cn-hangzhou-the-grand-canal-5",
@@ -1259,7 +1611,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hemu-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-the-grand-canal-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.657,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-heyu-road-9-cn-hangzhou-qiushan-avenue-9",
@@ -1275,7 +1631,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-heyu-road-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-qiushan-avenue-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.795,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hezhuang-road-8-cn-hangzhou-qiaotoubao-8",
@@ -1291,7 +1651,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hezhuang-road-8-to-cn-hangzhou-south-wenhai-road-mm688w",
         "cn-hangzhou-cn-hangzhou-qiaotoubao-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ]
+      ],
+      "distance_km": 2.424,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-hongyuan-3-cn-hangzhou-south-xixi-wetland-3",
@@ -1307,7 +1671,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-hongyuan-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-south-xixi-wetland-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.259,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-houchaomen-5-cn-hangzhou-nanxingqiao-5",
@@ -1323,7 +1691,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-houchaomen-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-nanxingqiao-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.118,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-huafeng-road-3-cn-hangzhou-tongxie-road-3",
@@ -1339,7 +1711,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-huafeng-road-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-tongxie-road-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 0.865,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-huahe-street-3-cn-hangzhou-dingqiao-3",
@@ -1355,7 +1731,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-huahe-street-3-to-cn-hangzhou-shima-y0ozv5",
         "cn-hangzhou-cn-hangzhou-dingqiao-3-to-cn-hangzhou-shima-y0ozv5"
-      ]
+      ],
+      "distance_km": 1.653,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-huangheshan-3-cn-hangzhou-huahe-street-3",
@@ -1371,7 +1751,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-huangheshan-3-to-cn-hangzhou-shima-y0ozv5",
         "cn-hangzhou-cn-hangzhou-huahe-street-3-to-cn-hangzhou-shima-y0ozv5"
-      ]
+      ],
+      "distance_km": 1.439,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-huanglong-cave-3-cn-hangzhou-wulinmen-3",
@@ -1387,7 +1771,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-huanglong-cave-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-wulinmen-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.51,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-huanglong-sports-center-3-cn-hangzhou-huanglong-cave-3",
@@ -1403,7 +1791,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-huanglong-sports-center-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-huanglong-cave-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.06,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-huawu-3-cn-hangzhou-dongyue-3",
@@ -1419,7 +1811,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-huawu-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-dongyue-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.24,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-huayuangang-10-cn-hangzhou-hemu-10",
@@ -1435,7 +1831,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-huayuangang-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-hemu-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 1.007,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-huxiaoxing-6-cn-hangzhou-shouxiang-6",
@@ -1451,7 +1851,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-huxiaoxing-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-shouxiang-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 1.395,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiangcheng-road-5-cn-hangzhou-houchaomen-5",
@@ -1467,7 +1871,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiangcheng-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-houchaomen-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.419,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiangcheng-road-7-cn-hangzhou-moyetang-7",
@@ -1483,7 +1891,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiangcheng-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-moyetang-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 1,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiangcun-5-cn-hangzhou-zijingang-campus-zhejiang-university-5",
@@ -1499,7 +1911,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiangcun-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-zijingang-campus-zhejiang-university-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 0.901,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jianghan-road-6-cn-hangzhou-jiangling-road-6",
@@ -1515,7 +1931,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jianghan-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-jiangling-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.313,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jianghehui-9-cn-hangzhou-qianjiang-road-9",
@@ -1531,7 +1951,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jianghehui-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-qianjiang-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 0.976,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jianghui-road-5-cn-hangzhou-binkang-road-5",
@@ -1547,7 +1971,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jianghui-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-binkang-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.804,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiangjin-road-4-cn-hangzhou-citizen-center-4",
@@ -1563,7 +1991,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiangjin-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-citizen-center-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 0.689,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiangling-road-1-cn-hangzhou-jinjiang-1",
@@ -1579,7 +2011,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiangling-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-jinjiang-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 3.02,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiangling-road-6-cn-hangzhou-xingmin-6",
@@ -1595,7 +2031,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiangling-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-xingmin-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 0.84,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jianqiao-old-street-4-cn-hangzhou-liming-4",
@@ -1611,7 +2051,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jianqiao-old-street-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-liming-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 0.943,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jianshesan-road-2-cn-hangzhou-jiansheyi-road-2",
@@ -1627,7 +2071,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jianshesan-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-jiansheyi-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.175,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jianshesan-road-7-cn-hangzhou-xinxing-road-7",
@@ -1643,7 +2091,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jianshesan-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-xinxing-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 2.589,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiansheyi-road-2-cn-hangzhou-peoples-square-2",
@@ -1659,7 +2111,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiansheyi-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-peoples-square-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.441,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jianye-road-6-cn-hangzhou-changhe-6",
@@ -1675,7 +2131,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jianye-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-changhe-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.643,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jinde-road-10-cn-hangzhou-hangxing-road-10",
@@ -1691,7 +2151,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jinde-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-hangxing-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 1.207,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jingchang-lu-19-cn-hangzhou-north-xixi-wetland-19",
@@ -1707,7 +2171,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jingchang-lu-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-north-xixi-wetland-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 2.601,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jingfang-4-cn-hangzhou-qianjiang-road-4",
@@ -1723,7 +2191,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jingfang-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-qianjiang-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.132,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jinji-road-5-cn-hangzhou-peoples-square-5",
@@ -1739,7 +2211,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jinji-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-peoples-square-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.29,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jinjiadu-2-cn-hangzhou-dunxiang-street-2",
@@ -1755,7 +2231,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jinjiadu-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-dunxiang-street-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 0.899,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jinjiadu-4-cn-hangzhou-haoyun-street-4",
@@ -1771,7 +2251,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jinjiadu-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-haoyun-street-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.978,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jinjiang-1-cn-hangzhou-wujiang-road-1",
@@ -1787,7 +2271,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jinjiang-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-wujiang-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 0.946,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jinjiang-4-cn-hangzhou-yongjiang-road-4",
@@ -1803,7 +2291,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jinjiang-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-yongjiang-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.045,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jinshahu-1-cn-hangzhou-gaosha-road-1",
@@ -1819,7 +2311,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jinshahu-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-gaosha-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 0.93,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jinxing-5-cn-hangzhou-lvting-lu-5",
@@ -1835,7 +2331,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jinxing-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-lvting-lu-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 2.511,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiubao-1-cn-hangzhou-coach-center-1",
@@ -1851,7 +2351,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiubao-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-coach-center-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.227,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiuhe-road-1-cn-hangzhou-jiubao-1",
@@ -1867,7 +2371,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiuhe-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-jiubao-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.349,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jiumu-road-9-cn-hangzhou-south-hongpu-road-9",
@@ -1883,7 +2391,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jiumu-road-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-south-hongpu-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.614,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-jucai-road-5-cn-hangzhou-jianghui-road-5",
@@ -1899,7 +2411,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-jucai-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-jianghui-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.312,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-kanshan-7-cn-hangzhou-xingang-7",
@@ -1915,7 +2431,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-kanshan-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-xingang-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 2.707,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-kehai-road-6-cn-hangzhou-xiaming-street-6",
@@ -1931,7 +2451,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-kehai-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-xiaming-street-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 2.022,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-liangmu-road-5-cn-hangzhou-cangqian-campus-hangzhou-normal-university-5",
@@ -1947,7 +2471,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-liangmu-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-cangqian-campus-hangzhou-normal-university-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-liangzhu-2-cn-hangzhou-dufucun-2",
@@ -1963,7 +2491,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-liangzhu-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-dufucun-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.429,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-liansheng-road-3-cn-hangzhou-hongyuan-3",
@@ -1979,7 +2511,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-liansheng-road-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-hongyuan-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.78,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-lianzhuang-4-cn-hangzhou-zhejiang-chinese-medical-university-4",
@@ -1995,7 +2531,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-lianzhuang-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-zhejiang-chinese-medical-university-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.32,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-liming-4-cn-hangzhou-mingshi-road-4",
@@ -2011,7 +2551,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-liming-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-mingshi-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.348,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-linan-square-16-cn-hangzhou-jiuzhou-street-16",
@@ -2022,8 +2566,18 @@
       "to_station_id": "cn-hangzhou-jiuzhou-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 3.01,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 323,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-linping-9-cn-hangzhou-nanyuan-9",
@@ -2039,7 +2593,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-linping-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-nanyuan-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.33,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-linpingnan-railway-station-9-cn-hangzhou-wengmei-9",
@@ -2055,7 +2613,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-linpingnan-railway-station-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-wengmei-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.935,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-liubao-9-cn-hangzhou-wubao-9",
@@ -2071,7 +2633,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-liubao-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-wubao-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.069,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-liuxia-3-cn-hangzhou-south-xixi-wetland-3",
@@ -2082,8 +2648,18 @@
       "to_station_id": "cn-hangzhou-south-xixi-wetland",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.701,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 31.8
+      },
+      "travel_time_seconds": 193,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_32_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-longan-9-cn-hangzhou-wuzhou-road-9",
@@ -2099,7 +2675,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-longan-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-wuzhou-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.363,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-longxiangqiao-1-cn-hangzhou-fengqi-road-1",
@@ -2115,7 +2695,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-longxiangqiao-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-fengqi-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.022,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-lvting-lu-16-cn-hangzhou-fengxin-road-16",
@@ -2126,8 +2710,18 @@
       "to_station_id": "cn-hangzhou-fengxin-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 2.23,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 239,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-lvting-lu-3-cn-hangzhou-quanfeng-3",
@@ -2143,7 +2737,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-lvting-lu-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-quanfeng-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 2.135,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-lvting-lu-5-cn-hangzhou-gexiang-5",
@@ -2159,7 +2757,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-lvting-lu-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-gexiang-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.308,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-middle-qingliu-road-7-cn-hangzhou-qicheng-road-7",
@@ -2175,7 +2777,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-middle-qingliu-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-qicheng-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 1.486,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-middle-qingliu-road-8-cn-hangzhou-qingxisan-road-8",
@@ -2191,7 +2797,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-middle-qingliu-road-8-to-cn-hangzhou-south-wenhai-road-mm688w",
         "cn-hangzhou-cn-hangzhou-qingxisan-road-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ]
+      ],
+      "distance_km": 1.357,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-middle-tonghui-road-5-cn-hangzhou-south-railway-station-5",
@@ -2207,7 +2817,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-middle-tonghui-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-south-railway-station-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.456,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-mingshi-road-4-cn-hangzhou-pengbu-4",
@@ -2223,7 +2837,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-mingshi-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-pengbu-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.117,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-mingxing-road-7-cn-hangzhou-jianshesan-road-7",
@@ -2239,7 +2857,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-mingxing-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-jianshesan-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 1.876,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-moyetang-7-cn-hangzhou-guanyintang-7",
@@ -2255,7 +2877,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-moyetang-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-guanyintang-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 1.46,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nan-hudong-5-cn-hangzhou-jinxing-5",
@@ -2271,7 +2897,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-nan-hudong-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-jinxing-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.958,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nanfeng-16-cn-hangzhou-qingshanhu-sci-tech-city-16",
@@ -2282,8 +2912,18 @@
       "to_station_id": "cn-hangzhou-qingshanhu-sci-tech-city",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 5.172,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 555,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nanhu-16-cn-hangzhou-nanfeng-16",
@@ -2294,8 +2934,18 @@
       "to_station_id": "cn-hangzhou-nanfeng",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 2.072,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 222,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nanxingqiao-4-cn-hangzhou-fuxing-road-4",
@@ -2311,7 +2961,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-nanxingqiao-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-fuxing-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.553,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nanxingqiao-5-cn-hangzhou-changhe-5",
@@ -2327,7 +2981,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-nanxingqiao-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-changhe-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 2.739,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nanyang-1-cn-hangzhou-xiangyang-road-1",
@@ -2343,7 +3001,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-nanyang-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-xiangyang-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.272,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nanyuan-9-cn-hangzhou-linpingnan-railway-station-9",
@@ -2359,7 +3021,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-nanyuan-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-linpingnan-railway-station-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.495,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-north-jianguo-road-2-cn-hangzhou-qingling-road-2",
@@ -2375,7 +3041,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-north-jianguo-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-qingling-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.412,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-north-jianguo-road-5-cn-hangzhou-wanan-bridge-5",
@@ -2391,7 +3061,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-north-jianguo-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-wanan-bridge-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.168,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-north-longzhou-road-3-cn-hangzhou-west-wenyi-road-3",
@@ -2407,7 +3081,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-north-longzhou-road-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-west-wenyi-road-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.471,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-north-xixi-wetland-19-cn-hangzhou-wulian-19",
@@ -2423,7 +3101,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-north-xixi-wetland-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-wulian-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 2.882,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-north-yucai-road-5-cn-hangzhou-middle-tonghui-road-5",
@@ -2439,7 +3121,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-north-yucai-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-middle-tonghui-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 0.701,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-north-zhonghe-road-2-cn-hangzhou-north-jianguo-road-2",
@@ -2455,7 +3141,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-north-zhonghe-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-north-jianguo-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 0.8,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-panshui-2-cn-hangzhou-caojiaqiao-2",
@@ -2471,7 +3161,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-panshui-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-caojiaqiao-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.519,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-pengbu-1-cn-hangzhou-qibao-1",
@@ -2487,7 +3181,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-pengbu-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-qibao-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.797,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-pengbu-4-cn-hangzhou-east-railway-station-4",
@@ -2503,7 +3201,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-pengbu-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-east-railway-station-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.084,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-peoples-square-2-cn-hangzhou-hangfachang-2",
@@ -2519,7 +3221,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-peoples-square-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-hangfachang-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.165,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-peoples-square-5-cn-hangzhou-north-yucai-road-5",
@@ -2535,7 +3241,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-peoples-square-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-north-yucai-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.067,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-pingan-bridge-4-cn-hangzhou-ducheng-shengtaigongyuan-4",
@@ -2551,7 +3261,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-pingan-bridge-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-ducheng-shengtaigongyuan-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.687,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-pingfeng-3-cn-hangzhou-liuxia-3",
@@ -2567,7 +3281,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-pingfeng-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-liuxia-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 2.471,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-pinglan-road-19-cn-hangzhou-yudao-19",
@@ -2583,7 +3301,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-pinglan-road-19-to-cn-hangzhou-west-railway-station-1ph41ot",
         "cn-hangzhou-cn-hangzhou-yudao-19-to-cn-hangzhou-west-railway-station-1ph41ot"
-      ]
+      ],
+      "distance_km": 2.647,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-pingshui-street-5-cn-hangzhou-hemu-5",
@@ -2599,7 +3321,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-pingshui-street-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-hemu-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 0.901,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qianjiang-century-city-2-cn-hangzhou-yingfeng-road-2",
@@ -2615,7 +3341,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qianjiang-century-city-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-yingfeng-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 0.858,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qianjiang-century-city-6-cn-hangzhou-fengbei-6",
@@ -2631,7 +3361,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qianjiang-century-city-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-fengbei-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.209,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qianjiang-road-2-cn-hangzhou-qianjiang-century-city-2",
@@ -2647,7 +3381,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qianjiang-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-qianjiang-century-city-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 3.454,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qianjiang-road-4-cn-hangzhou-jiangjin-road-4",
@@ -2663,7 +3401,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qianjiang-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-jiangjin-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 0.726,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qianjiang-road-9-cn-hangzhou-xinye-road-9",
@@ -2679,7 +3421,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qianjiang-road-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-xinye-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 0.877,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qiaosi-9-cn-hangzhou-south-qiaosi-9",
@@ -2695,7 +3441,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qiaosi-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-south-qiaosi-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 2.235,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qiaotoubao-8-cn-hangzhou-gongshang-university-yunbin-8",
@@ -2711,7 +3461,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qiaotoubao-8-to-cn-hangzhou-south-wenhai-road-mm688w",
         "cn-hangzhou-cn-hangzhou-gongshang-university-yunbin-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ]
+      ],
+      "distance_km": 3.865,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qibao-1-cn-hangzhou-jiuhe-road-1",
@@ -2727,7 +3481,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qibao-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-jiuhe-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.297,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qicheng-road-7-cn-hangzhou-jiangdonger-road-7",
@@ -2738,8 +3496,18 @@
       "to_station_id": "cn-hangzhou-jiangdonger-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.296,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 42
+      },
+      "travel_time_seconds": 111,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_42_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qilun-square-3-cn-hangzhou-huafeng-road-3",
@@ -2755,7 +3523,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qilun-square-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-huafeng-road-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.645,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qingchun-square-2-cn-hangzhou-qianjiang-road-2",
@@ -2771,7 +3543,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qingchun-square-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-qianjiang-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 0.849,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qingling-road-2-cn-hangzhou-qingchun-square-2",
@@ -2787,7 +3563,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qingling-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-qingchun-square-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.121,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qingshanhu-16-cn-hangzhou-zhejiang-aandf-university-16",
@@ -2798,8 +3578,18 @@
       "to_station_id": "cn-hangzhou-zhejiang-aandf-university",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 2.083,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 224,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qingshanhu-sci-tech-city-16-cn-hangzhou-babaili-16",
@@ -2810,8 +3600,18 @@
       "to_station_id": "cn-hangzhou-babaili",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 4.683,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 503,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qingxisan-road-8-cn-hangzhou-hezhuang-road-8",
@@ -2827,7 +3627,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qingxisan-road-8-to-cn-hangzhou-south-wenhai-road-mm688w",
         "cn-hangzhou-cn-hangzhou-hezhuang-road-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ]
+      ],
+      "distance_km": 1.99,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qiushan-avenue-9-cn-hangzhou-linping-9",
@@ -2843,7 +3647,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-qiushan-avenue-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-linping-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.772,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-quanfeng-3-cn-hangzhou-chuangming-road-3",
@@ -2854,8 +3662,18 @@
       "to_station_id": "cn-hangzhou-chuangming-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.621,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 31.8
+      },
+      "travel_time_seconds": 184,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_32_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-quanfeng-3-cn-hangzhou-gaojiao-road-3",
@@ -2871,7 +3689,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-quanfeng-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-gaojiao-road-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.171,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-renmin-road-2-cn-hangzhou-panshui-2",
@@ -2887,7 +3709,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-renmin-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-panshui-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.222,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-sanba-2-cn-hangzhou-wenxin-2",
@@ -2903,7 +3729,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-sanba-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-wenxin-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.198,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-sanba-5-cn-hangzhou-pingshui-street-5",
@@ -2919,7 +3749,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-sanba-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-pingshui-street-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.458,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-sanbao-6-cn-hangzhou-tanhuaan-road-6",
@@ -2935,7 +3769,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-sanbao-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-tanhuaan-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.172,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-sanbao-9-cn-hangzhou-jianghehui-9",
@@ -2951,7 +3789,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-sanbao-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-jianghehui-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 0.874,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-sandun-2-cn-hangzhou-xialongwei-2",
@@ -2967,7 +3809,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-sandun-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-xialongwei-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.206,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shanxian-3-cn-hangzhou-xintiandi-street-3",
@@ -2983,7 +3829,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-shanxian-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-xintiandi-street-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.863,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shanxian-5-cn-hangzhou-xiwen-stree-5",
@@ -2999,7 +3849,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-shanxian-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-xiwen-stree-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 0.905,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shentangqiao-19-cn-hangzhou-west-lake-cultural-square-19",
@@ -3015,7 +3869,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-shentangqiao-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-west-lake-cultural-square-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 1.482,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shentangqiao-2-cn-hangzhou-wulinmen-2",
@@ -3031,7 +3889,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-shentangqiao-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-wulinmen-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.265,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shima-3-cn-hangzhou-xiaoheshan-3",
@@ -3047,7 +3909,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-shima-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-xiaoheshan-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.127,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shouxiang-6-cn-hangzhou-fuyang-coach-center-6",
@@ -3063,7 +3929,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-shouxiang-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-fuyang-coach-center-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 2.607,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shuangpu-6-cn-hangzhou-kehai-road-6",
@@ -3079,7 +3949,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-shuangpu-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-kehai-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.541,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shuangqiao-5-cn-hangzhou-guniangqiao-5",
@@ -3090,8 +3964,18 @@
       "to_station_id": "cn-hangzhou-guniangqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 2.095,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 29.7
+      },
+      "travel_time_seconds": 254,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_30_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-shuichengqiao-4-cn-hangzhou-lianzhuang-4",
@@ -3107,7 +3991,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-shuichengqiao-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-lianzhuang-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.938,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-south-hongpu-road-9-cn-hangzhou-liubao-9",
@@ -3123,7 +4011,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-south-hongpu-road-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-liubao-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.375,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-south-huazhong-road-4-cn-hangzhou-jianqiao-old-street-4",
@@ -3139,7 +4031,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-south-huazhong-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-jianqiao-old-street-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.883,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-south-qiaosi-9-cn-hangzhou-coach-center-9",
@@ -3155,7 +4051,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-south-qiaosi-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-coach-center-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 2.128,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-south-railway-station-5-cn-hangzhou-shuangqiao-5",
@@ -3171,7 +4071,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-south-railway-station-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-shuangqiao-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.101,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-south-wenhai-road-1-cn-hangzhou-yunshui-1",
@@ -3187,7 +4091,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-south-wenhai-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-yunshui-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.108,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-south-xixi-wetland-3-cn-hangzhou-huawu-3",
@@ -3203,7 +4111,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-south-xixi-wetland-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-huawu-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.627,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-tangjiacun-3-cn-hangzhou-wushanqiancun-3",
@@ -3214,8 +4126,18 @@
       "to_station_id": "cn-hangzhou-wushanqiancun",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 0.674,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 31.8
+      },
+      "travel_time_seconds": 76,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_32_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-tangxinxian-7-cn-hangzhou-middle-qingliu-road-7",
@@ -3231,7 +4153,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-tangxinxian-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-middle-qingliu-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 1.596,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-tanhuaan-road-6-cn-hangzhou-yuanbaotang-6",
@@ -3247,7 +4173,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-tanhuaan-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-yuanbaotang-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 0.874,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-taohuahu-park-3-cn-hangzhou-dingqiao-3",
@@ -3263,7 +4193,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-taohuahu-park-3-to-cn-hangzhou-xingqiao-vkez6m",
         "cn-hangzhou-cn-hangzhou-dingqiao-3-to-cn-hangzhou-xingqiao-vkez6m"
-      ]
+      ],
+      "distance_km": 1.363,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-taoyuan-street-4-cn-hangzhou-gaotingba-4",
@@ -3279,7 +4213,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-taoyuan-street-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-gaotingba-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.375,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-the-grand-canal-5-cn-hangzhou-east-gongchen-bridge-5",
@@ -3295,7 +4233,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-the-grand-canal-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-east-gongchen-bridge-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.616,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-tongxie-road-3-cn-hangzhou-taohuahu-park-3",
@@ -3311,7 +4253,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-tongxie-road-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-taohuahu-park-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.2,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wanan-bridge-5-cn-hangzhou-chengzhan-5",
@@ -3327,7 +4273,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wanan-bridge-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-chengzhan-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.055,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-weiye-road-6-cn-hangzhou-chengye-road-6",
@@ -3343,7 +4293,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-weiye-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-chengye-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.159,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wengmei-9-cn-hangzhou-qiaosi-9",
@@ -3359,7 +4313,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wengmei-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-qiaosi-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 2.206,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wensan-road-10-cn-hangzhou-huanglong-sports-center-10",
@@ -3370,8 +4328,18 @@
       "to_station_id": "cn-hangzhou-huanglong-sports-center",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 0.964,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 28.7
+      },
+      "travel_time_seconds": 121,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_29_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wensan-road-19-cn-hangzhou-shentangqiao-19",
@@ -3387,7 +4355,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wensan-road-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-shentangqiao-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 1.979,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wenxin-2-cn-hangzhou-fengtan-road-2",
@@ -3403,7 +4375,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wenxin-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-fengtan-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.368,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wenze-road-1-cn-hangzhou-south-wenhai-road-1",
@@ -3419,7 +4395,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wenze-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-south-wenhai-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 2.402,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-fenghua-road-6-cn-hangzhou-zhipu-road-6",
@@ -3435,7 +4415,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-west-fenghua-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-zhipu-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 0.937,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-lake-cultural-square-1-cn-hangzhou-datieguan-1",
@@ -3451,7 +4435,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-west-lake-cultural-square-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-datieguan-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.248,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-lake-cultural-square-19-cn-hangzhou-yicheng-lu-19",
@@ -3467,7 +4455,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-west-lake-cultural-square-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-yicheng-lu-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 3.839,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-lake-cultural-square-3-cn-hangzhou-chaowang-road-3",
@@ -3483,7 +4475,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-west-lake-cultural-square-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-chaowang-road-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.362,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-railway-station-19-cn-hangzhou-chuangjing-road-19",
@@ -3499,7 +4495,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-west-railway-station-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-chuangjing-road-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 2.46,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-railway-station-3-cn-hangzhou-north-longzhou-road-3",
@@ -3515,7 +4515,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-west-railway-station-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-north-longzhou-road-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.137,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-railway-station-3-cn-hangzhou-tangjiacun-3",
@@ -3526,8 +4530,18 @@
       "to_station_id": "cn-hangzhou-tangjiacun",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 0.954,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 31.8
+      },
+      "travel_time_seconds": 108,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_32_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-wenyi-road-3-cn-hangzhou-lvting-lu-3",
@@ -3543,7 +4557,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-west-wenyi-road-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-lvting-lu-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.982,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-xiasha-1-cn-hangzhou-jinshahu-1",
@@ -3559,7 +4577,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-west-xiasha-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-jinshahu-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.268,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wubao-9-cn-hangzhou-yudao-9",
@@ -3575,7 +4597,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wubao-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-yudao-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 0.939,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wuchang-5-cn-hangzhou-jiangcun-5",
@@ -3591,7 +4617,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wuchang-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-jiangcun-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 2.163,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wujiajiaogang-4-cn-hangzhou-taoyuan-street-4",
@@ -3607,7 +4637,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wujiajiaogang-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-taoyuan-street-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.387,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wujiang-road-1-cn-hangzhou-chengzhan-1",
@@ -3623,7 +4657,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wujiang-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-chengzhan-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.301,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wulian-19-cn-hangzhou-wensan-road-19",
@@ -3639,7 +4677,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wulian-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a",
         "cn-hangzhou-cn-hangzhou-wensan-road-19-to-cn-hangzhou-east-railway-station-east-square-yz5g4a"
-      ]
+      ],
+      "distance_km": 2.965,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wulin-square-1-cn-hangzhou-west-lake-cultural-square-1",
@@ -3655,7 +4697,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wulin-square-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-west-lake-cultural-square-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 0.812,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wulin-square-3-cn-hangzhou-west-lake-cultural-square-3",
@@ -3671,7 +4717,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wulin-square-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-west-lake-cultural-square-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 0.812,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wulinmen-2-cn-hangzhou-fengqi-road-2",
@@ -3687,7 +4737,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wulinmen-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-fengqi-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 0.975,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wulinmen-3-cn-hangzhou-wulin-square-3",
@@ -3703,7 +4757,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wulinmen-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-wulin-square-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 0.911,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wushan-square-7-cn-hangzhou-jiangcheng-road-7",
@@ -3719,7 +4777,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wushan-square-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-jiangcheng-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 1.444,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wushanqiancun-3-cn-hangzhou-west-railway-station-3",
@@ -3735,7 +4797,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wushanqiancun-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-west-railway-station-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.618,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wuzhou-road-9-cn-hangzhou-heyu-road-9",
@@ -3751,7 +4817,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-wuzhou-road-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-heyu-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.306,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xialongwei-2-cn-hangzhou-sanba-2",
@@ -3767,7 +4837,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xialongwei-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-sanba-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.074,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiaming-street-6-cn-hangzhou-xiangshan-campus-china-academy-of-art-6",
@@ -3778,8 +4852,18 @@
       "to_station_id": "cn-hangzhou-xiangshan-campus-china-academy-of-art",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.181,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 36.2
+      },
+      "travel_time_seconds": 117,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_36_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xianghu-1-cn-hangzhou-binkang-road-1",
@@ -3795,7 +4879,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xianghu-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-binkang-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.839,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiangji-temple-3-cn-hangzhou-daguan-3",
@@ -3811,7 +4899,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiangji-temple-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-daguan-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 0.873,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiangshan-campus-china-academy-of-art-6-cn-hangzhou-west-fenghua-road-6",
@@ -3827,7 +4919,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiangshan-campus-china-academy-of-art-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-west-fenghua-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.711,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiangshan-campus-china-academy-of-art-6-cn-hangzhou-zhejiang-conservatory-of-music-6",
@@ -3843,7 +4939,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiangshan-campus-china-academy-of-art-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-zhejiang-conservatory-of-music-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 2.277,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiangyang-road-1-cn-hangzhou-xiaoshan-international-airport-1",
@@ -3854,8 +4954,18 @@
       "to_station_id": "cn-hangzhou-xiaoshan-international-airport",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 2.899,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 32.6
+      },
+      "travel_time_seconds": 320,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_33_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiangyuan-road-10-cn-hangzhou-dujiaqiao-10",
@@ -3871,7 +4981,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiangyuan-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-dujiaqiao-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 1.317,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xianing-bridge-2-cn-hangzhou-shentangqiao-2",
@@ -3887,7 +5001,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xianing-bridge-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-shentangqiao-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.032,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiaoheshan-3-cn-hangzhou-pingfeng-3",
@@ -3903,7 +5021,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiaoheshan-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-pingfeng-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.981,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiaoshan-international-airport-19-cn-hangzhou-zhixing-road-19",
@@ -3919,7 +5041,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiaoshan-international-airport-19-to-cn-hangzhou-west-railway-station-1ph41ot",
         "cn-hangzhou-cn-hangzhou-zhixing-road-19-to-cn-hangzhou-west-railway-station-1ph41ot"
-      ]
+      ],
+      "distance_km": 9.389,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiaoshan-international-airport-7-cn-hangzhou-yongsheng-road-7",
@@ -3935,7 +5061,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiaoshan-international-airport-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-yongsheng-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 3.835,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiashajiangbin-1-cn-hangzhou-hangzhou-grand-convention-and-exhibition-center-1",
@@ -3951,7 +5081,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiashajiangbin-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-hangzhou-grand-convention-and-exhibition-center-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 3.381,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xinfeng-4-cn-hangzhou-xintang-4",
@@ -3967,7 +5101,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xinfeng-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-xintang-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.233,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xingang-7-cn-hangzhou-xiaoshan-international-airport-7",
@@ -3983,7 +5121,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xingang-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-xiaoshan-international-airport-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 2.988,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xingmin-6-cn-hangzhou-aoti-zhongxin-6",
@@ -3999,7 +5141,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xingmin-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-aoti-zhongxin-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.491,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xingqiao-3-cn-hangzhou-huangheshan-3",
@@ -4015,7 +5161,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xingqiao-3-to-cn-hangzhou-shima-y0ozv5",
         "cn-hangzhou-cn-hangzhou-huangheshan-3-to-cn-hangzhou-shima-y0ozv5"
-      ]
+      ],
+      "distance_km": 1.885,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xingyi-7-cn-hangzhou-mingxing-road-7",
@@ -4031,7 +5181,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xingyi-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-mingxing-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 1.277,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xinhan-road-7-cn-hangzhou-xinjie-7",
@@ -4047,7 +5201,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xinhan-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-xinjie-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 2.38,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xinjie-7-cn-hangzhou-hehuan-road-7",
@@ -4063,7 +5221,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xinjie-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-hehuan-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 1.231,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xintang-4-cn-hangzhou-jingfang-4",
@@ -4079,7 +5241,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xintang-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-jingfang-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.253,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xintiandi-street-3-cn-hangzhou-qilun-square-3",
@@ -4095,7 +5261,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xintiandi-street-3-to-cn-hangzhou-dingqiao-siwq64",
         "cn-hangzhou-cn-hangzhou-qilun-square-3-to-cn-hangzhou-dingqiao-siwq64"
-      ]
+      ],
+      "distance_km": 1.742,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xintiandi-street-4-cn-hangzhou-south-huazhong-road-4",
@@ -4111,7 +5281,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xintiandi-street-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-south-huazhong-road-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.99,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xinwan-road-8-cn-hangzhou-fengloucun-8",
@@ -4127,7 +5301,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xinwan-road-8-to-cn-hangzhou-south-wenhai-road-mm688w",
         "cn-hangzhou-cn-hangzhou-fengloucun-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ]
+      ],
+      "distance_km": 1.833,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xinxing-road-7-cn-hangzhou-xinhan-road-7",
@@ -4143,7 +5321,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xinxing-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
         "cn-hangzhou-cn-hangzhou-xinhan-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ]
+      ],
+      "distance_km": 1.107,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xinye-road-9-cn-hangzhou-guanyintang-9",
@@ -4154,8 +5336,18 @@
       "to_station_id": "cn-hangzhou-guanyintang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 0.734,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 32.1
+      },
+      "travel_time_seconds": 82,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_32_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xinzhen-road-7-cn-hangzhou-yipeng-7",
@@ -4171,7 +5363,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xinzhen-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-yipeng-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 1.746,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xipu-road-6-cn-hangzhou-zhejiang-chinese-medical-university-6",
@@ -4187,7 +5383,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xipu-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-zhejiang-chinese-medical-university-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.157,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xiwen-stree-5-cn-hangzhou-dongxinyuan-5",
@@ -4203,7 +5403,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xiwen-stree-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-dongxinyuan-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.028,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xixing-1-cn-hangzhou-binhe-road-1",
@@ -4219,7 +5423,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xixing-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-binhe-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.39,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xueyuan-road-10-cn-hangzhou-wensan-road-10",
@@ -4235,7 +5443,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xueyuan-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-wensan-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 0.655,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xueyuan-road-2-cn-hangzhou-xianing-bridge-2",
@@ -4251,7 +5463,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-xueyuan-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-xianing-bridge-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.015,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yangbeihu-6-cn-hangzhou-gongwang-street-6",
@@ -4267,7 +5483,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yangbeihu-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-gongwang-street-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 1.809,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yangjiadun-4-cn-hangzhou-puyan-4",
@@ -4278,8 +5498,18 @@
       "to_station_id": "cn-hangzhou-puyan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.002,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.7
+      },
+      "travel_time_seconds": 107,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yicheng-lu-19-cn-hangzhou-east-railway-station-east-square-19",
@@ -4295,7 +5525,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yicheng-lu-19-to-cn-hangzhou-yongsheng-road-9z9okk",
         "cn-hangzhou-cn-hangzhou-east-railway-station-east-square-19-to-cn-hangzhou-yongsheng-road-9z9okk"
-      ]
+      ],
+      "distance_km": 1.677,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yingfeng-road-2-cn-hangzhou-feihong-road-2",
@@ -4311,7 +5545,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yingfeng-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-feihong-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.238,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yingzhong-7-cn-hangzhou-kanshan-7",
@@ -4327,7 +5565,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yingzhong-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-kanshan-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 3.082,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yinhu-6-cn-hangzhou-huxiaoxing-6",
@@ -4343,7 +5585,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yinhu-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-huxiaoxing-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 1.943,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yipeng-7-cn-hangzhou-tangxinxian-7",
@@ -4359,7 +5605,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yipeng-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-tangxinxian-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 1.217,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yisheng-road-10-cn-hangzhou-jinde-road-10",
@@ -4375,7 +5625,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yisheng-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
         "cn-hangzhou-cn-hangzhou-jinde-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ]
+      ],
+      "distance_km": 1.615,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yongfu-5-cn-hangzhou-wuchang-5",
@@ -4391,7 +5645,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yongfu-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-wuchang-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 1.79,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yongjiang-road-4-cn-hangzhou-nanxingqiao-4",
@@ -4407,7 +5665,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yongjiang-road-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-nanxingqiao-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 1.446,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yongsheng-road-19-cn-hangzhou-xiaoshan-international-airport-19",
@@ -4423,7 +5685,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yongsheng-road-19-to-cn-hangzhou-west-railway-station-1ph41ot",
         "cn-hangzhou-cn-hangzhou-xiaoshan-international-airport-19-to-cn-hangzhou-west-railway-station-1ph41ot"
-      ]
+      ],
+      "distance_km": 3.835,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yongsheng-road-7-cn-hangzhou-xinzhen-road-7",
@@ -4439,7 +5705,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yongsheng-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
         "cn-hangzhou-cn-hangzhou-xinzhen-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ]
+      ],
+      "distance_km": 2.663,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yuanbaotang-6-cn-hangzhou-east-railway-station-east-square-6",
@@ -4455,7 +5725,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yuanbaotang-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-east-railway-station-east-square-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.204,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yudao-19-cn-hangzhou-east-railway-station-east-square-19",
@@ -4471,7 +5745,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yudao-19-to-cn-hangzhou-west-railway-station-1ph41ot",
         "cn-hangzhou-cn-hangzhou-east-railway-station-east-square-19-to-cn-hangzhou-west-railway-station-1ph41ot"
-      ]
+      ],
+      "distance_km": 2.969,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yudao-9-cn-hangzhou-sanbao-9",
@@ -4487,7 +5765,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yudao-9-to-cn-hangzhou-guanyintang-1megtof",
         "cn-hangzhou-cn-hangzhou-sanbao-9-to-cn-hangzhou-guanyintang-1megtof"
-      ]
+      ],
+      "distance_km": 1.118,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yuhang-road-16-cn-hangzhou-zhongtai-16",
@@ -4498,8 +5780,18 @@
       "to_station_id": "cn-hangzhou-zhongtai",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 2.587,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 278,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yunshui-1-cn-hangzhou-xiashajiangbin-1",
@@ -4515,7 +5807,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-yunshui-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-xiashajiangbin-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 1.793,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhalongkou-1-cn-hangzhou-east-railway-station-1",
@@ -4531,7 +5827,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zhalongkou-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
         "cn-hangzhou-cn-hangzhou-east-railway-station-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ]
+      ],
+      "distance_km": 2.092,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhejiang-aandf-university-16-cn-hangzhou-linan-square-16",
@@ -4542,8 +5842,18 @@
       "to_station_id": "cn-hangzhou-linan-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 3.598,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 386,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhejiang-chinese-medical-university-4-cn-hangzhou-yangjiadun-4",
@@ -4559,7 +5869,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zhejiang-chinese-medical-university-4-to-cn-hangzhou-puyan-wi3hsh",
         "cn-hangzhou-cn-hangzhou-yangjiadun-4-to-cn-hangzhou-puyan-wi3hsh"
-      ]
+      ],
+      "distance_km": 0.918,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhejiang-chinese-medical-university-6-cn-hangzhou-weiye-road-6",
@@ -4575,7 +5889,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zhejiang-chinese-medical-university-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-weiye-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 1.416,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhejiang-conservatory-of-music-6-cn-hangzhou-zhongcun-6",
@@ -4591,7 +5909,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zhejiang-conservatory-of-music-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-zhongcun-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 1.848,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhenning-road-2-cn-hangzhou-jianshesan-road-2",
@@ -4607,7 +5929,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zhenning-road-2-to-cn-hangzhou-chaoyang-vvmotq",
         "cn-hangzhou-cn-hangzhou-jianshesan-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ]
+      ],
+      "distance_km": 1.469,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhipu-road-6-cn-hangzhou-xipu-road-6",
@@ -4623,7 +5949,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zhipu-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
         "cn-hangzhou-cn-hangzhou-xipu-road-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ]
+      ],
+      "distance_km": 3.115,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhixing-road-19-cn-hangzhou-gengwen-road-19",
@@ -4639,7 +5969,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zhixing-road-19-to-cn-hangzhou-west-railway-station-1ph41ot",
         "cn-hangzhou-cn-hangzhou-gengwen-road-19-to-cn-hangzhou-west-railway-station-1ph41ot"
-      ]
+      ],
+      "distance_km": 3.538,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhongcun-6-cn-hangzhou-east-safari-park-6",
@@ -4655,7 +5989,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zhongcun-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
         "cn-hangzhou-cn-hangzhou-east-safari-park-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ]
+      ],
+      "distance_km": 3.572,
+      "extras": {
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhongtai-16-cn-hangzhou-nanhu-16",
@@ -4666,8 +6004,18 @@
       "to_station_id": "cn-hangzhou-nanhu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 2.897,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_speed",
+        "speed_kmh": 33.5
+      },
+      "travel_time_seconds": 311,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "speed_34_kmh"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zijingang-campus-zhejiang-university-5-cn-hangzhou-sanba-5",
@@ -4683,7 +6031,11 @@
       "travel_time_derived_from": [
         "cn-hangzhou-cn-hangzhou-zijingang-campus-zhejiang-university-5-to-cn-hangzhou-guniangqiao-59zkuu",
         "cn-hangzhou-cn-hangzhou-sanba-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ]
+      ],
+      "distance_km": 2.136,
+      "extras": {
+        "distance_source": "haversine"
+      }
     }
   ]
 }

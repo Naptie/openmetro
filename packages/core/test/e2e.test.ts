@@ -16,6 +16,7 @@ const dataRoot = join(here, '../../../data');
 const BEIJING = 'cn-beijing';
 const SHANGHAI = 'cn-shanghai';
 const GUANGZHOU = 'cn-guangzhou';
+const HONG_KONG = 'cn-hongkong';
 
 function graphFor(d: NetworkData, weight: WeightKind = 'time') {
   return buildStopGraph(d.network.id, d.stops, d.segments, d.transfers, d.network.routing, weight);
@@ -73,6 +74,33 @@ test('Guangzhou routes by time', async () => {
   );
   assert.ok(plan, 'expected a Guangzhou route');
   assert.ok(plan.total_seconds > 0);
+});
+
+test('Hong Kong routes AsiaWorld-Expo to Hong Kong directly on Airport Express', async () => {
+  const d = await load(HONG_KONG);
+  const airportToTsingYi = d.segments.find(
+    (s) =>
+      s.from_stop_id === 'cn-hongkong-airport-ael' && s.to_stop_id === 'cn-hongkong-tsing-yi-ael'
+  );
+  assert.ok(airportToTsingYi?.travel_time_seconds);
+  assert.ok(airportToTsingYi.travel_time_seconds >= 600);
+  assert.ok(airportToTsingYi.travel_time_seconds <= 1200);
+  assert.equal(airportToTsingYi.extras?.time_estimate, 'distance_time_affine');
+
+  const graph = buildStopGraph(d.network.id, d.stops, d.segments, d.transfers, d.network.routing);
+  const plan = planRoute(graph, d.stops, 'cn-hongkong-asiaworld-expo', 'cn-hongkong-hong-kong');
+  assert.ok(plan, 'expected an AsiaWorld-Expo to Hong Kong route');
+  assert.equal(plan.transfers, 0);
+  assert.ok(plan.total_seconds > 20 * 60 && plan.total_seconds < 35 * 60);
+
+  const aelLineId = d.segments.find(
+    (s) => s.from_stop_id === 'cn-hongkong-asiaworld-expo-ael'
+  )?.line_id;
+  assert.ok(aelLineId, 'expected the AsiaWorld-Expo stop to identify the AEL line');
+  const rideLineIds = new Set(
+    plan.legs.filter((leg) => leg.kind === 'ride').map((leg) => leg.line_id)
+  );
+  assert.deepEqual([...rideLineIds], [aelLineId]);
 });
 
 test('all networks have transfers and segment travel times', async () => {
@@ -221,7 +249,7 @@ test('projected lines carry short_name on the wire', { timeout: 30_000 }, async 
       assert.equal(typeof shortName, 'string', `line ${line.id} short_name is not a string`);
       assert.ok((shortName as string).length > 0, `line ${line.id} short_name is empty`);
     }
-    return new Map(body.map((l) => [l.id, (l as { short_name: string }).short_name]));
+    return new Map(body.map((l) => [l.id, (l as unknown as { short_name: string }).short_name]));
   };
 
   const gz = await shortNamesOf(GUANGZHOU);

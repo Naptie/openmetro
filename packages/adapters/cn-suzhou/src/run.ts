@@ -6,8 +6,10 @@ import {
   deriveSegmentTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
+  estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStraightLineDistances,
   type LineEncoded,
   type SegmentEncoded,
   type StationEncoded,
@@ -15,6 +17,7 @@ import {
   type TransformStations,
   writeCanonical
 } from '@openmetro/core';
+
 import { suzhouFareSpec } from './fares.js';
 import { fetchSuzhouSources } from './fetch.js';
 import { normalize } from './normalize.js';
@@ -191,6 +194,9 @@ export async function runSuzhouNormalize(opts: SuzhouNormalizeOptions = {}): Pro
     });
     const applied = applyOfficialSegmentMetrics(segments, officialTimes.segments);
     segments = applied.segments;
+    // Remaining gaps: straight-line distance + speed-model times.
+    segments = fillStraightLineDistances(segments, stations);
+    segments = estimateTimesFromDistanceSpeed(segments);
     console.log(
       `  official segment metrics: detail=${officialTimes.fetchedDetailCount}, ` +
         `pairs=${officialTimes.pairedSegmentCount}, applied=${applied.applied}/${segments.length}`

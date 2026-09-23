@@ -4,8 +4,10 @@ import {
   applyHarvestedTransferTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
+  estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStraightLineDistances,
   haversineKm,
   type LineEncoded,
   MODE_MAX_SPEED_KMH,
@@ -14,6 +16,7 @@ import {
   type TransformStations,
   writeCanonical
 } from '@openmetro/core';
+
 import { fetchBeijingSources } from './fetch.js';
 import { normalize } from './normalize.js';
 import { collectBeijingPlannerTimes } from './times.js';
@@ -166,6 +169,10 @@ export async function runBeijingNormalize(opts: BeijingNormalizeOptions = {}): P
 
   // Any remaining gap falls back to last-train / default without clobbering
   // planner/source values already applied.
+  // Straight-line distance from coordinates + speed-model times for gaps
+  // (never overwrite source/planner/last_train values).
+  segments = fillStraightLineDistances(segments, stations);
+  segments = estimateTimesFromDistanceSpeed(segments);
   const beforeFill = segments;
   const filledAll = fillMissingSegmentTimes(
     segments,

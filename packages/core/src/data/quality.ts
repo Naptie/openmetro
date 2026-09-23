@@ -80,6 +80,12 @@ function precisionFromSegmentTime(s: {
     }
     case 'last_train':
       return 'derived';
+    case 'estimated':
+      // Distance-based estimates calibrated from official/derived times.
+      return s.extras?.time_estimate === 'distance_speed' ||
+        s.extras?.time_estimate === 'distance_time_affine'
+        ? 'derived'
+        : 'default';
     default:
       return 'default';
   }
@@ -200,7 +206,14 @@ export function computeNetworkQuality(input: QualityInput): NetworkQualityJson {
   const segDistCounts = emptyCounts();
   for (const s of input.segments) {
     segTimeCounts[precisionFromSegmentTime(s)]++;
-    segDistCounts[s.distance_km != null ? 'official' : 'default']++;
+    if (s.distance_km == null) segDistCounts.default++;
+    else if (
+      s.extras?.distance_source === 'haversine' ||
+      s.extras?.distance_source === 'gcj02-coords' ||
+      s.extras?.distance_source === 'derived'
+    ) {
+      segDistCounts.derived++;
+    } else segDistCounts.official++;
   }
 
   const xferCounts = emptyCounts();

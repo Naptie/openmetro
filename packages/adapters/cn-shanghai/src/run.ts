@@ -4,12 +4,15 @@ import {
   applyHarvestedTransferTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
+  estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStraightLineDistances,
   type LineEncoded,
   type TransformStations,
   writeCanonical
 } from '@openmetro/core';
+
 import { fetchShanghaiSources } from './fetch.js';
 import { normalize, type ShStationInfo } from './normalize.js';
 import { collectShanghaiPlannerTimes } from './times.js';
@@ -122,6 +125,10 @@ export async function runShanghaiNormalize(opts: ShanghaiNormalizeOptions = {}):
   }
 
   // Fallback only: last_train derivation for planner/source gaps.
+  // Straight-line distance from coordinates + speed-model times for gaps
+  // (never overwrite source/planner/last_train values).
+  segments = fillStraightLineDistances(segments, stations);
+  segments = estimateTimesFromDistanceSpeed(segments);
   const beforeFill = segments;
   const filledAll = fillMissingSegmentTimes(
     segments,

@@ -1,6 +1,5 @@
 /**
  * Generate the data-quality summary:
- * - `docs/quality.svg` — GitHub-renderable dashboard (README embed)
  * - `data/quality.svg` — same dashboard next to QUALITY.md (data branch)
  * - `data/QUALITY.md` — full per-network markdown detail
  *

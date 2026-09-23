@@ -1,0 +1,2317 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-hongkong",
+  "generated_at": "2026-09-23T08:28:03.529Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-admiralty-isl-cn-hongkong-central-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-admiralty-isl",
+      "to_stop_id": "cn-hongkong-central-isl",
+      "from_station_id": "cn-hongkong-admiralty",
+      "to_station_id": "cn-hongkong-central",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-admiralty-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-central-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.719,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-admiralty-sil-cn-hongkong-ocean-park-sil",
+      "line_id": "cn-hongkong-line-sil",
+      "from_stop_id": "cn-hongkong-admiralty-sil",
+      "to_stop_id": "cn-hongkong-ocean-park-sil",
+      "from_station_id": "cn-hongkong-admiralty",
+      "to_station_id": "cn-hongkong-ocean-park",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 3.51,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 54.5,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 232,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-admiralty-twl-cn-hongkong-central-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-admiralty-twl",
+      "to_stop_id": "cn-hongkong-central-twl",
+      "from_station_id": "cn-hongkong-admiralty",
+      "to_station_id": "cn-hongkong-central",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 0.719,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.7,
+        "a_s_per_km": 64.1,
+        "b_s": 50.9
+      },
+      "travel_time_seconds": 97,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-airport-ael-cn-hongkong-tsing-yi-ael",
+      "line_id": "cn-hongkong-line-ael",
+      "from_stop_id": "cn-hongkong-airport-ael",
+      "to_stop_id": "cn-hongkong-tsing-yi-ael",
+      "from_station_id": "cn-hongkong-airport",
+      "to_station_id": "cn-hongkong-tsing-yi",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 18.232,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 87.4,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 751,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-asiaworld-expo-ael-cn-hongkong-airport-ael",
+      "line_id": "cn-hongkong-line-ael",
+      "from_stop_id": "cn-hongkong-asiaworld-expo-ael",
+      "to_stop_id": "cn-hongkong-airport-ael",
+      "from_station_id": "cn-hongkong-asiaworld-expo",
+      "to_station_id": "cn-hongkong-airport",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 0.98,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.8,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 142,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-austin-tml-cn-hongkong-nam-cheong-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-austin-tml",
+      "to_stop_id": "cn-hongkong-nam-cheong-tml",
+      "from_station_id": "cn-hongkong-austin",
+      "to_station_id": "cn-hongkong-nam-cheong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-austin-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-nam-cheong-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 2.773,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-causeway-bay-isl-cn-hongkong-wan-chai-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-causeway-bay-isl",
+      "to_stop_id": "cn-hongkong-wan-chai-isl",
+      "from_station_id": "cn-hongkong-causeway-bay",
+      "to_station_id": "cn-hongkong-wan-chai",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-causeway-bay-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-wan-chai-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 1.148,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-central-isl-cn-hongkong-sheung-wan-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-central-isl",
+      "to_stop_id": "cn-hongkong-sheung-wan-isl",
+      "from_station_id": "cn-hongkong-central",
+      "to_station_id": "cn-hongkong-sheung-wan",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-central-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-sheung-wan-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.834,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-chai-wan-isl-cn-hongkong-heng-fa-chuen-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-chai-wan-isl",
+      "to_stop_id": "cn-hongkong-heng-fa-chuen-isl",
+      "from_station_id": "cn-hongkong-chai-wan",
+      "to_station_id": "cn-hongkong-heng-fa-chuen",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-chai-wan-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-heng-fa-chuen-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 1.365,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-che-kung-temple-tml-cn-hongkong-tai-wai-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-che-kung-temple-tml",
+      "to_stop_id": "cn-hongkong-tai-wai-tml",
+      "from_station_id": "cn-hongkong-che-kung-temple",
+      "to_station_id": "cn-hongkong-tai-wai",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-che-kung-temple-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-tai-wai-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 0.84,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-cheung-sha-wan-twl-cn-hongkong-sham-shui-po-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-cheung-sha-wan-twl",
+      "to_stop_id": "cn-hongkong-sham-shui-po-twl",
+      "from_station_id": "cn-hongkong-cheung-sha-wan",
+      "to_station_id": "cn-hongkong-sham-shui-po",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-cheung-sha-wan-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-sham-shui-po-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.803,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-choi-hung-ktl-cn-hongkong-diamond-hill-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-choi-hung-ktl",
+      "to_stop_id": "cn-hongkong-diamond-hill-ktl",
+      "from_station_id": "cn-hongkong-choi-hung",
+      "to_station_id": "cn-hongkong-diamond-hill",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-choi-hung-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-diamond-hill-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.995,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-city-one-tml-cn-hongkong-sha-tin-wai-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-city-one-tml",
+      "to_stop_id": "cn-hongkong-sha-tin-wai-tml",
+      "from_station_id": "cn-hongkong-city-one",
+      "to_station_id": "cn-hongkong-sha-tin-wai",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-city-one-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-sha-tin-wai-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.103,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-diamond-hill-ktl-cn-hongkong-wong-tai-sin-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-diamond-hill-ktl",
+      "to_stop_id": "cn-hongkong-wong-tai-sin-ktl",
+      "from_station_id": "cn-hongkong-diamond-hill",
+      "to_station_id": "cn-hongkong-wong-tai-sin",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-diamond-hill-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-wong-tai-sin-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.767,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-diamond-hill-tml-cn-hongkong-kai-tak-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-diamond-hill-tml",
+      "to_stop_id": "cn-hongkong-kai-tak-tml",
+      "from_station_id": "cn-hongkong-diamond-hill",
+      "to_station_id": "cn-hongkong-kai-tak",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-diamond-hill-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-kai-tak-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.096,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-east-tsim-sha-tsui-tml-cn-hongkong-austin-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-east-tsim-sha-tsui-tml",
+      "to_stop_id": "cn-hongkong-austin-tml",
+      "from_station_id": "cn-hongkong-east-tsim-sha-tsui",
+      "to_station_id": "cn-hongkong-austin",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-east-tsim-sha-tsui-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-austin-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.351,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-exhibition-centre-eal-cn-hongkong-admiralty-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-exhibition-centre-eal",
+      "to_stop_id": "cn-hongkong-admiralty-eal",
+      "from_station_id": "cn-hongkong-exhibition-centre",
+      "to_station_id": "cn-hongkong-admiralty",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 1.057,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.2,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 145,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-fanling-eal-cn-hongkong-tai-wo-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-fanling-eal",
+      "to_stop_id": "cn-hongkong-tai-wo-eal",
+      "from_station_id": "cn-hongkong-fanling",
+      "to_station_id": "cn-hongkong-tai-wo",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 5.137,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 64,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 289,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-fo-tan-eal-cn-hongkong-sha-tin-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-fo-tan-eal",
+      "to_stop_id": "cn-hongkong-sha-tin-eal",
+      "from_station_id": "cn-hongkong-fo-tan",
+      "to_station_id": "cn-hongkong-sha-tin",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 1.786,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 37.6,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 171,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-fortress-hill-isl-cn-hongkong-tin-hau-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-fortress-hill-isl",
+      "to_stop_id": "cn-hongkong-tin-hau-isl",
+      "from_station_id": "cn-hongkong-fortress-hill",
+      "to_station_id": "cn-hongkong-tin-hau",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-fortress-hill-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-tin-hau-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.673,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-hang-hau-tkl-cn-hongkong-tseung-kwan-o-tkl",
+      "line_id": "cn-hongkong-line-tkl",
+      "from_stop_id": "cn-hongkong-hang-hau-tkl",
+      "to_stop_id": "cn-hongkong-tseung-kwan-o-tkl",
+      "from_station_id": "cn-hongkong-hang-hau",
+      "to_station_id": "cn-hongkong-tseung-kwan-o",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-hang-hau-tkl-to-cn-hongkong-north-point-tkl",
+        "cn-hongkong-cn-hongkong-tseung-kwan-o-tkl-to-cn-hongkong-north-point-tkl"
+      ],
+      "distance_km": 1,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-heng-fa-chuen-isl-cn-hongkong-shau-kei-wan-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-heng-fa-chuen-isl",
+      "to_stop_id": "cn-hongkong-shau-kei-wan-isl",
+      "from_station_id": "cn-hongkong-heng-fa-chuen",
+      "to_station_id": "cn-hongkong-shau-kei-wan",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-heng-fa-chuen-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-shau-kei-wan-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 1.135,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-heng-on-tml-cn-hongkong-tai-shui-hang-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-heng-on-tml",
+      "to_stop_id": "cn-hongkong-tai-shui-hang-tml",
+      "from_station_id": "cn-hongkong-heng-on",
+      "to_station_id": "cn-hongkong-tai-shui-hang",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-heng-on-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-tai-shui-hang-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.121,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-hin-keng-tml-cn-hongkong-diamond-hill-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-hin-keng-tml",
+      "to_stop_id": "cn-hongkong-diamond-hill-tml",
+      "from_station_id": "cn-hongkong-hin-keng",
+      "to_station_id": "cn-hongkong-diamond-hill",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 300,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-hin-keng-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-diamond-hill-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 4.113,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-hku-isl-cn-hongkong-kennedy-town-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-hku-isl",
+      "to_stop_id": "cn-hongkong-kennedy-town-isl",
+      "from_station_id": "cn-hongkong-hku",
+      "to_station_id": "cn-hongkong-kennedy-town",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 0.78,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.1,
+        "a_s_per_km": 0.3,
+        "b_s": 139.7
+      },
+      "travel_time_seconds": 140,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-ho-man-tin-ktl-cn-hongkong-whampoa-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-ho-man-tin-ktl",
+      "to_stop_id": "cn-hongkong-whampoa-ktl",
+      "from_station_id": "cn-hongkong-ho-man-tin",
+      "to_station_id": "cn-hongkong-whampoa",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 480,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-ho-man-tin-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-whampoa-ktl-to-cn-hongkong-kwun-tong-ktl"
+      ],
+      "distance_km": 0.862,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-ho-man-tin-tml-cn-hongkong-hung-hom-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-ho-man-tin-tml",
+      "to_stop_id": "cn-hongkong-hung-hom-tml",
+      "from_station_id": "cn-hongkong-ho-man-tin",
+      "to_station_id": "cn-hongkong-hung-hom",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-ho-man-tin-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-hung-hom-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 0.732,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-hung-hom-eal-cn-hongkong-exhibition-centre-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-hung-hom-eal",
+      "to_stop_id": "cn-hongkong-exhibition-centre-eal",
+      "from_station_id": "cn-hongkong-hung-hom",
+      "to_station_id": "cn-hongkong-exhibition-centre",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 2.447,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 45.4,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 194,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-hung-hom-tml-cn-hongkong-east-tsim-sha-tsui-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-hung-hom-tml",
+      "to_stop_id": "cn-hongkong-east-tsim-sha-tsui-tml",
+      "from_station_id": "cn-hongkong-hung-hom",
+      "to_station_id": "cn-hongkong-east-tsim-sha-tsui",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-hung-hom-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-east-tsim-sha-tsui-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.086,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-jordan-twl-cn-hongkong-tsim-sha-tsui-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-jordan-twl",
+      "to_stop_id": "cn-hongkong-tsim-sha-tsui-twl",
+      "from_station_id": "cn-hongkong-jordan",
+      "to_station_id": "cn-hongkong-tsim-sha-tsui",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-jordan-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-tsim-sha-tsui-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.83,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kai-tak-tml-cn-hongkong-sung-wong-toi-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-kai-tak-tml",
+      "to_stop_id": "cn-hongkong-sung-wong-toi-tml",
+      "from_station_id": "cn-hongkong-kai-tak",
+      "to_station_id": "cn-hongkong-sung-wong-toi",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-kai-tak-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-sung-wong-toi-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.005,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kam-sheung-road-tml-cn-hongkong-yuen-long-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-kam-sheung-road-tml",
+      "to_stop_id": "cn-hongkong-yuen-long-tml",
+      "from_station_id": "cn-hongkong-kam-sheung-road",
+      "to_station_id": "cn-hongkong-yuen-long",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-kam-sheung-road-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-yuen-long-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 3.133,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kowloon-ael-cn-hongkong-hong-kong-ael",
+      "line_id": "cn-hongkong-line-ael",
+      "from_stop_id": "cn-hongkong-kowloon-ael",
+      "to_stop_id": "cn-hongkong-hong-kong-ael",
+      "from_station_id": "cn-hongkong-kowloon",
+      "to_station_id": "cn-hongkong-hong-kong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 2.284,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 43.7,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 188,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kowloon-bay-ktl-cn-hongkong-choi-hung-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-kowloon-bay-ktl",
+      "to_stop_id": "cn-hongkong-choi-hung-ktl",
+      "from_station_id": "cn-hongkong-kowloon-bay",
+      "to_station_id": "cn-hongkong-choi-hung",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-kowloon-bay-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-choi-hung-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 1.337,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kowloon-tcl-cn-hongkong-hong-kong-tcl",
+      "line_id": "cn-hongkong-line-tcl",
+      "from_stop_id": "cn-hongkong-kowloon-tcl",
+      "to_stop_id": "cn-hongkong-hong-kong-tcl",
+      "from_station_id": "cn-hongkong-kowloon",
+      "to_station_id": "cn-hongkong-hong-kong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 2.284,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 47.5,
+        "a_s_per_km": 38.2,
+        "b_s": 85.7
+      },
+      "travel_time_seconds": 173,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kowloon-tong-eal-cn-hongkong-mong-kok-east-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-kowloon-tong-eal",
+      "to_stop_id": "cn-hongkong-mong-kok-east-eal",
+      "from_station_id": "cn-hongkong-kowloon-tong",
+      "to_station_id": "cn-hongkong-mong-kok-east",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 1.68,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 36.2,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 167,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kowloon-tong-ktl-cn-hongkong-shek-kip-mei-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-kowloon-tong-ktl",
+      "to_stop_id": "cn-hongkong-shek-kip-mei-ktl",
+      "from_station_id": "cn-hongkong-kowloon-tong",
+      "to_station_id": "cn-hongkong-shek-kip-mei",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-kowloon-tong-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-shek-kip-mei-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.924,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kwai-fong-twl-cn-hongkong-lai-king-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-kwai-fong-twl",
+      "to_stop_id": "cn-hongkong-lai-king-twl",
+      "from_station_id": "cn-hongkong-kwai-fong",
+      "to_station_id": "cn-hongkong-lai-king",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-kwai-fong-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-lai-king-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.95,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kwai-hing-twl-cn-hongkong-kwai-fong-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-kwai-hing-twl",
+      "to_stop_id": "cn-hongkong-kwai-fong-twl",
+      "from_station_id": "cn-hongkong-kwai-hing",
+      "to_station_id": "cn-hongkong-kwai-fong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-kwai-hing-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-kwai-fong-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.771,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-kwun-tong-ktl-cn-hongkong-ngau-tau-kok-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-kwun-tong-ktl",
+      "to_stop_id": "cn-hongkong-ngau-tau-kok-ktl",
+      "from_station_id": "cn-hongkong-kwun-tong",
+      "to_station_id": "cn-hongkong-ngau-tau-kok",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-kwun-tong-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-ngau-tau-kok-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.826,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lai-chi-kok-twl-cn-hongkong-cheung-sha-wan-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-lai-chi-kok-twl",
+      "to_stop_id": "cn-hongkong-cheung-sha-wan-twl",
+      "from_station_id": "cn-hongkong-lai-chi-kok",
+      "to_station_id": "cn-hongkong-cheung-sha-wan",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-lai-chi-kok-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-cheung-sha-wan-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.861,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lai-king-tcl-cn-hongkong-nam-cheong-tcl",
+      "line_id": "cn-hongkong-line-tcl",
+      "from_stop_id": "cn-hongkong-lai-king-tcl",
+      "to_stop_id": "cn-hongkong-nam-cheong-tcl",
+      "from_station_id": "cn-hongkong-lai-king",
+      "to_station_id": "cn-hongkong-nam-cheong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-lai-king-tcl-to-cn-hongkong-hong-kong-tcl",
+        "cn-hongkong-cn-hongkong-nam-cheong-tcl-to-cn-hongkong-hong-kong-tcl"
+      ],
+      "distance_km": 3.738,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lai-king-twl-cn-hongkong-mei-foo-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-lai-king-twl",
+      "to_stop_id": "cn-hongkong-mei-foo-twl",
+      "from_station_id": "cn-hongkong-lai-king",
+      "to_station_id": "cn-hongkong-mei-foo",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-lai-king-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-mei-foo-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 1.7,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lam-tin-ktl-cn-hongkong-kwun-tong-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-lam-tin-ktl",
+      "to_stop_id": "cn-hongkong-kwun-tong-ktl",
+      "from_station_id": "cn-hongkong-lam-tin",
+      "to_station_id": "cn-hongkong-kwun-tong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-lam-tin-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-kwun-tong-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.924,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lei-tung-sil-cn-hongkong-south-horizons-sil",
+      "line_id": "cn-hongkong-line-sil",
+      "from_stop_id": "cn-hongkong-lei-tung-sil",
+      "to_stop_id": "cn-hongkong-south-horizons-sil",
+      "from_station_id": "cn-hongkong-lei-tung",
+      "to_station_id": "cn-hongkong-south-horizons",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 0.782,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.9,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 135,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lo-wu-eal-cn-hongkong-sheung-shui-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-lo-wu-eal",
+      "to_stop_id": "cn-hongkong-sheung-shui-eal",
+      "from_station_id": "cn-hongkong-lo-wu",
+      "to_station_id": "cn-hongkong-sheung-shui",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 3.374,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 53.5,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 227,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lohas-park-tkl-cn-hongkong-tseung-kwan-o-tkl",
+      "line_id": "cn-hongkong-line-tkl",
+      "from_stop_id": "cn-hongkong-lohas-park-tkl",
+      "to_stop_id": "cn-hongkong-tseung-kwan-o-tkl",
+      "from_station_id": "cn-hongkong-lohas-park",
+      "to_station_id": "cn-hongkong-tseung-kwan-o",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 360,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-lohas-park-tkl-to-cn-hongkong-north-point-tkl",
+        "cn-hongkong-cn-hongkong-tseung-kwan-o-tkl-to-cn-hongkong-north-point-tkl"
+      ],
+      "distance_km": 1.655,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lok-fu-ktl-cn-hongkong-kowloon-tong-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-lok-fu-ktl",
+      "to_stop_id": "cn-hongkong-kowloon-tong-ktl",
+      "from_station_id": "cn-hongkong-lok-fu",
+      "to_station_id": "cn-hongkong-kowloon-tong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-lok-fu-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-kowloon-tong-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 1.172,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-lok-ma-chau-eal-cn-hongkong-sheung-shui-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-lok-ma-chau-eal",
+      "to_stop_id": "cn-hongkong-sheung-shui-eal",
+      "from_station_id": "cn-hongkong-lok-ma-chau",
+      "to_station_id": "cn-hongkong-sheung-shui",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 6.52,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 69.4,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 338,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-long-ping-tml-cn-hongkong-tin-shui-wai-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-long-ping-tml",
+      "to_stop_id": "cn-hongkong-tin-shui-wai-tml",
+      "from_station_id": "cn-hongkong-long-ping",
+      "to_station_id": "cn-hongkong-tin-shui-wai",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-long-ping-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-tin-shui-wai-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 2.163,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-ma-on-shan-tml-cn-hongkong-heng-on-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-ma-on-shan-tml",
+      "to_stop_id": "cn-hongkong-heng-on-tml",
+      "from_station_id": "cn-hongkong-ma-on-shan",
+      "to_station_id": "cn-hongkong-heng-on",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-ma-on-shan-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-heng-on-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 0.961,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-mei-foo-tml-cn-hongkong-tsuen-wan-west-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-mei-foo-tml",
+      "to_stop_id": "cn-hongkong-tsuen-wan-west-tml",
+      "from_station_id": "cn-hongkong-mei-foo",
+      "to_station_id": "cn-hongkong-tsuen-wan-west",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 300,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-mei-foo-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-tsuen-wan-west-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 4.411,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-mei-foo-twl-cn-hongkong-lai-chi-kok-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-mei-foo-twl",
+      "to_stop_id": "cn-hongkong-lai-chi-kok-twl",
+      "from_station_id": "cn-hongkong-mei-foo",
+      "to_station_id": "cn-hongkong-lai-chi-kok",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-mei-foo-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-lai-chi-kok-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 1.073,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-mong-kok-east-eal-cn-hongkong-hung-hom-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-mong-kok-east-eal",
+      "to_stop_id": "cn-hongkong-hung-hom-eal",
+      "from_station_id": "cn-hongkong-mong-kok-east",
+      "to_station_id": "cn-hongkong-hung-hom",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 2.342,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 44.4,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 190,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-mong-kok-ktl-cn-hongkong-yau-ma-tei-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-mong-kok-ktl",
+      "to_stop_id": "cn-hongkong-yau-ma-tei-ktl",
+      "from_station_id": "cn-hongkong-mong-kok",
+      "to_station_id": "cn-hongkong-yau-ma-tei",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-mong-kok-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-yau-ma-tei-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.745,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-mong-kok-twl-cn-hongkong-yau-ma-tei-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-mong-kok-twl",
+      "to_stop_id": "cn-hongkong-yau-ma-tei-twl",
+      "from_station_id": "cn-hongkong-mong-kok",
+      "to_station_id": "cn-hongkong-yau-ma-tei",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-mong-kok-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-yau-ma-tei-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.745,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-nam-cheong-tcl-cn-hongkong-olympic-tcl",
+      "line_id": "cn-hongkong-line-tcl",
+      "from_stop_id": "cn-hongkong-nam-cheong-tcl",
+      "to_stop_id": "cn-hongkong-olympic-tcl",
+      "from_station_id": "cn-hongkong-nam-cheong",
+      "to_station_id": "cn-hongkong-olympic",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-nam-cheong-tcl-to-cn-hongkong-hong-kong-tcl",
+        "cn-hongkong-cn-hongkong-olympic-tcl-to-cn-hongkong-hong-kong-tcl"
+      ],
+      "distance_km": 1.168,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-nam-cheong-tml-cn-hongkong-mei-foo-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-nam-cheong-tml",
+      "to_stop_id": "cn-hongkong-mei-foo-tml",
+      "from_station_id": "cn-hongkong-nam-cheong",
+      "to_station_id": "cn-hongkong-mei-foo",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-nam-cheong-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-mei-foo-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 2.046,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-ngau-tau-kok-ktl-cn-hongkong-kowloon-bay-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-ngau-tau-kok-ktl",
+      "to_stop_id": "cn-hongkong-kowloon-bay-ktl",
+      "from_station_id": "cn-hongkong-ngau-tau-kok",
+      "to_station_id": "cn-hongkong-kowloon-bay",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-ngau-tau-kok-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-kowloon-bay-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 1.051,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-north-point-isl-cn-hongkong-fortress-hill-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-north-point-isl",
+      "to_stop_id": "cn-hongkong-fortress-hill-isl",
+      "from_station_id": "cn-hongkong-north-point",
+      "to_station_id": "cn-hongkong-fortress-hill",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-north-point-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-fortress-hill-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.727,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-ocean-park-sil-cn-hongkong-wong-chuk-hang-sil",
+      "line_id": "cn-hongkong-line-sil",
+      "from_stop_id": "cn-hongkong-ocean-park-sil",
+      "to_stop_id": "cn-hongkong-wong-chuk-hang-sil",
+      "from_station_id": "cn-hongkong-ocean-park",
+      "to_station_id": "cn-hongkong-wong-chuk-hang",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 0.658,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18.1,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 131,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-olympic-tcl-cn-hongkong-kowloon-tcl",
+      "line_id": "cn-hongkong-line-tcl",
+      "from_stop_id": "cn-hongkong-olympic-tcl",
+      "to_stop_id": "cn-hongkong-kowloon-tcl",
+      "from_station_id": "cn-hongkong-olympic",
+      "to_station_id": "cn-hongkong-kowloon",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-olympic-tcl-to-cn-hongkong-hong-kong-tcl",
+        "cn-hongkong-cn-hongkong-kowloon-tcl-to-cn-hongkong-hong-kong-tcl"
+      ],
+      "distance_km": 1.449,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-po-lam-tkl-cn-hongkong-hang-hau-tkl",
+      "line_id": "cn-hongkong-line-tkl",
+      "from_stop_id": "cn-hongkong-po-lam-tkl",
+      "to_stop_id": "cn-hongkong-hang-hau-tkl",
+      "from_station_id": "cn-hongkong-po-lam",
+      "to_station_id": "cn-hongkong-hang-hau",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-po-lam-tkl-to-cn-hongkong-north-point-tkl",
+        "cn-hongkong-cn-hongkong-hang-hau-tkl-to-cn-hongkong-north-point-tkl"
+      ],
+      "distance_km": 1.048,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-prince-edward-ktl-cn-hongkong-mong-kok-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-prince-edward-ktl",
+      "to_stop_id": "cn-hongkong-mong-kok-ktl",
+      "from_station_id": "cn-hongkong-prince-edward",
+      "to_station_id": "cn-hongkong-mong-kok",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-prince-edward-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-mong-kok-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.577,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-prince-edward-twl-cn-hongkong-mong-kok-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-prince-edward-twl",
+      "to_stop_id": "cn-hongkong-mong-kok-twl",
+      "from_station_id": "cn-hongkong-prince-edward",
+      "to_station_id": "cn-hongkong-mong-kok",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-prince-edward-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-mong-kok-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.577,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-quarry-bay-isl-cn-hongkong-north-point-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-quarry-bay-isl",
+      "to_stop_id": "cn-hongkong-north-point-isl",
+      "from_station_id": "cn-hongkong-quarry-bay",
+      "to_station_id": "cn-hongkong-north-point",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-quarry-bay-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-north-point-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 1.014,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-quarry-bay-tkl-cn-hongkong-north-point-tkl",
+      "line_id": "cn-hongkong-line-tkl",
+      "from_stop_id": "cn-hongkong-quarry-bay-tkl",
+      "to_stop_id": "cn-hongkong-north-point-tkl",
+      "from_station_id": "cn-hongkong-quarry-bay",
+      "to_station_id": "cn-hongkong-north-point",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 540,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-quarry-bay-tkl-to-cn-hongkong-north-point-tkl",
+        "cn-hongkong-cn-hongkong-north-point-tkl-to-cn-hongkong-po-lam-tkl"
+      ],
+      "distance_km": 1.014,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sai-wan-ho-isl-cn-hongkong-tai-koo-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-sai-wan-ho-isl",
+      "to_stop_id": "cn-hongkong-tai-koo-isl",
+      "from_station_id": "cn-hongkong-sai-wan-ho",
+      "to_station_id": "cn-hongkong-tai-koo",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-sai-wan-ho-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-tai-koo-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.699,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sai-ying-pun-isl-cn-hongkong-hku-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-sai-ying-pun-isl",
+      "to_stop_id": "cn-hongkong-hku-isl",
+      "from_station_id": "cn-hongkong-sai-ying-pun",
+      "to_station_id": "cn-hongkong-hku",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-sai-ying-pun-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-hku-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.711,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sha-tin-eal-cn-hongkong-tai-wai-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-sha-tin-eal",
+      "to_stop_id": "cn-hongkong-tai-wai-eal",
+      "from_station_id": "cn-hongkong-sha-tin",
+      "to_station_id": "cn-hongkong-tai-wai",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 1.416,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 32.3,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 158,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sha-tin-wai-tml-cn-hongkong-che-kung-temple-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-sha-tin-wai-tml",
+      "to_stop_id": "cn-hongkong-che-kung-temple-tml",
+      "from_station_id": "cn-hongkong-sha-tin-wai",
+      "to_station_id": "cn-hongkong-che-kung-temple",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-sha-tin-wai-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-che-kung-temple-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 0.906,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sham-shui-po-twl-cn-hongkong-prince-edward-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-sham-shui-po-twl",
+      "to_stop_id": "cn-hongkong-prince-edward-twl",
+      "from_station_id": "cn-hongkong-sham-shui-po",
+      "to_station_id": "cn-hongkong-prince-edward",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-sham-shui-po-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-prince-edward-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.912,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-shau-kei-wan-isl-cn-hongkong-sai-wan-ho-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-shau-kei-wan-isl",
+      "to_stop_id": "cn-hongkong-sai-wan-ho-isl",
+      "from_station_id": "cn-hongkong-shau-kei-wan",
+      "to_station_id": "cn-hongkong-sai-wan-ho",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-shau-kei-wan-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-sai-wan-ho-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.76,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-shek-kip-mei-ktl-cn-hongkong-prince-edward-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-shek-kip-mei-ktl",
+      "to_stop_id": "cn-hongkong-prince-edward-ktl",
+      "from_station_id": "cn-hongkong-shek-kip-mei",
+      "to_station_id": "cn-hongkong-prince-edward",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-shek-kip-mei-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-prince-edward-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.803,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-shek-mun-tml-cn-hongkong-city-one-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-shek-mun-tml",
+      "to_stop_id": "cn-hongkong-city-one-tml",
+      "from_station_id": "cn-hongkong-shek-mun",
+      "to_station_id": "cn-hongkong-city-one",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-shek-mun-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-city-one-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 0.731,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sheung-shui-eal-cn-hongkong-fanling-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-sheung-shui-eal",
+      "to_stop_id": "cn-hongkong-fanling-eal",
+      "from_station_id": "cn-hongkong-sheung-shui",
+      "to_station_id": "cn-hongkong-fanling",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 1.529,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 162,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sheung-wan-isl-cn-hongkong-sai-ying-pun-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-sheung-wan-isl",
+      "to_stop_id": "cn-hongkong-sai-ying-pun-isl",
+      "from_station_id": "cn-hongkong-sheung-wan",
+      "to_station_id": "cn-hongkong-sai-ying-pun",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-sheung-wan-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-sai-ying-pun-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 1.052,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-siu-hong-tml-cn-hongkong-tuen-mun-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-siu-hong-tml",
+      "to_stop_id": "cn-hongkong-tuen-mun-tml",
+      "from_station_id": "cn-hongkong-siu-hong",
+      "to_station_id": "cn-hongkong-tuen-mun",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 1.959,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 41,
+        "a_s_per_km": 33.7,
+        "b_s": 105.8
+      },
+      "travel_time_seconds": 172,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sung-wong-toi-tml-cn-hongkong-to-kwa-wan-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-sung-wong-toi-tml",
+      "to_stop_id": "cn-hongkong-to-kwa-wan-tml",
+      "from_station_id": "cn-hongkong-sung-wong-toi",
+      "to_station_id": "cn-hongkong-to-kwa-wan",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-sung-wong-toi-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-to-kwa-wan-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.105,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sunny-bay-drl-cn-hongkong-disneyland-resort-drl",
+      "line_id": "cn-hongkong-line-drl",
+      "from_stop_id": "cn-hongkong-sunny-bay-drl",
+      "to_stop_id": "cn-hongkong-disneyland-resort-drl",
+      "from_station_id": "cn-hongkong-sunny-bay",
+      "to_station_id": "cn-hongkong-disneyland-resort",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 2.486,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 45.9,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 195,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-sunny-bay-tcl-cn-hongkong-tsing-yi-tcl",
+      "line_id": "cn-hongkong-line-tcl",
+      "from_stop_id": "cn-hongkong-sunny-bay-tcl",
+      "to_stop_id": "cn-hongkong-tsing-yi-tcl",
+      "from_station_id": "cn-hongkong-sunny-bay",
+      "to_station_id": "cn-hongkong-tsing-yi",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 480,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-sunny-bay-tcl-to-cn-hongkong-hong-kong-tcl",
+        "cn-hongkong-cn-hongkong-tsing-yi-tcl-to-cn-hongkong-hong-kong-tcl"
+      ],
+      "distance_km": 8.539,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tai-koo-isl-cn-hongkong-quarry-bay-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-tai-koo-isl",
+      "to_stop_id": "cn-hongkong-quarry-bay-isl",
+      "from_station_id": "cn-hongkong-tai-koo",
+      "to_station_id": "cn-hongkong-quarry-bay",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tai-koo-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-quarry-bay-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.74,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tai-po-market-eal-cn-hongkong-university-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-tai-po-market-eal",
+      "to_stop_id": "cn-hongkong-university-eal",
+      "from_station_id": "cn-hongkong-tai-po-market",
+      "to_station_id": "cn-hongkong-university",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 5.34,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 64.9,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 296,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tai-shui-hang-tml-cn-hongkong-shek-mun-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-tai-shui-hang-tml",
+      "to_stop_id": "cn-hongkong-shek-mun-tml",
+      "from_station_id": "cn-hongkong-tai-shui-hang",
+      "to_station_id": "cn-hongkong-shek-mun",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tai-shui-hang-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-shek-mun-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 2.729,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tai-wai-eal-cn-hongkong-kowloon-tong-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-tai-wai-eal",
+      "to_stop_id": "cn-hongkong-kowloon-tong-eal",
+      "from_station_id": "cn-hongkong-tai-wai",
+      "to_station_id": "cn-hongkong-kowloon-tong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 4.004,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 57.9,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 249,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tai-wai-tml-cn-hongkong-hin-keng-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-tai-wai-tml",
+      "to_stop_id": "cn-hongkong-hin-keng-tml",
+      "from_station_id": "cn-hongkong-tai-wai",
+      "to_station_id": "cn-hongkong-hin-keng",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tai-wai-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-hin-keng-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.256,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tai-wo-eal-cn-hongkong-tai-po-market-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-tai-wo-eal",
+      "to_stop_id": "cn-hongkong-tai-po-market-eal",
+      "from_station_id": "cn-hongkong-tai-wo",
+      "to_station_id": "cn-hongkong-tai-po-market",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 1.164,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28.1,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 149,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tai-wo-hau-twl-cn-hongkong-kwai-hing-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-tai-wo-hau-twl",
+      "to_stop_id": "cn-hongkong-kwai-hing-twl",
+      "from_station_id": "cn-hongkong-tai-wo-hau",
+      "to_station_id": "cn-hongkong-kwai-hing",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tai-wo-hau-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-kwai-hing-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 1.069,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tin-hau-isl-cn-hongkong-causeway-bay-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-tin-hau-isl",
+      "to_stop_id": "cn-hongkong-causeway-bay-isl",
+      "from_station_id": "cn-hongkong-tin-hau",
+      "to_station_id": "cn-hongkong-causeway-bay",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tin-hau-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-causeway-bay-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.89,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tin-shui-wai-tml-cn-hongkong-siu-hong-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-tin-shui-wai-tml",
+      "to_stop_id": "cn-hongkong-siu-hong-tml",
+      "from_station_id": "cn-hongkong-tin-shui-wai",
+      "to_station_id": "cn-hongkong-siu-hong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tin-shui-wai-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-siu-hong-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 4.754,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tiu-keng-leng-ktl-cn-hongkong-yau-tong-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-tiu-keng-leng-ktl",
+      "to_stop_id": "cn-hongkong-yau-tong-ktl",
+      "from_station_id": "cn-hongkong-tiu-keng-leng",
+      "to_station_id": "cn-hongkong-yau-tong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tiu-keng-leng-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-yau-tong-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 1.711,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tiu-keng-leng-tkl-cn-hongkong-yau-tong-tkl",
+      "line_id": "cn-hongkong-line-tkl",
+      "from_stop_id": "cn-hongkong-tiu-keng-leng-tkl",
+      "to_stop_id": "cn-hongkong-yau-tong-tkl",
+      "from_station_id": "cn-hongkong-tiu-keng-leng",
+      "to_station_id": "cn-hongkong-yau-tong",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tiu-keng-leng-tkl-to-cn-hongkong-north-point-tkl",
+        "cn-hongkong-cn-hongkong-yau-tong-tkl-to-cn-hongkong-north-point-tkl"
+      ],
+      "distance_km": 1.711,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-to-kwa-wan-tml-cn-hongkong-ho-man-tin-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-to-kwa-wan-tml",
+      "to_stop_id": "cn-hongkong-ho-man-tin-tml",
+      "from_station_id": "cn-hongkong-to-kwa-wan",
+      "to_station_id": "cn-hongkong-ho-man-tin",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-to-kwa-wan-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-ho-man-tin-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 0.925,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tseung-kwan-o-tkl-cn-hongkong-tiu-keng-leng-tkl",
+      "line_id": "cn-hongkong-line-tkl",
+      "from_stop_id": "cn-hongkong-tseung-kwan-o-tkl",
+      "to_stop_id": "cn-hongkong-tiu-keng-leng-tkl",
+      "from_station_id": "cn-hongkong-tseung-kwan-o",
+      "to_station_id": "cn-hongkong-tiu-keng-leng",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tseung-kwan-o-tkl-to-cn-hongkong-north-point-tkl",
+        "cn-hongkong-cn-hongkong-tiu-keng-leng-tkl-to-cn-hongkong-north-point-tkl"
+      ],
+      "distance_km": 0.861,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tsim-sha-tsui-twl-cn-hongkong-admiralty-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-tsim-sha-tsui-twl",
+      "to_stop_id": "cn-hongkong-admiralty-twl",
+      "from_station_id": "cn-hongkong-tsim-sha-tsui",
+      "to_station_id": "cn-hongkong-admiralty",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tsim-sha-tsui-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-admiralty-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 2.141,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tsing-yi-ael-cn-hongkong-kowloon-ael",
+      "line_id": "cn-hongkong-line-ael",
+      "from_stop_id": "cn-hongkong-tsing-yi-ael",
+      "to_stop_id": "cn-hongkong-kowloon-ael",
+      "from_station_id": "cn-hongkong-tsing-yi",
+      "to_station_id": "cn-hongkong-kowloon",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 8.134,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 74.1,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 395,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tsing-yi-tcl-cn-hongkong-lai-king-tcl",
+      "line_id": "cn-hongkong-line-tcl",
+      "from_stop_id": "cn-hongkong-tsing-yi-tcl",
+      "to_stop_id": "cn-hongkong-lai-king-tcl",
+      "from_station_id": "cn-hongkong-tsing-yi",
+      "to_station_id": "cn-hongkong-lai-king",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tsing-yi-tcl-to-cn-hongkong-hong-kong-tcl",
+        "cn-hongkong-cn-hongkong-lai-king-tcl-to-cn-hongkong-hong-kong-tcl"
+      ],
+      "distance_km": 2.196,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tsuen-wan-twl-cn-hongkong-tai-wo-hau-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-tsuen-wan-twl",
+      "to_stop_id": "cn-hongkong-tai-wo-hau-twl",
+      "from_station_id": "cn-hongkong-tsuen-wan",
+      "to_station_id": "cn-hongkong-tai-wo-hau",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tsuen-wan-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-tai-wo-hau-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.81,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tsuen-wan-west-tml-cn-hongkong-kam-sheung-road-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-tsuen-wan-west-tml",
+      "to_stop_id": "cn-hongkong-kam-sheung-road-tml",
+      "from_station_id": "cn-hongkong-tsuen-wan-west",
+      "to_station_id": "cn-hongkong-kam-sheung-road",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 360,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tsuen-wan-west-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-kam-sheung-road-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 8.838,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-tung-chung-tcl-cn-hongkong-sunny-bay-tcl",
+      "line_id": "cn-hongkong-line-tcl",
+      "from_stop_id": "cn-hongkong-tung-chung-tcl",
+      "to_stop_id": "cn-hongkong-sunny-bay-tcl",
+      "from_station_id": "cn-hongkong-tung-chung",
+      "to_station_id": "cn-hongkong-sunny-bay",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 420,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-tung-chung-tcl-to-cn-hongkong-hong-kong-tcl",
+        "cn-hongkong-cn-hongkong-sunny-bay-tcl-to-cn-hongkong-hong-kong-tcl"
+      ],
+      "distance_km": 10.291,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-university-eal-cn-hongkong-fo-tan-eal",
+      "line_id": "cn-hongkong-line-eal",
+      "from_stop_id": "cn-hongkong-university-eal",
+      "to_stop_id": "cn-hongkong-fo-tan-eal",
+      "from_station_id": "cn-hongkong-university",
+      "to_station_id": "cn-hongkong-fo-tan",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 2.402,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 44.8,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 193,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-wan-chai-isl-cn-hongkong-admiralty-isl",
+      "line_id": "cn-hongkong-line-isl",
+      "from_stop_id": "cn-hongkong-wan-chai-isl",
+      "to_stop_id": "cn-hongkong-admiralty-isl",
+      "from_station_id": "cn-hongkong-wan-chai",
+      "to_station_id": "cn-hongkong-admiralty",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 480,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-wan-chai-isl-to-cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-cn-hongkong-admiralty-isl-to-cn-hongkong-kennedy-town-isl"
+      ],
+      "distance_km": 0.796,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-wong-chuk-hang-sil-cn-hongkong-lei-tung-sil",
+      "line_id": "cn-hongkong-line-sil",
+      "from_stop_id": "cn-hongkong-wong-chuk-hang-sil",
+      "to_stop_id": "cn-hongkong-lei-tung-sil",
+      "from_station_id": "cn-hongkong-wong-chuk-hang",
+      "to_station_id": "cn-hongkong-lei-tung",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "distance_km": 1.33,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 30.9,
+        "a_s_per_km": 35.3,
+        "b_s": 107.8
+      },
+      "travel_time_seconds": 155,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-wong-tai-sin-ktl-cn-hongkong-lok-fu-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-wong-tai-sin-ktl",
+      "to_stop_id": "cn-hongkong-lok-fu-ktl",
+      "from_station_id": "cn-hongkong-wong-tai-sin",
+      "to_station_id": "cn-hongkong-lok-fu",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-wong-tai-sin-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-lok-fu-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 0.817,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-wu-kai-sha-tml-cn-hongkong-ma-on-shan-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-wu-kai-sha-tml",
+      "to_stop_id": "cn-hongkong-ma-on-shan-tml",
+      "from_station_id": "cn-hongkong-wu-kai-sha",
+      "to_station_id": "cn-hongkong-ma-on-shan",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-wu-kai-sha-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-ma-on-shan-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.317,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-yau-ma-tei-ktl-cn-hongkong-ho-man-tin-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-yau-ma-tei-ktl",
+      "to_stop_id": "cn-hongkong-ho-man-tin-ktl",
+      "from_station_id": "cn-hongkong-yau-ma-tei",
+      "to_station_id": "cn-hongkong-ho-man-tin",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-yau-ma-tei-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-ho-man-tin-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 1.308,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-yau-ma-tei-twl-cn-hongkong-jordan-twl",
+      "line_id": "cn-hongkong-line-twl",
+      "from_stop_id": "cn-hongkong-yau-ma-tei-twl",
+      "to_stop_id": "cn-hongkong-jordan-twl",
+      "from_station_id": "cn-hongkong-yau-ma-tei",
+      "to_station_id": "cn-hongkong-jordan",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-yau-ma-tei-twl-to-cn-hongkong-central-twl",
+        "cn-hongkong-cn-hongkong-jordan-twl-to-cn-hongkong-central-twl"
+      ],
+      "distance_km": 0.911,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-yau-tong-ktl-cn-hongkong-lam-tin-ktl",
+      "line_id": "cn-hongkong-line-ktl",
+      "from_stop_id": "cn-hongkong-yau-tong-ktl",
+      "to_stop_id": "cn-hongkong-lam-tin-ktl",
+      "from_station_id": "cn-hongkong-yau-tong",
+      "to_station_id": "cn-hongkong-lam-tin",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-yau-tong-ktl-to-cn-hongkong-whampoa-ktl",
+        "cn-hongkong-cn-hongkong-lam-tin-ktl-to-cn-hongkong-whampoa-ktl"
+      ],
+      "distance_km": 1.053,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-yau-tong-tkl-cn-hongkong-quarry-bay-tkl",
+      "line_id": "cn-hongkong-line-tkl",
+      "from_stop_id": "cn-hongkong-yau-tong-tkl",
+      "to_stop_id": "cn-hongkong-quarry-bay-tkl",
+      "from_station_id": "cn-hongkong-yau-tong",
+      "to_station_id": "cn-hongkong-quarry-bay",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-yau-tong-tkl-to-cn-hongkong-north-point-tkl",
+        "cn-hongkong-cn-hongkong-quarry-bay-tkl-to-cn-hongkong-north-point-tkl"
+      ],
+      "distance_km": 3.02,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-hongkong-seg-cn-hongkong-yuen-long-tml-cn-hongkong-long-ping-tml",
+      "line_id": "cn-hongkong-line-tml",
+      "from_stop_id": "cn-hongkong-yuen-long-tml",
+      "to_stop_id": "cn-hongkong-long-ping-tml",
+      "from_station_id": "cn-hongkong-yuen-long",
+      "to_station_id": "cn-hongkong-long-ping",
+      "direction": "both",
+      "source_id": "mtr-lines-and-stations",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-hongkong-cn-hongkong-yuen-long-tml-to-cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-cn-hongkong-long-ping-tml-to-cn-hongkong-tuen-mun-tml"
+      ],
+      "distance_km": 1.047,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    }
+  ]
+}

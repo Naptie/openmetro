@@ -49,6 +49,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-hongkong": {
+      "name": "@openmetro/adapter-cn-hongkong",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-shanghai": {
       "name": "@openmetro/adapter-cn-shanghai",
       "version": "0.1.0",
@@ -316,6 +328,8 @@
     "@openmetro/adapter-cn-guangzhou": ["@openmetro/adapter-cn-guangzhou@workspace:packages/adapters/cn-guangzhou"],
 
     "@openmetro/adapter-cn-hangzhou": ["@openmetro/adapter-cn-hangzhou@workspace:packages/adapters/cn-hangzhou"],
+
+    "@openmetro/adapter-cn-hongkong": ["@openmetro/adapter-cn-hongkong@workspace:packages/adapters/cn-hongkong"],
 
     "@openmetro/adapter-cn-shanghai": ["@openmetro/adapter-cn-shanghai@workspace:packages/adapters/cn-shanghai"],
 

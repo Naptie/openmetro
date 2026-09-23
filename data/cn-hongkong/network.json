@@ -1,30 +1,30 @@
 {
-  "id": "cn-hangzhou",
-  "name": "杭州地铁",
+  "id": "cn-hongkong",
+  "name": "港鐵",
   "names": {
-    "zh": "杭州地铁",
-    "en": "Hangzhou Metro"
+    "zh": "港鐵",
+    "en": "Mass Transit Railway"
   },
   "city": {
-    "id": "CN-3301",
+    "id": "HK",
     "name": {
-      "zh": "杭州",
-      "en": "Hangzhou"
+      "zh": "香港",
+      "en": "Hong Kong"
     },
-    "country": "CN",
-    "population": 12376000,
-    "area": 16850,
+    "country": "HK",
+    "population": 7500000,
+    "area": 1110,
     "location": {
       "type": "Point",
       "coordinates": [
-        120.1551,
-        30.2741
+        114.1694,
+        22.3193
       ]
     }
   },
-  "country_code": "CN",
-  "currency": "CNY",
-  "timezone": "Asia/Shanghai",
+  "country_code": "HK",
+  "currency": "HKD",
+  "timezone": "Asia/Hong_Kong",
   "coordinate_system": "gcj02",
   "default_units": {
     "distance": "km",
@@ -36,7 +36,7 @@
     "default_transfer_seconds": 120,
     "max_transfer_seconds": 600
   },
-  "notes": "拓扑与首末班来自杭州地铁官网 operation/all（工作日时刻表口径）；线色/坐标/英文名来自官网线网图所使用的 AMap Subway 数据。",
+  "notes": "拓扑与中英文站名来自 MTR 开放数据 mtr_lines_and_stations.csv；首末班来自官网 service_hours_search.php；票价矩阵来自 mtr_lines_fares.csv + airport_express_fares.csv（成人八达通）。区间时分由末班车链推导。轻铁与巴士不在本网络内。坐标由 geocode 链补齐（GCJ-02）。",
   "quality": {
     "topology": {
       "precision": "official",
@@ -53,8 +53,8 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 260,
-        "derived": 1,
+        "official": 97,
+        "derived": 0,
         "default": 0
       }
     },
@@ -63,7 +63,7 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 261,
+        "official": 97,
         "derived": 0,
         "default": 0
       }
@@ -74,7 +74,7 @@
       "status": "derived",
       "counts": {
         "official": 0,
-        "derived": 299,
+        "derived": 110,
         "default": 0
       }
     },
@@ -84,7 +84,7 @@
       "status": "derived",
       "counts": {
         "official": 0,
-        "derived": 299,
+        "derived": 110,
         "default": 0
       }
     },
@@ -94,7 +94,7 @@
       "status": "derived",
       "counts": {
         "official": 0,
-        "derived": 104,
+        "derived": 52,
         "default": 0
       }
     },
@@ -103,29 +103,29 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 749,
+        "official": 311,
         "derived": 0,
         "default": 0
       }
     },
     "schematic": {
-      "precision": "official",
-      "coverage": 1,
-      "status": "complete",
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
       "counts": {
-        "official": 308,
+        "official": 0,
         "derived": 0,
-        "default": 1
+        "default": 120
       }
     },
     "fares": {
       "precision": "official",
-      "coverage": 1,
-      "status": "complete",
+      "coverage": 0.96,
+      "status": "partial",
       "counts": {
-        "official": 67860,
+        "official": 8944,
         "derived": 0,
-        "default": 0
+        "default": 368
       }
     }
   }

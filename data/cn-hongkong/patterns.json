@@ -1,0 +1,967 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-hongkong",
+  "generated_at": "2026-09-23T08:28:03.529Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-hongkong-line-ael-pattern-expo-to-kong",
+      "line_id": "cn-hongkong-line-ael",
+      "name": "機場快綫",
+      "names": {
+        "zh": "機場快綫",
+        "en": "Airport Express"
+      },
+      "stop_ids": [
+        "cn-hongkong-asiaworld-expo-ael",
+        "cn-hongkong-airport-ael",
+        "cn-hongkong-tsing-yi-ael",
+        "cn-hongkong-kowloon-ael",
+        "cn-hongkong-hong-kong-ael"
+      ],
+      "origin_stop_id": "cn-hongkong-asiaworld-expo-ael",
+      "terminal_stop_id": "cn-hongkong-hong-kong-ael",
+      "is_primary": true,
+      "color": "#00888a",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "AEL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "AEL",
+        "direction": "DT",
+        "dest_name": "Hong Kong",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-ael-pattern-kong-to-expo",
+      "line_id": "cn-hongkong-line-ael",
+      "name": "機場快綫",
+      "names": {
+        "zh": "機場快綫",
+        "en": "Airport Express"
+      },
+      "stop_ids": [
+        "cn-hongkong-hong-kong-ael",
+        "cn-hongkong-kowloon-ael",
+        "cn-hongkong-tsing-yi-ael",
+        "cn-hongkong-airport-ael",
+        "cn-hongkong-asiaworld-expo-ael"
+      ],
+      "origin_stop_id": "cn-hongkong-hong-kong-ael",
+      "terminal_stop_id": "cn-hongkong-asiaworld-expo-ael",
+      "is_primary": false,
+      "color": "#00888a",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "AEL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "AEL",
+        "direction": "UT",
+        "dest_name": "AsiaWorld-Expo",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-ael-pattern-expo-to-kong"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-drl-pattern-bay-to-resort",
+      "line_id": "cn-hongkong-line-drl",
+      "name": "迪士尼綫",
+      "names": {
+        "zh": "迪士尼綫",
+        "en": "Disneyland Resort Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-sunny-bay-drl",
+        "cn-hongkong-disneyland-resort-drl"
+      ],
+      "origin_stop_id": "cn-hongkong-sunny-bay-drl",
+      "terminal_stop_id": "cn-hongkong-disneyland-resort-drl",
+      "is_primary": true,
+      "color": "#f550a1",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "DRL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "DRL",
+        "direction": "DT",
+        "dest_name": "Disneyland Resort",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-drl-pattern-resort-to-bay",
+      "line_id": "cn-hongkong-line-drl",
+      "name": "迪士尼綫",
+      "names": {
+        "zh": "迪士尼綫",
+        "en": "Disneyland Resort Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-disneyland-resort-drl",
+        "cn-hongkong-sunny-bay-drl"
+      ],
+      "origin_stop_id": "cn-hongkong-disneyland-resort-drl",
+      "terminal_stop_id": "cn-hongkong-sunny-bay-drl",
+      "is_primary": false,
+      "color": "#f550a1",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "DRL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "DRL",
+        "direction": "UT",
+        "dest_name": "Sunny Bay",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-drl-pattern-bay-to-resort"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-eal-pattern-admiralty-to-chau",
+      "line_id": "cn-hongkong-line-eal",
+      "name": "東鐵綫",
+      "names": {
+        "zh": "東鐵綫",
+        "en": "East Rail Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-admiralty-eal",
+        "cn-hongkong-exhibition-centre-eal",
+        "cn-hongkong-hung-hom-eal",
+        "cn-hongkong-mong-kok-east-eal",
+        "cn-hongkong-kowloon-tong-eal",
+        "cn-hongkong-tai-wai-eal",
+        "cn-hongkong-sha-tin-eal",
+        "cn-hongkong-fo-tan-eal",
+        "cn-hongkong-university-eal",
+        "cn-hongkong-tai-po-market-eal",
+        "cn-hongkong-tai-wo-eal",
+        "cn-hongkong-fanling-eal",
+        "cn-hongkong-sheung-shui-eal",
+        "cn-hongkong-lok-ma-chau-eal"
+      ],
+      "origin_stop_id": "cn-hongkong-admiralty-eal",
+      "terminal_stop_id": "cn-hongkong-lok-ma-chau-eal",
+      "is_primary": false,
+      "color": "#5eb7e8",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "EAL:LMC-UT"
+        }
+      ],
+      "extras": {
+        "line_code": "EAL",
+        "direction": "LMC-UT",
+        "dest_name": "Lok Ma Chau",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-eal-pattern-chau-to-admiralty"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-eal-pattern-admiralty-to-wu",
+      "line_id": "cn-hongkong-line-eal",
+      "name": "東鐵綫",
+      "names": {
+        "zh": "東鐵綫",
+        "en": "East Rail Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-admiralty-eal",
+        "cn-hongkong-exhibition-centre-eal",
+        "cn-hongkong-hung-hom-eal",
+        "cn-hongkong-mong-kok-east-eal",
+        "cn-hongkong-kowloon-tong-eal",
+        "cn-hongkong-tai-wai-eal",
+        "cn-hongkong-sha-tin-eal",
+        "cn-hongkong-fo-tan-eal",
+        "cn-hongkong-university-eal",
+        "cn-hongkong-tai-po-market-eal",
+        "cn-hongkong-tai-wo-eal",
+        "cn-hongkong-fanling-eal",
+        "cn-hongkong-sheung-shui-eal",
+        "cn-hongkong-lo-wu-eal"
+      ],
+      "origin_stop_id": "cn-hongkong-admiralty-eal",
+      "terminal_stop_id": "cn-hongkong-lo-wu-eal",
+      "is_primary": false,
+      "color": "#5eb7e8",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "EAL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "EAL",
+        "direction": "UT",
+        "dest_name": "Lo Wu",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-eal-pattern-wu-to-admiralty"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-eal-pattern-chau-to-admiralty",
+      "line_id": "cn-hongkong-line-eal",
+      "name": "東鐵綫",
+      "names": {
+        "zh": "東鐵綫",
+        "en": "East Rail Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-lok-ma-chau-eal",
+        "cn-hongkong-sheung-shui-eal",
+        "cn-hongkong-fanling-eal",
+        "cn-hongkong-tai-wo-eal",
+        "cn-hongkong-tai-po-market-eal",
+        "cn-hongkong-university-eal",
+        "cn-hongkong-fo-tan-eal",
+        "cn-hongkong-sha-tin-eal",
+        "cn-hongkong-tai-wai-eal",
+        "cn-hongkong-kowloon-tong-eal",
+        "cn-hongkong-mong-kok-east-eal",
+        "cn-hongkong-hung-hom-eal",
+        "cn-hongkong-exhibition-centre-eal",
+        "cn-hongkong-admiralty-eal"
+      ],
+      "origin_stop_id": "cn-hongkong-lok-ma-chau-eal",
+      "terminal_stop_id": "cn-hongkong-admiralty-eal",
+      "is_primary": false,
+      "junction_stop_id": "cn-hongkong-admiralty-eal",
+      "color": "#5eb7e8",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "EAL:LMC-DT"
+        }
+      ],
+      "extras": {
+        "line_code": "EAL",
+        "direction": "LMC-DT",
+        "dest_name": "Admiralty",
+        "pattern_role": "branch"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-eal-pattern-wu-to-admiralty",
+      "line_id": "cn-hongkong-line-eal",
+      "name": "東鐵綫",
+      "names": {
+        "zh": "東鐵綫",
+        "en": "East Rail Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-lo-wu-eal",
+        "cn-hongkong-sheung-shui-eal",
+        "cn-hongkong-fanling-eal",
+        "cn-hongkong-tai-wo-eal",
+        "cn-hongkong-tai-po-market-eal",
+        "cn-hongkong-university-eal",
+        "cn-hongkong-fo-tan-eal",
+        "cn-hongkong-sha-tin-eal",
+        "cn-hongkong-tai-wai-eal",
+        "cn-hongkong-kowloon-tong-eal",
+        "cn-hongkong-mong-kok-east-eal",
+        "cn-hongkong-hung-hom-eal",
+        "cn-hongkong-exhibition-centre-eal",
+        "cn-hongkong-admiralty-eal"
+      ],
+      "origin_stop_id": "cn-hongkong-lo-wu-eal",
+      "terminal_stop_id": "cn-hongkong-admiralty-eal",
+      "is_primary": true,
+      "color": "#5eb7e8",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "EAL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "EAL",
+        "direction": "DT",
+        "dest_name": "Admiralty",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-isl-pattern-town-to-wan",
+      "line_id": "cn-hongkong-line-isl",
+      "name": "港島綫",
+      "names": {
+        "zh": "港島綫",
+        "en": "Island Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-kennedy-town-isl",
+        "cn-hongkong-hku-isl",
+        "cn-hongkong-sai-ying-pun-isl",
+        "cn-hongkong-sheung-wan-isl",
+        "cn-hongkong-central-isl",
+        "cn-hongkong-admiralty-isl",
+        "cn-hongkong-wan-chai-isl",
+        "cn-hongkong-causeway-bay-isl",
+        "cn-hongkong-tin-hau-isl",
+        "cn-hongkong-fortress-hill-isl",
+        "cn-hongkong-north-point-isl",
+        "cn-hongkong-quarry-bay-isl",
+        "cn-hongkong-tai-koo-isl",
+        "cn-hongkong-sai-wan-ho-isl",
+        "cn-hongkong-shau-kei-wan-isl",
+        "cn-hongkong-heng-fa-chuen-isl",
+        "cn-hongkong-chai-wan-isl"
+      ],
+      "origin_stop_id": "cn-hongkong-kennedy-town-isl",
+      "terminal_stop_id": "cn-hongkong-chai-wan-isl",
+      "is_primary": false,
+      "color": "#0075c2",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "ISL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "ISL",
+        "direction": "UT",
+        "dest_name": "Chai Wan",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-isl-pattern-wan-to-town"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-isl-pattern-wan-to-town",
+      "line_id": "cn-hongkong-line-isl",
+      "name": "港島綫",
+      "names": {
+        "zh": "港島綫",
+        "en": "Island Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-chai-wan-isl",
+        "cn-hongkong-heng-fa-chuen-isl",
+        "cn-hongkong-shau-kei-wan-isl",
+        "cn-hongkong-sai-wan-ho-isl",
+        "cn-hongkong-tai-koo-isl",
+        "cn-hongkong-quarry-bay-isl",
+        "cn-hongkong-north-point-isl",
+        "cn-hongkong-fortress-hill-isl",
+        "cn-hongkong-tin-hau-isl",
+        "cn-hongkong-causeway-bay-isl",
+        "cn-hongkong-wan-chai-isl",
+        "cn-hongkong-admiralty-isl",
+        "cn-hongkong-central-isl",
+        "cn-hongkong-sheung-wan-isl",
+        "cn-hongkong-sai-ying-pun-isl",
+        "cn-hongkong-hku-isl",
+        "cn-hongkong-kennedy-town-isl"
+      ],
+      "origin_stop_id": "cn-hongkong-chai-wan-isl",
+      "terminal_stop_id": "cn-hongkong-kennedy-town-isl",
+      "is_primary": true,
+      "color": "#0075c2",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "ISL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "ISL",
+        "direction": "DT",
+        "dest_name": "Kennedy Town",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-ktl-pattern-leng-to-whampoa",
+      "line_id": "cn-hongkong-line-ktl",
+      "name": "觀塘綫",
+      "names": {
+        "zh": "觀塘綫",
+        "en": "Kwun Tong Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-tiu-keng-leng-ktl",
+        "cn-hongkong-yau-tong-ktl",
+        "cn-hongkong-lam-tin-ktl",
+        "cn-hongkong-kwun-tong-ktl",
+        "cn-hongkong-ngau-tau-kok-ktl",
+        "cn-hongkong-kowloon-bay-ktl",
+        "cn-hongkong-choi-hung-ktl",
+        "cn-hongkong-diamond-hill-ktl",
+        "cn-hongkong-wong-tai-sin-ktl",
+        "cn-hongkong-lok-fu-ktl",
+        "cn-hongkong-kowloon-tong-ktl",
+        "cn-hongkong-shek-kip-mei-ktl",
+        "cn-hongkong-prince-edward-ktl",
+        "cn-hongkong-mong-kok-ktl",
+        "cn-hongkong-yau-ma-tei-ktl",
+        "cn-hongkong-ho-man-tin-ktl",
+        "cn-hongkong-whampoa-ktl"
+      ],
+      "origin_stop_id": "cn-hongkong-tiu-keng-leng-ktl",
+      "terminal_stop_id": "cn-hongkong-whampoa-ktl",
+      "is_primary": true,
+      "color": "#00ab4e",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "KTL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "KTL",
+        "direction": "DT",
+        "dest_name": "Whampoa",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-ktl-pattern-whampoa-to-leng",
+      "line_id": "cn-hongkong-line-ktl",
+      "name": "觀塘綫",
+      "names": {
+        "zh": "觀塘綫",
+        "en": "Kwun Tong Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-whampoa-ktl",
+        "cn-hongkong-ho-man-tin-ktl",
+        "cn-hongkong-yau-ma-tei-ktl",
+        "cn-hongkong-mong-kok-ktl",
+        "cn-hongkong-prince-edward-ktl",
+        "cn-hongkong-shek-kip-mei-ktl",
+        "cn-hongkong-kowloon-tong-ktl",
+        "cn-hongkong-lok-fu-ktl",
+        "cn-hongkong-wong-tai-sin-ktl",
+        "cn-hongkong-diamond-hill-ktl",
+        "cn-hongkong-choi-hung-ktl",
+        "cn-hongkong-kowloon-bay-ktl",
+        "cn-hongkong-ngau-tau-kok-ktl",
+        "cn-hongkong-kwun-tong-ktl",
+        "cn-hongkong-lam-tin-ktl",
+        "cn-hongkong-yau-tong-ktl",
+        "cn-hongkong-tiu-keng-leng-ktl"
+      ],
+      "origin_stop_id": "cn-hongkong-whampoa-ktl",
+      "terminal_stop_id": "cn-hongkong-tiu-keng-leng-ktl",
+      "is_primary": false,
+      "color": "#00ab4e",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "KTL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "KTL",
+        "direction": "UT",
+        "dest_name": "Tiu Keng Leng",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-ktl-pattern-leng-to-whampoa"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-sil-pattern-admiralty-to-horizons",
+      "line_id": "cn-hongkong-line-sil",
+      "name": "南港島綫",
+      "names": {
+        "zh": "南港島綫",
+        "en": "South Island Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-admiralty-sil",
+        "cn-hongkong-ocean-park-sil",
+        "cn-hongkong-wong-chuk-hang-sil",
+        "cn-hongkong-lei-tung-sil",
+        "cn-hongkong-south-horizons-sil"
+      ],
+      "origin_stop_id": "cn-hongkong-admiralty-sil",
+      "terminal_stop_id": "cn-hongkong-south-horizons-sil",
+      "is_primary": true,
+      "color": "#bac429",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "SIL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "SIL",
+        "direction": "UT",
+        "dest_name": "South Horizons",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-sil-pattern-horizons-to-admiralty",
+      "line_id": "cn-hongkong-line-sil",
+      "name": "南港島綫",
+      "names": {
+        "zh": "南港島綫",
+        "en": "South Island Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-south-horizons-sil",
+        "cn-hongkong-lei-tung-sil",
+        "cn-hongkong-wong-chuk-hang-sil",
+        "cn-hongkong-ocean-park-sil",
+        "cn-hongkong-admiralty-sil"
+      ],
+      "origin_stop_id": "cn-hongkong-south-horizons-sil",
+      "terminal_stop_id": "cn-hongkong-admiralty-sil",
+      "is_primary": false,
+      "color": "#bac429",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "SIL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "SIL",
+        "direction": "DT",
+        "dest_name": "Admiralty",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-sil-pattern-admiralty-to-horizons"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tcl-pattern-chung-to-kong",
+      "line_id": "cn-hongkong-line-tcl",
+      "name": "東涌綫",
+      "names": {
+        "zh": "東涌綫",
+        "en": "Tung Chung Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-tung-chung-tcl",
+        "cn-hongkong-sunny-bay-tcl",
+        "cn-hongkong-tsing-yi-tcl",
+        "cn-hongkong-lai-king-tcl",
+        "cn-hongkong-nam-cheong-tcl",
+        "cn-hongkong-olympic-tcl",
+        "cn-hongkong-kowloon-tcl",
+        "cn-hongkong-hong-kong-tcl"
+      ],
+      "origin_stop_id": "cn-hongkong-tung-chung-tcl",
+      "terminal_stop_id": "cn-hongkong-hong-kong-tcl",
+      "is_primary": true,
+      "color": "#f7943e",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TCL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "TCL",
+        "direction": "DT",
+        "dest_name": "Hong Kong",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tcl-pattern-kong-to-chung",
+      "line_id": "cn-hongkong-line-tcl",
+      "name": "東涌綫",
+      "names": {
+        "zh": "東涌綫",
+        "en": "Tung Chung Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-hong-kong-tcl",
+        "cn-hongkong-kowloon-tcl",
+        "cn-hongkong-olympic-tcl",
+        "cn-hongkong-nam-cheong-tcl",
+        "cn-hongkong-lai-king-tcl",
+        "cn-hongkong-tsing-yi-tcl",
+        "cn-hongkong-sunny-bay-tcl",
+        "cn-hongkong-tung-chung-tcl"
+      ],
+      "origin_stop_id": "cn-hongkong-hong-kong-tcl",
+      "terminal_stop_id": "cn-hongkong-tung-chung-tcl",
+      "is_primary": false,
+      "color": "#f7943e",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TCL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "TCL",
+        "direction": "UT",
+        "dest_name": "Tung Chung",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-tcl-pattern-chung-to-kong"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tkl-pattern-lam-to-point",
+      "line_id": "cn-hongkong-line-tkl",
+      "name": "將軍澳綫",
+      "names": {
+        "zh": "將軍澳綫",
+        "en": "Tseung Kwan O Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-po-lam-tkl",
+        "cn-hongkong-hang-hau-tkl",
+        "cn-hongkong-tseung-kwan-o-tkl",
+        "cn-hongkong-tiu-keng-leng-tkl",
+        "cn-hongkong-yau-tong-tkl",
+        "cn-hongkong-quarry-bay-tkl",
+        "cn-hongkong-north-point-tkl"
+      ],
+      "origin_stop_id": "cn-hongkong-po-lam-tkl",
+      "terminal_stop_id": "cn-hongkong-north-point-tkl",
+      "is_primary": true,
+      "color": "#7d499d",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TKL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "TKL",
+        "direction": "DT",
+        "dest_name": "North Point",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tkl-pattern-leng-to-park",
+      "line_id": "cn-hongkong-line-tkl",
+      "name": "將軍澳綫",
+      "names": {
+        "zh": "將軍澳綫",
+        "en": "Tseung Kwan O Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-tiu-keng-leng-tkl",
+        "cn-hongkong-tseung-kwan-o-tkl",
+        "cn-hongkong-lohas-park-tkl"
+      ],
+      "origin_stop_id": "cn-hongkong-tiu-keng-leng-tkl",
+      "terminal_stop_id": "cn-hongkong-lohas-park-tkl",
+      "is_primary": false,
+      "color": "#7d499d",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TKL:TKS-UT"
+        }
+      ],
+      "extras": {
+        "line_code": "TKL",
+        "direction": "TKS-UT",
+        "dest_name": "LOHAS Park",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-tkl-pattern-park-to-leng"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tkl-pattern-park-to-leng",
+      "line_id": "cn-hongkong-line-tkl",
+      "name": "將軍澳綫",
+      "names": {
+        "zh": "將軍澳綫",
+        "en": "Tseung Kwan O Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-lohas-park-tkl",
+        "cn-hongkong-tseung-kwan-o-tkl",
+        "cn-hongkong-tiu-keng-leng-tkl"
+      ],
+      "origin_stop_id": "cn-hongkong-lohas-park-tkl",
+      "terminal_stop_id": "cn-hongkong-tiu-keng-leng-tkl",
+      "is_primary": false,
+      "junction_stop_id": "cn-hongkong-tiu-keng-leng-tkl",
+      "color": "#7d499d",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TKL:TKS-DT"
+        }
+      ],
+      "extras": {
+        "line_code": "TKL",
+        "direction": "TKS-DT",
+        "dest_name": "Tiu Keng Leng",
+        "pattern_role": "branch"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tkl-pattern-point-to-lam",
+      "line_id": "cn-hongkong-line-tkl",
+      "name": "將軍澳綫",
+      "names": {
+        "zh": "將軍澳綫",
+        "en": "Tseung Kwan O Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-north-point-tkl",
+        "cn-hongkong-quarry-bay-tkl",
+        "cn-hongkong-yau-tong-tkl",
+        "cn-hongkong-tiu-keng-leng-tkl",
+        "cn-hongkong-tseung-kwan-o-tkl",
+        "cn-hongkong-hang-hau-tkl",
+        "cn-hongkong-po-lam-tkl"
+      ],
+      "origin_stop_id": "cn-hongkong-north-point-tkl",
+      "terminal_stop_id": "cn-hongkong-po-lam-tkl",
+      "is_primary": false,
+      "color": "#7d499d",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TKL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "TKL",
+        "direction": "UT",
+        "dest_name": "Po Lam",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-tkl-pattern-lam-to-point"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tkl-pattern-tkl-to-tkl-through",
+      "line_id": "cn-hongkong-line-tkl",
+      "name": "將軍澳綫",
+      "stop_ids": [
+        "cn-hongkong-lohas-park-tkl",
+        "cn-hongkong-tseung-kwan-o-tkl",
+        "cn-hongkong-tiu-keng-leng-tkl",
+        "cn-hongkong-yau-tong-tkl",
+        "cn-hongkong-quarry-bay-tkl",
+        "cn-hongkong-north-point-tkl"
+      ],
+      "origin_stop_id": "cn-hongkong-lohas-park-tkl",
+      "terminal_stop_id": "cn-hongkong-north-point-tkl",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "mtr-service-hours",
+          "id": "cn-hongkong-lohas-park-tkl->cn-hongkong-north-point-tkl"
+        }
+      ],
+      "extras": {
+        "line_code": "TKL",
+        "pattern_role": "through"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tml-pattern-mun-to-sha",
+      "line_id": "cn-hongkong-line-tml",
+      "name": "屯馬綫",
+      "names": {
+        "zh": "屯馬綫",
+        "en": "Tuen Ma Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-tuen-mun-tml",
+        "cn-hongkong-siu-hong-tml",
+        "cn-hongkong-tin-shui-wai-tml",
+        "cn-hongkong-long-ping-tml",
+        "cn-hongkong-yuen-long-tml",
+        "cn-hongkong-kam-sheung-road-tml",
+        "cn-hongkong-tsuen-wan-west-tml",
+        "cn-hongkong-mei-foo-tml",
+        "cn-hongkong-nam-cheong-tml",
+        "cn-hongkong-austin-tml",
+        "cn-hongkong-east-tsim-sha-tsui-tml",
+        "cn-hongkong-hung-hom-tml",
+        "cn-hongkong-ho-man-tin-tml",
+        "cn-hongkong-to-kwa-wan-tml",
+        "cn-hongkong-sung-wong-toi-tml",
+        "cn-hongkong-kai-tak-tml",
+        "cn-hongkong-diamond-hill-tml",
+        "cn-hongkong-hin-keng-tml",
+        "cn-hongkong-tai-wai-tml",
+        "cn-hongkong-che-kung-temple-tml",
+        "cn-hongkong-sha-tin-wai-tml",
+        "cn-hongkong-city-one-tml",
+        "cn-hongkong-shek-mun-tml",
+        "cn-hongkong-tai-shui-hang-tml",
+        "cn-hongkong-heng-on-tml",
+        "cn-hongkong-ma-on-shan-tml",
+        "cn-hongkong-wu-kai-sha-tml"
+      ],
+      "origin_stop_id": "cn-hongkong-tuen-mun-tml",
+      "terminal_stop_id": "cn-hongkong-wu-kai-sha-tml",
+      "is_primary": false,
+      "color": "#923011",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TML:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "TML",
+        "direction": "DT",
+        "dest_name": "Wu Kai Sha",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-tml-pattern-sha-to-mun"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-tml-pattern-sha-to-mun",
+      "line_id": "cn-hongkong-line-tml",
+      "name": "屯馬綫",
+      "names": {
+        "zh": "屯馬綫",
+        "en": "Tuen Ma Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-wu-kai-sha-tml",
+        "cn-hongkong-ma-on-shan-tml",
+        "cn-hongkong-heng-on-tml",
+        "cn-hongkong-tai-shui-hang-tml",
+        "cn-hongkong-shek-mun-tml",
+        "cn-hongkong-city-one-tml",
+        "cn-hongkong-sha-tin-wai-tml",
+        "cn-hongkong-che-kung-temple-tml",
+        "cn-hongkong-tai-wai-tml",
+        "cn-hongkong-hin-keng-tml",
+        "cn-hongkong-diamond-hill-tml",
+        "cn-hongkong-kai-tak-tml",
+        "cn-hongkong-sung-wong-toi-tml",
+        "cn-hongkong-to-kwa-wan-tml",
+        "cn-hongkong-ho-man-tin-tml",
+        "cn-hongkong-hung-hom-tml",
+        "cn-hongkong-east-tsim-sha-tsui-tml",
+        "cn-hongkong-austin-tml",
+        "cn-hongkong-nam-cheong-tml",
+        "cn-hongkong-mei-foo-tml",
+        "cn-hongkong-tsuen-wan-west-tml",
+        "cn-hongkong-kam-sheung-road-tml",
+        "cn-hongkong-yuen-long-tml",
+        "cn-hongkong-long-ping-tml",
+        "cn-hongkong-tin-shui-wai-tml",
+        "cn-hongkong-siu-hong-tml",
+        "cn-hongkong-tuen-mun-tml"
+      ],
+      "origin_stop_id": "cn-hongkong-wu-kai-sha-tml",
+      "terminal_stop_id": "cn-hongkong-tuen-mun-tml",
+      "is_primary": true,
+      "color": "#923011",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TML:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "TML",
+        "direction": "UT",
+        "dest_name": "Tuen Mun",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-twl-pattern-central-to-wan",
+      "line_id": "cn-hongkong-line-twl",
+      "name": "荃灣綫",
+      "names": {
+        "zh": "荃灣綫",
+        "en": "Tsuen Wan Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-central-twl",
+        "cn-hongkong-admiralty-twl",
+        "cn-hongkong-tsim-sha-tsui-twl",
+        "cn-hongkong-jordan-twl",
+        "cn-hongkong-yau-ma-tei-twl",
+        "cn-hongkong-mong-kok-twl",
+        "cn-hongkong-prince-edward-twl",
+        "cn-hongkong-sham-shui-po-twl",
+        "cn-hongkong-cheung-sha-wan-twl",
+        "cn-hongkong-lai-chi-kok-twl",
+        "cn-hongkong-mei-foo-twl",
+        "cn-hongkong-lai-king-twl",
+        "cn-hongkong-kwai-fong-twl",
+        "cn-hongkong-kwai-hing-twl",
+        "cn-hongkong-tai-wo-hau-twl",
+        "cn-hongkong-tsuen-wan-twl"
+      ],
+      "origin_stop_id": "cn-hongkong-central-twl",
+      "terminal_stop_id": "cn-hongkong-tsuen-wan-twl",
+      "is_primary": false,
+      "color": "#e2231a",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TWL:UT"
+        }
+      ],
+      "extras": {
+        "line_code": "TWL",
+        "direction": "UT",
+        "dest_name": "Tsuen Wan",
+        "pattern_role": "reverse",
+        "reverse_of": "cn-hongkong-line-twl-pattern-wan-to-central"
+      }
+    },
+    {
+      "id": "cn-hongkong-line-twl-pattern-wan-to-central",
+      "line_id": "cn-hongkong-line-twl",
+      "name": "荃灣綫",
+      "names": {
+        "zh": "荃灣綫",
+        "en": "Tsuen Wan Line"
+      },
+      "stop_ids": [
+        "cn-hongkong-tsuen-wan-twl",
+        "cn-hongkong-tai-wo-hau-twl",
+        "cn-hongkong-kwai-hing-twl",
+        "cn-hongkong-kwai-fong-twl",
+        "cn-hongkong-lai-king-twl",
+        "cn-hongkong-mei-foo-twl",
+        "cn-hongkong-lai-chi-kok-twl",
+        "cn-hongkong-cheung-sha-wan-twl",
+        "cn-hongkong-sham-shui-po-twl",
+        "cn-hongkong-prince-edward-twl",
+        "cn-hongkong-mong-kok-twl",
+        "cn-hongkong-yau-ma-tei-twl",
+        "cn-hongkong-jordan-twl",
+        "cn-hongkong-tsim-sha-tsui-twl",
+        "cn-hongkong-admiralty-twl",
+        "cn-hongkong-central-twl"
+      ],
+      "origin_stop_id": "cn-hongkong-tsuen-wan-twl",
+      "terminal_stop_id": "cn-hongkong-central-twl",
+      "is_primary": true,
+      "color": "#e2231a",
+      "source_ids": [
+        {
+          "source": "mtr-lines-and-stations",
+          "id": "TWL:DT"
+        }
+      ],
+      "extras": {
+        "line_code": "TWL",
+        "direction": "DT",
+        "dest_name": "Central",
+        "pattern_role": "direction"
+      }
+    }
+  ]
+}

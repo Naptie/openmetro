@@ -1,11 +1,14 @@
 import { join } from 'node:path';
 import {
   deriveTransfers,
+  estimateTimesFromDistanceSpeed,
   fillCoordinates,
+  fillStraightLineDistances,
   type KnownLocation,
   type TransformStations,
   writeCanonical
 } from '@openmetro/core';
+
 import { fetchGuangzhouSources } from './fetch.js';
 import { normalize } from './normalize.js';
 
@@ -135,13 +138,18 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
     crossStation: true
   });
 
+  // Straight-line distance + speed-model times for flat `estimated` gaps.
+  const segments = estimateTimesFromDistanceSpeed(
+    fillStraightLineDistances(canonical.segments, stations)
+  );
+
   await writeCanonical(outDir, 'cn-guangzhou', {
     network: canonical.network,
     lines: canonical.lines,
     stations,
     stops: canonical.stops,
     patterns: canonical.patterns,
-    segments: canonical.segments,
+    segments,
     transfers,
     timetables: canonical.timetables
   });
@@ -154,7 +162,8 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
   console.log('  via overpass:', overpassMatched);
   console.log('  via tencent:', geocoded);
   console.log('stops:', canonical.stops.length);
-  console.log('segments:', canonical.segments.length);
+  console.log('segments:', segments.length);
+  console.log('segments with distance:', segments.filter((s) => s.distance_km != null).length);
   console.log('transfers:', transfers.length);
   console.log(
     'transfers cross-station:',
@@ -162,7 +171,11 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
   );
   console.log(
     'segments derived:',
-    canonical.segments.filter((s) => s.travel_time_source === 'last_train').length
+    segments.filter((s) => s.travel_time_source === 'last_train').length
+  );
+  console.log(
+    'segments distance-speed:',
+    segments.filter((s) => s.extras?.time_estimate === 'distance_speed').length
   );
   console.log('timetables:', canonical.timetables.length);
 }

@@ -5,15 +5,17 @@ import {
   applyHarvestedTransferTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
+  estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStraightLineDistances,
   type LineEncoded,
-  type SegmentEncoded,
   type StationEncoded,
   syncFares,
   type TransformStations,
   writeCanonical
 } from '@openmetro/core';
+
 import { fareSpec } from './fares.js';
 import { fetchMinTime, fetchShenzhenSources, fetchZdxxStation } from './fetch.js';
 import { normalize } from './normalize.js';
@@ -334,35 +336,9 @@ export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}):
     return filledSegs[i] ?? s;
   });
 
-  // Distance estimates from official GCJ-02 coordinates when available.
-  const locById = new Map(
-    stations
-      .filter((s) => s.location)
-      .map((s) => [s.id, s.location as { lon: number; lat: number }] as const)
-  );
-  function haversineKm(a: { lon: number; lat: number }, b: { lon: number; lat: number }): number {
-    const R = 6371;
-    const toRad = (d: number) => (d * Math.PI) / 180;
-    const dLat = toRad(b.lat - a.lat);
-    const dLon = toRad(b.lon - a.lon);
-    const lat1 = toRad(a.lat);
-    const lat2 = toRad(b.lat);
-    const h = Math.sin(dLat / 2) ** 2 + Math.sin(dLon / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
-    return 2 * R * Math.asin(Math.sqrt(h));
-  }
-  segments = segments.map((s: SegmentEncoded) => {
-    if (s.distance_km != null) return s;
-    const a = locById.get(s.from_station_id);
-    const b = locById.get(s.to_station_id);
-    if (!a || !b) return s;
-    const km = haversineKm(a, b);
-    if (!(km > 0.05) || km > 30) return s;
-    return {
-      ...s,
-      distance_km: Math.round(km * 1000) / 1000,
-      extras: { ...(s.extras ?? {}), distance_source: 'gcj02-coords' }
-    };
-  });
+  // Distance from coordinates + speed-model times (core helpers).
+  segments = fillStraightLineDistances(segments, stations, { minKm: 0.05, maxKm: 30 });
+  segments = estimateTimesFromDistanceSpeed(segments);
 
   await writeCanonical(outDir, 'cn-shenzhen', {
     network: canonical.network,

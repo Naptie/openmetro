@@ -6,13 +6,16 @@ import {
   deriveSegmentTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
+  estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStraightLineDistances,
   type LineEncoded,
   normalizeTimetableTimes,
   syncFares,
   writeCanonical
 } from '@openmetro/core';
+
 import { fareSpec, writeWuhanFormulaFares } from './fares.js';
 import { fetchWuhanSources } from './fetch.js';
 import { normalizeWuhan } from './normalize.js';
@@ -259,6 +262,10 @@ export async function runWuhanNormalize(opts: WuhanNormalizeOptions = {}): Promi
   // Last-train derived times fill remaining gaps.
   const derived = deriveSegmentTimes(canonical.patterns, canonical.stops, canonical.timetables, {});
   segments = applyDerivedTimes(segments, derived);
+  // Straight-line distance from coordinates + speed-model times for gaps
+  // (never overwrite source/planner/last_train values).
+  segments = fillStraightLineDistances(segments, stations);
+  segments = estimateTimesFromDistanceSpeed(segments);
   segments = fillMissingSegmentTimes(
     segments,
     canonical.patterns,

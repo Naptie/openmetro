@@ -259,11 +259,11 @@ jobs:
           fi
 
           # Refresh quality summary from the overlayed network.json.quality
-          # blocks (data/QUALITY.md + data/quality.svg + docs/quality.svg).
+          # blocks (data/QUALITY.md + data/quality.svg).
           # README is not touched.
           bun run scripts/write-quality-report.ts
 
-          git add -A data docs/quality.svg
+          git add -A data
           if git diff --cached --quiet; then
             # Tree already matches main; still publish so data tracks main tip.
             echo "Artifacts produced no tree changes; pushing ${BRANCH} to match main"
