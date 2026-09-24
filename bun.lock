@@ -25,6 +25,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-chengdu": {
+      "name": "@openmetro/adapter-cn-chengdu",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-guangzhou": {
       "name": "@openmetro/adapter-cn-guangzhou",
       "version": "0.1.0",
@@ -324,6 +336,8 @@
     "@napi-rs/lzma-linux-x64-gnu": ["@napi-rs/lzma-linux-x64-gnu@1.5.1", "", { "os": "linux", "cpu": "x64" }, "sha512-oTXEIha4SsuXdTA4Iyskj0kpdx2yVXdhd75c2v3xGrHFfVMsbhTPZU/nMPL4sWKo4pBHm3aucLaqGlF696dTyQ=="],
 
     "@openmetro/adapter-cn-beijing": ["@openmetro/adapter-cn-beijing@workspace:packages/adapters/cn-beijing"],
+
+    "@openmetro/adapter-cn-chengdu": ["@openmetro/adapter-cn-chengdu@workspace:packages/adapters/cn-chengdu"],
 
     "@openmetro/adapter-cn-guangzhou": ["@openmetro/adapter-cn-guangzhou@workspace:packages/adapters/cn-guangzhou"],
 

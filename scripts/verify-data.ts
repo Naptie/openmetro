@@ -311,14 +311,9 @@ function verifyReferences(network: string, d: NetworkData): void {
         network,
         `timetable ${timetable.id} destination is on another line`
       );
-      // Destination must lie on the attached pattern — a reverse or branch
-      // direction collapsed onto the primary pattern otherwise points at a
-      // terminal the train never reaches from this station.
-      assert(
-        pattern.stop_ids.includes(timetable.destination_stop_id),
-        network,
-        `timetable ${timetable.id} destination ${timetable.destination_stop_id} is not on pattern ${pattern.id}`
-      );
+      // Destination may sit on a different pattern of the same line: after
+      // stub-ification a through-running service still terminates at a spur
+      // station that only the branch pattern lists. Direction is the dest.
     }
     if (timetable.direction_label) {
       // Same station+line+direction+pattern is only illegal for identical time
@@ -377,42 +372,79 @@ function verifyReferences(network: string, d: NetworkData): void {
     ttByLine.set(timetable.line_id, set);
   }
 
-  // Branch patterns that share stops with their primary must expose a junction
-  // so map renderers can draw the spur (through-running branches include trunk).
-  for (const pattern of d.patterns) {
-    if (pattern.is_primary) continue;
-    const primary = d.patterns.find((p) => p.line_id === pattern.line_id && p.is_primary);
-    if (!primary) continue;
-    const trunk = new Set(primary.stop_ids);
-    const shared = pattern.stop_ids.filter((id) => trunk.has(id));
-    if (shared.length === 0 || shared.length === pattern.stop_ids.length) continue;
-    // Pure reverse of the primary alignment — no spur geometry of its own.
-    const rev = [...primary.stop_ids].reverse().join('|');
-    if (pattern.stop_ids.join('|') === rev) continue;
-    if (pattern.junction_stop_id) {
-      assert(
-        stopById.has(pattern.junction_stop_id),
-        network,
-        `pattern ${pattern.id} junction_stop_id unknown`
-      );
-      assert(
-        trunk.has(pattern.junction_stop_id),
-        network,
-        `pattern ${pattern.id} junction_stop_id is not on the primary alignment`
-      );
-      continue;
+  // Pattern model (Guangzhou-style stubs, not Shanghai-style shared trunks):
+  //  - One pattern per unique alignment. A pure reverse is the same alignment
+  //    and must not exist as a second pattern.
+  //  - Only the junction stop may appear on multiple patterns of a line.
+  //    Through-running "branches" that re-list the trunk are rejected — model
+  //    them as a spur from the junction instead.
+  {
+    const byLine = new Map<string, typeof d.patterns>();
+    for (const p of d.patterns) {
+      const list = byLine.get(p.line_id) ?? [];
+      list.push(p);
+      byLine.set(p.line_id, list);
     }
-    const hasBranchOnlyNeighbour = pattern.stop_ids.some((id, i) => {
-      if (!trunk.has(id)) return false;
-      const prev = i > 0 ? pattern.stop_ids[i - 1] : undefined;
-      const next = i + 1 < pattern.stop_ids.length ? pattern.stop_ids[i + 1] : undefined;
-      return Boolean((prev && !trunk.has(prev)) || (next && !trunk.has(next)));
-    });
-    assert(
-      hasBranchOnlyNeighbour,
-      network,
-      `pattern ${pattern.id} is a branch but has no junction_stop_id and no trunk↔spur adjacency`
-    );
+    for (const [lineId, linePatterns] of byLine) {
+      // (a) No reverse-duplicate alignments.
+      const seen = new Set<string>();
+      for (const p of linePatterns) {
+        const s = p.stop_ids.join('|');
+        const r = [...p.stop_ids].reverse().join('|');
+        assert(
+          !seen.has(s) && !seen.has(r),
+          network,
+          `pattern ${p.id} on ${lineId} duplicates an alignment (or its reverse)`
+        );
+        seen.add(s);
+      }
+
+      // (b) Multi-pattern stops must be a junction of one of those patterns.
+      const patternsByStop = new Map<string, string[]>();
+      for (const p of linePatterns) {
+        for (const stopId of p.stop_ids) {
+          const list = patternsByStop.get(stopId) ?? [];
+          list.push(p.id);
+          patternsByStop.set(stopId, list);
+        }
+      }
+      for (const [stopId, patternIds] of patternsByStop) {
+        if (patternIds.length < 2) continue;
+        const holders = linePatterns.filter((p) => patternIds.includes(p.id));
+        const isJunctionOfSome = holders.some((p) => p.junction_stop_id === stopId);
+        if (isJunctionOfSome) continue;
+        fail(
+          network,
+          `stop ${stopId} on ${lineId} appears in ${patternIds.length} patterns but is not a junction (${patternIds.join(', ')})`
+        );
+      }
+
+      // (c) Non-primary patterns that share the junction must expose it.
+      for (const p of linePatterns) {
+        if (p.is_primary) continue;
+        const primary = linePatterns.find((x) => x.is_primary);
+        if (!primary) continue;
+        const trunk = new Set(primary.stop_ids);
+        const shared = p.stop_ids.filter((id) => trunk.has(id));
+        if (shared.length === 0) continue; // disjoint second alignment
+        assert(
+          p.junction_stop_id && stopById.has(p.junction_stop_id),
+          network,
+          `pattern ${p.id} shares stops with primary but has no junction_stop_id`
+        );
+        assert(
+          p.junction_stop_id && trunk.has(p.junction_stop_id),
+          network,
+          `pattern ${p.id} junction_stop_id is not on the primary alignment`
+        );
+        // Spur form: the only shared stop is the junction.
+        assert(
+          shared.length === 1 && shared[0] === p.junction_stop_id,
+          network,
+          `pattern ${p.id} shares ${shared.length} stops with primary (want only the junction) — stub-ify the spur`
+        );
+      }
+    }
   }
 
   // Homonym stations that are NOT a physical interchange must not share
@@ -468,48 +500,15 @@ function verifyReferences(network: string, d: NetworkData): void {
     }
   }
 
-  // Reverse alignments must be tagged so UI can hide them as branches.
+  // Reverse alignments are not patterns (direction lives on timetable dests).
+  // `pattern_role=reverse` is therefore illegal.
   for (const pattern of d.patterns) {
-    const linePatterns = d.patterns.filter((p) => p.line_id === pattern.line_id);
     const role = (pattern.extras as { pattern_role?: string } | undefined)?.pattern_role;
-    const reverseOf = (pattern.extras as { reverse_of?: string } | undefined)?.reverse_of;
-    const sig = pattern.stop_ids.join('|');
-    const isReverseOfSomePattern = linePatterns.some(
-      (other) => other.id !== pattern.id && [...other.stop_ids].reverse().join('|') === sig
+    assert(
+      role !== 'reverse',
+      network,
+      `pattern ${pattern.id} is tagged pattern_role=reverse — reverses must not be separate patterns`
     );
-    if (role === 'reverse') {
-      assert(
-        isReverseOfSomePattern,
-        network,
-        `pattern ${pattern.id} is tagged pattern_role=reverse but is not the reverse of any pattern on ${pattern.line_id}`
-      );
-      if (reverseOf) {
-        assert(
-          linePatterns.some((p) => p.id === reverseOf),
-          network,
-          `pattern ${pattern.id} reverse_of=${reverseOf} is not on the same line`
-        );
-        const src = linePatterns.find((p) => p.id === reverseOf);
-        if (src) {
-          assert(
-            [...src.stop_ids].reverse().join('|') === sig,
-            network,
-            `pattern ${pattern.id} reverse_of=${reverseOf} but stop_ids are not that pattern reversed`
-          );
-        }
-      }
-    } else {
-      const primary = linePatterns.find((p) => p.is_primary);
-      if (primary && pattern.id !== primary.id) {
-        const isExactPrimaryReverse = [...primary.stop_ids].reverse().join('|') === sig;
-        if (isExactPrimaryReverse) {
-          fail(
-            network,
-            `pattern ${pattern.id} is an exact reverse of primary ${primary.id} but extras.pattern_role=${role ?? 'missing'} (want 'reverse')`
-          );
-        }
-      }
-    }
   }
 
   // Reverse-direction coverage: when a linear primary publishes any timetable

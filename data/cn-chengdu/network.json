@@ -1,0 +1,132 @@
+{
+  "id": "cn-chengdu",
+  "name": "成都轨道交通",
+  "names": {
+    "zh": "成都轨道交通",
+    "en": "Chengdu Rail Transit"
+  },
+  "city": {
+    "id": "CN-5101",
+    "name": {
+      "zh": "成都",
+      "en": "Chengdu"
+    },
+    "country": "CN",
+    "population": 21403000,
+    "area": 14335,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        104.066,
+        30.572
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑、交路与首末班来自成都轨道集团官网 /op/station-time；坐标/英文名补充来自官网线网图所使用的 AMap Subway 数据。7 号线为环线。蓉2 号线主/支线合并为一条有轨电车。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 355,
+        "derived": 34,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 389,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 464,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 464,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 200,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1018,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 0.91,
+      "status": "partial",
+      "counts": {
+        "official": 437,
+        "derived": 0,
+        "default": 44
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 150932,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

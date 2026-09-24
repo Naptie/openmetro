@@ -1,0 +1,1060 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-chengdu",
+  "generated_at": "2026-09-24T03:56:08.293Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-chengdu-line-1-pattern-sihe-1-to-wugensong-1",
+      "line_id": "cn-chengdu-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-chengdu-sihe-1",
+        "cn-chengdu-guangdu-1",
+        "cn-chengdu-wugensong-1"
+      ],
+      "origin_stop_id": "cn-chengdu-sihe-1",
+      "terminal_stop_id": "cn-chengdu-wugensong-1",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "韦家碾-五根松"
+        }
+      ],
+      "extras": {
+        "description": "韦家碾-五根松",
+        "direction": "01",
+        "origin_name": "韦家碾",
+        "terminal_name": "五根松",
+        "line_short_name": "1",
+        "pattern_role": "branch",
+        "stub_of": "cn-chengdu-line-1-pattern-sihe-1-to-wugensong-1",
+        "stubbed_from_n": 3,
+        "junction_index_in_source": 0
+      },
+      "junction_stop_id": "cn-chengdu-sihe-1"
+    },
+    {
+      "id": "cn-chengdu-line-1-pattern-weijianian-1-to-science-city-1",
+      "line_id": "cn-chengdu-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-chengdu-weijianian-1",
+        "cn-chengdu-shengxian-lake-1",
+        "cn-chengdu-north-railway-station-1",
+        "cn-chengdu-renmin-north-road-1",
+        "cn-chengdu-wenshu-monastery-1",
+        "cn-chengdu-luomashi-1",
+        "cn-chengdu-tianfu-square-1",
+        "cn-chengdu-jinjiang-hotel-1",
+        "cn-chengdu-huaxiba-1",
+        "cn-chengdu-sichuan-gymnasium-1",
+        "cn-chengdu-nijiaqiao-1",
+        "cn-chengdu-tongzilin-1",
+        "cn-chengdu-south-railway-station-1",
+        "cn-chengdu-hi-tech-zone-1",
+        "cn-chengdu-financial-city-1",
+        "cn-chengdu-incubation-park-1",
+        "cn-chengdu-jincheng-plaza-1",
+        "cn-chengdu-century-city-1",
+        "cn-chengdu-3r-tianfu-street-1",
+        "cn-chengdu-5-tianfu-street-1",
+        "cn-chengdu-huafu-avenue-1",
+        "cn-chengdu-sihe-1",
+        "cn-chengdu-huayang-1",
+        "cn-chengdu-haichang-road-1",
+        "cn-chengdu-guangfu-1",
+        "cn-chengdu-hongshi-park-1",
+        "cn-chengdu-luhu-lake-1",
+        "cn-chengdu-wuhan-road-1",
+        "cn-chengdu-tianfu-park-1",
+        "cn-chengdu-western-china-intl-expo-city-1",
+        "cn-chengdu-guangzhou-road-1",
+        "cn-chengdu-xinglong-lake-1",
+        "cn-chengdu-science-city-1"
+      ],
+      "origin_stop_id": "cn-chengdu-weijianian-1",
+      "terminal_stop_id": "cn-chengdu-science-city-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "韦家碾-科学城"
+        }
+      ],
+      "extras": {
+        "description": "韦家碾-科学城",
+        "direction": "01",
+        "origin_name": "韦家碾",
+        "terminal_name": "科学城",
+        "line_short_name": "1",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-10-pattern-wuhou-shrine-10-to-xinping-10",
+      "line_id": "cn-chengdu-line-10",
+      "name": "10号线",
+      "names": {
+        "zh": "10号线",
+        "en": "Line 10"
+      },
+      "stop_ids": [
+        "cn-chengdu-wuhou-shrine-10",
+        "cn-chengdu-gaoshengqiao-10",
+        "cn-chengdu-hongpailou-10",
+        "cn-chengdu-taipingyuan-10",
+        "cn-chengdu-cujin-10",
+        "cn-chengdu-huaxing-10",
+        "cn-chengdu-jinhua-10",
+        "cn-chengdu-terminal-1-of-shuangliu-international-airport-10",
+        "cn-chengdu-terminal-2-of-shuangliu-international-airport-10",
+        "cn-chengdu-shuangliu-west-railway-station-10",
+        "cn-chengdu-yingtian-temple-10",
+        "cn-chengdu-huangshui-10",
+        "cn-chengdu-huayuan-10",
+        "cn-chengdu-xinjin-railway-station-10",
+        "cn-chengdu-huaqiao-10",
+        "cn-chengdu-wujin-10",
+        "cn-chengdu-rulin-road-10",
+        "cn-chengdu-liujianian-10",
+        "cn-chengdu-xinping-10"
+      ],
+      "origin_stop_id": "cn-chengdu-wuhou-shrine-10",
+      "terminal_stop_id": "cn-chengdu-xinping-10",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "武侯祠-新平"
+        }
+      ],
+      "extras": {
+        "description": "武侯祠-新平",
+        "direction": "01",
+        "origin_name": "武侯祠",
+        "terminal_name": "新平",
+        "line_short_name": "10",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-13-pattern-long-an-13-to-wayaotan-13",
+      "line_id": "cn-chengdu-line-13",
+      "name": "13号线",
+      "names": {
+        "zh": "13号线",
+        "en": "Line 13"
+      },
+      "stop_ids": [
+        "cn-chengdu-long-an-13",
+        "cn-chengdu-longhuasi-13",
+        "cn-chengdu-sansheng-flower-town-13",
+        "cn-chengdu-xingfu-meilin-13",
+        "cn-chengdu-jiaozi-flyover-13",
+        "cn-chengdu-sichuan-normal-university-13",
+        "cn-chengdu-jingjusi-13",
+        "cn-chengdu-sanguantang-13",
+        "cn-chengdu-jiuyan-bridge-13",
+        "cn-chengdu-xinnanmen-13",
+        "cn-chengdu-huaxiba-13",
+        "cn-chengdu-wenweng-shishi-13",
+        "cn-chengdu-xiaonan-street-13",
+        "cn-chengdu-qingyang-taoist-temple-13",
+        "cn-chengdu-du-fu-thatched-cottage-13",
+        "cn-chengdu-guanghuacun-13",
+        "cn-chengdu-dongpo-road-13",
+        "cn-chengdu-wanshou-bridge-13",
+        "cn-chengdu-peifeng-13",
+        "cn-chengdu-wanjiawan-13",
+        "cn-chengdu-wayaotan-13"
+      ],
+      "origin_stop_id": "cn-chengdu-long-an-13",
+      "terminal_stop_id": "cn-chengdu-wayaotan-13",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "龙安-瓦窑滩"
+        }
+      ],
+      "extras": {
+        "description": "龙安-瓦窑滩",
+        "direction": "01",
+        "origin_name": "龙安",
+        "terminal_name": "瓦窑滩",
+        "line_short_name": "13",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-17-pattern-gaohong-17-to-jiujiang-north-17",
+      "line_id": "cn-chengdu-line-17",
+      "name": "17号线",
+      "names": {
+        "zh": "17号线",
+        "en": "Line 17"
+      },
+      "stop_ids": [
+        "cn-chengdu-gaohong-17",
+        "cn-chengdu-weiling-17",
+        "cn-chengdu-hangtian-road-17",
+        "cn-chengdu-renmintang-17",
+        "cn-chengdu-jichechang-17",
+        "cn-chengdu-erxianqiao-17",
+        "cn-chengdu-tashui-bridge-17",
+        "cn-chengdu-jianshe-north-road-17",
+        "cn-chengdu-hongxing-bridge-17",
+        "cn-chengdu-chenghuangmiao-17",
+        "cn-chengdu-xidajie-street-17",
+        "cn-chengdu-peoples-park-17",
+        "cn-chengdu-xiaonan-street-17",
+        "cn-chengdu-provincial-orthopaedics-hospital-17",
+        "cn-chengdu-huanhua-lane-17",
+        "cn-chengdu-qingshuihe-bridge-17",
+        "cn-chengdu-longzhuayan-17",
+        "cn-chengdu-yanggongqiao-17",
+        "cn-chengdu-jitouqiao-17",
+        "cn-chengdu-baifoqiao-17",
+        "cn-chengdu-jiujiang-north-17"
+      ],
+      "origin_stop_id": "cn-chengdu-gaohong-17",
+      "terminal_stop_id": "cn-chengdu-jiujiang-north-17",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "高洪-九江北"
+        }
+      ],
+      "extras": {
+        "description": "高洪-九江北",
+        "direction": "02",
+        "origin_name": "高洪",
+        "terminal_name": "九江北",
+        "line_short_name": "17",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-18-pattern-south-railway-station-18-to-tianfu-international-airport-north-18",
+      "line_id": "cn-chengdu-line-18",
+      "name": "18号线",
+      "names": {
+        "zh": "18号线",
+        "en": "Line 18"
+      },
+      "stop_ids": [
+        "cn-chengdu-south-railway-station-18",
+        "cn-chengdu-incubation-park-18",
+        "cn-chengdu-jincheng-plaza-east-18",
+        "cn-chengdu-century-city-18",
+        "cn-chengdu-haichang-road-18",
+        "cn-chengdu-western-china-intl-expo-city-18",
+        "cn-chengdu-xinglong-18",
+        "cn-chengdu-tianfu-station-transfer-only-18",
+        "cn-chengdu-sancha-18",
+        "cn-chengdu-futian-18",
+        "cn-chengdu-terminal-1and2-of-tianfu-international-airport-18",
+        "cn-chengdu-tianfu-international-airport-north-18"
+      ],
+      "origin_stop_id": "cn-chengdu-south-railway-station-18",
+      "terminal_stop_id": "cn-chengdu-tianfu-international-airport-north-18",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "火车南站-天府机场北"
+        }
+      ],
+      "extras": {
+        "description": "火车南站-天府机场北",
+        "direction": "01",
+        "origin_name": "火车南站",
+        "terminal_name": "天府机场北",
+        "line_short_name": "18",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-19-pattern-tianfu-international-airport-north-19-to-jinxing-19",
+      "line_id": "cn-chengdu-line-19",
+      "name": "19号线",
+      "names": {
+        "zh": "19号线",
+        "en": "Line 19"
+      },
+      "stop_ids": [
+        "cn-chengdu-tianfu-international-airport-north-19",
+        "cn-chengdu-terminal-1and2-of-tianfu-international-airport-19",
+        "cn-chengdu-futian-19",
+        "cn-chengdu-sancha-19",
+        "cn-chengdu-tianfu-station-transfer-only-19",
+        "cn-chengdu-lanjiadian-19",
+        "cn-chengdu-tianfu-commercial-district-19",
+        "cn-chengdu-honglian-19",
+        "cn-chengdu-zhengxingwan-19",
+        "cn-chengdu-yixin-lake-19",
+        "cn-chengdu-muhua-road-19",
+        "cn-chengdu-wenjiashan-19",
+        "cn-chengdu-longgang-19",
+        "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-19",
+        "cn-chengdu-longqiao-road-19",
+        "cn-chengdu-jiujiang-north-19",
+        "cn-chengdu-mingguang-19",
+        "cn-chengdu-wenquan-avenue-19",
+        "cn-chengdu-fengxihe-19",
+        "cn-chengdu-chengdu-fifth-peoples-hospital-19",
+        "cn-chengdu-huangshi-19",
+        "cn-chengdu-jinxing-19"
+      ],
+      "origin_stop_id": "cn-chengdu-tianfu-international-airport-north-19",
+      "terminal_stop_id": "cn-chengdu-jinxing-19",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "天府机场北-金星"
+        }
+      ],
+      "extras": {
+        "description": "天府机场北-金星",
+        "direction": "02",
+        "origin_name": "天府机场北",
+        "terminal_name": "金星",
+        "line_short_name": "19",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-2-pattern-xipu-railway-station-2-to-chengdu-academy-of-governance-2",
+      "line_id": "cn-chengdu-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-chengdu-xipu-railway-station-2",
+        "cn-chengdu-tianhe-road-2",
+        "cn-chengdu-baicao-road-2",
+        "cn-chengdu-jinzhou-road-2",
+        "cn-chengdu-jinke-north-road-2",
+        "cn-chengdu-yingbin-avenue-2",
+        "cn-chengdu-chadianzi-bus-terminal-station-2",
+        "cn-chengdu-yangxi-flyover-2",
+        "cn-chengdu-yipintianxia-2",
+        "cn-chengdu-shuhan-road-east-2",
+        "cn-chengdu-baiguolin-2",
+        "cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-2",
+        "cn-chengdu-tonghuimen-2",
+        "cn-chengdu-peoples-park-2",
+        "cn-chengdu-tianfu-square-2",
+        "cn-chengdu-chunxi-road-2",
+        "cn-chengdu-dongmen-bridge-2",
+        "cn-chengdu-niuwangmiao-2",
+        "cn-chengdu-niushikou-2",
+        "cn-chengdu-dongdalu-road-2",
+        "cn-chengdu-tazishan-park-2",
+        "cn-chengdu-chengdu-east-railway-station-2",
+        "cn-chengdu-chengyu-flyover-2",
+        "cn-chengdu-huiwangling-2",
+        "cn-chengdu-honghe-2",
+        "cn-chengdu-chengdu-academy-of-governance-2"
+      ],
+      "origin_stop_id": "cn-chengdu-xipu-railway-station-2",
+      "terminal_stop_id": "cn-chengdu-chengdu-academy-of-governance-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "犀浦-成都行政学院"
+        }
+      ],
+      "extras": {
+        "description": "犀浦-成都行政学院",
+        "direction": "02",
+        "origin_name": "犀浦",
+        "terminal_name": "成都行政学院",
+        "line_short_name": "2",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-27-pattern-shifo-27-to-shuxin-road-27",
+      "line_id": "cn-chengdu-line-27",
+      "name": "27号线",
+      "names": {
+        "zh": "27号线",
+        "en": "Line 27"
+      },
+      "stop_ids": [
+        "cn-chengdu-shifo-27",
+        "cn-chengdu-ciyi-27",
+        "cn-chengdu-xingcheng-avenue-27",
+        "cn-chengdu-zhantan-temple-27",
+        "cn-chengdu-shimenkan-27",
+        "cn-chengdu-sanshengsi-27",
+        "cn-chengdu-fanjia-alley-27",
+        "cn-chengdu-liyuwan-27",
+        "cn-chengdu-laijiadian-27",
+        "cn-chengdu-weijianian-27",
+        "cn-chengdu-shuangshuinian-27",
+        "cn-chengdu-wangjiaqiao-27",
+        "cn-chengdu-dongzikou-27",
+        "cn-chengdu-shaheyuan-27",
+        "cn-chengdu-xinqiao-27",
+        "cn-chengdu-jinfu-27",
+        "cn-chengdu-huazhaobi-north-27",
+        "cn-chengdu-jinniu-park-27",
+        "cn-chengdu-yangxi-flyover-27",
+        "cn-chengdu-huangzhong-27",
+        "cn-chengdu-jinsha-binhe-park-27",
+        "cn-chengdu-shuxin-road-27"
+      ],
+      "origin_stop_id": "cn-chengdu-shifo-27",
+      "terminal_stop_id": "cn-chengdu-shuxin-road-27",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "石佛-蜀鑫路"
+        }
+      ],
+      "extras": {
+        "description": "石佛-蜀鑫路",
+        "direction": "01",
+        "origin_name": "石佛",
+        "terminal_name": "蜀鑫路",
+        "line_short_name": "27",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-3-pattern-chengdu-medical-college-3-to-shuangliu-west-railway-station-3",
+      "line_id": "cn-chengdu-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "stop_ids": [
+        "cn-chengdu-chengdu-medical-college-3",
+        "cn-chengdu-southwest-petroleum-university-3",
+        "cn-chengdu-clock-tower-3",
+        "cn-chengdu-machao-west-road-3",
+        "cn-chengdu-tuanjiexinqu-3",
+        "cn-chengdu-jinshuihe-3",
+        "cn-chengdu-sanhechang-3",
+        "cn-chengdu-jinhuasi-east-road-3",
+        "cn-chengdu-botanical-garden-3",
+        "cn-chengdu-chengdu-junqu-general-hospital-3",
+        "cn-chengdu-panda-avenue-3",
+        "cn-chengdu-chengdu-zoo-3",
+        "cn-chengdu-zhaojuesi-south-road-3",
+        "cn-chengdu-sima-bridge-3",
+        "cn-chengdu-lijiatuo-3",
+        "cn-chengdu-qianfeng-road-3",
+        "cn-chengdu-hongxing-bridge-3",
+        "cn-chengdu-chengdu-second-peoples-hospital-3",
+        "cn-chengdu-chunxi-road-3",
+        "cn-chengdu-xinnanmen-3",
+        "cn-chengdu-moziqiao-3",
+        "cn-chengdu-sichuan-gymnasium-3",
+        "cn-chengdu-yiguanmiao-3",
+        "cn-chengdu-gaoshengqiao-3",
+        "cn-chengdu-hongpailou-3",
+        "cn-chengdu-taipingyuan-3",
+        "cn-chengdu-chuanzang-flyover-3",
+        "cn-chengdu-wuhou-flyover-3",
+        "cn-chengdu-wuqing-south-road-3",
+        "cn-chengdu-shuangfengqiao-3",
+        "cn-chengdu-longqiao-road-3",
+        "cn-chengdu-hangdu-street-3",
+        "cn-chengdu-yingchunqiao-3",
+        "cn-chengdu-dongsheng-3",
+        "cn-chengdu-shuangliu-square-3",
+        "cn-chengdu-sanliba-3",
+        "cn-chengdu-shuangliu-west-railway-station-3"
+      ],
+      "origin_stop_id": "cn-chengdu-chengdu-medical-college-3",
+      "terminal_stop_id": "cn-chengdu-shuangliu-west-railway-station-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "成都医学院-双流西站"
+        }
+      ],
+      "extras": {
+        "description": "成都医学院-双流西站",
+        "direction": "01",
+        "origin_name": "成都医学院",
+        "terminal_name": "双流西站",
+        "line_short_name": "3",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-30-pattern-longquanyi-railway-station-south-30-to-east-of-terminal-2-of-shuangliu-international-airport-30",
+      "line_id": "cn-chengdu-line-30",
+      "name": "30号线",
+      "names": {
+        "zh": "30号线",
+        "en": "Line 30"
+      },
+      "stop_ids": [
+        "cn-chengdu-longquanyi-railway-station-south-30",
+        "cn-chengdu-yushi-30",
+        "cn-chengdu-huiwangling-30",
+        "cn-chengdu-hangtian-flyover-30",
+        "cn-chengdu-haitong-street-30",
+        "cn-chengdu-jiaozi-flyover-30",
+        "cn-chengdu-jinyi-30",
+        "cn-chengdu-juanzishu-30",
+        "cn-chengdu-jinshi-road-30",
+        "cn-chengdu-fucheng-bridge-30",
+        "cn-chengdu-financial-city-north-30",
+        "cn-chengdu-yizhou-avenue-30",
+        "cn-chengdu-chengdu-first-peoples-hospital-30",
+        "cn-chengdu-xinyuan-avenue-30",
+        "cn-chengdu-shiyangdong-30",
+        "cn-chengdu-datong-30",
+        "cn-chengdu-zhujiang-road-30",
+        "cn-chengdu-xiejiadu-30",
+        "cn-chengdu-guangming-30",
+        "cn-chengdu-xingyue-30",
+        "cn-chengdu-sisheng-30",
+        "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30"
+      ],
+      "origin_stop_id": "cn-chengdu-longquanyi-railway-station-south-30",
+      "terminal_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "龙泉驿火车站南-双流机场2航站楼东"
+        }
+      ],
+      "extras": {
+        "description": "龙泉驿火车站南-双流机场2航站楼东",
+        "direction": "01",
+        "origin_name": "龙泉驿火车站南",
+        "terminal_name": "双流机场2航站楼东",
+        "line_short_name": "30",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-4-pattern-wansheng-4-to-xihe-4",
+      "line_id": "cn-chengdu-line-4",
+      "name": "4号线",
+      "names": {
+        "zh": "4号线",
+        "en": "Line 4"
+      },
+      "stop_ids": [
+        "cn-chengdu-wansheng-4",
+        "cn-chengdu-yangliuhe-4",
+        "cn-chengdu-fengxihe-4",
+        "cn-chengdu-nanxun-avenue-4",
+        "cn-chengdu-guanghua-park-4",
+        "cn-chengdu-yongquan-4",
+        "cn-chengdu-fenghuang-street-4",
+        "cn-chengdu-machangba-4",
+        "cn-chengdu-intangible-cultural-heritage-park-4",
+        "cn-chengdu-caiqiao-4",
+        "cn-chengdu-zhongba-4",
+        "cn-chengdu-chengdu-west-railway-station-4",
+        "cn-chengdu-qingjiang-west-road-4",
+        "cn-chengdu-culture-palace-4",
+        "cn-chengdu-southwestern-university-of-finance-and-economics-4",
+        "cn-chengdu-caotang-north-road-4",
+        "cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-4",
+        "cn-chengdu-kuanzhaixiangzi-alleys-4",
+        "cn-chengdu-luomashi-4",
+        "cn-chengdu-taisheng-south-road-4",
+        "cn-chengdu-chengdu-second-peoples-hospital-4",
+        "cn-chengdu-yushuang-road-4",
+        "cn-chengdu-shuangqiao-road-4",
+        "cn-chengdu-wannianchang-4",
+        "cn-chengdu-huaishudian-4",
+        "cn-chengdu-lailong-4",
+        "cn-chengdu-shiling-4",
+        "cn-chengdu-chengdu-university-4",
+        "cn-chengdu-mingshuwangling-4",
+        "cn-chengdu-xihe-4"
+      ],
+      "origin_stop_id": "cn-chengdu-wansheng-4",
+      "terminal_stop_id": "cn-chengdu-xihe-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "万盛-西河"
+        }
+      ],
+      "extras": {
+        "description": "万盛-西河",
+        "direction": "02",
+        "origin_name": "万盛",
+        "terminal_name": "西河",
+        "line_short_name": "4",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-5-pattern-huilong-5-to-huagui-road-5",
+      "line_id": "cn-chengdu-line-5",
+      "name": "5号线",
+      "names": {
+        "zh": "5号线",
+        "en": "Line 5"
+      },
+      "stop_ids": [
+        "cn-chengdu-huilong-5",
+        "cn-chengdu-longma-road-5",
+        "cn-chengdu-yixin-lake-5",
+        "cn-chengdu-nanhu-flyover-5",
+        "cn-chengdu-erjiang-temple-5",
+        "cn-chengdu-the-police-college-5",
+        "cn-chengdu-qilong-5",
+        "cn-chengdu-minle-5",
+        "cn-chengdu-dayuan-5",
+        "cn-chengdu-jincheng-lake-5",
+        "cn-chengdu-jincheng-avenue-5",
+        "cn-chengdu-jiaozi-avenue-5",
+        "cn-chengdu-chengdu-first-peoples-hospital-5",
+        "cn-chengdu-shiyang-flyover-5",
+        "cn-chengdu-shenxianshu-5",
+        "cn-chengdu-jiuxing-avenue-5",
+        "cn-chengdu-keyuan-5",
+        "cn-chengdu-gaoshengqiao-5",
+        "cn-chengdu-provincial-orthopaedics-hospital-5",
+        "cn-chengdu-qingyang-taoist-temple-5",
+        "cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-5",
+        "cn-chengdu-fuqin-5",
+        "cn-chengdu-huapaifang-5",
+        "cn-chengdu-xibei-bridge-5",
+        "cn-chengdu-2-beizhan-west-road-5",
+        "cn-chengdu-saiyuntai-5",
+        "cn-chengdu-wukuaishi-5",
+        "cn-chengdu-funing-road-5",
+        "cn-chengdu-dongzikou-5",
+        "cn-chengdu-quanshui-road-5",
+        "cn-chengdu-lujiaqiao-5",
+        "cn-chengdu-huanghuayuan-5",
+        "cn-chengdu-shixi-park-5",
+        "cn-chengdu-dafeng-5",
+        "cn-chengdu-dujianian-5",
+        "cn-chengdu-jiudaoyan-5",
+        "cn-chengdu-xingfuqiao-5",
+        "cn-chengdu-beibu-shopping-mall-5",
+        "cn-chengdu-liaojiawan-5",
+        "cn-chengdu-baishuichang-5",
+        "cn-chengdu-huagui-road-5"
+      ],
+      "origin_stop_id": "cn-chengdu-huilong-5",
+      "terminal_stop_id": "cn-chengdu-huagui-road-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "回龙-华桂路"
+        }
+      ],
+      "extras": {
+        "description": "回龙-华桂路",
+        "direction": "02",
+        "origin_name": "回龙",
+        "terminal_name": "华桂路",
+        "line_short_name": "5",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-6-pattern-lanjiagou-6-to-wangcong-temple-6",
+      "line_id": "cn-chengdu-line-6",
+      "name": "6号线",
+      "names": {
+        "zh": "6号线",
+        "en": "Line 6"
+      },
+      "stop_ids": [
+        "cn-chengdu-lanjiagou-6",
+        "cn-chengdu-huilong-6",
+        "cn-chengdu-diaoyuzui-6",
+        "cn-chengdu-lujiao-6",
+        "cn-chengdu-songlin-6",
+        "cn-chengdu-qinhuangsi-6",
+        "cn-chengdu-western-china-intl-expo-city-6",
+        "cn-chengdu-tianfu-commercial-district-6",
+        "cn-chengdu-hangzhou-road-6",
+        "cn-chengdu-changgongyan-6",
+        "cn-chengdu-qingdao-road-6",
+        "cn-chengdu-shenyang-road-6",
+        "cn-chengdu-lushan-avenue-6",
+        "cn-chengdu-wanan-6",
+        "cn-chengdu-pucaotang-6",
+        "cn-chengdu-longdengshan-6",
+        "cn-chengdu-xinchuan-road-6",
+        "cn-chengdu-xintong-avenue-6",
+        "cn-chengdu-guandong-6",
+        "cn-chengdu-luxiao-6",
+        "cn-chengdu-zhangjiasi-6",
+        "cn-chengdu-zhonghe-6",
+        "cn-chengdu-financial-city-east-6",
+        "cn-chengdu-jinshi-road-6",
+        "cn-chengdu-liusan-road-6",
+        "cn-chengdu-liulichang-6",
+        "cn-chengdu-dongguang-6",
+        "cn-chengdu-sanguantang-6",
+        "cn-chengdu-shunjiang-road-6",
+        "cn-chengdu-niuwangmiao-6",
+        "cn-chengdu-yushuang-road-6",
+        "cn-chengdu-xinhong-road-6",
+        "cn-chengdu-jianshe-north-road-6",
+        "cn-chengdu-qianfeng-road-6",
+        "cn-chengdu-liangjiaxiang-6",
+        "cn-chengdu-renmin-north-road-6",
+        "cn-chengdu-xibei-bridge-6",
+        "cn-chengdu-shawan-6",
+        "cn-chengdu-southwest-jiaotong-university-6",
+        "cn-chengdu-xinghe-6",
+        "cn-chengdu-jinfu-6",
+        "cn-chengdu-xihua-avenue-6",
+        "cn-chengdu-qinggang-6",
+        "cn-chengdu-xingsheng-6",
+        "cn-chengdu-houjiaqiao-6",
+        "cn-chengdu-zitonggong-6",
+        "cn-chengdu-xingye-north-street-6",
+        "cn-chengdu-xipu-railway-station-6",
+        "cn-chengdu-tianyu-road-6",
+        "cn-chengdu-honggao-road-6",
+        "cn-chengdu-shangjin-road-6",
+        "cn-chengdu-mengzi-6",
+        "cn-chengdu-shuxin-avenue-6",
+        "cn-chengdu-pitong-street-6",
+        "cn-chengdu-heping-street-6",
+        "cn-chengdu-wangcong-temple-6"
+      ],
+      "origin_stop_id": "cn-chengdu-lanjiagou-6",
+      "terminal_stop_id": "cn-chengdu-wangcong-temple-6",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "兰家沟-望丛祠"
+        }
+      ],
+      "extras": {
+        "description": "兰家沟-望丛祠",
+        "direction": "02",
+        "origin_name": "兰家沟",
+        "terminal_name": "望丛祠",
+        "line_short_name": "6",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-7-pattern-north-railway-station-7-to-2-beizhan-west-road-7",
+      "line_id": "cn-chengdu-line-7",
+      "name": "7号线",
+      "names": {
+        "zh": "7号线",
+        "en": "Line 7"
+      },
+      "stop_ids": [
+        "cn-chengdu-north-railway-station-7",
+        "cn-chengdu-sima-bridge-7",
+        "cn-chengdu-fuqing-road-7",
+        "cn-chengdu-balizhuang-7",
+        "cn-chengdu-erxianqiao-7",
+        "cn-chengdu-chengdu-university-of-technology-7",
+        "cn-chengdu-cuijiadian-7",
+        "cn-chengdu-shuangdian-road-7",
+        "cn-chengdu-huaishudian-7",
+        "cn-chengdu-yinghui-road-7",
+        "cn-chengdu-chengdu-east-railway-station-7",
+        "cn-chengdu-daguan-7",
+        "cn-chengdu-shizishan-7",
+        "cn-chengdu-sichuan-normal-university-7",
+        "cn-chengdu-liulichang-7",
+        "cn-chengdu-sanwayao-7",
+        "cn-chengdu-south-railway-station-7",
+        "cn-chengdu-shenxianshu-7",
+        "cn-chengdu-gaopeng-avenue-7",
+        "cn-chengdu-taipingyuan-7",
+        "cn-chengdu-wuhou-avenue-7",
+        "cn-chengdu-longzhuayan-7",
+        "cn-chengdu-dongpo-road-7",
+        "cn-chengdu-culture-palace-7",
+        "cn-chengdu-jinsha-site-museum-7",
+        "cn-chengdu-yipintianxia-7",
+        "cn-chengdu-chadianzi-7",
+        "cn-chengdu-huazhaobi-7",
+        "cn-chengdu-southwest-jiaotong-university-7",
+        "cn-chengdu-jiulidi-7",
+        "cn-chengdu-2-beizhan-west-road-7"
+      ],
+      "origin_stop_id": "cn-chengdu-north-railway-station-7",
+      "terminal_stop_id": "cn-chengdu-2-beizhan-west-road-7",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "火车北站-北站西二路"
+        }
+      ],
+      "extras": {
+        "description": "火车北站-北站西二路",
+        "direction": "02",
+        "origin_name": "火车北站",
+        "terminal_name": "北站西二路",
+        "line_short_name": "7",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-8-pattern-longgang-8-to-guilong-road-8",
+      "line_id": "cn-chengdu-line-8",
+      "name": "8号线",
+      "names": {
+        "zh": "8号线",
+        "en": "Line 8"
+      },
+      "stop_ids": [
+        "cn-chengdu-longgang-8",
+        "cn-chengdu-lianhua-8",
+        "cn-chengdu-wenxing-8",
+        "cn-chengdu-sichuan-university-jiangan-campus-8",
+        "cn-chengdu-zhujiang-road-8",
+        "cn-chengdu-shunfeng-8",
+        "cn-chengdu-sanyuan-8",
+        "cn-chengdu-shiyang-8",
+        "cn-chengdu-qingan-8",
+        "cn-chengdu-yinjialin-8",
+        "cn-chengdu-gaopeng-avenue-8",
+        "cn-chengdu-jiuxing-avenue-8",
+        "cn-chengdu-yongfeng-8",
+        "cn-chengdu-fangcao-street-8",
+        "cn-chengdu-nijiaqiao-8",
+        "cn-chengdu-sichuan-university-wangjiang-campus-8",
+        "cn-chengdu-donghu-park-8",
+        "cn-chengdu-dongguang-8",
+        "cn-chengdu-jingjusi-8",
+        "cn-chengdu-dongdalu-road-8",
+        "cn-chengdu-shuangqiao-road-8",
+        "cn-chengdu-wannian-road-8",
+        "cn-chengdu-shabanqiao-8",
+        "cn-chengdu-dongjiao-memory-8",
+        "cn-chengdu-chengdu-university-of-technology-8",
+        "cn-chengdu-shilidian-8",
+        "cn-chengdu-shengdeng-park-8",
+        "cn-chengdu-longtan-flyover-8",
+        "cn-chengdu-longtan-temple-8",
+        "cn-chengdu-tongle-8",
+        "cn-chengdu-guilin-8",
+        "cn-chengdu-guilong-road-8"
+      ],
+      "origin_stop_id": "cn-chengdu-longgang-8",
+      "terminal_stop_id": "cn-chengdu-guilong-road-8",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "龙港-桂龙路"
+        }
+      ],
+      "extras": {
+        "description": "龙港-桂龙路",
+        "direction": "02",
+        "origin_name": "龙港",
+        "terminal_name": "桂龙路",
+        "line_short_name": "8",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-9-pattern-financial-city-east-9-to-huangtianba-9",
+      "line_id": "cn-chengdu-line-9",
+      "name": "9号线",
+      "names": {
+        "zh": "9号线",
+        "en": "Line 9"
+      },
+      "stop_ids": [
+        "cn-chengdu-financial-city-east-9",
+        "cn-chengdu-xindao-9",
+        "cn-chengdu-incubation-park-9",
+        "cn-chengdu-jincheng-avenue-9",
+        "cn-chengdu-sanyuan-9",
+        "cn-chengdu-taiping-temple-9",
+        "cn-chengdu-huaxing-9",
+        "cn-chengdu-cuqiao-9",
+        "cn-chengdu-wuqing-south-road-9",
+        "cn-chengdu-jitouqiao-9",
+        "cn-chengdu-peifeng-9",
+        "cn-chengdu-chengdu-west-railway-station-9",
+        "cn-chengdu-huangtianba-9"
+      ],
+      "origin_stop_id": "cn-chengdu-financial-city-east-9",
+      "terminal_stop_id": "cn-chengdu-huangtianba-9",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "金融城东-黄田坝"
+        }
+      ],
+      "extras": {
+        "description": "金融城东-黄田坝",
+        "direction": "01",
+        "origin_name": "金融城东",
+        "terminal_name": "黄田坝",
+        "line_short_name": "9",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-rong2-pattern-pixian-west-railway-station-rong2-to-chengdu-west-railway-station-rong2",
+      "line_id": "cn-chengdu-line-rong2",
+      "name": "蓉2号线",
+      "names": {
+        "zh": "蓉2号线",
+        "en": "Tram Line 2"
+      },
+      "stop_ids": [
+        "cn-chengdu-pixian-west-railway-station-rong2",
+        "cn-chengdu-liyuan-road-rong2",
+        "cn-chengdu-wangcong-temple-rong2",
+        "cn-chengdu-hegong-road-rong2",
+        "cn-chengdu-chenguang-rong2",
+        "cn-chengdu-huashi-rong2",
+        "cn-chengdu-dayu-east-road-rong2",
+        "cn-chengdu-hongzhan-east-road-rong2",
+        "cn-chengdu-hongqi-avenue-rong2",
+        "cn-chengdu-defu-avenue-rong2",
+        "cn-chengdu-tianyuan-road-rong2",
+        "cn-chengdu-tianying-road-rong2",
+        "cn-chengdu-anbu-rong2",
+        "cn-chengdu-tianxin-road-rong2",
+        "cn-chengdu-hezuo-road-rong2",
+        "cn-chengdu-hexin-road-rong2",
+        "cn-chengdu-university-of-electronic-science-and-technology-of-china-rong2",
+        "cn-chengdu-chengdu-jincheng-college-rong2",
+        "cn-chengdu-xinye-road-rong2",
+        "cn-chengdu-tulong-road-rong2",
+        "cn-chengdu-liangong-rong2",
+        "cn-chengdu-chengdu-west-railway-station-rong2"
+      ],
+      "origin_stop_id": "cn-chengdu-pixian-west-railway-station-rong2",
+      "terminal_stop_id": "cn-chengdu-chengdu-west-railway-station-rong2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "郫县西站-成都西站"
+        }
+      ],
+      "extras": {
+        "description": "郫县西站-成都西站",
+        "direction": "01",
+        "origin_name": "郫县西站",
+        "terminal_name": "成都西站",
+        "line_short_name": "蓉2",
+        "pattern_role": "direction"
+      }
+    },
+    {
+      "id": "cn-chengdu-line-rong2-pattern-xinye-road-rong2-to-renhe-rong2",
+      "line_id": "cn-chengdu-line-rong2",
+      "name": "蓉2号线",
+      "names": {
+        "zh": "蓉2号线",
+        "en": "Tram Line 2"
+      },
+      "stop_ids": [
+        "cn-chengdu-xinye-road-rong2",
+        "cn-chengdu-baiye-road-rong2",
+        "cn-chengdu-chenfeng-rong2",
+        "cn-chengdu-tianhe-road-rong2",
+        "cn-chengdu-longyin-rong2",
+        "cn-chengdu-xipu-campus-southwest-jiaotong-university-rong2",
+        "cn-chengdu-xifang-road-rong2",
+        "cn-chengdu-guoning-rong2",
+        "cn-chengdu-datian-rong2",
+        "cn-chengdu-xihua-university-rong2",
+        "cn-chengdu-shuanglin-village-rong2",
+        "cn-chengdu-jintu-rong2",
+        "cn-chengdu-chengdu-technician-college-rong2",
+        "cn-chengdu-renhe-rong2"
+      ],
+      "origin_stop_id": "cn-chengdu-xinye-road-rong2",
+      "terminal_stop_id": "cn-chengdu-renhe-rong2",
+      "is_primary": false,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "新业路-仁和"
+        }
+      ],
+      "extras": {
+        "description": "新业路-仁和",
+        "direction": "02",
+        "origin_name": "新业路",
+        "terminal_name": "仁和",
+        "line_short_name": "蓉2",
+        "pattern_role": "branch",
+        "stub_of": "cn-chengdu-line-rong2-pattern-xinye-road-rong2-to-renhe-rong2",
+        "stubbed_from_n": 14,
+        "junction_index_in_source": 0
+      },
+      "junction_stop_id": "cn-chengdu-xinye-road-rong2"
+    },
+    {
+      "id": "cn-chengdu-line-s3-pattern-futian-s3-to-ziyang-bei-station-s3",
+      "line_id": "cn-chengdu-line-s3",
+      "name": "S3（资阳）线",
+      "names": {
+        "zh": "S3（资阳）线",
+        "en": "Line S3"
+      },
+      "stop_ids": [
+        "cn-chengdu-futian-s3",
+        "cn-chengdu-ziyang-airport-economic-zone-s3",
+        "cn-chengdu-xingfu-avenue-s3",
+        "cn-chengdu-changhong-square-s3",
+        "cn-chengdu-baotai-s3",
+        "cn-chengdu-ziyang-bei-station-s3"
+      ],
+      "origin_stop_id": "cn-chengdu-futian-s3",
+      "terminal_stop_id": "cn-chengdu-ziyang-bei-station-s3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "福田-资阳北站"
+        }
+      ],
+      "extras": {
+        "description": "福田-资阳北站",
+        "direction": "01",
+        "origin_name": "福田",
+        "terminal_name": "资阳北站",
+        "line_short_name": "S3",
+        "pattern_role": "direction"
+      }
+    }
+  ]
+}
