@@ -1,4 +1,4 @@
-import { type OriginFareSpec, proxyUrl } from '@openmetro/core';
+import { type OriginFareSpec, proxyUrl, syncFaresFromOrigins } from '@openmetro/core';
 import { fetchTransTickets } from './fetch.js';
 
 /**
@@ -47,6 +47,18 @@ export function suzhouFareSpec(): OriginFareSpec {
       return out;
     }
   };
+}
+
+/**
+ * One-to-all harvest into `<dataDir>/fares.json`. Cheap enough to run on every
+ * full sync and on fares-only refreshes.
+ */
+export async function harvestSuzhouFares(dataDir: string): Promise<void> {
+  console.log('  harvest one-to-all fares via getTransTickets');
+  await syncFaresFromOrigins({ dataDir }, suzhouFareSpec(), {
+    concurrency: 6,
+    delayMs: 80
+  });
 }
 
 /** Re-export for adapter runners that want the live fetch helper. */

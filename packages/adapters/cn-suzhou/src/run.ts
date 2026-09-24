@@ -13,12 +13,11 @@ import {
   type LineEncoded,
   type SegmentEncoded,
   type StationEncoded,
-  syncFaresFromOrigins,
   type TransformStations,
   writeCanonical
 } from '@openmetro/core';
 
-import { suzhouFareSpec } from './fares.js';
+import { harvestSuzhouFares } from './fares.js';
 import { fetchSuzhouSources } from './fetch.js';
 import { normalize } from './normalize.js';
 import {
@@ -33,7 +32,7 @@ export const transformStations: TransformStations = (stations) => stations;
 export interface SuzhouNormalizeOptions {
   /** Repository root containing `data/cn-suzhou`. */
   root?: string;
-  /** Skip live one-to-all fare harvest. */
+  /** Unused — one-to-all fares are always harvested with the full sync. */
   skipFares?: boolean;
   /** Skip coordinate enrichment (offline / partial rebuilds). */
   skipGeocode?: boolean;
@@ -126,9 +125,9 @@ export async function runSuzhouNormalize(opts: SuzhouNormalizeOptions = {}): Pro
       onGeocode: () => geocoded++
     });
   } else {
-    // Preserve previously geocoded locations + provenance when only refreshing
-    // other layers (fares-only sync). `normalize()` rebuilds stations from the
-    // map JS and would otherwise drop `extras.location_source`.
+    // Preserve previously geocoded locations + provenance on partial rebuilds.
+    // `normalize()` rebuilds stations from the map JS and would otherwise drop
+    // `extras.location_source`.
     try {
       const prev = JSON.parse(await readFile(join(outDir, 'stations.json'), 'utf-8')) as {
         records?: StationEncoded[];
@@ -237,13 +236,8 @@ export async function runSuzhouNormalize(opts: SuzhouNormalizeOptions = {}): Pro
     timetables: canonical.timetables
   });
 
-  if (!opts.skipFares) {
-    console.log('  harvest one-to-all fares via getTransTickets');
-    await syncFaresFromOrigins({ dataDir: outDir }, suzhouFareSpec(), {
-      concurrency: 6,
-      delayMs: 80
-    });
-  }
+  // Always harvest: one-to-all is seconds, and verify requires fares.json.
+  await harvestSuzhouFares(outDir);
 
   console.log('lines:', lines.length);
   console.log('stations:', stations.length);
