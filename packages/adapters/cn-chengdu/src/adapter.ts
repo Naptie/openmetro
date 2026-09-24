@@ -1,5 +1,7 @@
 import { type AdapterManifest, type SyncCtx, type SyncLayer, syncFares } from '@openmetro/core';
+import { applyOfficialSegmentDistances, harvestOfficialSegmentDistances } from './distances.js';
 import { fareSpec, writeChengduFormulaFares } from './fares.js';
+import { fillFareGaps } from './fill-gaps.js';
 import { runChengduNormalize } from './run.js';
 
 function rootOf(dataDir: string): string {
@@ -34,10 +36,21 @@ export const adapter: AdapterManifest = {
         // so a complete network still ships fares before the OD harvest.
         skipFormulaFares: false
       });
+      if (wantFares) {
+        await syncFares({ dataDir: ctx.dataDir }, fareSpec, { concurrency: 8, delay: 80 });
+        const cache = await harvestOfficialSegmentDistances(ctx.dataDir);
+        await applyOfficialSegmentDistances(ctx.dataDir, cache);
+        await fillFareGaps(ctx.dataDir);
+      }
     } else if (wantFares) {
       // Fares-only must never rewrite topology/timetables.
       await writeChengduFormulaFares(ctx.dataDir);
       await syncFares({ dataDir: ctx.dataDir }, fareSpec, { concurrency: 8, delay: 80 });
+      // Official planner path km → segments; fill unpublished ODs
+      // (neighbor official mode, else formula on those km).
+      const cache = await harvestOfficialSegmentDistances(ctx.dataDir);
+      await applyOfficialSegmentDistances(ctx.dataDir, cache);
+      await fillFareGaps(ctx.dataDir);
     }
   }
 };
