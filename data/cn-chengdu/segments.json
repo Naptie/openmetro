@@ -619,9 +619,16 @@
         "cn-chengdu-cn-chengdu-chengdu-jincheng-college-rong2-to-cn-chengdu-chengdu-west-railway-station-rong2-rc07ae",
         "cn-chengdu-cn-chengdu-xinye-road-rong2-to-cn-chengdu-chengdu-west-railway-station-rong2-rc07ae"
       ],
-      "distance_km": 0.795,
+      "distance_km": 0.92,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "getTravel_dis_triangulation",
+        "distance_meters": 920,
+        "distance_method": "triangle: dis(A,B)=d(A,X)+d(X,B) via unique 2-hop through junction",
+        "distance_inputs_m": {
+          "jin_bai": 2056,
+          "jin_tu": 2487,
+          "bai_tu": 2703
+        }
       }
     },
     {
@@ -9238,13 +9245,20 @@
       "to_station_id": "cn-chengdu-baiye-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "distance_km": 1.054,
+      "distance_km": 1.136,
       "extras": {
-        "distance_source": "haversine",
+        "distance_source": "getTravel_dis_triangulation",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 18.4,
         "a_s_per_km": 120.2,
-        "b_s": 79.3
+        "b_s": 79.3,
+        "distance_meters": 1136,
+        "distance_method": "triangle: dis(A,B)=d(A,X)+d(X,B) via unique 2-hop through junction",
+        "distance_inputs_m": {
+          "jin_bai": 2056,
+          "jin_tu": 2487,
+          "bai_tu": 2703
+        }
       },
       "travel_time_seconds": 206,
       "travel_time_source": "estimated",
@@ -9268,9 +9282,16 @@
         "cn-chengdu-cn-chengdu-xinye-road-rong2-to-cn-chengdu-chengdu-west-railway-station-rong2-rc07ae",
         "cn-chengdu-cn-chengdu-tulong-road-rong2-to-cn-chengdu-chengdu-west-railway-station-rong2-rc07ae"
       ],
-      "distance_km": 1.685,
+      "distance_km": 1.567,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "getTravel_dis_triangulation",
+        "distance_meters": 1567,
+        "distance_method": "triangle: dis(A,B)=d(A,X)+d(X,B) via unique 2-hop through junction",
+        "distance_inputs_m": {
+          "jin_bai": 2056,
+          "jin_tu": 2487,
+          "bai_tu": 2703
+        }
       }
     },
     {

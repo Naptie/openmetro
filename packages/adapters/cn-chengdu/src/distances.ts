@@ -135,3 +135,87 @@ export async function applyOfficialSegmentDistances(
   console.log(`  segments: official distance on ${updated}, kept prior ${kept}`);
   return { updated, kept };
 }
+
+/**
+ * Recover missing edges around a junction the planner cannot use as an OD
+ * endpoint (e.g. 新业路). Through-path `dis` between its neighbours gives
+ *   dis(A,B) = d(A,X) + d(X,B)
+ * and the 3-neighbour triangle solves each edge. Long-path residuals
+ * (neighbour → far station via X) independently confirm the pair sums.
+ */
+export async function triangulateJunctionEdges(
+  dataDir: string,
+  junctionStationId: string,
+  /** neighbour id → through-path meters to the other two neighbours */
+  pairMeters: Record<string, number>
+): Promise<void> {
+  // pairMeters keys like "neighA|neighB"
+  const entries = Object.entries(pairMeters);
+  const nodes = new Set<string>();
+  for (const [k] of entries) {
+    const [a, b] = k.split('|');
+    nodes.add(a!);
+    nodes.add(b!);
+  }
+  if (nodes.size !== 3) throw new Error('triangulateJunctionEdges expects a 3-neighbour triangle');
+  const [a, b, c] = [...nodes];
+  const ab = pairMeters[`${a}|${b}`] ?? pairMeters[`${b}|${a}`];
+  const ac = pairMeters[`${a}|${c}`] ?? pairMeters[`${c}|${a}`];
+  const bc = pairMeters[`${b}|${c}`] ?? pairMeters[`${c}|${b}`];
+  if (ab == null || ac == null || bc == null) throw new Error('triangle missing a pair total');
+  const dA = (ab + ac - bc) / 2;
+  const dB = (ab + bc - ac) / 2;
+  const dC = (ac + bc - ab) / 2;
+  const solved: Record<string, number> = {
+    [a!]: dA,
+    [b!]: dB,
+    [c!]: dC
+  };
+
+  const segsPath = join(dataDir, 'segments.json');
+  const doc = JSON.parse(await readFile(segsPath, 'utf-8')) as {
+    records: {
+      from_station_id: string;
+      to_station_id: string;
+      distance_km?: number;
+      extras?: Record<string, unknown>;
+    }[];
+  };
+  for (const s of doc.records) {
+    let other: string | null = null;
+    if (s.from_station_id === junctionStationId) other = s.to_station_id;
+    else if (s.to_station_id === junctionStationId) other = s.from_station_id;
+    if (!other || solved[other] == null) continue;
+    const meters = solved[other];
+    s.distance_km = Math.round(meters) / 1000;
+    s.extras = {
+      ...(s.extras ?? {}),
+      distance_source: 'getTravel_dis_triangulation',
+      distance_meters: Math.round(meters),
+      distance_method: 'triangle through junction: dis(A,B)=d(A,X)+d(X,B)'
+    };
+  }
+  await writeFile(segsPath, `${JSON.stringify(doc, null, 2)}\n`, 'utf-8');
+
+  const cachePath = join(dataDir, 'official-distances.json');
+  const cache = JSON.parse(await readFile(cachePath, 'utf-8')) as OfficialDistanceCache & {
+    inferred?: Record<string, unknown>;
+  };
+  for (const [nei, meters] of Object.entries(solved)) {
+    cache.meters[`${junctionStationId}|${nei}`] = Math.round(meters);
+    cache.meters[`${nei}|${junctionStationId}`] = Math.round(meters);
+  }
+  cache.inferred = {
+    ...(cache.inferred ?? {}),
+    [junctionStationId]: {
+      method: 'triangle_through_junction',
+      edges_m: solved,
+      inputs_m: pairMeters
+    }
+  };
+  await writeFile(cachePath, `${JSON.stringify(cache, null, 2)}\n`, 'utf-8');
+  console.log(
+    `  triangulated ${nodes.size} edges at ${junctionStationId}: ` +
+      [...nodes].map((n) => `${n}=${solved[n]}`).join(', ')
+  );
+}

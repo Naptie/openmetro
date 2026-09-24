@@ -909,6 +909,32 @@
     "cn-chengdu-xingye-north-street|cn-chengdu-zitonggong": 1535,
     "cn-chengdu-zitonggong|cn-chengdu-xingye-north-street": 1535,
     "cn-chengdu-xingfu-avenue|cn-chengdu-ziyang-airport-economic-zone": 6957,
-    "cn-chengdu-ziyang-airport-economic-zone|cn-chengdu-xingfu-avenue": 6957
+    "cn-chengdu-ziyang-airport-economic-zone|cn-chengdu-xingfu-avenue": 6957,
+    "cn-chengdu-xinye-road|cn-chengdu-chengdu-jincheng-college": 920,
+    "cn-chengdu-chengdu-jincheng-college|cn-chengdu-xinye-road": 920,
+    "cn-chengdu-xinye-road|cn-chengdu-baiye-road": 1136,
+    "cn-chengdu-baiye-road|cn-chengdu-xinye-road": 1136,
+    "cn-chengdu-xinye-road|cn-chengdu-tulong-road": 1567,
+    "cn-chengdu-tulong-road|cn-chengdu-xinye-road": 1567
+  },
+  "inferred": {
+    "junction_xinye_road": {
+      "method": "triangle_through_junction",
+      "edges_m": {
+        "cn-chengdu-chengdu-jincheng-college": 920,
+        "cn-chengdu-baiye-road": 1136,
+        "cn-chengdu-tulong-road": 1567
+      },
+      "inputs_m": {
+        "jin_bai": 2056,
+        "jin_tu": 2487,
+        "bai_tu": 2703
+      },
+      "longpath_check_m": {
+        "jin_xi_residual_xz": 2487,
+        "bai_xi_residual_yz": 2703
+      },
+      "note": "getTravel cannot use Xinye Road as OD endpoint; recovered from through-path dis. Branch 12-hop sum vs long-route residual differs by ~300m (hop-sum overhead); 2-hop triangle is self-consistent with long-path residuals."
+    }
   }
 }
