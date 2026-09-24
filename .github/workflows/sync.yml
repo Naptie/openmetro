@@ -156,6 +156,9 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Build core (adapters import @openmetro/core)
+        run: bun run --cwd packages/core build
+
       - name: Sync fare matrix
         env:
           OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}
