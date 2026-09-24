@@ -15,7 +15,8 @@ export const adapter: AdapterManifest = {
     timetables: { supported: true, estimatedMinutes: 4 },
     // Official MinTimeJson per OD pair; monthly full-matrix harvest.
     fares: { supported: true, estimatedMinutes: 20 },
-    enrichment: { supported: true, estimatedMinutes: 8 }
+    enrichment: { supported: true, estimatedMinutes: 8 },
+    gapfill: { supported: true, estimatedMinutes: 15 }
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
     if (layers.length === 0) return;

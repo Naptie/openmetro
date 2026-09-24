@@ -10,11 +10,14 @@
  *   topology+timetables  weekly (official APIs)
  *   enrichment           rides with topology (coords / names)
  *   fares                monthly, **opt-in only** (per-adapter OD planners)
+ *   gapfill              **opt-in only** (adapter-agnostic Baidu planner
+ *                        harvest of weak/missing segment times, distances
+ *                        and transfer walks)
  *
- * Fares are never part of the default `--layer` set: the operator planners
- * are queried once per OD pair, which takes hours per network. They run only
- * when `fares` is named explicitly in `--layer` (see sync.yml: the weekly
- * cron omits it; the fares job is workflow_dispatch-only).
+ * Fares and gapfill are never part of the default `--layer` set: fares query
+ * the operator planner once per OD pair (hours per network); gapfill queries
+ * a third-party planner for residual edges. Both run only when named
+ * explicitly in `--layer`.
  */
 
 import { readFile, writeFile } from 'node:fs/promises';
@@ -23,6 +26,7 @@ import { fileURLToPath } from 'node:url';
 import {
   type AdapterManifest,
   computeNetworkQuality,
+  runGapfill,
   SYNC_LAYERS,
   type SyncCtx,
   type SyncLayer
@@ -172,6 +176,12 @@ async function main() {
         'pair, which can take hours per network'
     );
   }
+  if (args.layers.includes('gapfill')) {
+    console.log(
+      'note: gapfill layer requested — Baidu transit planner fills residual ' +
+        'segment/transfer gaps (set OPENMETRO_BAIDU_AK)'
+    );
+  }
 
   for (const a of adapters) {
     const manifest = await loadManifest(a);
@@ -185,18 +195,30 @@ async function main() {
     }
 
     try {
-      if (wanted.length > 0) {
-        console.log(`[${manifest.networkId}] sync ${wanted.join(',')}`);
-        await manifest.sync(wanted, ctx);
+      // `gapfill` is core-orchestrated and adapter-agnostic: adapters only
+      // declare `layers.gapfill.supported`; they never implement the harvest.
+      const adapterLayers = wanted.filter((l) => l !== 'gapfill');
+      const wantGapfill = wanted.includes('gapfill');
+      if (adapterLayers.length > 0 || wantGapfill) {
+        console.log(
+          `[${manifest.networkId}] sync ${[...adapterLayers, ...(wantGapfill ? ['gapfill'] : [])].join(',')}`
+        );
+      }
+      if (adapterLayers.length > 0) {
+        await manifest.sync(adapterLayers, ctx);
         // Topology may add/remove stations; keep fare matrix index consistent.
-        if (wanted.some((l) => l === 'topology')) {
+        if (adapterLayers.some((l) => l === 'topology')) {
           await reconcileFares(manifest.networkId);
         }
         // Fares-only sync writes fares.json but does not touch network.json;
         // recompute quality so the report reflects the new matrix.
-        if (wanted.some((l) => l === 'fares')) {
+        if (adapterLayers.some((l) => l === 'fares')) {
           await refreshNetworkQuality(manifest.networkId);
         }
+      }
+      if (wantGapfill) {
+        await runGapfill(ctx);
+        await refreshNetworkQuality(manifest.networkId);
       }
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);

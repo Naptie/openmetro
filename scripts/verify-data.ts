@@ -24,7 +24,12 @@ import { createHash } from 'node:crypto';
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { Effect } from 'effect';
-import { loadNetwork, type NetworkData } from '../packages/core/src/index.js';
+import {
+  evaluateStationSpeed,
+  haversineKm,
+  loadNetwork,
+  type NetworkData
+} from '../packages/core/src/index.js';
 
 const DATA_ROOT = resolve(process.env.OPENMETRO_DATA_ROOT ?? 'data');
 
@@ -59,6 +64,10 @@ function sha256(data: string | Uint8Array): string {
 
 function fail(network: string, message: string): never {
   throw new Error(`[${network}] ${message}`);
+}
+
+function warn(network: string, message: string): void {
+  console.warn(`[${network}] warn: ${message}`);
 }
 
 function assert(condition: unknown, network: string, message: string): asserts condition {
@@ -129,13 +138,18 @@ function verifyReferences(network: string, d: NetworkData): void {
         (m) => m === 'metro' || m === 'airport_express' || m === 'monorail' || m === 'light_rail'
       );
       if (needsCoords) {
-        assert(station.location, network, `station ${station.id} missing location`);
-        assert(station.location.crs, network, `station ${station.id} location.crs missing`);
-        assert(
-          isPlausibleLocation(station.location.lon, station.location.lat),
-          network,
-          `station ${station.id} has implausible coordinates`
-        );
+        if (!station.location) {
+          // A newly opened station may appear in the timetable before it is
+          // published on AMap / the official station.js picker. Soft-warn.
+          warn(network, `station ${station.id} (${station.name ?? ''}) missing location`);
+        } else {
+          assert(station.location.crs, network, `station ${station.id} location.crs missing`);
+          assert(
+            isPlausibleLocation(station.location.lon, station.location.lat),
+            network,
+            `station ${station.id} has implausible coordinates`
+          );
+        }
       }
     }
   }
@@ -223,6 +237,116 @@ function verifyReferences(network: string, d: NetworkData): void {
     const key = `${segment.from_stop_id}|${segment.to_stop_id}`;
     assert(!segmentPairs.has(key), network, `duplicate segment ${key}`);
     segmentPairs.add(key);
+  }
+
+  // ── Geometry sanity ────────────────────────────────────────────
+  // Adjacent stops on one pattern must be physically near each other, and a
+  // linear pattern must not double back on itself. These catch topology bugs
+  // that schema + FK checks cannot see (e.g. a branch list flattened into the
+  // main alignment, producing a multi-km "adjacent" hop or a zigzag).
+  /** Soft floor: longer hops are unusual and worth a warning. */
+  const WARN_GAP_KM = 3;
+  /**
+   * Sanity ceiling only — airport expresses routinely span 20km+ between
+   * stops (Beijing Daxing, Chengdu Tianfu). Topology bugs are caught by the
+   * heading-reversal check below, not by distance alone.
+   */
+  const MAX_GAP_KM: Record<string, number> = {
+    metro: 50,
+    monorail: 50,
+    light_rail: 50,
+    tram: 20,
+    airport_express: 80,
+    suburban_rail: 80,
+    other: 50
+  };
+  const locOf = (stationId: string) => {
+    const st = stationById.get(stationId);
+    return st?.location ? { lon: st.location.lon, lat: st.location.lat } : undefined;
+  };
+  const bearingDeg = (
+    a: { lon: number; lat: number },
+    b: { lon: number; lat: number }
+  ): number => {
+    const toRad = (d: number) => (d * Math.PI) / 180;
+    const toDeg = (r: number) => (r * 180) / Math.PI;
+    const p1 = toRad(a.lat);
+    const p2 = toRad(b.lat);
+    const dl = toRad(b.lon - a.lon);
+    const y = Math.sin(dl) * Math.cos(p2);
+    const x = Math.cos(p1) * Math.sin(p2) - Math.sin(p1) * Math.cos(p2) * Math.cos(dl);
+    return (toDeg(Math.atan2(y, x)) + 360) % 360;
+  };
+  for (const pattern of d.patterns) {
+    const mode = lineById.get(pattern.line_id)?.mode ?? 'other';
+    const maxGap = MAX_GAP_KM[mode] ?? MAX_GAP_KM.other!;
+    for (let i = 0; i < pattern.stop_ids.length - 1; i++) {
+      const a = stopById.get(pattern.stop_ids[i]!);
+      const b = stopById.get(pattern.stop_ids[i + 1]!);
+      if (!a || !b) continue;
+      const la = locOf(a.station_id);
+      const lb = locOf(b.station_id);
+      if (!la || !lb) continue;
+      const gapKm = haversineKm(la, lb);
+      if (gapKm > WARN_GAP_KM) {
+        warn(
+          network,
+          `pattern ${pattern.id} adjacent gap ${gapKm.toFixed(2)}km > ${WARN_GAP_KM}km between ${a.station_id} and ${b.station_id}`
+        );
+      }
+      assert(
+        gapKm <= maxGap,
+        network,
+        `pattern ${pattern.id} adjacent gap ${gapKm.toFixed(2)}km > ${maxGap}km between ${a.station_id} and ${b.station_id}`
+      );
+    }
+    for (let i = 1; i < pattern.stop_ids.length - 1; i++) {
+      const a = stopById.get(pattern.stop_ids[i - 1]!);
+      const b = stopById.get(pattern.stop_ids[i]!);
+      const c = stopById.get(pattern.stop_ids[i + 1]!);
+      if (!a || !b || !c) continue;
+      const la = locOf(a.station_id);
+      const lb = locOf(b.station_id);
+      const lc = locOf(c.station_id);
+      if (!la || !lb || !lc) continue;
+      const d1 = haversineKm(la, lb);
+      const d2 = haversineKm(lb, lc);
+      if (d1 < 0.3 || d2 < 0.3) continue;
+      // Long express / sea-crossing legs legitimately turn hard (HK Airport
+      // Express doglegs around the airport island).
+      if (d1 > 10 || d2 > 10) continue;
+      const b1 = bearingDeg(la, lb);
+      const b2 = bearingDeg(lb, lc);
+      const turn = Math.abs(((b2 - b1 + 540) % 360) - 180);
+      assert(
+        // 160° catches flattened-branch backtracks; allows real doglegs.
+        turn < 160,
+        network,
+        `pattern ${pattern.id} heading reversal ${turn.toFixed(0)}° at ${b.station_id} (${a.station_id}->${c.station_id})`
+      );
+    }
+  }
+
+  // ── Speed-validate coordinates ─────────────────────────────────
+  const segAdj = d.segments.map((s) => ({
+    from_station_id: s.from_station_id,
+    to_station_id: s.to_station_id,
+    line_id: s.line_id,
+    travel_time_seconds: s.travel_time_seconds ?? undefined,
+    travel_time_source: s.travel_time_source ?? undefined
+  }));
+  const lineModes = d.lines.map((l) => ({ id: l.id, mode: l.mode }));
+  for (const station of d.stations) {
+    if (station.status !== 'operating') continue;
+    const report = evaluateStationSpeed(d.stations, segAdj, station.id, { lines: lineModes });
+    if (report.ok) continue;
+    const details = report.violations
+      .map(
+        (v) =>
+          `${v.kind} d=${v.distance_km.toFixed(2)}km t=${v.travel_time_seconds}s ratio=${v.ratio.toFixed(2)}`
+      )
+      .join('; ');
+    warn(network, `station ${station.id} (${station.name ?? ''}) speed-validate: ${details}`);
   }
 
   // ── Transfers ─────────────────────────────────────────────────

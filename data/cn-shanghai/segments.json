@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-shanghai",
-  "generated_at": "2026-09-21T07:35:30.845Z",
-  "source": [],
+  "generated_at": "2026-09-24T17:16:07.397Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-24T17:16:07.397Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "cn-shanghai-seg-cn-shanghai-aiguo-road-12-cn-shanghai-fuxing-island-12",
@@ -32,8 +43,11 @@
       "travel_time_source": "planner",
       "source_id": "1850",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1333
+      },
+      "distance_km": 1.333
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-anshan-xincun-8-cn-shanghai-jiangpu-road-8",
@@ -62,8 +76,11 @@
       "travel_time_source": "planner",
       "source_id": "1117",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1821
+      },
+      "distance_km": 1.821
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-baiyin-road-11-cn-shanghai-jiading-xincheng-11",
@@ -377,8 +394,11 @@
       "travel_time_source": "planner",
       "source_id": "1730",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3676
+      },
+      "distance_km": 3.676
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-century-avenue-2-cn-shanghai-shanghai-science-technology-museum-2",
@@ -422,8 +442,11 @@
       "travel_time_source": "planner",
       "source_id": "0632",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 899
+      },
+      "distance_km": 0.899
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-century-avenue-9-cn-shanghai-middle-yanggao-road-9",
@@ -707,8 +730,11 @@
       "travel_time_source": "planner",
       "source_id": "0830",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2051
+      },
+      "distance_km": 2.051
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-chuansha-2-cn-shanghai-lingkong-road-2",
@@ -722,8 +748,11 @@
       "travel_time_source": "planner",
       "source_id": "0259",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2577
+      },
+      "distance_km": 2.577
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-chunshen-road-5-cn-shanghai-xinzhuang-5",
@@ -842,8 +871,11 @@
       "travel_time_source": "planner",
       "source_id": "1240",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 946
+      },
+      "distance_km": 0.946
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-dalian-road-4-cn-shanghai-yangshupu-road-4",
@@ -977,8 +1009,11 @@
       "travel_time_source": "planner",
       "source_id": "1731",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 5843
+      },
+      "distance_km": 5.843
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-dingbian-road-14-cn-shanghai-zhenxin-xincun-14",
@@ -1052,8 +1087,11 @@
       "travel_time_source": "planner",
       "source_id": "4105",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1189
+      },
+      "distance_km": 1.189
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-dongchuan-road-5-cn-shanghai-jianchuan-road-5",
@@ -1097,8 +1135,11 @@
       "travel_time_source": "planner",
       "source_id": "0923",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2244
+      },
+      "distance_km": 2.244
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-dongjing-road-6-cn-shanghai-wuzhou-avenue-6",
@@ -1112,8 +1153,11 @@
       "travel_time_source": "planner",
       "source_id": "0642",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2409
+      },
+      "distance_km": 2.409
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-donglan-road-12-cn-shanghai-hongmei-road-12",
@@ -1187,8 +1231,11 @@
       "travel_time_source": "planner",
       "source_id": "1119",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 5306
+      },
+      "distance_km": 5.306
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-east-china-university-of-science-and-technology-15-cn-shanghai-shanghai-south-railway-station-15",
@@ -1217,8 +1264,11 @@
       "travel_time_source": "planner",
       "source_id": "1626",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3621
+      },
+      "distance_km": 3.621
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-east-huaxia-road-2-cn-shanghai-chuansha-2",
@@ -1247,8 +1297,11 @@
       "travel_time_source": "planner",
       "source_id": "1630",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 10688
+      },
+      "distance_km": 10.688
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-east-kangqiao-51-cn-shanghai-shanghai-international-resort-51",
@@ -1262,8 +1315,11 @@
       "travel_time_source": "planner",
       "source_id": "5135",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 6221
+      },
+      "distance_km": 6.221
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-east-nanjing-road-10-cn-shanghai-tiantong-road-10",
@@ -1292,8 +1348,11 @@
       "travel_time_source": "planner",
       "source_id": "0246",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1820
+      },
+      "distance_km": 1.82
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-east-sanlin-11-cn-shanghai-pusan-road-11",
@@ -1352,8 +1411,11 @@
       "travel_time_source": "planner",
       "source_id": "1624",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3580
+      },
+      "distance_km": 3.58
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-fangdian-road-9-cn-shanghai-lantian-road-9",
@@ -1382,8 +1444,11 @@
       "travel_time_source": "planner",
       "source_id": "0751",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1414
+      },
+      "distance_km": 1.414
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-fangxin-road-18-cn-shanghai-longyang-road-18",
@@ -1397,8 +1462,11 @@
       "travel_time_source": "planner",
       "source_id": "1831",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1414
+      },
+      "distance_km": 1.414
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-fanrong-road-18-cn-shanghai-zhoupu-18",
@@ -1532,8 +1600,11 @@
       "travel_time_source": "planner",
       "source_id": "1245",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2790
+      },
+      "distance_km": 2.79
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-gangcheng-road-10-cn-shanghai-jilong-road-10",
@@ -1622,8 +1693,11 @@
       "travel_time_source": "planner",
       "source_id": "0255",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3359
+      },
+      "distance_km": 3.359
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-guangming-road-11-cn-shanghai-zhaofeng-road-11",
@@ -1652,8 +1726,11 @@
       "travel_time_source": "planner",
       "source_id": "0725",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2894
+      },
+      "distance_km": 2.894
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-gudai-road-12-cn-shanghai-donglan-road-12",
@@ -1667,8 +1744,11 @@
       "travel_time_source": "planner",
       "source_id": "1222",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2711
+      },
+      "distance_km": 2.711
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-guilin-park-12-cn-shanghai-caobao-road-12",
@@ -1787,8 +1867,11 @@
       "travel_time_source": "planner",
       "source_id": "1842",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 696
+      },
+      "distance_km": 0.696
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-gutang-road-9-cn-shanghai-minlei-road-9",
@@ -1862,8 +1945,11 @@
       "travel_time_source": "planner",
       "source_id": "0646",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1547
+      },
+      "distance_km": 1.547
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hangtou-18-cn-shanghai-xiasha-18",
@@ -1877,8 +1963,11 @@
       "travel_time_source": "planner",
       "source_id": "1821",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2091
+      },
+      "distance_km": 2.091
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hangzhong-road-10-cn-shanghai-ziteng-road-10",
@@ -1892,8 +1981,11 @@
       "travel_time_source": "planner",
       "source_id": "1018",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1175
+      },
+      "distance_km": 1.175
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hanzhong-road-1-cn-shanghai-shanghai-railway-station-1",
@@ -1982,8 +2074,11 @@
       "travel_time_source": "planner",
       "source_id": "1625",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2638
+      },
+      "distance_km": 2.638
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hetao-road-18-cn-shanghai-shenmei-road-18",
@@ -2087,8 +2182,11 @@
       "travel_time_source": "planner",
       "source_id": "1043",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2025
+      },
+      "distance_km": 2.025
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hongqiao-airport-terminal-2-10-cn-shanghai-hongqiao-airport-terminal-1-10",
@@ -2102,8 +2200,11 @@
       "travel_time_source": "planner",
       "source_id": "1042",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2051
+      },
+      "distance_km": 2.051
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hongqiao-airport-terminal-2-2-cn-shanghai-songhong-road-2",
@@ -2117,8 +2218,11 @@
       "travel_time_source": "planner",
       "source_id": "0236",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 6429
+      },
+      "distance_km": 6.429
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hongqiao-airport-terminal-2-51-cn-shanghai-zhongchun-road-51",
@@ -2132,8 +2236,11 @@
       "travel_time_source": "planner",
       "source_id": "5131",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 5231
+      },
+      "distance_km": 5.231
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hongqiao-railway-station-10-cn-shanghai-hongqiao-airport-terminal-2-10",
@@ -2162,8 +2269,11 @@
       "travel_time_source": "planner",
       "source_id": "1721",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2707
+      },
+      "distance_km": 2.707
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hongqiao-railway-station-2-cn-shanghai-hongqiao-airport-terminal-2-2",
@@ -2267,8 +2377,11 @@
       "travel_time_source": "planner",
       "source_id": "0535",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3221
+      },
+      "distance_km": 3.221
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-huangxing-park-8-cn-shanghai-xiangyin-road-8",
@@ -2327,8 +2440,11 @@
       "travel_time_source": "planner",
       "source_id": "0511",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1477
+      },
+      "distance_km": 1.477
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-huapeng-road-13-cn-shanghai-xia-nan-road-13",
@@ -2372,8 +2488,11 @@
       "travel_time_source": "planner",
       "source_id": "1728",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2534
+      },
+      "distance_km": 2.534
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-huinan-16-cn-shanghai-east-huinan-16",
@@ -2387,8 +2506,11 @@
       "travel_time_source": "planner",
       "source_id": "1629",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 5698
+      },
+      "distance_km": 5.698
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-hulan-road-1-cn-shanghai-gongfu-xincun-1",
@@ -2447,8 +2569,11 @@
       "travel_time_source": "planner",
       "source_id": "1134",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2910
+      },
+      "distance_km": 2.91
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jianchuan-road-5-cn-shanghai-beiqiao-5",
@@ -2492,8 +2617,11 @@
       "travel_time_source": "planner",
       "source_id": "0531",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1994
+      },
+      "distance_km": 1.994
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jiangning-road-13-cn-shanghai-hanzhong-road-13",
@@ -2792,8 +2920,11 @@
       "travel_time_source": "planner",
       "source_id": "5133",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 4825
+      },
+      "distance_km": 4.825
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jingxi-road-15-cn-shanghai-south-hongmei-road-15",
@@ -2807,8 +2938,11 @@
       "travel_time_source": "planner",
       "source_id": "1526",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1679
+      },
+      "distance_km": 1.679
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jinhai-lake-5-cn-shanghai-fengxian-xincheng-5",
@@ -2837,8 +2971,11 @@
       "travel_time_source": "planner",
       "source_id": "0949",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2838
+      },
+      "distance_km": 2.838
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jinji-road-9-cn-shanghai-jinhai-road-9",
@@ -2912,8 +3049,11 @@
       "travel_time_source": "planner",
       "source_id": "0510",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 970
+      },
+      "distance_km": 0.97
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jinqiao-9-cn-shanghai-jinji-road-9",
@@ -2927,8 +3067,11 @@
       "travel_time_source": "planner",
       "source_id": "0947",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2701
+      },
+      "distance_km": 2.701
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jinqiao-road-6-cn-shanghai-boxing-road-6",
@@ -2957,8 +3100,11 @@
       "travel_time_source": "planner",
       "source_id": "1549",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 4281
+      },
+      "distance_km": 4.281
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jinshajiang-road-13-cn-shanghai-longde-road-13",
@@ -3032,8 +3178,11 @@
       "travel_time_source": "planner",
       "source_id": "1450",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 6668
+      },
+      "distance_km": 6.668
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jinyun-road-13-cn-shanghai-west-jinshajiang-road-13",
@@ -3062,8 +3211,11 @@
       "travel_time_source": "planner",
       "source_id": "0926",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2243
+      },
+      "distance_km": 2.243
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-jufeng-road-12-cn-shanghai-north-yanggao-road-12",
@@ -3092,8 +3244,11 @@
       "travel_time_source": "planner",
       "source_id": "0641",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2462
+      },
+      "distance_km": 2.462
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-kangheng-road-11-cn-shanghai-yuqiao-11",
@@ -3137,8 +3292,11 @@
       "travel_time_source": "planner",
       "source_id": "1162",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 5072
+      },
+      "distance_km": 5.072
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-lancun-road-4-cn-shanghai-tangqiao-4",
@@ -3332,8 +3490,11 @@
       "travel_time_source": "planner",
       "source_id": "1632",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2591
+      },
+      "distance_km": 2.591
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-lingkong-road-2-cn-shanghai-yuandong-avenue-2",
@@ -3347,8 +3508,11 @@
       "travel_time_source": "planner",
       "source_id": "0260",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3080
+      },
+      "distance_km": 3.08
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-lingzhao-xincun-8-cn-shanghai-oriental-sports-center-8",
@@ -3437,8 +3601,11 @@
       "travel_time_source": "planner",
       "source_id": "1141",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1674
+      },
+      "distance_km": 1.674
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-longbai-xincun-10-cn-shanghai-longxi-road-10",
@@ -3542,8 +3709,11 @@
       "travel_time_source": "planner",
       "source_id": "1151",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1018
+      },
+      "distance_km": 1.018
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-longhua-12-cn-shanghai-middle-longhua-road-12",
@@ -3557,8 +3727,11 @@
       "travel_time_source": "planner",
       "source_id": "1229",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1546
+      },
+      "distance_km": 1.546
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-longxi-road-10-cn-shanghai-shuicheng-road-10",
@@ -3602,8 +3775,11 @@
       "travel_time_source": "planner",
       "source_id": "1832",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2947
+      },
+      "distance_km": 2.947
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-longyang-road-2-cn-shanghai-zhangjiang-high-technology-park-2",
@@ -3647,8 +3823,11 @@
       "travel_time_source": "planner",
       "source_id": "1153",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2203
+      },
+      "distance_km": 2.203
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-loushanguan-road-15-cn-shanghai-changfeng-park-15",
@@ -3782,8 +3961,11 @@
       "travel_time_source": "planner",
       "source_id": "0722",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3078
+      },
+      "distance_km": 3.078
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-luoshan-road-11-cn-shanghai-xiuyan-road-11",
@@ -3797,8 +3979,11 @@
       "travel_time_source": "planner",
       "source_id": "1160",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1815
+      },
+      "distance_km": 1.815
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-luoshan-road-16-cn-shanghai-east-zhoupu-16",
@@ -3812,8 +3997,11 @@
       "travel_time_source": "planner",
       "source_id": "1623",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 5059
+      },
+      "distance_km": 5.059
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-luoxiu-road-15-cn-shanghai-east-china-university-of-science-and-technology-15",
@@ -3872,8 +4060,11 @@
       "travel_time_source": "planner",
       "source_id": "1135",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3780
+      },
+      "distance_km": 3.78
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-meilan-lake-7-cn-shanghai-luonan-xincun-7",
@@ -3887,8 +4078,11 @@
       "travel_time_source": "planner",
       "source_id": "0721",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1672
+      },
+      "distance_km": 1.672
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-middle-chuangxin-road-2-cn-shanghai-east-huaxia-road-2",
@@ -3932,8 +4126,11 @@
       "travel_time_source": "planner",
       "source_id": "1348",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3353
+      },
+      "distance_km": 3.353
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-middle-huaxia-road-16-cn-shanghai-luoshan-road-16",
@@ -3947,8 +4144,11 @@
       "travel_time_source": "planner",
       "source_id": "1622",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2673
+      },
+      "distance_km": 2.673
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-middle-jiasong-road-17-cn-shanghai-zhaoxiang-17",
@@ -3962,8 +4162,11 @@
       "travel_time_source": "planner",
       "source_id": "1726",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3060
+      },
+      "distance_km": 3.06
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-middle-longhua-road-12-cn-shanghai-damuqiao-road-12",
@@ -4052,8 +4255,11 @@
       "travel_time_source": "planner",
       "source_id": "0513",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1434
+      },
+      "distance_km": 1.434
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-minlei-road-9-cn-shanghai-caolu-9",
@@ -4172,8 +4378,11 @@
       "travel_time_source": "planner",
       "source_id": "1137",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3184
+      },
+      "distance_km": 3.184
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-national-exhibition-and-convention-center-17-cn-shanghai-panlong-road-17",
@@ -4202,8 +4411,11 @@
       "travel_time_source": "planner",
       "source_id": "0234",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2707
+      },
+      "distance_km": 2.707
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-nenjiang-road-8-cn-shanghai-shiguang-road-8",
@@ -4232,8 +4444,11 @@
       "travel_time_source": "planner",
       "source_id": "1242",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 980
+      },
+      "distance_km": 0.98
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-north-jiading-11-cn-shanghai-west-jiading-11",
@@ -4247,8 +4462,11 @@
       "travel_time_source": "planner",
       "source_id": "1131",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1939
+      },
+      "distance_km": 1.939
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-north-meiling-road-15-cn-shanghai-tongchuan-road-15",
@@ -4352,8 +4570,11 @@
       "travel_time_source": "planner",
       "source_id": "1733",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 6311
+      },
+      "distance_km": 6.311
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-oriental-sports-center-11-cn-shanghai-sanlin-11",
@@ -4427,8 +4648,11 @@
       "travel_time_source": "planner",
       "source_id": "1723",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 4033
+      },
+      "distance_km": 4.033
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-panxiang-road-shanghai-national-accounting-institute-2-cn-shanghai-national-exhibition-and-convention-center-2",
@@ -4562,8 +4786,11 @@
       "travel_time_source": "planner",
       "source_id": "0416",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1438
+      },
+      "distance_km": 1.438
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-pudong-football-stadium-14-cn-shanghai-jinyue-road-14",
@@ -4607,8 +4834,11 @@
       "travel_time_source": "planner",
       "source_id": "0823",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2628
+      },
+      "distance_km": 2.628
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-pusan-road-11-cn-shanghai-kangheng-road-11",
@@ -4622,8 +4852,11 @@
       "travel_time_source": "planner",
       "source_id": "1157",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1437
+      },
+      "distance_km": 1.437
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-qi-an-road-15-cn-shanghai-nanda-road-15",
@@ -4652,8 +4885,11 @@
       "travel_time_source": "planner",
       "source_id": "0928",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3784
+      },
+      "distance_km": 3.784
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-qihua-road-7-cn-shanghai-shanghai-university-7",
@@ -4712,8 +4948,11 @@
       "travel_time_source": "planner",
       "source_id": "1220",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3072
+      },
+      "distance_km": 3.072
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-qufu-road-12-cn-shanghai-tiantong-road-12",
@@ -4877,8 +5116,11 @@
       "travel_time_source": "planner",
       "source_id": "1120",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3140
+      },
+      "distance_km": 3.14
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-shanghai-circus-world-1-cn-shanghai-wenshui-road-1",
@@ -4937,8 +5179,11 @@
       "travel_time_source": "planner",
       "source_id": "5136",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 15204
+      },
+      "distance_km": 15.204
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-shanghai-library-10-cn-shanghai-south-shaanxi-road-10",
@@ -5132,8 +5377,11 @@
       "travel_time_source": "planner",
       "source_id": "1844",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1763
+      },
+      "distance_km": 1.763
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-shanghai-west-railway-station-11-cn-shanghai-zhenru-11",
@@ -5162,8 +5410,11 @@
       "travel_time_source": "planner",
       "source_id": "1543",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2606
+      },
+      "distance_km": 2.606
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-shanghai-zoo-10-cn-shanghai-longxi-road-10",
@@ -5237,8 +5488,11 @@
       "travel_time_source": "planner",
       "source_id": "1250",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2856
+      },
+      "distance_km": 2.856
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-shenmei-road-18-cn-shanghai-fanrong-road-18",
@@ -5267,8 +5521,11 @@
       "travel_time_source": "planner",
       "source_id": "0924",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3843
+      },
+      "distance_km": 3.843
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-shibo-avenue-13-cn-shanghai-changqing-road-13",
@@ -5387,8 +5644,11 @@
       "travel_time_source": "planner",
       "source_id": "1631",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 7008
+      },
+      "distance_km": 7.008
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-sijing-9-cn-shanghai-jiuting-9",
@@ -5402,8 +5662,11 @@
       "travel_time_source": "planner",
       "source_id": "0925",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 6278
+      },
+      "distance_km": 6.278
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-siping-road-10-cn-shanghai-tongji-university-10",
@@ -5567,8 +5830,11 @@
       "travel_time_source": "planner",
       "source_id": "0922",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3386
+      },
+      "distance_km": 3.386
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-songjiang-xincheng-9-cn-shanghai-songjiang-university-town-9",
@@ -5582,8 +5848,11 @@
       "travel_time_source": "planner",
       "source_id": "0921",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2658
+      },
+      "distance_km": 2.658
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-songyuan-road-10-cn-shanghai-hongqiao-road-10",
@@ -5672,8 +5941,11 @@
       "travel_time_source": "planner",
       "source_id": "1439",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1100
+      },
+      "distance_km": 1.1
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-south-pudong-road-2-cn-shanghai-century-avenue-2",
@@ -5717,8 +5989,11 @@
       "travel_time_source": "planner",
       "source_id": "5134",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 12574
+      },
+      "distance_km": 12.574
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-south-shaanxi-road-1-cn-shanghai-site-of-the-first-cpc-national-congress-south-huangpi-road-1",
@@ -5777,8 +6052,11 @@
       "travel_time_source": "planner",
       "source_id": "0645",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1716
+      },
+      "distance_km": 1.716
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-south-xizang-road-4-cn-shanghai-luban-road-4",
@@ -5852,8 +6130,11 @@
       "travel_time_source": "planner",
       "source_id": "0420",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3307
+      },
+      "distance_km": 3.307
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-tangzhen-2-cn-shanghai-middle-chuangxin-road-2",
@@ -5942,8 +6223,11 @@
       "travel_time_source": "planner",
       "source_id": "1239",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1260
+      },
+      "distance_km": 1.26
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-tongchuan-road-14-cn-shanghai-zhenru-14",
@@ -6002,8 +6286,11 @@
       "travel_time_source": "planner",
       "source_id": "1062",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1062
+      },
+      "distance_km": 1.062
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-tongnan-road-18-cn-shanghai-west-changjiang-road-18",
@@ -6122,8 +6409,11 @@
       "travel_time_source": "planner",
       "source_id": "0627",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1294
+      },
+      "distance_km": 1.294
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-west-gaoke-road-7-cn-shanghai-south-yanggao-road-7",
@@ -6137,8 +6427,11 @@
       "travel_time_source": "planner",
       "source_id": "0748",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1505
+      },
+      "distance_km": 1.505
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-west-gaoqiao-10-cn-shanghai-gaoqiao-10",
@@ -6182,8 +6475,11 @@
       "travel_time_source": "planner",
       "source_id": "1132",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3962
+      },
+      "distance_km": 3.962
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-west-jinshajiang-road-13-cn-shanghai-fengzhuang-13",
@@ -6332,8 +6628,11 @@
       "travel_time_source": "planner",
       "source_id": "1338",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2052
+      },
+      "distance_km": 2.052
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-wuding-road-14-cn-shanghai-jing-an-temple-14",
@@ -6407,8 +6706,11 @@
       "travel_time_source": "planner",
       "source_id": "1432",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 794
+      },
+      "distance_km": 0.794
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-wuwei-road-11-cn-shanghai-qilianshan-road-11",
@@ -6482,8 +6784,11 @@
       "travel_time_source": "planner",
       "source_id": "0418",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1916
+      },
+      "distance_km": 1.916
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-xiangyin-road-8-cn-shanghai-nenjiang-road-8",
@@ -6542,8 +6847,11 @@
       "travel_time_source": "planner",
       "source_id": "1822",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2010
+      },
+      "distance_km": 2.01
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-xidu-5-cn-shanghai-xiaotang-5",
@@ -6587,8 +6895,11 @@
       "travel_time_source": "planner",
       "source_id": "1627",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 4848
+      },
+      "distance_km": 4.848
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-xincun-road-7-cn-shanghai-langao-road-7",
@@ -6782,8 +7093,11 @@
       "travel_time_source": "planner",
       "source_id": "1725",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3437
+      },
+      "distance_km": 3.437
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-xuying-road-17-cn-shanghai-xujingbeicheng-17",
@@ -6827,8 +7141,11 @@
       "travel_time_source": "planner",
       "source_id": "0415",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1376
+      },
+      "distance_km": 1.376
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-yangsi-8-cn-shanghai-chengshan-road-8",
@@ -7007,8 +7324,11 @@
       "travel_time_source": "planner",
       "source_id": "0933",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1589
+      },
+      "distance_km": 1.589
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-yongde-road-15-cn-shanghai-yuanjiang-road-15",
@@ -7022,8 +7342,11 @@
       "travel_time_source": "planner",
       "source_id": "1522",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2847
+      },
+      "distance_km": 2.847
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-youdian-xincun-10-cn-shanghai-siping-road-10",
@@ -7067,8 +7390,11 @@
       "travel_time_source": "planner",
       "source_id": "0261",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 5868
+      },
+      "distance_km": 5.868
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-yuanjiang-road-15-cn-shanghai-shuangbai-road-15",
@@ -7082,8 +7408,11 @@
       "travel_time_source": "planner",
       "source_id": "1523",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3391
+      },
+      "distance_km": 3.391
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-yuanshen-road-14-cn-shanghai-changyi-road-14",
@@ -7157,8 +7486,11 @@
       "travel_time_source": "planner",
       "source_id": "0637",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 849
+      },
+      "distance_km": 0.849
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-yunshun-road-14-cn-shanghai-pudong-football-stadium-14",
@@ -7187,8 +7519,11 @@
       "travel_time_source": "planner",
       "source_id": "0747",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1120
+      },
+      "distance_km": 1.12
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-yuqiao-11-cn-shanghai-luoshan-road-11",
@@ -7202,8 +7537,11 @@
       "travel_time_source": "planner",
       "source_id": "1159",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2579
+      },
+      "distance_km": 2.579
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-yuqiao-18-cn-shanghai-lianxi-road-18",
@@ -7337,8 +7675,11 @@
       "travel_time_source": "planner",
       "source_id": "1727",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 3851
+      },
+      "distance_km": 3.851
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-zhenbei-road-13-cn-shanghai-daduhe-road-13",
@@ -7472,8 +7813,11 @@
       "travel_time_source": "planner",
       "source_id": "5132",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 14885
+      },
+      "distance_km": 14.885
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-zhongchun-road-9-cn-shanghai-qibao-9",
@@ -7502,8 +7846,11 @@
       "travel_time_source": "planner",
       "source_id": "1349",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 1571
+      },
+      "distance_km": 1.571
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-zhongning-road-14-cn-shanghai-caoyang-road-14",
@@ -7622,8 +7969,11 @@
       "travel_time_source": "planner",
       "source_id": "0644",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2050
+      },
+      "distance_km": 2.05
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-zhoupu-18-cn-shanghai-kangqiao-18",
@@ -7682,8 +8032,11 @@
       "travel_time_source": "planner",
       "source_id": "1732",
       "extras": {
-        "planner_time_source": "shmetro-plantrip"
-      }
+        "planner_time_source": "shmetro-plantrip",
+        "distance_source": "baidu_path",
+        "distance_meters": 2804
+      },
+      "distance_km": 2.804
     },
     {
       "id": "cn-shanghai-seg-cn-shanghai-zhumei-road-15-cn-shanghai-luoxiu-road-15",

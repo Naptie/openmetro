@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-hangzhou",
-  "generated_at": "2026-09-22T19:30:48.989Z",
-  "source": [],
+  "generated_at": "2026-09-24T15:55:41.413Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-24T15:55:41.414Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-hangzhou-aoti-zhongxin-6-cn-hangzhou-aoti-zhongxin-7",
@@ -12,8 +23,12 @@
       "to_line_id": "cn-hangzhou-line-7",
       "from_stop_id": "cn-hangzhou-aoti-zhongxin-6",
       "to_stop_id": "cn-hangzhou-aoti-zhongxin-7",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-aoti-zhongxin-7-cn-hangzhou-aoti-zhongxin-6",
@@ -22,8 +37,12 @@
       "to_line_id": "cn-hangzhou-line-6",
       "from_stop_id": "cn-hangzhou-aoti-zhongxin-7",
       "to_stop_id": "cn-hangzhou-aoti-zhongxin-6",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 379,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 450,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-binkang-road-1-cn-hangzhou-binkang-road-5",
@@ -32,8 +51,12 @@
       "to_line_id": "cn-hangzhou-line-5",
       "from_stop_id": "cn-hangzhou-binkang-road-1",
       "to_stop_id": "cn-hangzhou-binkang-road-5",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 253,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 300,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-binkang-road-5-cn-hangzhou-binkang-road-1",
@@ -52,8 +75,12 @@
       "to_line_id": "cn-hangzhou-line-6",
       "from_stop_id": "cn-hangzhou-changhe-5",
       "to_stop_id": "cn-hangzhou-changhe-6",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 308,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-changhe-6-cn-hangzhou-changhe-5",
@@ -62,8 +89,12 @@
       "to_line_id": "cn-hangzhou-line-5",
       "from_stop_id": "cn-hangzhou-changhe-6",
       "to_stop_id": "cn-hangzhou-changhe-5",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 151,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 182,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-chengzhan-1-cn-hangzhou-chengzhan-5",
@@ -92,8 +123,12 @@
       "to_line_id": "cn-hangzhou-line-5",
       "from_stop_id": "cn-hangzhou-chuangjing-road-19",
       "to_stop_id": "cn-hangzhou-chuangjing-road-5",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 146,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 171,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-chuangjing-road-5-cn-hangzhou-chuangjing-road-19",
@@ -122,8 +157,12 @@
       "to_line_id": "cn-hangzhou-line-4",
       "from_stop_id": "cn-hangzhou-citizen-center-7",
       "to_stop_id": "cn-hangzhou-citizen-center-4",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-coach-center-1-cn-hangzhou-coach-center-9",
@@ -252,8 +291,12 @@
       "to_line_id": "cn-hangzhou-line-4",
       "from_stop_id": "cn-hangzhou-hangxing-road-10",
       "to_stop_id": "cn-hangzhou-hangxing-road-4",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 82,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 99,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-hangxing-road-4-cn-hangzhou-hangxing-road-10",
@@ -262,8 +305,12 @@
       "to_line_id": "cn-hangzhou-line-10",
       "from_stop_id": "cn-hangzhou-hangxing-road-4",
       "to_stop_id": "cn-hangzhou-hangxing-road-10",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 172,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 206,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-hemu-10-cn-hangzhou-hemu-5",
@@ -302,8 +349,12 @@
       "to_line_id": "cn-hangzhou-line-10",
       "from_stop_id": "cn-hangzhou-huanglong-sports-center-3",
       "to_stop_id": "cn-hangzhou-huanglong-sports-center-10",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-jiangcheng-road-5-cn-hangzhou-jiangcheng-road-7",
@@ -342,8 +393,12 @@
       "to_line_id": "cn-hangzhou-line-1",
       "from_stop_id": "cn-hangzhou-jiangling-road-6",
       "to_stop_id": "cn-hangzhou-jiangling-road-1",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-jianshesan-road-2-cn-hangzhou-jianshesan-road-7",
@@ -352,8 +407,12 @@
       "to_line_id": "cn-hangzhou-line-7",
       "from_stop_id": "cn-hangzhou-jianshesan-road-2",
       "to_stop_id": "cn-hangzhou-jianshesan-road-7",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 208,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 243,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-jianshesan-road-7-cn-hangzhou-jianshesan-road-2",
@@ -362,8 +421,12 @@
       "to_line_id": "cn-hangzhou-line-2",
       "from_stop_id": "cn-hangzhou-jianshesan-road-7",
       "to_stop_id": "cn-hangzhou-jianshesan-road-2",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 162,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 190,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-jinjiadu-2-cn-hangzhou-jinjiadu-4",
@@ -372,8 +435,12 @@
       "to_line_id": "cn-hangzhou-line-4",
       "from_stop_id": "cn-hangzhou-jinjiadu-2",
       "to_stop_id": "cn-hangzhou-jinjiadu-4",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 187,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 219,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-jinjiadu-4-cn-hangzhou-jinjiadu-2",
@@ -392,8 +459,12 @@
       "to_line_id": "cn-hangzhou-line-4",
       "from_stop_id": "cn-hangzhou-jinjiang-1",
       "to_stop_id": "cn-hangzhou-jinjiang-4",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-jinjiang-4-cn-hangzhou-jinjiang-1",
@@ -422,8 +493,12 @@
       "to_line_id": "cn-hangzhou-line-5",
       "from_stop_id": "cn-hangzhou-lvting-lu-16",
       "to_stop_id": "cn-hangzhou-lvting-lu-5",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 291,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-lvting-lu-3-cn-hangzhou-lvting-lu-16",
@@ -442,8 +517,12 @@
       "to_line_id": "cn-hangzhou-line-5",
       "from_stop_id": "cn-hangzhou-lvting-lu-3",
       "to_stop_id": "cn-hangzhou-lvting-lu-5",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 96,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 113,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-lvting-lu-5-cn-hangzhou-lvting-lu-16",
@@ -462,8 +541,12 @@
       "to_line_id": "cn-hangzhou-line-3",
       "from_stop_id": "cn-hangzhou-lvting-lu-5",
       "to_stop_id": "cn-hangzhou-lvting-lu-3",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 164,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 192,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-middle-qingliu-road-7-cn-hangzhou-middle-qingliu-road-8",
@@ -472,8 +555,12 @@
       "to_line_id": "cn-hangzhou-line-8",
       "from_stop_id": "cn-hangzhou-middle-qingliu-road-7",
       "to_stop_id": "cn-hangzhou-middle-qingliu-road-8",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-middle-qingliu-road-8-cn-hangzhou-middle-qingliu-road-7",
@@ -482,8 +569,12 @@
       "to_line_id": "cn-hangzhou-line-7",
       "from_stop_id": "cn-hangzhou-middle-qingliu-road-8",
       "to_stop_id": "cn-hangzhou-middle-qingliu-road-7",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 232,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-nanxingqiao-4-cn-hangzhou-nanxingqiao-5",
@@ -492,8 +583,12 @@
       "to_line_id": "cn-hangzhou-line-5",
       "from_stop_id": "cn-hangzhou-nanxingqiao-4",
       "to_stop_id": "cn-hangzhou-nanxingqiao-5",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 251,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-nanxingqiao-5-cn-hangzhou-nanxingqiao-4",
@@ -502,8 +597,12 @@
       "to_line_id": "cn-hangzhou-line-4",
       "from_stop_id": "cn-hangzhou-nanxingqiao-5",
       "to_stop_id": "cn-hangzhou-nanxingqiao-4",
-      "walk_time_seconds": 120,
-      "source_id": "hzmetro-routing-default"
+      "walk_time_seconds": 187,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 225,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-hangzhou-north-jianguo-road-2-cn-hangzhou-north-jianguo-road-5",

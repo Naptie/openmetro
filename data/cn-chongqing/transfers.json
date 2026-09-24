@@ -1,0 +1,1324 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-chongqing",
+  "generated_at": "2026-09-24T19:00:23.254Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-24T19:00:23.254Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-chongqing-baijusi-18-cn-chongqing-baijusi-2",
+      "station_id": "cn-chongqing-baijusi",
+      "from_line_id": "cn-chongqing-line-18",
+      "to_line_id": "cn-chongqing-line-2",
+      "from_stop_id": "cn-chongqing-baijusi-18",
+      "to_stop_id": "cn-chongqing-baijusi-2",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-baijusi-2-cn-chongqing-baijusi-18",
+      "station_id": "cn-chongqing-baijusi",
+      "from_line_id": "cn-chongqing-line-2",
+      "to_line_id": "cn-chongqing-line-18",
+      "from_stop_id": "cn-chongqing-baijusi-2",
+      "to_stop_id": "cn-chongqing-baijusi-18",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-baoshuigang-4-cn-chongqing-baoshuigang-9",
+      "station_id": "cn-chongqing-baoshuigang",
+      "from_line_id": "cn-chongqing-line-4",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-baoshuigang-4",
+      "to_stop_id": "cn-chongqing-baoshuigang-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-baoshuigang-9-cn-chongqing-baoshuigang-4",
+      "station_id": "cn-chongqing-baoshuigang",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-4",
+      "from_stop_id": "cn-chongqing-baoshuigang-9",
+      "to_stop_id": "cn-chongqing-baoshuigang-4",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-bishan-1-cn-chongqing-bishan-璧铜",
+      "station_id": "cn-chongqing-bishan",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-ht4cq",
+      "from_stop_id": "cn-chongqing-bishan-1",
+      "to_stop_id": "cn-chongqing-bishan-璧铜",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-bishan-璧铜-cn-chongqing-bishan-1",
+      "station_id": "cn-chongqing-bishan",
+      "from_line_id": "cn-chongqing-line-ht4cq",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-bishan-璧铜",
+      "to_stop_id": "cn-chongqing-bishan-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-central-park-east-10-cn-chongqing-central-park-east-9",
+      "station_id": "cn-chongqing-central-park-east",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-central-park-east-10",
+      "to_stop_id": "cn-chongqing-central-park-east-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-central-park-east-9-cn-chongqing-central-park-east-10",
+      "station_id": "cn-chongqing-central-park-east",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-central-park-east-9",
+      "to_stop_id": "cn-chongqing-central-park-east-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-central-park-west-10-cn-chongqing-central-park-west-5",
+      "station_id": "cn-chongqing-central-park-west",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-central-park-west-10",
+      "to_stop_id": "cn-chongqing-central-park-west-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-central-park-west-5-cn-chongqing-central-park-west-10",
+      "station_id": "cn-chongqing-central-park-west",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-central-park-west-5",
+      "to_stop_id": "cn-chongqing-central-park-west-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-chongqing-west-station-5-cn-chongqing-chongqing-west-station-环",
+      "station_id": "cn-chongqing-chongqing-west-station",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-chongqing-west-station-5",
+      "to_stop_id": "cn-chongqing-chongqing-west-station-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-chongqing-west-station-环-cn-chongqing-chongqing-west-station-5",
+      "station_id": "cn-chongqing-chongqing-west-station",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-chongqing-west-station-环",
+      "to_stop_id": "cn-chongqing-chongqing-west-station-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-dalongshan-5-cn-chongqing-dalongshan-6",
+      "station_id": "cn-chongqing-dalongshan",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-dalongshan-5",
+      "to_stop_id": "cn-chongqing-dalongshan-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-dalongshan-6-cn-chongqing-dalongshan-5",
+      "station_id": "cn-chongqing-dalongshan",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-dalongshan-6",
+      "to_stop_id": "cn-chongqing-dalongshan-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-daping-1-cn-chongqing-daping-2",
+      "station_id": "cn-chongqing-daping",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-2",
+      "from_stop_id": "cn-chongqing-daping-1",
+      "to_stop_id": "cn-chongqing-daping-2",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-daping-2-cn-chongqing-daping-1",
+      "station_id": "cn-chongqing-daping",
+      "from_line_id": "cn-chongqing-line-2",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-daping-2",
+      "to_stop_id": "cn-chongqing-daping-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-dashiba-4-cn-chongqing-dashiba-5",
+      "station_id": "cn-chongqing-dashiba",
+      "from_line_id": "cn-chongqing-line-4",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-dashiba-4",
+      "to_stop_id": "cn-chongqing-dashiba-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-dashiba-5-cn-chongqing-dashiba-4",
+      "station_id": "cn-chongqing-dashiba",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-4",
+      "from_stop_id": "cn-chongqing-dashiba-5",
+      "to_stop_id": "cn-chongqing-dashiba-4",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-fuhualu-18-cn-chongqing-fuhualu-9",
+      "station_id": "cn-chongqing-fuhualu",
+      "from_line_id": "cn-chongqing-line-18",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-fuhualu-18",
+      "to_stop_id": "cn-chongqing-fuhualu-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-fuhualu-9-cn-chongqing-fuhualu-18",
+      "station_id": "cn-chongqing-fuhualu",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-18",
+      "from_stop_id": "cn-chongqing-fuhualu-9",
+      "to_stop_id": "cn-chongqing-fuhualu-18",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-guanyinqiao-3-cn-chongqing-guanyinqiao-9",
+      "station_id": "cn-chongqing-guanyinqiao",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-guanyinqiao-3",
+      "to_stop_id": "cn-chongqing-guanyinqiao-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-guanyinqiao-9-cn-chongqing-guanyinqiao-3",
+      "station_id": "cn-chongqing-guanyinqiao",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-guanyinqiao-9",
+      "to_stop_id": "cn-chongqing-guanyinqiao-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-hongqihegou-3-cn-chongqing-hongqihegou-6",
+      "station_id": "cn-chongqing-hongqihegou",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-hongqihegou-3",
+      "to_stop_id": "cn-chongqing-hongqihegou-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-hongqihegou-6-cn-chongqing-hongqihegou-3",
+      "station_id": "cn-chongqing-hongqihegou",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-hongqihegou-6",
+      "to_stop_id": "cn-chongqing-hongqihegou-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-hongtudi-10-cn-chongqing-hongtudi-6",
+      "station_id": "cn-chongqing-hongtudi",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-hongtudi-10",
+      "to_stop_id": "cn-chongqing-hongtudi-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-hongtudi-6-cn-chongqing-hongtudi-10",
+      "station_id": "cn-chongqing-hongtudi",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-hongtudi-6",
+      "to_stop_id": "cn-chongqing-hongtudi-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-hongyancun-5-cn-chongqing-hongyancun-9",
+      "station_id": "cn-chongqing-hongyancun",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-hongyancun-5",
+      "to_stop_id": "cn-chongqing-hongyancun-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-hongyancun-9-cn-chongqing-hongyancun-5",
+      "station_id": "cn-chongqing-hongyancun",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-hongyancun-9",
+      "to_stop_id": "cn-chongqing-hongyancun-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-huahuiyuan-4-cn-chongqing-huahuiyuan-6",
+      "station_id": "cn-chongqing-huahuiyuan",
+      "from_line_id": "cn-chongqing-line-4",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-huahuiyuan-4",
+      "to_stop_id": "cn-chongqing-huahuiyuan-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-huahuiyuan-6-cn-chongqing-huahuiyuan-4",
+      "station_id": "cn-chongqing-huahuiyuan",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-4",
+      "from_stop_id": "cn-chongqing-huahuiyuan-6",
+      "to_stop_id": "cn-chongqing-huahuiyuan-4",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-jiangbeicheng-6-cn-chongqing-jiangbeicheng-9",
+      "station_id": "cn-chongqing-jiangbeicheng",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-jiangbeicheng-6",
+      "to_stop_id": "cn-chongqing-jiangbeicheng-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-jiangbeicheng-9-cn-chongqing-jiangbeicheng-6",
+      "station_id": "cn-chongqing-jiangbeicheng",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-jiangbeicheng-9",
+      "to_stop_id": "cn-chongqing-jiangbeicheng-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-jiaochangkou-1-cn-chongqing-jiaochangkou-2",
+      "station_id": "cn-chongqing-jiaochangkou",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-2",
+      "from_stop_id": "cn-chongqing-jiaochangkou-1",
+      "to_stop_id": "cn-chongqing-jiaochangkou-2",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-jiaochangkou-2-cn-chongqing-jiaochangkou-1",
+      "station_id": "cn-chongqing-jiaochangkou",
+      "from_line_id": "cn-chongqing-line-2",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-jiaochangkou-2",
+      "to_stop_id": "cn-chongqing-jiaochangkou-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-jiazhoulu-3-cn-chongqing-jiazhoulu-4",
+      "station_id": "cn-chongqing-jiazhoulu",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-4",
+      "from_stop_id": "cn-chongqing-jiazhoulu-3",
+      "to_stop_id": "cn-chongqing-jiazhoulu-4",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-jiazhoulu-4-cn-chongqing-jiazhoulu-3",
+      "station_id": "cn-chongqing-jiazhoulu",
+      "from_line_id": "cn-chongqing-line-4",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-jiazhoulu-4",
+      "to_stop_id": "cn-chongqing-jiazhoulu-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-lianglukou-1-cn-chongqing-lianglukou-3",
+      "station_id": "cn-chongqing-lianglukou",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-lianglukou-1",
+      "to_stop_id": "cn-chongqing-lianglukou-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-lianglukou-3-cn-chongqing-lianglukou-1",
+      "station_id": "cn-chongqing-lianglukou",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-lianglukou-3",
+      "to_stop_id": "cn-chongqing-lianglukou-1",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-lijia-6-cn-chongqing-lijia-国博",
+      "station_id": "cn-chongqing-lijia",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-d5k6a",
+      "from_stop_id": "cn-chongqing-lijia-6",
+      "to_stop_id": "cn-chongqing-lijia-国博",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-lijia-国博-cn-chongqing-lijia-6",
+      "station_id": "cn-chongqing-lijia",
+      "from_line_id": "cn-chongqing-line-d5k6a",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-lijia-国博",
+      "to_stop_id": "cn-chongqing-lijia-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-liyuchi-10-cn-chongqing-liyuchi-9",
+      "station_id": "cn-chongqing-liyuchi",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-liyuchi-10",
+      "to_stop_id": "cn-chongqing-liyuchi-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-liyuchi-9-cn-chongqing-liyuchi-10",
+      "station_id": "cn-chongqing-liyuchi",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-liyuchi-9",
+      "to_stop_id": "cn-chongqing-liyuchi-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-min-an-ave-4-cn-chongqing-min-an-ave-环",
+      "station_id": "cn-chongqing-min-an-ave",
+      "from_line_id": "cn-chongqing-line-4",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-min-an-ave-4",
+      "to_stop_id": "cn-chongqing-min-an-ave-环",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-min-an-ave-环-cn-chongqing-min-an-ave-4",
+      "station_id": "cn-chongqing-min-an-ave",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-4",
+      "from_stop_id": "cn-chongqing-min-an-ave-环",
+      "to_stop_id": "cn-chongqing-min-an-ave-4",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-nanhu-10-cn-chongqing-nanhu-环",
+      "station_id": "cn-chongqing-nanhu",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-nanhu-10",
+      "to_stop_id": "cn-chongqing-nanhu-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-nanhu-环-cn-chongqing-nanhu-10",
+      "station_id": "cn-chongqing-nanhu",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-nanhu-环",
+      "to_stop_id": "cn-chongqing-nanhu-10",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-niujiaotuo-2-cn-chongqing-niujiaotuo-3",
+      "station_id": "cn-chongqing-niujiaotuo",
+      "from_line_id": "cn-chongqing-line-2",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-niujiaotuo-2",
+      "to_stop_id": "cn-chongqing-niujiaotuo-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-niujiaotuo-3-cn-chongqing-niujiaotuo-2",
+      "station_id": "cn-chongqing-niujiaotuo",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-2",
+      "from_stop_id": "cn-chongqing-niujiaotuo-3",
+      "to_stop_id": "cn-chongqing-niujiaotuo-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-north-square-of-chongqingbei-railway-station-10-cn-chongqing-north-square-of-chongqingbei-railway-station-4",
+      "station_id": "cn-chongqing-north-square-of-chongqingbei-railway-station",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-4",
+      "from_stop_id": "cn-chongqing-north-square-of-chongqingbei-railway-station-10",
+      "to_stop_id": "cn-chongqing-north-square-of-chongqingbei-railway-station-4",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-north-square-of-chongqingbei-railway-station-4-cn-chongqing-north-square-of-chongqingbei-railway-station-10",
+      "station_id": "cn-chongqing-north-square-of-chongqingbei-railway-station",
+      "from_line_id": "cn-chongqing-line-4",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-north-square-of-chongqingbei-railway-station-4",
+      "to_stop_id": "cn-chongqing-north-square-of-chongqingbei-railway-station-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-olympic-sports-center-18-cn-chongqing-olympic-sports-center-环",
+      "station_id": "cn-chongqing-olympic-sports-center",
+      "from_line_id": "cn-chongqing-line-18",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-olympic-sports-center-18",
+      "to_stop_id": "cn-chongqing-olympic-sports-center-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-olympic-sports-center-环-cn-chongqing-olympic-sports-center-18",
+      "station_id": "cn-chongqing-olympic-sports-center",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-18",
+      "from_stop_id": "cn-chongqing-olympic-sports-center-环",
+      "to_stop_id": "cn-chongqing-olympic-sports-center-18",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-qixinggang-1-cn-chongqing-qixinggang-10",
+      "station_id": "cn-chongqing-qixinggang",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-qixinggang-1",
+      "to_stop_id": "cn-chongqing-qixinggang-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-qixinggang-10-cn-chongqing-qixinggang-1",
+      "station_id": "cn-chongqing-qixinggang",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-qixinggang-10",
+      "to_stop_id": "cn-chongqing-qixinggang-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-ranjiaba-5-cn-chongqing-ranjiaba-6",
+      "station_id": "cn-chongqing-ranjiaba",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-ranjiaba-5",
+      "to_stop_id": "cn-chongqing-ranjiaba-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-ranjiaba-5-cn-chongqing-ranjiaba-环",
+      "station_id": "cn-chongqing-ranjiaba",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-ranjiaba-5",
+      "to_stop_id": "cn-chongqing-ranjiaba-环",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-ranjiaba-6-cn-chongqing-ranjiaba-5",
+      "station_id": "cn-chongqing-ranjiaba",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-ranjiaba-6",
+      "to_stop_id": "cn-chongqing-ranjiaba-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-ranjiaba-6-cn-chongqing-ranjiaba-环",
+      "station_id": "cn-chongqing-ranjiaba",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-ranjiaba-6",
+      "to_stop_id": "cn-chongqing-ranjiaba-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-ranjiaba-环-cn-chongqing-ranjiaba-5",
+      "station_id": "cn-chongqing-ranjiaba",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-ranjiaba-环",
+      "to_stop_id": "cn-chongqing-ranjiaba-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-ranjiaba-环-cn-chongqing-ranjiaba-6",
+      "station_id": "cn-chongqing-ranjiaba",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-ranjiaba-环",
+      "to_stop_id": "cn-chongqing-ranjiaba-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shangwanlu-10-cn-chongqing-shangwanlu-9",
+      "station_id": "cn-chongqing-shangwanlu",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-shangwanlu-10",
+      "to_stop_id": "cn-chongqing-shangwanlu-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shangwanlu-9-cn-chongqing-shangwanlu-10",
+      "station_id": "cn-chongqing-shangwanlu",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-shangwanlu-9",
+      "to_stop_id": "cn-chongqing-shangwanlu-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shangxinjie-6-cn-chongqing-shangxinjie-环",
+      "station_id": "cn-chongqing-shangxinjie",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-shangxinjie-6",
+      "to_stop_id": "cn-chongqing-shangxinjie-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shangxinjie-环-cn-chongqing-shangxinjie-6",
+      "station_id": "cn-chongqing-shangxinjie",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-shangxinjie-环",
+      "to_stop_id": "cn-chongqing-shangxinjie-6",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-shapingba-1-cn-chongqing-shapingba-9",
+      "station_id": "cn-chongqing-shapingba",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-shapingba-1",
+      "to_stop_id": "cn-chongqing-shapingba-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shapingba-1-cn-chongqing-shapingba-环",
+      "station_id": "cn-chongqing-shapingba",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-shapingba-1",
+      "to_stop_id": "cn-chongqing-shapingba-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shapingba-9-cn-chongqing-shapingba-1",
+      "station_id": "cn-chongqing-shapingba",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-shapingba-9",
+      "to_stop_id": "cn-chongqing-shapingba-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shapingba-9-cn-chongqing-shapingba-环",
+      "station_id": "cn-chongqing-shapingba",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-shapingba-9",
+      "to_stop_id": "cn-chongqing-shapingba-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shapingba-环-cn-chongqing-shapingba-1",
+      "station_id": "cn-chongqing-shapingba",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-shapingba-环",
+      "to_stop_id": "cn-chongqing-shapingba-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shapingba-环-cn-chongqing-shapingba-9",
+      "station_id": "cn-chongqing-shapingba",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-shapingba-环",
+      "to_stop_id": "cn-chongqing-shapingba-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shiqiaopu-1-cn-chongqing-shiqiaopu-5",
+      "station_id": "cn-chongqing-shiqiaopu",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-shiqiaopu-1",
+      "to_stop_id": "cn-chongqing-shiqiaopu-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-shiqiaopu-5-cn-chongqing-shiqiaopu-1",
+      "station_id": "cn-chongqing-shiqiaopu",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-shiqiaopu-5",
+      "to_stop_id": "cn-chongqing-shiqiaopu-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-sigongli-3-cn-chongqing-sigongli-环",
+      "station_id": "cn-chongqing-sigongli",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-sigongli-3",
+      "to_stop_id": "cn-chongqing-sigongli-环",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-sigongli-环-cn-chongqing-sigongli-3",
+      "station_id": "cn-chongqing-sigongli",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-sigongli-环",
+      "to_stop_id": "cn-chongqing-sigongli-3",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-south-square-of-chongqingbei-railway-station-10-cn-chongqing-south-square-of-chongqingbei-railway-station-3",
+      "station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-10",
+      "to_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-south-square-of-chongqingbei-railway-station-10-cn-chongqing-south-square-of-chongqingbei-railway-station-环",
+      "station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-10",
+      "to_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-south-square-of-chongqingbei-railway-station-3-cn-chongqing-south-square-of-chongqingbei-railway-station-10",
+      "station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-3",
+      "to_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-south-square-of-chongqingbei-railway-station-3-cn-chongqing-south-square-of-chongqingbei-railway-station-环",
+      "station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-3",
+      "to_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-south-square-of-chongqingbei-railway-station-环-cn-chongqing-south-square-of-chongqingbei-railway-station-10",
+      "station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-环",
+      "to_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-south-square-of-chongqingbei-railway-station-环-cn-chongqing-south-square-of-chongqingbei-railway-station-3",
+      "station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-环",
+      "to_stop_id": "cn-chongqing-south-square-of-chongqingbei-railway-station-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-terminal-2-of-jiangbei-airport-10-cn-chongqing-terminal-2-of-jiangbei-airport-3",
+      "station_id": "cn-chongqing-terminal-2-of-jiangbei-airport",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-terminal-2-of-jiangbei-airport-10",
+      "to_stop_id": "cn-chongqing-terminal-2-of-jiangbei-airport-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-terminal-2-of-jiangbei-airport-3-cn-chongqing-terminal-2-of-jiangbei-airport-10",
+      "station_id": "cn-chongqing-terminal-2-of-jiangbei-airport",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-terminal-2-of-jiangbei-airport-3",
+      "to_stop_id": "cn-chongqing-terminal-2-of-jiangbei-airport-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-the-expo-garden-3-cn-chongqing-the-expo-garden-center-5",
+      "station_id": "cn-chongqing-the-expo-garden",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-the-expo-garden-3",
+      "to_stop_id": "cn-chongqing-the-expo-garden-center-5",
+      "walk_time_seconds": 344,
+      "walk_distance_meters": 330,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_TOKEN/cn-chongqing-the-expo-garden__cn-chongqing-the-expo-garden-center",
+      "extras": {
+        "rule": "NAME_TOKEN",
+        "rules_fired": [
+          "NAME_TOKEN"
+        ],
+        "dist_m": 330,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-the-expo-garden-center-5-cn-chongqing-the-expo-garden-3",
+      "station_id": "cn-chongqing-the-expo-garden-center",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-the-expo-garden-center-5",
+      "to_stop_id": "cn-chongqing-the-expo-garden-3",
+      "walk_time_seconds": 344,
+      "walk_distance_meters": 330,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1/NAME_TOKEN/cn-chongqing-the-expo-garden__cn-chongqing-the-expo-garden-center",
+      "extras": {
+        "rule": "NAME_TOKEN",
+        "rules_fired": [
+          "NAME_TOKEN"
+        ],
+        "dist_m": 330,
+        "walk_model": "auto-v1"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-tiaodeng-18-cn-chongqing-tiaodeng-5",
+      "station_id": "cn-chongqing-tiaodeng",
+      "from_line_id": "cn-chongqing-line-18",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-tiaodeng-18",
+      "to_stop_id": "cn-chongqing-tiaodeng-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-tiaodeng-18-cn-chongqing-tiaodeng-江跳",
+      "station_id": "cn-chongqing-tiaodeng",
+      "from_line_id": "cn-chongqing-line-18",
+      "to_line_id": "cn-chongqing-line-gka17",
+      "from_stop_id": "cn-chongqing-tiaodeng-18",
+      "to_stop_id": "cn-chongqing-tiaodeng-江跳",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-tiaodeng-5-cn-chongqing-tiaodeng-18",
+      "station_id": "cn-chongqing-tiaodeng",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-18",
+      "from_stop_id": "cn-chongqing-tiaodeng-5",
+      "to_stop_id": "cn-chongqing-tiaodeng-18",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-tiaodeng-5-cn-chongqing-tiaodeng-江跳",
+      "station_id": "cn-chongqing-tiaodeng",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-gka17",
+      "from_stop_id": "cn-chongqing-tiaodeng-5",
+      "to_stop_id": "cn-chongqing-tiaodeng-江跳",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-tiaodeng-江跳-cn-chongqing-tiaodeng-18",
+      "station_id": "cn-chongqing-tiaodeng",
+      "from_line_id": "cn-chongqing-line-gka17",
+      "to_line_id": "cn-chongqing-line-18",
+      "from_stop_id": "cn-chongqing-tiaodeng-江跳",
+      "to_stop_id": "cn-chongqing-tiaodeng-18",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-tiaodeng-江跳-cn-chongqing-tiaodeng-5",
+      "station_id": "cn-chongqing-tiaodeng",
+      "from_line_id": "cn-chongqing-line-gka17",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-tiaodeng-江跳",
+      "to_stop_id": "cn-chongqing-tiaodeng-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-toutang-4-cn-chongqing-toutang-9",
+      "station_id": "cn-chongqing-toutang",
+      "from_line_id": "cn-chongqing-line-4",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-toutang-4",
+      "to_stop_id": "cn-chongqing-toutang-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-toutang-9-cn-chongqing-toutang-4",
+      "station_id": "cn-chongqing-toutang",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-4",
+      "from_stop_id": "cn-chongqing-toutang-9",
+      "to_stop_id": "cn-chongqing-toutang-4",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-wangjiazhuang-10-cn-chongqing-wangjiazhuang-国博",
+      "station_id": "cn-chongqing-wangjiazhuang",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-d5k6a",
+      "from_stop_id": "cn-chongqing-wangjiazhuang-10",
+      "to_stop_id": "cn-chongqing-wangjiazhuang-国博",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-wangjiazhuang-国博-cn-chongqing-wangjiazhuang-10",
+      "station_id": "cn-chongqing-wangjiazhuang",
+      "from_line_id": "cn-chongqing-line-d5k6a",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-wangjiazhuang-国博",
+      "to_stop_id": "cn-chongqing-wangjiazhuang-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-wulidian-6-cn-chongqing-wulidian-9",
+      "station_id": "cn-chongqing-wulidian",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-wulidian-6",
+      "to_stop_id": "cn-chongqing-wulidian-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-wulidian-6-cn-chongqing-wulidian-环",
+      "station_id": "cn-chongqing-wulidian",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-wulidian-6",
+      "to_stop_id": "cn-chongqing-wulidian-环",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-wulidian-9-cn-chongqing-wulidian-6",
+      "station_id": "cn-chongqing-wulidian",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-wulidian-9",
+      "to_stop_id": "cn-chongqing-wulidian-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-wulidian-9-cn-chongqing-wulidian-环",
+      "station_id": "cn-chongqing-wulidian",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-wulidian-9",
+      "to_stop_id": "cn-chongqing-wulidian-环",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-wulidian-环-cn-chongqing-wulidian-6",
+      "station_id": "cn-chongqing-wulidian",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-wulidian-环",
+      "to_stop_id": "cn-chongqing-wulidian-6",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-wulidian-环-cn-chongqing-wulidian-9",
+      "station_id": "cn-chongqing-wulidian",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-wulidian-环",
+      "to_stop_id": "cn-chongqing-wulidian-9",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xiaolongkan-1-cn-chongqing-xiaolongkan-9",
+      "station_id": "cn-chongqing-xiaolongkan",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-9",
+      "from_stop_id": "cn-chongqing-xiaolongkan-1",
+      "to_stop_id": "cn-chongqing-xiaolongkan-9",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-xiaolongkan-9-cn-chongqing-xiaolongkan-1",
+      "station_id": "cn-chongqing-xiaolongkan",
+      "from_line_id": "cn-chongqing-line-9",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-xiaolongkan-9",
+      "to_stop_id": "cn-chongqing-xiaolongkan-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xiaoshizi-1-cn-chongqing-xiaoshizi-6",
+      "station_id": "cn-chongqing-xiaoshizi",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-6",
+      "from_stop_id": "cn-chongqing-xiaoshizi-1",
+      "to_stop_id": "cn-chongqing-xiaoshizi-6",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-xiaoshizi-6-cn-chongqing-xiaoshizi-1",
+      "station_id": "cn-chongqing-xiaoshizi",
+      "from_line_id": "cn-chongqing-line-6",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-xiaoshizi-6",
+      "to_stop_id": "cn-chongqing-xiaoshizi-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-chongqing-xiejiawan-2-cn-chongqing-xiejiawan-环",
+      "station_id": "cn-chongqing-xiejiawan",
+      "from_line_id": "cn-chongqing-line-2",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-xiejiawan-2",
+      "to_stop_id": "cn-chongqing-xiejiawan-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xiejiawan-环-cn-chongqing-xiejiawan-2",
+      "station_id": "cn-chongqing-xiejiawan",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-2",
+      "from_stop_id": "cn-chongqing-xiejiawan-环",
+      "to_stop_id": "cn-chongqing-xiejiawan-2",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xietaizi-1-cn-chongqing-xietaizi-18",
+      "station_id": "cn-chongqing-xietaizi",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-18",
+      "from_stop_id": "cn-chongqing-xietaizi-1",
+      "to_stop_id": "cn-chongqing-xietaizi-18",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xietaizi-1-cn-chongqing-xietaizi-5",
+      "station_id": "cn-chongqing-xietaizi",
+      "from_line_id": "cn-chongqing-line-1",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-xietaizi-1",
+      "to_stop_id": "cn-chongqing-xietaizi-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xietaizi-18-cn-chongqing-xietaizi-1",
+      "station_id": "cn-chongqing-xietaizi",
+      "from_line_id": "cn-chongqing-line-18",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-xietaizi-18",
+      "to_stop_id": "cn-chongqing-xietaizi-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xietaizi-18-cn-chongqing-xietaizi-5",
+      "station_id": "cn-chongqing-xietaizi",
+      "from_line_id": "cn-chongqing-line-18",
+      "to_line_id": "cn-chongqing-line-5",
+      "from_stop_id": "cn-chongqing-xietaizi-18",
+      "to_stop_id": "cn-chongqing-xietaizi-5",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xietaizi-5-cn-chongqing-xietaizi-1",
+      "station_id": "cn-chongqing-xietaizi",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-1",
+      "from_stop_id": "cn-chongqing-xietaizi-5",
+      "to_stop_id": "cn-chongqing-xietaizi-1",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-xietaizi-5-cn-chongqing-xietaizi-18",
+      "station_id": "cn-chongqing-xietaizi",
+      "from_line_id": "cn-chongqing-line-5",
+      "to_line_id": "cn-chongqing-line-18",
+      "from_stop_id": "cn-chongqing-xietaizi-5",
+      "to_stop_id": "cn-chongqing-xietaizi-18",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-yangjiaping-18-cn-chongqing-yangjiaping-2",
+      "station_id": "cn-chongqing-yangjiaping",
+      "from_line_id": "cn-chongqing-line-18",
+      "to_line_id": "cn-chongqing-line-2",
+      "from_stop_id": "cn-chongqing-yangjiaping-18",
+      "to_stop_id": "cn-chongqing-yangjiaping-2",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-yangjiaping-2-cn-chongqing-yangjiaping-18",
+      "station_id": "cn-chongqing-yangjiaping",
+      "from_line_id": "cn-chongqing-line-2",
+      "to_line_id": "cn-chongqing-line-18",
+      "from_stop_id": "cn-chongqing-yangjiaping-2",
+      "to_stop_id": "cn-chongqing-yangjiaping-18",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-yudaishan-4-cn-chongqing-yudaishan-环",
+      "station_id": "cn-chongqing-yudaishan",
+      "from_line_id": "cn-chongqing-line-4",
+      "to_line_id": "cn-chongqing-line-kdf4",
+      "from_stop_id": "cn-chongqing-yudaishan-4",
+      "to_stop_id": "cn-chongqing-yudaishan-环",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-yudaishan-环-cn-chongqing-yudaishan-4",
+      "station_id": "cn-chongqing-yudaishan",
+      "from_line_id": "cn-chongqing-line-kdf4",
+      "to_line_id": "cn-chongqing-line-4",
+      "from_stop_id": "cn-chongqing-yudaishan-环",
+      "to_stop_id": "cn-chongqing-yudaishan-4",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-yudong-2-cn-chongqing-yudong-3",
+      "station_id": "cn-chongqing-yudong",
+      "from_line_id": "cn-chongqing-line-2",
+      "to_line_id": "cn-chongqing-line-3",
+      "from_stop_id": "cn-chongqing-yudong-2",
+      "to_stop_id": "cn-chongqing-yudong-3",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-yudong-3-cn-chongqing-yudong-2",
+      "station_id": "cn-chongqing-yudong",
+      "from_line_id": "cn-chongqing-line-3",
+      "to_line_id": "cn-chongqing-line-2",
+      "from_stop_id": "cn-chongqing-yudong-3",
+      "to_stop_id": "cn-chongqing-yudong-2",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-yuelai-10-cn-chongqing-yuelai-国博",
+      "station_id": "cn-chongqing-yuelai",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-d5k6a",
+      "from_stop_id": "cn-chongqing-yuelai-10",
+      "to_stop_id": "cn-chongqing-yuelai-国博",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-yuelai-国博-cn-chongqing-yuelai-10",
+      "station_id": "cn-chongqing-yuelai",
+      "from_line_id": "cn-chongqing-line-d5k6a",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-yuelai-国博",
+      "to_stop_id": "cn-chongqing-yuelai-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-zengjiayan-10-cn-chongqing-zengjiayan-2",
+      "station_id": "cn-chongqing-zengjiayan",
+      "from_line_id": "cn-chongqing-line-10",
+      "to_line_id": "cn-chongqing-line-2",
+      "from_stop_id": "cn-chongqing-zengjiayan-10",
+      "to_stop_id": "cn-chongqing-zengjiayan-2",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-chongqing-zengjiayan-2-cn-chongqing-zengjiayan-10",
+      "station_id": "cn-chongqing-zengjiayan",
+      "from_line_id": "cn-chongqing-line-2",
+      "to_line_id": "cn-chongqing-line-10",
+      "from_stop_id": "cn-chongqing-zengjiayan-2",
+      "to_stop_id": "cn-chongqing-zengjiayan-10",
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
+    }
+  ]
+}

@@ -15,7 +15,8 @@ export const adapter: AdapterManifest = {
     // Segment times come from beijing.xml; timetables are first/last trains only.
     timetables: { supported: true, estimatedMinutes: 2 },
     fares: { supported: true, estimatedMinutes: 120 },
-    enrichment: { supported: true, estimatedMinutes: 5 }
+    enrichment: { supported: true, estimatedMinutes: 5 },
+    gapfill: { supported: true, estimatedMinutes: 15 }
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
     if (layers.some((l) => l === 'topology' || l === 'timetables' || l === 'enrichment')) {

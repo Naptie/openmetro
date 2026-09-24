@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-beijing",
-  "generated_at": "2026-09-21T04:22:58.668Z",
-  "source": [],
+  "generated_at": "2026-09-24T16:57:42.501Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-24T16:57:42.501Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-beijing-anhua-qiao-12-cn-beijing-anhua-qiao-8",
@@ -1645,7 +1656,13 @@
       "from_line_id": "cn-beijing-line-10",
       "to_line_id": "cn-beijing-line-12",
       "from_stop_id": "cn-beijing-sanyuan-qiao-10",
-      "to_stop_id": "cn-beijing-sanyuan-qiao-12"
+      "to_stop_id": "cn-beijing-sanyuan-qiao-12",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-beijing-sanyuan-qiao-10-cn-beijing-sanyuan-qiao-98",
@@ -1691,7 +1708,13 @@
       "from_line_id": "cn-beijing-line-98",
       "to_line_id": "cn-beijing-line-12",
       "from_stop_id": "cn-beijing-sanyuan-qiao-98",
-      "to_stop_id": "cn-beijing-sanyuan-qiao-12"
+      "to_stop_id": "cn-beijing-sanyuan-qiao-12",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-beijing-shaoyaoju-10-cn-beijing-shaoyaoju-13",

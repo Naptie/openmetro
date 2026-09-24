@@ -17,7 +17,8 @@ export const adapter: AdapterManifest = {
     timetables: { supported: true, estimatedMinutes: 5 },
     // Full OD matrix is published as CSV — no per-pair planner harvest.
     fares: { supported: true, estimatedMinutes: 1 },
-    enrichment: { supported: true, estimatedMinutes: 8 }
+    enrichment: { supported: true, estimatedMinutes: 8 },
+    gapfill: { supported: true, estimatedMinutes: 15 }
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
     if (layers.length === 0) return;

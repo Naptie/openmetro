@@ -14,7 +14,8 @@ export const adapter: AdapterManifest = {
     topology: { supported: true, estimatedMinutes: 8 },
     timetables: { supported: true, estimatedMinutes: 5 },
     fares: { supported: true, estimatedMinutes: 90 },
-    enrichment: { supported: true, estimatedMinutes: 5 }
+    enrichment: { supported: true, estimatedMinutes: 5 },
+    gapfill: { supported: true, estimatedMinutes: 15 }
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
     if (layers.some((l) => l === 'topology' || l === 'timetables' || l === 'enrichment')) {

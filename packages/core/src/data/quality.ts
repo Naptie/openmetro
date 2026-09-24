@@ -64,6 +64,9 @@ function plannerTagPrecision(tag: string | undefined): Precision {
   if (tag.includes('searchstartend')) return 'derived';
   // Direct official route-planner fields (plantrip, SZMC MinTimeJson, …).
   if (tag.includes('plantrip') || tag.includes('mintime')) return 'official';
+  // Baidu gapfill planner is a full route planner — same trust tier as
+  // operator plantrip / MinTimeJson (measured, not inferred).
+  if (tag.includes('baidu')) return 'official';
   return 'derived';
 }
 
@@ -101,6 +104,7 @@ function precisionFromTransfer(t: {
   if (src.includes('interchange')) return 'official';
   if (src.includes('plantrip') || src.includes('mintime')) return 'official';
   if (src.includes('searchstartend')) return 'derived';
+  if (src.includes('baidu')) return 'official';
   // A documented network average is still an operator value, but not a
   // measured station-pair walk — count as derived.
   return 'derived';

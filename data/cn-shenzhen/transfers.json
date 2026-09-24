@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-shenzhen",
-  "generated_at": "2026-09-20T17:07:52.978Z",
-  "source": [],
+  "generated_at": "2026-09-24T17:16:20.612Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-24T17:16:20.612Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-shenzhen-antuoshan-2-cn-shenzhen-antuoshan-7",
@@ -162,8 +173,12 @@
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-chegongmiao-11",
       "to_stop_id": "cn-shenzhen-chegongmiao-1",
-      "walk_time_seconds": 360,
-      "source_id": "szmc-mintime-transfer"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-11-cn-shenzhen-chegongmiao-7",
@@ -473,7 +488,13 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-futian-11",
-      "to_stop_id": "cn-shenzhen-futian-3"
+      "to_stop_id": "cn-shenzhen-futian-3",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-futian-2-cn-shenzhen-futian-11",
@@ -603,7 +624,13 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-gangxiabei-11",
-      "to_stop_id": "cn-shenzhen-gangxiabei-10"
+      "to_stop_id": "cn-shenzhen-gangxiabei-10",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-11-cn-shenzhen-gangxiabei-14",
@@ -956,8 +983,12 @@
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-houhai-2",
       "to_stop_id": "cn-shenzhen-houhai-11",
-      "walk_time_seconds": 360,
-      "source_id": "szmc-mintime-transfer"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-houhai-2-cn-shenzhen-houhai-13",
@@ -1002,8 +1033,12 @@
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-huangmugang-7",
       "to_stop_id": "cn-shenzhen-huangmugang-14",
-      "walk_time_seconds": 360,
-      "source_id": "szmc-mintime-transfer"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-huaqiangbei-2-cn-shenzhen-huaqiangbei-7",
@@ -1091,7 +1126,13 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-huizhanzhongxin-4",
-      "to_stop_id": "cn-shenzhen-huizhanzhongxin-1"
+      "to_stop_id": "cn-shenzhen-huizhanzhongxin-1",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-jichangbei-11-cn-shenzhen-jichangbei-20",
@@ -1491,7 +1532,13 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-shaoniangong-3",
-      "to_stop_id": "cn-shenzhen-shaoniangong-4"
+      "to_stop_id": "cn-shenzhen-shaoniangong-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-shaoniangong-4-cn-shenzhen-shaoniangong-3",
@@ -1584,8 +1631,12 @@
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-shijiezhichuang-1",
       "to_stop_id": "cn-shenzhen-shijiezhichuang-2",
-      "walk_time_seconds": 360,
-      "source_id": "szmc-mintime-transfer"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-shijiezhichuang-2-cn-shenzhen-shijiezhichuang-1",

@@ -2,6 +2,7 @@ export * from './adapter/index.js';
 export * from './api/index.js';
 export * from './data/index.js';
 export * from './fares/index.js';
+export * from './gapfill/index.js';
 export * from './geocode/index.js';
 export * from './graph/index.js';
 export * from './lines/short-name.js';

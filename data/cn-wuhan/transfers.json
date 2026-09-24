@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-wuhan",
-  "generated_at": "2026-09-21T15:40:15.889Z",
-  "source": [],
+  "generated_at": "2026-09-24T17:13:30.898Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-24T17:13:30.898Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-wuhan-changqing-huayuan-2-cn-wuhan-changqing-huayuan-6",
@@ -536,8 +547,12 @@
       "to_line_id": "cn-wuhan-line-16",
       "from_stop_id": "cn-wuhan-laoguancun-6",
       "to_stop_id": "cn-wuhan-laoguancun-16",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-mafangshan-11-cn-wuhan-mafangshan-8",
@@ -660,8 +675,12 @@
       "to_line_id": "cn-wuhan-line-1",
       "from_stop_id": "cn-wuhan-sanyang-road-7",
       "to_stop_id": "cn-wuhan-sanyang-road-1",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-south-international-expo-center-12-cn-wuhan-south-international-expo-center-16",
@@ -1208,8 +1227,12 @@
       "to_line_id": "cn-wuhan-line-3",
       "from_stop_id": "cn-wuhan-zong-guan-1",
       "to_stop_id": "cn-wuhan-zong-guan-3",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zong-guan-3-cn-wuhan-zong-guan-1",

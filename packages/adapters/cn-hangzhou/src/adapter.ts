@@ -15,7 +15,8 @@ export const adapter: AdapterManifest = {
     timetables: { supported: true, estimatedMinutes: 3 },
     // Per-OD official ticket inquiry; matrix is hours, not minutes.
     fares: { supported: true, estimatedMinutes: 120 },
-    enrichment: { supported: true, estimatedMinutes: 5 }
+    enrichment: { supported: true, estimatedMinutes: 5 },
+    gapfill: { supported: true, estimatedMinutes: 15 }
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
     if (layers.length === 0) return;

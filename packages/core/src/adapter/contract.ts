@@ -10,14 +10,21 @@
  * a single pass; there is no separate snapshot step or offline mode.
  */
 
-/** Sync layers. Frequency is a CI policy, not an adapter concern. */
-export type SyncLayer = 'topology' | 'timetables' | 'fares' | 'enrichment';
+/**
+ * Sync layers. Frequency is a CI policy, not an adapter concern.
+ *
+ * `gapfill` is adapter-agnostic (core Baidu planner harvest): it only fills
+ * weak/missing segment times, distances and transfer walks. Official
+ * operator metrics always win. Like `fares`, it is opt-in in `data:sync`.
+ */
+export type SyncLayer = 'topology' | 'timetables' | 'fares' | 'enrichment' | 'gapfill';
 
 export const SYNC_LAYERS: readonly SyncLayer[] = [
   'topology',
   'timetables',
   'fares',
-  'enrichment'
+  'enrichment',
+  'gapfill'
 ] as const;
 
 export interface SyncCtx {

@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-beijing",
-  "generated_at": "2026-09-21T04:22:58.668Z",
-  "source": [],
+  "generated_at": "2026-09-24T16:57:42.499Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-24T16:57:42.499Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "cn-beijing-seg-cn-beijing-3-hao-hangzhanlou-98-cn-beijing-2-hao-hangzhanlou-98",
@@ -80,8 +91,12 @@
       "direction": "both",
       "travel_time_seconds": 105,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998055"
+      "distance_km": 0.995,
+      "source_id": "150998055",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 995
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-anhua-qiao-8-cn-beijing-andeli-beijie-8",
@@ -171,8 +186,12 @@
       "direction": "both",
       "travel_time_seconds": 91,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150997505"
+      "distance_km": 2.081,
+      "source_id": "150997505",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2081
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-baiduizi-9-cn-beijing-military-museum-9",
@@ -197,8 +216,12 @@
       "direction": "both",
       "travel_time_seconds": 262,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019283"
+      "distance_km": 1.608,
+      "source_id": "151019283",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1608
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-baishiqiaonan-6-cn-beijing-erligou-6",
@@ -275,8 +298,12 @@
       "direction": "both",
       "travel_time_seconds": 400,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998313"
+      "distance_km": 6.99,
+      "source_id": "150998313",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 6990
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-beigongmen-4-cn-beijing-xi-yuan-4",
@@ -314,8 +341,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015195"
+      "distance_km": 1.356,
+      "source_id": "151015195",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1356
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-beijing-univ-of-tech-west-gate-14-cn-beijing-shilihe-14",
@@ -340,8 +371,12 @@
       "direction": "both",
       "travel_time_seconds": 112,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150995466"
+      "distance_km": 1.308,
+      "source_id": "150995466",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1308
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-beijingnan-zhan-14-cn-beijing-jingfengmen-14",
@@ -408,8 +443,12 @@
       "direction": "both",
       "travel_time_seconds": 115,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019035"
+      "distance_km": 1.668,
+      "source_id": "151019035",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1668
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-beishatan-15-cn-beijing-olympic-park-15",
@@ -421,8 +460,12 @@
       "direction": "both",
       "travel_time_seconds": 135,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998813"
+      "distance_km": 1.935,
+      "source_id": "150998813",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1935
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-beishenshu-17-cn-beijing-ciqubei-17",
@@ -434,8 +477,12 @@
       "direction": "both",
       "travel_time_seconds": 100,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999351"
+      "distance_km": 2.345,
+      "source_id": "150999351",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2345
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-beitaipingzhuang-12-cn-beijing-madian-qiao-12",
@@ -616,8 +663,12 @@
       "direction": "both",
       "travel_time_seconds": 85,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996765"
+      "distance_km": 1.167,
+      "source_id": "150996765",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1167
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-caofang-6-cn-beijing-wuzi-xueyuan-lu-6",
@@ -629,8 +680,12 @@
       "direction": "both",
       "travel_time_seconds": 137,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996541"
+      "distance_km": 2.028,
+      "source_id": "150996541",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2028
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-caoqiao-10-cn-beijing-jijiamiao-10",
@@ -655,10 +710,12 @@
       "direction": "both",
       "travel_time_seconds": 214,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 2.608,
       "source_id": "150999843",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 2608
       }
     },
     {
@@ -689,8 +746,12 @@
       "direction": "both",
       "travel_time_seconds": 153,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019279"
+      "distance_km": 2.946,
+      "source_id": "151019279",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2946
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-changchun-jie-2-cn-beijing-fuxingmen-2",
@@ -741,8 +802,12 @@
       "direction": "both",
       "travel_time_seconds": 211,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019031"
+      "distance_km": 3.487,
+      "source_id": "151019031",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3487
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-changping-dongguan-94-cn-beijing-changping-94",
@@ -910,8 +975,12 @@
       "direction": "both",
       "travel_time_seconds": 116,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151018013"
+      "distance_km": 2.82,
+      "source_id": "151018013",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2820
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-china-int-l-exhibition-center-15-cn-beijing-hualikan-15",
@@ -1027,8 +1096,12 @@
       "direction": "both",
       "travel_time_seconds": 102,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019563"
+      "distance_km": 1.367,
+      "source_id": "151019563",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1367
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-ciqubei-17-cn-beijing-ciqu-17",
@@ -1040,8 +1113,12 @@
       "direction": "both",
       "travel_time_seconds": 100,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999353"
+      "distance_km": 1.431,
+      "source_id": "150999353",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1431
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-cishou-si-10-cn-beijing-chedaogou-10",
@@ -1105,8 +1182,12 @@
       "direction": "both",
       "travel_time_seconds": 341,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019287"
+      "distance_km": 7.692,
+      "source_id": "151019287",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 7692
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-daguanying-16-cn-beijing-muxidi-16",
@@ -1196,8 +1277,12 @@
       "direction": "both",
       "travel_time_seconds": 146,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998557"
+      "distance_km": 2.027,
+      "source_id": "150998557",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2027
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-dalianpo-6-cn-beijing-huangqu-6",
@@ -1222,8 +1307,12 @@
       "direction": "both",
       "travel_time_seconds": 262,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019289"
+      "distance_km": 4.049,
+      "source_id": "151019289",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 4049
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-daoxianghu-lu-16-cn-beijing-wenyang-lu-16",
@@ -1313,8 +1402,12 @@
       "direction": "both",
       "travel_time_seconds": 460,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998553"
+      "distance_km": 5.388,
+      "source_id": "150998553",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 5388
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-daxing-xincheng-88-cn-beijing-daxing-jichang-88",
@@ -1409,8 +1502,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015191"
+      "distance_km": 0.964,
+      "source_id": "151015191",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 964
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-dongba-3-cn-beijing-dongbabei-3",
@@ -1526,8 +1623,12 @@
       "direction": "both",
       "travel_time_seconds": 152,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998605"
+      "distance_km": 3.698,
+      "source_id": "150998605",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3698
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-donggaodi-8-cn-beijing-huojian-wanyuan-8",
@@ -1565,8 +1666,12 @@
       "direction": "both",
       "travel_time_seconds": 121,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999105"
+      "distance_km": 1.291,
+      "source_id": "150999105",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1291
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-dongguantou-nan-95-cn-beijing-capital-univ-of-economics-business-95",
@@ -1838,8 +1943,12 @@
       "direction": "both",
       "travel_time_seconds": 77,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150997291"
+      "distance_km": 2.137,
+      "source_id": "150997291",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2137
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-fenzhong-si-10-cn-beijing-chengshou-si-10",
@@ -2036,8 +2145,12 @@
       "direction": "both",
       "travel_time_seconds": 140,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019043"
+      "distance_km": 2.035,
+      "source_id": "151019043",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2035
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-gongyi-xiqiao-4-cn-beijing-xingong-4",
@@ -2049,8 +2162,12 @@
       "direction": "both",
       "travel_time_seconds": 198,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996035"
+      "distance_km": 3.83,
+      "source_id": "150996035",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3830
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-gongzhufen-1-cn-beijing-military-museum-1",
@@ -2140,8 +2257,12 @@
       "direction": "both",
       "travel_time_seconds": 100,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998061"
+      "distance_km": 1.032,
+      "source_id": "150998061",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1032
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-guangxi-men-13-cn-beijing-liufang-13",
@@ -2166,8 +2287,12 @@
       "direction": "both",
       "travel_time_seconds": 140,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019295"
+      "distance_km": 3.472,
+      "source_id": "151019295",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3472
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-guanzhuang-15-cn-beijing-wangjingxi-15",
@@ -2179,8 +2304,12 @@
       "direction": "both",
       "travel_time_seconds": 177,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998821"
+      "distance_km": 2.101,
+      "source_id": "150998821",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2101
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-gucheng-1-cn-beijing-bajiao-amusement-park-1",
@@ -2231,8 +2360,12 @@
       "direction": "both",
       "travel_time_seconds": 120,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019285"
+      "distance_km": 1.491,
+      "source_id": "151019285",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1491
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-guojia-tushuguan-16-cn-beijing-wanshou-si-16",
@@ -2416,10 +2549,12 @@
       "direction": "both",
       "travel_time_seconds": 214,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 2.94,
       "source_id": "150996803",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 2940
       }
     },
     {
@@ -2432,8 +2567,12 @@
       "direction": "both",
       "travel_time_seconds": 82,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150995463"
+      "distance_km": 1.263,
+      "source_id": "150995463",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1263
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-heping-xiqiao-12-cn-beijing-guangxi-men-12",
@@ -2497,12 +2636,14 @@
       "direction": "both",
       "travel_time_seconds": 305,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 5.091,
       "source_id": "150999325",
       "extras": {
         "demoted_source_time_seconds": 86,
         "demote_reason": "implausible_vs_coords",
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 5091
       }
     },
     {
@@ -2541,8 +2682,12 @@
       "direction": "both",
       "travel_time_seconds": 260,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998839"
+      "distance_km": 4.574,
+      "source_id": "150998839",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 4574
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-huagong-7-cn-beijing-nanlouzi-zhuang-7",
@@ -2661,10 +2806,12 @@
       "direction": "both",
       "travel_time_seconds": 155,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 1.806,
       "source_id": "151019791",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 1806
       }
     },
     {
@@ -2677,10 +2824,12 @@
       "direction": "both",
       "travel_time_seconds": 155,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 1.806,
       "source_id": "150996813",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 1806
       }
     },
     {
@@ -2862,8 +3011,12 @@
       "direction": "both",
       "travel_time_seconds": 171,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150997005"
+      "distance_km": 3.02,
+      "source_id": "150997005",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3020
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-huoyingdong-73-cn-beijing-tiantong-yuan-73",
@@ -2875,8 +3028,12 @@
       "direction": "both",
       "travel_time_seconds": 96,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151013639"
+      "distance_km": 4.259,
+      "source_id": "151013639",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 4259
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-jiande-men-10-cn-beijing-beitucheng-10",
@@ -2953,10 +3110,12 @@
       "direction": "both",
       "travel_time_seconds": 155,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 3.506,
       "source_id": "150996797",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 3506
       }
     },
     {
@@ -3112,8 +3271,12 @@
       "direction": "both",
       "travel_time_seconds": 140,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019561"
+      "distance_km": 3.333,
+      "source_id": "151019561",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3333
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-jinghai-yilu-79-cn-beijing-beijing-etrong-int-i-exhibition-convention-center-79",
@@ -3125,8 +3288,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015193"
+      "distance_km": 1.171,
+      "source_id": "151015193",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1171
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-jingsong-10-cn-beijing-panjia-yuan-10",
@@ -3203,10 +3370,12 @@
       "direction": "both",
       "travel_time_seconds": 115,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 0.795,
       "source_id": "150997035",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 795
       }
     },
     {
@@ -3258,8 +3427,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015205"
+      "distance_km": 0.606,
+      "source_id": "151015205",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 606
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-jiukeshu-1-cn-beijing-liyuan-1",
@@ -3362,10 +3535,12 @@
       "direction": "both",
       "travel_time_seconds": 193,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 2.497,
       "source_id": "150996801",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 2497
       }
     },
     {
@@ -3404,8 +3579,12 @@
       "direction": "both",
       "travel_time_seconds": 130,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019299"
+      "distance_km": 2.912,
+      "source_id": "151019299",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2912
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-liangxiang-univ-town-north-95-cn-beijing-liangxiang-univ-town-95",
@@ -3456,8 +3635,12 @@
       "direction": "both",
       "travel_time_seconds": 121,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996497"
+      "distance_km": 2.3,
+      "source_id": "150996497",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2300
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-libafang-95-cn-beijing-guangyang-cheng-95",
@@ -3495,8 +3678,12 @@
       "direction": "both",
       "travel_time_seconds": 180,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150997013"
+      "distance_km": 2.751,
+      "source_id": "150997013",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2751
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-lingjing-hutong-4-cn-beijing-xidan-4",
@@ -3758,8 +3945,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015201"
+      "distance_km": 1.221,
+      "source_id": "151015201",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1221
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-madian-qiao-12-cn-beijing-anhua-qiao-12",
@@ -3836,8 +4027,12 @@
       "direction": "both",
       "travel_time_seconds": 202,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998831"
+      "distance_km": 3.315,
+      "source_id": "150998831",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3315
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-military-museum-1-cn-beijing-muxidi-1",
@@ -3875,8 +4070,12 @@
       "direction": "both",
       "travel_time_seconds": 99,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019029"
+      "distance_km": 1.233,
+      "source_id": "151019029",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1233
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-moshikou-11-cn-beijing-jin-anqiao-11",
@@ -3966,8 +4165,12 @@
       "direction": "both",
       "travel_time_seconds": 172,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998841"
+      "distance_km": 2.682,
+      "source_id": "150998841",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2682
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-nanlishi-lu-1-cn-beijing-fuxingmen-1",
@@ -4393,8 +4596,12 @@
       "direction": "both",
       "travel_time_seconds": 86,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999323"
+      "distance_km": 1.899,
+      "source_id": "150999323",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1899
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-qinghua-donglu-xikou-15-cn-beijing-liudao-kou-15",
@@ -4419,8 +4626,12 @@
       "direction": "both",
       "travel_time_seconds": 214,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996533"
+      "distance_km": 3.989,
+      "source_id": "150996533",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3989
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-qingyuan-lu-4-cn-beijing-huangcun-xidajie-4",
@@ -4556,8 +4767,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015213"
+      "distance_km": 1.58,
+      "source_id": "151015213",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1580
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-ruihe-zhuang-79-cn-beijing-rongxing-jie-79",
@@ -4595,8 +4810,12 @@
       "direction": "both",
       "travel_time_seconds": 114,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998065"
+      "distance_km": 3.652,
+      "source_id": "150998065",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3652
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-sanyuan-qiao-98-cn-beijing-3-hao-hangzhanlou-98",
@@ -4634,8 +4853,12 @@
       "direction": "both",
       "travel_time_seconds": 142,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019041"
+      "distance_km": 1.958,
+      "source_id": "151019041",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1958
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-shahe-univ-park-94-cn-beijing-nanshao-94",
@@ -4647,8 +4870,12 @@
       "direction": "both",
       "travel_time_seconds": 275,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019039"
+      "distance_km": 5.364,
+      "source_id": "151019039",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 5364
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-shan-gezhuang-14-cn-beijing-laiguangying-14",
@@ -4673,8 +4900,12 @@
       "direction": "both",
       "travel_time_seconds": 150,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151018267"
+      "distance_km": 0.831,
+      "source_id": "151018267",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 831
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-shangdi-13-cn-beijing-qinghe-zhan-13",
@@ -4738,12 +4969,14 @@
       "direction": "both",
       "travel_time_seconds": 334,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 5.904,
       "source_id": "150999349",
       "extras": {
         "demoted_source_time_seconds": 100,
         "demote_reason": "implausible_vs_coords",
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 5904
       }
     },
     {
@@ -4808,8 +5041,12 @@
       "direction": "both",
       "travel_time_seconds": 121,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998585"
+      "distance_km": 1.703,
+      "source_id": "150998585",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1703
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-shilihe-17-cn-beijing-zhoujiazhuang-17",
@@ -4925,8 +5162,12 @@
       "direction": "both",
       "travel_time_seconds": 177,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998845"
+      "distance_km": 2.448,
+      "source_id": "150998845",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2448
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-sidao-qiao-91-cn-beijing-jin-anqiao-91",
@@ -4951,8 +5192,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015207"
+      "distance_km": 1.002,
+      "source_id": "151015207",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1002
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-sihui-1-cn-beijing-sihui-dong-1",
@@ -5045,8 +5290,12 @@
       "direction": "both",
       "travel_time_seconds": 184,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998833"
+      "distance_km": 3.373,
+      "source_id": "150998833",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3373
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-suzhou-jie-10-cn-beijing-haidian-huangzhuang-10",
@@ -5110,8 +5359,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019305"
+      "distance_km": 2.347,
+      "source_id": "151019305",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2347
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-taihe-lu-79-cn-beijing-jiuhao-cun-79",
@@ -5123,8 +5376,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015203"
+      "distance_km": 0.739,
+      "source_id": "151015203",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 739
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-taihe-qiao-bei-79-cn-beijing-ruihe-zhuang-79",
@@ -5136,8 +5393,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015209"
+      "distance_km": 0.66,
+      "source_id": "151015209",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 660
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-taipingqiao-19-cn-beijing-niujie-19",
@@ -5292,8 +5553,12 @@
       "direction": "both",
       "travel_time_seconds": 86,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996247"
+      "distance_km": 0.909,
+      "source_id": "150996247",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 909
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-tiantong-yuan-73-cn-beijing-taipingzhuang-73",
@@ -5344,8 +5609,12 @@
       "direction": "both",
       "travel_time_seconds": 86,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999321"
+      "distance_km": 1.946,
+      "source_id": "150999321",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1946
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-tongji-nanlu-96-cn-beijing-jinghai-lu-96",
@@ -5357,8 +5626,12 @@
       "direction": "both",
       "travel_time_seconds": 150,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019559"
+      "distance_km": 4.599,
+      "source_id": "151019559",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 4599
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-tongyun-men-6-cn-beijing-beiyunhe-xi-6",
@@ -5383,8 +5656,12 @@
       "direction": "both",
       "travel_time_seconds": 240,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996545"
+      "distance_km": 1.496,
+      "source_id": "150996545",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1496
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-tongzhou-beiyuan-1-cn-beijing-guoyuan-1",
@@ -5477,8 +5754,12 @@
       "direction": "both",
       "travel_time_seconds": 96,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151017753"
+      "distance_km": 1.525,
+      "source_id": "151017753",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1525
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-wangfujing-1-cn-beijing-dongdan-1",
@@ -5542,8 +5823,12 @@
       "direction": "both",
       "travel_time_seconds": 137,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998827"
+      "distance_km": 4.209,
+      "source_id": "150998827",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 4209
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-wangjing-nan-14-cn-beijing-jiangtai-14",
@@ -5568,8 +5853,12 @@
       "direction": "both",
       "travel_time_seconds": 150,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998315"
+      "distance_km": 2.165,
+      "source_id": "150998315",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2165
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-wangjingxi-15-cn-beijing-wangjing-15",
@@ -5581,8 +5870,12 @@
       "direction": "both",
       "travel_time_seconds": 130,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998823"
+      "distance_km": 1.743,
+      "source_id": "150998823",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1743
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-wangjingxi-17-cn-beijing-taiyanggong-17",
@@ -5594,8 +5887,12 @@
       "direction": "both",
       "travel_time_seconds": 150,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999327"
+      "distance_km": 2.561,
+      "source_id": "150999327",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2561
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-wanpingcheng-16-cn-beijing-hongtaizhuang-16",
@@ -5607,8 +5904,12 @@
       "direction": "both",
       "travel_time_seconds": 109,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999119"
+      "distance_km": 1.262,
+      "source_id": "150999119",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1262
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-wanquanhe-qiao-16-cn-beijing-xi-yuan-16",
@@ -5649,10 +5950,12 @@
       "direction": "both",
       "travel_time_seconds": 174,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 2.124,
       "source_id": "150996805",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 2124
       }
     },
     {
@@ -5730,12 +6033,14 @@
       "direction": "both",
       "travel_time_seconds": 329,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 5.86,
       "source_id": "150999319",
       "extras": {
         "demoted_source_time_seconds": 86,
         "demote_reason": "implausible_vs_coords",
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 5860
       }
     },
     {
@@ -5878,8 +6183,12 @@
       "direction": "both",
       "travel_time_seconds": 290,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019049"
+      "distance_km": 7.861,
+      "source_id": "151019049",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 7861
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-xi-yuan-16-cn-beijing-nongda-nanlu-16",
@@ -5904,8 +6213,12 @@
       "direction": "both",
       "travel_time_seconds": 133,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150995993"
+      "distance_km": 1.674,
+      "source_id": "150995993",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1674
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-xiaocun-96-cn-beijing-xiaohong-men-96",
@@ -5930,8 +6243,12 @@
       "direction": "both",
       "travel_time_seconds": 157,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019545"
+      "distance_km": 2.411,
+      "source_id": "151019545",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2411
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-xiaoyuan-91-cn-beijing-liyuanzhuang-91",
@@ -5956,8 +6273,12 @@
       "direction": "both",
       "travel_time_seconds": 127,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998063"
+      "distance_km": 1.86,
+      "source_id": "150998063",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1860
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-xibahe-17-cn-beijing-zuojiazhuang-17",
@@ -6086,8 +6407,12 @@
       "direction": "both",
       "travel_time_seconds": 84,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999845"
+      "distance_km": 2.753,
+      "source_id": "150999845",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2753
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-xingcheng-92-cn-beijing-yancun-92",
@@ -6112,8 +6437,12 @@
       "direction": "both",
       "travel_time_seconds": 302,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151018773"
+      "distance_km": 5.078,
+      "source_id": "151018773",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 5078
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-xinjie-kou-4-cn-beijing-ping-anli-4",
@@ -6203,8 +6532,12 @@
       "direction": "both",
       "travel_time_seconds": 240,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150998293"
+      "distance_km": 2.853,
+      "source_id": "150998293",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2853
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-xizhimen-2-cn-beijing-jishuitan-2",
@@ -6346,8 +6679,12 @@
       "direction": "both",
       "travel_time_seconds": 186,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151018789"
+      "distance_km": 2.935,
+      "source_id": "151018789",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2935
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-yizhuang-culture-park-96-cn-beijing-wanyuan-jie-96",
@@ -6385,8 +6722,12 @@
       "direction": "both",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151015199"
+      "distance_km": 1.198,
+      "source_id": "151015199",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1198
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-yong-an-li-1-cn-beijing-guomao-1",
@@ -6507,8 +6848,12 @@
       "direction": "both",
       "travel_time_seconds": 206,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150997011"
+      "distance_km": 2.529,
+      "source_id": "150997011",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2529
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-yuanmingyuan-park-4-cn-beijing-peking-univ-east-gate-4",
@@ -6546,8 +6891,12 @@
       "direction": "both",
       "travel_time_seconds": 109,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150999115"
+      "distance_km": 1.408,
+      "source_id": "150999115",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1408
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-yuxin-8-cn-beijing-xixiao-kou-8",
@@ -6585,8 +6934,12 @@
       "direction": "both",
       "travel_time_seconds": 154,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996999"
+      "distance_km": 1.992,
+      "source_id": "150996999",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 1992
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-zaoying-14-cn-beijing-chaoyang-park-14",
@@ -6689,10 +7042,12 @@
       "direction": "both",
       "travel_time_seconds": 123,
       "travel_time_source": "planner",
-      "distance_km": 0,
+      "distance_km": 1.04,
       "source_id": "150997033",
       "extras": {
-        "planner_time_source": "bjsubway-searchstartend"
+        "planner_time_source": "bjsubway-searchstartend",
+        "distance_source": "baidu_path",
+        "distance_meters": 1040
       }
     },
     {
@@ -6757,8 +7112,12 @@
       "direction": "both",
       "travel_time_seconds": 174,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "150996997"
+      "distance_km": 2.382,
+      "source_id": "150996997",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 2382
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-zhuxinzhuang-94-cn-beijing-gonghua-cheng-94",
@@ -6770,8 +7129,12 @@
       "direction": "both",
       "travel_time_seconds": 230,
       "travel_time_source": "source",
-      "distance_km": 0,
-      "source_id": "151019045"
+      "distance_km": 3.818,
+      "source_id": "151019045",
+      "extras": {
+        "distance_source": "baidu_path",
+        "distance_meters": 3818
+      }
     },
     {
       "id": "cn-beijing-seg-cn-beijing-zicaowu-92-cn-beijing-yancun-dong-92",

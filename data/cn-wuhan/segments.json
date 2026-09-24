@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-wuhan",
-  "generated_at": "2026-09-21T15:40:15.889Z",
-  "source": [],
+  "generated_at": "2026-09-24T17:13:30.897Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-24T17:13:30.897Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "cn-wuhan-seg-cn-wuhan-baibutinghuayuan-road-21-cn-wuhan-xinrong-21",
@@ -34,8 +45,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1389
+      },
+      "distance_km": 1.389
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-baisha-6th-road-5-cn-wuhan-guangxia-5",
@@ -66,8 +80,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2584
+      },
+      "distance_km": 2.584
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-banqiao-7-cn-wuhan-yezhihu-7",
@@ -82,8 +99,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1130
+      },
+      "distance_km": 1.13
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-baotong-temple-2-cn-wuhan-zhongnan-road-2",
@@ -162,8 +182,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2130
+      },
+      "distance_km": 2.13
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-canglong-east-street-2-cn-wuhan-xiuhu-2",
@@ -194,8 +217,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2718
+      },
+      "distance_km": 2.718
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-changlingshan-11-cn-wuhan-weilai-1st-road-11",
@@ -242,8 +268,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1408
+      },
+      "distance_km": 1.408
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-changqing-huayuan-2-cn-wuhan-jinyintan-2",
@@ -274,8 +303,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2135
+      },
+      "distance_km": 2.135
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-changqingcheng-2-cn-wuhan-hongtu-boulevard-2",
@@ -370,8 +402,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2183
+      },
+      "distance_km": 2.183
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dahualing-7-cn-wuhan-jiangxiaketing-7",
@@ -402,8 +437,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4429
+      },
+      "distance_km": 4.429
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-danshuichi-1-cn-wuhan-xuzhouxincun-1",
@@ -434,8 +472,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1031
+      },
+      "distance_km": 1.031
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dazhi-road-6-cn-wuhan-jianghan-road-6",
@@ -450,8 +491,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1031
+      },
+      "distance_km": 1.031
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dijiao-1-cn-wuhan-xinrong-1",
@@ -466,8 +510,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1031
+      },
+      "distance_km": 1.031
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dingziqiao-11-cn-wuhan-mafangshan-11",
@@ -498,8 +545,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1450
+      },
+      "distance_km": 1.45
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dongting-4-cn-wuhan-yuejiazui-4",
@@ -514,8 +564,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1033
+      },
+      "distance_km": 1.033
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dongwu-boulevard-1-cn-wuhan-matoutan-park-1",
@@ -610,8 +663,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 796
+      },
+      "distance_km": 0.796
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-erya-road-6-cn-wuhan-haikou-3rd-road-6",
@@ -658,8 +714,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 576
+      },
+      "distance_km": 0.576
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-fanhu-2-cn-wuhan-hankou-railway-station-2",
@@ -706,8 +765,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1454
+      },
+      "distance_km": 1.454
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-fenghuocun-5-cn-wuhan-bapu-street-5",
@@ -722,8 +784,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1247
+      },
+      "distance_km": 1.247
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-fenglin-16-cn-wuhan-dajunshan-16",
@@ -834,8 +899,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 599
+      },
+      "distance_km": 0.599
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gangkoucun-12-cn-wuhan-fangcao-road-12",
@@ -850,8 +918,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1766
+      },
+      "distance_km": 1.766
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gaoche-21-cn-wuhan-wuhu-21",
@@ -882,8 +953,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1805
+      },
+      "distance_km": 1.805
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-garden-expo-north-6-cn-wuhan-polytechnic-university-6",
@@ -898,8 +972,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2116
+      },
+      "distance_km": 2.116
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-garden-expo-north-7-cn-wuhan-garden-expo-7",
@@ -914,8 +991,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2149
+      },
+      "distance_km": 2.149
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gongrencun-5-cn-wuhan-wugang-5",
@@ -930,8 +1010,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1909
+      },
+      "distance_km": 1.909
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gongye-4th-road-4-cn-wuhan-yangchunhu-4",
@@ -1026,8 +1109,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 974
+      },
+      "distance_km": 0.974
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guanggu-6th-road-11-cn-wuhan-baoxie-11",
@@ -1058,8 +1144,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4945
+      },
+      "distance_km": 4.945
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guanggu-boulevard-2-cn-wuhan-huazhong-university-of-sci-and-tech-2",
@@ -1106,8 +1195,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3585
+      },
+      "distance_km": 3.585
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guangxia-5-cn-wuhan-zhangjiawan-5",
@@ -1122,8 +1214,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1883
+      },
+      "distance_km": 1.883
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guanshan-boulevard-11-cn-wuhan-wuhandong-railway-station-11",
@@ -1154,8 +1249,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3167
+      },
+      "distance_km": 3.167
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gujiashan-19-cn-wuhan-huashanxincheng-19",
@@ -1170,8 +1268,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4379
+      },
+      "distance_km": 4.379
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guoboxincheng-12-cn-wuhan-south-international-expo-center-12",
@@ -1282,8 +1383,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 6001
+      },
+      "distance_km": 6.001
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hankou-north-1-cn-wuhan-shekouxincheng-1",
@@ -1298,8 +1402,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3368
+      },
+      "distance_km": 3.368
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hankou-railway-station-2-cn-wuhan-changgang-road-2",
@@ -1410,8 +1517,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2282
+      },
+      "distance_km": 2.282
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-heping-park-5-cn-wuhan-honggangcheng-5",
@@ -1442,8 +1552,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1833
+      },
+      "distance_km": 1.833
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hongshan-road-8-cn-wuhan-xiaohongshan-8",
@@ -1506,8 +1619,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3980
+      },
+      "distance_km": 3.98
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hongtu-boulevard-8-cn-wuhan-tazihu-8",
@@ -1522,8 +1638,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2793
+      },
+      "distance_km": 2.793
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hongxia-5-cn-wuhan-huangjiahu-wuhan-university-of-sci-and-tech-5",
@@ -1538,8 +1657,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1288
+      },
+      "distance_km": 1.288
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-houhu-boulevard-21-cn-wuhan-baibutinghuayuan-road-21",
@@ -1618,8 +1740,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4234
+      },
+      "distance_km": 4.234
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huanglongshan-road-2-cn-wuhan-wuhandong-railway-station-2",
@@ -1666,8 +1791,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1195
+      },
+      "distance_km": 1.195
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huangpu-road-8-cn-wuhan-xujiapeng-8",
@@ -1698,8 +1826,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 6768
+      },
+      "distance_km": 6.768
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huashanxincheng-19-cn-wuhan-huashanhe-19",
@@ -1714,8 +1845,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2022
+      },
+      "distance_km": 2.022
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huazhong-university-of-sci-and-tech-2-cn-wuhan-luoxiong-road-2",
@@ -1778,8 +1912,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1847
+      },
+      "distance_km": 1.847
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hubei-university-7-cn-wuhan-xinhe-street-7",
@@ -1794,8 +1931,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2126
+      },
+      "distance_km": 2.126
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hubei-university-of-chinese-mideicine-5-cn-wuhan-baisha-6th-road-5",
@@ -1810,8 +1950,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4859
+      },
+      "distance_km": 4.859
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hubei-university-of-technology-7-cn-wuhan-banqiao-7",
@@ -1826,8 +1969,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1080
+      },
+      "distance_km": 1.08
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huiji-2nd-road-3-cn-wuhan-zhaojiatiao-3",
@@ -1842,8 +1988,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 941
+      },
+      "distance_km": 0.941
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hukou-11-cn-wuhan-tongji-hospital-11",
@@ -1858,8 +2007,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1715
+      },
+      "distance_km": 1.715
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huquan-11-cn-wuhan-wuhan-sports-university-11",
@@ -1906,8 +2058,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2502
+      },
+      "distance_km": 2.502
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jiang-an-road-11-cn-wuhan-ziyanghu-11",
@@ -1922,8 +2077,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 765
+      },
+      "distance_km": 0.765
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jiangang-6-cn-wuhan-qianjincun-6",
@@ -1938,8 +2096,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1467
+      },
+      "distance_km": 1.467
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jiangcheng-boulevard-6-cn-wuhan-checheng-east-road-6",
@@ -2082,8 +2243,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1273
+      },
+      "distance_km": 1.273
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jinronggang-north-2-cn-wuhan-huanglongshan-road-2",
@@ -2098,8 +2262,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3174
+      },
+      "distance_km": 3.174
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jintan-road-8-cn-wuhan-hongtu-boulevard-8",
@@ -2146,8 +2313,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2450
+      },
+      "distance_km": 2.45
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jinyintan-2-cn-wuhan-changqingcheng-2",
@@ -2162,8 +2332,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2861
+      },
+      "distance_km": 2.861
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jixian-4-cn-wuhan-xintian-4",
@@ -2194,8 +2367,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3296
+      },
+      "distance_km": 3.296
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jiyuqiao-5-cn-wuhan-sancenglou-5",
@@ -2226,8 +2402,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2061
+      },
+      "distance_km": 2.061
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-julong-boulevard-7-cn-wuhan-tangyunhai-road-7",
@@ -2290,8 +2469,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3580
+      },
+      "distance_km": 3.58
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-laoguancun-6-cn-wuhan-jiangcheng-boulevard-6",
@@ -2306,8 +2488,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4591
+      },
+      "distance_km": 4.591
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-liji-north-road-1-cn-wuhan-chongren-road-1",
@@ -2322,8 +2507,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 885
+      },
+      "distance_km": 0.885
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-lingjiaohu-3-cn-wuhan-xianggang-road-3",
@@ -2338,8 +2526,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1090
+      },
+      "distance_km": 1.09
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-linzhang-avenue-4-cn-wuhan-caidian-square-4",
@@ -2370,8 +2561,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 842
+      },
+      "distance_km": 0.842
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-liyuan-8-cn-wuhan-hubei-provincial-museum-and-hubei-daily-8",
@@ -2418,8 +2612,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1160
+      },
+      "distance_km": 1.16
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-luojiazhuang-3-cn-wuhan-erqi-branch-road-3",
@@ -2434,8 +2631,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 796
+      },
+      "distance_km": 0.796
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-luoxiong-road-2-cn-wuhan-optics-valley-square-2",
@@ -2466,8 +2666,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2321
+      },
+      "distance_km": 2.321
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-mafangshan-11-cn-wuhan-huquan-11",
@@ -2514,8 +2717,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1130
+      },
+      "distance_km": 1.13
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-matoutan-park-1-cn-wuhan-sandian-1",
@@ -2530,8 +2736,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1998
+      },
+      "distance_km": 1.998
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-matoutan-park-6-cn-wuhan-five-rings-sports-center-6",
@@ -2674,8 +2883,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1482
+      },
+      "distance_km": 1.482
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-optics-valley-square-11-cn-wuhan-guanshan-boulevard-11",
@@ -2802,8 +3014,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 963
+      },
+      "distance_km": 0.963
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-qiaokou-road-1-cn-wuhan-taipingyang-1",
@@ -2850,8 +3065,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2280
+      },
+      "distance_km": 2.28
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-qingnianlu-2-cn-wuhan-wangjiadun-east-2",
@@ -2914,8 +3132,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 10675
+      },
+      "distance_km": 10.675
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-qintai-6-cn-wuhan-zhongjiacun-6",
@@ -2946,8 +3167,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1376
+      },
+      "distance_km": 1.376
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-qushuilou-7-cn-wuhan-xianggang-road-7",
@@ -2962,8 +3186,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1090
+      },
+      "distance_km": 1.09
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-renhe-road-4-cn-wuhan-gongye-4th-road-4",
@@ -3026,8 +3253,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1691
+      },
+      "distance_km": 1.691
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sandian-1-cn-wuhan-jinghe-1",
@@ -3090,8 +3320,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1164
+      },
+      "distance_km": 1.164
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sanyang-road-7-cn-wuhan-xujiapeng-7",
@@ -3106,8 +3339,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3435
+      },
+      "distance_km": 3.435
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sanyanqiao-6-cn-wuhan-xianggang-road-6",
@@ -3138,8 +3374,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1238
+      },
+      "distance_km": 1.238
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shakou-21-cn-wuhan-junmincun-21",
@@ -3154,8 +3393,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4805
+      },
+      "distance_km": 4.805
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shamao-16-cn-wuhan-tonghang-airport-16",
@@ -3170,8 +3412,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1572
+      },
+      "distance_km": 1.572
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shekouxincheng-1-cn-wuhan-tengzigang-1",
@@ -3186,8 +3431,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1099
+      },
+      "distance_km": 1.099
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shenjiaji-21-cn-wuhan-qinglung-21",
@@ -3202,8 +3450,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3201
+      },
+      "distance_km": 3.201
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shigang-21-cn-wuhan-jintai-21",
@@ -3218,8 +3469,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1956
+      },
+      "distance_km": 1.956
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shilipu-4-cn-wuhan-qilimiao-4",
@@ -3282,8 +3536,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3071
+      },
+      "distance_km": 3.071
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shuiguohu-8-cn-wuhan-hongshan-road-8",
@@ -3298,8 +3555,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1293
+      },
+      "distance_km": 1.293
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-simenkou-and-yellow-crane-tower-5-cn-wuhan-tanhualin-and-wushengmen-5",
@@ -3314,8 +3574,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 860
+      },
+      "distance_km": 0.86
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sixin-boulevard-3-cn-wuhan-taojialing-3",
@@ -3394,8 +3657,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3719
+      },
+      "distance_km": 3.719
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-south-international-expo-center-16-cn-wuhan-laoguancun-16",
@@ -3410,8 +3676,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 795
+      },
+      "distance_km": 0.795
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-south-international-expo-center-6-cn-wuhan-laoguancun-6",
@@ -3426,8 +3695,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 795
+      },
+      "distance_km": 0.795
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-south-taizihu-16-cn-wuhan-zhuankou-16",
@@ -3442,8 +3714,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2211
+      },
+      "distance_km": 2.211
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sports-center-3-cn-wuhan-sanjiaohu-3",
@@ -3474,8 +3749,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1544
+      },
+      "distance_km": 1.544
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tangjiadun-6-cn-wuhan-sanyanqiao-6",
@@ -3506,8 +3784,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 5143
+      },
+      "distance_km": 5.143
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tanhualin-and-wushengmen-5-cn-wuhan-jiyuqiao-5",
@@ -3522,8 +3803,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1065
+      },
+      "distance_km": 1.065
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tanxinpei-park-7-cn-wuhan-beihua-street-7",
@@ -3554,8 +3838,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 847
+      },
+      "distance_km": 0.847
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tazihu-8-cn-wuhan-zhongyi-road-8",
@@ -3602,8 +3889,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2202
+      },
+      "distance_km": 2.202
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tianyang-avenue-7-cn-wuhan-tenglong-avenue-7",
@@ -3618,8 +3908,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4427
+      },
+      "distance_km": 4.427
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tieji-road-4-cn-wuhan-luojiagang-4",
@@ -3634,8 +3927,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1190
+      },
+      "distance_km": 1.19
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tongji-hospital-11-cn-wuhan-guanggu-shengwuyuan-11",
@@ -3666,8 +3962,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 947
+      },
+      "distance_km": 0.947
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tuanjie-boulevard-12-cn-wuhan-yuanlin-road-12",
@@ -3682,8 +3981,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2350
+      },
+      "distance_km": 2.35
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wangjiadun-12-cn-wuhan-tuanjie-boulevard-12",
@@ -3698,8 +4000,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2006
+      },
+      "distance_km": 2.006
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wangjiadun-8-cn-wuhan-yuejiazui-8",
@@ -3762,8 +4067,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3815
+      },
+      "distance_km": 3.815
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wangjiawan-4-cn-wuhan-shilipu-4",
@@ -3794,8 +4102,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4946
+      },
+      "distance_km": 4.946
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-weilai-1st-road-11-cn-wuhan-future-3rd-road-11",
@@ -3858,8 +4169,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4964
+      },
+      "distance_km": 4.964
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuchang-railway-station-4-cn-wuhan-meiyuanxiaoqu-4",
@@ -3890,8 +4204,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1195
+      },
+      "distance_km": 1.195
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wudong-19-cn-wuhan-gujiashan-19",
@@ -3906,8 +4223,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3537
+      },
+      "distance_km": 3.537
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wugang-5-cn-wuhan-changqian-5",
@@ -3938,8 +4258,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1449
+      },
+      "distance_km": 1.449
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhan-bioengineering-institute-21-cn-wuhan-yangluo-21",
@@ -3954,8 +4277,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2777
+      },
+      "distance_km": 2.777
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhan-business-district-3-cn-wuhan-yunfei-road-3",
@@ -3970,8 +4296,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 926
+      },
+      "distance_km": 0.926
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhan-business-district-7-cn-wuhan-wangjiadun-east-7",
@@ -3986,8 +4315,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2561
+      },
+      "distance_km": 2.561
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhan-sports-university-11-cn-wuhan-optics-valley-square-11",
@@ -4050,8 +4382,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4565
+      },
+      "distance_km": 4.565
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhuan-boulevard-1-cn-wuhan-dongwu-boulevard-1",
@@ -4114,8 +4449,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 771
+      },
+      "distance_km": 0.771
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xianggang-road-6-cn-wuhan-miaoli-road-6",
@@ -4162,8 +4500,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1299
+      },
+      "distance_km": 1.299
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xiaoguishan-2-cn-wuhan-pangxiejia-2",
@@ -4210,8 +4551,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2119
+      },
+      "distance_km": 2.119
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xiezihe-16-cn-wuhan-wanhu-16",
@@ -4226,8 +4570,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1374
+      },
+      "distance_km": 1.374
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xincheng-11th-road-6-cn-wuhan-matoutan-park-6",
@@ -4258,8 +4605,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3208
+      },
+      "distance_km": 3.208
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xingye-road-3-cn-wuhan-houhu-boulevard-3",
@@ -4354,8 +4704,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2595
+      },
+      "distance_km": 2.595
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xinrong-21-cn-wuhan-xingfuwan-21",
@@ -4370,8 +4723,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1031
+      },
+      "distance_km": 1.031
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xintian-4-cn-wuhan-huangjinkou-4",
@@ -4386,8 +4742,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2735
+      },
+      "distance_km": 2.735
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xiuhu-2-cn-wuhan-jinronggang-north-2",
@@ -4482,8 +4841,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1057
+      },
+      "distance_km": 1.057
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xunlimen-2-cn-wuhan-zhongshan-park-2",
@@ -4498,8 +4860,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1057
+      },
+      "distance_km": 1.057
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xuzhouxincun-1-cn-wuhan-erqilu-1",
@@ -4546,8 +4911,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1053
+      },
+      "distance_km": 1.053
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yangjiawan-2-cn-wuhan-huquan-2",
@@ -4578,8 +4946,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1466
+      },
+      "distance_km": 1.466
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yangluo-development-zone-21-cn-wuhan-shigang-21",
@@ -4594,8 +4965,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3209
+      },
+      "distance_km": 3.209
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yangyuan-and-tiesiyuan-5-cn-wuhan-yujiatou-5",
@@ -4626,8 +5000,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 2520
+      },
+      "distance_km": 2.52
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yezhihu-8-cn-wuhan-huangjiahu-ditiexiaozhen-8",
@@ -4642,8 +5019,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 4939
+      },
+      "distance_km": 4.939
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yongantang-4-cn-wuhan-yulong-road-4",
@@ -4674,8 +5054,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1346
+      },
+      "distance_km": 1.346
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yuanlin-road-12-cn-wuhan-gangduhuayuan-12",
@@ -4722,8 +5105,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1137
+      },
+      "distance_km": 1.137
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yuejiazui-8-cn-wuhan-liyuan-8",
@@ -4834,8 +5220,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 682
+      },
+      "distance_km": 0.682
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhaojiatiao-8-cn-wuhan-huangpu-road-8",
@@ -4850,8 +5239,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 1454
+      },
+      "distance_km": 1.454
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhifang-avenue-7-cn-wuhan-qinglongshan-ditiexiaozhen-7",
@@ -4866,8 +5258,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3122
+      },
+      "distance_km": 3.122
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhiyin-4-cn-wuhan-jixian-4",
@@ -4882,8 +5277,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3487
+      },
+      "distance_km": 3.487
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhongjiacun-4-cn-wuhan-lanjiang-road-4",
@@ -4898,8 +5296,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 964
+      },
+      "distance_km": 0.964
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhongjiacun-6-cn-wuhan-maying-road-6",
@@ -4914,8 +5315,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 880
+      },
+      "distance_km": 0.88
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhongnan-hospital-8-cn-wuhan-shuiguohu-8",
@@ -5010,8 +5414,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3228
+      },
+      "distance_km": 3.228
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhuankou-16-cn-wuhan-xiaojunshan-16",
@@ -5026,8 +5433,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 7988
+      },
+      "distance_km": 7.988
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhuanyang-boulevard-3-cn-wuhan-dongfeng-motor-corporation-3",
@@ -5074,8 +5484,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 948
+      },
+      "distance_km": 0.948
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhuyeshan-8-cn-wuhan-zhaojiatiao-8",
@@ -5154,8 +5567,11 @@
       "travel_time_source": "planner",
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
-      }
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "baidu_path",
+        "distance_meters": 3864
+      },
+      "distance_km": 3.864
     }
   ]
 }

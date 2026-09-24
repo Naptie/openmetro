@@ -27,7 +27,7 @@ on:
   workflow_dispatch:
     inputs:
       layers:
-        description: "Comma-separated layers (topology,timetables,fares,enrichment)"
+        description: "Comma-separated layers (topology,timetables,fares,enrichment,gapfill)"
         required: false
         default: "topology,timetables,enrichment"
       networks:
@@ -98,10 +98,15 @@ jobs:
       - name: Sync topology
         env:
           OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}
+          OPENMETRO_BAIDU_AK: ${{ secrets.OPENMETRO_BAIDU_AK }}
         run: |
           echo "proxy=${OPENMETRO_REVERSE_PROXY:-none}"
-          bun run data:sync --network "${{ matrix.network }}" \
-            --layer topology,timetables,enrichment
+          LAYERS="topology,timetables,enrichment"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && echo "${{ inputs.layers }}" | grep -q gapfill; then
+            LAYERS="${LAYERS},gapfill"
+          fi
+          bun run data:sync --network "${{ matrix.network }}" --layer "${LAYERS}"
+
 
       - name: Verify this network
         run: bun run scripts/verify-data.ts --network "${{ matrix.network }}"
