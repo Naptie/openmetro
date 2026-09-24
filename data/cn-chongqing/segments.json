@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chongqing",
-  "generated_at": "2026-09-24T19:00:23.253Z",
+  "generated_at": "2026-09-24T19:25:36.227Z",
   "source": [
     {
       "name": "Baidu Direction Lite transit",
       "url": "https://api.map.baidu.com/directionlite/v1/transit",
       "version": "1",
-      "retrieved_at": "2026-09-24T19:00:23.253Z",
+      "retrieved_at": "2026-09-24T19:25:36.227Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -480,11 +480,14 @@
         "time_estimate": "distance_time_affine",
         "speed_kmh": 32.3,
         "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
+        "b_s": 52.5
       },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 132,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-changfulu-3-cn-chongqing-huixing-3",
@@ -1027,11 +1030,14 @@
         "time_estimate": "distance_time_affine",
         "speed_kmh": 31.2,
         "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
+        "b_s": 94.3
       },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 155,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-daping-1-cn-chongqing-shiyoulu-1",
@@ -3355,11 +3361,14 @@
         "time_estimate": "distance_time_affine",
         "speed_kmh": 30,
         "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
+        "b_s": 94.3
       },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 151,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-luqi-4-cn-chongqing-guoyuan-logistics-hub-4",
@@ -5218,11 +5227,14 @@
         "time_estimate": "distance_time_affine",
         "speed_kmh": 29.9,
         "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
+        "b_s": 94.3
       },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 152,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-tuwan-9-cn-chongqing-hongyancun-9",

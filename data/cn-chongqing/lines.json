@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chongqing",
-  "generated_at": "2026-09-24T18:53:15.596Z",
+  "generated_at": "2026-09-24T19:22:04.211Z",
   "source": [],
   "records": [
     {
@@ -250,7 +250,7 @@
       "name": "环线",
       "names": {
         "zh": "环线",
-        "en": "环线"
+        "en": "ring road"
       },
       "aliases": [],
       "color": "#f6a800",
@@ -263,7 +263,10 @@
           "source": "cqmetro-official",
           "id": "1001"
         }
-      ]
+      ],
+      "extras": {
+        "names_source": "wikidata"
+      }
     }
   ]
 }

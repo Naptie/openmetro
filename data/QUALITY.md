@@ -4,7 +4,7 @@
 
 Generated from each network’s `network.json.quality` after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-24T19:00:23.267Z_
+_Updated 2026-09-24T19:42:56.049Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -27,9 +27,9 @@ _Updated 2026-09-24T19:00:23.267Z_
 | Topology | ✅ complete | official | 100% | official=1 |
 | Coordinates | ✅ complete | official | 100% | official=355, derived=34 |
 | Names | ✅ complete | official | 100% | official=389 |
-| Segment times | 🟠 derived | derived | 100% | official=140, derived=324 |
+| Segment times | 🟠 derived | derived | 100% | official=158, derived=306 |
 | Segment distances | ✅ complete | official | 100% | official=464 |
-| Transfer times | 🟠 derived | derived | 100% | official=29, derived=171 |
+| Transfer times | 🟠 derived | derived | 100% | official=35, derived=165 |
 | Timetables | ✅ complete | official | 100% | official=1018 |
 | Schematic | 🟡 partial | official | 91% | official=437, default=44 |
 | Fares | ✅ complete | official | 100% | official=150932 |
@@ -41,9 +41,9 @@ _Updated 2026-09-24T19:00:23.267Z_
 | Topology | ✅ complete | official | 100% | official=1 |
 | Coordinates | ✅ complete | official | 100% | official=270, default=1 |
 | Names | ✅ complete | official | 100% | official=271 |
-| Segment times | ✅ complete | official | 100% | official=163, derived=148, default=1 |
+| Segment times | ✅ complete | official | 100% | official=159, derived=152, default=1 |
 | Segment distances | 🟡 partial | derived | 99% | derived=310, default=2 |
-| Transfer times | 🟠 derived | derived | 100% | official=16, derived=106 |
+| Transfer times | 🟠 derived | derived | 100% | official=15, derived=107 |
 | Timetables | ✅ complete | official | 100% | official=496 |
 | Schematic | ❌ unavailable | default | 0% | default=325 |
 | Fares | ❌ unavailable | default | 0% | default=73170 |
@@ -55,9 +55,9 @@ _Updated 2026-09-24T19:00:23.267Z_
 | Topology | ✅ complete | official | 100% | official=1 |
 | Coordinates | ✅ complete | official | 100% | official=498, derived=5 |
 | Names | ✅ complete | official | 100% | official=503 |
-| Segment times | 🟡 partial | derived | 90% | official=190, derived=323, default=54 |
-| Segment distances | 🟡 partial | official | 34% | official=190, default=377 |
-| Transfer times | 🟡 partial | derived | 41% | official=27, derived=105, default=192 |
+| Segment times | 🟠 derived | derived | 100% | official=269, derived=298 |
+| Segment distances | 🟠 derived | derived | 100% | derived=567 |
+| Transfer times | 🟡 partial | derived | 45% | official=41, derived=105, default=178 |
 | Timetables | ✅ complete | official | 100% | official=1277 |
 | Schematic | ❌ unavailable | default | 0% | default=599 |
 | Fares | 🟡 partial | official | 94% | official=236520, default=15986 |
@@ -113,7 +113,7 @@ _Updated 2026-09-24T19:00:23.267Z_
 | Names | ✅ complete | official | 100% | official=351 |
 | Segment times | ✅ complete | official | 100% | official=416 |
 | Segment distances | 🟠 derived | derived | 100% | derived=416 |
-| Transfer times | 🟡 partial | official | 85% | official=164, default=30 |
+| Transfer times | 🟡 partial | official | 86% | official=166, default=28 |
 | Timetables | ✅ complete | official | 100% | official=829 |
 | Schematic | ✅ complete | official | 100% | official=433 |
 | Fares | ✅ complete | official | 100% | official=122850 |

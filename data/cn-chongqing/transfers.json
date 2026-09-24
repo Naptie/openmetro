@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chongqing",
-  "generated_at": "2026-09-24T19:00:23.254Z",
+  "generated_at": "2026-09-24T19:25:36.228Z",
   "source": [
     {
       "name": "Baidu Direction Lite transit",
       "url": "https://api.map.baidu.com/directionlite/v1/transit",
       "version": "1",
-      "retrieved_at": "2026-09-24T19:00:23.254Z",
+      "retrieved_at": "2026-09-24T19:25:36.228Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -789,12 +789,8 @@
       "to_line_id": "cn-chongqing-line-3",
       "from_stop_id": "cn-chongqing-sigongli-环",
       "to_stop_id": "cn-chongqing-sigongli-3",
-      "walk_time_seconds": 381,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 457,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-south-square-of-chongqingbei-railway-station-10-cn-chongqing-south-square-of-chongqingbei-railway-station-3",
