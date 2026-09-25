@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chengdu",
-  "generated_at": "2026-09-24T17:01:17.505Z",
+  "generated_at": "2026-09-24T19:27:10.299Z",
   "source": [
     {
       "name": "Baidu Direction Lite transit",
       "url": "https://api.map.baidu.com/directionlite/v1/transit",
       "version": "1",
-      "retrieved_at": "2026-09-24T17:01:17.505Z",
+      "retrieved_at": "2026-09-24T19:27:10.299Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -516,14 +516,11 @@
         "speed_kmh": 29.5,
         "a_s_per_km": 32.7,
         "b_s": 96.7,
-        "distance_meters": 1167
+        "distance_meters": 1167,
+        "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 132,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-chengdu-fifth-peoples-hospital-19-cn-chengdu-huangshi-19",
@@ -604,12 +601,7 @@
       "extras": {
         "distance_source": "getTravel_dis_triangulation",
         "distance_meters": 920,
-        "distance_method": "triangle: dis(A,B)=d(A,X)+d(X,B) via unique 2-hop through junction",
-        "distance_inputs_m": {
-          "jin_bai": 2056,
-          "jin_tu": 2487,
-          "bai_tu": 2703
-        }
+        "distance_method": "triangle through junction: dis(A,B)=d(A,X)+d(X,B)"
       }
     },
     {
@@ -682,15 +674,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-chengdu-second-peoples-hospital-4-to-cn-chengdu-xihe-4-zyzf7x",
-        "cn-chengdu-cn-chengdu-yushuang-road-4-to-cn-chengdu-xihe-4-zyzf7x"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.595,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1595
+        "distance_meters": 1595,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -791,15 +780,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-5-to-cn-chengdu-huagui-road-5-1nnfjd",
-        "cn-chengdu-cn-chengdu-fuqin-5-to-cn-chengdu-huagui-road-5-1nnfjd"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.293,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1293
+        "distance_meters": 1293,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1430,15 +1416,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-donghu-park-8-to-cn-chengdu-guilong-road-8-tesi3l",
-        "cn-chengdu-cn-chengdu-dongguang-8-to-cn-chengdu-guilong-road-8-tesi3l"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.954,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 954
+        "distance_meters": 954,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1451,15 +1434,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-dongjiao-memory-8-to-cn-chengdu-guilong-road-8-tesi3l",
-        "cn-chengdu-cn-chengdu-chengdu-university-of-technology-8-to-cn-chengdu-guilong-road-8-tesi3l"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.041,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1041
+        "distance_meters": 1041,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2108,16 +2088,13 @@
       "to_station_id": "cn-chengdu-hongpailou",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-gaoshengqiao-10-to-cn-chengdu-xinping-10-1pskue1",
-        "cn-chengdu-cn-chengdu-hongpailou-10-to-cn-chengdu-xinping-10-1pskue1"
-      ],
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.412,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1412
+        "distance_meters": 1412,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2129,16 +2106,13 @@
       "to_station_id": "cn-chengdu-hongpailou",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-gaoshengqiao-3-to-cn-chengdu-shuangliu-west-railway-station-3-3rufua",
-        "cn-chengdu-cn-chengdu-hongpailou-3-to-cn-chengdu-shuangliu-west-railway-station-3-3rufua"
-      ],
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.412,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1412
+        "distance_meters": 1412,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2257,15 +2231,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-guanghuacun-13-to-cn-chengdu-wayaotan-13-rkmy01",
-        "cn-chengdu-cn-chengdu-dongpo-road-13-to-cn-chengdu-wayaotan-13-rkmy01"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.268,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1268
+        "distance_meters": 1268,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4104,15 +4075,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-jiuyan-bridge-13-to-cn-chengdu-wayaotan-13-rkmy01",
-        "cn-chengdu-cn-chengdu-xinnanmen-13-to-cn-chengdu-wayaotan-13-rkmy01"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.165,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1165
+        "distance_meters": 1165,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4505,7 +4473,7 @@
       "to_station_id": "cn-chengdu-longhuasi",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 517,
+      "travel_time_seconds": 162,
       "travel_time_source": "planner",
       "distance_km": 1.438,
       "extras": {
@@ -5202,15 +5170,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-niuwangmiao-2-to-cn-chengdu-chengdu-academy-of-governance-2-1gdx7dv",
-        "cn-chengdu-cn-chengdu-niushikou-2-to-cn-chengdu-chengdu-academy-of-governance-2-1gdx7dv"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.543,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1543
+        "distance_meters": 1543,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -5682,15 +5647,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-qingyang-taoist-temple-13-to-cn-chengdu-wayaotan-13-rkmy01",
-        "cn-chengdu-cn-chengdu-du-fu-thatched-cottage-13-to-cn-chengdu-wayaotan-13-rkmy01"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.923,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 923
+        "distance_meters": 923,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -5786,16 +5748,13 @@
       "to_station_id": "cn-chengdu-xibei-bridge",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-renmin-north-road-6-to-cn-chengdu-wangcong-temple-6-xo351o",
-        "cn-chengdu-cn-chengdu-xibei-bridge-6-to-cn-chengdu-wangcong-temple-6-xo351o"
-      ],
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.331,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1331
+        "distance_meters": 1331,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -6092,15 +6051,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-shabanqiao-8-to-cn-chengdu-guilong-road-8-tesi3l",
-        "cn-chengdu-cn-chengdu-dongjiao-memory-8-to-cn-chengdu-guilong-road-8-tesi3l"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.053,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1053
+        "distance_meters": 1053,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -6735,15 +6691,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-sichuan-gymnasium-3-to-cn-chengdu-shuangliu-west-railway-station-3-3rufua",
-        "cn-chengdu-cn-chengdu-yiguanmiao-3-to-cn-chengdu-shuangliu-west-railway-station-3-3rufua"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.369,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1369
+        "distance_meters": 1369,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -7474,16 +7427,13 @@
       "to_station_id": "cn-chengdu-chunxi-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-tianfu-square-2-to-cn-chengdu-chengdu-academy-of-governance-2-1gdx7dv",
-        "cn-chengdu-cn-chengdu-chunxi-road-2-to-cn-chengdu-chengdu-academy-of-governance-2-1gdx7dv"
-      ],
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.408,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1408
+        "distance_meters": 1408,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -7861,15 +7811,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-wannian-road-8-to-cn-chengdu-guilong-road-8-tesi3l",
-        "cn-chengdu-cn-chengdu-shabanqiao-8-to-cn-chengdu-guilong-road-8-tesi3l"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.221,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1221
+        "distance_meters": 1221,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -8327,15 +8274,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-xiaonan-street-13-to-cn-chengdu-wayaotan-13-rkmy01",
-        "cn-chengdu-cn-chengdu-qingyang-taoist-temple-13-to-cn-chengdu-wayaotan-13-rkmy01"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.396,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1396
+        "distance_meters": 1396,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -8348,15 +8292,12 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-xiaonan-street-17-to-cn-chengdu-jiujiang-north-17-hcb0e2",
-        "cn-chengdu-cn-chengdu-provincial-orthopaedics-hospital-17-to-cn-chengdu-jiujiang-north-17-hcb0e2"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.155,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1155
+        "distance_meters": 1155,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -8886,12 +8827,7 @@
         "a_s_per_km": 120.2,
         "b_s": 79.3,
         "distance_meters": 1136,
-        "distance_method": "triangle: dis(A,B)=d(A,X)+d(X,B) via unique 2-hop through junction",
-        "distance_inputs_m": {
-          "jin_bai": 2056,
-          "jin_tu": 2487,
-          "bai_tu": 2703
-        },
+        "distance_method": "triangle through junction: dis(A,B)=d(A,X)+d(X,B)",
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 240,
@@ -8916,12 +8852,7 @@
       "extras": {
         "distance_source": "getTravel_dis_triangulation",
         "distance_meters": 1567,
-        "distance_method": "triangle: dis(A,B)=d(A,X)+d(X,B) via unique 2-hop through junction",
-        "distance_inputs_m": {
-          "jin_bai": 2056,
-          "jin_tu": 2487,
-          "bai_tu": 2703
-        }
+        "distance_method": "triangle through junction: dis(A,B)=d(A,X)+d(X,B)"
       }
     },
     {

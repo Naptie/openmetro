@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chengdu",
-  "generated_at": "2026-09-24T17:01:17.509Z",
+  "generated_at": "2026-09-24T19:27:10.301Z",
   "source": [
     {
       "name": "Baidu Direction Lite transit",
       "url": "https://api.map.baidu.com/directionlite/v1/transit",
       "version": "1",
-      "retrieved_at": "2026-09-24T17:01:17.509Z",
+      "retrieved_at": "2026-09-24T19:27:10.301Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -359,8 +359,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-dongpo-road-13",
       "to_stop_id": "cn-chengdu-dongpo-road-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-dongpo-road-7-cn-chengdu-dongpo-road-13",
@@ -1209,8 +1213,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-niuwangmiao-6",
       "to_stop_id": "cn-chengdu-niuwangmiao-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-north-railway-station-1-cn-chengdu-north-railway-station-7",
@@ -1279,8 +1287,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-provincial-orthopaedics-hospital-17",
       "to_stop_id": "cn-chengdu-provincial-orthopaedics-hospital-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-provincial-orthopaedics-hospital-5-cn-chengdu-provincial-orthopaedics-hospital-17",
@@ -1339,8 +1351,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-renmin-north-road-1",
       "to_stop_id": "cn-chengdu-renmin-north-road-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-renmin-north-road-6-cn-chengdu-renmin-north-road-1",
@@ -1389,8 +1405,12 @@
       "to_line_id": "cn-chengdu-line-13",
       "from_stop_id": "cn-chengdu-sanguantang-6",
       "to_stop_id": "cn-chengdu-sanguantang-13",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sanyuan-8-cn-chengdu-sanyuan-9",
@@ -1429,8 +1449,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-shenxianshu-7",
       "to_stop_id": "cn-chengdu-shenxianshu-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-shuangliu-west-railway-station-10-cn-chengdu-shuangliu-west-railway-station-3",
@@ -1601,12 +1625,8 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-south-railway-station-7",
       "to_stop_id": "cn-chengdu-south-railway-station-18",
-      "walk_time_seconds": 258,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 309,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "chengdurail-routing-default"
     },
     {
       "id": "xfer-cn-chengdu-southwest-jiaotong-university-6-cn-chengdu-southwest-jiaotong-university-7",
@@ -1615,8 +1635,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-southwest-jiaotong-university-6",
       "to_stop_id": "cn-chengdu-southwest-jiaotong-university-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-southwest-jiaotong-university-7-cn-chengdu-southwest-jiaotong-university-6",

@@ -935,6 +935,19 @@
         "bai_xi_residual_yz": 2703
       },
       "note": "getTravel cannot use Xinye Road as OD endpoint; recovered from through-path dis. Branch 12-hop sum vs long-route residual differs by ~300m (hop-sum overhead); 2-hop triangle is self-consistent with long-path residuals."
+    },
+    "cn-chengdu-xinye-road": {
+      "method": "triangle_through_junction",
+      "edges_m": {
+        "cn-chengdu-chengdu-jincheng-college": 920,
+        "cn-chengdu-baiye-road": 1136,
+        "cn-chengdu-tulong-road": 1567
+      },
+      "inputs_m": {
+        "cn-chengdu-chengdu-jincheng-college|cn-chengdu-baiye-road": 2056,
+        "cn-chengdu-chengdu-jincheng-college|cn-chengdu-tulong-road": 2487,
+        "cn-chengdu-baiye-road|cn-chengdu-tulong-road": 2703
+      }
     }
   }
 }

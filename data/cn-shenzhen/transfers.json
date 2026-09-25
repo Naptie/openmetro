@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-shenzhen",
-  "generated_at": "2026-09-24T17:16:20.612Z",
+  "generated_at": "2026-09-24T19:38:14.968Z",
   "source": [
     {
       "name": "Baidu Direction Lite transit",
       "url": "https://api.map.baidu.com/directionlite/v1/transit",
       "version": "1",
-      "retrieved_at": "2026-09-24T17:16:20.612Z",
+      "retrieved_at": "2026-09-24T19:38:14.968Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -244,7 +244,13 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-chegongmiao-9",
-      "to_stop_id": "cn-shenzhen-chegongmiao-11"
+      "to_stop_id": "cn-shenzhen-chegongmiao-11",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-9-cn-shenzhen-chegongmiao-7",
@@ -489,9 +495,9 @@
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-futian-11",
       "to_stop_id": "cn-shenzhen-futian-3",
-      "walk_time_seconds": 337,
+      "walk_time_seconds": 225,
       "source_id": "baidu-transit",
-      "walk_distance_meters": 404,
+      "walk_distance_meters": 270,
       "extras": {
         "walk_source": "baidu-transit"
       }
@@ -696,7 +702,13 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-gangxiabei-2",
-      "to_stop_id": "cn-shenzhen-gangxiabei-11"
+      "to_stop_id": "cn-shenzhen-gangxiabei-11",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-2-cn-shenzhen-gangxiabei-14",
