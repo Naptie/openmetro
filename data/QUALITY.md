@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-25T20:11:57.511Z_
+_Updated 2026-09-25T21:00:09.368Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -172,7 +172,7 @@ _Updated 2026-09-25T20:11:57.511Z_
 | Transfer times | ✅ Complete | official | 100% | official=104, derived=4 |
 | Timetables | ✅ Complete | official | 100% | official=544 |
 | Schematic | 🟡 Partial | official | 99% | official=285, default=2 |
-| Fares | ❌ Unavailable | default | 0% | default=54990 |
+| Fares | 🟡 Partial | official | 99% | official=54522, default=468 |
 
 ### Legend
 
