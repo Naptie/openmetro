@@ -4,7 +4,7 @@
 
 Generated from each network’s `network.json.quality` after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-24T19:42:56.049Z_
+_Updated 2026-09-25T12:20:15.297Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
