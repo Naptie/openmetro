@@ -182,9 +182,7 @@ export function parseStationsByLine(js: string): Record<string, string[]> {
   return obj;
 }
 
-export function parseStationsCoords(
-  js: string
-): Record<string, Record<string, [number, number]>> {
+export function parseStationsCoords(js: string): Record<string, Record<string, [number, number]>> {
   const start = js.indexOf('var stationsCoords');
   if (start < 0) throw new Error('stationsCoords not found in xcgh/station.js');
   const brace = js.indexOf('{', start);

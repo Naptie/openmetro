@@ -15,11 +15,11 @@ import {
   type AmapLine,
   type AmapStation,
   type ChongqingSources,
+  type CqTimetableLine,
   LINE_CONFIGS,
   parseCell,
   parseStationsByLine,
-  parseStationsCoords,
-  type CqTimetableLine
+  parseStationsCoords
 } from './fetch.js';
 
 const NETWORK_ID = 'cn-chongqing';
@@ -70,19 +70,18 @@ function pinyinToEnglish(sp: string | undefined): string | undefined {
     .join(' ');
 }
 
-function resolveEnglishName(amapEn: string | undefined, pinyin: string | undefined, zh: string): string {
+function resolveEnglishName(
+  amapEn: string | undefined,
+  pinyin: string | undefined,
+  zh: string
+): string {
   const en = (amapEn ?? '').trim();
   if (en && /^[A-Za-z]/.test(en)) return en;
   return pinyinToEnglish(pinyin) ?? zh.trim();
 }
 
 export function foldStationName(zh: string): string {
-  return zh
-    .trim()
-    .replace(/[（]/g, '(')
-    .replace(/[）]/g, ')')
-    .replace(/站$/, '')
-    .trim();
+  return zh.trim().replace(/[（]/g, '(').replace(/[）]/g, ')').replace(/站$/, '').trim();
 }
 
 function parseAmapSl(sl: string | undefined): { lon: number; lat: number } | undefined {
@@ -279,8 +278,7 @@ export function parseTimetableSections(rows: Record<string, unknown>[]): Timetab
       }
       const dir = byDest.get(dest) ?? { dest };
       const kind: 'first' | 'last' =
-        meta.kind ??
-        ((c - 2) % 4 === 0 || (c - 2) % 4 === 1 ? 'first' : 'last');
+        meta.kind ?? ((c - 2) % 4 === 0 || (c - 2) % 4 === 1 ? 'first' : 'last');
       if (kind === 'first') {
         if (!dir.first) dir.first = time;
       } else if (!dir.last) {
@@ -435,10 +433,9 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
     // branch from the main alignment). The flat stationsByLine JS is a single
     // list and scrambles 6号线 + 6号线东站段 into one zigzag chain.
     const ttRaw = timetableByLine.get(cfg.lineSid);
-    const sections =
-      ttRaw?.scheduls?.length
-        ? parseTimetableSections(ttRaw.scheduls).sections.filter((s) => s.length >= 2)
-        : [];
+    const sections = ttRaw?.scheduls?.length
+      ? parseTimetableSections(ttRaw.scheduls).sections.filter((s) => s.length >= 2)
+      : [];
     const primaryNames: string[] =
       sections.length > 0 ? sections[0]!.map((r) => r.station) : stationNames;
 
@@ -544,7 +541,9 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
     // Section 0 maps onto the primary pattern; later sections onto their branch.
     const tt = timetableByLine.get(cfg.lineSid);
     if (tt?.scheduls?.length) {
-      const parsedSections = parseTimetableSections(tt.scheduls).sections.filter((s) => s.length >= 2);
+      const parsedSections = parseTimetableSections(tt.scheduls).sections.filter(
+        (s) => s.length >= 2
+      );
       for (let si = 0; si < parsedSections.length; si++) {
         const sectionRows = parsedSections[si]!;
         const sectionPattern =
@@ -552,9 +551,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
             ? patterns.find((p) => p.id === patternId)!
             : patterns.find((p) => p.id === lineId + '-branch-' + si);
         if (!sectionPattern) continue;
-        const stationById = new Map(
-          [...stationByZh.values()].map((s) => [s.id, s] as const)
-        );
+        const stationById = new Map([...stationByZh.values()].map((s) => [s.id, s] as const));
         const stopIdByFold = new Map<string, string>();
         for (const sid of sectionPattern.stop_ids) {
           const st = stopById.get(sid);
@@ -583,11 +580,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
               destination_stop_id: destStopId,
               pattern_id: sectionPattern.id,
               direction_type: cfg.loop ? 'linear' : 'linear',
-              direction_label: cfg.loop
-                ? sectionPattern.is_primary
-                  ? '内环'
-                  : '外环'
-                : undefined,
+              direction_label: cfg.loop ? (sectionPattern.is_primary ? '内环' : '外环') : undefined,
               first_train: dir.first ? [dir.first] : [],
               last_train: dir.last ? [dir.last] : [],
               source_id: CQ_SOURCE

@@ -19,13 +19,13 @@ import {
 } from '../times/harvest.js';
 import {
   BAIDU_SOURCE_ID,
+  type BaiduLatLng,
   BaiduPlannerClient,
+  type BaiduTransitStep,
   gcj02ToBd09,
   loadBaiduGapfillConfig,
   pathMeters,
-  pureMetroSteps,
-  type BaiduLatLng,
-  type BaiduTransitStep
+  pureMetroSteps
 } from './baidu.js';
 
 type Id = string;

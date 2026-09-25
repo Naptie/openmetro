@@ -264,10 +264,7 @@ function verifyReferences(network: string, d: NetworkData): void {
     const st = stationById.get(stationId);
     return st?.location ? { lon: st.location.lon, lat: st.location.lat } : undefined;
   };
-  const bearingDeg = (
-    a: { lon: number; lat: number },
-    b: { lon: number; lat: number }
-  ): number => {
+  const bearingDeg = (a: { lon: number; lat: number }, b: { lon: number; lat: number }): number => {
     const toRad = (d: number) => (d * Math.PI) / 180;
     const toDeg = (r: number) => (r * 180) / Math.PI;
     const p1 = toRad(a.lat);

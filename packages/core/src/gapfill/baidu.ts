@@ -74,8 +74,7 @@ export function loadBaiduGapfillConfig(
     return { error: 'OPENMETRO_BAIDU_AK is not set — gapfill is disabled' };
   }
   const baseUrl =
-    env.OPENMETRO_BAIDU_BASE?.trim() ||
-    'https://api.map.baidu.com/directionlite/v1/transit';
+    env.OPENMETRO_BAIDU_BASE?.trim() || 'https://api.map.baidu.com/directionlite/v1/transit';
   const qps = Math.max(0.2, Number(env.OPENMETRO_BAIDU_QPS ?? '2') || 2);
   const maxRaw = env.OPENMETRO_BAIDU_MAX_QUERIES?.trim();
   const maxQueries = maxRaw ? Math.max(1, Number(maxRaw) || 0) : undefined;
@@ -231,8 +230,7 @@ export function pathMeters(path: string | undefined): number | undefined {
     const dLat = toRad(y2 - y1);
     const dLng = toRad(x2 - x1);
     const a =
-      Math.sin(dLat / 2) ** 2 +
-      Math.cos(toRad(y1)) * Math.cos(toRad(y2)) * Math.sin(dLng / 2) ** 2;
+      Math.sin(dLat / 2) ** 2 + Math.cos(toRad(y1)) * Math.cos(toRad(y2)) * Math.sin(dLng / 2) ** 2;
     sum += 2 * R * Math.asin(Math.min(1, Math.sqrt(a)));
   }
   return sum;
