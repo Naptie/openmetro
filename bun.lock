@@ -145,6 +145,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-zhengzhou": {
+      "name": "@openmetro/adapter-cn-zhengzhou",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/api-worker": {
       "name": "@openmetro/api-worker",
       "version": "0.1.0",
@@ -371,6 +383,8 @@
 
     "@openmetro/adapter-cn-hongkong": ["@openmetro/adapter-cn-hongkong@workspace:packages/adapters/cn-hongkong"],
 
+    "@openmetro/adapter-cn-nanjing": ["@openmetro/adapter-cn-nanjing@workspace:packages/adapters/cn-nanjing"],
+
     "@openmetro/adapter-cn-shanghai": ["@openmetro/adapter-cn-shanghai@workspace:packages/adapters/cn-shanghai"],
 
     "@openmetro/adapter-cn-shenzhen": ["@openmetro/adapter-cn-shenzhen@workspace:packages/adapters/cn-shenzhen"],
@@ -378,6 +392,8 @@
     "@openmetro/adapter-cn-suzhou": ["@openmetro/adapter-cn-suzhou@workspace:packages/adapters/cn-suzhou"],
 
     "@openmetro/adapter-cn-wuhan": ["@openmetro/adapter-cn-wuhan@workspace:packages/adapters/cn-wuhan"],
+
+    "@openmetro/adapter-cn-zhengzhou": ["@openmetro/adapter-cn-zhengzhou@workspace:packages/adapters/cn-zhengzhou"],
 
     "@openmetro/api-worker": ["@openmetro/api-worker@workspace:packages/api-worker"],
 

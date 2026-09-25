@@ -1,0 +1,132 @@
+{
+  "id": "cn-zhengzhou",
+  "name": "郑州地铁",
+  "names": {
+    "zh": "郑州地铁",
+    "en": "Zhengzhou Metro"
+  },
+  "city": {
+    "id": "CN-4101",
+    "name": {
+      "zh": "郑州",
+      "en": "Zhengzhou"
+    },
+    "country": "CN",
+    "population": 12600000,
+    "area": 7446,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        113.6254,
+        34.7466
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑来自 api.zzmetro.com /api/stations；首末班来自 zzmetro.com operating_hours；线色/坐标/英文名来自 AMap Subway 4101。城郊线与 2 号线在南四环贯通至贾河/刘庄；郑许线为市域线至许昌东。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 233,
+        "derived": 2,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 235,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 274,
+        "derived": 0,
+        "default": 1
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 274,
+        "derived": 0,
+        "default": 1
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 104,
+        "derived": 4,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 544,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 0.99,
+      "status": "partial",
+      "counts": {
+        "official": 285,
+        "derived": 0,
+        "default": 2
+      }
+    },
+    "fares": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 54990
+      }
+    }
+  }
+}

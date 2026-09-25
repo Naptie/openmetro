@@ -187,17 +187,29 @@ export function stopOnLine(
  * from `stopId` on the given pattern (or any pattern containing it).
  */
 export function neighbourStop(
-  patterns: Pick<PatternEncoded, 'stop_ids'>[],
+  patterns: Pick<PatternEncoded, 'stop_ids' | 'extras'>[],
   stopId: string,
   direction: -1 | 1,
   steps = 1
 ): string | undefined {
   for (const p of patterns) {
-    const i = p.stop_ids.indexOf(stopId);
+    const ids = p.stop_ids;
+    const i = ids.indexOf(stopId);
     if (i < 0) continue;
-    const j = i + direction * steps;
-    if (j < 0 || j >= p.stop_ids.length) continue;
-    return p.stop_ids[j];
+    const n = ids.length;
+    if (n === 0) continue;
+    const loop = Boolean((p.extras as { loop?: boolean } | undefined)?.loop);
+    let j = i + direction * steps;
+    if (loop) {
+      // Closed ring: wrap so the last→first edge is a real neighbour.
+      j = ((j % n) + n) % n;
+      return ids[j];
+    }
+    if (j >= 0 && j < n) return ids[j];
+    // Linear terminal: fall back to the other side so a transfer OD can still
+    // be built (approach/depart on the remaining through-branch).
+    const k = i - direction * steps;
+    if (k >= 0 && k < n) return ids[k];
   }
   return undefined;
 }

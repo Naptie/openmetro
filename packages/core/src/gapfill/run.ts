@@ -22,11 +22,11 @@ import {
   type BaiduLatLng,
   BaiduPlannerClient,
   type BaiduTransitStep,
-  gcj02ToBd09,
   loadBaiduGapfillConfig,
   pathMeters,
   pureMetroSteps
 } from './baidu.js';
+import { bd09ToGcj02 } from '../geocode/overpass.js';
 
 type Id = string;
 
@@ -88,6 +88,7 @@ interface CanonicalDoc<T> {
 }
 
 export interface GapfillResult {
+  coordinatesFilled: number;
   segmentTimesFilled: number;
   segmentDistancesFilled: number;
   transferWalksFilled: number;
@@ -145,13 +146,23 @@ function stationLabel(st: StationRow | undefined): string {
   return zh.replace(/站$/, '');
 }
 
+/**
+ * Station coordinate for the Baidu planner, in the canonical datum.
+ *
+ * Canonical data is GCJ-02 (CN) / WGS-84 (ex-CN) — never persist BD-09.
+ * `BaiduPlannerClient.transit` takes this pair and converts to BD-09 only
+ * for the HTTP request. Converting here as well double-twists the point and
+ * the planner returns bus/wrong-area routes.
+ */
 function stationGcj(st: StationRow | undefined): BaiduLatLng | undefined {
   const loc = st?.location;
   if (!loc || loc.lon == null || loc.lat == null) return undefined;
-  // Baidu planner expects BD-09; convert GCJ-02 canonical coords. If the
-  // station is already BD-09, pass through.
-  if (loc.crs === 'bd09') return { lng: loc.lon, lat: loc.lat };
-  return gcj02ToBd09(loc.lat, loc.lon);
+  // Defensive: fold any leaked BD-09 back to GCJ-02 before the planner call.
+  if (loc.crs === 'bd09') {
+    const gcj = bd09ToGcj02(loc.lon, loc.lat);
+    return { lng: gcj.lon, lat: gcj.lat };
+  }
+  return { lng: loc.lon, lat: loc.lat };
 }
 
 function normName(s: string | undefined): string {
@@ -194,22 +205,110 @@ function nearestRideHop(
 }
 
 function walkBetweenRides(
-  steps: BaiduTransitStep[]
-): { duration?: number; distance?: number } | undefined {
+  steps: BaiduTransitStep[],
+  hub?: { lon: number; lat: number }
+): { duration?: number; distance?: number; score?: number } | undefined {
+  type Hit = {
+    duration?: number;
+    distance?: number;
+    score: number;
+  };
+  const hits: Hit[] = [];
   for (let i = 0; i < steps.length; i++) {
     if (steps[i].type !== 5) continue;
     const prev = steps[i - 1];
     const next = steps[i + 1];
     if (!prev || prev.type !== 3 || !next || next.type !== 3) continue;
-    return { duration: steps[i].duration, distance: steps[i].distance };
+    const w = steps[i] as {
+      duration?: number;
+      distance?: number;
+      start_location?: { lng?: number; lat?: number };
+      end_location?: { lng?: number; lat?: number };
+    };
+    // Default: first mid-route walk. When a hub is given, prefer the walk whose
+    // endpoints sit at that station — multi-transfer itineraries otherwise
+    // attribute e.g. 五一公园's concourse walk to 郑州火车站.
+    let score = hits.length;
+    if (hub) {
+      const pts = [w.start_location, w.end_location].filter(
+        (p): p is { lng?: number; lat?: number } =>
+          p != null && Number.isFinite(p.lng) && Number.isFinite(p.lat)
+      );
+      if (pts.length > 0) {
+        let dMin = Number.POSITIVE_INFINITY;
+        for (const p of pts) {
+          const dLon = ((p.lng as number) - hub.lon) * Math.cos((hub.lat * Math.PI) / 180);
+          const dLat = (p.lat as number) - hub.lat;
+          const d = Math.sqrt(dLon * dLon + dLat * dLat);
+          if (d < dMin) dMin = d;
+        }
+        score = dMin;
+      }
+    }
+    hits.push({ duration: w.duration, distance: w.distance, score });
   }
-  return undefined;
+  if (hits.length === 0) return undefined;
+  hits.sort((a, b) => a.score - b.score);
+  return { duration: hits[0].duration, distance: hits[0].distance, score: hits[0].score };
 }
 
 /**
  * Fill gaps in `segments.json` + `transfers.json` under `dataDir`.
  * Safe to run on any network that already has canonical topology.
  */
+
+const BAIDU_PLACE_SOURCE = 'baidu-place';
+
+interface PlaceHit {
+  name: string;
+  uid?: string;
+  location?: { lng: number; lat: number };
+  address?: string;
+}
+
+/**
+ * Baidu Place search. `ret_coordtype=gcj02` keeps the result in the canonical
+ * datum (never store BD-09). Used only for stations the AMap/Overpass/Photon
+ * chain could not place.
+ */
+async function baiduPlaceSearch(
+  query: string,
+  region: string,
+  ak: string
+): Promise<PlaceHit[]> {
+  const url =
+    `https://api.map.baidu.com/place/v2/search?query=${encodeURIComponent(query)}` +
+    `&region=${encodeURIComponent(region)}&output=json&ret_coordtype=gcj02&page_size=10&ak=${encodeURIComponent(ak)}`;
+  const res = await fetch(url, {
+    headers: {
+      'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      Accept: 'application/json, text/plain, */*'
+    },
+    signal: AbortSignal.timeout(30_000)
+  });
+  if (!res.ok) throw new Error(`place search HTTP ${res.status}`);
+  const body = (await res.json()) as {
+    status?: number;
+    message?: string;
+    results?: PlaceHit[];
+  };
+  if (typeof body.status === 'number' && body.status !== 0) return [];
+  return body.results ?? [];
+}
+
+function placeNameScore(needle: string, hit: PlaceHit): number {
+  const n = needle.replace(/站$/, '').trim();
+  const h = (hit.name ?? '').replace(/站$/, '').trim();
+  if (!n || !h) return 0;
+  // Demote exits / doors / annexes so the station POI itself wins.
+  if (/[出入口口]$/.test(h) || /[出入口]|门$|口$/.test(h)) return 10;
+  if (h === n) return 100;
+  if (h.includes(n) || n.includes(h)) return 80;
+  if (n.includes(h) || h.includes(n.slice(0, 2))) return 40;
+  return 0;
+}
+
 export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
   const loaded = loadBaiduGapfillConfig();
   if ('error' in loaded) {
@@ -220,8 +319,12 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
 
   const netDoc = JSON.parse(await readFile(join(dataDir, 'network.json'), 'utf-8')) as {
     routing?: { default_transfer_seconds?: number };
+    city?: { name?: { zh?: string; en?: string } };
+    name?: string;
   };
   const defaultWalk = netDoc.routing?.default_transfer_seconds ?? 120;
+  const cityLabel =
+    netDoc.city?.name?.zh || netDoc.name?.replace(/地铁$/, '') || netDoc.name || '';
 
   const stationsDoc = await loadDoc<StationRow>(join(dataDir, 'stations.json'));
   const stopsDoc = await loadDoc<StopRow>(join(dataDir, 'stops.json'));
@@ -234,6 +337,61 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
 
   const failures: string[] = [];
 
+  // ── 0. Missing station coordinates (AMap/Overpass/Photon misses) ──
+  // The geocode chain runs in topology sync; gapfill is the last chance to
+  // place leftovers via Baidu Place (GCJ-02 in, GCJ-02 out).
+  let coordsFilled = 0;
+  const missingCoords = stationsDoc.records.filter((s) => {
+    const loc = s.location;
+    return !loc || loc.lon == null || loc.lat == null;
+  });
+  if (missingCoords.length > 0 && cityLabel) {
+    console.log(`  gapfill missing coordinates: ${missingCoords.length} (Baidu Place)`);
+    for (const st of missingCoords) {
+      const zh = st.names?.zh || st.name || '';
+      const queries = [zh, zh.replace(/站$/, ''), `${zh.replace(/站$/, '')}地铁站`];
+      try {
+        let best: { hit: PlaceHit; score: number } | undefined;
+        for (const q of queries) {
+          const hits = await baiduPlaceSearch(q, cityLabel, loaded.ak);
+          for (const hit of hits) {
+            if (!hit.location?.lng || !hit.location?.lat) continue;
+            let score = placeNameScore(zh, hit);
+            const addr = `${hit.address ?? ''} ${hit.name ?? ''}`;
+            if (/地铁|轨道/.test(addr)) score += 25;
+            if (!best || score > best.score) best = { hit, score };
+          }
+          if (best && best.score >= 80) break;
+          await new Promise((r) => setTimeout(r, Math.ceil(1000 / loaded.qps)));
+        }
+        if (best && best.score >= 40 && best.hit.location) {
+          st.location = {
+            lon: best.hit.location.lng,
+            lat: best.hit.location.lat,
+            crs: 'gcj02'
+          };
+          st.extras = {
+            ...(st.extras ?? {}),
+            location_source: BAIDU_PLACE_SOURCE,
+            baidu_place_uid: best.hit.uid,
+            baidu_place_name: best.hit.name
+          };
+          coordsFilled++;
+          console.log(`    coord ${zh} <- ${best.hit.name} ${best.hit.location.lng},${best.hit.location.lat}`);
+        } else {
+          failures.push(`coord ${zh}: no confident Baidu Place hit`);
+        }
+      } catch (err) {
+        failures.push(
+          `coord ${zh}: ${err instanceof Error ? err.message : String(err)}`
+        );
+      }
+    }
+    if (coordsFilled > 0) {
+      await saveDoc(join(dataDir, 'stations.json'), stationsDoc);
+    }
+  }
+
   // ── 1. Transfer walks (null / baked default) ──
   const patternsByLine = new Map<string, PatternRow[]>();
   for (const p of patternsDoc.records) {
@@ -242,32 +400,70 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
     patternsByLine.set(p.line_id, arr);
   }
 
+  type XferCandidate = { from_station: string; to_station: string };
   type XferJob = {
     transfers: TransferRow[];
-    from_station: string;
-    to_station: string;
+    /** Ordered OD tries: tightest hop first, then wider spans (Baidu often
+     * returns bus-only for ±1 hops and metro for ±2). */
+    candidates: XferCandidate[];
   };
+
+  /** Candidate approach/depart spans around a transfer hub. */
+  const XFER_SPANS: [number, number][] = [
+    [-1, 1],
+    [-2, 2],
+    [-1, 2],
+    [-2, 1],
+    [1, -1],
+    [2, -2],
+    [1, -2],
+    [2, -1],
+    [-1, -1],
+    [-2, -2],
+    [1, -3],
+    [2, -3],
+    [-2, -3],
+    [-3, -1],
+    [-3, -2],
+    [-3, 1],
+    [3, -1],
+    [3, -2],
+    [1, -4],
+    [-3, -3],
+    [3, -3],
+    [-4, -2]
+  ];
+
   const xferJobs: XferJob[] = [];
-  const xferByOD = new Map<string, XferJob>();
+  const xferByTransfer = new Map<string, XferJob>();
   for (const t of transfersDoc.records) {
     if (!needsWalk(t, defaultWalk)) continue;
     if (!t.from_stop_id || !t.to_stop_id) continue;
     const fromPatterns = patternsByLine.get(t.from_line_id) ?? patternsDoc.records;
     const toPatterns = patternsByLine.get(t.to_line_id) ?? patternsDoc.records;
-    const approach = neighbourStop(fromPatterns, t.from_stop_id, -1);
-    const depart = neighbourStop(toPatterns, t.to_stop_id, 1);
-    if (!approach || !depart) continue;
-    const aSt = stopStation.get(approach);
-    const bSt = stopStation.get(depart);
-    if (!aSt || !bSt) continue;
-    const k = pairKey(aSt, bSt);
-    const existing = xferByOD.get(k);
+    const candidates: XferCandidate[] = [];
+    const seen = new Set<string>();
+    for (const [da, db] of XFER_SPANS) {
+      const approach = neighbourStop(fromPatterns, t.from_stop_id, da < 0 ? -1 : 1, Math.abs(da));
+      const depart = neighbourStop(toPatterns, t.to_stop_id, db < 0 ? -1 : 1, Math.abs(db));
+      if (!approach || !depart) continue;
+      const aSt = stopStation.get(approach);
+      const bSt = stopStation.get(depart);
+      if (!aSt || !bSt) continue;
+      const k = pairKey(aSt, bSt);
+      if (seen.has(k)) continue;
+      seen.add(k);
+      candidates.push({ from_station: aSt, to_station: bSt });
+    }
+    if (candidates.length === 0) continue;
+    const jobKey = `${t.station_id}|${t.from_line_id}|${t.to_line_id}`;
+    const existing = xferByTransfer.get(jobKey);
     if (existing) {
       existing.transfers.push(t);
       continue;
     }
-    const job: XferJob = { transfers: [t], from_station: aSt, to_station: bSt };
-    xferByOD.set(k, job);
+    const job: XferJob = { transfers: [t], candidates };
+    xferByTransfer.set(jobKey, job);
     xferJobs.push(job);
   }
 
@@ -280,28 +476,47 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
     async (job) => {
       if (client.exhausted) return;
       try {
-        const o = stationGcj(stations.get(job.from_station));
-        const d = stationGcj(stations.get(job.to_station));
-        if (!o || !d) return;
-        const resp = await client.transit(o, d);
-        for (const route of resp?.result?.routes ?? []) {
-          const st = pureMetroSteps(route.steps);
-          if (st.length < 3) continue;
-          const walk = walkBetweenRides(st);
-          if (!(walk?.duration && walk.duration > 0)) continue;
-          if (walk.duration < 15 || walk.duration > 720) continue;
+        for (const cand of job.candidates) {
+          const o = stationGcj(stations.get(cand.from_station));
+          const d = stationGcj(stations.get(cand.to_station));
+          if (!o || !d) continue;
+          const resp = await client.transit(o, d);
+          const hubLoc = (() => {
+            const hs = stations.get(job.transfers[0]?.station_id ?? '');
+            const loc = hs?.location;
+            if (!loc || loc.lon == null || loc.lat == null) return undefined;
+            return { lon: loc.lon, lat: loc.lat };
+          })();
+          // Scan every route and keep the walk nearest the hub — the first
+          // "any transfer" route often walks at a different interchange
+          // (e.g. 五一公园 L1/L5) and must not win over the real hub.
+          let walk: { duration?: number; distance?: number } | undefined;
+          let bestScore = Number.POSITIVE_INFINITY;
+          for (const route of resp?.result?.routes ?? []) {
+            const st = pureMetroSteps(route.steps);
+            if (st.length < 3) continue;
+            const w = walkBetweenRides(st, hubLoc);
+            if (!(w?.duration && w.duration > 0)) continue;
+            if (w.duration < 15 || w.duration > 720) continue;
+            const score = (w as { score?: number }).score ?? 0;
+            if (score < bestScore) {
+              bestScore = score;
+              walk = w;
+            }
+          }
+          if (!walk) continue;
           for (const t of job.transfers) {
             harvestedWalks.push({
               station_id: t.station_id,
               from_line_id: t.from_line_id,
               to_line_id: t.to_line_id,
-              walk_time_seconds: Math.round(walk.duration),
+              walk_time_seconds: Math.round(walk.duration as number),
               source_id: BAIDU_SOURCE_ID
             });
-            if (walk.distance && walk.distance > 0) {
+            if (walk.distance != null && walk.distance > 0) {
               harvestedWalkM.set(
                 `${t.station_id}|${t.from_line_id}|${t.to_line_id}`,
-                Math.round(walk.distance)
+                Math.round(walk.distance as number)
               );
             }
           }
@@ -309,7 +524,7 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
         }
       } catch (err) {
         failures.push(
-          `transfer ${job.from_station}->${job.to_station}: ${
+          `transfer ${job.candidates[0]?.from_station}->${job.candidates[0]?.to_station}: ${
             err instanceof Error ? err.message : String(err)
           }`
         );
@@ -475,8 +690,9 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
   }
 
   console.log(
-    `  gapfill: +${segTimeFilled} segment times, +${segDistFilled} distances, ` +
-      `+${walkFilled} transfer walks (${client.queries} queries, ${failures.length} failures)`
+    `  gapfill: +${coordsFilled} coordinates, +${segTimeFilled} segment times, ` +
+      `+${segDistFilled} distances, +${walkFilled} transfer walks ` +
+      `(${client.queries} queries, ${failures.length} failures)`
   );
   if (failures.length > 0) {
     console.warn(
@@ -486,6 +702,7 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
     );
   }
   return {
+    coordinatesFilled: coordsFilled,
     segmentTimesFilled: segTimeFilled,
     segmentDistancesFilled: segDistFilled,
     transferWalksFilled: walkFilled,

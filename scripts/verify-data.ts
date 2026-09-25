@@ -390,6 +390,7 @@ function verifyReferences(network: string, d: NetworkData): void {
   // ── Timetables ────────────────────────────────────────────────
   const ttStops = new Set<string>();
   const ttByLine = new Map<string, Set<string>>();
+  const loopDirsByLine = new Map<string, Set<string>>();
   const patternById = new Map(d.patterns.map((p) => [p.id, p]));
   // Same station + line + direction must not repeat; same dest+label neither.
   const ttDirKeys = new Set<string>();
@@ -491,6 +492,24 @@ function verifyReferences(network: string, d: NetworkData): void {
     const set = ttByLine.get(timetable.line_id) ?? new Set();
     set.add(timetable.stop_id);
     ttByLine.set(timetable.line_id, set);
+    const dirs = loopDirsByLine.get(timetable.line_id) ?? new Set<string>();
+    if (timetable.direction_type === 'loop_inner' || timetable.direction_type === 'loop_outer') {
+      dirs.add(timetable.direction_type);
+    }
+    loopDirsByLine.set(timetable.line_id, dirs);
+  }
+
+  // Loop lines must publish both ring directions (内环 + 外环). A single
+  // direction is a parse/id collision, not a real one-way service.
+  for (const line of d.lines) {
+    if (!line.loop) continue;
+    const dirs = loopDirsByLine.get(line.id);
+    if (!dirs || dirs.size === 0) continue;
+    assert(
+      dirs.has('loop_inner') && dirs.has('loop_outer'),
+      network,
+      `loop line ${line.id} timetables must cover loop_inner and loop_outer (has ${[...dirs].join(',') || 'none'})`
+    );
   }
 
   // Pattern model (Guangzhou-style stubs, not Shanghai-style shared trunks):

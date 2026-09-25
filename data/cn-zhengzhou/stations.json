@@ -1,0 +1,8496 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-zhengzhou",
+  "generated_at": "2026-09-25T19:52:25.692Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-25T19:52:25.692Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-zhengzhou-anning-lu",
+      "name": "安宁路站",
+      "names": {
+        "zh": "安宁路站",
+        "en": "Anning Lu"
+      },
+      "location": {
+        "lon": 113.516666,
+        "lat": 34.691824,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 403,
+        "y": 1030,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10646"
+        }
+      ],
+      "extras": {
+        "pinyin": "AnNing Lu",
+        "poiid": "BV10994087",
+        "official_zids": [
+          "10646"
+        ],
+        "amap_name": "安宁路",
+        "amap_en_full": "ANNING LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-aoxiang-lu",
+      "name": "翱翔路站",
+      "names": {
+        "zh": "翱翔路站",
+        "en": "Aoxiang Lu"
+      },
+      "location": {
+        "lon": 113.830212,
+        "lat": 34.545021,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1954,
+        "y": 1724,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11729"
+        }
+      ],
+      "extras": {
+        "pinyin": "AoXiang Lu",
+        "poiid": "BV11580215",
+        "official_zids": [
+          "11729"
+        ],
+        "amap_name": "翱翔路",
+        "amap_en_full": "AOXIANG LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-baimiao",
+      "name": "白庙站",
+      "names": {
+        "zh": "白庙站",
+        "en": "Baimiao"
+      },
+      "location": {
+        "lon": 113.666129,
+        "lat": 34.799543,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1063,
+        "y": 486,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10735"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10843"
+        }
+      ],
+      "extras": {
+        "pinyin": "BaiMiao",
+        "poiid": "BV11340731",
+        "official_zids": [
+          "10735",
+          "10843"
+        ],
+        "amap_name": "白庙",
+        "amap_en_full": "BAIMIAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-baqian",
+      "name": "八千站",
+      "names": {
+        "zh": "八千站",
+        "en": "Baqian"
+      },
+      "location": {
+        "lon": 113.847832,
+        "lat": 34.38018,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2087,
+        "y": 2156,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11751"
+        }
+      ],
+      "extras": {
+        "pinyin": "BaQian",
+        "poiid": "BV11580213",
+        "official_zids": [
+          "11751"
+        ],
+        "amap_name": "八千",
+        "amap_en_full": "BAQIAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-bei-daxuecheng",
+      "name": "北大学城站",
+      "names": {
+        "zh": "北大学城站",
+        "en": "Bei Daxuecheng"
+      },
+      "location": {
+        "lon": 113.646504,
+        "lat": 34.859949,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1067,
+        "y": 135,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10727"
+        }
+      ],
+      "extras": {
+        "pinyin": "BeiDaXueCheng",
+        "poiid": "BV09257965",
+        "official_zids": [
+          "10727"
+        ],
+        "amap_name": "北大学城",
+        "amap_en_full": "BEI DAXUECHENG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-bei-ershilipu",
+      "name": "北二十里铺站",
+      "names": {
+        "zh": "北二十里铺站",
+        "en": "Bei Ershilipu"
+      },
+      "location": {
+        "lon": 113.640711,
+        "lat": 34.830874,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 993,
+        "y": 170,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10423"
+        }
+      ],
+      "extras": {
+        "pinyin": "Bei ErShiLiPu",
+        "poiid": "BV10859929",
+        "official_zids": [
+          "10423"
+        ],
+        "amap_name": "北二十里铺",
+        "amap_en_full": "BEI ERSHILIPU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-beisanhuan",
+      "name": "北三环站",
+      "names": {
+        "zh": "北三环站",
+        "en": "Beisanhuan"
+      },
+      "location": {
+        "lon": 113.681518,
+        "lat": 34.804971,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1228,
+        "y": 416,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10224"
+        }
+      ],
+      "extras": {
+        "pinyin": "BeiSanHuan",
+        "poiid": "BV10602511",
+        "official_zids": [
+          "10224"
+        ],
+        "amap_name": "北三环",
+        "amap_en_full": "BEISANHUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-binhe-xincheng",
+      "name": "滨河新城站",
+      "names": {
+        "zh": "滨河新城站",
+        "en": "Binhe Xincheng"
+      },
+      "location": {
+        "lon": 113.795142,
+        "lat": 34.687714,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1907,
+        "y": 1037,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10343"
+        }
+      ],
+      "extras": {
+        "pinyin": "BinHe XinCheng",
+        "poiid": "BV11535362",
+        "official_zids": [
+          "10343"
+        ],
+        "amap_name": "滨河新城",
+        "amap_en_full": "BINHE XINCHENG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-binhe-xincheng-nan",
+      "name": "滨河新城南站",
+      "names": {
+        "zh": "滨河新城南站",
+        "en": "Binhe Xincheng Nan"
+      },
+      "location": {
+        "lon": 113.795106,
+        "lat": 34.667939,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1906,
+        "y": 1171,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10345"
+        }
+      ],
+      "extras": {
+        "pinyin": "BinHe XinCheng Nan",
+        "poiid": "BV11535364",
+        "official_zids": [
+          "10345"
+        ],
+        "amap_name": "滨河新城南",
+        "amap_en_full": "BINHE XINCHENG NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-bishagang",
+      "name": "碧沙岗站",
+      "names": {
+        "zh": "碧沙岗站",
+        "en": "Bishagang"
+      },
+      "location": {
+        "lon": 113.624373,
+        "lat": 34.75504,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 904,
+        "y": 711,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10125"
+        }
+      ],
+      "extras": {
+        "pinyin": "BiShaGang",
+        "poiid": "BV10090683",
+        "official_zids": [
+          "10125"
+        ],
+        "amap_name": "碧沙岗",
+        "amap_en_full": "BISHAGANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-bolan-zhongxin",
+      "name": "博览中心站",
+      "names": {
+        "zh": "博览中心站",
+        "en": "Bolan Zhongxin"
+      },
+      "location": {
+        "lon": 113.703745,
+        "lat": 34.746902,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1412,
+        "y": 773,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10333"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10628"
+        }
+      ],
+      "extras": {
+        "pinyin": "BoLan ZhongXin",
+        "poiid": "BV10994071",
+        "official_zids": [
+          "10333",
+          "10628"
+        ],
+        "amap_name": "博览中心",
+        "amap_en_full": "BOLAN ZHONGXIN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-boxuelu",
+      "name": "博学路站",
+      "names": {
+        "zh": "博学路站",
+        "en": "Boxuelu"
+      },
+      "location": {
+        "lon": 113.792535,
+        "lat": 34.759935,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1910,
+        "y": 662,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10139"
+        }
+      ],
+      "extras": {
+        "pinyin": "BoXue Lu",
+        "poiid": "BV10092325",
+        "official_zids": [
+          "10139"
+        ],
+        "amap_name": "博学路",
+        "amap_en_full": "BOXUELU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-bwyf2h",
+      "name": "3号航站楼站",
+      "names": {
+        "zh": "3号航站楼站",
+        "en": "3号航站楼站"
+      },
+      "status": "out_of_service",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10951"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10951"
+        ],
+        "location_source": "baidu-place",
+        "baidu_place_uid": "45ca906277a888126268588e",
+        "baidu_place_name": "3号航站楼"
+      },
+      "location": {
+        "lon": 113.887369,
+        "lat": 34.522616,
+        "crs": "gcj02"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-central-business-district",
+      "name": "中央商务区站",
+      "names": {
+        "zh": "中央商务区站",
+        "en": "Central Business District"
+      },
+      "location": {
+        "lon": 113.729406,
+        "lat": 34.778265,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1631,
+        "y": 598,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10438"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10509"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhongYang ShangWu Qu",
+        "poiid": "BV11194038",
+        "official_zids": [
+          "10438",
+          "10509"
+        ],
+        "amap_name": "中央商务区",
+        "amap_en_full": "CENTRAL BUSINESS DISTRICT",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-chang-an-lu-bei",
+      "name": "长安路北站",
+      "names": {
+        "zh": "长安路北站",
+        "en": "Chang’an Lu Bei"
+      },
+      "location": {
+        "lon": 113.846584,
+        "lat": 34.596586,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2093,
+        "y": 1398,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11721"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChangAn Lu Bei",
+        "poiid": "BV11580207",
+        "official_zids": [
+          "11721"
+        ],
+        "amap_name": "长安路北",
+        "amap_en_full": "CHANG’AN LU BEI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-chang-an-lu-nan",
+      "name": "长安路南站",
+      "names": {
+        "zh": "长安路南站",
+        "en": "Chang’an Lu Nan"
+      },
+      "location": {
+        "lon": 113.832443,
+        "lat": 34.5329,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1953,
+        "y": 1774,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11731"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChangAn Lu Nan",
+        "poiid": "BV11580214",
+        "official_zids": [
+          "11731"
+        ],
+        "amap_name": "长安路南",
+        "amap_en_full": "CHANG’AN LU NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-changhe-jie",
+      "name": "畅和街站",
+      "names": {
+        "zh": "畅和街站",
+        "en": "Changhe Jie"
+      },
+      "location": {
+        "lon": 113.775918,
+        "lat": 34.780074,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1864,
+        "y": 578,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10857"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChangHe Jie",
+        "poiid": "BV11340724",
+        "official_zids": [
+          "10857"
+        ],
+        "amap_name": "畅和街",
+        "amap_en_full": "CHANGHE JIE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-changzhuang",
+      "name": "常庄站",
+      "names": {
+        "zh": "常庄站",
+        "en": "Changzhuang"
+      },
+      "location": {
+        "lon": 113.558272,
+        "lat": 34.7389,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 575,
+        "y": 859,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10640"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChangZhuang",
+        "poiid": "BV11616493",
+        "official_zids": [
+          "10640"
+        ],
+        "amap_name": "常庄",
+        "amap_en_full": "CHANGZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-chaohe",
+      "name": "潮河站",
+      "names": {
+        "zh": "潮河站",
+        "en": "Chaohe"
+      },
+      "location": {
+        "lon": 113.795113,
+        "lat": 34.695592,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1907,
+        "y": 968,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10342"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChaoHe",
+        "poiid": "BV11535361",
+        "official_zids": [
+          "10342"
+        ],
+        "amap_name": "潮河",
+        "amap_en_full": "CHAOHE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-chengdongnanlu",
+      "name": "城东南路站",
+      "names": {
+        "zh": "城东南路站",
+        "en": "Chengdongnanlu"
+      },
+      "location": {
+        "lon": 113.690214,
+        "lat": 34.720838,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1357,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10522"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChengDong NanLu",
+        "poiid": "BV10705668",
+        "official_zids": [
+          "10522"
+        ],
+        "amap_name": "城东南路",
+        "amap_en_full": "CHENGDONGNANLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-chenzhai",
+      "name": "陈砦站",
+      "names": {
+        "zh": "陈砦站",
+        "en": "Chenzhai"
+      },
+      "location": {
+        "lon": 113.664413,
+        "lat": 34.812329,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1064,
+        "y": 434,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10733"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChenZhai",
+        "poiid": "BV09257966",
+        "official_zids": [
+          "10733"
+        ],
+        "amap_name": "陈砦",
+        "amap_en_full": "CHENZHAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-chenzhai-dong",
+      "name": "陈寨东站",
+      "names": {
+        "zh": "陈寨东站",
+        "en": "Chenzhai Dong"
+      },
+      "location": {
+        "lon": 113.670006,
+        "lat": 34.819558,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1150,
+        "y": 343,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10426"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChenZhai Dong",
+        "poiid": "BV11285679",
+        "official_zids": [
+          "10426"
+        ],
+        "amap_name": "陈寨东",
+        "amap_en_full": "CHENZHAI DONG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-citizen-center",
+      "name": "市民中心站",
+      "names": {
+        "zh": "市民中心站",
+        "en": "Citizen Center"
+      },
+      "location": {
+        "lon": 113.553932,
+        "lat": 34.762054,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 556,
+        "y": 711,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10120"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiMin ZhongXin",
+        "poiid": "BV10840257",
+        "official_zids": [
+          "10120"
+        ],
+        "amap_name": "市民中心",
+        "amap_en_full": "Citizen Center",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-convention-and-exhibition-center",
+      "name": "会展中心站",
+      "names": {
+        "zh": "会展中心站",
+        "en": "Convention & Exhibition Center"
+      },
+      "location": {
+        "lon": 113.725738,
+        "lat": 34.766727,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1632,
+        "y": 661,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10134"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10439"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuiZhan ZhongXin",
+        "poiid": "BV10090883",
+        "official_zids": [
+          "10134",
+          "10439"
+        ],
+        "amap_name": "会展中心",
+        "amap_en_full": "CONVENTION & EXHIBITION CENTER",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dashiqiao",
+      "name": "大石桥站",
+      "names": {
+        "zh": "大石桥站",
+        "en": "Dashiqiao"
+      },
+      "location": {
+        "lon": 113.655734,
+        "lat": 34.765011,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1015,
+        "y": 660,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10327"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10741"
+        }
+      ],
+      "extras": {
+        "pinyin": "DaShiQiao ShiFuYou BaoJianYuan",
+        "poiid": "BV09379201",
+        "official_zids": [
+          "10327",
+          "10741"
+        ],
+        "co_name": "市妇幼保健院",
+        "amap_name": "大石桥·市妇幼保健院",
+        "amap_en_full": "DASHIQIAO / SHIFUYOUBAOJIANYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-daxue-kejiyuan",
+      "name": "大学科技园站",
+      "names": {
+        "zh": "大学科技园站",
+        "en": "Daxue Kejiyuan"
+      },
+      "location": {
+        "lon": 113.604772,
+        "lat": 34.790799,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 819,
+        "y": 488,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10835"
+        }
+      ],
+      "extras": {
+        "pinyin": "DaXue KeJiYuan",
+        "poiid": "BV09205417",
+        "official_zids": [
+          "10835"
+        ],
+        "amap_name": "大学科技园",
+        "amap_en_full": "DAXUE KEJIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-daxue-zhonglu",
+      "name": "大学中路站",
+      "names": {
+        "zh": "大学中路站",
+        "en": "Daxue Zhonglu"
+      },
+      "location": {
+        "lon": 113.643974,
+        "lat": 34.728043,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1018,
+        "y": 858,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10634"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10749"
+        }
+      ],
+      "extras": {
+        "pinyin": "DaXue ZhongLu",
+        "poiid": "BV11510903",
+        "official_zids": [
+          "10634",
+          "10749"
+        ],
+        "amap_name": "大学中路",
+        "amap_en_full": "DAXUE ZHONGLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dazhou",
+      "name": "大周站",
+      "names": {
+        "zh": "大周站",
+        "en": "Dazhou"
+      },
+      "location": {
+        "lon": 113.845393,
+        "lat": 34.2758,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2089,
+        "y": 2287,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11755"
+        }
+      ],
+      "extras": {
+        "pinyin": "DaZhou",
+        "poiid": "BV11589103",
+        "official_zids": [
+          "11755"
+        ],
+        "amap_name": "大周",
+        "amap_en_full": "DAZHOU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dianqigu",
+      "name": "电气谷站",
+      "names": {
+        "zh": "电气谷站",
+        "en": "Dianqigu"
+      },
+      "location": {
+        "lon": 113.851519,
+        "lat": 34.10727,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2096,
+        "y": 2686,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11767"
+        }
+      ],
+      "extras": {
+        "pinyin": "DianQiGu",
+        "poiid": "BV11589101",
+        "official_zids": [
+          "11767"
+        ],
+        "amap_name": "电气谷",
+        "amap_en_full": "DIANQIGU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dongdajie",
+      "name": "东大街站",
+      "names": {
+        "zh": "东大街站",
+        "en": "Dongdajie"
+      },
+      "location": {
+        "lon": 113.68299,
+        "lat": 34.748829,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1235,
+        "y": 773,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10229"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10331"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongDaJie Shi DiYi RenMin YiYuan",
+        "poiid": "BV09381696",
+        "official_zids": [
+          "10229",
+          "10331"
+        ],
+        "co_name": "市第一人民医院",
+        "amap_name": "东大街·市第一人民医院",
+        "amap_en_full": "DONGDAJIE / SHIDIYIRENMINYIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dongfeng-lu",
+      "name": "东风路站",
+      "names": {
+        "zh": "东风路站",
+        "en": "Dongfeng Lu"
+      },
+      "location": {
+        "lon": 113.681655,
+        "lat": 34.795852,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1229,
+        "y": 486,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10225"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10845"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongFeng Lu",
+        "poiid": "BV10092137",
+        "official_zids": [
+          "10225",
+          "10845"
+        ],
+        "amap_name": "东风路",
+        "amap_en_full": "DONGFENG LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dongfengdong-lu",
+      "name": "东风东路站",
+      "names": {
+        "zh": "东风东路站",
+        "en": "Dongfengdong Lu"
+      },
+      "location": {
+        "lon": 113.760926,
+        "lat": 34.781814,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1736,
+        "y": 529,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11233"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongFeng DongLu",
+        "poiid": "BV09199949",
+        "official_zids": [
+          "11233"
+        ],
+        "amap_name": "东风东路",
+        "amap_en_full": "DONGFENGDONG LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dongfengnanlu",
+      "name": "东风南路站",
+      "names": {
+        "zh": "东风南路站",
+        "en": "Dongfengnanlu"
+      },
+      "location": {
+        "lon": 113.767132,
+        "lat": 34.76445,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1825,
+        "y": 661,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10137"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongFeng NanLu",
+        "poiid": "BV10092704",
+        "official_zids": [
+          "10137"
+        ],
+        "amap_name": "东风南路",
+        "amap_en_full": "DONGFENGNANLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-donglinhu",
+      "name": "洞林湖站",
+      "names": {
+        "zh": "洞林湖站",
+        "en": "Donglinhu"
+      },
+      "location": {
+        "lon": 113.482595,
+        "lat": 34.668645,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 313,
+        "y": 1059,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10648"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongLinHu",
+        "poiid": "BV10996280",
+        "official_zids": [
+          "10648"
+        ],
+        "amap_name": "洞林湖",
+        "amap_en_full": "DONGLINHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-donglinsi",
+      "name": "洞林寺站",
+      "names": {
+        "zh": "洞林寺站",
+        "en": "Donglinsi"
+      },
+      "location": {
+        "lon": 113.499265,
+        "lat": 34.673165,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 400,
+        "y": 1054,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10647"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongLinSi",
+        "poiid": "BV10994066",
+        "official_zids": [
+          "10647"
+        ],
+        "amap_name": "洞林寺",
+        "amap_en_full": "DONGLINSI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dongqing-jie",
+      "name": "冬青街站",
+      "names": {
+        "zh": "冬青街站",
+        "en": "Dongqing Jie"
+      },
+      "location": {
+        "lon": 113.568358,
+        "lat": 34.801103,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 665,
+        "y": 471,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10831"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongQing Jie",
+        "poiid": "BV11340732",
+        "official_zids": [
+          "10831"
+        ],
+        "amap_name": "冬青街",
+        "amap_en_full": "DONGQING JIE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dongshilipu",
+      "name": "东十里铺站",
+      "names": {
+        "zh": "东十里铺站",
+        "en": "Dongshilipu"
+      },
+      "location": {
+        "lon": 113.72605,
+        "lat": 34.747001,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1633,
+        "y": 773,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10335"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10441"
+        }
+      ],
+      "extras": {
+        "pinyin": "Dong ShiLiPu",
+        "poiid": "BV11283824",
+        "official_zids": [
+          "10335",
+          "10441"
+        ],
+        "amap_name": "东十里铺",
+        "amap_en_full": "DONGSHILIPU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dongzhao",
+      "name": "东赵站",
+      "names": {
+        "zh": "东赵站",
+        "en": "Dongzhao"
+      },
+      "location": {
+        "lon": 113.64321,
+        "lat": 34.879442,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1068,
+        "y": 0,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10723"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongZhao",
+        "poiid": "BV10897826",
+        "official_zids": [
+          "10723"
+        ],
+        "amap_name": "东赵",
+        "amap_en_full": "DONGZHAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-dongzhou",
+      "name": "东周站",
+      "names": {
+        "zh": "东周站",
+        "en": "Dongzhou"
+      },
+      "location": {
+        "lon": 113.758724,
+        "lat": 34.74644,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1790,
+        "y": 773,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10338"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongZhou",
+        "poiid": "BV10859597",
+        "official_zids": [
+          "10338"
+        ],
+        "amap_name": "东周",
+        "amap_en_full": "DONGZHOU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-enpinghu",
+      "name": "恩平湖站",
+      "names": {
+        "zh": "恩平湖站",
+        "en": "Enpinghu"
+      },
+      "location": {
+        "lon": 113.859674,
+        "lat": 34.567421,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2128,
+        "y": 1646,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10948"
+        }
+      ],
+      "extras": {
+        "pinyin": "EnPingHu",
+        "poiid": "BV10729473",
+        "official_zids": [
+          "10948"
+        ],
+        "amap_name": "恩平湖",
+        "amap_en_full": "ENPINGHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-erligang",
+      "name": "二里岗站",
+      "names": {
+        "zh": "二里岗站",
+        "en": "Erligang"
+      },
+      "location": {
+        "lon": 113.682049,
+        "lat": 34.728903,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1236,
+        "y": 857,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10231"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10631"
+        }
+      ],
+      "extras": {
+        "pinyin": "ErLiGang",
+        "poiid": "BV10602509",
+        "official_zids": [
+          "10231",
+          "10631"
+        ],
+        "amap_name": "二里岗",
+        "amap_en_full": "ERLIGANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-erligang-dong",
+      "name": "二里岗东站",
+      "names": {
+        "zh": "二里岗东站",
+        "en": "Erligang Dong"
+      },
+      "location": {
+        "lon": 113.69196,
+        "lat": 34.727672,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1316,
+        "y": 857,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10630"
+        }
+      ],
+      "extras": {
+        "pinyin": "ErLi GangDong",
+        "poiid": "BV11614601",
+        "official_zids": [
+          "10630"
+        ],
+        "amap_name": "二里岗东",
+        "amap_en_full": "ERLIGANG DONG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-erqi-guangchang",
+      "name": "二七广场站",
+      "names": {
+        "zh": "二七广场站",
+        "en": "Erqi Guangchang"
+      },
+      "location": {
+        "lon": 113.665854,
+        "lat": 34.752527,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1139,
+        "y": 727,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10129"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10329"
+        }
+      ],
+      "extras": {
+        "pinyin": "ErQi GuangChang",
+        "poiid": "BV10090591",
+        "official_zids": [
+          "10129",
+          "10329"
+        ],
+        "amap_name": "二七广场",
+        "amap_en_full": "ERQI GUANGCHANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-ersha",
+      "name": "二砂站",
+      "names": {
+        "zh": "二砂站",
+        "en": "Ersha"
+      },
+      "location": {
+        "lon": 113.598376,
+        "lat": 34.747538,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 766,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11048"
+        }
+      ],
+      "extras": {
+        "pinyin": "ErSha",
+        "poiid": "BV10994052",
+        "official_zids": [
+          "11048"
+        ],
+        "amap_name": "二砂",
+        "amap_en_full": "ERSHA",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-ertong-yiyuan",
+      "name": "儿童医院站",
+      "names": {
+        "zh": "儿童医院站",
+        "en": "Ertong Yiyuan"
+      },
+      "location": {
+        "lon": 113.750767,
+        "lat": 34.776122,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1725,
+        "y": 598,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10510"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11231"
+        }
+      ],
+      "extras": {
+        "pinyin": "ErTong YiYuan YiHe YiYuan",
+        "poiid": "BV10705657",
+        "official_zids": [
+          "10510",
+          "11231"
+        ],
+        "co_name": "颐和医院",
+        "amap_name": "儿童医院·颐和医院",
+        "amap_en_full": "CHILDREN’S HOSPITAL",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-fenghuangtai",
+      "name": "凤凰台站",
+      "names": {
+        "zh": "凤凰台站",
+        "en": "Fenghuangtai"
+      },
+      "location": {
+        "lon": 113.713918,
+        "lat": 34.746925,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1518,
+        "y": 773,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10334"
+        }
+      ],
+      "extras": {
+        "pinyin": "FengHuangTai",
+        "poiid": "BV10859589",
+        "official_zids": [
+          "10334"
+        ],
+        "amap_name": "凤凰台",
+        "amap_en_full": "FENGHUANGTAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-fenghuangtai-nan",
+      "name": "凤凰台南站",
+      "names": {
+        "zh": "凤凰台南站",
+        "en": "Fenghuangtai Nan"
+      },
+      "location": {
+        "lon": 113.704151,
+        "lat": 34.738013,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1412,
+        "y": 810,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10629"
+        }
+      ],
+      "extras": {
+        "pinyin": "FengHuang TaiNan",
+        "poiid": "BV11614609",
+        "official_zids": [
+          "10629"
+        ],
+        "amap_name": "凤凰台南",
+        "amap_en_full": "FENGHUANGTAI NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-fengqing-lu",
+      "name": "丰庆路站",
+      "names": {
+        "zh": "丰庆路站",
+        "en": "Fengqing Lu"
+      },
+      "location": {
+        "lon": 113.654541,
+        "lat": 34.829804,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1045,
+        "y": 229,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10424"
+        }
+      ],
+      "extras": {
+        "pinyin": "FengQing Lu",
+        "poiid": "BV10859923",
+        "official_zids": [
+          "10424"
+        ],
+        "amap_name": "丰庆路",
+        "amap_en_full": "FENGQING LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-fengwan",
+      "name": "冯湾站",
+      "names": {
+        "zh": "冯湾站",
+        "en": "Fengwan"
+      },
+      "location": {
+        "lon": 113.573616,
+        "lat": 34.727228,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 659,
+        "y": 859,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10639"
+        }
+      ],
+      "extras": {
+        "pinyin": "FengWan",
+        "poiid": "BV11614610",
+        "official_zids": [
+          "10639"
+        ],
+        "amap_name": "冯湾",
+        "amap_en_full": "FENGWAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-fengzhuang",
+      "name": "冯庄站",
+      "names": {
+        "zh": "冯庄站",
+        "en": "Fengzhuang"
+      },
+      "location": {
+        "lon": 113.667892,
+        "lat": 34.720432,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1172,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10524"
+        }
+      ],
+      "extras": {
+        "pinyin": "FengZhuang",
+        "poiid": "BV10705665",
+        "official_zids": [
+          "10524"
+        ],
+        "amap_name": "冯庄",
+        "amap_en_full": "FENGZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-furonghu",
+      "name": "芙蓉湖站",
+      "names": {
+        "zh": "芙蓉湖站",
+        "en": "Furonghu"
+      },
+      "location": {
+        "lon": 113.862727,
+        "lat": 34.088134,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2096,
+        "y": 2748,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11769"
+        }
+      ],
+      "extras": {
+        "pinyin": "FuRongHu",
+        "poiid": "BV11589108",
+        "official_zids": [
+          "11769"
+        ],
+        "amap_name": "芙蓉湖",
+        "amap_en_full": "FURONGHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-futa-dong",
+      "name": "福塔东站",
+      "names": {
+        "zh": "福塔东站",
+        "en": "Futa Dong"
+      },
+      "location": {
+        "lon": 113.746941,
+        "lat": 34.720036,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1724,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10518"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11223"
+        }
+      ],
+      "extras": {
+        "pinyin": "Fu TaDong",
+        "poiid": "BV10705669",
+        "official_zids": [
+          "10518",
+          "11223"
+        ],
+        "amap_name": "福塔东",
+        "amap_en_full": "FUTA DONG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-fuze-lu",
+      "name": "福泽路站",
+      "names": {
+        "zh": "福泽路站",
+        "en": "Fuze Lu"
+      },
+      "location": {
+        "lon": 113.868513,
+        "lat": 34.758582,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2124,
+        "y": 744,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10867"
+        }
+      ],
+      "extras": {
+        "pinyin": "FuZe Lu",
+        "poiid": "BV09188381",
+        "official_zids": [
+          "10867"
+        ],
+        "amap_name": "福泽路",
+        "amap_en_full": "FUZE LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-gangqu-bei",
+      "name": "港区北站",
+      "names": {
+        "zh": "港区北站",
+        "en": "Gangqu Bei"
+      },
+      "location": {
+        "lon": 113.837925,
+        "lat": 34.584862,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1956,
+        "y": 1527,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10945"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11723"
+        }
+      ],
+      "extras": {
+        "pinyin": "GangQu Bei",
+        "poiid": "BV10729460",
+        "official_zids": [
+          "10945",
+          "11723"
+        ],
+        "amap_name": "港区北",
+        "amap_en_full": "GANGQU BEI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-gangquhuizhang",
+      "name": "港区会展站",
+      "names": {
+        "zh": "港区会展站",
+        "en": "Gangquhuizhang"
+      },
+      "location": {
+        "lon": 113.923811,
+        "lat": 34.4973,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2285,
+        "y": 1792,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10953"
+        }
+      ],
+      "extras": {
+        "pinyin": "GangQu HuiZhan",
+        "poiid": "BV11602283",
+        "official_zids": [
+          "10953"
+        ],
+        "amap_name": "港区会展",
+        "amap_en_full": "GANGQUHUIZHANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-gaotie-gongyuan",
+      "name": "高铁公园站",
+      "names": {
+        "zh": "高铁公园站",
+        "en": "Gaotie Gongyuan"
+      },
+      "location": {
+        "lon": 113.774913,
+        "lat": 34.791912,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1864,
+        "y": 529,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10855"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11235"
+        }
+      ],
+      "extras": {
+        "pinyin": "GaoTie GongYuan",
+        "poiid": "BV09188380",
+        "official_zids": [
+          "10855",
+          "11235"
+        ],
+        "amap_name": "高铁公园",
+        "amap_en_full": "GAOTIE GONGYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-getianyuan",
+      "name": "葛天源站",
+      "names": {
+        "zh": "葛天源站",
+        "en": "Getianyuan"
+      },
+      "location": {
+        "lon": 113.821191,
+        "lat": 34.198711,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2091,
+        "y": 2421,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11759"
+        }
+      ],
+      "extras": {
+        "pinyin": "GeTianYuan",
+        "poiid": "BV11589102",
+        "official_zids": [
+          "11759"
+        ],
+        "amap_name": "葛天源",
+        "amap_en_full": "GETIANYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-guanhutun",
+      "name": "关虎屯站",
+      "names": {
+        "zh": "关虎屯站",
+        "en": "Guanhutun"
+      },
+      "location": {
+        "lon": 113.681686,
+        "lat": 34.789139,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1230,
+        "y": 540,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10226"
+        }
+      ],
+      "extras": {
+        "pinyin": "Guan HuTun",
+        "poiid": "BV10602507",
+        "official_zids": [
+          "10226"
+        ],
+        "amap_name": "关虎屯",
+        "amap_en_full": "GUANHUTUN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-guoshusuo",
+      "name": "果树所站",
+      "names": {
+        "zh": "果树所站",
+        "en": "Guoshusuo"
+      },
+      "location": {
+        "lon": 113.722014,
+        "lat": 34.711901,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1635,
+        "y": 982,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10444"
+        }
+      ],
+      "extras": {
+        "pinyin": "GuoShuSuo",
+        "poiid": "BV10859914",
+        "official_zids": [
+          "10444"
+        ],
+        "amap_name": "果树所",
+        "amap_en_full": "GUOSHUSUO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-haitansi",
+      "name": "海滩寺站",
+      "names": {
+        "zh": "海滩寺站",
+        "en": "Haitansi"
+      },
+      "location": {
+        "lon": 113.650702,
+        "lat": 34.774286,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 906,
+        "y": 599,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10326"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10503"
+        }
+      ],
+      "extras": {
+        "pinyin": "HaiTanSi",
+        "poiid": "BV10705654",
+        "official_zids": [
+          "10326",
+          "10503"
+        ],
+        "amap_name": "海滩寺",
+        "amap_en_full": "HAITANSI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-hanghaiguangchang",
+      "name": "航海广场站",
+      "names": {
+        "zh": "航海广场站",
+        "en": "Hanghaiguangchang"
+      },
+      "location": {
+        "lon": 113.706164,
+        "lat": 34.720913,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1483,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10521"
+        }
+      ],
+      "extras": {
+        "pinyin": "HangHai GuangChang",
+        "poiid": "BV10705667",
+        "official_zids": [
+          "10521"
+        ],
+        "amap_name": "航海广场",
+        "amap_en_full": "HANGHAIGUANGCHANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-henan-jianyuan",
+      "name": "河南建院站",
+      "names": {
+        "zh": "河南建院站",
+        "en": "Henan Jianyuan"
+      },
+      "location": {
+        "lon": 113.517787,
+        "lat": 34.714365,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 403,
+        "y": 912,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10644"
+        }
+      ],
+      "extras": {
+        "pinyin": "HeNan JianYuan",
+        "poiid": "BV10994068",
+        "official_zids": [
+          "10644"
+        ],
+        "amap_name": "河南建院",
+        "amap_en_full": "HENAN JIANYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-henan-orthopaedics-hospital",
+      "name": "省骨科医院站",
+      "names": {
+        "zh": "省骨科医院站",
+        "en": "Henan Orthopaedics Hospital"
+      },
+      "location": {
+        "lon": 113.773861,
+        "lat": 34.745838,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1860,
+        "y": 772,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10339"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10515"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShengGuKe YiYuan",
+        "poiid": "BV11194039",
+        "official_zids": [
+          "10339",
+          "10515"
+        ],
+        "amap_name": "省骨科医院",
+        "amap_en_full": "HENAN ORTHOPAEDICS HOSPITAL",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-henan-peoples-hospital",
+      "name": "省人民医院站",
+      "names": {
+        "zh": "省人民医院站",
+        "en": "Henan People's Hospital"
+      },
+      "location": {
+        "lon": 113.693327,
+        "lat": 34.774638,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1314,
+        "y": 599,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10506"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShengRenMin YiYuan",
+        "poiid": "BV10705645",
+        "official_zids": [
+          "10506"
+        ],
+        "amap_name": "省人民医院",
+        "amap_en_full": "HENAN PEOPLE'S HOSPITAL",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-henan-sports-center",
+      "name": "省体育中心站",
+      "names": {
+        "zh": "省体育中心站",
+        "en": "Henan Sports Center"
+      },
+      "location": {
+        "lon": 113.626003,
+        "lat": 34.831921,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 908,
+        "y": 170,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10321"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10422"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShengTiYu ZhongXin",
+        "poiid": "BV11283816",
+        "official_zids": [
+          "10321",
+          "10422"
+        ],
+        "amap_name": "省体育中心",
+        "amap_en_full": "HENAN SPORTS CENTER",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-henan-university-of-technology",
+      "name": "河南工业大学站",
+      "names": {
+        "zh": "河南工业大学站",
+        "en": "Henan University Of Technology"
+      },
+      "location": {
+        "lon": 113.542174,
+        "lat": 34.826597,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 509,
+        "y": 325,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10114"
+        }
+      ],
+      "extras": {
+        "pinyin": "HeNan GongYe DaXue",
+        "poiid": "BV10840260",
+        "official_zids": [
+          "10114"
+        ],
+        "amap_name": "河南工业大学",
+        "amap_en_full": "HENAN UNIVERSITY OF TECHNOLOGY",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-houhe-lu",
+      "name": "后河芦站",
+      "names": {
+        "zh": "后河芦站",
+        "en": "Houhe Lu"
+      },
+      "location": {
+        "lon": 113.618989,
+        "lat": 34.720587,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 916,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10528"
+        }
+      ],
+      "extras": {
+        "pinyin": "HouHe Lu Shi DiBa RenMin YiYuan",
+        "poiid": "BV09380245",
+        "official_zids": [
+          "10528"
+        ],
+        "co_name": "市第八人民医院",
+        "amap_name": "后河芦·市第八人民医院",
+        "amap_en_full": "HOUHELU / SHIDIBARENMINYIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-hua-nancheng-east",
+      "name": "华南城东站",
+      "names": {
+        "zh": "华南城东站",
+        "en": "Hua’nancheng East"
+      },
+      "location": {
+        "lon": 113.774232,
+        "lat": 34.594007,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1739,
+        "y": 1528,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10943"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuaNan ChengDong",
+        "poiid": "BV10729464",
+        "official_zids": [
+          "10943"
+        ],
+        "amap_name": "华南城东",
+        "amap_en_full": "HUA’NANCHENG EAST",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huanancheng",
+      "name": "华南城站",
+      "names": {
+        "zh": "华南城站",
+        "en": "Hua'nancheng"
+      },
+      "location": {
+        "lon": 113.748901,
+        "lat": 34.594077,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1584,
+        "y": 1529,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10942"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuaNanCheng",
+        "poiid": "BV10729467",
+        "official_zids": [
+          "10942"
+        ],
+        "amap_name": "华南城",
+        "amap_en_full": "HUA'NANCHENG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huanancheng-west",
+      "name": "华南城西站",
+      "names": {
+        "zh": "华南城西站",
+        "en": "Hua'nancheng West"
+      },
+      "location": {
+        "lon": 113.725712,
+        "lat": 34.593943,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1423,
+        "y": 1530,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10941"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuaNan ChengXi",
+        "poiid": "BV10729462",
+        "official_zids": [
+          "10941"
+        ],
+        "amap_name": "华南城西",
+        "amap_en_full": "HUA'NANCHENG WEST",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huanghe-yingbinguan",
+      "name": "黄河迎宾馆站",
+      "names": {
+        "zh": "黄河迎宾馆站",
+        "en": "Huanghe Yingbinguan"
+      },
+      "location": {
+        "lon": 113.644499,
+        "lat": 34.868206,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1068,
+        "y": 82,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10218"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10725"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuangHe YingBinGuan",
+        "poiid": "BV10861902",
+        "official_zids": [
+          "10218",
+          "10725"
+        ],
+        "amap_name": "黄河迎宾馆",
+        "amap_en_full": "HUANGHE YINGBINGUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huanghelu",
+      "name": "黄河路站",
+      "names": {
+        "zh": "黄河路站",
+        "en": "Huanghelu"
+      },
+      "location": {
+        "lon": 113.682045,
+        "lat": 34.77391,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1232,
+        "y": 599,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10227"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10505"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuangHe Lu",
+        "poiid": "BV10091175",
+        "official_zids": [
+          "10227",
+          "10505"
+        ],
+        "amap_name": "黄河路",
+        "amap_en_full": "HUANGHELU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huanghenan-lu",
+      "name": "黄河南路站",
+      "names": {
+        "zh": "黄河南路站",
+        "en": "Huanghenan Lu"
+      },
+      "location": {
+        "lon": 113.744513,
+        "lat": 34.76286,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1724,
+        "y": 661,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10135"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11229"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuangHe NanLu",
+        "poiid": "BV10092115",
+        "official_zids": [
+          "10135",
+          "11229"
+        ],
+        "amap_name": "黄河南路",
+        "amap_en_full": "HUANGHENAN LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huazhai",
+      "name": "花寨站",
+      "names": {
+        "zh": "花寨站",
+        "en": "Huazhai"
+      },
+      "location": {
+        "lon": 113.682238,
+        "lat": 34.705974,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1238,
+        "y": 970,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10233"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuaZhai",
+        "poiid": "BV10602514",
+        "official_zids": [
+          "10233"
+        ],
+        "amap_name": "花寨",
+        "amap_en_full": "HUAZHAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huijiqu-zhengfu",
+      "name": "惠济区政府站",
+      "names": {
+        "zh": "惠济区政府站",
+        "en": "Huijiqu Zhengfu"
+      },
+      "location": {
+        "lon": 113.611847,
+        "lat": 34.866048,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 825,
+        "y": 80,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10216"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuiJiQu ZhengFu ShiSanYuan HuiJi YuanQu",
+        "poiid": "BV09379211",
+        "official_zids": [
+          "10216"
+        ],
+        "co_name": "市三院惠济院区",
+        "amap_name": "惠济区政府·市三院惠济院区",
+        "amap_en_full": "HUIJI QU ZHENGFU / SHISANYUANHUIJIYUANQU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huochetou-tiyuchang",
+      "name": "火车头体育场站",
+      "names": {
+        "zh": "火车头体育场站",
+        "en": "Huochetou Tiyuchang"
+      },
+      "location": {
+        "lon": 113.655084,
+        "lat": 34.729022,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1059,
+        "y": 858,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10633"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuoCheTou TiYuChang",
+        "poiid": "BV09304573",
+        "official_zids": [
+          "10633"
+        ],
+        "amap_name": "火车头体育场",
+        "amap_en_full": "HUOCHETOU TIYUCHANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-huozhan-jie",
+      "name": "货站街站",
+      "names": {
+        "zh": "货站街站",
+        "en": "Huozhan Jie"
+      },
+      "location": {
+        "lon": 113.726392,
+        "lat": 34.741406,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1634,
+        "y": 828,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10442"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuoZhan Jie",
+        "poiid": "BV10859911",
+        "official_zids": [
+          "10442"
+        ],
+        "amap_name": "货站街",
+        "amap_en_full": "HUOZHAN JIE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jiahe",
+      "name": "贾河站",
+      "names": {
+        "zh": "贾河站",
+        "en": "Jiahe"
+      },
+      "location": {
+        "lon": 113.593266,
+        "lat": 34.867408,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 709,
+        "y": 80,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10215"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiaHe",
+        "poiid": "BV11300681",
+        "official_zids": [
+          "10215"
+        ],
+        "amap_name": "贾河",
+        "amap_en_full": "JIAHE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jiayu",
+      "name": "贾峪站",
+      "names": {
+        "zh": "贾峪站",
+        "en": "Jiayu"
+      },
+      "location": {
+        "lon": 113.45395,
+        "lat": 34.673336,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 228,
+        "y": 1059,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10649"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiaYu",
+        "poiid": "BV10996279",
+        "official_zids": [
+          "10649"
+        ],
+        "amap_name": "贾峪",
+        "amap_en_full": "JIAYU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jichangdong",
+      "name": "机场东站",
+      "names": {
+        "zh": "机场东站",
+        "en": "Jichangdong"
+      },
+      "location": {
+        "lon": 113.900415,
+        "lat": 34.509952,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2211,
+        "y": 1767,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10952"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiChang Dong",
+        "poiid": "BV11602280",
+        "official_zids": [
+          "10952"
+        ],
+        "amap_name": "机场东",
+        "amap_en_full": "JICHANGDONG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jindai",
+      "name": "金岱站",
+      "names": {
+        "zh": "金岱站",
+        "en": "Jindai"
+      },
+      "location": {
+        "lon": 113.726508,
+        "lat": 34.700763,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1635,
+        "y": 1056,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10445"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinDai",
+        "poiid": "BV10859924",
+        "official_zids": [
+          "10445"
+        ],
+        "amap_name": "金岱",
+        "amap_en_full": "JINDAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jindalu",
+      "name": "金达路站",
+      "names": {
+        "zh": "金达路站",
+        "en": "Jindalu"
+      },
+      "location": {
+        "lon": 113.678767,
+        "lat": 34.862482,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1208,
+        "y": 100,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10220"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinDa Lu",
+        "poiid": "BV11300682",
+        "official_zids": [
+          "10220"
+        ],
+        "amap_name": "金达路",
+        "amap_en_full": "JINDALU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jingbeierlu",
+      "name": "经北二路站",
+      "names": {
+        "zh": "经北二路站",
+        "en": "Jingbeierlu"
+      },
+      "location": {
+        "lon": 113.77392,
+        "lat": 34.726893,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1860,
+        "y": 860,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10516"
+        }
+      ],
+      "extras": {
+        "pinyin": "JingBei ErLu",
+        "poiid": "BV10705663",
+        "official_zids": [
+          "10516"
+        ],
+        "amap_name": "经北二路",
+        "amap_en_full": "JINGBEIERLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jingbeiwu-lu",
+      "name": "经北五路站",
+      "names": {
+        "zh": "经北五路站",
+        "en": "Jingbeiwu Lu"
+      },
+      "location": {
+        "lon": 113.746954,
+        "lat": 34.730493,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1723,
+        "y": 849,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11225"
+        }
+      ],
+      "extras": {
+        "pinyin": "JingBei WuLu",
+        "poiid": "BV11420867",
+        "official_zids": [
+          "11225"
+        ],
+        "amap_name": "经北五路",
+        "amap_en_full": "JINGBEIWU LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jingguang-nanlu",
+      "name": "京广南路站",
+      "names": {
+        "zh": "京广南路站",
+        "en": "Jingguang Nanlu"
+      },
+      "location": {
+        "lon": 113.656817,
+        "lat": 34.720213,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1107,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10525"
+        }
+      ],
+      "extras": {
+        "pinyin": "JingGuang NanLu Shi DiLiu RenMin YiYuan",
+        "poiid": "BV09380219",
+        "official_zids": [
+          "10525"
+        ],
+        "co_name": "市第六人民医院",
+        "amap_name": "京广南路·市第六人民医院",
+        "amap_en_full": "JINGGUANGNANLU / SHIDILIURENMINYIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jinghu",
+      "name": "荆胡站",
+      "names": {
+        "zh": "荆胡站",
+        "en": "Jinghu"
+      },
+      "location": {
+        "lon": 113.644091,
+        "lat": 34.680467,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1016,
+        "y": 1028,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10757"
+        }
+      ],
+      "extras": {
+        "pinyin": "JingHu",
+        "poiid": "BV10897822",
+        "official_zids": [
+          "10757"
+        ],
+        "amap_name": "荆胡",
+        "amap_en_full": "JINGHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jingkaizhongxinguangchang",
+      "name": "经开中心广场站",
+      "names": {
+        "zh": "经开中心广场站",
+        "en": "Jingkaizhongxinguangchang"
+      },
+      "location": {
+        "lon": 113.764169,
+        "lat": 34.720913,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1816,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10517"
+        }
+      ],
+      "extras": {
+        "pinyin": "JingKai ZhongXin GuangChang",
+        "poiid": "BV10705652",
+        "official_zids": [
+          "10517"
+        ],
+        "amap_name": "经开中心广场",
+        "amap_en_full": "JINGKAIZHONGXINGUANGCHANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jinhuiqiao",
+      "name": "金汇桥站",
+      "names": {
+        "zh": "金汇桥站",
+        "en": "Jinhuiqiao"
+      },
+      "location": {
+        "lon": 113.71622,
+        "lat": 34.786134,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1413,
+        "y": 543,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10625"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinHui Qiao",
+        "poiid": "BV11614604",
+        "official_zids": [
+          "10625"
+        ],
+        "amap_name": "金汇桥",
+        "amap_en_full": "JINHUIQIAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jinrongdao-bei",
+      "name": "金融岛北站",
+      "names": {
+        "zh": "金融岛北站",
+        "en": "Jinrongdao Bei"
+      },
+      "location": {
+        "lon": 113.7343,
+        "lat": 34.816268,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1627,
+        "y": 349,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10433"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinRong DaoBei",
+        "poiid": "BV10859917",
+        "official_zids": [
+          "10433"
+        ],
+        "amap_name": "金融岛北",
+        "amap_en_full": "JINRONGDAO BEI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jinrongdao-nan",
+      "name": "金融岛南站",
+      "names": {
+        "zh": "金融岛南站",
+        "en": "Jinrongdao Nan"
+      },
+      "location": {
+        "lon": 113.736703,
+        "lat": 34.809189,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1629,
+        "y": 393,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10434"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinRong DaoNan",
+        "poiid": "BV10859920",
+        "official_zids": [
+          "10434"
+        ],
+        "amap_name": "金融岛南",
+        "amap_en_full": "JINRONGDAO NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jinrongdao-xi",
+      "name": "金融岛西站",
+      "names": {
+        "zh": "金融岛西站",
+        "en": "Jinrongdao Xi"
+      },
+      "location": {
+        "lon": 113.725809,
+        "lat": 34.81204,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1414,
+        "y": 403,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10623"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinRong DaoXi",
+        "poiid": "BV11502916",
+        "official_zids": [
+          "10623"
+        ],
+        "amap_name": "金融岛西",
+        "amap_en_full": "JINRONGDAO XI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jinshuidonglu",
+      "name": "金水东路站",
+      "names": {
+        "zh": "金水东路站",
+        "en": "Jinshuidonglu"
+      },
+      "location": {
+        "lon": 113.770879,
+        "lat": 34.769258,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1832,
+        "y": 629,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10512"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinShui DongLu",
+        "poiid": "BV10705647",
+        "official_zids": [
+          "10512"
+        ],
+        "amap_name": "金水东路",
+        "amap_en_full": "JINSHUIDONGLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jinwa",
+      "name": "金洼站",
+      "names": {
+        "zh": "金洼站",
+        "en": "Jinwa"
+      },
+      "location": {
+        "lon": 113.66257,
+        "lat": 34.866934,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1154,
+        "y": 82,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10219"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinWa",
+        "poiid": "BV11300680",
+        "official_zids": [
+          "10219"
+        ],
+        "amap_name": "金洼",
+        "amap_en_full": "JINWA",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-jinzhen-lu",
+      "name": "金桢路站",
+      "names": {
+        "zh": "金桢路站",
+        "en": "Jinzhen Lu"
+      },
+      "location": {
+        "lon": 113.512704,
+        "lat": 34.734679,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 404,
+        "y": 883,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10643"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinZhen Lu",
+        "poiid": "BV10994069",
+        "official_zids": [
+          "10643"
+        ],
+        "amap_name": "金桢路",
+        "amap_en_full": "JINZHEN LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-kangningjie",
+      "name": "康宁街站",
+      "names": {
+        "zh": "康宁街站",
+        "en": "Kangningjie"
+      },
+      "location": {
+        "lon": 113.773847,
+        "lat": 34.750463,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1861,
+        "y": 712,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10514"
+        }
+      ],
+      "extras": {
+        "pinyin": "KangNing Jie",
+        "poiid": "BV10705670",
+        "official_zids": [
+          "10514"
+        ],
+        "amap_name": "康宁街",
+        "amap_en_full": "KANGNINGJIE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-kangpinghu",
+      "name": "康平湖站",
+      "names": {
+        "zh": "康平湖站",
+        "en": "Kangpinghu"
+      },
+      "location": {
+        "lon": 113.853136,
+        "lat": 34.584793,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2038,
+        "y": 1526,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10946"
+        }
+      ],
+      "extras": {
+        "pinyin": "KangPingHu",
+        "poiid": "BV10729461",
+        "official_zids": [
+          "10946"
+        ],
+        "amap_name": "康平湖",
+        "amap_en_full": "KANGPINGHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-langzhuang",
+      "name": "郎庄站",
+      "names": {
+        "zh": "郎庄站",
+        "en": "Langzhuang"
+      },
+      "location": {
+        "lon": 113.738425,
+        "lat": 34.685105,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1701,
+        "y": 1198,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10447"
+        }
+      ],
+      "extras": {
+        "pinyin": "LangZhuang",
+        "poiid": "BV10859912",
+        "official_zids": [
+          "10447"
+        ],
+        "amap_name": "郎庄",
+        "amap_en_full": "LANGZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lanhe-park",
+      "name": "兰河公园站",
+      "names": {
+        "zh": "兰河公园站",
+        "en": "Lanhe Park"
+      },
+      "location": {
+        "lon": 113.859697,
+        "lat": 34.57586,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2127,
+        "y": 1590,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10947"
+        }
+      ],
+      "extras": {
+        "pinyin": "LanHe GongYuan",
+        "poiid": "BV10729463",
+        "official_zids": [
+          "10947"
+        ],
+        "amap_name": "兰河公园",
+        "amap_en_full": "LANHE PARK",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lanzhai",
+      "name": "兰寨站",
+      "names": {
+        "zh": "兰寨站",
+        "en": "Lanzhai"
+      },
+      "location": {
+        "lon": 113.541,
+        "lat": 34.783442,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 511,
+        "y": 620,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10118"
+        }
+      ],
+      "extras": {
+        "pinyin": "LanZhai",
+        "poiid": "BV10840259",
+        "official_zids": [
+          "10118"
+        ],
+        "amap_name": "兰寨",
+        "amap_en_full": "LANZHAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-laoyachen",
+      "name": "老鸦陈站",
+      "names": {
+        "zh": "老鸦陈站",
+        "en": "Laoyachen"
+      },
+      "location": {
+        "lon": 113.617103,
+        "lat": 34.832763,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 766,
+        "y": 169,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10421"
+        }
+      ],
+      "extras": {
+        "pinyin": "LaoYa Chen",
+        "poiid": "BV10859918",
+        "official_zids": [
+          "10421"
+        ],
+        "amap_name": "老鸦陈",
+        "amap_en_full": "LAOYACHEN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lianghu",
+      "name": "梁湖站",
+      "names": {
+        "zh": "梁湖站",
+        "en": "Lianghu"
+      },
+      "location": {
+        "lon": 113.743757,
+        "lat": 34.702851,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1725,
+        "y": 1016,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11221"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiangHu",
+        "poiid": "BV09191205",
+        "official_zids": [
+          "11221"
+        ],
+        "amap_name": "梁湖",
+        "amap_en_full": "LIANGHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lianhu",
+      "name": "莲湖站",
+      "names": {
+        "zh": "莲湖站",
+        "en": "Lianhu"
+      },
+      "location": {
+        "lon": 113.541188,
+        "lat": 34.72299,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 512,
+        "y": 890,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11436"
+        }
+      ],
+      "extras": {
+        "pinyin": "LianHu",
+        "poiid": "BV11064686",
+        "official_zids": [
+          "11436"
+        ],
+        "amap_name": "莲湖",
+        "amap_en_full": "LIANHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lihuqiao",
+      "name": "李湖桥站",
+      "names": {
+        "zh": "李湖桥站",
+        "en": "Lihuqiao"
+      },
+      "location": {
+        "lon": 113.882577,
+        "lat": 34.758596,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2165,
+        "y": 744,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10869"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiHu Qiao",
+        "poiid": "BV11340720",
+        "official_zids": [
+          "10869"
+        ],
+        "amap_name": "李湖桥",
+        "amap_en_full": "LIHUQIAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lijiang-lu",
+      "name": "漓江路站",
+      "names": {
+        "zh": "漓江路站",
+        "en": "Lijiang Lu"
+      },
+      "location": {
+        "lon": 113.644029,
+        "lat": 34.694739,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1017,
+        "y": 998,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10755"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiJiang Lu",
+        "poiid": "BV10897824",
+        "official_zids": [
+          "10755"
+        ],
+        "amap_name": "漓江路",
+        "amap_en_full": "LIJIANG LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lijianggou",
+      "name": "李江沟站",
+      "names": {
+        "zh": "李江沟站",
+        "en": "Lijianggou"
+      },
+      "location": {
+        "lon": 113.591488,
+        "lat": 34.72887,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 716,
+        "y": 859,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10638"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiJiangGou",
+        "poiid": "BV11614603",
+        "official_zids": [
+          "10638"
+        ],
+        "amap_name": "李江沟",
+        "amap_en_full": "LIJIANGGOU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lishangyin-gongyuan",
+      "name": "李商隐公园站",
+      "names": {
+        "zh": "李商隐公园站",
+        "en": "Lishangyin Gongyuan"
+      },
+      "location": {
+        "lon": 113.447086,
+        "lat": 34.749666,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 252,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11042"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiShangYin GongYuan",
+        "poiid": "BV10994065",
+        "official_zids": [
+          "11042"
+        ],
+        "amap_name": "李商隐公园",
+        "amap_en_full": "LISHANGYIN GONGYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-liuhu",
+      "name": "柳湖站",
+      "names": {
+        "zh": "柳湖站",
+        "en": "Liuhu"
+      },
+      "location": {
+        "lon": 113.506724,
+        "lat": 34.747979,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 419,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11044"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiuHu",
+        "poiid": "BV10994057",
+        "official_zids": [
+          "11044"
+        ],
+        "amap_name": "柳湖",
+        "amap_en_full": "LIUHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-liulin",
+      "name": "柳林站",
+      "names": {
+        "zh": "柳林站",
+        "en": "Liulin"
+      },
+      "location": {
+        "lon": 113.681284,
+        "lat": 34.828431,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1225,
+        "y": 277,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10222"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiuLin",
+        "poiid": "BV10602510",
+        "official_zids": [
+          "10222"
+        ],
+        "amap_name": "柳林",
+        "amap_en_full": "LIULIN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-liulisi",
+      "name": "琉璃寺站",
+      "names": {
+        "zh": "琉璃寺站",
+        "en": "Liulisi"
+      },
+      "location": {
+        "lon": 113.65365,
+        "lat": 34.842272,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1066,
+        "y": 183,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10729"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiuLiSi",
+        "poiid": "BV09257967",
+        "official_zids": [
+          "10729"
+        ],
+        "amap_name": "琉璃寺",
+        "amap_en_full": "LIULISI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-liuzhuang",
+      "name": "刘庄站",
+      "names": {
+        "zh": "刘庄站",
+        "en": "Liuzhuang"
+      },
+      "location": {
+        "lon": 113.678979,
+        "lat": 34.843779,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1223,
+        "y": 216,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10221"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiuZhuang",
+        "poiid": "BV10602513",
+        "official_zids": [
+          "10221"
+        ],
+        "amap_name": "刘庄",
+        "amap_en_full": "LIUZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longhaidonglu",
+      "name": "陇海东路站",
+      "names": {
+        "zh": "陇海东路站",
+        "en": "Longhaidonglu"
+      },
+      "location": {
+        "lon": 113.682045,
+        "lat": 34.738224,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1236,
+        "y": 830,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10230"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongHai DongLu",
+        "poiid": "BV10094113",
+        "official_zids": [
+          "10230"
+        ],
+        "amap_name": "陇海东路",
+        "amap_en_full": "LONGHAIDONGLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longhaixilu",
+      "name": "陇海西路站",
+      "names": {
+        "zh": "陇海西路站",
+        "en": "Longhaixilu"
+      },
+      "location": {
+        "lon": 113.613569,
+        "lat": 34.736281,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 839,
+        "y": 823,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10530"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongHai XiLu",
+        "poiid": "BV10705655",
+        "official_zids": [
+          "10530"
+        ],
+        "amap_name": "陇海西路",
+        "amap_en_full": "LONGHAIXILU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longhu-bei",
+      "name": "龙湖北站",
+      "names": {
+        "zh": "龙湖北站",
+        "en": "Longhu Bei"
+      },
+      "location": {
+        "lon": 113.734236,
+        "lat": 34.8247,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1568,
+        "y": 344,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10432"
+        }
+      ],
+      "extras": {
+        "pinyin": "Long HuBei",
+        "poiid": "BV10859930",
+        "official_zids": [
+          "10432"
+        ],
+        "amap_name": "龙湖北",
+        "amap_en_full": "LONGHU BEI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longhu-nan",
+      "name": "龙湖南站",
+      "names": {
+        "zh": "龙湖南站",
+        "en": "Longhu Nan"
+      },
+      "location": {
+        "lon": 113.738123,
+        "lat": 34.802924,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1629,
+        "y": 441,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10435"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongHu Nan",
+        "poiid": "BV10859931",
+        "official_zids": [
+          "10435"
+        ],
+        "amap_name": "龙湖南",
+        "amap_en_full": "LONGHU NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longhu-zhonghuan-bei",
+      "name": "龙湖中环北站",
+      "names": {
+        "zh": "龙湖中环北站",
+        "en": "Longhu Zhonghuan Bei"
+      },
+      "location": {
+        "lon": 113.726466,
+        "lat": 34.829436,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1512,
+        "y": 344,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10431"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongHu Zhong HuanBei",
+        "poiid": "BV10859916",
+        "official_zids": [
+          "10431"
+        ],
+        "amap_name": "龙湖中环北",
+        "amap_en_full": "LONGHU ZHONGHUAN BEI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longhu-zhonghuan-nan",
+      "name": "龙湖中环南站",
+      "names": {
+        "zh": "龙湖中环南站",
+        "en": "Longhu Zhonghuan Nan"
+      },
+      "location": {
+        "lon": 113.738685,
+        "lat": 34.792133,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1631,
+        "y": 489,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10436"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10851"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongHu Zhong HuanNan",
+        "poiid": "BV10859928",
+        "official_zids": [
+          "10436",
+          "10851"
+        ],
+        "amap_name": "龙湖中环南",
+        "amap_en_full": "LONGHU ZHONGHUAN NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longwang",
+      "name": "龙王站",
+      "names": {
+        "zh": "龙王站",
+        "en": "Longwang"
+      },
+      "location": {
+        "lon": 113.839596,
+        "lat": 34.442267,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2084,
+        "y": 1959,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11741"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongWang",
+        "poiid": "BV11580203",
+        "official_zids": [
+          "11741"
+        ],
+        "amap_name": "龙王",
+        "amap_en_full": "LONGWANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longwang-nan",
+      "name": "龙王南站",
+      "names": {
+        "zh": "龙王南站",
+        "en": "Longwang Nan"
+      },
+      "location": {
+        "lon": 113.847803,
+        "lat": 34.423224,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2085,
+        "y": 1993,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11743"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongWang Nan",
+        "poiid": "BV11580204",
+        "official_zids": [
+          "11743"
+        ],
+        "amap_name": "龙王南",
+        "amap_en_full": "LONGWANG NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longwangmiao",
+      "name": "龙王庙站",
+      "names": {
+        "zh": "龙王庙站",
+        "en": "Longwangmiao"
+      },
+      "location": {
+        "lon": 113.902502,
+        "lat": 34.758213,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2218,
+        "y": 744,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10871"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongWangMiao",
+        "poiid": "BV11340726",
+        "official_zids": [
+          "10871"
+        ],
+        "amap_name": "龙王庙",
+        "amap_en_full": "LONGWANGMIAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longxiu-gongyuan",
+      "name": "陇秀公园站",
+      "names": {
+        "zh": "陇秀公园站",
+        "en": "Longxiu Gongyuan"
+      },
+      "location": {
+        "lon": 113.675347,
+        "lat": 34.729288,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1138,
+        "y": 857,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10632"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongXiu GongYuan",
+        "poiid": "BV11614606",
+        "official_zids": [
+          "10632"
+        ],
+        "amap_name": "陇秀公园",
+        "amap_en_full": "LONGXIU GONGYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longzihu",
+      "name": "龙子湖站",
+      "names": {
+        "zh": "龙子湖站",
+        "en": "Longzihu"
+      },
+      "location": {
+        "lon": 113.810504,
+        "lat": 34.792766,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1982,
+        "y": 529,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10141"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11239"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongZiHu",
+        "poiid": "BV10739833",
+        "official_zids": [
+          "10141",
+          "11239"
+        ],
+        "amap_name": "龙子湖",
+        "amap_en_full": "LONGZIHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longzihu-dong",
+      "name": "龙子湖东站",
+      "names": {
+        "zh": "龙子湖东站",
+        "en": "Longzihu Dong"
+      },
+      "location": {
+        "lon": 113.826607,
+        "lat": 34.794619,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2058,
+        "y": 529,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11241"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongZi HuDong",
+        "poiid": "BV11420868",
+        "official_zids": [
+          "11241"
+        ],
+        "amap_name": "龙子湖东",
+        "amap_en_full": "LONGZIHU DONG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-longzihu-xi",
+      "name": "龙子湖西站",
+      "names": {
+        "zh": "龙子湖西站",
+        "en": "Longzihu Xi"
+      },
+      "location": {
+        "lon": 113.79395,
+        "lat": 34.793143,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1932,
+        "y": 528,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11237"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongZiHu Xi",
+        "poiid": "BV11420869",
+        "official_zids": [
+          "11237"
+        ],
+        "amap_name": "龙子湖西",
+        "amap_en_full": "LONGZIHU XI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-luboyuan",
+      "name": "绿博园站",
+      "names": {
+        "zh": "绿博园站",
+        "en": "Luboyuan"
+      },
+      "location": {
+        "lon": 113.929507,
+        "lat": 34.760783,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2259,
+        "y": 745,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10873"
+        }
+      ],
+      "extras": {
+        "pinyin": "LvBoYuan",
+        "poiid": "BV11340733",
+        "official_zids": [
+          "10873"
+        ],
+        "amap_name": "绿博园",
+        "amap_en_full": "LUBOYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lucheng-guangchang",
+      "name": "绿城广场站",
+      "names": {
+        "zh": "绿城广场站",
+        "en": "Lucheng Guangchang"
+      },
+      "location": {
+        "lon": 113.633548,
+        "lat": 34.747475,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 961,
+        "y": 778,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10126"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11050"
+        }
+      ],
+      "extras": {
+        "pinyin": "LvCheng GuangChang",
+        "poiid": "BV10090869",
+        "official_zids": [
+          "10126",
+          "11050"
+        ],
+        "amap_name": "绿城广场",
+        "amap_en_full": "LUCHENG GUANGCHANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-lumiao",
+      "name": "鲁庙站",
+      "names": {
+        "zh": "鲁庙站",
+        "en": "Lumiao"
+      },
+      "location": {
+        "lon": 113.947795,
+        "lat": 34.762895,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2298,
+        "y": 745,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10875"
+        }
+      ],
+      "extras": {
+        "pinyin": "LuMiao",
+        "poiid": "BV09188379",
+        "official_zids": [
+          "10875"
+        ],
+        "amap_name": "鲁庙",
+        "amap_en_full": "LUMIAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-luminghu",
+      "name": "鹿鸣湖站",
+      "names": {
+        "zh": "鹿鸣湖站",
+        "en": "Luminghu"
+      },
+      "location": {
+        "lon": 113.877897,
+        "lat": 34.066159,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2098,
+        "y": 2819,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11771"
+        }
+      ],
+      "extras": {
+        "pinyin": "LuMingHu",
+        "poiid": "BV11589104",
+        "official_zids": [
+          "11771"
+        ],
+        "amap_name": "鹿鸣湖",
+        "amap_en_full": "LUMINGHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-maozhuang",
+      "name": "毛庄站",
+      "names": {
+        "zh": "毛庄站",
+        "en": "Maozhuang"
+      },
+      "location": {
+        "lon": 113.626247,
+        "lat": 34.866549,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 940,
+        "y": 81,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10217"
+        }
+      ],
+      "extras": {
+        "pinyin": "MaoZhuang",
+        "poiid": "BV11300679",
+        "official_zids": [
+          "10217"
+        ],
+        "amap_name": "毛庄",
+        "amap_en_full": "MAOZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-mazhai",
+      "name": "马寨站",
+      "names": {
+        "zh": "马寨站",
+        "en": "Mazhai"
+      },
+      "location": {
+        "lon": 113.516575,
+        "lat": 34.703407,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 403,
+        "y": 968,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10645"
+        }
+      ],
+      "extras": {
+        "pinyin": "MaZhai",
+        "poiid": "BV10994075",
+        "official_zids": [
+          "10645"
+        ],
+        "amap_name": "马寨",
+        "amap_en_full": "MAZHAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-mengzhuang",
+      "name": "孟庄站",
+      "names": {
+        "zh": "孟庄站",
+        "en": "Mengzhuang"
+      },
+      "location": {
+        "lon": 113.818308,
+        "lat": 34.58576,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1852,
+        "y": 1528,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10944"
+        }
+      ],
+      "extras": {
+        "pinyin": "MengZhuang",
+        "poiid": "BV10729472",
+        "official_zids": [
+          "10944"
+        ],
+        "amap_name": "孟庄",
+        "amap_en_full": "MENGZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-miaowang",
+      "name": "庙王站",
+      "names": {
+        "zh": "庙王站",
+        "en": "Miaowang"
+      },
+      "location": {
+        "lon": 113.48211,
+        "lat": 34.749266,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 338,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11043"
+        }
+      ],
+      "extras": {
+        "pinyin": "MiaoWang",
+        "poiid": "BV10994062",
+        "official_zids": [
+          "11043"
+        ],
+        "amap_name": "庙王",
+        "amap_en_full": "MIAOWANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-minhanglu",
+      "name": "民航路站",
+      "names": {
+        "zh": "民航路站",
+        "en": "Minhanglu"
+      },
+      "location": {
+        "lon": 113.715814,
+        "lat": 34.763954,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1530,
+        "y": 661,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10133"
+        }
+      ],
+      "extras": {
+        "pinyin": "MinHang Lu",
+        "poiid": "BV10094021",
+        "official_zids": [
+          "10133"
+        ],
+        "amap_name": "民航路",
+        "amap_en_full": "MINHANGLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nangangliu",
+      "name": "南岗刘站",
+      "names": {
+        "zh": "南岗刘站",
+        "en": "Nangangliu"
+      },
+      "location": {
+        "lon": 113.644185,
+        "lat": 34.655671,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1015,
+        "y": 1106,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10761"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanGang Liu",
+        "poiid": "BV10897825",
+        "official_zids": [
+          "10761"
+        ],
+        "amap_name": "南岗刘",
+        "amap_en_full": "NANGANGLIU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nanhuan-gongyuan",
+      "name": "南环公园站",
+      "names": {
+        "zh": "南环公园站",
+        "en": "Nanhuan Gongyuan"
+      },
+      "location": {
+        "lon": 113.644049,
+        "lat": 34.670667,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1015,
+        "y": 1066,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10759"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanHuan GongYuan",
+        "poiid": "BV10897814",
+        "official_zids": [
+          "10759"
+        ],
+        "amap_name": "南环公园",
+        "amap_en_full": "NANHUAN GONGYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nanliu",
+      "name": "南流站",
+      "names": {
+        "zh": "南流站",
+        "en": "Nanliu"
+      },
+      "location": {
+        "lon": 113.578714,
+        "lat": 34.791695,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 775,
+        "y": 488,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10833"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanLiu",
+        "poiid": "BV09260141",
+        "official_zids": [
+          "10833"
+        ],
+        "amap_name": "南流",
+        "amap_en_full": "NANLIU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nansanhuan",
+      "name": "南三环站",
+      "names": {
+        "zh": "南三环站",
+        "en": "Nansanhuan"
+      },
+      "location": {
+        "lon": 113.682325,
+        "lat": 34.698847,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1238,
+        "y": 1019,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10234"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanSanHuan",
+        "poiid": "BV10524873",
+        "official_zids": [
+          "10234"
+        ],
+        "amap_name": "南三环",
+        "amap_en_full": "NANSANHUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nansihuan",
+      "name": "南四环站",
+      "names": {
+        "zh": "南四环站",
+        "en": "Nansihuan"
+      },
+      "location": {
+        "lon": 113.681891,
+        "lat": 34.6633,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1240,
+        "y": 1140,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10236"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10936"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanSiHuan (ZhengZhou HangKongGang Zhan)",
+        "poiid": "BV09416244",
+        "official_zids": [
+          "10236",
+          "10936"
+        ],
+        "co_name": "郑州航空港站",
+        "amap_name": "南四环(郑州航空港站)",
+        "amap_en_full": "S. 4th Ring Road (Zhengzhou Airport Railway Station)",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nanwulibao",
+      "name": "南五里堡站",
+      "names": {
+        "zh": "南五里堡站",
+        "en": "Nanwulibao"
+      },
+      "location": {
+        "lon": 113.68118,
+        "lat": 34.720319,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1237,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10232"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10523"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanWuLiPu",
+        "poiid": "BV10602512",
+        "official_zids": [
+          "10232",
+          "10523"
+        ],
+        "amap_name": "南五里堡",
+        "amap_en_full": "NANWULIBAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nanyang-xincun",
+      "name": "南阳新村站",
+      "names": {
+        "zh": "南阳新村站",
+        "en": "Nanyang Xincun"
+      },
+      "location": {
+        "lon": 113.642243,
+        "lat": 34.785762,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 905,
+        "y": 544,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10325"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanYang XinCun",
+        "poiid": "BV10859596",
+        "official_zids": [
+          "10325"
+        ],
+        "amap_name": "南阳新村",
+        "amap_en_full": "NANYANG XINCUN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-new-campus-of-henan-university",
+      "name": "河南大学新区站",
+      "names": {
+        "zh": "河南大学新区站",
+        "en": "New Campus Of Henan University"
+      },
+      "location": {
+        "lon": 113.812659,
+        "lat": 34.820707,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1982,
+        "y": 317,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10143"
+        }
+      ],
+      "extras": {
+        "pinyin": "HeNan DaXue XinQu",
+        "poiid": "BV10843510",
+        "official_zids": [
+          "10143"
+        ],
+        "amap_name": "河南大学新区",
+        "amap_en_full": "NEW CAMPUS OF HENAN UNIVERSITY",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nongda-lu",
+      "name": "农大路站",
+      "names": {
+        "zh": "农大路站",
+        "en": "Nongda Lu"
+      },
+      "location": {
+        "lon": 113.832221,
+        "lat": 34.141167,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2093,
+        "y": 2555,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11763"
+        }
+      ],
+      "extras": {
+        "pinyin": "NongDa Lu",
+        "poiid": "BV11589106",
+        "official_zids": [
+          "11763"
+        ],
+        "amap_name": "农大路",
+        "amap_en_full": "NONGDA LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nongye-daxue",
+      "name": "农业大学站",
+      "names": {
+        "zh": "农业大学站",
+        "en": "Nongye Daxue"
+      },
+      "location": {
+        "lon": 113.666582,
+        "lat": 34.787395,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1062,
+        "y": 537,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10737"
+        }
+      ],
+      "extras": {
+        "pinyin": "NongYe DaXue",
+        "poiid": "BV10897819",
+        "official_zids": [
+          "10737"
+        ],
+        "amap_name": "农业大学",
+        "amap_en_full": "NONGYE DAXUE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nongye-donglu",
+      "name": "农业东路站",
+      "names": {
+        "zh": "农业东路站",
+        "en": "Nongye Donglu"
+      },
+      "location": {
+        "lon": 113.734711,
+        "lat": 34.783858,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1631,
+        "y": 543,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10437"
+        }
+      ],
+      "extras": {
+        "pinyin": "NongYe DongLu",
+        "poiid": "BV10859932",
+        "official_zids": [
+          "10437"
+        ],
+        "amap_name": "农业东路",
+        "amap_en_full": "NONGYE DONGLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-nongyenanlu",
+      "name": "农业南路站",
+      "names": {
+        "zh": "农业南路站",
+        "en": "Nongyenanlu"
+      },
+      "location": {
+        "lon": 113.755327,
+        "lat": 34.765423,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1778,
+        "y": 661,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10136"
+        }
+      ],
+      "extras": {
+        "pinyin": "NongYe NanLu",
+        "poiid": "BV10092735",
+        "official_zids": [
+          "10136"
+        ],
+        "amap_name": "农业南路",
+        "amap_en_full": "NONGYENANLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-olympic-sports-center",
+      "name": "奥体中心站",
+      "names": {
+        "zh": "奥体中心站",
+        "en": "Olympic Sports Center"
+      },
+      "location": {
+        "lon": 113.540019,
+        "lat": 34.738664,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 512,
+        "y": 859,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10641"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11435"
+        }
+      ],
+      "extras": {
+        "pinyin": "AoTi ZhongXin",
+        "poiid": "BV10994073",
+        "official_zids": [
+          "10641",
+          "11435"
+        ],
+        "amap_name": "奥体中心",
+        "amap_en_full": "OLYMPIC SPORTS CENTER",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-olympic-sports-center-west",
+      "name": "奥体中心西站",
+      "names": {
+        "zh": "奥体中心西站",
+        "en": "Olympic Sports Center West"
+      },
+      "location": {
+        "lon": 113.523836,
+        "lat": 34.739741,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 444,
+        "y": 860,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10642"
+        }
+      ],
+      "extras": {
+        "pinyin": "AoTi ZhongXin Xi",
+        "poiid": "BV11599645",
+        "official_zids": [
+          "10642"
+        ],
+        "amap_name": "奥体中心西",
+        "amap_en_full": "OLYMPIC SPORTS CENTER WEST",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-putian",
+      "name": "圃田站",
+      "names": {
+        "zh": "圃田站",
+        "en": "Putian"
+      },
+      "location": {
+        "lon": 113.821086,
+        "lat": 34.743193,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2043,
+        "y": 779,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10863"
+        }
+      ],
+      "extras": {
+        "pinyin": "PuTian",
+        "poiid": "BV11340717",
+        "official_zids": [
+          "10863"
+        ],
+        "amap_name": "圃田",
+        "amap_en_full": "PUTIAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-putian-xi",
+      "name": "圃田西站",
+      "names": {
+        "zh": "圃田西站",
+        "en": "Putian Xi"
+      },
+      "location": {
+        "lon": 113.793199,
+        "lat": 34.741918,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1909,
+        "y": 819,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10340"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10861"
+        }
+      ],
+      "extras": {
+        "pinyin": "Pu TianXi",
+        "poiid": "BV10859591",
+        "official_zids": [
+          "10340",
+          "10861"
+        ],
+        "amap_name": "圃田西",
+        "amap_en_full": "PUTIAN XI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-qilihe",
+      "name": "七里河站",
+      "names": {
+        "zh": "七里河站",
+        "en": "Qilihe"
+      },
+      "location": {
+        "lon": 113.722318,
+        "lat": 34.720916,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1635,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10443"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10520"
+        }
+      ],
+      "extras": {
+        "pinyin": "QiLiHe",
+        "poiid": "BV10705651",
+        "official_zids": [
+          "10443",
+          "10520"
+        ],
+        "amap_name": "七里河",
+        "amap_en_full": "QILIHE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-qiliyan",
+      "name": "齐礼阎站",
+      "names": {
+        "zh": "齐礼阎站",
+        "en": "Qiliyan"
+      },
+      "location": {
+        "lon": 113.629657,
+        "lat": 34.72022,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 980,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10527"
+        }
+      ],
+      "extras": {
+        "pinyin": "Qi LiYan",
+        "poiid": "BV10705658",
+        "official_zids": [
+          "10527"
+        ],
+        "amap_name": "齐礼阎",
+        "amap_en_full": "QILIYAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-qinggongye-daxue",
+      "name": "轻工业大学站",
+      "names": {
+        "zh": "轻工业大学站",
+        "en": "Qinggongye Daxue"
+      },
+      "location": {
+        "lon": 113.505896,
+        "lat": 34.808169,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 373,
+        "y": 456,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10823"
+        }
+      ],
+      "extras": {
+        "pinyin": "QingGongYe DaXue",
+        "poiid": "BV11340718",
+        "official_zids": [
+          "10823"
+        ],
+        "amap_name": "轻工业大学",
+        "amap_en_full": "QINGGONGYE DAXUE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-qinghua-fuzhong",
+      "name": "清华附中站",
+      "names": {
+        "zh": "清华附中站",
+        "en": "Qinghua Fuzhong"
+      },
+      "location": {
+        "lon": 113.713352,
+        "lat": 34.829464,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1414,
+        "y": 343,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10430"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10622"
+        }
+      ],
+      "extras": {
+        "pinyin": "QingHua FuZhong",
+        "poiid": "BV11283837",
+        "official_zids": [
+          "10430",
+          "10622"
+        ],
+        "amap_name": "清华附中",
+        "amap_en_full": "QINGHUA FUZHONG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-qinglinglu",
+      "name": "秦岭路站",
+      "names": {
+        "zh": "秦岭路站",
+        "en": "Qinglinglu"
+      },
+      "location": {
+        "lon": 113.603314,
+        "lat": 34.7568,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 689,
+        "y": 711,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10123"
+        }
+      ],
+      "extras": {
+        "pinyin": "QinLing Lu",
+        "poiid": "BV10091122",
+        "official_zids": [
+          "10123"
+        ],
+        "amap_name": "秦岭路",
+        "amap_en_full": "QINGLINGLU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-qj2x",
+      "name": "须水站",
+      "names": {
+        "zh": "须水站",
+        "en": "须水站"
+      },
+      "status": "out_of_service",
+      "source_ids": [],
+      "extras": {
+        "official_zids": [],
+        "location_source": "baidu-place",
+        "baidu_place_uid": "c192ffa4bc1c5b03b35c6aac",
+        "baidu_place_name": "须水"
+      },
+      "location": {
+        "lon": 113.527052,
+        "lat": 34.780853,
+        "crs": "gcj02"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-renmin-lu",
+      "name": "人民路站",
+      "names": {
+        "zh": "人民路站",
+        "en": "Renmin Lu"
+      },
+      "location": {
+        "lon": 113.673865,
+        "lat": 34.757566,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1184,
+        "y": 695,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10130"
+        }
+      ],
+      "extras": {
+        "pinyin": "RenMin Lu HeNan ZhongYiYi FuYuan",
+        "poiid": "BV09237662",
+        "official_zids": [
+          "10130"
+        ],
+        "co_name": "河南中医一附院",
+        "amap_name": "人民路·河南中医一附院",
+        "amap_en_full": "Renmin Road The First Affiliated Hospital of Henan University of CM",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-renmingongyuan",
+      "name": "人民公园站",
+      "names": {
+        "zh": "人民公园站",
+        "en": "Renmingongyuan"
+      },
+      "location": {
+        "lon": 113.659983,
+        "lat": 34.758629,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1062,
+        "y": 686,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10328"
+        }
+      ],
+      "extras": {
+        "pinyin": "RenMin GongYuan",
+        "poiid": "BV10859593",
+        "official_zids": [
+          "10328"
+        ],
+        "amap_name": "人民公园",
+        "amap_en_full": "RENMINGONGYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-senlin-gongyuan-bei",
+      "name": "森林公园北站",
+      "names": {
+        "zh": "森林公园北站",
+        "en": "Senlin Gongyuan Bei"
+      },
+      "location": {
+        "lon": 113.703681,
+        "lat": 34.826208,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1341,
+        "y": 343,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10429"
+        }
+      ],
+      "extras": {
+        "pinyin": "SenLin GongYuan Bei",
+        "poiid": "BV10859915",
+        "official_zids": [
+          "10429"
+        ],
+        "amap_name": "森林公园北",
+        "amap_en_full": "SENLIN GONGYUAN BEI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shakoulu",
+      "name": "沙口路站",
+      "names": {
+        "zh": "沙口路站",
+        "en": "Shakoulu"
+      },
+      "location": {
+        "lon": 113.640426,
+        "lat": 34.770541,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 838,
+        "y": 625,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10502"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShaKou Lu",
+        "poiid": "BV10705660",
+        "official_zids": [
+          "10502"
+        ],
+        "amap_name": "沙口路",
+        "amap_en_full": "SHAKOULU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shamen",
+      "name": "沙门站",
+      "names": {
+        "zh": "沙门站",
+        "en": "Shamen"
+      },
+      "location": {
+        "lon": 113.68171,
+        "lat": 34.819445,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1226,
+        "y": 342,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10223"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10427"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShaMen",
+        "poiid": "BV10602508",
+        "official_zids": [
+          "10223",
+          "10427"
+        ],
+        "amap_name": "沙门",
+        "amap_en_full": "SHAMEN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shangding-lu",
+      "name": "商鼎路站",
+      "names": {
+        "zh": "商鼎路站",
+        "en": "Shangding Lu"
+      },
+      "location": {
+        "lon": 113.726827,
+        "lat": 34.754511,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1632,
+        "y": 714,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10440"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShangDing Lu",
+        "poiid": "BV10859925",
+        "official_zids": [
+          "10440"
+        ],
+        "amap_name": "商鼎路",
+        "amap_en_full": "SHANGDING LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shawoli",
+      "name": "沙窝李站",
+      "names": {
+        "zh": "沙窝李站",
+        "en": "Shawoli"
+      },
+      "location": {
+        "lon": 113.681693,
+        "lat": 34.626843,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1243,
+        "y": 1340,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10938"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShaWo Li",
+        "poiid": "BV10729469",
+        "official_zids": [
+          "10938"
+        ],
+        "amap_name": "沙窝李",
+        "amap_en_full": "SHAWOLI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-sheng-shekeyuan",
+      "name": "省社科院站",
+      "names": {
+        "zh": "省社科院站",
+        "en": "Sheng Shekeyuan"
+      },
+      "location": {
+        "lon": 113.848797,
+        "lat": 34.758072,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2080,
+        "y": 743,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10865"
+        }
+      ],
+      "extras": {
+        "pinyin": "Sheng SheKeYuan",
+        "poiid": "BV09185745",
+        "official_zids": [
+          "10865"
+        ],
+        "amap_name": "省社科院",
+        "amap_en_full": "SHENG SHEKEYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-sheng-zhongyiyuan",
+      "name": "省中医院站",
+      "names": {
+        "zh": "省中医院站",
+        "en": "Sheng Zhongyiyuan"
+      },
+      "location": {
+        "lon": 113.648224,
+        "lat": 34.7998,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 983,
+        "y": 487,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10841"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShengZhong YiYuan",
+        "poiid": "BV09188378",
+        "official_zids": [
+          "10841"
+        ],
+        "amap_name": "省中医院",
+        "amap_en_full": "SHENG ZHONGYIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shi-dier-renminyiyuan",
+      "name": "市第二人民医院站",
+      "names": {
+        "zh": "市第二人民医院站",
+        "en": "Shi Dier Renminyiyuan"
+      },
+      "location": {
+        "lon": 113.644129,
+        "lat": 34.720446,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1018,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10526"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10751"
+        }
+      ],
+      "extras": {
+        "pinyin": "Shi DiEr RenMin YiYuan",
+        "poiid": "BV10705664",
+        "official_zids": [
+          "10526",
+          "10751"
+        ],
+        "amap_name": "市第二人民医院",
+        "amap_en_full": "SHI DIER RENMINYIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shi-gukeyiyuan",
+      "name": "市骨科医院站",
+      "names": {
+        "zh": "市骨科医院站",
+        "en": "Shi Gukeyiyuan"
+      },
+      "location": {
+        "lon": 113.644063,
+        "lat": 34.736419,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1019,
+        "y": 822,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10747"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiGuKe YiYuan",
+        "poiid": "BV09334686",
+        "official_zids": [
+          "10747"
+        ],
+        "amap_name": "市骨科医院",
+        "amap_en_full": "SHI GUKEYIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shibalihe",
+      "name": "十八里河站",
+      "names": {
+        "zh": "十八里河站",
+        "en": "Shibalihe"
+      },
+      "location": {
+        "lon": 113.683715,
+        "lat": 34.647839,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1242,
+        "y": 1247,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10937"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiBaLiHe",
+        "poiid": "BV10729468",
+        "official_zids": [
+          "10937"
+        ],
+        "amap_name": "十八里河",
+        "amap_en_full": "SHIBALIHE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shimindadao",
+      "name": "市民大道站",
+      "names": {
+        "zh": "市民大道站",
+        "en": "Shimindadao"
+      },
+      "location": {
+        "lon": 113.54103,
+        "lat": 34.757659,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 512,
+        "y": 722,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11433"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiMin DaDao",
+        "poiid": "BV11064684",
+        "official_zids": [
+          "11433"
+        ],
+        "amap_name": "市民大道",
+        "amap_en_full": "SHIMINDADAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shiwei-dangxiao",
+      "name": "市委党校站",
+      "names": {
+        "zh": "市委党校站",
+        "en": "Shiwei Dangxiao"
+      },
+      "location": {
+        "lon": 113.541262,
+        "lat": 34.747944,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 511,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11045"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11434"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiWei DangXiao",
+        "poiid": "BV10994050",
+        "official_zids": [
+          "11045",
+          "11434"
+        ],
+        "amap_name": "市委党校",
+        "amap_en_full": "SHIWEI DANGXIAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shuanghehu",
+      "name": "双鹤湖站",
+      "names": {
+        "zh": "双鹤湖站",
+        "en": "Shuanghehu"
+      },
+      "location": {
+        "lon": 113.847833,
+        "lat": 34.402755,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2086,
+        "y": 2067,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11747"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShuangHeHu",
+        "poiid": "BV11580212",
+        "official_zids": [
+          "11747"
+        ],
+        "amap_name": "双鹤湖",
+        "amap_en_full": "SHUANGHEHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shuanghehu-bei",
+      "name": "双鹤湖北站",
+      "names": {
+        "zh": "双鹤湖北站",
+        "en": "Shuanghehu Bei"
+      },
+      "location": {
+        "lon": 113.847852,
+        "lat": 34.412301,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2085,
+        "y": 2027,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11745"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShuangHe HuBei",
+        "poiid": "BV11580211",
+        "official_zids": [
+          "11745"
+        ],
+        "amap_name": "双鹤湖北",
+        "amap_en_full": "SHUANGHEHU BEI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shuanghehu-nan",
+      "name": "双鹤湖南站",
+      "names": {
+        "zh": "双鹤湖南站",
+        "en": "Shuanghehu Nan"
+      },
+      "location": {
+        "lon": 113.847853,
+        "lat": 34.391854,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2086,
+        "y": 2105,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11749"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShuangHe HuNan",
+        "poiid": "BV11580209",
+        "official_zids": [
+          "11749"
+        ],
+        "amap_name": "双鹤湖南",
+        "amap_en_full": "SHUANGHEHU NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shuanghudadao",
+      "name": "双湖大道站",
+      "names": {
+        "zh": "双湖大道站",
+        "en": "Shuanghudadao"
+      },
+      "location": {
+        "lon": 113.683002,
+        "lat": 34.611492,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1244,
+        "y": 1432,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10939"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShuangHu DaDao",
+        "poiid": "BV10729465",
+        "official_zids": [
+          "10939"
+        ],
+        "amap_name": "双湖大道",
+        "amap_en_full": "SHUANGHUDADAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-shuangmiaoli",
+      "name": "双庙李站",
+      "names": {
+        "zh": "双庙李站",
+        "en": "Shuangmiaoli"
+      },
+      "location": {
+        "lon": 113.845316,
+        "lat": 34.302461,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2088,
+        "y": 2214,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11753"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShuangMiao Li",
+        "poiid": "BV11679037",
+        "official_zids": [
+          "11753"
+        ],
+        "amap_name": "双庙李",
+        "amap_en_full": "SHUANGMIAOLI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-sizhao",
+      "name": "司赵站",
+      "names": {
+        "zh": "司赵站",
+        "en": "Sizhao"
+      },
+      "location": {
+        "lon": 113.79513,
+        "lat": 34.67691,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1906,
+        "y": 1097,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10344"
+        }
+      ],
+      "extras": {
+        "pinyin": "SiZhao ShiQiYuan BinHe YuanQu",
+        "poiid": "BV09381695",
+        "official_zids": [
+          "10344"
+        ],
+        "co_name": "市七院滨河院区",
+        "amap_name": "司赵·市七院滨河院区",
+        "amap_en_full": "SIZHAO / SHIQIYUANBINHEYUANQU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-songhuai",
+      "name": "嵩淮站",
+      "names": {
+        "zh": "嵩淮站",
+        "en": "Songhuai"
+      },
+      "location": {
+        "lon": 113.62877,
+        "lat": 34.7289,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 911,
+        "y": 859,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10635"
+        }
+      ],
+      "extras": {
+        "pinyin": "SongHuai",
+        "poiid": "BV11614611",
+        "official_zids": [
+          "10635"
+        ],
+        "amap_name": "嵩淮",
+        "amap_en_full": "SONGHUAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-tianjianhu",
+      "name": "天健湖站",
+      "names": {
+        "zh": "天健湖站",
+        "en": "Tianjianhu"
+      },
+      "location": {
+        "lon": 113.47869,
+        "lat": 34.808149,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 301,
+        "y": 457,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10821"
+        }
+      ],
+      "extras": {
+        "pinyin": "TianJianHu",
+        "poiid": "BV11340727",
+        "official_zids": [
+          "10821"
+        ],
+        "amap_name": "天健湖",
+        "amap_en_full": "TIANJIANHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-tielu",
+      "name": "铁炉站",
+      "names": {
+        "zh": "铁炉站",
+        "en": "Tielu"
+      },
+      "location": {
+        "lon": 113.541028,
+        "lat": 34.767983,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 512,
+        "y": 660,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10119"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11432"
+        }
+      ],
+      "extras": {
+        "pinyin": "TieLu",
+        "poiid": "BV10840256",
+        "official_zids": [
+          "10119",
+          "11432"
+        ],
+        "amap_name": "铁炉",
+        "amap_en_full": "TIELU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-tonghuai",
+      "name": "桐淮站",
+      "names": {
+        "zh": "桐淮站",
+        "en": "Tonghuai"
+      },
+      "location": {
+        "lon": 113.61357,
+        "lat": 34.72864,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 839,
+        "y": 859,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10529"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10636"
+        }
+      ],
+      "extras": {
+        "pinyin": "TongHuai",
+        "poiid": "BV10705661",
+        "official_zids": [
+          "10529",
+          "10636"
+        ],
+        "amap_name": "桐淮",
+        "amap_en_full": "TONGHUAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-tongle",
+      "name": "同乐站",
+      "names": {
+        "zh": "同乐站",
+        "en": "Tongle"
+      },
+      "location": {
+        "lon": 113.635653,
+        "lat": 34.795346,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 906,
+        "y": 487,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10324"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10839"
+        }
+      ],
+      "extras": {
+        "pinyin": "TongLe",
+        "poiid": "BV10859581",
+        "official_zids": [
+          "10324",
+          "10839"
+        ],
+        "amap_name": "同乐",
+        "amap_en_full": "TONGLE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-tongtai-lu",
+      "name": "通泰路站",
+      "names": {
+        "zh": "通泰路站",
+        "en": "Tongtai Lu"
+      },
+      "location": {
+        "lon": 113.73337,
+        "lat": 34.747954,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1681,
+        "y": 773,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10336"
+        }
+      ],
+      "extras": {
+        "pinyin": "TongTai Lu",
+        "poiid": "BV10859590",
+        "official_zids": [
+          "10336"
+        ],
+        "amap_name": "通泰路",
+        "amap_en_full": "TONGTAI LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-wanghuzhai",
+      "name": "王胡砦站",
+      "names": {
+        "zh": "王胡砦站",
+        "en": "Wanghuzhai"
+      },
+      "location": {
+        "lon": 113.644051,
+        "lat": 34.705831,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1017,
+        "y": 964,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10753"
+        }
+      ],
+      "extras": {
+        "pinyin": "WangHuZhai",
+        "poiid": "BV10897821",
+        "official_zids": [
+          "10753"
+        ],
+        "amap_name": "王胡砦",
+        "amap_en_full": "WANGHUZHAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-wangzhai",
+      "name": "王砦站",
+      "names": {
+        "zh": "王砦站",
+        "en": "Wangzhai"
+      },
+      "location": {
+        "lon": 113.626011,
+        "lat": 34.819658,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 907,
+        "y": 279,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10322"
+        }
+      ],
+      "extras": {
+        "pinyin": "WangZhai",
+        "poiid": "BV10859584",
+        "official_zids": [
+          "10322"
+        ],
+        "amap_name": "王砦",
+        "amap_en_full": "WANGZHAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-wenti-zhongxin",
+      "name": "文体中心站",
+      "names": {
+        "zh": "文体中心站",
+        "en": "Wenti Zhongxin"
+      },
+      "location": {
+        "lon": 113.83599,
+        "lat": 34.568685,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1957,
+        "y": 1580,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11725"
+        }
+      ],
+      "extras": {
+        "pinyin": "WenTi ZhongXin",
+        "poiid": "BV11580206",
+        "official_zids": [
+          "11725"
+        ],
+        "amap_name": "文体中心",
+        "amap_en_full": "WENTI ZHONGXIN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-wenyuanbeilu",
+      "name": "文苑北路站",
+      "names": {
+        "zh": "文苑北路站",
+        "en": "Wenyuanbeilu"
+      },
+      "location": {
+        "lon": 113.812199,
+        "lat": 34.808447,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1983,
+        "y": 413,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10142"
+        }
+      ],
+      "extras": {
+        "pinyin": "WenYuan BeiLu",
+        "poiid": "BV10739836",
+        "official_zids": [
+          "10142"
+        ],
+        "amap_name": "文苑北路",
+        "amap_en_full": "WENYUANBEILU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-wolonggang",
+      "name": "卧龙岗站",
+      "names": {
+        "zh": "卧龙岗站",
+        "en": "Wolonggang"
+      },
+      "location": {
+        "lon": 113.603634,
+        "lat": 34.728896,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 772,
+        "y": 859,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10637"
+        }
+      ],
+      "extras": {
+        "pinyin": "WoLongGang",
+        "poiid": "BV11614607",
+        "official_zids": [
+          "10637"
+        ],
+        "amap_name": "卧龙岗",
+        "amap_en_full": "WOLONGGANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-wulongkou",
+      "name": "五龙口站",
+      "names": {
+        "zh": "五龙口站",
+        "en": "Wulongkou"
+      },
+      "location": {
+        "lon": 113.613384,
+        "lat": 34.78943,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 861,
+        "y": 488,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10837"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuLongKou",
+        "poiid": "BV11340716",
+        "official_zids": [
+          "10837"
+        ],
+        "amap_name": "五龙口",
+        "amap_en_full": "WULONGKOU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-wutongjie",
+      "name": "梧桐街站",
+      "names": {
+        "zh": "梧桐街站",
+        "en": "Wutongjie"
+      },
+      "location": {
+        "lon": 113.540929,
+        "lat": 34.794393,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 511,
+        "y": 547,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10117"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuTong Jie",
+        "poiid": "BV10840262",
+        "official_zids": [
+          "10117"
+        ],
+        "amap_name": "梧桐街",
+        "amap_en_full": "WUTONGJIE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-wuyi-gongyuan",
+      "name": "五一公园站",
+      "names": {
+        "zh": "五一公园站",
+        "en": "Wuyi Gongyuan"
+      },
+      "location": {
+        "lon": 113.613576,
+        "lat": 34.756657,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 839,
+        "y": 710,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10124"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10532"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuYi GongYuan Shi ZhongYiYuan",
+        "poiid": "BV09379353",
+        "official_zids": [
+          "10124",
+          "10532"
+        ],
+        "co_name": "市中医院",
+        "amap_name": "五一公园·市中医院",
+        "amap_en_full": "WUYIGONGYUAN / SHIZHONGYIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xi-dajie",
+      "name": "西大街站",
+      "names": {
+        "zh": "西大街站",
+        "en": "Xi Dajie"
+      },
+      "location": {
+        "lon": 113.676537,
+        "lat": 34.75032,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1184,
+        "y": 749,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10330"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiDaJie",
+        "poiid": "BV10859586",
+        "official_zids": [
+          "10330"
+        ],
+        "amap_name": "西大街",
+        "amap_en_full": "XI DAJIE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xiangying",
+      "name": "祥营站",
+      "names": {
+        "zh": "祥营站",
+        "en": "Xiangying"
+      },
+      "location": {
+        "lon": 113.524139,
+        "lat": 34.80807,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 441,
+        "y": 456,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10825"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiangYing",
+        "poiid": "BV09205418",
+        "official_zids": [
+          "10825"
+        ],
+        "amap_name": "祥营",
+        "amap_en_full": "XIANGYING",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xiaoqiao",
+      "name": "小乔站",
+      "names": {
+        "zh": "小乔站",
+        "en": "Xiaoqiao"
+      },
+      "location": {
+        "lon": 113.695657,
+        "lat": 34.600468,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1244,
+        "y": 1502,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10940"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiaoQiao",
+        "poiid": "BV10729466",
+        "official_zids": [
+          "10940"
+        ],
+        "amap_name": "小乔",
+        "amap_en_full": "XIAOQIAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xiaoying",
+      "name": "小营站",
+      "names": {
+        "zh": "小营站",
+        "en": "Xiaoying"
+      },
+      "location": {
+        "lon": 113.719221,
+        "lat": 34.794849,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1413,
+        "y": 487,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10624"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10849"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiaoYing",
+        "poiid": "BV11340735",
+        "official_zids": [
+          "10624",
+          "10849"
+        ],
+        "amap_name": "小营",
+        "amap_en_full": "XIAOYING",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xiliuhu",
+      "name": "西流湖站",
+      "names": {
+        "zh": "西流湖站",
+        "en": "Xiliuhu"
+      },
+      "location": {
+        "lon": 113.570188,
+        "lat": 34.761135,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 609,
+        "y": 712,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10121"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiLiuHu",
+        "poiid": "BV10494973",
+        "official_zids": [
+          "10121"
+        ],
+        "amap_name": "西流湖",
+        "amap_en_full": "XILIUHU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xiliuhu-gongyuan-nan",
+      "name": "西流湖公园南站",
+      "names": {
+        "zh": "西流湖公园南站",
+        "en": "Xiliuhu Gongyuan Nan"
+      },
+      "location": {
+        "lon": 113.582486,
+        "lat": 34.747453,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 678,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11047"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiLiuHu GongYuanNan",
+        "poiid": "BV10994049",
+        "official_zids": [
+          "11047"
+        ],
+        "amap_name": "西流湖公园南",
+        "amap_en_full": "XILIUHU GONGYUAN NAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xinglongpu",
+      "name": "兴隆铺站",
+      "names": {
+        "zh": "兴隆铺站",
+        "en": "Xinglongpu"
+      },
+      "location": {
+        "lon": 113.627676,
+        "lat": 34.807205,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 907,
+        "y": 370,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10323"
+        }
+      ],
+      "extras": {
+        "pinyin": "XingLongPu",
+        "poiid": "BV10859595",
+        "official_zids": [
+          "10323"
+        ],
+        "amap_name": "兴隆铺",
+        "amap_en_full": "XINGLONGPU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xinzheng-airport",
+      "name": "新郑机场站",
+      "names": {
+        "zh": "新郑机场站",
+        "en": "Xinzheng Airport"
+      },
+      "location": {
+        "lon": 113.852485,
+        "lat": 34.526082,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2132,
+        "y": 1739,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10950"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11733"
+        }
+      ],
+      "extras": {
+        "pinyin": "XinZheng JiChang",
+        "poiid": "BV10729470",
+        "official_zids": [
+          "10950",
+          "11733"
+        ],
+        "amap_name": "新郑机场",
+        "amap_en_full": "Xinzheng Airport",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xisanhuan",
+      "name": "西三环站",
+      "names": {
+        "zh": "西三环站",
+        "en": "Xisanhuan"
+      },
+      "location": {
+        "lon": 113.588175,
+        "lat": 34.760193,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 650,
+        "y": 712,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10122"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiSanHuan",
+        "poiid": "BV10093843",
+        "official_zids": [
+          "10122"
+        ],
+        "amap_name": "西三环",
+        "amap_en_full": "XISANHUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xizhou",
+      "name": "西周站",
+      "names": {
+        "zh": "西周站",
+        "en": "Xizhou"
+      },
+      "location": {
+        "lon": 113.746855,
+        "lat": 34.747945,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1723,
+        "y": 773,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10337"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11227"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiZhou",
+        "poiid": "BV10859582",
+        "official_zids": [
+          "10337",
+          "11227"
+        ],
+        "amap_name": "西周",
+        "amap_en_full": "XIZHOU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xuchang-sports-center",
+      "name": "体育中心站",
+      "names": {
+        "zh": "体育中心站",
+        "en": "Xuchang Sports Center"
+      },
+      "location": {
+        "lon": 113.840472,
+        "lat": 34.122635,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2094,
+        "y": 2617,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11765"
+        }
+      ],
+      "extras": {
+        "pinyin": "TiYuZhongXin",
+        "poiid": "BV11589099",
+        "official_zids": [
+          "11765"
+        ],
+        "amap_name": "体育中心",
+        "amap_en_full": "XUCHANG SPORTS CENTER",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xuchangdong-station",
+      "name": "许昌东站",
+      "names": {
+        "zh": "许昌东站",
+        "en": "Xuchangdong Station"
+      },
+      "location": {
+        "lon": 113.885303,
+        "lat": 34.047859,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2099,
+        "y": 2900,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11773"
+        }
+      ],
+      "extras": {
+        "pinyin": "XuChang DongZhan",
+        "poiid": "BV11589100",
+        "official_zids": [
+          "11773"
+        ],
+        "amap_name": "许昌东站",
+        "amap_en_full": "XUCHANGDONG STATION",
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-xunmei-lu",
+      "name": "洵美路站",
+      "names": {
+        "zh": "洵美路站",
+        "en": "Xunmei Lu"
+      },
+      "location": {
+        "lon": 113.834754,
+        "lat": 34.459062,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2084,
+        "y": 1927,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11739"
+        }
+      ],
+      "extras": {
+        "pinyin": "XunMei Lu",
+        "poiid": "BV11580216",
+        "official_zids": [
+          "11739"
+        ],
+        "amap_name": "洵美路",
+        "amap_en_full": "XUNMEI LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yangjunliu",
+      "name": "杨君刘站",
+      "names": {
+        "zh": "杨君刘站",
+        "en": "Yangjunliu"
+      },
+      "location": {
+        "lon": 113.69846,
+        "lat": 34.819552,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1275,
+        "y": 343,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10428"
+        }
+      ],
+      "extras": {
+        "pinyin": "Yang JunLiu",
+        "poiid": "BV10859926",
+        "official_zids": [
+          "10428"
+        ],
+        "amap_name": "杨君刘",
+        "amap_en_full": "YANGJUNLIU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yanzhuang",
+      "name": "燕庄站",
+      "names": {
+        "zh": "燕庄站",
+        "en": "Yanzhuang"
+      },
+      "location": {
+        "lon": 113.703396,
+        "lat": 34.76339,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1412,
+        "y": 661,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10132"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10627"
+        }
+      ],
+      "extras": {
+        "pinyin": "YanZhuang",
+        "poiid": "BV10094117",
+        "official_zids": [
+          "10132",
+          "10627"
+        ],
+        "amap_name": "燕庄",
+        "amap_en_full": "YANZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yaozhai",
+      "name": "姚砦站",
+      "names": {
+        "zh": "姚砦站",
+        "en": "Yaozhai"
+      },
+      "location": {
+        "lon": 113.707797,
+        "lat": 34.772601,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1412,
+        "y": 599,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10507"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10626"
+        }
+      ],
+      "extras": {
+        "pinyin": "YaoZhai NieZhuang",
+        "poiid": "BV11194037",
+        "official_zids": [
+          "10507",
+          "10626"
+        ],
+        "co_name": "聂庄",
+        "amap_name": "姚砦·聂庄",
+        "amap_en_full": "YAOZHAI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yaozhuang",
+      "name": "姚庄站",
+      "names": {
+        "zh": "姚庄站",
+        "en": "Yaozhuang"
+      },
+      "location": {
+        "lon": 113.734053,
+        "lat": 34.690457,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1668,
+        "y": 1127,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10446"
+        }
+      ],
+      "extras": {
+        "pinyin": "YaoZhuang",
+        "poiid": "BV10859922",
+        "official_zids": [
+          "10446"
+        ],
+        "amap_name": "姚庄",
+        "amap_en_full": "YAOZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yingchuan-lu",
+      "name": "颍川路站",
+      "names": {
+        "zh": "颍川路站",
+        "en": "Yingchuan Lu"
+      },
+      "location": {
+        "lon": 113.818933,
+        "lat": 34.230775,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2090,
+        "y": 2356,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11757"
+        }
+      ],
+      "extras": {
+        "pinyin": "YingChuan Lu",
+        "poiid": "BV11589105",
+        "official_zids": [
+          "11757"
+        ],
+        "amap_name": "颍川路",
+        "amap_en_full": "YINGCHUAN LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yinggang",
+      "name": "营岗站",
+      "names": {
+        "zh": "营岗站",
+        "en": "Yinggang"
+      },
+      "location": {
+        "lon": 113.802273,
+        "lat": 34.721004,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1907,
+        "y": 901,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10341"
+        }
+      ],
+      "extras": {
+        "pinyin": "YingGang",
+        "poiid": "BV10859594",
+        "official_zids": [
+          "10341"
+        ],
+        "amap_name": "营岗",
+        "amap_en_full": "YINGGANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yinping-lu",
+      "name": "银屏路站",
+      "names": {
+        "zh": "银屏路站",
+        "en": "Yinping Lu"
+      },
+      "location": {
+        "lon": 113.561073,
+        "lat": 34.808081,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 606,
+        "y": 454,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10829"
+        }
+      ],
+      "extras": {
+        "pinyin": "YinPing Lu",
+        "poiid": "BV11340722",
+        "official_zids": [
+          "10829"
+        ],
+        "amap_name": "银屏路",
+        "amap_en_full": "YINPING LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yixueyuan",
+      "name": "医学院站",
+      "names": {
+        "zh": "医学院站",
+        "en": "Yixueyuan"
+      },
+      "location": {
+        "lon": 113.644046,
+        "lat": 34.746174,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1019,
+        "y": 778,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10127"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10745"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11051"
+        }
+      ],
+      "extras": {
+        "pinyin": "YiXueYuan",
+        "poiid": "BV10090526",
+        "official_zids": [
+          "10127",
+          "10745",
+          "11051"
+        ],
+        "amap_name": "医学院",
+        "amap_en_full": "YIXUEYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yonghe-lu",
+      "name": "永和路站",
+      "names": {
+        "zh": "永和路站",
+        "en": "Yonghe Lu"
+      },
+      "location": {
+        "lon": 113.825725,
+        "lat": 34.172117,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2092,
+        "y": 2488,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11761"
+        }
+      ],
+      "extras": {
+        "pinyin": "YongHe Lu",
+        "poiid": "BV11589107",
+        "official_zids": [
+          "11761"
+        ],
+        "amap_name": "永和路",
+        "amap_en_full": "YONGHE LU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yuanlinggucheng-xi",
+      "name": "苑陵故城西站",
+      "names": {
+        "zh": "苑陵故城西站",
+        "en": "Yuanlinggucheng Xi"
+      },
+      "location": {
+        "lon": 113.834707,
+        "lat": 34.467251,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2083,
+        "y": 1897,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11737"
+        }
+      ],
+      "extras": {
+        "pinyin": "YuanLingGu ChengXi",
+        "poiid": "BV11580210",
+        "official_zids": [
+          "11737"
+        ],
+        "amap_name": "苑陵故城西",
+        "amap_en_full": "YUANLINGGUCHENG XI",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-yuejigongyuan",
+      "name": "月季公园站",
+      "names": {
+        "zh": "月季公园站",
+        "en": "Yuejigongyuan"
+      },
+      "location": {
+        "lon": 113.622992,
+        "lat": 34.765726,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 838,
+        "y": 661,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10501"
+        }
+      ],
+      "extras": {
+        "pinyin": "YueJi GongYuan",
+        "poiid": "BV10705653",
+        "official_zids": [
+          "10501"
+        ],
+        "amap_name": "月季公园",
+        "amap_en_full": "YUEJIGONGYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zaoyuan",
+      "name": "枣园站",
+      "names": {
+        "zh": "枣园站",
+        "en": "Zaoyuan"
+      },
+      "location": {
+        "lon": 113.832945,
+        "lat": 34.555108,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1956,
+        "y": 1652,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11727"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZaoYuan",
+        "poiid": "BV11580208",
+        "official_zids": [
+          "11727"
+        ],
+        "amap_name": "枣园",
+        "amap_en_full": "ZAOYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zaozhuang",
+      "name": "枣庄站",
+      "names": {
+        "zh": "枣庄站",
+        "en": "Zaozhuang"
+      },
+      "location": {
+        "lon": 113.69432,
+        "lat": 34.794877,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1319,
+        "y": 487,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10847"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZaoZhuang",
+        "poiid": "BV11340723",
+        "official_zids": [
+          "10847"
+        ],
+        "amap_name": "枣庄",
+        "amap_en_full": "ZAOZHUANG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhacheng",
+      "name": "祭城站",
+      "names": {
+        "zh": "祭城站",
+        "en": "Zhacheng"
+      },
+      "location": {
+        "lon": 113.766601,
+        "lat": 34.776693,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1804,
+        "y": 598,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10511"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiCheng",
+        "poiid": "BV10705662",
+        "official_zids": [
+          "10511"
+        ],
+        "amap_name": "祭城",
+        "amap_en_full": "ZHACHENG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhangjiacun",
+      "name": "张家村站",
+      "names": {
+        "zh": "张家村站",
+        "en": "Zhangjiacun"
+      },
+      "location": {
+        "lon": 113.661128,
+        "lat": 34.82428,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1067,
+        "y": 253,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10425"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10731"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhangJiaCun",
+        "poiid": "BV11283836",
+        "official_zids": [
+          "10425",
+          "10731"
+        ],
+        "amap_name": "张家村",
+        "amap_en_full": "ZHANGJIACUN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhanmatun",
+      "name": "站马屯站",
+      "names": {
+        "zh": "站马屯站",
+        "en": "Zhanmatun"
+      },
+      "location": {
+        "lon": 113.682446,
+        "lat": 34.684327,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1239,
+        "y": 1077,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10235"
+        }
+      ],
+      "extras": {
+        "pinyin": "Zhan MaTun",
+        "poiid": "BV10602515",
+        "official_zids": [
+          "10235"
+        ],
+        "amap_name": "站马屯",
+        "amap_en_full": "ZHANMATUN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengda-yifuyuan",
+      "name": "郑大一附院站",
+      "names": {
+        "zh": "郑大一附院站",
+        "en": "Zhengda Yifuyuan"
+      },
+      "location": {
+        "lon": 113.644607,
+        "lat": 34.755767,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1017,
+        "y": 720,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10743"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengDaYi FuYuan",
+        "poiid": "BV09260140",
+        "official_zids": [
+          "10743"
+        ],
+        "amap_name": "郑大一附院",
+        "amap_en_full": "ZHENGDA YIFUYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengda-yifuyuan-dongqu",
+      "name": "郑大一附院东区站",
+      "names": {
+        "zh": "郑大一附院东区站",
+        "en": "Zhengda Yifuyuan Dongqu"
+      },
+      "location": {
+        "lon": 113.763288,
+        "lat": 34.795579,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1746,
+        "y": 489,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10853"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengDaYi FuYuan DongQu",
+        "poiid": "BV09363523",
+        "official_zids": [
+          "10853"
+        ],
+        "amap_name": "郑大一附院东区",
+        "amap_en_full": "ZHENGDA YIFUYUAN DONGQU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-central-hospital",
+      "name": "市中心医院站",
+      "names": {
+        "zh": "市中心医院站",
+        "en": "Zhengzhou Central Hospital"
+      },
+      "location": {
+        "lon": 113.613692,
+        "lat": 34.746931,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 838,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10531"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11049"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiZhongXin YiYuan",
+        "poiid": "BV10705646",
+        "official_zids": [
+          "10531",
+          "11049"
+        ],
+        "amap_name": "市中心医院",
+        "amap_en_full": "ZHENGZHOU CENTRAL HOSPITAL",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-daxue",
+      "name": "郑州大学站",
+      "names": {
+        "zh": "郑州大学站",
+        "en": "Zhengzhou Daxue"
+      },
+      "location": {
+        "lon": 113.541443,
+        "lat": 34.807581,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 510,
+        "y": 456,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10116"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10827"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengZhou DaXue",
+        "poiid": "BV10840258",
+        "official_zids": [
+          "10116",
+          "10827"
+        ],
+        "amap_name": "郑州大学",
+        "amap_en_full": "ZHENGZHOU DAXUE",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "name": "郑州航空港站",
+      "names": {
+        "zh": "郑州航空港站",
+        "en": "Zhengzhou Hangkonggang Railway Station"
+      },
+      "location": {
+        "lon": 113.931326,
+        "lat": 34.487192,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2364,
+        "y": 1819,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10954"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengZhou HangKongGang Zhan",
+        "poiid": "BV09001059",
+        "official_zids": [
+          "10954"
+        ],
+        "amap_name": "郑州航空港站",
+        "amap_en_full": "ZHENGZHOU HANGKONGGANG RAILWAY STATION",
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-railway-station",
+      "name": "郑州火车站",
+      "names": {
+        "zh": "郑州火车站",
+        "en": "Zhengzhou Railway Station"
+      },
+      "location": {
+        "lon": 113.655952,
+        "lat": 34.746516,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1077,
+        "y": 778,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10128"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11052"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengZhou HuoCheZhan",
+        "poiid": "BV10094119",
+        "official_zids": [
+          "10128",
+          "11052"
+        ],
+        "amap_name": "郑州火车站",
+        "amap_en_full": "ZHENGZHOU RAILWAY STATION",
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-renminyiyuan",
+      "name": "郑州人民医院站",
+      "names": {
+        "zh": "郑州人民医院站",
+        "en": "Zhengzhou Renminyiyuan"
+      },
+      "location": {
+        "lon": 113.667203,
+        "lat": 34.774602,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1063,
+        "y": 599,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10504"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10739"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengZhou RenMin YiYuan",
+        "poiid": "BV10705649",
+        "official_zids": [
+          "10504",
+          "10739"
+        ],
+        "amap_name": "郑州人民医院",
+        "amap_en_full": "ZHENGZHOU RENMINYIYUAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-sports-center",
+      "name": "市体育中心站",
+      "names": {
+        "zh": "市体育中心站",
+        "en": "Zhengzhou Sports Center"
+      },
+      "location": {
+        "lon": 113.810399,
+        "lat": 34.7731,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1982,
+        "y": 588,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10140"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiTiYu ZhongXin",
+        "poiid": "BV10494972",
+        "official_zids": [
+          "10140"
+        ],
+        "amap_name": "市体育中心",
+        "amap_en_full": "ZHENGZHOU SPORTS CENTER",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-university-science-park",
+      "name": "郑大科技园站",
+      "names": {
+        "zh": "郑大科技园站",
+        "en": "Zhengzhou University Science Park"
+      },
+      "location": {
+        "lon": 113.541865,
+        "lat": 34.816735,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 510,
+        "y": 398,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10115"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengDa KeJiYuan",
+        "poiid": "BV10840261",
+        "official_zids": [
+          "10115"
+        ],
+        "amap_name": "郑大科技园",
+        "amap_en_full": "ZHENGZHOU UNIVERSITY SCIENCE PARK",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-wenmiao",
+      "name": "郑州文庙站",
+      "names": {
+        "zh": "郑州文庙站",
+        "en": "Zhengzhou Wenmiao"
+      },
+      "location": {
+        "lon": 113.691404,
+        "lat": 34.746924,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1355,
+        "y": 773,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10332"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengZhou WenMiao",
+        "poiid": "BV10859587",
+        "official_zids": [
+          "10332"
+        ],
+        "amap_name": "郑州文庙",
+        "amap_en_full": "ZHENGZHOU WENMIAO",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhou-yizhong",
+      "name": "郑州一中站",
+      "names": {
+        "zh": "郑州一中站",
+        "en": "Zhengzhou Yizhong"
+      },
+      "location": {
+        "lon": 113.556643,
+        "lat": 34.747996,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 600,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11046"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengZhou YiZhong",
+        "poiid": "BV10994058",
+        "official_zids": [
+          "11046"
+        ],
+        "amap_name": "郑州一中",
+        "amap_en_full": "ZHENGZHOU YIZHONG",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhoudong-railway-station",
+      "name": "郑州东站",
+      "names": {
+        "zh": "郑州东站",
+        "en": "Zhengzhoudong Railway Station"
+      },
+      "location": {
+        "lon": 113.777099,
+        "lat": 34.759251,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1862,
+        "y": 661,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10138"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10513"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10859"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengZhou DongZhan",
+        "poiid": "BV10094116",
+        "official_zids": [
+          "10138",
+          "10513",
+          "10859"
+        ],
+        "amap_name": "郑州东站",
+        "amap_en_full": "ZHENGZHOUDONG RAILWAY STATION",
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhengzhouxi-railway-station",
+      "name": "郑州西站",
+      "names": {
+        "zh": "郑州西站",
+        "en": "Zhengzhouxi Railway Station"
+      },
+      "location": {
+        "lon": 113.427921,
+        "lat": 34.749922,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 168,
+        "y": 777,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11041"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhengZhou XiZhan",
+        "poiid": "BV10994060",
+        "official_zids": [
+          "11041"
+        ],
+        "amap_name": "郑州西站",
+        "amap_en_full": "ZHENGZHOUXI RAILWAY STATION",
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhongyixilu",
+      "name": "众意西路站",
+      "names": {
+        "zh": "众意西路站",
+        "en": "Zhongyixilu"
+      },
+      "location": {
+        "lon": 113.718902,
+        "lat": 34.776325,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1544,
+        "y": 598,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10508"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhongYi XiLu",
+        "poiid": "BV10705643",
+        "official_zids": [
+          "10508"
+        ],
+        "amap_name": "众意西路",
+        "amap_en_full": "ZHONGYIXILU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zhongyuan-tower",
+      "name": "中原福塔站",
+      "names": {
+        "zh": "中原福塔站",
+        "en": "Zhongyuan Tower"
+      },
+      "location": {
+        "lon": 113.732164,
+        "lat": 34.720931,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1679,
+        "y": 920,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10519"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhongYuan FuTa",
+        "poiid": "BV10705666",
+        "official_zids": [
+          "10519"
+        ],
+        "amap_name": "中原福塔",
+        "amap_en_full": "ZHONGYUAN TOWER",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zijingshan",
+      "name": "紫荆山站",
+      "names": {
+        "zh": "紫荆山站",
+        "en": "Zijingshan"
+      },
+      "location": {
+        "lon": 113.682064,
+        "lat": 34.762176,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1233,
+        "y": 662,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10131"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10228"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZiJingShan",
+        "poiid": "BV10090616",
+        "official_zids": [
+          "10131",
+          "10228"
+        ],
+        "amap_name": "紫荆山",
+        "amap_en_full": "ZIJINGSHAN",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zonghebaoshuiqu",
+      "name": "综合保税区站",
+      "names": {
+        "zh": "综合保税区站",
+        "en": "Zonghebaoshuiqu"
+      },
+      "location": {
+        "lon": 113.857194,
+        "lat": 34.549358,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2128,
+        "y": 1694,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10949"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZongHe BaoShuiQu",
+        "poiid": "BV10729471",
+        "official_zids": [
+          "10949"
+        ],
+        "amap_name": "综合保税区",
+        "amap_en_full": "ZONGHEBAOSHUIQU",
+        "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-zun-dalu",
+      "name": "遵大路站",
+      "names": {
+        "zh": "遵大路站",
+        "en": "Zun Dalu"
+      },
+      "location": {
+        "lon": 113.839034,
+        "lat": 34.48573,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2024,
+        "y": 1856,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11735"
+        }
+      ],
+      "extras": {
+        "pinyin": "Zun DaLu ShiYiYuan HangKongGang YuanQu",
+        "poiid": "BV09384005",
+        "official_zids": [
+          "11735"
+        ],
+        "co_name": "市一院航空港院区",
+        "amap_name": "遵大路·市一院航空港院区",
+        "amap_en_full": "ZUNDA LU / SHIYIYUANHANGKONGGANGYUANQU",
+        "location_source": "source"
+      }
+    }
+  ]
+}

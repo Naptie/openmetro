@@ -1,0 +1,1516 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-zhengzhou",
+  "generated_at": "2026-09-25T19:53:45.571Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-25T19:53:45.571Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-zhengzhou-baimiao-7-cn-zhengzhou-baimiao-8",
+      "station_id": "cn-zhengzhou-baimiao",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-baimiao-7",
+      "to_stop_id": "cn-zhengzhou-baimiao-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-baimiao-8-cn-zhengzhou-baimiao-7",
+      "station_id": "cn-zhengzhou-baimiao",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-baimiao-8",
+      "to_stop_id": "cn-zhengzhou-baimiao-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-bolan-zhongxin-3-cn-zhengzhou-bolan-zhongxin-6",
+      "station_id": "cn-zhengzhou-bolan-zhongxin",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-bolan-zhongxin-3",
+      "to_stop_id": "cn-zhengzhou-bolan-zhongxin-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-bolan-zhongxin-6-cn-zhengzhou-bolan-zhongxin-3",
+      "station_id": "cn-zhengzhou-bolan-zhongxin",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-bolan-zhongxin-6",
+      "to_stop_id": "cn-zhengzhou-bolan-zhongxin-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-central-business-district-4-cn-zhengzhou-central-business-district-5",
+      "station_id": "cn-zhengzhou-central-business-district",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-central-business-district-4",
+      "to_stop_id": "cn-zhengzhou-central-business-district-5",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-central-business-district-5-cn-zhengzhou-central-business-district-4",
+      "station_id": "cn-zhengzhou-central-business-district",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-central-business-district-5",
+      "to_stop_id": "cn-zhengzhou-central-business-district-4",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-convention-and-exhibition-center-1-cn-zhengzhou-convention-and-exhibition-center-4",
+      "station_id": "cn-zhengzhou-convention-and-exhibition-center",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-convention-and-exhibition-center-1",
+      "to_stop_id": "cn-zhengzhou-convention-and-exhibition-center-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-convention-and-exhibition-center-4-cn-zhengzhou-convention-and-exhibition-center-1",
+      "station_id": "cn-zhengzhou-convention-and-exhibition-center",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-convention-and-exhibition-center-4",
+      "to_stop_id": "cn-zhengzhou-convention-and-exhibition-center-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-dashiqiao-3-cn-zhengzhou-dashiqiao-7",
+      "station_id": "cn-zhengzhou-dashiqiao",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-dashiqiao-3",
+      "to_stop_id": "cn-zhengzhou-dashiqiao-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-dashiqiao-7-cn-zhengzhou-dashiqiao-3",
+      "station_id": "cn-zhengzhou-dashiqiao",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-dashiqiao-7",
+      "to_stop_id": "cn-zhengzhou-dashiqiao-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-daxue-zhonglu-6-cn-zhengzhou-daxue-zhonglu-7",
+      "station_id": "cn-zhengzhou-daxue-zhonglu",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-daxue-zhonglu-6",
+      "to_stop_id": "cn-zhengzhou-daxue-zhonglu-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-daxue-zhonglu-7-cn-zhengzhou-daxue-zhonglu-6",
+      "station_id": "cn-zhengzhou-daxue-zhonglu",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-daxue-zhonglu-7",
+      "to_stop_id": "cn-zhengzhou-daxue-zhonglu-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-dongdajie-2-cn-zhengzhou-dongdajie-3",
+      "station_id": "cn-zhengzhou-dongdajie",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-dongdajie-2",
+      "to_stop_id": "cn-zhengzhou-dongdajie-3",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-dongdajie-3-cn-zhengzhou-dongdajie-2",
+      "station_id": "cn-zhengzhou-dongdajie",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-dongdajie-3",
+      "to_stop_id": "cn-zhengzhou-dongdajie-2",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-dongfeng-lu-2-cn-zhengzhou-dongfeng-lu-8",
+      "station_id": "cn-zhengzhou-dongfeng-lu",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-dongfeng-lu-2",
+      "to_stop_id": "cn-zhengzhou-dongfeng-lu-8",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-dongfeng-lu-8-cn-zhengzhou-dongfeng-lu-2",
+      "station_id": "cn-zhengzhou-dongfeng-lu",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-dongfeng-lu-8",
+      "to_stop_id": "cn-zhengzhou-dongfeng-lu-2",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-dongshilipu-3-cn-zhengzhou-dongshilipu-4",
+      "station_id": "cn-zhengzhou-dongshilipu",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-dongshilipu-3",
+      "to_stop_id": "cn-zhengzhou-dongshilipu-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-dongshilipu-4-cn-zhengzhou-dongshilipu-3",
+      "station_id": "cn-zhengzhou-dongshilipu",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-dongshilipu-4",
+      "to_stop_id": "cn-zhengzhou-dongshilipu-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-erligang-2-cn-zhengzhou-erligang-6",
+      "station_id": "cn-zhengzhou-erligang",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-erligang-2",
+      "to_stop_id": "cn-zhengzhou-erligang-6",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-erligang-6-cn-zhengzhou-erligang-2",
+      "station_id": "cn-zhengzhou-erligang",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-erligang-6",
+      "to_stop_id": "cn-zhengzhou-erligang-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-erqi-guangchang-1-cn-zhengzhou-erqi-guangchang-3",
+      "station_id": "cn-zhengzhou-erqi-guangchang",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-erqi-guangchang-1",
+      "to_stop_id": "cn-zhengzhou-erqi-guangchang-3",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-erqi-guangchang-3-cn-zhengzhou-erqi-guangchang-1",
+      "station_id": "cn-zhengzhou-erqi-guangchang",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-erqi-guangchang-3",
+      "to_stop_id": "cn-zhengzhou-erqi-guangchang-1",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-ertong-yiyuan-12-cn-zhengzhou-ertong-yiyuan-5",
+      "station_id": "cn-zhengzhou-ertong-yiyuan",
+      "from_line_id": "cn-zhengzhou-line-12",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-ertong-yiyuan-12",
+      "to_stop_id": "cn-zhengzhou-ertong-yiyuan-5",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-ertong-yiyuan-5-cn-zhengzhou-ertong-yiyuan-12",
+      "station_id": "cn-zhengzhou-ertong-yiyuan",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-12",
+      "from_stop_id": "cn-zhengzhou-ertong-yiyuan-5",
+      "to_stop_id": "cn-zhengzhou-ertong-yiyuan-12",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-futa-dong-12-cn-zhengzhou-futa-dong-5",
+      "station_id": "cn-zhengzhou-futa-dong",
+      "from_line_id": "cn-zhengzhou-line-12",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-futa-dong-12",
+      "to_stop_id": "cn-zhengzhou-futa-dong-5",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-futa-dong-5-cn-zhengzhou-futa-dong-12",
+      "station_id": "cn-zhengzhou-futa-dong",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-12",
+      "from_stop_id": "cn-zhengzhou-futa-dong-5",
+      "to_stop_id": "cn-zhengzhou-futa-dong-12",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-gangqu-bei-城郊-cn-zhengzhou-gangqu-bei-郑许",
+      "station_id": "cn-zhengzhou-gangqu-bei",
+      "from_line_id": "cn-zhengzhou-line-chengjiao",
+      "to_line_id": "cn-zhengzhou-line-zhengxu",
+      "from_stop_id": "cn-zhengzhou-gangqu-bei-城郊",
+      "to_stop_id": "cn-zhengzhou-gangqu-bei-郑许",
+      "walk_time_seconds": 120,
+      "source_id": "zzmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-zhengzhou-gangqu-bei-郑许-cn-zhengzhou-gangqu-bei-城郊",
+      "station_id": "cn-zhengzhou-gangqu-bei",
+      "from_line_id": "cn-zhengzhou-line-zhengxu",
+      "to_line_id": "cn-zhengzhou-line-chengjiao",
+      "from_stop_id": "cn-zhengzhou-gangqu-bei-郑许",
+      "to_stop_id": "cn-zhengzhou-gangqu-bei-城郊",
+      "walk_time_seconds": 120,
+      "source_id": "zzmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-zhengzhou-gaotie-gongyuan-12-cn-zhengzhou-gaotie-gongyuan-8",
+      "station_id": "cn-zhengzhou-gaotie-gongyuan",
+      "from_line_id": "cn-zhengzhou-line-12",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-gaotie-gongyuan-12",
+      "to_stop_id": "cn-zhengzhou-gaotie-gongyuan-8",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-gaotie-gongyuan-8-cn-zhengzhou-gaotie-gongyuan-12",
+      "station_id": "cn-zhengzhou-gaotie-gongyuan",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-12",
+      "from_stop_id": "cn-zhengzhou-gaotie-gongyuan-8",
+      "to_stop_id": "cn-zhengzhou-gaotie-gongyuan-12",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-haitansi-3-cn-zhengzhou-haitansi-5",
+      "station_id": "cn-zhengzhou-haitansi",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-haitansi-3",
+      "to_stop_id": "cn-zhengzhou-haitansi-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-haitansi-5-cn-zhengzhou-haitansi-3",
+      "station_id": "cn-zhengzhou-haitansi",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-haitansi-5",
+      "to_stop_id": "cn-zhengzhou-haitansi-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-henan-orthopaedics-hospital-3-cn-zhengzhou-henan-orthopaedics-hospital-5",
+      "station_id": "cn-zhengzhou-henan-orthopaedics-hospital",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-henan-orthopaedics-hospital-3",
+      "to_stop_id": "cn-zhengzhou-henan-orthopaedics-hospital-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-henan-orthopaedics-hospital-5-cn-zhengzhou-henan-orthopaedics-hospital-3",
+      "station_id": "cn-zhengzhou-henan-orthopaedics-hospital",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-henan-orthopaedics-hospital-5",
+      "to_stop_id": "cn-zhengzhou-henan-orthopaedics-hospital-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-henan-sports-center-3-cn-zhengzhou-henan-sports-center-4",
+      "station_id": "cn-zhengzhou-henan-sports-center",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-henan-sports-center-3",
+      "to_stop_id": "cn-zhengzhou-henan-sports-center-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-henan-sports-center-4-cn-zhengzhou-henan-sports-center-3",
+      "station_id": "cn-zhengzhou-henan-sports-center",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-henan-sports-center-4",
+      "to_stop_id": "cn-zhengzhou-henan-sports-center-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-huanghe-yingbinguan-2-cn-zhengzhou-huanghe-yingbinguan-7",
+      "station_id": "cn-zhengzhou-huanghe-yingbinguan",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-huanghe-yingbinguan-2",
+      "to_stop_id": "cn-zhengzhou-huanghe-yingbinguan-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-huanghe-yingbinguan-7-cn-zhengzhou-huanghe-yingbinguan-2",
+      "station_id": "cn-zhengzhou-huanghe-yingbinguan",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-huanghe-yingbinguan-7",
+      "to_stop_id": "cn-zhengzhou-huanghe-yingbinguan-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-huanghelu-2-cn-zhengzhou-huanghelu-5",
+      "station_id": "cn-zhengzhou-huanghelu",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-huanghelu-2",
+      "to_stop_id": "cn-zhengzhou-huanghelu-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-huanghelu-5-cn-zhengzhou-huanghelu-2",
+      "station_id": "cn-zhengzhou-huanghelu",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-huanghelu-5",
+      "to_stop_id": "cn-zhengzhou-huanghelu-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-huanghenan-lu-1-cn-zhengzhou-huanghenan-lu-12",
+      "station_id": "cn-zhengzhou-huanghenan-lu",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-12",
+      "from_stop_id": "cn-zhengzhou-huanghenan-lu-1",
+      "to_stop_id": "cn-zhengzhou-huanghenan-lu-12",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-huanghenan-lu-12-cn-zhengzhou-huanghenan-lu-1",
+      "station_id": "cn-zhengzhou-huanghenan-lu",
+      "from_line_id": "cn-zhengzhou-line-12",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-huanghenan-lu-12",
+      "to_stop_id": "cn-zhengzhou-huanghenan-lu-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-longhu-zhonghuan-nan-4-cn-zhengzhou-longhu-zhonghuan-nan-8",
+      "station_id": "cn-zhengzhou-longhu-zhonghuan-nan",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-longhu-zhonghuan-nan-4",
+      "to_stop_id": "cn-zhengzhou-longhu-zhonghuan-nan-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-longhu-zhonghuan-nan-8-cn-zhengzhou-longhu-zhonghuan-nan-4",
+      "station_id": "cn-zhengzhou-longhu-zhonghuan-nan",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-longhu-zhonghuan-nan-8",
+      "to_stop_id": "cn-zhengzhou-longhu-zhonghuan-nan-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-longzihu-1-cn-zhengzhou-longzihu-12",
+      "station_id": "cn-zhengzhou-longzihu",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-12",
+      "from_stop_id": "cn-zhengzhou-longzihu-1",
+      "to_stop_id": "cn-zhengzhou-longzihu-12",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-longzihu-12-cn-zhengzhou-longzihu-1",
+      "station_id": "cn-zhengzhou-longzihu",
+      "from_line_id": "cn-zhengzhou-line-12",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-longzihu-12",
+      "to_stop_id": "cn-zhengzhou-longzihu-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-lucheng-guangchang-1-cn-zhengzhou-lucheng-guangchang-10",
+      "station_id": "cn-zhengzhou-lucheng-guangchang",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-10",
+      "from_stop_id": "cn-zhengzhou-lucheng-guangchang-1",
+      "to_stop_id": "cn-zhengzhou-lucheng-guangchang-10",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-lucheng-guangchang-10-cn-zhengzhou-lucheng-guangchang-1",
+      "station_id": "cn-zhengzhou-lucheng-guangchang",
+      "from_line_id": "cn-zhengzhou-line-10",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-lucheng-guangchang-10",
+      "to_stop_id": "cn-zhengzhou-lucheng-guangchang-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-nansihuan-2-cn-zhengzhou-nansihuan-城郊",
+      "station_id": "cn-zhengzhou-nansihuan",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-chengjiao",
+      "from_stop_id": "cn-zhengzhou-nansihuan-2",
+      "to_stop_id": "cn-zhengzhou-nansihuan-城郊",
+      "walk_time_seconds": 213,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 255,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-nansihuan-城郊-cn-zhengzhou-nansihuan-2",
+      "station_id": "cn-zhengzhou-nansihuan",
+      "from_line_id": "cn-zhengzhou-line-chengjiao",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-nansihuan-城郊",
+      "to_stop_id": "cn-zhengzhou-nansihuan-2",
+      "walk_time_seconds": 213,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 255,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-nanwulibao-2-cn-zhengzhou-nanwulibao-5",
+      "station_id": "cn-zhengzhou-nanwulibao",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-nanwulibao-2",
+      "to_stop_id": "cn-zhengzhou-nanwulibao-5",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-nanwulibao-5-cn-zhengzhou-nanwulibao-2",
+      "station_id": "cn-zhengzhou-nanwulibao",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-nanwulibao-5",
+      "to_stop_id": "cn-zhengzhou-nanwulibao-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-olympic-sports-center-14-cn-zhengzhou-olympic-sports-center-6",
+      "station_id": "cn-zhengzhou-olympic-sports-center",
+      "from_line_id": "cn-zhengzhou-line-14",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-olympic-sports-center-14",
+      "to_stop_id": "cn-zhengzhou-olympic-sports-center-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-olympic-sports-center-6-cn-zhengzhou-olympic-sports-center-14",
+      "station_id": "cn-zhengzhou-olympic-sports-center",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-14",
+      "from_stop_id": "cn-zhengzhou-olympic-sports-center-6",
+      "to_stop_id": "cn-zhengzhou-olympic-sports-center-14",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-putian-xi-3-cn-zhengzhou-putian-xi-8",
+      "station_id": "cn-zhengzhou-putian-xi",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-putian-xi-3",
+      "to_stop_id": "cn-zhengzhou-putian-xi-8",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-putian-xi-8-cn-zhengzhou-putian-xi-3",
+      "station_id": "cn-zhengzhou-putian-xi",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-putian-xi-8",
+      "to_stop_id": "cn-zhengzhou-putian-xi-3",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-qilihe-4-cn-zhengzhou-qilihe-5",
+      "station_id": "cn-zhengzhou-qilihe",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-qilihe-4",
+      "to_stop_id": "cn-zhengzhou-qilihe-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-qilihe-5-cn-zhengzhou-qilihe-4",
+      "station_id": "cn-zhengzhou-qilihe",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-qilihe-5",
+      "to_stop_id": "cn-zhengzhou-qilihe-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-qinghua-fuzhong-4-cn-zhengzhou-qinghua-fuzhong-6",
+      "station_id": "cn-zhengzhou-qinghua-fuzhong",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-qinghua-fuzhong-4",
+      "to_stop_id": "cn-zhengzhou-qinghua-fuzhong-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-qinghua-fuzhong-6-cn-zhengzhou-qinghua-fuzhong-4",
+      "station_id": "cn-zhengzhou-qinghua-fuzhong",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-qinghua-fuzhong-6",
+      "to_stop_id": "cn-zhengzhou-qinghua-fuzhong-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-shamen-2-cn-zhengzhou-shamen-4",
+      "station_id": "cn-zhengzhou-shamen",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-shamen-2",
+      "to_stop_id": "cn-zhengzhou-shamen-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-shamen-4-cn-zhengzhou-shamen-2",
+      "station_id": "cn-zhengzhou-shamen",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-shamen-4",
+      "to_stop_id": "cn-zhengzhou-shamen-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-shi-dier-renminyiyuan-5-cn-zhengzhou-shi-dier-renminyiyuan-7",
+      "station_id": "cn-zhengzhou-shi-dier-renminyiyuan",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-shi-dier-renminyiyuan-5",
+      "to_stop_id": "cn-zhengzhou-shi-dier-renminyiyuan-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-shi-dier-renminyiyuan-7-cn-zhengzhou-shi-dier-renminyiyuan-5",
+      "station_id": "cn-zhengzhou-shi-dier-renminyiyuan",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-shi-dier-renminyiyuan-7",
+      "to_stop_id": "cn-zhengzhou-shi-dier-renminyiyuan-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-shiwei-dangxiao-10-cn-zhengzhou-shiwei-dangxiao-14",
+      "station_id": "cn-zhengzhou-shiwei-dangxiao",
+      "from_line_id": "cn-zhengzhou-line-10",
+      "to_line_id": "cn-zhengzhou-line-14",
+      "from_stop_id": "cn-zhengzhou-shiwei-dangxiao-10",
+      "to_stop_id": "cn-zhengzhou-shiwei-dangxiao-14",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-shiwei-dangxiao-14-cn-zhengzhou-shiwei-dangxiao-10",
+      "station_id": "cn-zhengzhou-shiwei-dangxiao",
+      "from_line_id": "cn-zhengzhou-line-14",
+      "to_line_id": "cn-zhengzhou-line-10",
+      "from_stop_id": "cn-zhengzhou-shiwei-dangxiao-14",
+      "to_stop_id": "cn-zhengzhou-shiwei-dangxiao-10",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-tielu-1-cn-zhengzhou-tielu-14",
+      "station_id": "cn-zhengzhou-tielu",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-14",
+      "from_stop_id": "cn-zhengzhou-tielu-1",
+      "to_stop_id": "cn-zhengzhou-tielu-14",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-tielu-14-cn-zhengzhou-tielu-1",
+      "station_id": "cn-zhengzhou-tielu",
+      "from_line_id": "cn-zhengzhou-line-14",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-tielu-14",
+      "to_stop_id": "cn-zhengzhou-tielu-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-tonghuai-5-cn-zhengzhou-tonghuai-6",
+      "station_id": "cn-zhengzhou-tonghuai",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-tonghuai-5",
+      "to_stop_id": "cn-zhengzhou-tonghuai-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-tonghuai-6-cn-zhengzhou-tonghuai-5",
+      "station_id": "cn-zhengzhou-tonghuai",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-tonghuai-6",
+      "to_stop_id": "cn-zhengzhou-tonghuai-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-tongle-3-cn-zhengzhou-tongle-8",
+      "station_id": "cn-zhengzhou-tongle",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-tongle-3",
+      "to_stop_id": "cn-zhengzhou-tongle-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-tongle-8-cn-zhengzhou-tongle-3",
+      "station_id": "cn-zhengzhou-tongle",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-tongle-8",
+      "to_stop_id": "cn-zhengzhou-tongle-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-wuyi-gongyuan-1-cn-zhengzhou-wuyi-gongyuan-5",
+      "station_id": "cn-zhengzhou-wuyi-gongyuan",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-wuyi-gongyuan-1",
+      "to_stop_id": "cn-zhengzhou-wuyi-gongyuan-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-wuyi-gongyuan-5-cn-zhengzhou-wuyi-gongyuan-1",
+      "station_id": "cn-zhengzhou-wuyi-gongyuan",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-wuyi-gongyuan-5",
+      "to_stop_id": "cn-zhengzhou-wuyi-gongyuan-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-xiaoying-6-cn-zhengzhou-xiaoying-8",
+      "station_id": "cn-zhengzhou-xiaoying",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-xiaoying-6",
+      "to_stop_id": "cn-zhengzhou-xiaoying-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-xiaoying-8-cn-zhengzhou-xiaoying-6",
+      "station_id": "cn-zhengzhou-xiaoying",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-xiaoying-8",
+      "to_stop_id": "cn-zhengzhou-xiaoying-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-xinzheng-airport-城郊-cn-zhengzhou-xinzheng-airport-郑许",
+      "station_id": "cn-zhengzhou-xinzheng-airport",
+      "from_line_id": "cn-zhengzhou-line-chengjiao",
+      "to_line_id": "cn-zhengzhou-line-zhengxu",
+      "from_stop_id": "cn-zhengzhou-xinzheng-airport-城郊",
+      "to_stop_id": "cn-zhengzhou-xinzheng-airport-郑许",
+      "walk_time_seconds": 120,
+      "source_id": "zzmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-zhengzhou-xinzheng-airport-郑许-cn-zhengzhou-xinzheng-airport-城郊",
+      "station_id": "cn-zhengzhou-xinzheng-airport",
+      "from_line_id": "cn-zhengzhou-line-zhengxu",
+      "to_line_id": "cn-zhengzhou-line-chengjiao",
+      "from_stop_id": "cn-zhengzhou-xinzheng-airport-郑许",
+      "to_stop_id": "cn-zhengzhou-xinzheng-airport-城郊",
+      "walk_time_seconds": 120,
+      "source_id": "zzmetro-routing-default"
+    },
+    {
+      "id": "xfer-cn-zhengzhou-xizhou-12-cn-zhengzhou-xizhou-3",
+      "station_id": "cn-zhengzhou-xizhou",
+      "from_line_id": "cn-zhengzhou-line-12",
+      "to_line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-xizhou-12",
+      "to_stop_id": "cn-zhengzhou-xizhou-3",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-xizhou-3-cn-zhengzhou-xizhou-12",
+      "station_id": "cn-zhengzhou-xizhou",
+      "from_line_id": "cn-zhengzhou-line-3",
+      "to_line_id": "cn-zhengzhou-line-12",
+      "from_stop_id": "cn-zhengzhou-xizhou-3",
+      "to_stop_id": "cn-zhengzhou-xizhou-12",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yanzhuang-1-cn-zhengzhou-yanzhuang-6",
+      "station_id": "cn-zhengzhou-yanzhuang",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-yanzhuang-1",
+      "to_stop_id": "cn-zhengzhou-yanzhuang-6",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yanzhuang-6-cn-zhengzhou-yanzhuang-1",
+      "station_id": "cn-zhengzhou-yanzhuang",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-yanzhuang-6",
+      "to_stop_id": "cn-zhengzhou-yanzhuang-1",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yaozhai-5-cn-zhengzhou-yaozhai-6",
+      "station_id": "cn-zhengzhou-yaozhai",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-yaozhai-5",
+      "to_stop_id": "cn-zhengzhou-yaozhai-6",
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yaozhai-6-cn-zhengzhou-yaozhai-5",
+      "station_id": "cn-zhengzhou-yaozhai",
+      "from_line_id": "cn-zhengzhou-line-6",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-yaozhai-6",
+      "to_stop_id": "cn-zhengzhou-yaozhai-5",
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yixueyuan-1-cn-zhengzhou-yixueyuan-10",
+      "station_id": "cn-zhengzhou-yixueyuan",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-10",
+      "from_stop_id": "cn-zhengzhou-yixueyuan-1",
+      "to_stop_id": "cn-zhengzhou-yixueyuan-10",
+      "walk_time_seconds": 355,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 426,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yixueyuan-1-cn-zhengzhou-yixueyuan-7",
+      "station_id": "cn-zhengzhou-yixueyuan",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-yixueyuan-1",
+      "to_stop_id": "cn-zhengzhou-yixueyuan-7",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yixueyuan-10-cn-zhengzhou-yixueyuan-1",
+      "station_id": "cn-zhengzhou-yixueyuan",
+      "from_line_id": "cn-zhengzhou-line-10",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-yixueyuan-10",
+      "to_stop_id": "cn-zhengzhou-yixueyuan-1",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yixueyuan-10-cn-zhengzhou-yixueyuan-7",
+      "station_id": "cn-zhengzhou-yixueyuan",
+      "from_line_id": "cn-zhengzhou-line-10",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-yixueyuan-10",
+      "to_stop_id": "cn-zhengzhou-yixueyuan-7",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yixueyuan-7-cn-zhengzhou-yixueyuan-1",
+      "station_id": "cn-zhengzhou-yixueyuan",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-yixueyuan-7",
+      "to_stop_id": "cn-zhengzhou-yixueyuan-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-yixueyuan-7-cn-zhengzhou-yixueyuan-10",
+      "station_id": "cn-zhengzhou-yixueyuan",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-10",
+      "from_stop_id": "cn-zhengzhou-yixueyuan-7",
+      "to_stop_id": "cn-zhengzhou-yixueyuan-10",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhangjiacun-4-cn-zhengzhou-zhangjiacun-7",
+      "station_id": "cn-zhengzhou-zhangjiacun",
+      "from_line_id": "cn-zhengzhou-line-4",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-zhangjiacun-4",
+      "to_stop_id": "cn-zhengzhou-zhangjiacun-7",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhangjiacun-7-cn-zhengzhou-zhangjiacun-4",
+      "station_id": "cn-zhengzhou-zhangjiacun",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-4",
+      "from_stop_id": "cn-zhengzhou-zhangjiacun-7",
+      "to_stop_id": "cn-zhengzhou-zhangjiacun-4",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhou-central-hospital-10-cn-zhengzhou-zhengzhou-central-hospital-5",
+      "station_id": "cn-zhengzhou-zhengzhou-central-hospital",
+      "from_line_id": "cn-zhengzhou-line-10",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-zhengzhou-central-hospital-10",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-central-hospital-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhou-central-hospital-5-cn-zhengzhou-zhengzhou-central-hospital-10",
+      "station_id": "cn-zhengzhou-zhengzhou-central-hospital",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-10",
+      "from_stop_id": "cn-zhengzhou-zhengzhou-central-hospital-5",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-central-hospital-10",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhou-daxue-1-cn-zhengzhou-zhengzhou-daxue-8",
+      "station_id": "cn-zhengzhou-zhengzhou-daxue",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-zhengzhou-daxue-1",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-daxue-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhou-daxue-8-cn-zhengzhou-zhengzhou-daxue-1",
+      "station_id": "cn-zhengzhou-zhengzhou-daxue",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-zhengzhou-daxue-8",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-daxue-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhou-railway-station-1-cn-zhengzhou-zhengzhou-railway-station-10",
+      "station_id": "cn-zhengzhou-zhengzhou-railway-station",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-10",
+      "from_stop_id": "cn-zhengzhou-zhengzhou-railway-station-1",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-railway-station-10",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhou-railway-station-10-cn-zhengzhou-zhengzhou-railway-station-1",
+      "station_id": "cn-zhengzhou-zhengzhou-railway-station",
+      "from_line_id": "cn-zhengzhou-line-10",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-zhengzhou-railway-station-10",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-railway-station-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhou-renminyiyuan-5-cn-zhengzhou-zhengzhou-renminyiyuan-7",
+      "station_id": "cn-zhengzhou-zhengzhou-renminyiyuan",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-zhengzhou-renminyiyuan-5",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-renminyiyuan-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhou-renminyiyuan-7-cn-zhengzhou-zhengzhou-renminyiyuan-5",
+      "station_id": "cn-zhengzhou-zhengzhou-renminyiyuan",
+      "from_line_id": "cn-zhengzhou-line-7",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-zhengzhou-renminyiyuan-7",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-renminyiyuan-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhoudong-railway-station-1-cn-zhengzhou-zhengzhoudong-railway-station-5",
+      "station_id": "cn-zhengzhou-zhengzhoudong-railway-station",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-1",
+      "to_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-5",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhoudong-railway-station-1-cn-zhengzhou-zhengzhoudong-railway-station-8",
+      "station_id": "cn-zhengzhou-zhengzhoudong-railway-station",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-1",
+      "to_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-8",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhoudong-railway-station-5-cn-zhengzhou-zhengzhoudong-railway-station-1",
+      "station_id": "cn-zhengzhou-zhengzhoudong-railway-station",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-5",
+      "to_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-1",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhoudong-railway-station-5-cn-zhengzhou-zhengzhoudong-railway-station-8",
+      "station_id": "cn-zhengzhou-zhengzhoudong-railway-station",
+      "from_line_id": "cn-zhengzhou-line-5",
+      "to_line_id": "cn-zhengzhou-line-8",
+      "from_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-5",
+      "to_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-8",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhoudong-railway-station-8-cn-zhengzhou-zhengzhoudong-railway-station-1",
+      "station_id": "cn-zhengzhou-zhengzhoudong-railway-station",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-8",
+      "to_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-1",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zhengzhoudong-railway-station-8-cn-zhengzhou-zhengzhoudong-railway-station-5",
+      "station_id": "cn-zhengzhou-zhengzhoudong-railway-station",
+      "from_line_id": "cn-zhengzhou-line-8",
+      "to_line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-8",
+      "to_stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-5",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zijingshan-1-cn-zhengzhou-zijingshan-2",
+      "station_id": "cn-zhengzhou-zijingshan",
+      "from_line_id": "cn-zhengzhou-line-1",
+      "to_line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-zijingshan-1",
+      "to_stop_id": "cn-zhengzhou-zijingshan-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-zhengzhou-zijingshan-2-cn-zhengzhou-zijingshan-1",
+      "station_id": "cn-zhengzhou-zijingshan",
+      "from_line_id": "cn-zhengzhou-line-2",
+      "to_line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-zijingshan-2",
+      "to_stop_id": "cn-zhengzhou-zijingshan-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

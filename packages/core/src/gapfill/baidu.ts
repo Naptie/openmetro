@@ -33,7 +33,10 @@ export interface BaiduTransitStep {
   duration?: number;
   type?: number;
   instruction?: string;
+  instructions?: string;
   path?: string;
+  start_location?: { lng?: number; lat?: number };
+  end_location?: { lng?: number; lat?: number };
   vehicle?: {
     name?: string;
     /** 0 bus, 1 subway, … */
@@ -74,7 +77,7 @@ export function loadBaiduGapfillConfig(
     return { error: 'OPENMETRO_BAIDU_AK is not set — gapfill is disabled' };
   }
   const baseUrl =
-    env.OPENMETRO_BAIDU_BASE?.trim() || 'https://api.map.baidu.com/directionlite/v1/transit';
+    env.OPENMETRO_BAIDU_BASE?.trim() || 'https://api.map.baidu.com/direction/v2/transit';
   const qps = Math.max(0.2, Number(env.OPENMETRO_BAIDU_QPS ?? '2') || 2);
   const maxRaw = env.OPENMETRO_BAIDU_MAX_QUERIES?.trim();
   const maxQueries = maxRaw ? Math.max(1, Number(maxRaw) || 0) : undefined;
@@ -129,9 +132,12 @@ export class BaiduPlannerClient {
   }
 
   /**
-   * One transit plan between two GCJ-02 points. Returns `undefined` on
-   * planner "no route" / budget exhaustion; throws on transport errors after
-   * retries so a flaky sync cannot silently drop harvested values.
+   * One transit plan between two GCJ-02 points.
+   *
+   * Direction v2 accepts `coord_type=gcj02` / `ret_coordtype=gcj02`, so
+   * canonical GCJ-02 is sent as-is (no BD-09 detour). `tactics_incity=5`
+   * prefers metro ("地铁优先") — the strongest public filter; there is no
+   * hard "metro only" switch (3 = avoid metro).
    */
   async transit(
     originGcj: BaiduLatLng,
@@ -139,11 +145,15 @@ export class BaiduPlannerClient {
     retries = 3
   ): Promise<BaiduTransitResponse | undefined> {
     if (this.exhausted) return undefined;
-    const o = gcj02ToBd09(originGcj.lat, originGcj.lng);
-    const d = gcj02ToBd09(destGcj.lat, destGcj.lng);
+    const o = { lat: originGcj.lat, lng: originGcj.lng };
+    const d = { lat: destGcj.lat, lng: destGcj.lng };
     const params = new URLSearchParams({
       origin: encodeLatLng(o),
       destination: encodeLatLng(d),
+      coord_type: 'gcj02',
+      ret_coordtype: 'gcj02',
+      // 5 = 地铁优先 (prefer metro). 3 = 不坐地铁.
+      tactics_incity: '5',
       ak: this.#cfg.ak
     });
     if (this.#cfg.sn) params.set('sn', this.#cfg.sn);
@@ -166,6 +176,7 @@ export class BaiduPlannerClient {
         const body = (await res.json()) as BaiduTransitResponse;
         // status 0 = ok; 2/4/… = no route / param — not transport failures.
         if (typeof body.status === 'number' && body.status !== 0) return body;
+        normalizeV2Response(body);
         return body;
       } catch (err) {
         lastErr = err;
@@ -177,6 +188,47 @@ export class BaiduPlannerClient {
         lastErr instanceof Error ? lastErr.message : String(lastErr)
       }`
     );
+  }
+}
+
+/**
+ * Direction v2 step shape differs from DirectionLite:
+ *   - no top-level `type`; mode lives in `vehicle_info.type` (5 walk, 3 transit)
+ *   - transit legs carry `vehicle_info.detail` (type 1 = 地铁/轻轨)
+ * Map them onto the Lite `BaiduTransitStep` fields the harvest helpers use.
+ */
+function normalizeV2Response(body: BaiduTransitResponse): void {
+  for (const route of body.result?.routes ?? []) {
+    const groups = route.steps ?? [];
+    const flat: BaiduTransitStep[] = [];
+    for (const g of groups) {
+      if (Array.isArray(g)) flat.push(...(g as BaiduTransitStep[]));
+      else if (g) flat.push(g as BaiduTransitStep);
+    }
+    for (const s of flat) {
+      const vi = (s as { vehicle_info?: Record<string, unknown> }).vehicle_info;
+      if (!vi) continue;
+      if (s.type == null && typeof vi.type === 'number') {
+        (s as { type?: number }).type = vi.type;
+      }
+      if (!s.vehicle) {
+        const detail = (vi.detail ?? {}) as Record<string, unknown>;
+        s.vehicle = {
+          type: (vi.type as number) ?? undefined,
+          name: (vi.name as string) ?? (detail.name as string) ?? undefined,
+          start_name: (detail.start_name as string) ?? undefined,
+          end_name: (detail.end_name as string) ?? undefined,
+          start_time: (detail.start_time as string) ?? undefined,
+          end_time: (detail.end_time as string) ?? undefined,
+          stop_num: (detail.stop_num as number) ?? undefined
+        };
+        const busType = detail.type;
+        if (typeof busType === 'number') {
+          s.vehicle.type = busType;
+        }
+      }
+    }
+    route.steps = [flat];
   }
 }
 
