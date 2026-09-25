@@ -53,15 +53,20 @@ const LAYERS = [
 ] as const;
 
 const STATUS = {
-  complete: { fill: '#10b981', soft: '#064e3b', label: 'complete' },
-  partial: { fill: '#f59e0b', soft: '#451a03', label: 'partial' },
-  derived: { fill: '#f97316', soft: '#431407', label: 'derived' },
-  unavailable: { fill: '#ef4444', soft: '#450a0a', label: 'unavailable' }
+  complete: { fill: '#10b981', soft: '#064e3b', label: 'Complete' },
+  partial: { fill: '#f59e0b', soft: '#451a03', label: 'Partial' },
+  derived: { fill: '#f97316', soft: '#431407', label: 'Derived' },
+  unavailable: { fill: '#ef4444', soft: '#450a0a', label: 'Unavailable' }
 } as const;
 
 function statusColor(status: string | undefined): string {
   if (status && status in STATUS) return STATUS[status as keyof typeof STATUS].fill;
   return '#64748b';
+}
+
+function statusLabel(status: string | undefined): string {
+  if (status && status in STATUS) return STATUS[status as keyof typeof STATUS].label;
+  return '—';
 }
 
 function escapeXml(s: string): string {
@@ -136,13 +141,13 @@ async function loadNetworks(root: string): Promise<NetworkDoc[]> {
  * Self-contained SVG dashboard. No external fonts/CDN — GitHub raw/README
  * rendering stays reliable; system UI stack covers CJK on typical clients.
  *
- * Layout: **fixed two columns**. Network cards wrap into rows so the canvas
- * width stays constant as cities are added; only height grows (ceil(n/2)).
+ * Layout: **fixed three columns**. Network cards wrap into rows so the canvas
+ * width stays constant as cities are added; only height grows (ceil(n/3)).
  */
 function buildQualitySvg(networks: NetworkDoc[], generatedAt: string): string {
   const pad = 28;
   const gap = 18;
-  const COLS = 2;
+  const COLS = 3;
   const cardW = 340;
   const headerH = 88;
   const rowH = 28;
@@ -226,16 +231,12 @@ function buildQualitySvg(networks: NetworkDoc[], generatedAt: string): string {
         `<text x="${x + 18}" y="${ry + 14}" fill="#94a3b8" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, PingFang SC, Microsoft YaHei, sans-serif" font-size="12">${label}</text>`
       );
 
-      // status pill
-      const status = q?.status ?? '—';
-      const pillW = Math.max(64, status.length * 6.4 + 22);
-      const pillX = x + 150;
+      // status: coloured dot + label only (no pill chrome)
+      const statusText = statusLabel(q?.status);
+      const statusX = x + 150;
+      parts.push(`<circle cx="${statusX + 3}" cy="${ry + 11}" r="3" fill="${color}"/>`);
       parts.push(
-        `<rect x="${pillX}" y="${ry + 2}" width="${pillW}" height="18" rx="9" fill="${color}" fill-opacity="0.18" stroke="${color}" stroke-opacity="0.45"/>`
-      );
-      parts.push(`<circle cx="${pillX + 10}" cy="${ry + 11}" r="3" fill="${color}"/>`);
-      parts.push(
-        `<text x="${pillX + 18}" y="${ry + 14}" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10">${status}</text>`
+        `<text x="${statusX + 10}" y="${ry + 14}" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10">${statusText}</text>`
       );
 
       // coverage track
@@ -295,7 +296,7 @@ function detailSections(networks: NetworkDoc[]): string[] {
         .map(([k, v]) => `${k}=${v}`)
         .join(', ');
       lines.push(
-        `| ${label} | ${statusEmoji(q.status)} ${q.status} | ${q.precision} | ${Math.round(q.coverage * 100)}% | ${counts || '—'} |`
+        `| ${label} | ${statusEmoji(q.status)} ${statusLabel(q.status)} | ${q.precision} | ${Math.round(q.coverage * 100)}% | ${counts || '—'} |`
       );
     }
     lines.push('');
@@ -310,10 +311,6 @@ export async function writeQualityReport(root: string): Promise<string[]> {
   const networks = await loadNetworks(root);
   const generatedAt = new Date().toISOString();
   const svgBody = `${buildQualitySvg(networks, generatedAt)}\n`;
-
-  const docsSvgPath = join(root, 'docs', 'quality.svg');
-  await mkdir(dirname(docsSvgPath), { recursive: true });
-  await writeFile(docsSvgPath, svgBody, 'utf-8');
 
   const dataSvgPath = join(root, 'data', 'quality.svg');
   await writeFile(dataSvgPath, svgBody, 'utf-8');
@@ -343,7 +340,7 @@ export async function writeQualityReport(root: string): Promise<string[]> {
   const qualityPath = join(root, 'data', 'QUALITY.md');
   await writeFile(qualityPath, `${full.join('\n')}\n`, 'utf-8');
 
-  return [docsSvgPath, dataSvgPath, qualityPath];
+  return [dataSvgPath, qualityPath];
 }
 
 const isDirect = process.argv[1]?.includes('write-quality-report');
