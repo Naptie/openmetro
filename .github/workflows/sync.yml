@@ -177,15 +177,19 @@ jobs:
         env:
           NETWORK: ${{ matrix.network }}
         run: |
-          if [ -z "$(git status --porcelain -- "data/${NETWORK}/fares.json")" ]; then
+          if [ -z "$(git status --porcelain -- "data/${NETWORK}/fares.json" "data/${NETWORK}/network.json")" ]; then
             echo "No fare changes for ${NETWORK}"
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           mkdir -p ".staging/data/${NETWORK}"
+          # fares.json is the harvest; network.json carries the refreshed
+          # quality block — without it the publish overlay keeps a stale
+          # network.json.quality and the report shows 0% fares.
           cp -a "data/${NETWORK}/fares.json" ".staging/data/${NETWORK}/"
+          cp -a "data/${NETWORK}/network.json" ".staging/data/${NETWORK}/"
           echo "changed=true" >> "$GITHUB_OUTPUT"
-          echo "Staged data/${NETWORK}/fares.json for publish"
+          echo "Staged data/${NETWORK}/{fares,network}.json for publish"
 
       - uses: actions/upload-artifact@v4
         if: steps.stage.outputs.changed == 'true'
