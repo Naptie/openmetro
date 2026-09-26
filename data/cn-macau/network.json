@@ -1,0 +1,132 @@
+{
+  "id": "cn-macau",
+  "name": "澳門輕軌",
+  "names": {
+    "zh": "澳門輕軌",
+    "en": "Macau Light Rapid Transit"
+  },
+  "city": {
+    "id": "CN-82",
+    "name": {
+      "zh": "澳门特别行政区",
+      "en": "Macao Special Administrative Region"
+    },
+    "country": "CN",
+    "population": 682100,
+    "area": 115.3,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        113.538055555,
+        22.19
+      ]
+    }
+  },
+  "country_code": "MO",
+  "currency": "MOP",
+  "timezone": "Asia/Macau",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "s",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "Colors/names/topology/fares parsed from mlm.com.mo; coordinates from AMap subway 8200 (GCJ-02); first/last from verified timetable sheets + derived runtimes.",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 15,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 15,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 14,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 14,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 4,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 26,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 17
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 210,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,1257 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/timetables.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-macau",
+  "generated_at": "2026-09-26T14:19:34.598Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-macau-tt-airport-taipa-down",
+      "station_id": "airport",
+      "stop_id": "airport-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:55",
+        "06:55",
+        "06:55",
+        "06:55",
+        "06:55",
+        "06:55",
+        "06:55"
+      ],
+      "last_train": [
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "24:24",
+        "24:24",
+        "24:24"
+      ],
+      "extras": {
+        "tt_code": "AIR",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +25min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:55",
+            "last": "23:40"
+          },
+          "fri": {
+            "first": "06:55",
+            "last": "24:24"
+          },
+          "sat_sun_hol": {
+            "first": "06:55",
+            "last": "24:24"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-airport-taipa-up",
+      "station_id": "airport",
+      "stop_id": "airport-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "24:01",
+        "24:01",
+        "24:01"
+      ],
+      "extras": {
+        "tt_code": "AIR-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +2min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:32",
+            "last": "23:17"
+          },
+          "fri": {
+            "first": "06:32",
+            "last": "24:01"
+          },
+          "sat_sun_hol": {
+            "first": "06:32",
+            "last": "24:01"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-barra-taipa-down",
+      "station_id": "barra",
+      "stop_id": "barra-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:59",
+        "23:59",
+        "23:59"
+      ],
+      "extras": {
+        "tt_code": "BAR",
+        "dest_zh": "氹仔碼頭",
+        "note": "verified BAR sheet (mlm.com.mo)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:30",
+            "last": "23:15"
+          },
+          "fri": {
+            "first": "06:30",
+            "last": "23:59"
+          },
+          "sat_sun_hol": {
+            "first": "06:30",
+            "last": "23:59"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-cotai-east-taipa-down",
+      "station_id": "cotai-east",
+      "stop_id": "cotai-east-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:51",
+        "06:51",
+        "06:51",
+        "06:51",
+        "06:51",
+        "06:51",
+        "06:51"
+      ],
+      "last_train": [
+        "23:36",
+        "23:36",
+        "23:36",
+        "23:36",
+        "24:20",
+        "24:20",
+        "24:20"
+      ],
+      "extras": {
+        "tt_code": "COE",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +21min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:51",
+            "last": "23:36"
+          },
+          "fri": {
+            "first": "06:51",
+            "last": "24:20"
+          },
+          "sat_sun_hol": {
+            "first": "06:51",
+            "last": "24:20"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-cotai-east-taipa-up",
+      "station_id": "cotai-east",
+      "stop_id": "cotai-east-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21",
+        "24:05",
+        "24:05",
+        "24:05"
+      ],
+      "extras": {
+        "tt_code": "COE-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +6min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:36",
+            "last": "23:21"
+          },
+          "fri": {
+            "first": "06:36",
+            "last": "24:05"
+          },
+          "sat_sun_hol": {
+            "first": "06:36",
+            "last": "24:05"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-cotai-west-taipa-down",
+      "station_id": "cotai-west",
+      "stop_id": "cotai-west-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:41",
+        "06:41",
+        "06:41",
+        "06:41",
+        "06:41",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26",
+        "24:10",
+        "24:10",
+        "24:10"
+      ],
+      "extras": {
+        "tt_code": "COW",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +11min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:41",
+            "last": "23:26"
+          },
+          "fri": {
+            "first": "06:41",
+            "last": "24:10"
+          },
+          "sat_sun_hol": {
+            "first": "06:41",
+            "last": "24:10"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-cotai-west-taipa-up",
+      "station_id": "cotai-west",
+      "stop_id": "cotai-west-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46"
+      ],
+      "last_train": [
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "24:15",
+        "24:15",
+        "24:15"
+      ],
+      "extras": {
+        "tt_code": "COW-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +16min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:46",
+            "last": "23:31"
+          },
+          "fri": {
+            "first": "06:46",
+            "last": "24:15"
+          },
+          "sat_sun_hol": {
+            "first": "06:46",
+            "last": "24:15"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-east-asian-games-taipa-down",
+      "station_id": "east-asian-games",
+      "stop_id": "east-asian-games-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:49",
+        "06:49",
+        "06:49",
+        "06:49",
+        "06:49",
+        "06:49",
+        "06:49"
+      ],
+      "last_train": [
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "24:18",
+        "24:18",
+        "24:18"
+      ],
+      "extras": {
+        "tt_code": "EAG",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +19min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:49",
+            "last": "23:34"
+          },
+          "fri": {
+            "first": "06:49",
+            "last": "24:18"
+          },
+          "sat_sun_hol": {
+            "first": "06:49",
+            "last": "24:18"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-east-asian-games-taipa-up",
+      "station_id": "east-asian-games",
+      "stop_id": "east-asian-games-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "24:07",
+        "24:07",
+        "24:07"
+      ],
+      "extras": {
+        "tt_code": "EAG-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +8min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:38",
+            "last": "23:23"
+          },
+          "fri": {
+            "first": "06:38",
+            "last": "24:07"
+          },
+          "sat_sun_hol": {
+            "first": "06:38",
+            "last": "24:07"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-hengqin-hengqin-up",
+      "station_id": "hengqin",
+      "stop_id": "hengqin-hengqin",
+      "line_id": "cn-macau-line-hengqin",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "lotus-hengqin",
+      "pattern_id": "cn-macau-line-hengqin-pattern-lotus-to-hengqin",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:59",
+        "23:59",
+        "23:59"
+      ],
+      "extras": {
+        "tt_code": "HQL_HQ",
+        "dest_zh": "蓮花",
+        "note": "short shuttle; official service envelope (mlm.com.mo)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:30",
+            "last": "23:15"
+          },
+          "fri": {
+            "first": "06:30",
+            "last": "23:59"
+          },
+          "sat_sun_hol": {
+            "first": "06:30",
+            "last": "23:59"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-jockey-club-taipa-down",
+      "station_id": "jockey-club",
+      "stop_id": "jockey-club-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35"
+      ],
+      "last_train": [
+        "23:20",
+        "23:20",
+        "23:20",
+        "23:20",
+        "24:04",
+        "24:04",
+        "24:04"
+      ],
+      "extras": {
+        "tt_code": "JOC",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +5min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:35",
+            "last": "23:20"
+          },
+          "fri": {
+            "first": "06:35",
+            "last": "24:04"
+          },
+          "sat_sun_hol": {
+            "first": "06:35",
+            "last": "24:04"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-jockey-club-taipa-up",
+      "station_id": "jockey-club",
+      "stop_id": "jockey-club-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:52",
+        "06:52",
+        "06:52",
+        "06:52",
+        "06:52",
+        "06:52",
+        "06:52"
+      ],
+      "last_train": [
+        "23:37",
+        "23:37",
+        "23:37",
+        "23:37",
+        "24:21",
+        "24:21",
+        "24:21"
+      ],
+      "extras": {
+        "tt_code": "JOC-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +22min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:52",
+            "last": "23:37"
+          },
+          "fri": {
+            "first": "06:52",
+            "last": "24:21"
+          },
+          "sat_sun_hol": {
+            "first": "06:52",
+            "last": "24:21"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-lotus-taipa-down",
+      "station_id": "lotus",
+      "stop_id": "lotus-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:44",
+        "06:44",
+        "06:44",
+        "06:44",
+        "06:44",
+        "06:44",
+        "06:44"
+      ],
+      "last_train": [
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29",
+        "24:13",
+        "24:13",
+        "24:13"
+      ],
+      "extras": {
+        "tt_code": "LOT",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +14min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:44",
+            "last": "23:29"
+          },
+          "fri": {
+            "first": "06:44",
+            "last": "24:13"
+          },
+          "sat_sun_hol": {
+            "first": "06:44",
+            "last": "24:13"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-lotus-taipa-up",
+      "station_id": "lotus",
+      "stop_id": "lotus-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43"
+      ],
+      "last_train": [
+        "23:28",
+        "23:28",
+        "23:28",
+        "23:28",
+        "24:12",
+        "24:12",
+        "24:12"
+      ],
+      "extras": {
+        "tt_code": "LOT-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +13min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:43",
+            "last": "23:28"
+          },
+          "fri": {
+            "first": "06:43",
+            "last": "24:12"
+          },
+          "sat_sun_hol": {
+            "first": "06:43",
+            "last": "24:12"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-must-taipa-down",
+      "station_id": "must",
+      "stop_id": "must-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:53",
+        "06:53",
+        "06:53",
+        "06:53",
+        "06:53",
+        "06:53",
+        "06:53"
+      ],
+      "last_train": [
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "24:22",
+        "24:22",
+        "24:22"
+      ],
+      "extras": {
+        "tt_code": "MUST",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +23min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:53",
+            "last": "23:38"
+          },
+          "fri": {
+            "first": "06:53",
+            "last": "24:22"
+          },
+          "sat_sun_hol": {
+            "first": "06:53",
+            "last": "24:22"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-must-taipa-up",
+      "station_id": "must",
+      "stop_id": "must-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "24:03",
+        "24:03",
+        "24:03"
+      ],
+      "extras": {
+        "tt_code": "MUST-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +4min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:34",
+            "last": "23:19"
+          },
+          "fri": {
+            "first": "06:34",
+            "last": "24:03"
+          },
+          "sat_sun_hol": {
+            "first": "06:34",
+            "last": "24:03"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-ocean-taipa-down",
+      "station_id": "ocean",
+      "stop_id": "ocean-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:18",
+        "23:18",
+        "23:18",
+        "23:18",
+        "24:02",
+        "24:02",
+        "24:02"
+      ],
+      "extras": {
+        "tt_code": "OCE",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +3min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:33",
+            "last": "23:18"
+          },
+          "fri": {
+            "first": "06:33",
+            "last": "24:02"
+          },
+          "sat_sun_hol": {
+            "first": "06:33",
+            "last": "24:02"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-ocean-taipa-up",
+      "station_id": "ocean",
+      "stop_id": "ocean-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:54",
+        "06:54",
+        "06:54",
+        "06:54",
+        "06:54",
+        "06:54",
+        "06:54"
+      ],
+      "last_train": [
+        "23:39",
+        "23:39",
+        "23:39",
+        "23:39",
+        "24:23",
+        "24:23",
+        "24:23"
+      ],
+      "extras": {
+        "tt_code": "OCE-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +24min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:54",
+            "last": "23:39"
+          },
+          "fri": {
+            "first": "06:54",
+            "last": "24:23"
+          },
+          "sat_sun_hol": {
+            "first": "06:54",
+            "last": "24:23"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-pai-kok-taipa-down",
+      "station_id": "pai-kok",
+      "stop_id": "pai-kok-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:24",
+        "23:24",
+        "23:24",
+        "23:24",
+        "24:08",
+        "24:08",
+        "24:08"
+      ],
+      "extras": {
+        "tt_code": "PAK",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +9min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:39",
+            "last": "23:24"
+          },
+          "fri": {
+            "first": "06:39",
+            "last": "24:08"
+          },
+          "sat_sun_hol": {
+            "first": "06:39",
+            "last": "24:08"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-pai-kok-taipa-up",
+      "station_id": "pai-kok",
+      "stop_id": "pai-kok-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:48",
+        "06:48",
+        "06:48",
+        "06:48",
+        "06:48",
+        "06:48",
+        "06:48"
+      ],
+      "last_train": [
+        "23:33",
+        "23:33",
+        "23:33",
+        "23:33",
+        "24:17",
+        "24:17",
+        "24:17"
+      ],
+      "extras": {
+        "tt_code": "PAK-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +18min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:48",
+            "last": "23:33"
+          },
+          "fri": {
+            "first": "06:48",
+            "last": "24:17"
+          },
+          "sat_sun_hol": {
+            "first": "06:48",
+            "last": "24:17"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-seac-pai-van-spv-up",
+      "station_id": "seac-pai-van",
+      "stop_id": "seac-pai-van-spv",
+      "line_id": "cn-macau-line-spv",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "union-hospital-spv",
+      "pattern_id": "cn-macau-line-spv-pattern-union-hospital-to-seac-pai-van",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:59",
+        "23:59",
+        "23:59"
+      ],
+      "extras": {
+        "tt_code": "SPV",
+        "dest_zh": "協和醫院",
+        "note": "short shuttle; official service envelope (mlm.com.mo)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:30",
+            "last": "23:15"
+          },
+          "fri": {
+            "first": "06:30",
+            "last": "23:59"
+          },
+          "sat_sun_hol": {
+            "first": "06:30",
+            "last": "23:59"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-stadium-taipa-down",
+      "station_id": "stadium",
+      "stop_id": "stadium-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:22",
+        "23:22",
+        "23:22",
+        "23:22",
+        "24:06",
+        "24:06",
+        "24:06"
+      ],
+      "extras": {
+        "tt_code": "STA",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +7min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:37",
+            "last": "23:22"
+          },
+          "fri": {
+            "first": "06:37",
+            "last": "24:06"
+          },
+          "sat_sun_hol": {
+            "first": "06:37",
+            "last": "24:06"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-stadium-taipa-up",
+      "station_id": "stadium",
+      "stop_id": "stadium-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:50",
+        "06:50",
+        "06:50",
+        "06:50",
+        "06:50",
+        "06:50",
+        "06:50"
+      ],
+      "last_train": [
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "24:19",
+        "24:19",
+        "24:19"
+      ],
+      "extras": {
+        "tt_code": "STA-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +20min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:50",
+            "last": "23:35"
+          },
+          "fri": {
+            "first": "06:50",
+            "last": "24:19"
+          },
+          "sat_sun_hol": {
+            "first": "06:50",
+            "last": "24:19"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-taipa-ferry-terminal-taipa-up",
+      "station_id": "taipa-ferry-terminal",
+      "stop_id": "taipa-ferry-terminal-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:59",
+        "23:59",
+        "23:59"
+      ],
+      "extras": {
+        "tt_code": "TFT-R",
+        "dest_zh": "媽閣",
+        "note": "verified TFT sheet (mlm.com.mo)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:30",
+            "last": "23:15"
+          },
+          "fri": {
+            "first": "06:30",
+            "last": "23:59"
+          },
+          "sat_sun_hol": {
+            "first": "06:30",
+            "last": "23:59"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-union-hospital-taipa-down",
+      "station_id": "union-hospital",
+      "stop_id": "union-hospital-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "taipa-ferry-terminal-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "down",
+      "first_train": [
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46"
+      ],
+      "last_train": [
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "24:15",
+        "24:15",
+        "24:15"
+      ],
+      "extras": {
+        "tt_code": "HU",
+        "dest_zh": "氹仔碼頭",
+        "note": "derived: 媽閣 +16min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:46",
+            "last": "23:31"
+          },
+          "fri": {
+            "first": "06:46",
+            "last": "24:15"
+          },
+          "sat_sun_hol": {
+            "first": "06:46",
+            "last": "24:15"
+          }
+        }
+      }
+    },
+    {
+      "id": "cn-macau-tt-union-hospital-taipa-up",
+      "station_id": "union-hospital",
+      "stop_id": "union-hospital-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "source_id": "mlm-timetable-derived",
+      "destination_stop_id": "barra-taipa",
+      "pattern_id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "direction_type": "linear",
+      "direction_label": "up",
+      "first_train": [
+        "06:41",
+        "06:41",
+        "06:41",
+        "06:41",
+        "06:41",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26",
+        "24:10",
+        "24:10",
+        "24:10"
+      ],
+      "extras": {
+        "tt_code": "HU-R",
+        "dest_zh": "媽閣",
+        "note": "derived: 氹仔碼頭 +11min (verified terminus envelope)",
+        "day_types": {
+          "mon_thu": {
+            "first": "06:41",
+            "last": "23:26"
+          },
+          "fri": {
+            "first": "06:41",
+            "last": "24:10"
+          },
+          "sat_sun_hol": {
+            "first": "06:41",
+            "last": "24:10"
+          }
+        }
+      }
+    }
+  ]
+}

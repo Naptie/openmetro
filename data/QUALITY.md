@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-26T09:44:13.425Z_
+_Updated 2026-09-26T14:20:08.030Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -89,6 +89,20 @@ _Updated 2026-09-26T09:44:13.425Z_
 | Timetables | ✅ Complete | official | 100% | official=311 |
 | Schematic | ❌ Unavailable | default | 0% | default=120 |
 | Fares | 🟡 Partial | official | 96% | official=8944, default=368 |
+
+## 澳門輕軌 / Macau Light Rapid Transit (`cn-macau`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=15 |
+| Names | ✅ Complete | official | 100% | official=15 |
+| Segment times | 🟠 Derived | derived | 100% | derived=14 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=14 |
+| Transfer times | 🟠 Derived | derived | 100% | derived=4 |
+| Timetables | ✅ Complete | official | 100% | official=26 |
+| Schematic | ❌ Unavailable | default | 0% | default=17 |
+| Fares | ✅ Complete | official | 100% | official=210 |
 
 ## 南京地铁 / Nanjing Metro (`cn-nanjing`)
 

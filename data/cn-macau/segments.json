@@ -1,0 +1,301 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-macau",
+  "generated_at": "2026-09-26T14:19:34.598Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-macau-seg-airport-taipa-taipa-ferry-terminal-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "airport-taipa",
+      "to_stop_id": "taipa-ferry-terminal-taipa",
+      "from_station_id": "airport",
+      "to_station_id": "taipa-ferry-terminal",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "distance_km": 0.411,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 11.6,
+        "a_s_per_km": 20,
+        "b_s": 119.6
+      },
+      "travel_time_seconds": 128,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-macau-seg-barra-taipa-ocean-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "barra-taipa",
+      "to_stop_id": "ocean-taipa",
+      "from_station_id": "barra",
+      "to_station_id": "ocean",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-barra-taipa-down",
+        "cn-macau-tt-ocean-taipa-down"
+      ],
+      "distance_km": 3.088,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-cotai-east-taipa-must-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "cotai-east-taipa",
+      "to_stop_id": "must-taipa",
+      "from_station_id": "cotai-east",
+      "to_station_id": "must",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-cotai-east-taipa-down",
+        "cn-macau-tt-must-taipa-down"
+      ],
+      "distance_km": 0.558,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-cotai-west-taipa-lotus-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "cotai-west-taipa",
+      "to_stop_id": "lotus-taipa",
+      "from_station_id": "cotai-west",
+      "to_station_id": "lotus",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-cotai-west-taipa-down",
+        "cn-macau-tt-lotus-taipa-down"
+      ],
+      "distance_km": 0.646,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-east-asian-games-taipa-cotai-east-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "east-asian-games-taipa",
+      "to_stop_id": "cotai-east-taipa",
+      "from_station_id": "east-asian-games",
+      "to_station_id": "cotai-east",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-east-asian-games-taipa-down",
+        "cn-macau-tt-cotai-east-taipa-down"
+      ],
+      "distance_km": 0.651,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-jockey-club-taipa-stadium-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "jockey-club-taipa",
+      "to_stop_id": "stadium-taipa",
+      "from_station_id": "jockey-club",
+      "to_station_id": "stadium",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-jockey-club-taipa-down",
+        "cn-macau-tt-stadium-taipa-down"
+      ],
+      "distance_km": 0.565,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-lotus-hengqin-hengqin-hengqin",
+      "line_id": "cn-macau-line-hengqin",
+      "from_stop_id": "lotus-hengqin",
+      "to_stop_id": "hengqin-hengqin",
+      "from_station_id": "lotus",
+      "to_station_id": "hengqin",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "distance_km": 1.481,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 35.8,
+        "a_s_per_km": 20,
+        "b_s": 119.6
+      },
+      "travel_time_seconds": 149,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-macau-seg-lotus-taipa-union-hospital-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "lotus-taipa",
+      "to_stop_id": "union-hospital-taipa",
+      "from_station_id": "lotus",
+      "to_station_id": "union-hospital",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-lotus-taipa-down",
+        "cn-macau-tt-union-hospital-taipa-down"
+      ],
+      "distance_km": 0.372,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-must-taipa-airport-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "must-taipa",
+      "to_stop_id": "airport-taipa",
+      "from_station_id": "must",
+      "to_station_id": "airport",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-must-taipa-down",
+        "cn-macau-tt-airport-taipa-down"
+      ],
+      "distance_km": 0.818,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-ocean-taipa-jockey-club-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "ocean-taipa",
+      "to_stop_id": "jockey-club-taipa",
+      "from_station_id": "ocean",
+      "to_station_id": "jockey-club",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-ocean-taipa-down",
+        "cn-macau-tt-jockey-club-taipa-down"
+      ],
+      "distance_km": 0.612,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-pai-kok-taipa-cotai-west-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "pai-kok-taipa",
+      "to_stop_id": "cotai-west-taipa",
+      "from_station_id": "pai-kok",
+      "to_station_id": "cotai-west",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-pai-kok-taipa-down",
+        "cn-macau-tt-cotai-west-taipa-down"
+      ],
+      "distance_km": 0.734,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-stadium-taipa-pai-kok-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "stadium-taipa",
+      "to_stop_id": "pai-kok-taipa",
+      "from_station_id": "stadium",
+      "to_station_id": "pai-kok",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-stadium-taipa-down",
+        "cn-macau-tt-pai-kok-taipa-down"
+      ],
+      "distance_km": 0.472,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-macau-seg-union-hospital-spv-seac-pai-van-spv",
+      "line_id": "cn-macau-line-spv",
+      "from_stop_id": "union-hospital-spv",
+      "to_stop_id": "seac-pai-van-spv",
+      "from_station_id": "union-hospital",
+      "to_station_id": "seac-pai-van",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "distance_km": 0.828,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 21.9,
+        "a_s_per_km": 20,
+        "b_s": 119.6
+      },
+      "travel_time_seconds": 136,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-macau-seg-union-hospital-taipa-east-asian-games-taipa",
+      "line_id": "cn-macau-line-taipa",
+      "from_stop_id": "union-hospital-taipa",
+      "to_stop_id": "east-asian-games-taipa",
+      "from_station_id": "union-hospital",
+      "to_station_id": "east-asian-games",
+      "direction": "both",
+      "source_id": "mlm-route",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-macau-tt-union-hospital-taipa-down",
+        "cn-macau-tt-east-asian-games-taipa-down"
+      ],
+      "distance_km": 0.682,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    }
+  ]
+}

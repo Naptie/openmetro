@@ -1,0 +1,104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-macau",
+  "generated_at": "2026-09-26T14:19:34.597Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-macau-line-hengqin-pattern-lotus-to-hengqin",
+      "line_id": "cn-macau-line-hengqin",
+      "name": "橫琴線",
+      "names": {
+        "zh": "橫琴線",
+        "en": "Hengqin Line"
+      },
+      "stop_ids": [
+        "lotus-hengqin",
+        "hengqin-hengqin"
+      ],
+      "origin_stop_id": "lotus-hengqin",
+      "terminal_stop_id": "hengqin-hengqin",
+      "is_primary": true,
+      "color": "#BD273A",
+      "source_ids": [
+        {
+          "source": "mlm-route",
+          "id": "hengqin"
+        }
+      ],
+      "extras": {
+        "line_key": "hengqin",
+        "direction": "down",
+        "dest_name": "Hengqin"
+      }
+    },
+    {
+      "id": "cn-macau-line-spv-pattern-union-hospital-to-seac-pai-van",
+      "line_id": "cn-macau-line-spv",
+      "name": "石排灣線",
+      "names": {
+        "zh": "石排灣線",
+        "en": "Seac Pai Van Line"
+      },
+      "stop_ids": [
+        "union-hospital-spv",
+        "seac-pai-van-spv"
+      ],
+      "origin_stop_id": "union-hospital-spv",
+      "terminal_stop_id": "seac-pai-van-spv",
+      "is_primary": true,
+      "color": "#8A66C3",
+      "source_ids": [
+        {
+          "source": "mlm-route",
+          "id": "spv"
+        }
+      ],
+      "extras": {
+        "line_key": "spv",
+        "direction": "down",
+        "dest_name": "Seac Pai Van"
+      }
+    },
+    {
+      "id": "cn-macau-line-taipa-pattern-barra-to-taipa-ferry-terminal",
+      "line_id": "cn-macau-line-taipa",
+      "name": "氹仔線",
+      "names": {
+        "zh": "氹仔線",
+        "en": "Taipa Line"
+      },
+      "stop_ids": [
+        "barra-taipa",
+        "ocean-taipa",
+        "jockey-club-taipa",
+        "stadium-taipa",
+        "pai-kok-taipa",
+        "cotai-west-taipa",
+        "lotus-taipa",
+        "union-hospital-taipa",
+        "east-asian-games-taipa",
+        "cotai-east-taipa",
+        "must-taipa",
+        "airport-taipa",
+        "taipa-ferry-terminal-taipa"
+      ],
+      "origin_stop_id": "barra-taipa",
+      "terminal_stop_id": "taipa-ferry-terminal-taipa",
+      "is_primary": true,
+      "color": "#93D50A",
+      "source_ids": [
+        {
+          "source": "mlm-route",
+          "id": "taipa"
+        }
+      ],
+      "extras": {
+        "line_key": "taipa",
+        "direction": "down",
+        "dest_name": "Taipa Ferry Terminal"
+      }
+    }
+  ]
+}

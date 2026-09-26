@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-macau",
+  "generated_at": "2026-09-26T14:19:34.598Z",
+  "source": [],
+  "records": [
+    {
+      "id": "xfer-lotus-hengqin-lotus-taipa",
+      "station_id": "lotus",
+      "from_line_id": "cn-macau-line-hengqin",
+      "to_line_id": "cn-macau-line-taipa",
+      "from_stop_id": "lotus-hengqin",
+      "to_stop_id": "lotus-taipa",
+      "walk_time_seconds": 120,
+      "source_id": "mlm-transfer-default"
+    },
+    {
+      "id": "xfer-lotus-taipa-lotus-hengqin",
+      "station_id": "lotus",
+      "from_line_id": "cn-macau-line-taipa",
+      "to_line_id": "cn-macau-line-hengqin",
+      "from_stop_id": "lotus-taipa",
+      "to_stop_id": "lotus-hengqin",
+      "walk_time_seconds": 120,
+      "source_id": "mlm-transfer-default"
+    },
+    {
+      "id": "xfer-union-hospital-spv-union-hospital-taipa",
+      "station_id": "union-hospital",
+      "from_line_id": "cn-macau-line-spv",
+      "to_line_id": "cn-macau-line-taipa",
+      "from_stop_id": "union-hospital-spv",
+      "to_stop_id": "union-hospital-taipa",
+      "walk_time_seconds": 120,
+      "source_id": "mlm-transfer-default"
+    },
+    {
+      "id": "xfer-union-hospital-taipa-union-hospital-spv",
+      "station_id": "union-hospital",
+      "from_line_id": "cn-macau-line-taipa",
+      "to_line_id": "cn-macau-line-spv",
+      "from_stop_id": "union-hospital-taipa",
+      "to_stop_id": "union-hospital-spv",
+      "walk_time_seconds": 120,
+      "source_id": "mlm-transfer-default"
+    }
+  ]
+}

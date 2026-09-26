@@ -1,0 +1,31 @@
+{
+  "name": "@openmetro/adapter-cn-macau",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "openmetro": {
+    "networkId": "cn-macau",
+    "entry": "./src/adapter.ts",
+    "displayName": {
+      "zh": "澳门",
+      "en": "Macau"
+    },
+    "cityId": "CN-82"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun --external @openmetro/core",
+    "normalize": "bun run src/run.ts"
+  },
+  "dependencies": {
+    "effect": "^3.22.0",
+    "@openmetro/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.6.0"
+  }
+}
