@@ -85,6 +85,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-macau": {
+      "name": "@openmetro/adapter-cn-macau",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-nanjing": {
       "name": "@openmetro/adapter-cn-nanjing",
       "version": "0.1.0",
@@ -394,6 +406,8 @@
     "@openmetro/adapter-cn-hangzhou": ["@openmetro/adapter-cn-hangzhou@workspace:packages/adapters/cn-hangzhou"],
 
     "@openmetro/adapter-cn-hongkong": ["@openmetro/adapter-cn-hongkong@workspace:packages/adapters/cn-hongkong"],
+
+    "@openmetro/adapter-cn-macau": ["@openmetro/adapter-cn-macau@workspace:packages/adapters/cn-macau"],
 
     "@openmetro/adapter-cn-nanjing": ["@openmetro/adapter-cn-nanjing@workspace:packages/adapters/cn-nanjing"],
 
