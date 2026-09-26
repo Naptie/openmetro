@@ -1,25 +1,4 @@
-import {
-  asciiSlug,
-  coerceStationStatus,
-  deriveLineEnglishName,
-  foldStationName,
-  hasValidTimes,
-  hexToCss,
-  parsePixel,
-  parseSlCoord,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  type LineEncoded,
-  type LineMode,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { asciiSlug, coerceStationStatus, deriveLineEnglishName, foldStationName, hasValidTimes, hexToCss, parsePixel, parseSlCoord, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type LineMode, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 import {
   parseEnTimetableHtml,
   type ShenzhenSources,
@@ -643,14 +622,7 @@ export function normalize(input: ShenzhenSources): ShenzhenCanonical {
       id: NETWORK_ID,
       name: '深圳地铁',
       names: { zh: '深圳地铁', en: 'Shenzhen Metro' },
-      city: {
-        id: 'CN-4403',
-        name: { zh: '深圳', en: 'Shenzhen' },
-        country: 'CN',
-        population: 17661800,
-        area: 1997.47,
-        location: { type: 'Point', coordinates: [114.057868, 22.543099] }
-      },
+      city: placeholderCity('CN-4403'),
       country_code: 'CN',
       currency: 'CNY',
       timezone: 'Asia/Shanghai',

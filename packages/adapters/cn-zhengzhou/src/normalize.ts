@@ -1,23 +1,4 @@
-import {
-  asciiSlug,
-  cleanTime,
-  deriveLineEnglishName,
-  foldStationName,
-  hexToCss,
-  parsePixel,
-  parseSlCoord,
-  pinyinToEnglish,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded
-} from '@openmetro/core';
+import { asciiSlug, cleanTime, deriveLineEnglishName, foldStationName, hexToCss, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded } from '@openmetro/core';
 import type { AmapLine, AmapStation, AmapSubwayDoc, ZhengzhouSources } from './fetch.js';
 
 const NETWORK_ID = 'cn-zhengzhou';
@@ -866,14 +847,7 @@ export function normalizeZhengzhou(input: ZhengzhouSources): ZhengzhouCanonical 
     id: NETWORK_ID,
     name: '郑州地铁',
     names: { zh: '郑州地铁', en: 'Zhengzhou Metro' },
-    city: {
-      id: 'CN-4101',
-      name: { zh: '郑州', en: 'Zhengzhou' },
-      country: 'CN',
-      population: 12600000,
-      area: 7446,
-      location: { type: 'Point', coordinates: [113.6254, 34.7466] }
-    },
+    city: placeholderCity('CN-4101'),
     country_code: 'CN',
     currency: 'CNY',
     timezone: 'Asia/Shanghai',

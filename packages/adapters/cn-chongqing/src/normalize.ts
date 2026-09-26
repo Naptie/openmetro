@@ -1,19 +1,4 @@
-import {
-  deriveLineEnglishName,
-  foldStationName,
-  pinyinToEnglish,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { deriveLineEnglishName, foldStationName, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 import {
   type AmapLine,
   type AmapStation,
@@ -573,17 +558,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
     id: NETWORK_ID,
     name: '重庆轨道交通',
     names: { zh: '重庆轨道交通', en: 'Chongqing Rail Transit' },
-    city: {
-      id: 'CN-50',
-      name: { zh: '重庆', en: 'Chongqing' },
-      country: 'CN',
-      population: null,
-      area: null,
-      location: {
-        type: 'Point',
-        coordinates: [106.55, 29.56]
-      }
-    },
+    city: placeholderCity('CN-50'),
     country_code: 'CN',
     currency: 'CNY',
     timezone: 'Asia/Shanghai',

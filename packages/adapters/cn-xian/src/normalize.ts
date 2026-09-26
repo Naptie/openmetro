@@ -1,25 +1,4 @@
-import {
-  asciiSlug,
-  cleanTime,
-  foldStationName,
-  hexToCss,
-  isUsableEnglish,
-  parsePixel,
-  parseSlCoord,
-  pinyinToEnglish,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  titleCaseRoman,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { asciiSlug, cleanTime, foldStationName, hexToCss, isUsableEnglish, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, titleCaseRoman, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 import type {
   AmapLine,
   AmapStation,
@@ -703,14 +682,7 @@ export function normalizeXian(input: XianSources): XianCanonical {
     id: NETWORK_ID,
     name: '西安地铁',
     names: { zh: '西安地铁', en: "Xi'an Metro" },
-    city: {
-      id: 'CN-6101',
-      name: { zh: '西安', en: "Xi'an" },
-      country: 'CN',
-      population: 12952907,
-      area: 10752,
-      location: { type: 'Point', coordinates: [108.948, 34.2634] }
-    },
+    city: placeholderCity('CN-6101'),
     country_code: 'CN',
     currency: 'CNY',
     timezone: 'Asia/Shanghai',

@@ -9,19 +9,7 @@ import type {
   TimetableEncoded,
   TransferEncoded
 } from '@openmetro/core';
-import {
-  applyTimetableServiceStatus,
-  asciiSlug,
-  deriveLineEnglishName,
-  deriveLineShortName,
-  deriveTransfers,
-  fillMissingSegmentTimes,
-  hasValidTimes,
-  hexToCss,
-  lineSlug,
-  normalizeTimetableTimes,
-  resolveLineShortName,
-} from '@openmetro/core';
+import { applyTimetableServiceStatus, asciiSlug, deriveLineEnglishName, deriveLineShortName, deriveTransfers, fillMissingSegmentTimes, hasValidTimes, hexToCss, lineSlug, normalizeTimetableTimes, placeholderCity, resolveLineShortName } from '@openmetro/core';
 import { XMLParser } from 'fast-xml-parser';
 import { buildBeijingTimetablesFromTimeinfos } from './timeinfos.js';
 
@@ -311,14 +299,7 @@ export function normalize(input: BeijingRawInput): BeijingCanonical {
       id: NETWORK_ID,
       name: '北京地铁',
       names: { zh: '北京地铁', en: 'Beijing Subway' },
-      city: {
-        id: 'CN-11',
-        name: { zh: '北京', en: 'Beijing' },
-        country: 'CN',
-        population: 21893095,
-        area: 16410.54,
-        location: { type: 'Point', coordinates: [116.407526, 39.90403] }
-      },
+      city: placeholderCity('CN-11'),
       country_code: 'CN',
       currency: 'CNY',
       timezone: 'Asia/Shanghai',

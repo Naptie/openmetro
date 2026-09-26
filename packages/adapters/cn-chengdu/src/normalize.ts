@@ -1,24 +1,4 @@
-import {
-  applyTimetableServiceStatus,
-  asciiSlug,
-  canonicalizePatterns,
-  cleanTime,
-  foldStationName,
-  hexToCss,
-  parsePixel,
-  parseSlCoord,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { applyTimetableServiceStatus, asciiSlug, canonicalizePatterns, cleanTime, foldStationName, hexToCss, parsePixel, parseSlCoord, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 import type {
   AmapLine,
   AmapStation,
@@ -623,14 +603,7 @@ export function normalizeChengdu(input: ChengduSources): ChengduCanonical {
     id: NETWORK_ID,
     name: '成都轨道交通',
     names: { zh: '成都轨道交通', en: 'Chengdu Rail Transit' },
-    city: {
-      id: 'CN-5101',
-      name: { zh: '成都', en: 'Chengdu' },
-      country: 'CN',
-      population: 21403000,
-      area: 14335,
-      location: { type: 'Point', coordinates: [104.066, 30.572] }
-    },
+    city: placeholderCity('CN-5101'),
     country_code: 'CN',
     currency: 'CNY',
     timezone: 'Asia/Shanghai',

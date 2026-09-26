@@ -1,26 +1,4 @@
-import {
-  applyTimetableServiceStatus,
-  asciiSlug,
-  cleanTime,
-  deriveLineEnglishName,
-  foldStationName,
-  hasValidTimes,
-  hexToCss,
-  parsePixel,
-  parseSlCoord,
-  pinyinToEnglish,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { applyTimetableServiceStatus, asciiSlug, cleanTime, deriveLineEnglishName, foldStationName, hasValidTimes, hexToCss, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 import type { AmapLine, AmapStation, HangzhouSources, HzOperationAll } from './fetch.js';
 
 const NETWORK_ID = 'cn-hangzhou';
@@ -690,14 +668,7 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
     id: NETWORK_ID,
     name: '杭州地铁',
     names: { zh: '杭州地铁', en: 'Hangzhou Metro' },
-    city: {
-      id: 'CN-3301',
-      name: { zh: '杭州', en: 'Hangzhou' },
-      country: 'CN',
-      population: 12376000,
-      area: 16850,
-      location: { type: 'Point', coordinates: [120.1551, 30.2741] }
-    },
+    city: placeholderCity('CN-3301'),
     country_code: 'CN',
     currency: 'CNY',
     timezone: 'Asia/Shanghai',

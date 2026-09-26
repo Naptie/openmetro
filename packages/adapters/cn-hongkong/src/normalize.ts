@@ -1,16 +1,5 @@
 import type { FareMatrixEncoded } from '@openmetro/core';
-import {
-  readableSlug,
-  stationIdFor,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { placeholderCity, readableSlug, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 import { buildFareMatrix, foldFareName } from './fares.js';
 import type { MtrLineStationRow, MtrSources } from './fetch.js';
 
@@ -521,14 +510,7 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
     id: NETWORK_ID,
     name: '港鐵',
     names: { zh: '港鐵', en: 'Mass Transit Railway (Hong Kong)' },
-    city: {
-      id: 'HK',
-      name: { zh: '香港', en: 'Hong Kong' },
-      country: 'CN',
-      population: 7500000,
-      area: 1110,
-      location: { type: 'Point', coordinates: [114.1694, 22.3193] }
-    },
+    city: placeholderCity('CN-81'),
     country_code: 'CN',
     currency: 'HKD',
     timezone: 'Asia/Hong_Kong',

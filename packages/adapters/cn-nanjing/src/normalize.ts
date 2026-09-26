@@ -1,24 +1,4 @@
-import {
-  isUsableEnglish,
-  titleCaseRoman,
-  asciiSlug,
-  deriveLineEnglishName,
-  foldStationName,
-  hasValidTimes,
-  hexToCss,
-  parsePixel,
-  parseSlCoord,
-  pinyinToEnglish,
-  readableSlug,
-  stationIdFor,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded
-} from '@openmetro/core';
+import { asciiSlug, deriveLineEnglishName, foldStationName, hasValidTimes, hexToCss, isUsableEnglish, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, stationIdFor, titleCaseRoman, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded } from '@openmetro/core';
 import type {
   AmapLine,
   AmapStation,
@@ -421,14 +401,7 @@ function findAmapByContainment(
     id: NETWORK_ID,
     name: '南京地铁',
     names: { zh: '南京地铁', en: 'Nanjing Metro' },
-    city: {
-      id: 'CN-3201',
-      name: { zh: '南京', en: 'Nanjing' },
-      country: 'CN',
-      population: 9547000,
-      area: 6587,
-      location: { type: 'Point', coordinates: [118.7969, 32.0603] }
-    },
+    city: placeholderCity('CN-3201'),
     country_code: 'CN',
     currency: 'CNY',
     timezone: 'Asia/Shanghai',

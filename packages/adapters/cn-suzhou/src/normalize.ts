@@ -1,22 +1,4 @@
-import {
-  asciiSlug,
-  coerceStationStatus,
-  deriveLineEnglishName,
-  hasValidTimes,
-  hexToCss,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  type LineEncoded,
-  type LineStatus,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { asciiSlug, coerceStationStatus, deriveLineEnglishName, hasValidTimes, hexToCss, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type LineStatus, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 
 export interface SuzhouRawInput {
   szmtrJs: string;
@@ -932,14 +914,7 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
       id: NETWORK_ID,
       name: '苏州轨道交通',
       names: { zh: '苏州轨道交通', en: 'Suzhou Rail Transit' },
-      city: {
-        id: 'CN-32',
-        name: { zh: '苏州', en: 'Suzhou' },
-        country: 'CN',
-        population: 12911000,
-        area: 8657.32,
-        location: { type: 'Point', coordinates: [120.58529, 31.29888] }
-      },
+      city: placeholderCity('CN-3205'),
       country_code: 'CN',
       currency: 'CNY',
       timezone: 'Asia/Shanghai',

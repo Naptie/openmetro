@@ -1,26 +1,4 @@
-import {
-  applyDerivedTimes,
-  applyTimetableServiceStatus,
-  deriveSegmentTimes,
-  deriveTransfers,
-  foldRareCharacters,
-  hasValidTimes,
-  hexToCss,
-  lineSlug,
-  normalizeTimetableTimes,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  stripDirectionAnnotation,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { applyDerivedTimes, applyTimetableServiceStatus, deriveSegmentTimes, deriveTransfers, foldRareCharacters, hasValidTimes, hexToCss, lineSlug, normalizeTimetableTimes, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, stripDirectionAnnotation, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 
 export interface GzRawInput {
   linestation: { businessObject: GzLineCard[] };
@@ -492,14 +470,7 @@ export function normalize(input: GzRawInput): GzCanonical {
       id: NETWORK_ID,
       name: '广州地铁',
       names: { zh: '广州地铁', en: 'Guangzhou Metro' },
-      city: {
-        id: 'CN-4401',
-        name: { zh: '广州', en: 'Guangzhou' },
-        country: 'CN',
-        population: 18676605,
-        area: 7248.86,
-        location: { type: 'Point', coordinates: [113.26, 23.13] }
-      },
+      city: placeholderCity('CN-4401'),
       country_code: 'CN',
       currency: 'CNY',
       timezone: 'Asia/Shanghai',

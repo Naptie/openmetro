@@ -25,6 +25,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   type AdapterManifest,
+  applyCityMetadata,
   computeNetworkQuality,
   runGapfill,
   SYNC_LAYERS,
@@ -231,6 +232,25 @@ async function main() {
     console.error(`sync failed for: ${failed.join(', ')}`);
     process.exit(1);
   }
+
+  // City metadata always comes from the latest worldwide-regions release.
+  // Adapters only declare `openmetro.cityId`; nothing is cached in the repo.
+  try {
+    const cities = await applyCityMetadata({
+      root: ROOT,
+      networks: adapters.map((a) => a.networkId)
+    });
+    console.log(`city metadata from worldwide-regions ${cities.tag}`);
+    for (const u of cities.updated) {
+      console.log(`[${u.networkId}] city <- ${u.cityId} (country ${u.country})`);
+    }
+  } catch (err) {
+    console.error(
+      `city metadata apply failed: ${err instanceof Error ? err.message : String(err)}`
+    );
+    process.exit(1);
+  }
+
   try {
     const report = await writeQualityReport(ROOT);
     console.log(`quality report: ${report}`);

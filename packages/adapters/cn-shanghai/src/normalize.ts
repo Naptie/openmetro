@@ -1,22 +1,4 @@
-import {
-  applyDerivedTimes,
-  applyTimetableServiceStatus,
-  bd09ToGcj02,
-  deriveSegmentTimes,
-  deriveTransfers,
-  hasValidTimes,
-  type LineEncoded,
-  type NetworkEncoded,
-  normalizeTimetableTimes,
-  type PatternEncoded,
-  readableSlug,
-  resolveLineShortName,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { applyDerivedTimes, applyTimetableServiceStatus, bd09ToGcj02, deriveSegmentTimes, deriveTransfers, hasValidTimes, normalizeTimetableTimes, placeholderCity, readableSlug, resolveLineShortName, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 import type { FlTimeRow } from './viewlnfltime.js';
 
 export interface ShRawInput {
@@ -758,14 +740,7 @@ export function normalize(input: ShRawInput): ShCanonical {
       id: NETWORK_ID,
       name: '上海地铁',
       names: { zh: '上海地铁', en: 'Shanghai Metro' },
-      city: {
-        id: 'CN-31',
-        name: { zh: '上海', en: 'Shanghai' },
-        country: 'CN',
-        population: 24870895,
-        area: 6341,
-        location: { type: 'Point', coordinates: [121.469166666, 31.2325] }
-      },
+      city: placeholderCity('CN-31'),
       country_code: 'CN',
       currency: 'CNY',
       timezone: 'Asia/Shanghai',

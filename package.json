@@ -15,6 +15,7 @@
     "lint": "biome check .",
     "format": "biome format --write .",
     "data:sync": "bun run scripts/sync.ts",
+    "data:cities": "bun run scripts/apply-city-metadata.ts",
     "data:verify": "bun run scripts/verify-data.ts",
     "openapi": "bun run scripts/export-openapi.ts",
     "json-schemas": "bun run scripts/export-json-schemas.ts",

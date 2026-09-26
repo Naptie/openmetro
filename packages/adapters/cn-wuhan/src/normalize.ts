@@ -1,26 +1,4 @@
-import {
-  applyTimetableServiceStatus,
-  asciiSlug,
-  cleanTime,
-  deriveLineEnglishName,
-  foldStationName,
-  hasValidTimes,
-  hexToCss,
-  parsePixel,
-  parseSlCoord,
-  pinyinToEnglish,
-  readableSlug,
-  resolveLineShortName,
-  stationIdFor,
-  type LineEncoded,
-  type NetworkEncoded,
-  type PatternEncoded,
-  type SegmentEncoded,
-  type StationEncoded,
-  type StopEncoded,
-  type TimetableEncoded,
-  type TransferEncoded
-} from '@openmetro/core';
+import { applyTimetableServiceStatus, asciiSlug, cleanTime, deriveLineEnglishName, foldStationName, hasValidTimes, hexToCss, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
 import type {
   AmapLineRaw,
   AmapStationRaw,
@@ -1200,14 +1178,7 @@ export function normalizeWuhan(input: WuhanSources): WuhanCanonical {
     id: NETWORK_ID,
     name: '武汉地铁',
     names: { zh: '武汉地铁', en: 'Wuhan Metro' },
-    city: {
-      id: 'CN-4201',
-      name: { zh: '武汉', en: 'Wuhan' },
-      country: 'CN',
-      population: 13739000,
-      area: 8569,
-      location: { type: 'Point', coordinates: [114.3055, 30.5928] }
-    },
+    city: placeholderCity('CN-4201'),
     country_code: 'CN',
     currency: 'CNY',
     timezone: 'Asia/Shanghai',
