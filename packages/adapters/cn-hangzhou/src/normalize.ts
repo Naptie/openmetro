@@ -366,16 +366,19 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
     patternStopIds: readonly string[],
     trunkStopIds: ReadonlySet<string>
   ): string | undefined => {
+    // Junction = first shared stop next to this pattern's unique portion.
+    let lastUnique = -1;
     for (let i = 0; i < patternStopIds.length; i++) {
-      const id = patternStopIds[i]!;
-      if (!trunkStopIds.has(id)) continue;
-      const prev = i > 0 ? patternStopIds[i - 1] : undefined;
-      const next = i + 1 < patternStopIds.length ? patternStopIds[i + 1] : undefined;
-      if ((prev && !trunkStopIds.has(prev)) || (next && !trunkStopIds.has(next))) {
-        return id;
-      }
+      if (!trunkStopIds.has(patternStopIds[i]!)) lastUnique = i;
     }
-    return undefined;
+    if (lastUnique < 0) return patternStopIds[0];
+    for (let i = lastUnique + 1; i < patternStopIds.length; i++) {
+      if (trunkStopIds.has(patternStopIds[i]!)) return patternStopIds[i];
+    }
+    for (let i = lastUnique - 1; i >= 0; i--) {
+      if (trunkStopIds.has(patternStopIds[i]!)) return patternStopIds[i];
+    }
+    return patternStopIds.find((id) => trunkStopIds.has(id));
   };
 
   const detail = official.subwaySiteDetail ?? {};
