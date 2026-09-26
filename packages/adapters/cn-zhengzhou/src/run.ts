@@ -69,11 +69,11 @@ export async function runZhengzhouNormalize(opts: ZhengzhouNormalizeOptions = {}
       onGeocode: () => geocoded++
     });
 
-  {
-    const enFill = await fillStationEnglishNames(stations);
-    stations = enFill.stations;
-    console.log(`  wikidata station names: ${enFill.filled}/${enFill.requested} filled`);
-  }
+    {
+      const enFill = await fillStationEnglishNames(stations);
+      stations = enFill.stations;
+      console.log(`  wikidata station names: ${enFill.filled}/${enFill.requested} filled`);
+    }
   }
 
   const defaultTransfer = canonical.network.routing.default_transfer_seconds ?? 120;

@@ -144,11 +144,10 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
     fillStraightLineDistances(canonical.segments, stations)
   );
 
-
   // Resolve any remaining empty/Chinese names.en via Wikidata.
   const enFill = await fillStationEnglishNames(stations);
   stations = enFill.stations;
-  console.log('  wikidata station names: ' + enFill.filled + '/' + enFill.requested + ' filled');
+  console.log(`  wikidata station names: ${enFill.filled}/${enFill.requested} filled`);
   await writeCanonical(outDir, 'cn-guangzhou', {
     network: canonical.network,
     lines: canonical.lines,

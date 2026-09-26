@@ -160,7 +160,7 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
   const stopById = new Map<string, StopEncoded>();
 
   const lineCodes = [...new Set(rows.map((r) => r.lineCode))].sort();
-  const lineNameByCode = new Map(lineCodes.map((c) => [c, LINE_META[c]?.zh ?? c]));
+  const _lineNameByCode = new Map(lineCodes.map((c) => [c, LINE_META[c]?.zh ?? c]));
 
   for (const code of lineCodes) {
     const meta = LINE_META[code] ?? {
@@ -435,7 +435,7 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
     patternByLine.set(p.line_id, list);
   }
   /** Ordered stop path covering origin→dest on one line, stitching patterns if needed. */
-  function resolveStopPath(originStopId: string, destStopId: string): string[] | undefined {
+  function _resolveStopPath(originStopId: string, destStopId: string): string[] | undefined {
     const list = patterns.filter(
       (p) => p.stop_ids.includes(originStopId) && p.stop_ids.includes(destStopId)
     );

@@ -1,5 +1,4 @@
 import {
-  pinyinToEnglish,
   applyDerivedTimes,
   applyTimetableServiceStatus,
   deriveSegmentTimes,
@@ -160,9 +159,9 @@ export function normalize(input: GzRawInput): GzCanonical {
     if (cached) return cached;
     const label = en && /^[A-Za-z]/.test(en) ? en : undefined;
     let slug = stationIdFor(label, zh);
-    const base = NETWORK_ID + '-';
+    const base = `${NETWORK_ID}-`;
     while (usedStationIds.has(base + slug)) {
-      slug = slug + '-' + readableSlug(zh);
+      slug = `${slug}-${readableSlug(zh)}`;
     }
     usedStationIds.add(base + slug);
     const id = base + slug;
