@@ -384,26 +384,39 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
   const detail = official.subwaySiteDetail ?? {};
   const patternBuilds: PatternBuild[] = [];
 
+  type DirSeq = {
+    title: string;
+    dest?: string;
+    physList: Phys[];
+    codes: string[];
+    stopIds: string[];
+    stationIds: string[];
+    /** Raw per-station times, aligned with physList. */
+    rawTimes: { stationCode?: string; startTime?: string; endTime?: string }[];
+  };
+  type SourceBucket = {
+    sourceKey: string;
+    lineId: string;
+    short: string;
+    branch?: string;
+    lineName: string;
+    dirSeqs: DirSeq[];
+  };
+  const sourceBuckets: SourceBucket[] = [];
+
+  // ── Phase A: collect every sourceKey's alignments (no trimming yet) ──
   for (const [sourceKey, directions] of Object.entries(detail)) {
     const lineName = parentLineName(sourceKey);
     const short = lineShortByName.get(lineName) ?? resolveLineShortName(lineName);
     lineShortByName.set(lineName, short);
     const lineId = ensureLineRecord(short, lineName, sourceKey);
     const branch = branchLabel(sourceKey);
-
-    type DirSeq = {
-      title: string;
-      dest?: string;
-      physList: Phys[];
-      codes: string[];
-      stopIds: string[];
-      stationIds: string[];
-    };
     const dirSeqs: DirSeq[] = [];
 
     for (const dir of directions ?? []) {
       const physList: Phys[] = [];
       const codes: string[] = [];
+      const rawTimes: DirSeq['rawTimes'] = [];
       const rawStations = dir.allStation ?? [];
       for (let i = 0; i < rawStations.length; i++) {
         const raw = rawStations[i];
@@ -415,9 +428,14 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
         codes.push(raw.stationCode || phys.code || '');
         phys.lineNames.add(lineName);
         ensureStop(phys, lineId, short, i, raw.stationCode);
+        rawTimes.push({
+          stationCode: raw.stationCode || phys.code,
+          startTime: raw.startTime,
+          endTime: raw.endTime
+        });
       }
       if (physList.length < 2) continue;
-      const stopIds = physList.map((p) => stopIdOf(p.id, short));
+      const stopIds = physList.map((x) => stopIdOf(x.id, short));
       stopById.get(stopIds[0])!.is_terminal = true;
       stopById.get(stopIds[stopIds.length - 1])!.is_terminal = true;
       dirSeqs.push({
@@ -426,17 +444,13 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
         physList,
         codes,
         stopIds,
-        stationIds: physList.map((p) => p.id)
+        stationIds: physList.map((x) => x.id),
+        rawTimes
       });
     }
 
-    // Keep every official direction as its own pattern (including reverses).
-    // Only collapse exact duplicate alignments. Pure reverses are tagged so the
-    // map UI does not paint them as「支线交路」.
     const seenSig = new Set<string>();
     const patternIdBySig = new Map<string, string>();
-    let primaryTaken = false;
-
     for (const seq of dirSeqs) {
       const sig = seq.codes.map((c) => c || '?').join('|');
       const revSig = [...seq.codes]
@@ -451,9 +465,6 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
 
       const origin = seq.physList[0];
       const terminal = seq.physList[seq.physList.length - 1];
-      const isPrimary = !branch && !primaryTaken && !reverseOfId;
-      if (isPrimary) primaryTaken = true;
-
       const patternId = `${lineId}-pattern-${stopSlug(seq.stopIds[0])}-to-${stopSlug(
         seq.stopIds[seq.stopIds.length - 1]
       )}`;
@@ -471,7 +482,7 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
         stop_ids: seq.stopIds,
         origin_stop_id: seq.stopIds[0],
         terminal_stop_id: seq.stopIds[seq.stopIds.length - 1],
-        is_primary: isPrimary,
+        is_primary: false,
         source_ids: [{ source: HZ_SOURCE, id: sourceKey }],
         extras: {
           direction_title: seq.title,
@@ -481,8 +492,7 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
           branch,
           source_key: sourceKey,
           line_short_name: short,
-          pattern_role: reverseOfId ? 'reverse' : branch ? 'branch' : 'direction',
-          reverse_of: reverseOfId
+          pattern_role: branch ? 'branch' : 'direction'
         }
       });
       patternBuilds.push({
@@ -517,78 +527,79 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
       }
     }
 
-    // Exactly one primary per line (longest alignment); stamp junctions on branches.
+    sourceBuckets.push({ sourceKey, lineId, short, branch, lineName, dirSeqs });
+  }
+
+  // ── Phase B: one primary per line; trim branches to unique+junction ──
+  const linesWithPatterns = new Set(patterns.map((x) => x.line_id));
+  for (const lineId of linesWithPatterns) {
     const linePatternIdx = patterns
-      .map((p, i) => ({ p, i }))
+      .map((x, i) => ({ p: x, i }))
       .filter(({ p }) => p.line_id === lineId);
-    if (linePatternIdx.length > 0) {
-      const winner = [...linePatternIdx].sort(
-        (a, b) => b.p.stop_ids.length - a.p.stop_ids.length
-      )[0];
-      const trunk = new Set(winner.p.stop_ids);
-      const dropIds = new Set<string>();
-      for (const { p, i } of linePatternIdx) {
-        const isPrimary = p.id === winner.p.id;
-        const junction = isPrimary ? undefined : findJunctionStopId(p.stop_ids, trunk);
-        // Trim branch to unique+junction so the shared trunk stays exclusive
-        // to the primary (verify: only the junction may be shared).
-        let stopIds = p.stop_ids;
-        if (!isPrimary && junction) {
-          // Keep every unique stop plus the junction; drop the shared trunk.
-          stopIds = p.stop_ids.filter((id) => !trunk.has(id) || id === junction);
-          if (stopIds.length < 2) {
-            dropIds.add(p.id);
-            continue;
-          }
+    if (linePatternIdx.length === 0) continue;
+    const winner = [...linePatternIdx].sort(
+      (a, b) => b.p.stop_ids.length - a.p.stop_ids.length
+    )[0]!;
+    const trunk = new Set(winner.p.stop_ids);
+    const dropIds = new Set<string>();
+    for (const { p, i } of linePatternIdx) {
+      const isPrimary = p.id === winner.p.id;
+      const junction = isPrimary ? undefined : findJunctionStopId(p.stop_ids, trunk);
+      let stopIds = p.stop_ids;
+      if (!isPrimary && junction) {
+        // Keep every unique stop plus the junction; drop the shared trunk.
+        stopIds = p.stop_ids.filter((id) => !trunk.has(id) || id === junction);
+        if (stopIds.length < 2) {
+          dropIds.add(p.id);
+          continue;
         }
-        patterns[i] = {
-          ...p,
-          stop_ids: stopIds,
-          origin_stop_id: stopIds[0]!,
-          terminal_stop_id: stopIds[stopIds.length - 1]!,
-          is_primary: isPrimary,
-          junction_stop_id: junction
-        };
-        const bi = patternBuilds.findIndex((b) => b.patternId === p.id);
-        if (bi >= 0) patternBuilds[bi] = { ...patternBuilds[bi]!, stopIds: [...stopIds] };
       }
-      if (dropIds.size > 0) {
-        for (let i = patterns.length - 1; i >= 0; i--) {
-          if (dropIds.has(patterns[i]!.id)) {
-            const pid = patterns[i]!.id;
-            patterns.splice(i, 1);
-            const bi = patternBuilds.findIndex((b) => b.patternId === pid);
-            if (bi >= 0) patternBuilds.splice(bi, 1);
-          }
-        }
+      patterns[i] = {
+        ...p,
+        stop_ids: stopIds,
+        origin_stop_id: stopIds[0]!,
+        terminal_stop_id: stopIds[stopIds.length - 1]!,
+        is_primary: isPrimary,
+        junction_stop_id: junction
+      };
+      const bi = patternBuilds.findIndex((b) => b.patternId === p.id);
+      if (bi >= 0) patternBuilds[bi] = { ...patternBuilds[bi]!, stopIds: [...stopIds] };
+    }
+    if (dropIds.size > 0) {
+      for (let i = patterns.length - 1; i >= 0; i--) {
+        const pid = patterns[i]!.id;
+        if (!dropIds.has(pid)) continue;
+        patterns.splice(i, 1);
+        const bi = patternBuilds.findIndex((b) => b.patternId === pid);
+        if (bi >= 0) patternBuilds.splice(bi, 1);
       }
     }
+  }
 
-    // Timetables: one record per official direction × station, bound to the
-    // pattern whose stop order matches that direction (not "first pattern that
-    // contains the stop", which collapsed every label onto the primary dest).
+  // ── Phase C: timetables against the final patterns (stub-ification) ──
+  for (const bucket of sourceBuckets) {
+    const { sourceKey, lineId, short, dirSeqs } = bucket;
     for (const seq of dirSeqs) {
       const destStopIdRaw = seq.stopIds[seq.stopIds.length - 1];
       const destStationId = seq.stationIds[seq.stationIds.length - 1];
       const originStopId = seq.stopIds[0];
-      const dir = (detail[sourceKey] ?? []).find((d) => d.title === seq.title);
       const exact = patternBuilds.find(
         (p) => p.lineId === lineId && p.stopIds.join('|') === seq.stopIds.join('|')
       );
 
       for (let i = 0; i < seq.physList.length; i++) {
-        const raw = dir?.allStation?.[i];
+        const raw = seq.rawTimes[i];
         if (!raw) continue;
         const first = cleanTime(raw.startTime);
         const last = cleanTime(raw.endTime);
         if (!first && !last) continue;
         const phys = seq.physList[i];
         const stopId = seq.stopIds[i];
-        // Stub-ification: each boarding stop binds to a pattern that lists it.
-        // Destination may sit on another pattern of the same line.
+        // Each boarding stop binds to a pattern that lists it. Destination may
+        // sit on another pattern of the same line (stub-ification).
         const bound = exact?.stopIds.includes(stopId)
           ? exact
-          : patternBuilds.find((p) => p.lineId === lineId && p.stopIds.includes(stopId));
+          : patternBuilds.find((pb) => pb.lineId === lineId && pb.stopIds.includes(stopId));
         if (!bound) continue;
         const id = `${NETWORK_ID}-${phys.id}-${short}-to-${asciiSlug(destStationId)}-${asciiSlug(
           seq.title
@@ -602,7 +613,6 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
           line_id: lineId,
           station_code: raw.stationCode || phys.code,
           source_id: HZ_SOURCE,
-          // Official direction terminal — never inherit another pattern's end.
           destination_stop_id: destStopIdRaw,
           origin_stop_id: originStopId,
           pattern_id: bound.patternId,
