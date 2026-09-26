@@ -468,6 +468,11 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
     originStopId: string,
     destStopId: string
   ): PatternEncoded | undefined {
+    // Stub-ification (same as cn-guangzhou / cn-shanghai): a through-running
+    // service binds to the pattern that contains its boarding stop. The
+    // destination may sit on another pattern of the same line. Never stitch a
+    // through pattern — that would share the whole trunk and violate the
+    // "only the junction is shared" rule.
     const lineId = lineIdFor(lineCode);
     const list = patternByLine.get(lineId) ?? [];
     const both = list.find(
@@ -483,32 +488,7 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
         ) ?? both
       );
     }
-    // Build / reuse a through pattern so dest lies on the same pattern as origin.
-    const path = resolveStopPath(originStopId, destStopId);
-    if (!path) return undefined;
-    const pathSig = path.join('|');
-    const existing = patterns.find((p) => p.line_id === lineId && p.stop_ids.join('|') === pathSig);
-    if (existing) return existing;
-    const patternId = `${lineId}-pattern-${readableSlug(originStopId.split('-').pop() ?? '')}-to-${readableSlug(
-      destStopId.split('-').pop() ?? ''
-    )}-through`;
-    const created: PatternEncoded = {
-      id: patternId,
-      line_id: lineId,
-      name: lineNameByCode.get(lineCode) ?? lineCode,
-      names: undefined,
-      stop_ids: path,
-      origin_stop_id: path[0]!,
-      terminal_stop_id: path[path.length - 1]!,
-      is_primary: false,
-      source_ids: [{ source: 'mtr-service-hours', id: `${originStopId}->${destStopId}` }],
-      extras: { line_code: lineCode, pattern_role: 'through' }
-    };
-    patterns.push(created);
-    const bucket = patternByLine.get(lineId) ?? [];
-    bucket.push(created);
-    patternByLine.set(lineId, bucket);
-    return created;
+    return list.find((p) => p.stop_ids.includes(originStopId));
   }
 
   function hhmm(raw: string): string {

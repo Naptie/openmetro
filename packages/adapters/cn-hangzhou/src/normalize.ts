@@ -541,9 +541,16 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
       const exact = patternBuilds.find(
         (p) => p.lineId === lineId && p.stopIds.join('|') === seq.stopIds.join('|')
       );
-      const fallback = patternBuilds.find((p) => p.lineId === lineId && p.sourceKey === sourceKey);
+      // Stub-ification: bind to a pattern that contains the boarding stop.
+      // Destination may live on another pattern of the same line.
+      const fallback =
+        patternBuilds.find(
+          (p) => p.lineId === lineId && p.stopIds.includes(seq.stopIds[0]!)
+        ) ?? patternBuilds.find((p) => p.lineId === lineId && p.sourceKey === sourceKey);
       const patternId = exact?.patternId ?? fallback?.patternId;
       if (!patternId) continue;
+      const bound = patternBuilds.find((p) => p.patternId === patternId);
+      if (bound && !bound.stopIds.includes(seq.stopIds[0]!)) continue;
 
       for (let i = 0; i < seq.physList.length; i++) {
         const raw = dir?.allStation?.[i];
