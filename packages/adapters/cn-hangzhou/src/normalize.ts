@@ -541,16 +541,6 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
       const exact = patternBuilds.find(
         (p) => p.lineId === lineId && p.stopIds.join('|') === seq.stopIds.join('|')
       );
-      // Stub-ification: bind to a pattern that contains the boarding stop.
-      // Destination may live on another pattern of the same line.
-      const fallback =
-        patternBuilds.find(
-          (p) => p.lineId === lineId && p.stopIds.includes(seq.stopIds[0]!)
-        ) ?? patternBuilds.find((p) => p.lineId === lineId && p.sourceKey === sourceKey);
-      const patternId = exact?.patternId ?? fallback?.patternId;
-      if (!patternId) continue;
-      const bound = patternBuilds.find((p) => p.patternId === patternId);
-      if (bound && !bound.stopIds.includes(seq.stopIds[0]!)) continue;
 
       for (let i = 0; i < seq.physList.length; i++) {
         const raw = dir?.allStation?.[i];
@@ -560,6 +550,12 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
         if (!first && !last) continue;
         const phys = seq.physList[i];
         const stopId = seq.stopIds[i];
+        // Stub-ification: each boarding stop binds to a pattern that lists it.
+        // Destination may sit on another pattern of the same line.
+        const bound = exact?.stopIds.includes(stopId)
+          ? exact
+          : patternBuilds.find((p) => p.lineId === lineId && p.stopIds.includes(stopId));
+        if (!bound) continue;
         const id = `${NETWORK_ID}-${phys.id}-${short}-to-${asciiSlug(destStationId)}-${asciiSlug(
           seq.title
         )}`;
@@ -575,7 +571,7 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
           // Official direction terminal — never inherit another pattern's end.
           destination_stop_id: destStopIdRaw,
           origin_stop_id: originStopId,
-          pattern_id: patternId,
+          pattern_id: bound.patternId,
           direction_type: 'linear',
           direction_label: seq.title,
           first_train: first ? [first] : [],
