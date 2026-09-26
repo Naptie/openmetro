@@ -204,16 +204,29 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
       const isPrimary = align === primary;
       let junction: string | undefined;
       if (!isPrimary) {
-        const isSubset = align.stationIds.every((id) => primarySet.has(id));
-        if (isSubset) {
-          // Short-turn: diverges at its origin (first stop not reached by the long run).
+        // Junction = first shared stop next to this alignment's unique portion.
+        // - subset short-turn → origin
+        // - border spur (Lo Wu / Lok Ma Chau via Sheung Shui) → first shared southbound
+        // - lateral spur → shared stop after the unique run
+        let lastUnique = -1;
+        for (let i = 0; i < align.stationIds.length; i++) {
+          if (!primarySet.has(align.stationIds[i]!)) lastUnique = i;
+        }
+        if (lastUnique < 0) {
           junction = align.stopIds[0];
         } else {
-          for (let i = align.stationIds.length - 1; i >= 0; i--) {
-            if (primarySet.has(align.stationIds[i])) {
-              // Must be a stop id on both this pattern and the primary trunk.
+          for (let i = lastUnique + 1; i < align.stationIds.length; i++) {
+            if (primarySet.has(align.stationIds[i]!)) {
               junction = align.stopIds[i];
               break;
+            }
+          }
+          if (!junction) {
+            for (let i = lastUnique - 1; i >= 0; i--) {
+              if (primarySet.has(align.stationIds[i]!)) {
+                junction = align.stopIds[i];
+                break;
+              }
             }
           }
         }

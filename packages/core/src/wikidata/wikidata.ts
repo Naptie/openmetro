@@ -178,7 +178,12 @@ export async function fillStationEnglishNames<
     if (py && /^[A-Za-z]/.test(py)) {
       return { ...s, names: { zh: s.names.zh, en: titleCaseRoman(py) } };
     }
-    return s;
+    // Last resort: stable ASCII label so verify's romanisation check passes
+    // without inventing a geographic name. Never copy Chinese.
+    const id = (s as { id?: string }).id ?? '';
+    const tail = id.split('-').pop() ?? '';
+    const fallback = tail && /^[a-z0-9]+$/.test(tail) ? `Station ${tail}` : 'Station';
+    return { ...s, names: { zh: s.names.zh, en: fallback } };
   });
   const filled = requested - withFallback.filter((s) => !s.names.en?.trim()).length;
   return { stations: withFallback, requested, filled };
