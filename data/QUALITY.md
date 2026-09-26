@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-26T14:20:08.030Z_
+_Updated 2026-09-26T17:02:56.482Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -76,7 +76,7 @@ _Updated 2026-09-26T14:20:08.030Z_
 | Schematic | ✅ Complete | official | 100% | official=308, default=1 |
 | Fares | ✅ Complete | official | 100% | official=67860 |
 
-## 港鐵 / Mass Transit Railway (`cn-hongkong`)
+## 港鐵 / Mass Transit Railway (Hong Kong) (`cn-hongkong`)
 
 | Layer | Status | Precision | Coverage | Counts |
 | --- | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ _Updated 2026-09-26T14:20:08.030Z_
 | Segment times | 🟠 Derived | derived | 100% | derived=110 |
 | Segment distances | 🟠 Derived | derived | 100% | derived=110 |
 | Transfer times | 🟠 Derived | derived | 100% | derived=52 |
-| Timetables | ✅ Complete | official | 100% | official=311 |
+| Timetables | ✅ Complete | official | 100% | official=319 |
 | Schematic | ❌ Unavailable | default | 0% | default=120 |
 | Fares | 🟡 Partial | official | 96% | official=8944, default=368 |
 
