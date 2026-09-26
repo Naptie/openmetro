@@ -182,16 +182,12 @@
         <dd class="truncate font-medium">{network.meta.timezone}</dd>
       </div>
       <div class="flex justify-between gap-2">
-        <dt class="text-muted-foreground">
-          {t.network_lines_count({ count: network.lines.length })}
-        </dt>
-        <dd></dd>
+        <dt class="text-muted-foreground">{t.network_lines_label()}</dt>
+        <dd class="font-medium">{network.lines.length}</dd>
       </div>
       <div class="flex justify-between gap-2">
-        <dt class="text-muted-foreground">
-          {t.network_stations_count({ count: network.stations.length })}
-        </dt>
-        <dd></dd>
+        <dt class="text-muted-foreground">{t.network_stations_label()}</dt>
+        <dd class="font-medium">{network.stations.length}</dd>
       </div>
     </dl>
   </div>
