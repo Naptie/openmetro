@@ -1,4 +1,27 @@
-import { applyDerivedTimes, applyTimetableServiceStatus, deriveSegmentTimes, deriveTransfers, foldRareCharacters, hasValidTimes, hexToCss, lineSlug, normalizeTimetableTimes, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, stripDirectionAnnotation, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  applyDerivedTimes,
+  applyTimetableServiceStatus,
+  deriveSegmentTimes,
+  deriveTransfers,
+  foldRareCharacters,
+  hasValidTimes,
+  hexToCss,
+  type LineEncoded,
+  lineSlug,
+  type NetworkEncoded,
+  normalizeTimetableTimes,
+  type PatternEncoded,
+  placeholderCity,
+  readableSlug,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  stripDirectionAnnotation,
+  type TimetableEncoded,
+  type TransferEncoded
+} from '@openmetro/core';
 
 export interface GzRawInput {
   linestation: { businessObject: GzLineCard[] };
@@ -92,7 +115,6 @@ function slug(s: string): string {
 }
 
 /** Stable station id: English slug, plus parenthetical Chinese qualifier when present. */
-
 
 function ensureUniqueTtId(
   used: Set<string>,

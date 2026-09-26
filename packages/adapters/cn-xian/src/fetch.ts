@@ -174,10 +174,7 @@ async function saveSnapshot(name: string, value: unknown): Promise<void> {
 export async function fetchFindLineAll(): Promise<XianOfficialLine[]> {
   const snap = await readSnapshot<XianOfficialLine[]>('findLineAll.json');
   try {
-    const data = await postJson<XianOfficialLine[]>(
-      '/api-basicdata/lineStation/findLineAll',
-      {}
-    );
+    const data = await postJson<XianOfficialLine[]>('/api-basicdata/lineStation/findLineAll', {});
     if (Array.isArray(data) && data.length > 0) {
       await saveSnapshot('findLineAll.json', data);
       return data;

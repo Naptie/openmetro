@@ -1,4 +1,27 @@
-import { applyTimetableServiceStatus, asciiSlug, cleanTime, deriveLineEnglishName, foldStationName, hasValidTimes, hexToCss, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  applyTimetableServiceStatus,
+  asciiSlug,
+  cleanTime,
+  deriveLineEnglishName,
+  foldStationName,
+  hasValidTimes,
+  hexToCss,
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  placeholderCity,
+  readableSlug,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded,
+  type TransferEncoded
+} from '@openmetro/core';
 import type {
   AmapLineRaw,
   AmapStationRaw,
@@ -68,8 +91,6 @@ export interface WuhanCanonical {
   stopName: Map<string, string>;
 }
 
-
-
 function resolveEnglishName(
   amapEn: string | undefined,
   pinyin: string | undefined,
@@ -80,11 +101,7 @@ function resolveEnglishName(
   return pinyinToEnglish(pinyin) ?? zh.trim();
 }
 
-
-
 /** Official/AMap names may differ by a trailing 站 or full-width parens. */
-
-
 
 function lineIdFromShort(short: string): string {
   return `${NETWORK_ID}-line-${readableSlug(short) || asciiSlug(short)}`;
@@ -97,7 +114,6 @@ function stopIdOf(stationId: string, short: string): string {
 function stopSlug(stopId: string): string {
   return stopId.replace(/^cn-wuhan-/, '');
 }
-
 
 function decodeEntities(s: string): string {
   return s

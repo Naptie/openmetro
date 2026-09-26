@@ -1,7 +1,4 @@
-import { existsSync } from 'node:fs';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
-import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 import {
   applyDerivedTimes,
   deriveSegmentTimes,
@@ -10,6 +7,7 @@ import {
   fillCoordinates,
   fillMissingSegmentTimes,
   fillStraightLineDistances,
+  findRepoRoot,
   type LineEncoded,
   normalizeTimetableTimes,
   writeCanonical
@@ -25,7 +23,6 @@ export interface HongKongNormalizeOptions {
   /** Unused — fares come from published CSVs and are always written. */
   skipFares?: boolean;
 }
-
 
 export async function runHongKongNormalize(opts: HongKongNormalizeOptions = {}): Promise<void> {
   const root = opts.root ?? findRepoRoot();

@@ -1,27 +1,23 @@
-import { existsSync } from 'node:fs';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
-import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 import {
   applyDerivedTimes,
   deriveSegmentTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
-  fillStationEnglishNames,
   estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStationEnglishNames,
   fillStraightLineDistances,
+  findRepoRoot,
   type LineEncoded,
   normalizeTimetableTimes,
   writeCanonical
 } from '@openmetro/core';
-
-import { fareSpec, mergeOfficialFares, writeXianFormulaFares } from './fares.js';
+import { type BaiduStationRef, harvestBaiduTimetables, loadBaiduAk } from './baidu-timetables.js';
+import { mergeOfficialFares, writeXianFormulaFares } from './fares.js';
 import { fetchXianSources } from './fetch.js';
-import { harvestBaiduTimetables, loadBaiduAk, type BaiduStationRef } from './baidu-timetables.js';
 import { normalizeXian } from './normalize.js';
-import type { TimetableEncoded, StationEncoded, PatternEncoded, StopEncoded } from '@openmetro/core';
 
 export interface XianNormalizeOptions {
   root?: string;
@@ -32,7 +28,6 @@ export interface XianNormalizeOptions {
   /** Replace formula cells with official OD quotes. */
   harvestOfficialFares?: boolean;
 }
-
 
 export async function runXianNormalize(opts: XianNormalizeOptions = {}): Promise<void> {
   const root = opts.root ?? findRepoRoot();
@@ -190,8 +185,7 @@ export async function runXianNormalize(opts: XianNormalizeOptions = {}): Promise
     // Re-stamp quality after fares land.
     const { readFile, writeFile } = await import('node:fs/promises');
     const { computeNetworkQuality } = await import('@openmetro/core');
-    const read = async (name: string) =>
-      JSON.parse(await readFile(join(outDir, name), 'utf-8'));
+    const read = async (name: string) => JSON.parse(await readFile(join(outDir, name), 'utf-8'));
     const network = await read('network.json');
     const linesJ = await read('lines.json');
     const stationsJ = await read('stations.json');

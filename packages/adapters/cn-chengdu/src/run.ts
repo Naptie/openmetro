@@ -1,7 +1,4 @@
-import { existsSync } from 'node:fs';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
-import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 import {
   applyDerivedTimes,
   deriveSegmentTimes,
@@ -11,6 +8,7 @@ import {
   fillCoordinates,
   fillMissingSegmentTimes,
   fillStraightLineDistances,
+  findRepoRoot,
   type LineEncoded,
   normalizeTimetableTimes,
   syncFares,
@@ -31,7 +29,6 @@ export interface ChengduNormalizeOptions {
   /** Skip formula fare bootstrap when also harvesting. */
   skipFormulaFares?: boolean;
 }
-
 
 export async function runChengduNormalize(opts: ChengduNormalizeOptions = {}): Promise<void> {
   const root = opts.root ?? findRepoRoot();

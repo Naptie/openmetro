@@ -1,4 +1,20 @@
-import { deriveLineEnglishName, foldStationName, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  deriveLineEnglishName,
+  foldStationName,
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
+  pinyinToEnglish,
+  placeholderCity,
+  readableSlug,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded,
+  type TransferEncoded
+} from '@openmetro/core';
 import {
   type AmapLine,
   type AmapStation,
@@ -12,7 +28,7 @@ import {
 
 const NETWORK_ID = 'cn-chongqing';
 const CQ_SOURCE = 'cqmetro-official';
-const AMAP_SOURCE = 'amap-subway-5000';
+const _AMAP_SOURCE = 'amap-subway-5000';
 
 export interface ChongqingCanonical {
   network: NetworkEncoded;
@@ -26,7 +42,6 @@ export interface ChongqingCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-
 function lineIdFor(shortName: string, name: string): string {
   const ascii = shortName
     .toLowerCase()
@@ -34,7 +49,6 @@ function lineIdFor(shortName: string, name: string): string {
     .replace(/^-+|-+$/g, '');
   return `${NETWORK_ID}-line-${ascii || readableSlug(name)}`;
 }
-
 
 function resolveEnglishName(
   amapEn: string | undefined,
@@ -45,7 +59,6 @@ function resolveEnglishName(
   if (en && /^[A-Za-z]/.test(en)) return en;
   return pinyinToEnglish(pinyin) ?? zh.trim();
 }
-
 
 function parseAmapSl(sl: string | undefined): { lon: number; lat: number } | undefined {
   if (!sl) return undefined;
@@ -315,7 +328,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
     while (stationByZh.has(unique)) unique = `${id}-${n++}`;
     stationIdByZh.set(zh, unique);
 
-    const coordJs = officialCoords['环线']?.[zhRaw] ?? findCoord(officialCoords, zhRaw);
+    const coordJs = officialCoords.环线?.[zhRaw] ?? findCoord(officialCoords, zhRaw);
     const location =
       amap?.lon != null && amap?.lat != null
         ? { lon: amap.lon, lat: amap.lat, crs: 'gcj02' as const }
@@ -408,7 +421,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
       const existing = stopIdByName.get(zh);
       if (existing) return existing;
       const stationId = upsertStation(zhRaw);
-      const stopId = stationId + '-' + cfg.shortName;
+      const stopId = `${stationId}-${cfg.shortName}`;
       stops.push({
         id: stopId,
         station_id: stationId,
@@ -428,7 +441,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
       if (!stopIds.includes(sid)) stopIds.push(sid);
     }
 
-    const patternId = lineId + '-primary';
+    const patternId = `${lineId}-primary`;
     patterns.push({
       id: patternId,
       line_id: lineId,
@@ -464,12 +477,12 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
       }
       const branchStopIds = ordered.map((n) => ensureStop(n));
       const junctionStopId = branchStopIds[0]!;
-      const bpId = lineId + '-branch-' + si;
+      const bpId = `${lineId}-branch-${si}`;
       patterns.push({
         id: bpId,
         line_id: lineId,
-        name: cfg.name + '支' + si,
-        names: { zh: cfg.name + '支' + si, en: enName + ' Branch ' + si },
+        name: `${cfg.name}支${si}`,
+        names: { zh: `${cfg.name}支${si}`, en: `${enName} Branch ${si}` },
         stop_ids: branchStopIds,
         origin_stop_id: junctionStopId,
         terminal_stop_id: branchStopIds[branchStopIds.length - 1]!,
@@ -485,7 +498,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
       for (let i = 0; i < p.stop_ids.length - 1; i++) {
         const a = stops.find((s) => s.id === p.stop_ids[i])!;
         const b = stops.find((s) => s.id === p.stop_ids[i + 1])!;
-        const segId = NETWORK_ID + '-seg-' + a.id + '-' + b.id;
+        const segId = `${NETWORK_ID}-seg-${a.id}-${b.id}`;
         if (segments.some((s) => s.id === segId)) continue;
         segments.push({
           id: segId,
@@ -512,7 +525,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
         const sectionPattern =
           si === 0
             ? patterns.find((p) => p.id === patternId)!
-            : patterns.find((p) => p.id === lineId + '-branch-' + si);
+            : patterns.find((p) => p.id === `${lineId}-branch-${si}`);
         if (!sectionPattern) continue;
         const stationById = new Map([...stationByZh.values()].map((s) => [s.id, s] as const));
         const stopIdByFold = new Map<string, string>();

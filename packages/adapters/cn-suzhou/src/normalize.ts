@@ -1,4 +1,23 @@
-import { asciiSlug, coerceStationStatus, deriveLineEnglishName, hasValidTimes, hexToCss, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type LineStatus, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  asciiSlug,
+  coerceStationStatus,
+  deriveLineEnglishName,
+  hasValidTimes,
+  hexToCss,
+  type LineEncoded,
+  type LineStatus,
+  type NetworkEncoded,
+  type PatternEncoded,
+  placeholderCity,
+  readableSlug,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded,
+  type TransferEncoded
+} from '@openmetro/core';
 
 export interface SuzhouRawInput {
   szmtrJs: string;
@@ -238,9 +257,6 @@ function baseCode(nodeId: string): string {
 function slug(s: string): string {
   return readableSlug(s) || asciiSlug(s);
 }
-
-
-
 
 function firstTime(value: string | undefined): string[] | undefined {
   if (!value) return undefined;

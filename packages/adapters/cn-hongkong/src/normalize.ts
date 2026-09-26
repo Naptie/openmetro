@@ -1,5 +1,17 @@
 import type { FareMatrixEncoded } from '@openmetro/core';
-import { placeholderCity, readableSlug, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
+  placeholderCity,
+  readableSlug,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded,
+  type TransferEncoded
+} from '@openmetro/core';
 import { buildFareMatrix, foldFareName } from './fares.js';
 import type { MtrLineStationRow, MtrSources } from './fetch.js';
 
@@ -65,7 +77,6 @@ interface Alignment {
   stationIds: string[];
   stopIds: string[];
 }
-
 
 function stopIdFor(stationId: string, lineCode: string): string {
   return `${stationId}-${lineCode.toLowerCase()}`;

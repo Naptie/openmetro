@@ -6,8 +6,9 @@
  * coordinates, which are converted to GCJ-02 locally so they align with the
  * rest of the dataset. No API key is required.
  */
-import type { GeoResult } from './index.js';
+
 import { bd09ToGcj02 as bd09ToGcj02Lat } from './coords.js';
+import type { GeoResult } from './index.js';
 
 const OVERPASS_URL = process.env.OVERPASS_URL ?? 'https://overpass-api.de/api/interpreter';
 const USER_AGENT = 'openmetro/0.1 (data enrichment)';

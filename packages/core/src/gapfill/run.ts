@@ -10,6 +10,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { SyncCtx } from '../adapter/contract.js';
+import { bd09ToGcj02 } from '../geocode/overpass.js';
 import {
   adjacentStopPairs,
   type HarvestedSegmentTime,
@@ -26,7 +27,6 @@ import {
   pathMeters,
   pureMetroSteps
 } from './baidu.js';
-import { bd09ToGcj02 } from '../geocode/overpass.js';
 
 type Id = string;
 
@@ -218,7 +218,7 @@ function walkBetweenRides(
     if (steps[i].type !== 5) continue;
     const prev = steps[i - 1];
     const next = steps[i + 1];
-    if (!prev || prev.type !== 3 || !next || next.type !== 3) continue;
+    if (prev?.type !== 3 || !next || next.type !== 3) continue;
     const w = steps[i] as {
       duration?: number;
       distance?: number;
@@ -271,11 +271,7 @@ interface PlaceHit {
  * datum (never store BD-09). Used only for stations the AMap/Overpass/Photon
  * chain could not place.
  */
-async function baiduPlaceSearch(
-  query: string,
-  region: string,
-  ak: string
-): Promise<PlaceHit[]> {
+async function baiduPlaceSearch(query: string, region: string, ak: string): Promise<PlaceHit[]> {
   const url =
     `https://api.map.baidu.com/place/v2/search?query=${encodeURIComponent(query)}` +
     `&region=${encodeURIComponent(region)}&output=json&ret_coordtype=gcj02&page_size=10&ak=${encodeURIComponent(ak)}`;
@@ -323,8 +319,7 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
     name?: string;
   };
   const defaultWalk = netDoc.routing?.default_transfer_seconds ?? 120;
-  const cityLabel =
-    netDoc.city?.name?.zh || netDoc.name?.replace(/地铁$/, '') || netDoc.name || '';
+  const cityLabel = netDoc.city?.name?.zh || netDoc.name?.replace(/地铁$/, '') || netDoc.name || '';
 
   const stationsDoc = await loadDoc<StationRow>(join(dataDir, 'stations.json'));
   const stopsDoc = await loadDoc<StopRow>(join(dataDir, 'stops.json'));
@@ -377,14 +372,14 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
             baidu_place_name: best.hit.name
           };
           coordsFilled++;
-          console.log(`    coord ${zh} <- ${best.hit.name} ${best.hit.location.lng},${best.hit.location.lat}`);
+          console.log(
+            `    coord ${zh} <- ${best.hit.name} ${best.hit.location.lng},${best.hit.location.lat}`
+          );
         } else {
           failures.push(`coord ${zh}: no confident Baidu Place hit`);
         }
       } catch (err) {
-        failures.push(
-          `coord ${zh}: ${err instanceof Error ? err.message : String(err)}`
-        );
+        failures.push(`coord ${zh}: ${err instanceof Error ? err.message : String(err)}`);
       }
     }
     if (coordsFilled > 0) {

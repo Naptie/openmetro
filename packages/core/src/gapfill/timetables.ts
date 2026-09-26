@@ -10,8 +10,9 @@
  * - `vehicle.end_info.end_time` = last ARRIVAL at the step destination.
  *   Last departure ≈ end_time − subway-leg duration.
  */
-import { proxyUrl } from '../geocode/proxy.js';
+
 import { gcj02ToBd09 } from '../geocode/coords.js';
+import { proxyUrl } from '../geocode/proxy.js';
 import { formatMinutes, parseHHMM } from '../timetable/time.js';
 
 export interface BaiduLegTimes {

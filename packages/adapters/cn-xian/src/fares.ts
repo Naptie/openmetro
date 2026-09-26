@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { entitySchemaUrl, type FareSpec, type StationEncoded, proxyUrl } from '@openmetro/core';
+import { entitySchemaUrl, type FareSpec, type StationEncoded } from '@openmetro/core';
 import { fetchTicketPrice } from './fetch.js';
 
 /**
@@ -13,7 +13,7 @@ export const fareSpec: FareSpec = {
   currency: 'CNY',
   unit: 'yuan',
   source: {
-    name: 'Xi\'an Metro ticketPrice findByStartAndEnd',
+    name: "Xi'an Metro ticketPrice findByStartAndEnd",
     url: 'https://www.xianrail.com/pas-gateway-api/api-operational/ticketPrice/findByStartAndEnd',
     version: '20251231-2043',
     retrieved_at: new Date().toISOString(),
@@ -24,7 +24,9 @@ export const fareSpec: FareSpec = {
       "Ordinary single-journey fare per OD pair from the official site ticket search. Matrix harvested via --layer fares; `privice` is the operator's fare field."
   },
   keyOf: (station: StationEncoded, stopCode: (stationId: string) => string | undefined) => {
-    const extras = station.extras as { fare_station_code?: string; official_codes?: string[] } | undefined;
+    const extras = station.extras as
+      | { fare_station_code?: string; official_codes?: string[] }
+      | undefined;
     return (
       extras?.fare_station_code ||
       extras?.official_codes?.[0] ||
@@ -156,7 +158,9 @@ export async function mergeOfficialFares(
     JSON.parse(await readFile(join(dataDir, 'stations.json'), 'utf-8')).records as StationEncoded[]
   ).sort((a, b) => a.id.localeCompare(b.id));
   const codeOf = (s: StationEncoded): string => {
-    const extras = s.extras as { fare_station_code?: string; official_codes?: string[] } | undefined;
+    const extras = s.extras as
+      | { fare_station_code?: string; official_codes?: string[] }
+      | undefined;
     return extras?.fare_station_code || extras?.official_codes?.[0] || s.name;
   };
   const codes = document.station_ids.map((id) => {

@@ -1,8 +1,12 @@
-import { type AdapterManifest, type SyncCtx, type SyncLayer, syncFares } from '@openmetro/core';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
+import {
+  type AdapterManifest,
+  repoRootForDataDir,
+  type SyncCtx,
+  type SyncLayer,
+  syncFares
+} from '@openmetro/core';
 import { fareSpec } from './fares.js';
 import { runGuangzhouNormalize } from './run.js';
-
 
 export const adapter: AdapterManifest = {
   networkId: 'cn-guangzhou',

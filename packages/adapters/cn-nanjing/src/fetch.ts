@@ -3,7 +3,7 @@ import { officialFetchHeaders, proxyUrl } from '@openmetro/core';
 
 const BASE = 'https://www.njmetro.com.cn';
 const AMAP_SUBWAY = 'https://webapi.amap.com/subway/data/3201_drw_nanjing.json';
-const AMAP_REFERER = 'https://www.njmetro.com.cn/';
+const _AMAP_REFERER = 'https://www.njmetro.com.cn/';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -38,7 +38,7 @@ function curlBuffer(url: string): Promise<Buffer> {
   });
 }
 
-function curlText(url: string): Promise<string> {
+function _curlText(url: string): Promise<string> {
   return curlBuffer(url).then((b) => b.toString('utf-8'));
 }
 
@@ -82,7 +82,7 @@ async function getJson<T>(url: string, retries = 3): Promise<T> {
   return JSON.parse(text) as T;
 }
 
-async function getBytes(url: string, retries = 3): Promise<Uint8Array> {
+async function _getBytes(url: string, retries = 3): Promise<Uint8Array> {
   const buf = await (async () => {
     let lastErr: unknown;
     for (let attempt = 0; attempt < retries; attempt++) {

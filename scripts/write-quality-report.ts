@@ -10,8 +10,8 @@
  *
  *   bun run scripts/write-quality-report.ts
  */
-import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
-import { dirname, join } from 'node:path';
+import { readdir, readFile, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
 import { computeNetworkQuality } from '../packages/core/src/data/quality.js';
 
 interface LayerQuality {

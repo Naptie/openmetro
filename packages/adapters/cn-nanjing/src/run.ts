@@ -1,17 +1,15 @@
-import { existsSync } from 'node:fs';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
-import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 import {
   applyDerivedTimes,
   deriveSegmentTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
-  fillStationEnglishNames,
   estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStationEnglishNames,
   fillStraightLineDistances,
+  findRepoRoot,
   geocodeViaPhoton,
   type LineEncoded,
   normalizeTimetableTimes,
@@ -31,7 +29,6 @@ export interface NanjingNormalizeOptions {
   skipGeocode?: boolean;
   skipFares?: boolean;
 }
-
 
 export async function runNanjingNormalize(opts: NanjingNormalizeOptions = {}): Promise<void> {
   const root = opts.root ?? findRepoRoot();

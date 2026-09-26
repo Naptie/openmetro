@@ -1,4 +1,27 @@
-import { applyTimetableServiceStatus, asciiSlug, cleanTime, deriveLineEnglishName, foldStationName, hasValidTimes, hexToCss, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  applyTimetableServiceStatus,
+  asciiSlug,
+  cleanTime,
+  deriveLineEnglishName,
+  foldStationName,
+  hasValidTimes,
+  hexToCss,
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  placeholderCity,
+  readableSlug,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded,
+  type TransferEncoded
+} from '@openmetro/core';
 import type { AmapLine, AmapStation, HangzhouSources, HzOperationAll } from './fetch.js';
 
 const NETWORK_ID = 'cn-hangzhou';
@@ -18,7 +41,6 @@ export interface HangzhouCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-
 /**
  * AMap `sp` is CamelCase pinyin (`AoTi ZhongXin`, `LvTing Lu`). Title-case it
  * so station English names / ids stay human-readable when `en` is blank.
@@ -27,18 +49,14 @@ export interface HangzhouCanonical {
 function resolveEnglishName(
   amapEn: string | undefined,
   pinyin: string | undefined,
-  zh: string
+  _zh: string
 ): string | undefined {
   const en = (amapEn ?? '').trim();
   if (en && /^[A-Za-z]/.test(en)) return en;
   return pinyinToEnglish(pinyin);
 }
 
-
-
 /** Official/AMap names may differ by a trailing 站 or full-width parens. */
-
-
 
 /** `"3号线（星桥-吴山前村）"` / `"6号线"` → parent short badge name `"3号线"` / `"6号线"`. */
 function parentLineName(key: string): string {

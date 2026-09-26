@@ -57,7 +57,7 @@ export function stationIdFor(en: string | undefined, zh: string, pinyin?: string
     const slug = label
       .toLowerCase()
       .replace(/&/g, 'and')
-      .replace(/['\''\''`']/g, '')
+      .replace(/['''''`']/g, '')
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
     if (slug) return slug;
@@ -77,9 +77,7 @@ export function hexToCss(hex: string | undefined): string | undefined {
 }
 
 /** AMap subway `sl` field: `"lon,lat"` → `{ lon, lat }`. */
-export function parseSlCoord(
-  sl: string | undefined
-): { lon: number; lat: number } | undefined {
+export function parseSlCoord(sl: string | undefined): { lon: number; lat: number } | undefined {
   if (!sl) return undefined;
   const [lonRaw, latRaw] = sl.split(',');
   const lon = Number(lonRaw);
@@ -101,15 +99,17 @@ export function parsePixel(p: string | undefined): { x: number; y: number } | un
  * full-width parens, trailing 站.
  */
 export function foldStationName(zh: string): string {
-  return zh
-    .trim()
-    .replace(/[（]/g, '(')
-    .replace(/[）]/g, ')')
-    // T1、T2、T3 vs T1/T2/T3 — collapse list separators inside the name.
-    .replace(/[\/、，,]+/g, '/')
-    .replace(/\s+/g, '')
-    .replace(/站$/, '')
-    .trim();
+  return (
+    zh
+      .trim()
+      .replace(/[（]/g, '(')
+      .replace(/[）]/g, ')')
+      // T1、T2、T3 vs T1/T2/T3 — collapse list separators inside the name.
+      .replace(/[/、，,]+/g, '/')
+      .replace(/\s+/g, '')
+      .replace(/站$/, '')
+      .trim()
+  );
 }
 
 /**

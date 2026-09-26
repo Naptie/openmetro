@@ -1,4 +1,4 @@
-import { type FareSpec, proxyUrl } from '@openmetro/core';
+import type { FareSpec } from '@openmetro/core';
 import { fetchNanjingFare } from './fetch.js';
 
 /**

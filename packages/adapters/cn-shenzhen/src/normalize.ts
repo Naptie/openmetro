@@ -1,4 +1,26 @@
-import { asciiSlug, coerceStationStatus, deriveLineEnglishName, foldStationName, hasValidTimes, hexToCss, parsePixel, parseSlCoord, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type LineMode, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  asciiSlug,
+  coerceStationStatus,
+  deriveLineEnglishName,
+  foldStationName,
+  hasValidTimes,
+  hexToCss,
+  type LineEncoded,
+  type LineMode,
+  type NetworkEncoded,
+  type PatternEncoded,
+  parsePixel,
+  parseSlCoord,
+  placeholderCity,
+  readableSlug,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded,
+  type TransferEncoded
+} from '@openmetro/core';
 import {
   parseEnTimetableHtml,
   type ShenzhenSources,
@@ -27,9 +49,6 @@ export interface ShenzhenCanonical {
   /** stop source_id (station code) → station id. */
   stationIdByCode: Map<string, string>;
 }
-
-
-
 
 /** Prefer a human short badge; collapse Shenzhen Line 6 branch variants. */
 function officialShortName(ln: string, kn: string): string {
@@ -65,7 +84,6 @@ function lineMode(_ln: string): LineMode {
   return 'metro';
 }
 
-
 /** Official map `sl` reused by many stations is a placeholder, not a real coord. */
 function collectPlaceholderSl(mapLines: ShMapLine[]): Set<string> {
   const counts = new Map<string, number>();
@@ -90,8 +108,6 @@ function collectPlaceholderSl(mapLines: ShMapLine[]): Set<string> {
   }
   return bad;
 }
-
-
 
 function mapLineGeometry(line: ShMapLine): { x: number; y: number }[] {
   const raw = line.c;

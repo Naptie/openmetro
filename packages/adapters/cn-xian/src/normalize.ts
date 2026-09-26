@@ -1,11 +1,33 @@
-import { asciiSlug, cleanTime, foldStationName, hexToCss, isUsableEnglish, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, titleCaseRoman, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  asciiSlug,
+  cleanTime,
+  foldStationName,
+  hexToCss,
+  isUsableEnglish,
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  placeholderCity,
+  readableSlug,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded,
+  type TransferEncoded,
+  titleCaseRoman
+} from '@openmetro/core';
 import type {
   AmapLine,
   AmapStation,
   XianOfficialLine,
   XianOfficialStation,
-  XianStationTrainTime,
-  XianSources
+  XianSources,
+  XianStationTrainTime
 } from './fetch.js';
 
 const NETWORK_ID = 'cn-xian';
@@ -26,13 +48,6 @@ export interface XianCanonical {
   fareStationCode: Map<string, string>;
 }
 
-
-
-
-
-
-
-
 /** `"咸阳西站方向"` → `"咸阳西站"`; `"内环"` stays. */
 function destFromDirection(label: string | undefined): string | undefined {
   if (!label) return undefined;
@@ -40,8 +55,6 @@ function destFromDirection(label: string | undefined): string | undefined {
   const m = /^往(.+)$/.exec(t);
   return (m ? m[1].trim() : t) || undefined;
 }
-
-
 
 /**
  * Official English names are unreliable (placeholders `x`, copy-paste
@@ -52,7 +65,7 @@ function resolveEnglishName(
   officialEn: string | null | undefined,
   amapPinyin: string | undefined,
   amapEn: string | undefined,
-  zh: string
+  _zh: string
 ): string | undefined {
   const fromPinyin = pinyinToEnglish(amapPinyin) ?? pinyinToEnglish(amapEn);
   if (fromPinyin) return fromPinyin;
@@ -63,7 +76,6 @@ function resolveEnglishName(
   // Wikidata fillMissingEnglish in run.ts supplies the rest — never invent names.
   return undefined;
 }
-
 
 function lineIdFromShort(short: string): string {
   const numbered = /^(\d+)号线?$/.exec(short.trim());
@@ -102,7 +114,6 @@ function amapStationsByName(amap: XianSources['amap']): Map<string, AmapStation>
   }
   return by;
 }
-
 
 /** AMap may publish composite/renamed labels; official name is often a part. */
 function findAmapByContainment(
@@ -180,7 +191,7 @@ function fillTimetableGaps(
   _unused?: unknown
 ): TimetableEncoded[] {
   const stopById = new Map(stops.map((s) => [s.id, s]));
-  const patternById = new Map(patterns.map((p) => [p.id, p]));
+  const _patternById = new Map(patterns.map((p) => [p.id, p]));
   const out: TimetableEncoded[] = [];
   const byLine = new Map<string, TimetableEncoded[]>();
   for (const t of timetables) {
@@ -346,8 +357,7 @@ export function normalizeXian(input: XianSources): XianCanonical {
       amapByName.get(short) ??
       amapByName.get(`${short.replace(/号线$/, '')}号线`) ??
       amapByName.get(short.replace(/号线$/, ''));
-    const rawEn =
-      String(amap?.lb ?? '').trim() || line.lineEnglishName?.trim() || '';
+    const rawEn = String(amap?.lb ?? '').trim() || line.lineEnglishName?.trim() || '';
     const numbered = /^(\d+)$/.exec(short);
     const nameEn = numbered
       ? `Line ${numbered[1]}`
@@ -402,12 +412,7 @@ export function normalizeXian(input: XianSources): XianCanonical {
     const amap = findAmapByContainment(amapStationByName, key);
     if (!phys) {
       const en =
-        resolveEnglishName(
-          officialEn,
-          String(amap?.sp ?? ''),
-          String(amap?.en ?? ''),
-          zh
-        ) ?? '';
+        resolveEnglishName(officialEn, String(amap?.sp ?? ''), String(amap?.en ?? ''), zh) ?? '';
       const loc = parseSlCoord(amap?.sl);
       const pix = parsePixel(amap?.p);
       phys = {
@@ -563,9 +568,7 @@ export function normalizeXian(input: XianSources): XianCanonical {
     // Timetables from structured getStationInfo only (never OCR images).
     // Transfer stations return every line; keep a cell only when its destination
     // is a station on THIS line (stricter and more reliable than name matching).
-    const lineStationKeys = new Set(
-      stations.map((s) => foldStationName(s.stationName))
-    );
+    const lineStationKeys = new Set(stations.map((s) => foldStationName(s.stationName)));
     const lineStopIdByFold = new Map<string, string>();
     for (const st of stations) {
       const phys = ensurePhys(st.stationName, st.stationId, st.stationEnglishName);

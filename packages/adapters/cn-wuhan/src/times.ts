@@ -1,5 +1,5 @@
-import { fetchWuhanPathPhp, fetchWuhanRoute } from './fetch.js';
 import { foldStationName } from '@openmetro/core';
+import { fetchWuhanPathPhp, fetchWuhanRoute } from './fetch.js';
 
 export interface PlannerSegmentTime {
   /** fold(from) + '|' + fold(to) on the same line (order-independent key built by caller). */

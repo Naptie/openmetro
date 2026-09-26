@@ -1,4 +1,25 @@
-import { applyTimetableServiceStatus, asciiSlug, canonicalizePatterns, cleanTime, foldStationName, hexToCss, parsePixel, parseSlCoord, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded, type TransferEncoded } from '@openmetro/core';
+import {
+  applyTimetableServiceStatus,
+  asciiSlug,
+  canonicalizePatterns,
+  cleanTime,
+  foldStationName,
+  hexToCss,
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
+  parsePixel,
+  parseSlCoord,
+  placeholderCity,
+  readableSlug,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded,
+  type TransferEncoded
+} from '@openmetro/core';
 import type {
   AmapLine,
   AmapStation,
@@ -36,7 +57,6 @@ export interface ChengduCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-
 /**
  * Official/AMap names may differ by trailing 站, middle dots (`中医大·省医院`),
  * full-width parens, or operational annotations.
@@ -45,11 +65,6 @@ export interface ChengduCanonical {
 function stripAnnotations(zh: string): string {
   return zh.trim().replace(ANNOTATION_RE, '').trim();
 }
-
-
-
-
-
 
 function shortSlug(short: string): string {
   return SHORT_SLUG[short] ?? (asciiSlug(short) || readableSlug(short));

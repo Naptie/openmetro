@@ -1,4 +1,24 @@
-import { asciiSlug, deriveLineEnglishName, foldStationName, hasValidTimes, hexToCss, isUsableEnglish, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, stationIdFor, titleCaseRoman, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded } from '@openmetro/core';
+import {
+  asciiSlug,
+  deriveLineEnglishName,
+  foldStationName,
+  hasValidTimes,
+  hexToCss,
+  isUsableEnglish,
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  placeholderCity,
+  readableSlug,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded
+} from '@openmetro/core';
 import type {
   AmapLine,
   AmapStation,
@@ -40,12 +60,10 @@ export interface NanjingCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-
-
 function resolveEnglishName(
   amapEn: string | undefined,
   pinyin: string | undefined,
-  zh: string
+  _zh: string
 ): string | undefined {
   const en = (amapEn ?? '').trim();
   if (isUsableEnglish(en)) return en;
@@ -54,11 +72,6 @@ function resolveEnglishName(
   // Wikidata fillMissingEnglish in run.ts supplies the rest — never invent names.
   return undefined;
 }
-
-
-
-
-
 
 function lineIdOf(short: string): string {
   return `${NETWORK_ID}-line-${readableSlug(short) || asciiSlug(short)}`;
@@ -158,18 +171,17 @@ export function normalizeNanjing(
   };
   const physByFold = new Map<string, Phys>();
 
-
-/** AMap often publishes composite names (中山陵音乐台·孝陵卫); official is a part. */
-function findAmapByContainment(
-  byFold: Map<string, AmapStation>,
-  key: string
-): AmapStation | undefined {
-  if (!key) return undefined;
-  for (const [k, st] of byFold) {
-    if (k.includes(key) || key.includes(k)) return st;
+  /** AMap often publishes composite names (中山陵音乐台·孝陵卫); official is a part. */
+  function findAmapByContainment(
+    byFold: Map<string, AmapStation>,
+    key: string
+  ): AmapStation | undefined {
+    if (!key) return undefined;
+    for (const [k, st] of byFold) {
+      if (k.includes(key) || key.includes(k)) return st;
+    }
+    return undefined;
   }
-  return undefined;
-}
 
   const ensurePhys = (zhRaw: string): Phys => {
     const zh = zhRaw.trim();
@@ -284,7 +296,7 @@ function findAmapByContainment(
 
     // First/last trains from Baidu Direction Lite (official station order).
     const parsedRaw = timetableByStem.get(short);
-    if (parsedRaw && parsedRaw.rows.length) {
+    if (parsedRaw?.rows.length) {
       const { rows: parsedRows, swapped } = fixRowDirection(parsedRaw.rows);
       if (swapped) {
         console.log(`    ${short}: swapped mirrored up/down timetable columns`);

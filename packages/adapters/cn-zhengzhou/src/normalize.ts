@@ -1,4 +1,23 @@
-import { asciiSlug, cleanTime, deriveLineEnglishName, foldStationName, hexToCss, parsePixel, parseSlCoord, pinyinToEnglish, placeholderCity, readableSlug, resolveLineShortName, stationIdFor, type LineEncoded, type NetworkEncoded, type PatternEncoded, type SegmentEncoded, type StationEncoded, type StopEncoded, type TimetableEncoded } from '@openmetro/core';
+import {
+  asciiSlug,
+  cleanTime,
+  deriveLineEnglishName,
+  foldStationName,
+  hexToCss,
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  placeholderCity,
+  resolveLineShortName,
+  type SegmentEncoded,
+  type StationEncoded,
+  type StopEncoded,
+  stationIdFor,
+  type TimetableEncoded
+} from '@openmetro/core';
 import type { AmapLine, AmapStation, AmapSubwayDoc, ZhengzhouSources } from './fetch.js';
 
 const NETWORK_ID = 'cn-zhengzhou';
@@ -48,9 +67,6 @@ export interface ZhengzhouCanonical {
   /** AMap GCJ-02 coords keyed by station id (and folded zh name). */
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
-
-
-
 
 /** Official/AMap names may differ by hospital co-names, parentheticals, or 站. */
 
@@ -138,17 +154,19 @@ export interface StationNameParts {
  * full hospital English. Canonical `names.en` / ids must stay the **place**
  * (`Renmin Lu` / `Renminlu` style), not the sponsoring facility.
  */
-export function extractStationNames(amap: AmapStation | undefined, zhRaw: string): StationNameParts {
+export function extractStationNames(
+  amap: AmapStation | undefined,
+  zhRaw: string
+): StationNameParts {
   const zh = zhRaw.trim();
   const amapName = String(amap?.n ?? '').trim() || undefined;
   const amapEnFull =
-    String(amap?.multilang?.n?.en ?? '').trim() ||
-    String(amap?.en ?? '').trim() ||
-    undefined;
+    String(amap?.multilang?.n?.en ?? '').trim() || String(amap?.en ?? '').trim() || undefined;
   const primaryZh = foldStationName(zh) || (amapName ? foldStationName(amapName) : zh);
   const amapPrimary = amapName ? foldStationName(amapName) : '';
-  const midDotCo =
-    amapName && amapName.includes('·') ? amapName.split('·').slice(1).join('·').trim() : undefined;
+  const midDotCo = amapName?.includes('·')
+    ? amapName.split('·').slice(1).join('·').trim()
+    : undefined;
   const parenCo = amapName ? (/\(([^)]+)\)/.exec(amapName)?.[1]?.trim() ?? undefined) : undefined;
   const coName = midDotCo ?? parenCo;
 
@@ -168,7 +186,7 @@ export function extractStationNames(amap: AmapStation | undefined, zhRaw: string
       };
     }
     // 2) AMap slash form: "WUYIGONGYUAN / SHIZHONGYIYUAN" → left side
-    if (amapEnFull && amapEnFull.includes('/')) {
+    if (amapEnFull?.includes('/')) {
       const left = amapEnFull.split('/')[0]!.trim();
       const en = titleCaseEn(left) || stripEnglishCoName(left);
       return { primaryZh: primaryZh || zh, coName, amapName, amapEnFull, en };
@@ -195,10 +213,9 @@ export function extractStationNames(amap: AmapStation | undefined, zhRaw: string
   return { primaryZh: primaryZh || zh, amapName, amapEnFull, en: zh.trim() };
 }
 
-function resolveEnglishName(amap: AmapStation | undefined, zh: string): string {
+function _resolveEnglishName(amap: AmapStation | undefined, zh: string): string {
   return extractStationNames(amap, zh).en;
 }
-
 
 function lineIdOf(cfg: ZzLineConfig): string {
   return `${NETWORK_ID}-line-${cfg.slug}`;
@@ -207,7 +224,6 @@ function lineIdOf(cfg: ZzLineConfig): string {
 function stopIdOf(stationId: string, short: string): string {
   return `${stationId}-${short}`;
 }
-
 
 /** Official feed uses `——` / `--` / `—` for non-stopping or terminal rows. */
 

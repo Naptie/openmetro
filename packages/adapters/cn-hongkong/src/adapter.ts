@@ -1,9 +1,8 @@
 import type { AdapterManifest, SyncCtx, SyncLayer } from '@openmetro/core';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
+import { repoRootForDataDir } from '@openmetro/core';
 import { fetchMtrSources } from './fetch.js';
 import { normalizeHongKong } from './normalize.js';
 import { runHongKongNormalize } from './run.js';
-
 
 export const adapter: AdapterManifest = {
   networkId: 'cn-hongkong',

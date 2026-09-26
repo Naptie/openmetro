@@ -1,5 +1,4 @@
 import { readFile } from 'node:fs/promises';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
 import { join } from 'node:path';
 import {
   applyHarvestedSegmentTimes,
@@ -10,6 +9,7 @@ import {
   fillCoordinates,
   fillMissingSegmentTimes,
   fillStraightLineDistances,
+  findRepoRoot,
   type LineEncoded,
   type StationEncoded,
   syncFares,
@@ -34,7 +34,6 @@ export interface ShenzhenNormalizeOptions {
   /** Official station-detail API (`POST /zdxx`) is the primary timetable source. */
   skipZdxxTimetables?: boolean;
 }
-
 
 export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}): Promise<void> {
   const root = opts.root ?? findRepoRoot();

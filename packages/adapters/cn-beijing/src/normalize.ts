@@ -9,7 +9,20 @@ import type {
   TimetableEncoded,
   TransferEncoded
 } from '@openmetro/core';
-import { applyTimetableServiceStatus, asciiSlug, deriveLineEnglishName, deriveLineShortName, deriveTransfers, fillMissingSegmentTimes, hasValidTimes, hexToCss, lineSlug, normalizeTimetableTimes, placeholderCity, resolveLineShortName } from '@openmetro/core';
+import {
+  applyTimetableServiceStatus,
+  asciiSlug,
+  deriveLineEnglishName,
+  deriveLineShortName,
+  deriveTransfers,
+  fillMissingSegmentTimes,
+  hasValidTimes,
+  hexToCss,
+  lineSlug,
+  normalizeTimetableTimes,
+  placeholderCity,
+  resolveLineShortName
+} from '@openmetro/core';
 import { XMLParser } from 'fast-xml-parser';
 import { buildBeijingTimetablesFromTimeinfos } from './timeinfos.js';
 
@@ -129,7 +142,6 @@ function stationSlug(en: string): string {
 }
 
 /** Fallback ASCII slug for names with no English value. */
-
 
 /** Beijing feed keys stations by Chinese name with optional English slug. */
 function stationIdFor(zh: string, en?: string): string {
@@ -405,7 +417,6 @@ export function parseBeijingInterchange(
   return out;
 }
 
-
 function slugTo(lineId: string): string {
   return lineId.replace(`${NETWORK_ID}-line-`, '');
 }
@@ -424,7 +435,6 @@ function numOrUndef(v: string | undefined): number | undefined {
   const n = Number(v);
   return Number.isFinite(n) ? n : undefined;
 }
-
 
 /** Stable short hash of a string (for unique, ASCII-safe IDs). */
 function hashSlug(input: string): string {

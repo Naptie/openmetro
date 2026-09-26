@@ -1,8 +1,11 @@
-import { type AdapterManifest, type SyncCtx, type SyncLayer } from '@openmetro/core';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
+import {
+  type AdapterManifest,
+  repoRootForDataDir,
+  type SyncCtx,
+  type SyncLayer
+} from '@openmetro/core';
 import { fareSpec, mergeOfficialFares, writeXianFormulaFares } from './fares.js';
 import { runXianNormalize } from './run.js';
-
 
 export const adapter: AdapterManifest = {
   networkId: 'cn-xian',

@@ -1,17 +1,15 @@
-import { existsSync } from 'node:fs';
-import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
-import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 import {
   applyDerivedTimes,
   deriveSegmentTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
-  fillStationEnglishNames,
   estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStationEnglishNames,
   fillStraightLineDistances,
+  findRepoRoot,
   type LineEncoded,
   normalizeTimetableTimes,
   syncFares,
@@ -30,7 +28,6 @@ export interface HangzhouNormalizeOptions {
   /** Skip live OD fare harvest. */
   skipFares?: boolean;
 }
-
 
 export async function runHangzhouNormalize(opts: HangzhouNormalizeOptions = {}): Promise<void> {
   const root = opts.root ?? findRepoRoot();
