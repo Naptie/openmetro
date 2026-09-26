@@ -199,7 +199,9 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
       const sig = align.stationIds.join('|');
       const revSig = [...align.stationIds].reverse().join('|');
       const reverseOf = patternIdBySig.get(revSig);
-      const isPrimary = align === primary && !reverseOf;
+      // Reverse alignments are not patterns (direction lives on timetable dests).
+      if (reverseOf) continue;
+      const isPrimary = align === primary;
       let junction: string | undefined;
       if (!isPrimary && !reverseOf) {
         for (let i = align.stationIds.length - 1; i >= 0; i--) {

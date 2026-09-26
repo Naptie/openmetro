@@ -7,6 +7,7 @@ import {
   estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
+  fillStationEnglishNames,
   fillStraightLineDistances,
   findRepoRoot,
   type LineEncoded,
@@ -67,6 +68,12 @@ export async function runZhengzhouNormalize(opts: ZhengzhouNormalizeOptions = {}
       onOverpassMatch: () => overpassMatched++,
       onGeocode: () => geocoded++
     });
+
+  {
+    const enFill = await fillStationEnglishNames(stations);
+    stations = enFill.stations;
+    console.log(`  wikidata station names: ${enFill.filled}/${enFill.requested} filled`);
+  }
   }
 
   const defaultTransfer = canonical.network.routing.default_transfer_seconds ?? 120;

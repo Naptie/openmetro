@@ -308,7 +308,9 @@ function reconstructPatterns(
   if (junctionId) {
     const jMain = mainNames.indexOf(junction);
     const farSide = ci < ji ? mainNames.slice(jMain) : [...mainNames.slice(0, jMain + 1)].reverse();
-    const branchStopIds = stopsFor([...run, ...farSide]);
+    // Branch pattern is terminus→junction only; the trunk beyond the junction
+    // stays exclusive to the main pattern so no shared stop is left non-junction.
+    const branchStopIds = stopsFor([...run, junction]);
     if (branchStopIds.length >= 2) {
       patterns.push({
         id: `${lineId}-pattern-branch-${slug(terminus)}`,

@@ -760,6 +760,8 @@ export function normalizeWuhan(input: WuhanSources): WuhanCanonical {
       seenSig.add(sig);
       const revSig = [...stopIds].reverse().join('|');
       const reverseOfId = patternIdBySig.get(revSig);
+      // Reverse alignments are not patterns (direction lives on timetable dests).
+      if (reverseOfId) continue;
       const isPrimary = !primaryTaken && !reverseOfId;
       if (isPrimary) primaryTaken = true;
 

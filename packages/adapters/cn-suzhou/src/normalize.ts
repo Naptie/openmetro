@@ -564,32 +564,6 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
       }
     });
 
-    // Reverse alignment — official times publish both up/down termini.
-    const revStopIds = [...patternStopIds].reverse();
-    const revId = `${patternId}-rev`;
-    if (revStopIds.length >= 2) {
-      patterns.push({
-        id: revId,
-        line_id: lineId,
-        name: seq.meta.nameZh,
-        names: {
-          zh: seq.meta.nameZh,
-          en: officialLineEnglishName(seq.meta.nameZh, seq.meta.nameEn)
-        },
-        stop_ids: revStopIds,
-        origin_stop_id: revStopIds[0],
-        terminal_stop_id: revStopIds[revStopIds.length - 1],
-        is_primary: false,
-        source_ids: [{ source: 'sz-mtr-map-js', id: `${seq.meta.sourceId}-rev` }],
-        extras: {
-          direction: 'reverse',
-          pattern_role: 'reverse',
-          reverse_of: patternId,
-          line_status: seq.meta.status
-        }
-      });
-    }
-
     for (let i = 0; i < patternStopIds.length - 1; i++) {
       const a = patternStationIds[i];
       const b = patternStationIds[i + 1];
@@ -665,16 +639,8 @@ export function normalize(input: SuzhouRawInput): SuzhouCanonical {
               ? [...physByName.values()].find((p) => p.id === destStation)
               : undefined;
           const destName = destPhys?.zh ?? destCode;
-          // Bind the reverse alignment when this direction targets the origin end.
-          const reversePattern = patterns.find(
-            (p) =>
-              p.line_id === lineId &&
-              p.extras &&
-              (p.extras as { reverse_of?: string }).reverse_of === patternId
-          );
-          const usesReverse =
-            reversePattern != null && destStop === patternStopIds[0] && patternStopIds.length > 1;
-          const boundPatternId = usesReverse ? reversePattern.id : patternId;
+          // Reverse is not a separate pattern; both directions share the primary stop path.
+          const boundPatternId = patternId;
           const id = `${NETWORK_ID}-${phys.id}-${short}-to-${asciiSlug(destMapId)}-${dir}`;
           if (ttIds.has(id)) continue;
           ttIds.add(id);

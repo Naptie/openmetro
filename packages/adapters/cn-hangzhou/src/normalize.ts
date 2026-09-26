@@ -442,6 +442,8 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
         .join('|');
       if (seenSig.has(sig)) continue;
       const reverseOfId = patternIdBySig.get(revSig);
+      // Reverse alignments are not patterns (direction lives on timetable dests).
+      if (reverseOfId) continue;
       seenSig.add(sig);
 
       const origin = seq.physList[0];
@@ -627,7 +629,7 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
     stations.push({
       id: phys.id,
       name: phys.zh,
-      names: { zh: phys.zh, en: phys.en || '' },
+      names: { zh: phys.zh, en: phys.en || pinyinToEnglish(phys.pinyin) || '' },
       location,
       schematic: phys.schematic
         ? { x: phys.schematic.x, y: phys.schematic.y, crs: 'schematic' as const }

@@ -3,6 +3,7 @@ import {
   deriveTransfers,
   estimateTimesFromDistanceSpeed,
   fillCoordinates,
+  fillStationEnglishNames,
   fillStraightLineDistances,
   type KnownLocation,
   type TransformStations,
@@ -107,7 +108,7 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
   let subwayMatched = 0;
   let overpassMatched = 0;
   let officialMatched = 0;
-  const stations = transformStations(
+  let stations = transformStations(
     await fillCoordinates(canonical.stations, {
       city: '广州',
       extraCities: ['佛山', '东莞', '惠州', '肇庆'],
@@ -143,6 +144,11 @@ export async function runGuangzhouNormalize(opts: GuangzhouNormalizeOptions = {}
     fillStraightLineDistances(canonical.segments, stations)
   );
 
+
+  // Resolve any remaining empty/Chinese names.en via Wikidata.
+  const enFill = await fillStationEnglishNames(stations);
+  stations = enFill.stations;
+  console.log('  wikidata station names: ' + enFill.filled + '/' + enFill.requested + ' filled');
   await writeCanonical(outDir, 'cn-guangzhou', {
     network: canonical.network,
     lines: canonical.lines,

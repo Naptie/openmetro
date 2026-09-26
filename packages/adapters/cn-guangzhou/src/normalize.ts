@@ -1,4 +1,5 @@
 import {
+  pinyinToEnglish,
   applyDerivedTimes,
   applyTimetableServiceStatus,
   deriveSegmentTimes,
@@ -467,21 +468,31 @@ export function normalize(input: GzRawInput): GzCanonical {
   }
 
   const stations: StationEncoded[] = applyTimetableServiceStatus(
-    [...stationNames].map((name) => {
-      const detail = stationDetails[name];
-      const en = enByZh.get(name) ?? detail?.nameEN ?? undefined;
-      const id = `${NETWORK_ID}-${stationIdFor(en, name)}`;
-      const names = { zh: name, en: en ?? name };
-      return {
-        id,
-        name,
-        names,
-        status: 'operating' as const,
-        source_ids: detail?.stationRelateId
-          ? [{ source: 'gzmtr-station', id: detail.stationRelateId }]
-          : []
-      };
-    }),
+    (() => {
+      const used = new Set<string>();
+      return [...stationNames].map((name) => {
+        const detail = stationDetails[name];
+        const en = enByZh.get(name) ?? detail?.nameEN ?? undefined;
+        let slug = stationIdFor(en, name);
+        // Distinct stations can share an English slug; keep ids unique.
+        while (used.has(`${NETWORK_ID}-${slug}`)) {
+          slug = `${slug}-${readableSlug(name)}`;
+        }
+        used.add(`${NETWORK_ID}-${slug}`);
+        const id = `${NETWORK_ID}-${slug}`;
+        const usableEn = en && /^[A-Za-z]/.test(en) ? en : undefined;
+        const names = { zh: name, en: usableEn ?? name };
+        return {
+          id,
+          name,
+          names,
+          status: 'operating' as const,
+          source_ids: detail?.stationRelateId
+            ? [{ source: 'gzmtr-station', id: detail.stationRelateId }]
+            : []
+        };
+      });
+    })(),
     stops,
     finalTimetables,
     []

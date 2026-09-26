@@ -53,11 +53,12 @@ function lineIdFor(shortName: string, name: string): string {
 function resolveEnglishName(
   amapEn: string | undefined,
   pinyin: string | undefined,
-  zh: string
-): string {
+  _zh: string
+): string | undefined {
   const en = (amapEn ?? '').trim();
-  if (en && /^[A-Za-z]/.test(en)) return en;
-  return pinyinToEnglish(pinyin) ?? zh.trim();
+  if (en && /^[A-Za-z]/.test(en) && !/[\u4e00-\u9fff]/.test(en)) return en;
+  // Never copy the Chinese display name into names.en — Wikidata fills the rest.
+  return pinyinToEnglish(pinyin);
 }
 
 function parseAmapSl(sl: string | undefined): { lon: number; lat: number } | undefined {
@@ -342,7 +343,7 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
     const station: StationEncoded = {
       id: unique,
       name: zh,
-      names: { zh, en },
+      names: { zh, en: en ?? '' },
       status: 'operating',
       source_ids: [{ source: CQ_SOURCE, id: zhRaw }],
       location,

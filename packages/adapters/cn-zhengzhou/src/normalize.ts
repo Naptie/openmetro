@@ -210,7 +210,8 @@ export function extractStationNames(
   if (en) return { primaryZh: primaryZh || zh, amapName, amapEnFull, en };
   const pinyin = pinyinToEnglish(amap?.sp);
   if (pinyin) return { primaryZh: primaryZh || zh, amapName, amapEnFull, en: pinyin };
-  return { primaryZh: primaryZh || zh, amapName, amapEnFull, en: zh.trim() };
+  // Never copy the Chinese display name into names.en — Wikidata fills the rest.
+  return { primaryZh: primaryZh || zh, amapName, amapEnFull, en: '' };
 }
 
 function _resolveEnglishName(amap: AmapStation | undefined, zh: string): string {
@@ -841,7 +842,10 @@ export function normalizeZhengzhou(input: ZhengzhouSources): ZhengzhouCanonical 
     stations.push({
       id: phys.id,
       name: phys.zh,
-      names: { zh: phys.zh, en: phys.en },
+      names: {
+        zh: phys.zh,
+        en: phys.en && /^[A-Za-z]/.test(phys.en) && !/[\u4e00-\u9fff]/.test(phys.en) ? phys.en : ''
+      },
       location: loc,
       schematic: phys.schematic
         ? { x: phys.schematic.x, y: phys.schematic.y, crs: 'schematic' as const }
