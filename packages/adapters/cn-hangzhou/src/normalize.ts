@@ -450,17 +450,9 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
     }
 
     const seenSig = new Set<string>();
-    const patternIdBySig = new Map<string, string>();
     for (const seq of dirSeqs) {
       const sig = seq.codes.map((c) => c || '?').join('|');
-      const revSig = [...seq.codes]
-        .reverse()
-        .map((c) => c || '?')
-        .join('|');
       if (seenSig.has(sig)) continue;
-      const reverseOfId = patternIdBySig.get(revSig);
-      // Reverse alignments are not patterns (direction lives on timetable dests).
-      if (reverseOfId) continue;
       seenSig.add(sig);
 
       const origin = seq.physList[0];
@@ -468,7 +460,6 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
       const patternId = `${lineId}-pattern-${stopSlug(seq.stopIds[0])}-to-${stopSlug(
         seq.stopIds[seq.stopIds.length - 1]
       )}`;
-      patternIdBySig.set(sig, patternId);
       patterns.push({
         id: patternId,
         line_id: lineId,
@@ -530,9 +521,33 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
     sourceBuckets.push({ sourceKey, lineId, short, branch, lineName, dirSeqs });
   }
 
-  // ── Phase B: one primary per line; trim branches to unique+junction ──
+  // ── Phase B: drop reverse duplicates, pick primary, trim branches ──
   const linesWithPatterns = new Set(patterns.map((x) => x.line_id));
   for (const lineId of linesWithPatterns) {
+    // Reverse alignments are not patterns (direction lives on timetable dests).
+    {
+      const seen = new Set<string>();
+      const dropRev = new Set<string>();
+      for (const x of patterns) {
+        if (x.line_id !== lineId) continue;
+        const sig = x.stop_ids.join('|');
+        const revSig = [...x.stop_ids].reverse().join('|');
+        if (seen.has(sig) || seen.has(revSig)) {
+          dropRev.add(x.id);
+          continue;
+        }
+        seen.add(sig);
+      }
+      if (dropRev.size > 0) {
+        for (let i = patterns.length - 1; i >= 0; i--) {
+          const pid = patterns[i]!.id;
+          if (!dropRev.has(pid)) continue;
+          patterns.splice(i, 1);
+          const bi = patternBuilds.findIndex((b) => b.patternId === pid);
+          if (bi >= 0) patternBuilds.splice(bi, 1);
+        }
+      }
+    }
     const linePatternIdx = patterns
       .map((x, i) => ({ p: x, i }))
       .filter(({ p }) => p.line_id === lineId);
