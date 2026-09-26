@@ -589,6 +589,30 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
         if (bi >= 0) patternBuilds.splice(bi, 1);
       }
     }
+    // Trimming can collapse two branches onto the same unique+junction set.
+    {
+      const seen = new Set<string>();
+      const dropDup = new Set<string>();
+      for (const x of patterns) {
+        if (x.line_id !== lineId) continue;
+        const sig = x.stop_ids.join('|');
+        const revSig = [...x.stop_ids].reverse().join('|');
+        if (seen.has(sig) || seen.has(revSig)) {
+          if (x.id !== winner.p.id) dropDup.add(x.id);
+          continue;
+        }
+        seen.add(sig);
+      }
+      if (dropDup.size > 0) {
+        for (let i = patterns.length - 1; i >= 0; i--) {
+          const pid = patterns[i]!.id;
+          if (!dropDup.has(pid)) continue;
+          patterns.splice(i, 1);
+          const bi = patternBuilds.findIndex((b) => b.patternId === pid);
+          if (bi >= 0) patternBuilds.splice(bi, 1);
+        }
+      }
+    }
   }
 
   // ── Phase C: timetables against the final patterns (stub-ification) ──
