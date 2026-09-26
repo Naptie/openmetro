@@ -50,7 +50,7 @@ export async function runHangzhouNormalize(opts: HangzhouNormalizeOptions = {}):
   let geocoded = 0;
   let stations = stationsWithEn;
   if (!opts.skipGeocode) {
-    stations = await fillCoordinates(canonical.stations, {
+    stations = await fillCoordinates(stationsWithEn, {
       city: '杭州',
       stops: canonical.stops,
       lines: lines.map((l) => ({ id: l.id, mode: l.mode })),

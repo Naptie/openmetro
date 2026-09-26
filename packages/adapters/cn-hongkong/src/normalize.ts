@@ -232,6 +232,30 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
         }
       }
 
+      // Keep only the unique run + junction so multi-pattern overlap is a
+      // single junction stop (verify: only the junction may be shared).
+      let outStopIds = align.stopIds;
+      let outStationIds = align.stationIds;
+      if (!isPrimary && junction) {
+        const jIdx = align.stopIds.indexOf(junction);
+        if (jIdx >= 0) {
+          const lastUnique = outStationIds.reduce(
+            (acc, id, i) => (primarySet.has(id) ? acc : i),
+            -1
+          );
+          if (lastUnique < 0) {
+            // Subset short-turn: not a separate pattern at all.
+            continue;
+          }
+          // Keep unique prefix/suffix through the junction.
+          const lo = Math.min(lastUnique, jIdx);
+          const hi = Math.max(lastUnique, jIdx);
+          outStopIds = align.stopIds.slice(lo, hi + 1);
+          outStationIds = align.stationIds.slice(lo, hi + 1);
+          if (outStopIds.length < 2) continue;
+        }
+      }
+
       const patternId = `${lineId}-pattern-${readableSlug(origin.split('-').pop() ?? origin)}-to-${readableSlug(
         terminal.split('-').pop() ?? terminal
       )}`;
@@ -245,9 +269,9 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
         line_id: lineId,
         name: meta.zh,
         names: { zh: meta.zh, en: meta.en },
-        stop_ids: align.stopIds,
-        origin_stop_id: align.stopIds[0],
-        terminal_stop_id: align.stopIds[align.stopIds.length - 1],
+        stop_ids: outStopIds,
+        origin_stop_id: outStopIds[0],
+        terminal_stop_id: outStopIds[outStopIds.length - 1],
         is_primary: isPrimary,
         junction_stop_id: junction,
         color: meta.color,
@@ -262,9 +286,9 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
       });
 
       const segmentKey = new Set<string>();
-      for (let i = 0; i < align.stopIds.length - 1; i++) {
-        const a = align.stopIds[i];
-        const b = align.stopIds[i + 1];
+      for (let i = 0; i < outStopIds.length - 1; i++) {
+        const a = outStopIds[i];
+        const b = outStopIds[i + 1];
         const key = [lineId, a, b].sort().join('|');
         if (segmentKey.has(key)) continue;
         segmentKey.add(key);
@@ -273,19 +297,19 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
           line_id: lineId,
           from_stop_id: a,
           to_stop_id: b,
-          from_station_id: align.stationIds[i],
-          to_station_id: align.stationIds[i + 1],
+          from_station_id: outStationIds[i],
+          to_station_id: outStationIds[i + 1],
           direction: 'both',
           source_id: MTR_SOURCE
         });
       }
 
-      for (let i = 0; i < align.stopIds.length; i++) {
-        const stopId = align.stopIds[i];
+      for (let i = 0; i < outStopIds.length; i++) {
+        const stopId = outStopIds[i];
         if (stopById.has(stopId)) continue;
         const stop: StopEncoded = {
           id: stopId,
-          station_id: align.stationIds[i],
+          station_id: outStationIds[i],
           line_id: lineId,
           // Provisional; renumbered uniquely per line below.
           sequence: i,
