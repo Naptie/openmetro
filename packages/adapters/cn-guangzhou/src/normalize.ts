@@ -152,6 +152,24 @@ function primaryCard(cards: GzLineCard[]): GzLineCard {
 }
 
 export function normalize(input: GzRawInput): GzCanonical {
+  // One name → id map so stops, timetables and station records stay aligned.
+  const stationIdByZh = new Map<string, string>();
+  const usedStationIds = new Set<string>();
+  const stationIdOf = (zh: string, en?: string): string => {
+    const cached = stationIdByZh.get(zh);
+    if (cached) return cached;
+    const label = en && /^[A-Za-z]/.test(en) ? en : undefined;
+    let slug = stationIdFor(label, zh);
+    const base = NETWORK_ID + '-';
+    while (usedStationIds.has(base + slug)) {
+      slug = slug + '-' + readableSlug(zh);
+    }
+    usedStationIds.add(base + slug);
+    const id = base + slug;
+    stationIdByZh.set(zh, id);
+    return id;
+  };
+
   // Official API writes 𧒽岗 as "虫雷 岗"; canonical names use the single char.
   const foldCards = (cards: GzLineCard[]): GzLineCard[] =>
     cards.map((c) => ({
@@ -294,7 +312,7 @@ export function normalize(input: GzRawInput): GzCanonical {
     const lineStops: StopEncoded[] = [];
     unique.forEach((s, idx) => {
       stationNames.add(s.stationName);
-      const stationId = `${NETWORK_ID}-${stationIdFor(s.stationNameEn, s.stationName)}`;
+      const stationId = stationIdOf(s.stationName, s.stationNameEn);
       const stopId = `${stationId}-${slug(lineId)}`;
       stopIdByStation.set(s.stationName, stopId);
       const stop: StopEncoded = {
@@ -394,7 +412,7 @@ export function normalize(input: GzRawInput): GzCanonical {
   const timetables: TimetableEncoded[] = [];
   const usedTtIds = new Set<string>();
   for (const [name, recs] of Object.entries(servicetimes)) {
-    const stationId = `${NETWORK_ID}-${stationIdFor(enByZh.get(name), name)}`;
+    const stationId = stationIdOf(name, enByZh.get(name));
     for (const r of recs) {
       const lineId = lineCnToId.get(r.lineCn) ?? lineNameToId.get(r.lineCn);
       if (!lineId) continue;
@@ -404,7 +422,7 @@ export function normalize(input: GzRawInput): GzCanonical {
 
       const toName = stripDirectionAnnotation(r.toStationName);
       const destStop = lineStops.find(
-        (s) => s.station_id === `${NETWORK_ID}-${stationIdFor(enByZh.get(toName), toName)}`
+        (s) => s.station_id === stationIdOf(toName, enByZh.get(toName))
       );
       if (!destStop) continue;
 
@@ -468,31 +486,21 @@ export function normalize(input: GzRawInput): GzCanonical {
   }
 
   const stations: StationEncoded[] = applyTimetableServiceStatus(
-    (() => {
-      const used = new Set<string>();
-      return [...stationNames].map((name) => {
-        const detail = stationDetails[name];
-        const en = enByZh.get(name) ?? detail?.nameEN ?? undefined;
-        let slug = stationIdFor(en, name);
-        // Distinct stations can share an English slug; keep ids unique.
-        while (used.has(`${NETWORK_ID}-${slug}`)) {
-          slug = `${slug}-${readableSlug(name)}`;
-        }
-        used.add(`${NETWORK_ID}-${slug}`);
-        const id = `${NETWORK_ID}-${slug}`;
-        const usableEn = en && /^[A-Za-z]/.test(en) ? en : undefined;
-        const names = { zh: name, en: usableEn ?? name };
-        return {
-          id,
-          name,
-          names,
-          status: 'operating' as const,
-          source_ids: detail?.stationRelateId
-            ? [{ source: 'gzmtr-station', id: detail.stationRelateId }]
-            : []
-        };
-      });
-    })(),
+    [...stationNames].map((name) => {
+      const detail = stationDetails[name];
+      const en = enByZh.get(name) ?? detail?.nameEN ?? undefined;
+      const id = stationIdOf(name, en);
+      const usableEn = en && /^[A-Za-z]/.test(en) ? en : undefined;
+      return {
+        id,
+        name,
+        names: { zh: name, en: usableEn ?? '' },
+        status: 'operating' as const,
+        source_ids: detail?.stationRelateId
+          ? [{ source: 'gzmtr-station', id: detail.stationRelateId }]
+          : []
+      };
+    }),
     stops,
     finalTimetables,
     []

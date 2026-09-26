@@ -168,10 +168,23 @@ export async function fillStationEnglishNames<
     }
     return s;
   });
-  const filled = requested - out.filter((s) => !s.names.en?.trim()).length;
-  return { stations: out, requested, filled };
+  // Deterministic last resort: AMap pinyin from extras. Never copy Chinese
+  // into names.en (verify requires a romanised label).
+  const withFallback = out.map((s) => {
+    const en = s.names.en?.trim();
+    if (en) return s;
+    const extras = (s as { extras?: Record<string, unknown> }).extras;
+    const py = typeof extras?.pinyin === 'string' ? extras.pinyin.trim() : '';
+    if (py && /^[A-Za-z]/.test(py)) {
+      return { ...s, names: { zh: s.names.zh, en: titleCaseRoman(py) } };
+    }
+    return s;
+  });
+  const filled = requested - withFallback.filter((s) => !s.names.en?.trim()).length;
+  return { stations: withFallback, requested, filled };
 }
 
+import { titleCaseRoman } from '../adapter/text.js';
 import { deriveLineEnglishName } from './lines.js';
 
 /**

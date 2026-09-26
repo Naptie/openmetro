@@ -203,12 +203,18 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
       if (reverseOf) continue;
       const isPrimary = align === primary;
       let junction: string | undefined;
-      if (!isPrimary && !reverseOf) {
-        for (let i = align.stationIds.length - 1; i >= 0; i--) {
-          if (primarySet.has(align.stationIds[i])) {
-            // Must be a stop id on both this pattern and the primary trunk.
-            junction = align.stopIds[i];
-            break;
+      if (!isPrimary) {
+        const isSubset = align.stationIds.every((id) => primarySet.has(id));
+        if (isSubset) {
+          // Short-turn: diverges at its origin (first stop not reached by the long run).
+          junction = align.stopIds[0];
+        } else {
+          for (let i = align.stationIds.length - 1; i >= 0; i--) {
+            if (primarySet.has(align.stationIds[i])) {
+              // Must be a stop id on both this pattern and the primary trunk.
+              junction = align.stopIds[i];
+              break;
+            }
           }
         }
       }
