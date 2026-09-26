@@ -81,12 +81,25 @@ export type WikidataLookupResult =
   | { status: 'unreachable' };
 
 export async function lookupWikidata(label: string): Promise<WikidataLookupResult> {
+  const queries = [label];
+  if (!label.endsWith('站') && !label.endsWith('線') && !label.endsWith('线')) {
+    queries.push(`${label}站`);
+    queries.push(`${label} metro station`);
+  }
   try {
-    const results = await searchWikidata(label);
-    if (results.length === 0) return { status: 'no_match' };
-    const pick = results.find((r) => r.label === label) ?? results[0];
-    const names = await fetchEntityLabels(pick.id);
-    if (names.zh && names.en) return { status: 'ok', names };
+    for (const q of queries) {
+      const results = await searchWikidata(q);
+      if (results.length === 0) continue;
+      // Prefer an exact/站-suffixed label match over a loose first hit.
+      const exact =
+        results.find((r) => r.label === label) ??
+        results.find((r) => r.label === `${label}站`) ??
+        results.find((r) => r.label === `${label} station`) ??
+        results[0];
+      const names = await fetchEntityLabels(exact.id);
+      // An English label alone is enough — station entities often only label zh+en.
+      if (names.en) return { status: 'ok', names: { ...names, zh: names.zh ?? label } };
+    }
     return { status: 'no_match' };
   } catch {
     return { status: 'unreachable' };
@@ -131,6 +144,33 @@ export async function fillMissingEnglish<T extends { names: { zh: string; en?: s
     else result.push(entry);
   }
   return result;
+}
+
+
+/**
+ * Station English names via Wikidata (single policy for every adapter).
+ *
+ * Fills empty `names.en` from Wikidata, then normalises Wikidata's
+ * " Foo station" suffix when the Chinese label does not end in 站.
+ * Returns `{ stations, requested, filled }`.
+ */
+export async function fillStationEnglishNames<
+  T extends { names: { zh: string; en?: string }; name?: string }
+>(stations: T[]): Promise<{ stations: T[]; requested: number; filled: number }> {
+  const requested = stations.filter((s) => !s.names.en?.trim()).length;
+  const filledRaw = await fillMissingEnglish(stations, {
+    getLabel: (s) => s.names.zh || s.name || ''
+  });
+  const out = filledRaw.map((s) => {
+    const en = s.names.en?.trim();
+    const zh = s.names.zh || s.name || '';
+    if (en && / station$/i.test(en) && zh && !zh.endsWith('站')) {
+      return { ...s, names: { zh: s.names.zh, en: en.replace(/ station$/i, '') } };
+    }
+    return s;
+  });
+  const filled = requested - out.filter((s) => !s.names.en?.trim()).length;
+  return { stations: out, requested, filled };
 }
 
 import { deriveLineEnglishName } from './lines.js';

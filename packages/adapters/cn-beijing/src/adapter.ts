@@ -1,11 +1,8 @@
 import { type AdapterManifest, type SyncCtx, type SyncLayer, syncFares } from '@openmetro/core';
+import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
 import { fareSpec } from './fares.js';
 import { runBeijingNormalize } from './run.js';
 
-function rootOf(dataDir: string): string {
-  const m = dataDir.match(/^(.*?)[/\\]data[/\\]cn-beijing$/);
-  return m?.[1] || process.env.OPENMETRO_ROOT || process.cwd();
-}
 
 export const adapter: AdapterManifest = {
   networkId: 'cn-beijing',
@@ -20,7 +17,7 @@ export const adapter: AdapterManifest = {
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
     if (layers.some((l) => l === 'topology' || l === 'timetables' || l === 'enrichment')) {
-      await runBeijingNormalize({ root: rootOf(ctx.dataDir) });
+      await runBeijingNormalize({ root: repoRootForDataDir(ctx.dataDir, 'cn-beijing') });
     }
     if (layers.includes('fares')) {
       await syncFares(ctx, fareSpec);

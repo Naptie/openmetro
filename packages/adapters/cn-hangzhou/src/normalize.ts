@@ -1,12 +1,20 @@
 import {
   applyTimetableServiceStatus,
+  asciiSlug,
+  cleanTime,
   deriveLineEnglishName,
+  foldStationName,
   hasValidTimes,
+  hexToCss,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  readableSlug,
+  resolveLineShortName,
+  stationIdFor,
   type LineEncoded,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
-  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -32,87 +40,27 @@ export interface HangzhouCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-function asciiSlug(s: string): string {
-  return (
-    s
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '') || readableSlug(s)
-  );
-}
 
 /**
  * AMap `sp` is CamelCase pinyin (`AoTi ZhongXin`, `LvTing Lu`). Title-case it
  * so station English names / ids stay human-readable when `en` is blank.
  */
-function pinyinToEnglish(sp: string | undefined): string | undefined {
-  const t = (sp ?? '').trim();
-  if (!t || !/^[A-Za-z]/.test(t)) return undefined;
-  return t
-    .split(/\s+/)
-    .map((w) => (w ? w[0]!.toUpperCase() + w.slice(1).toLowerCase() : w))
-    .join(' ')
-    .replace(/\s+,/g, ',');
-}
-
-/** English names for official stations absent from the AMap subway file. */
-const FALLBACK_EN: Record<string, string> = {
-  创明路: 'Chuangming Road'
-};
 
 function resolveEnglishName(
   amapEn: string | undefined,
   pinyin: string | undefined,
   zh: string
-): string {
+): string | undefined {
   const en = (amapEn ?? '').trim();
   if (en && /^[A-Za-z]/.test(en)) return en;
-  return pinyinToEnglish(pinyin) ?? FALLBACK_EN[zh.trim()] ?? zh.trim();
+  return pinyinToEnglish(pinyin);
 }
 
-function stationIdFor(en: string | undefined, zh: string): string {
-  const label = (en ?? '').trim();
-  if (label && /[A-Za-z]/.test(label)) {
-    // Keep human-readable ids even when AMap English has quotes/parens/ampersands.
-    const slug = label
-      .toLowerCase()
-      .replace(/&/g, 'and')
-      .replace(/[''`']/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-    if (slug) return slug;
-    return readableSlug(label);
-  }
-  return readableSlug(zh);
-}
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^#/, '').trim();
-  if (m.length !== 6) return undefined;
-  return `#${m.toLowerCase()}`;
-}
 
 /** Official/AMap names may differ by a trailing 站 or full-width parens. */
-export function foldStationName(zh: string): string {
-  return zh.trim().replace(/[（]/g, '(').replace(/[）]/g, ')').replace(/站$/, '').trim();
-}
 
-function parseSlCoord(sl: string | undefined): { lon: number; lat: number } | undefined {
-  if (!sl) return undefined;
-  const [lonRaw, latRaw] = sl.split(',');
-  const lon = Number(lonRaw);
-  const lat = Number(latRaw);
-  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return undefined;
-  return { lon, lat };
-}
 
-function parsePixel(p: string | undefined): { x: number; y: number } | undefined {
-  if (!p) return undefined;
-  const m = /^(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)$/.exec(p.trim());
-  if (!m) return undefined;
-  return { x: Number(m[1]), y: Number(m[2]) };
-}
 
 /** `"3号线（星桥-吴山前村）"` / `"6号线"` → parent short badge name `"3号线"` / `"6号线"`. */
 function parentLineName(key: string): string {
@@ -141,16 +89,6 @@ function stopIdOf(stationId: string, short: string): string {
 }
 
 /** Official feed uses `——` / `--` / `终点站` for non-stopping or terminal rows. */
-function cleanTime(raw: string | undefined): string | undefined {
-  if (!raw) return undefined;
-  const t = raw.trim().replace('：', ':');
-  if (!t) return undefined;
-  if (t.includes('终点站')) return undefined;
-  // Reject dash placeholders before any numeric parse attempt.
-  if (/^[-–—－]+$/.test(t)) return undefined;
-  if (!/^\d{1,2}:\d{2}$/.test(t)) return undefined;
-  return t;
-}
 
 /**
  * Station-level "not open yet" only. Official CMS blurbs often say a specific
@@ -346,7 +284,7 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
     if (!phys) {
       const amap = amapStationByName.get(key);
       const pinyin = String(amap?.sp ?? '').trim() || undefined;
-      const en = resolveEnglishName(String(amap?.en ?? ''), pinyin, zh);
+      const en = resolveEnglishName(String(amap?.en ?? ''), pinyin, zh) ?? '';
       const loc = parseSlCoord(amap?.sl);
       const pix = parsePixel(amap?.p);
       phys = {
@@ -693,7 +631,7 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
     stations.push({
       id: phys.id,
       name: phys.zh,
-      names: { zh: phys.zh, en: phys.en || phys.zh },
+      names: { zh: phys.zh, en: phys.en || '' },
       location,
       schematic: phys.schematic
         ? { x: phys.schematic.x, y: phys.schematic.y, crs: 'schematic' as const }

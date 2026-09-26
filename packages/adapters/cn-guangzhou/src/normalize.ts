@@ -5,17 +5,19 @@ import {
   deriveTransfers,
   foldRareCharacters,
   hasValidTimes,
-  type LineEncoded,
+  hexToCss,
   lineSlug,
-  type NetworkEncoded,
   normalizeTimetableTimes,
-  type PatternEncoded,
   readableSlug,
   resolveLineShortName,
+  stationIdFor,
+  stripDirectionAnnotation,
+  type LineEncoded,
+  type NetworkEncoded,
+  type PatternEncoded,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
-  stripDirectionAnnotation,
   type TimetableEncoded,
   type TransferEncoded
 } from '@openmetro/core';
@@ -112,25 +114,7 @@ function slug(s: string): string {
 }
 
 /** Stable station id: English slug, plus parenthetical Chinese qualifier when present. */
-function stationIdFor(en: string | undefined, zh: string): string {
-  const base = slug(en || zh);
-  const m = /[（(]([^）)]+)[）)]/.exec(zh);
-  if (m) {
-    const suffix = slug(m[1]);
-    if (suffix && !base.endsWith(suffix)) return `${base}-${suffix}`;
-  }
-  return base;
-}
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^0x/, '').replace(/^#/, '');
-  const r = parseInt(m.slice(0, 2), 16);
-  const g = parseInt(m.slice(2, 4), 16);
-  const b = parseInt(m.slice(4, 6), 16);
-  if ([r, g, b].some((n) => Number.isNaN(n))) return undefined;
-  return `#${[r, g, b].map((n) => n.toString(16).padStart(2, '0')).join('')}`;
-}
 
 function ensureUniqueTtId(
   used: Set<string>,

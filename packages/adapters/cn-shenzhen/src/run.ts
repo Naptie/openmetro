@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
 import { join } from 'node:path';
 import {
   applyHarvestedSegmentTimes,
@@ -34,12 +35,9 @@ export interface ShenzhenNormalizeOptions {
   skipZdxxTimetables?: boolean;
 }
 
-function rootOfDefault(): string {
-  return process.env.OPENMETRO_ROOT ?? process.cwd();
-}
 
 export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}): Promise<void> {
-  const root = opts.root ?? rootOfDefault();
+  const root = opts.root ?? findRepoRoot();
   const outDir = join(root, 'data/cn-shenzhen');
 
   const sources = await fetchShenzhenSources({ skipEnTimetables: opts.skipEnTimetables });

@@ -128,6 +128,16 @@ function verifyReferences(network: string, d: NetworkData): void {
   for (const station of d.stations) {
     assert(station.names?.zh, network, `station ${station.id} missing names.zh`);
     assert(station.names?.en, network, `station ${station.id} missing names.en`);
+    // English names must be romanised, not a copy of the Chinese display name.
+    const enName = String(station.names?.en ?? '');
+    assert(
+      /[A-Za-z]/.test(enName) && !/[一-鿿]/.test(enName),
+      network,
+      `station ${station.id} names.en is not romanised (${enName})`
+    );
+    // readableSlug hashes (`e3t0z`, `Klem6`) must never be used as English names.
+    const hashLike = /^[A-Za-z]{1,4}\d[A-Za-z0-9]*$/.test(enName) && !/^T\d/.test(enName);
+    assert(!hashLike, network, `station ${station.id} names.en looks like a slug hash (${enName})`);
     // Coordinates must be resolved for in-service metro-class stations.
     // Tram/other modes may be absent from AMap+Overpass+Photon on a given day.
     if (station.status === 'operating') {

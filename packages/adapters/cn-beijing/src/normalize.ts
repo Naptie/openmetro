@@ -11,14 +11,16 @@ import type {
 } from '@openmetro/core';
 import {
   applyTimetableServiceStatus,
+  asciiSlug,
   deriveLineEnglishName,
   deriveLineShortName,
   deriveTransfers,
   fillMissingSegmentTimes,
   hasValidTimes,
+  hexToCss,
   lineSlug,
   normalizeTimetableTimes,
-  resolveLineShortName
+  resolveLineShortName,
 } from '@openmetro/core';
 import { XMLParser } from 'fast-xml-parser';
 import { buildBeijingTimetablesFromTimeinfos } from './timeinfos.js';
@@ -139,15 +141,11 @@ function stationSlug(en: string): string {
 }
 
 /** Fallback ASCII slug for names with no English value. */
-function asciiSlug(s: string): string {
-  let out = s
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-  if (!out) {
-    out = [...Buffer.from(s, 'utf-8')].map((b) => b.toString(16)).join('');
-  }
-  return out;
+
+
+/** Beijing feed keys stations by Chinese name with optional English slug. */
+function stationIdFor(zh: string, en?: string): string {
+  return en ? stationSlug(en) : asciiSlug(zh);
 }
 
 export function normalize(input: BeijingRawInput): BeijingCanonical {
@@ -426,9 +424,6 @@ export function parseBeijingInterchange(
   return out;
 }
 
-function stationIdFor(zh: string, en?: string): string {
-  return en ? stationSlug(en) : asciiSlug(zh);
-}
 
 function slugTo(lineId: string): string {
   return lineId.replace(`${NETWORK_ID}-line-`, '');
@@ -449,15 +444,6 @@ function numOrUndef(v: string | undefined): number | undefined {
   return Number.isFinite(n) ? n : undefined;
 }
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^0x/, '');
-  const r = parseInt(m.slice(0, 2), 16);
-  const g = parseInt(m.slice(2, 4), 16);
-  const b = parseInt(m.slice(4, 6), 16);
-  if ([r, g, b].some((n) => Number.isNaN(n))) return undefined;
-  return `#${[r, g, b].map((n) => n.toString(16).padStart(2, '0')).join('')}`;
-}
 
 /** Stable short hash of a string (for unique, ASCII-safe IDs). */
 function hashSlug(input: string): string {

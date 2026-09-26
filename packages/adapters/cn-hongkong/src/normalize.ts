@@ -1,9 +1,10 @@
 import type { FareMatrixEncoded } from '@openmetro/core';
 import {
+  readableSlug,
+  stationIdFor,
   type LineEncoded,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -76,9 +77,6 @@ interface Alignment {
   stopIds: string[];
 }
 
-function stationIdFor(en: string): string {
-  return `${NETWORK_ID}-${readableSlug(en) || en.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-}
 
 function stopIdFor(stationId: string, lineCode: string): string {
   return `${stationId}-${lineCode.toLowerCase()}`;
@@ -101,7 +99,7 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
     let phys = physByFolded.get(key);
     if (!phys) {
       phys = {
-        id: stationIdFor(row.englishName),
+        id: stationIdFor(row.englishName, row.chineseName || row.englishName),
         zh: row.chineseName || row.englishName,
         en: row.englishName,
         sourceIds: [],
@@ -522,16 +520,16 @@ export function normalizeHongKong(sources: MtrSources): HongKongCanonical {
   const network: NetworkEncoded = {
     id: NETWORK_ID,
     name: '港鐵',
-    names: { zh: '港鐵', en: 'Mass Transit Railway' },
+    names: { zh: '港鐵', en: 'Mass Transit Railway (Hong Kong)' },
     city: {
       id: 'HK',
       name: { zh: '香港', en: 'Hong Kong' },
-      country: 'HK',
+      country: 'CN',
       population: 7500000,
       area: 1110,
       location: { type: 'Point', coordinates: [114.1694, 22.3193] }
     },
-    country_code: 'HK',
+    country_code: 'CN',
     currency: 'HKD',
     timezone: 'Asia/Hong_Kong',
     coordinate_system: 'gcj02',

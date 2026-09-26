@@ -1,0 +1,5066 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-xian",
+  "generated_at": "2026-09-26T08:09:32.653Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-09-26T08:09:32.653Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-xian-seg-cn-xian-an-yuan-men-2-cn-xian-long-shou-yuan-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-an-yuan-men-2",
+      "to_stop_id": "cn-xian-long-shou-yuan-2",
+      "from_station_id": "cn-xian-an-yuan-men",
+      "to_station_id": "cn-xian-long-shou-yuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.228,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-andingmen-6-cn-xian-datang-xishi-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-andingmen-6",
+      "to_stop_id": "cn-xian-datang-xishi-6",
+      "from_station_id": "cn-xian-andingmen",
+      "to_station_id": "cn-xian-datang-xishi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.442,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-angu-1-cn-xian-zhonghua-xilu-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-angu-1",
+      "to_stop_id": "cn-xian-zhonghua-xilu-1",
+      "from_station_id": "cn-xian-angu",
+      "to_station_id": "cn-xian-zhonghua-xilu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.967,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-anhuamen-8-cn-xian-shanmenkou-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-anhuamen-8",
+      "to_stop_id": "cn-xian-shanmenkou-8",
+      "from_station_id": "cn-xian-anhuamen",
+      "to_station_id": "cn-xian-shanmenkou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.364,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-aoti-zhongxin-14-cn-xian-beichen-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-aoti-zhongxin-14",
+      "to_stop_id": "cn-xian-beichen-14",
+      "from_station_id": "cn-xian-aoti-zhongxin",
+      "to_station_id": "cn-xian-beichen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 2.295,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 25.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-aoxiang-xiaozhen-5-cn-xian-chuang-xingangdong-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-aoxiang-xiaozhen-5",
+      "to_stop_id": "cn-xian-chuang-xingangdong-5",
+      "from_station_id": "cn-xian-aoxiang-xiaozhen",
+      "to_station_id": "cn-xian-chuang-xingangdong",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.72,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-bachengmen-8-cn-xian-qingshaonian-zhongxin-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-bachengmen-8",
+      "to_stop_id": "cn-xian-qingshaonian-zhongxin-8",
+      "from_station_id": "cn-xian-bachengmen",
+      "to_station_id": "cn-xian-qingshaonian-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.616,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-bai-hua-cun-4-cn-xian-yujiazhai-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-bai-hua-cun-4",
+      "to_stop_id": "cn-xian-yujiazhai-4",
+      "from_station_id": "cn-xian-bai-hua-cun",
+      "to_station_id": "cn-xian-yujiazhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.046,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-baijiakou-8-cn-xian-guanghuamen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-baijiakou-8",
+      "to_stop_id": "cn-xian-guanghuamen-8",
+      "from_station_id": "cn-xian-baijiakou",
+      "to_station_id": "cn-xian-guanghuamen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.142,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-baimahe-1-cn-xian-chenyangzhai-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-baimahe-1",
+      "to_stop_id": "cn-xian-chenyangzhai-1",
+      "from_station_id": "cn-xian-baimahe",
+      "to_station_id": "cn-xian-chenyangzhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.869,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-baiqizhai-14-cn-xian-yishu-zhongxin-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-baiqizhai-14",
+      "to_stop_id": "cn-xian-yishu-zhongxin-14",
+      "from_station_id": "cn-xian-baiqizhai",
+      "to_station_id": "cn-xian-yishu-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 3.261,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.4,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-balicun-2-cn-xian-xiao-zhai-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-balicun-2",
+      "to_stop_id": "cn-xian-xiao-zhai-2",
+      "from_station_id": "cn-xian-balicun",
+      "to_station_id": "cn-xian-xiao-zhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.139,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-baliu-erlu-9-cn-xian-xiangwang-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-baliu-erlu-9",
+      "to_stop_id": "cn-xian-xiangwang-9",
+      "from_station_id": "cn-xian-baliu-erlu",
+      "to_station_id": "cn-xian-xiangwang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.755,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-ban-po-1-cn-xian-chanhe-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-ban-po-1",
+      "to_stop_id": "cn-xian-chanhe-1",
+      "from_station_id": "cn-xian-ban-po",
+      "to_station_id": "cn-xian-chanhe",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.088,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-bao-shui-qu-3-cn-xian-xin-zhu-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-bao-shui-qu-3",
+      "to_stop_id": "cn-xian-xin-zhu-3",
+      "from_station_id": "cn-xian-bao-shui-qu",
+      "to_station_id": "cn-xian-xin-zhu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.396,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-baoquan-lu-1-cn-xian-xianyangxi-zhan-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-baoquan-lu-1",
+      "to_stop_id": "cn-xian-xianyangxi-zhan-1",
+      "from_station_id": "cn-xian-baoquan-lu",
+      "to_station_id": "cn-xian-xianyangxi-zhan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.972,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-bei-chi-tou-3-cn-xian-da-yan-ta-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-bei-chi-tou-3",
+      "to_stop_id": "cn-xian-da-yan-ta-3",
+      "from_station_id": "cn-xian-bei-chi-tou",
+      "to_station_id": "cn-xian-da-yan-ta",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.195,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-bei-da-jie-1-cn-xian-sa-jin-qiao-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-bei-da-jie-1",
+      "to_stop_id": "cn-xian-sa-jin-qiao-1",
+      "from_station_id": "cn-xian-bei-da-jie",
+      "to_station_id": "cn-xian-sa-jin-qiao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.226,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-bei-da-jie-2-cn-xian-an-yuan-men-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-bei-da-jie-2",
+      "to_stop_id": "cn-xian-an-yuan-men-2",
+      "from_station_id": "cn-xian-bei-da-jie",
+      "to_station_id": "cn-xian-an-yuan-men",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.252,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-bei-yuan-2-cn-xian-xian-beizhan-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-bei-yuan-2",
+      "to_stop_id": "cn-xian-xian-beizhan-2",
+      "from_station_id": "cn-xian-bei-yuan",
+      "to_station_id": "cn-xian-xian-beizhan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.02,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-beichen-14-cn-xian-xian-gongda-wude-lu-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-beichen-14",
+      "to_stop_id": "cn-xian-xian-gongda-wude-lu-14",
+      "from_station_id": "cn-xian-beichen",
+      "to_station_id": "cn-xian-xian-gongda-wude-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.323,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-beichen-donglu-8-cn-xian-guangtaimen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-beichen-donglu-8",
+      "to_stop_id": "cn-xian-guangtaimen-8",
+      "from_station_id": "cn-xian-beichen-donglu",
+      "to_station_id": "cn-xian-guangtaimen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.194,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.4,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-beihuai-1-cn-xian-fenghe-senlingongyuan-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-beihuai-1",
+      "to_stop_id": "cn-xian-fenghe-senlingongyuan-1",
+      "from_station_id": "cn-xian-beihuai",
+      "to_station_id": "cn-xian-fenghe-senlingongyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.991,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-bian-jiacun-5-cn-xian-xibei-gongye-daxue-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-bian-jiacun-5",
+      "to_stop_id": "cn-xian-xibei-gongye-daxue-5",
+      "from_station_id": "cn-xian-bian-jiacun",
+      "to_station_id": "cn-xian-xibei-gongye-daxue",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.213,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xigongchengda-xikeda-9-cn-xian-zhiyang-guangchang-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-xigongchengda-xikeda-9",
+      "to_stop_id": "cn-xian-zhiyang-guangchang-9",
+      "from_station_id": "cn-xian-xigongchengda-xikeda",
+      "to_station_id": "cn-xian-zhiyang-guangchang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.125,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-chang-le-gong-yuan-3-cn-xian-xianning-lu-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-chang-le-gong-yuan-3",
+      "to_stop_id": "cn-xian-xianning-lu-3",
+      "from_station_id": "cn-xian-chang-le-gong-yuan",
+      "to_station_id": "cn-xian-xianning-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.061,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-chang-le-po-1-cn-xian-wanshou-lu-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-chang-le-po-1",
+      "to_stop_id": "cn-xian-wanshou-lu-1",
+      "from_station_id": "cn-xian-chang-le-po",
+      "to_station_id": "cn-xian-wanshou-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.619,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-chang-qing-lu-4-cn-xian-bai-hua-cun-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-chang-qing-lu-4",
+      "to_stop_id": "cn-xian-bai-hua-cun-4",
+      "from_station_id": "cn-xian-chang-qing-lu",
+      "to_station_id": "cn-xian-bai-hua-cun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.003,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-changan-guangchang-15-cn-xian-youdian-daxue-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-changan-guangchang-15",
+      "to_stop_id": "cn-xian-youdian-daxue-15",
+      "from_station_id": "cn-xian-changan-guangchang",
+      "to_station_id": "cn-xian-youdian-daxue",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.322,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-changlemen-6-cn-xian-dachaishi-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-changlemen-6",
+      "to_stop_id": "cn-xian-dachaishi-6",
+      "from_station_id": "cn-xian-changlemen",
+      "to_station_id": "cn-xian-dachaishi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.15,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-changling-14-cn-xian-baiqizhai-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-changling-14",
+      "to_stop_id": "cn-xian-baiqizhai-14",
+      "from_station_id": "cn-xian-changling",
+      "to_station_id": "cn-xian-baiqizhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 2.968,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-changninggong-2-cn-xian-hejiaying-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-changninggong-2",
+      "to_stop_id": "cn-xian-hejiaying-2",
+      "from_station_id": "cn-xian-changninggong",
+      "to_station_id": "cn-xian-hejiaying",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.708,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-chenyangzhai-1-cn-xian-angu-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-chenyangzhai-1",
+      "to_stop_id": "cn-xian-angu-1",
+      "from_station_id": "cn-xian-chenyangzhai",
+      "to_station_id": "cn-xian-angu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.51,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-chonghuang-10-cn-xian-yuchu-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-chonghuang-10",
+      "to_stop_id": "cn-xian-yuchu-10",
+      "from_station_id": "cn-xian-chonghuang",
+      "to_station_id": "cn-xian-yuchu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.094,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-chuang-xingangdong-5-cn-xian-chuangxingang-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-chuang-xingangdong-5",
+      "to_stop_id": "cn-xian-chuangxingang-5",
+      "from_station_id": "cn-xian-chuang-xingangdong",
+      "to_station_id": "cn-xian-chuangxingang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.303,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.2,
+        "a_s_per_km": 118.8,
+        "b_s": 135.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-da-ming-gong-4-cn-xian-han-yuan-dian-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-da-ming-gong-4",
+      "to_stop_id": "cn-xian-han-yuan-dian-4",
+      "from_station_id": "cn-xian-da-ming-gong",
+      "to_station_id": "cn-xian-han-yuan-dian",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.018,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-da-ming-gong-bei-4-cn-xian-da-ming-gong-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-da-ming-gong-bei-4",
+      "to_stop_id": "cn-xian-da-ming-gong-4",
+      "from_station_id": "cn-xian-da-ming-gong-bei",
+      "to_station_id": "cn-xian-da-ming-gong",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.273,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31.6,
+        "a_s_per_km": 46.1,
+        "b_s": 86,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-da-ming-gong-xi-2-cn-xian-qingshaonian-zhongxin-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-da-ming-gong-xi-2",
+      "to_stop_id": "cn-xian-qingshaonian-zhongxin-2",
+      "from_station_id": "cn-xian-da-ming-gong-xi",
+      "to_station_id": "cn-xian-qingshaonian-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.415,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-da-tang-fu-rong-yuan-4-cn-xian-qujiang-chixi-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-da-tang-fu-rong-yuan-4",
+      "to_stop_id": "cn-xian-qujiang-chixi-4",
+      "from_station_id": "cn-xian-da-tang-fu-rong-yuan",
+      "to_station_id": "cn-xian-qujiang-chixi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.431,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-da-yan-ta-3-cn-xian-xiao-zhai-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-da-yan-ta-3",
+      "to_stop_id": "cn-xian-xiao-zhai-3",
+      "from_station_id": "cn-xian-da-yan-ta",
+      "to_station_id": "cn-xian-xiao-zhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.613,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-da-yan-ta-4-cn-xian-da-tang-fu-rong-yuan-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-da-yan-ta-4",
+      "to_stop_id": "cn-xian-da-tang-fu-rong-yuan-4",
+      "from_station_id": "cn-xian-da-yan-ta",
+      "to_station_id": "cn-xian-da-tang-fu-rong-yuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.578,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dachaishi-4-cn-xian-he-ping-men-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-dachaishi-4",
+      "to_stop_id": "cn-xian-he-ping-men-4",
+      "from_station_id": "cn-xian-dachaishi",
+      "to_station_id": "cn-xian-he-ping-men",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.072,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dachaishi-6-cn-xian-zhonglou-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-dachaishi-6",
+      "to_stop_id": "cn-xian-zhonglou-6",
+      "from_station_id": "cn-xian-dachaishi",
+      "to_station_id": "cn-xian-zhonglou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.481,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dafengge-8-cn-xian-bachengmen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-dafengge-8",
+      "to_stop_id": "cn-xian-bachengmen-8",
+      "from_station_id": "cn-xian-dafengge",
+      "to_station_id": "cn-xian-bachengmen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.835,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-datang-buyecheng-8-cn-xian-dianshita-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-datang-buyecheng-8",
+      "to_stop_id": "cn-xian-dianshita-8",
+      "from_station_id": "cn-xian-datang-buyecheng",
+      "to_station_id": "cn-xian-dianshita",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.521,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.3,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-datang-xishi-6-cn-xian-xibei-gongye-daxue-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-datang-xishi-6",
+      "to_stop_id": "cn-xian-xibei-gongye-daxue-6",
+      "from_station_id": "cn-xian-datang-xishi",
+      "to_station_id": "cn-xian-xibei-gongye-daxue",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.2,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.4,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dianshita-2-cn-xian-balicun-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-dianshita-2",
+      "to_stop_id": "cn-xian-balicun-2",
+      "from_station_id": "cn-xian-dianshita",
+      "to_station_id": "cn-xian-balicun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.615,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dianshita-8-cn-xian-dongyi-lu-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-dianshita-8",
+      "to_stop_id": "cn-xian-dongyi-lu-8",
+      "from_station_id": "cn-xian-dianshita",
+      "to_station_id": "cn-xian-dongyi-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.757,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-diaotai-5-cn-xian-aoxiang-xiaozhen-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-diaotai-5",
+      "to_stop_id": "cn-xian-aoxiang-xiaozhen-5",
+      "from_station_id": "cn-xian-diaotai",
+      "to_station_id": "cn-xian-aoxiang-xiaozhen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.895,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dongchanganjie-15-cn-xian-huangzipo-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-dongchanganjie-15",
+      "to_stop_id": "cn-xian-huangzipo-15",
+      "from_station_id": "cn-xian-dongchanganjie",
+      "to_station_id": "cn-xian-huangzipo",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.193,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dongchanganjie-4-cn-xian-shen-zhou-da-dao-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-dongchanganjie-4",
+      "to_stop_id": "cn-xian-shen-zhou-da-dao-4",
+      "from_station_id": "cn-xian-dongchanganjie",
+      "to_station_id": "cn-xian-shen-zhou-da-dao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.523,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dongdengjiapo-8-cn-xian-matengkong-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-dongdengjiapo-8",
+      "to_stop_id": "cn-xian-matengkong-8",
+      "from_station_id": "cn-xian-dongdengjiapo",
+      "to_station_id": "cn-xian-matengkong",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.359,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dongmafang-5-cn-xian-fengxi-wenhua-gongyuan-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-dongmafang-5",
+      "to_stop_id": "cn-xian-fengxi-wenhua-gongyuan-5",
+      "from_station_id": "cn-xian-dongmafang",
+      "to_station_id": "cn-xian-fengxi-wenhua-gongyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.214,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dongsancha-9-cn-xian-huaqingchi-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-dongsancha-9",
+      "to_stop_id": "cn-xian-huaqingchi-9",
+      "from_station_id": "cn-xian-dongsancha",
+      "to_station_id": "cn-xian-huaqingchi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.432,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dongyi-lu-8-cn-xian-anhuamen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-dongyi-lu-8",
+      "to_stop_id": "cn-xian-anhuamen-8",
+      "from_station_id": "cn-xian-dongyi-lu",
+      "to_station_id": "cn-xian-anhuamen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.823,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 21.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-dongzhao-yu-15-cn-xian-dongchanganjie-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-dongzhao-yu-15",
+      "to_stop_id": "cn-xian-dongchanganjie-15",
+      "from_station_id": "cn-xian-dongzhao-yu",
+      "to_station_id": "cn-xian-dongchanganjie",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.02,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-doumen-5-cn-xian-fuxing-dadao-nan-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-doumen-5",
+      "to_stop_id": "cn-xian-fuxing-dadao-nan-5",
+      "from_station_id": "cn-xian-doumen",
+      "to_station_id": "cn-xian-fuxing-dadao-nan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.855,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-chanba-zhongxin-3-cn-xian-tao-hua-tan-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-chanba-zhongxin-3",
+      "to_stop_id": "cn-xian-tao-hua-tan-3",
+      "from_station_id": "cn-xian-chanba-zhongxin",
+      "to_station_id": "cn-xian-tao-hua-tan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.36,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-epang-gongnan-5-cn-xian-wangsi-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-epang-gongnan-5",
+      "to_stop_id": "cn-xian-wangsi-5",
+      "from_station_id": "cn-xian-epang-gongnan",
+      "to_station_id": "cn-xian-wangsi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.975,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fangerlu-6-cn-xian-fangliulu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-fangerlu-6",
+      "to_stop_id": "cn-xian-fangliulu-6",
+      "from_station_id": "cn-xian-fangerlu",
+      "to_station_id": "cn-xian-fangliulu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.307,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fangliulu-6-cn-xian-mujiangwang-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-fangliulu-6",
+      "to_stop_id": "cn-xian-mujiangwang-6",
+      "from_station_id": "cn-xian-fangliulu",
+      "to_station_id": "cn-xian-mujiangwang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.015,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fangzhicheng-1-cn-xian-ban-po-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-fangzhicheng-1",
+      "to_stop_id": "cn-xian-ban-po-1",
+      "from_station_id": "cn-xian-fangzhicheng",
+      "to_station_id": "cn-xian-ban-po",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.327,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fangzhicheng-6-cn-xian-fangerlu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-fangzhicheng-6",
+      "to_stop_id": "cn-xian-fangerlu-6",
+      "from_station_id": "cn-xian-fangzhicheng",
+      "to_station_id": "cn-xian-fangerlu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.239,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fei-tian-lu-4-cn-xian-dongchanganjie-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-fei-tian-lu-4",
+      "to_stop_id": "cn-xian-dongchanganjie-4",
+      "from_station_id": "cn-xian-fei-tian-lu",
+      "to_station_id": "cn-xian-dongchanganjie",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.941,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-feng-cheng-jiu-lu-4-cn-xian-wen-jing-lu-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-feng-cheng-jiu-lu-4",
+      "to_stop_id": "cn-xian-wen-jing-lu-4",
+      "from_station_id": "cn-xian-feng-cheng-jiu-lu",
+      "to_station_id": "cn-xian-wen-jing-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.977,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-feng-cheng-shi-er-lu-4-cn-xian-feng-cheng-jiu-lu-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-feng-cheng-shi-er-lu-4",
+      "to_stop_id": "cn-xian-feng-cheng-jiu-lu-4",
+      "from_station_id": "cn-xian-feng-cheng-shi-er-lu",
+      "to_station_id": "cn-xian-feng-cheng-jiu-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.267,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-feng-cheng-wu-lu-2-cn-xian-xingzheng-zhongxin-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-feng-cheng-wu-lu-2",
+      "to_stop_id": "cn-xian-xingzheng-zhongxin-2",
+      "from_station_id": "cn-xian-feng-cheng-wu-lu",
+      "to_station_id": "cn-xian-xingzheng-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.245,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-feng-qi-yuan-2-cn-xian-san-yao-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-feng-qi-yuan-2",
+      "to_stop_id": "cn-xian-san-yao-2",
+      "from_station_id": "cn-xian-feng-qi-yuan",
+      "to_station_id": "cn-xian-san-yao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.536,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fengcheng-shi-lu-2-cn-xian-bei-yuan-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-fengcheng-shi-lu-2",
+      "to_stop_id": "cn-xian-bei-yuan-2",
+      "from_station_id": "cn-xian-fengcheng-shi-lu",
+      "to_station_id": "cn-xian-bei-yuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.09,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fengdong-chengshi-guangchang-16-cn-xian-huanlegu-16",
+      "line_id": "cn-xian-line-16",
+      "from_stop_id": "cn-xian-fengdong-chengshi-guangchang-16",
+      "to_stop_id": "cn-xian-huanlegu-16",
+      "from_station_id": "cn-xian-fengdong-chengshi-guangchang",
+      "to_station_id": "cn-xian-huanlegu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.515,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fengdong-zimaoyuan-1-cn-xian-shanglin-lu-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-fengdong-zimaoyuan-1",
+      "to_stop_id": "cn-xian-shanglin-lu-1",
+      "from_station_id": "cn-xian-fengdong-zimaoyuan",
+      "to_station_id": "cn-xian-shanglin-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.878,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fenghe-senlingongyuan-1-cn-xian-shaanxi-zhongyiyao-daxue-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-fenghe-senlingongyuan-1",
+      "to_stop_id": "cn-xian-shaanxi-zhongyiyao-daxue-1",
+      "from_station_id": "cn-xian-fenghe-senlingongyuan",
+      "to_station_id": "cn-xian-shaanxi-zhongyiyao-daxue",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.368,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fenghuangchi-9-cn-xian-zixia-san-lu-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-fenghuangchi-9",
+      "to_stop_id": "cn-xian-zixia-san-lu-9",
+      "from_station_id": "cn-xian-fenghuangchi",
+      "to_station_id": "cn-xian-zixia-san-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.966,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fengqing-gongyuan-5-cn-xian-jinguangmen-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-fengqing-gongyuan-5",
+      "to_stop_id": "cn-xian-jinguangmen-5",
+      "from_station_id": "cn-xian-fengqing-gongyuan",
+      "to_station_id": "cn-xian-jinguangmen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.102,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fengxi-wenhua-gongyuan-5-cn-xian-diaotai-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-fengxi-wenhua-gongyuan-5",
+      "to_stop_id": "cn-xian-diaotai-5",
+      "from_station_id": "cn-xian-fengxi-wenhua-gongyuan",
+      "to_station_id": "cn-xian-diaotai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.056,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fujunmiao-15-cn-xian-xiliu-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-fujunmiao-15",
+      "to_stop_id": "cn-xian-xiliu-15",
+      "from_station_id": "cn-xian-fujunmiao",
+      "to_station_id": "cn-xian-xiliu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.144,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.8,
+        "a_s_per_km": 75.2,
+        "b_s": 173.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fuxing-dadao-bei-16-cn-xian-xian-guoji-zuqiu-zhongxin-16",
+      "line_id": "cn-xian-line-16",
+      "from_stop_id": "cn-xian-fuxing-dadao-bei-16",
+      "to_stop_id": "cn-xian-xian-guoji-zuqiu-zhongxin-16",
+      "from_station_id": "cn-xian-fuxing-dadao-bei",
+      "to_station_id": "cn-xian-xian-guoji-zuqiu-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.988,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-fuxing-dadao-nan-5-cn-xian-gaojing-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-fuxing-dadao-nan-5",
+      "to_stop_id": "cn-xian-gaojing-5",
+      "from_station_id": "cn-xian-fuxing-dadao-nan",
+      "to_station_id": "cn-xian-gaojing",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.035,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-gangwu-dadao-14-cn-xian-xinsi-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-gangwu-dadao-14",
+      "to_stop_id": "cn-xian-xinsi-14",
+      "from_station_id": "cn-xian-gangwu-dadao",
+      "to_station_id": "cn-xian-xinsi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.219,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-ganjiazhai-6-cn-xian-mutasi-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-ganjiazhai-6",
+      "to_stop_id": "cn-xian-mutasi-6",
+      "from_station_id": "cn-xian-ganjiazhai",
+      "to_station_id": "cn-xian-mutasi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.396,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-gaojing-5-cn-xian-huanlegu-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-gaojing-5",
+      "to_stop_id": "cn-xian-huanlegu-5",
+      "from_station_id": "cn-xian-gaojing",
+      "to_station_id": "cn-xian-huanlegu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.894,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-gaoqiao-5-cn-xian-dongmafang-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-gaoqiao-5",
+      "to_stop_id": "cn-xian-dongmafang-5",
+      "from_station_id": "cn-xian-gaoqiao",
+      "to_station_id": "cn-xian-dongmafang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.307,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-gongyuan-nanlu-6-cn-xian-xianning-lu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-gongyuan-nanlu-6",
+      "to_stop_id": "cn-xian-xianning-lu-6",
+      "from_station_id": "cn-xian-gongyuan-nanlu",
+      "to_station_id": "cn-xian-xianning-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.949,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.3,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-guanghuamen-8-cn-xian-jingyaomen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-guanghuamen-8",
+      "to_stop_id": "cn-xian-jingyaomen-8",
+      "from_station_id": "cn-xian-guanghuamen",
+      "to_station_id": "cn-xian-jingyaomen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.006,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-guangji-jie-6-cn-xian-qiao-zi-kou-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-guangji-jie-6",
+      "to_stop_id": "cn-xian-qiao-zi-kou-6",
+      "from_station_id": "cn-xian-guangji-jie",
+      "to_station_id": "cn-xian-qiao-zi-kou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.83,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 21.7,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-guangtaimen-3-cn-xian-xin-jia-miao-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-guangtaimen-3",
+      "to_stop_id": "cn-xian-xin-jia-miao-3",
+      "from_station_id": "cn-xian-guangtaimen",
+      "to_station_id": "cn-xian-xin-jia-miao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.748,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-guangtaimen-8-cn-xian-mijiaya-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-guangtaimen-8",
+      "to_stop_id": "cn-xian-mijiaya-8",
+      "from_station_id": "cn-xian-guangtaimen",
+      "to_station_id": "cn-xian-mijiaya",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.936,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-guo-duxi-15-cn-xian-zhucun-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-guo-duxi-15",
+      "to_stop_id": "cn-xian-zhucun-15",
+      "from_station_id": "cn-xian-guo-duxi",
+      "to_station_id": "cn-xian-zhucun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.127,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-guo-duxi-6-cn-xian-rencun-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-guo-duxi-6",
+      "to_stop_id": "cn-xian-rencun-6",
+      "from_station_id": "cn-xian-guo-duxi",
+      "to_station_id": "cn-xian-rencun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.017,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-guo-ji-gang-wu-qu-3-cn-xian-wu-zhuang-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-guo-ji-gang-wu-qu-3",
+      "to_stop_id": "cn-xian-wu-zhuang-3",
+      "from_station_id": "cn-xian-guo-ji-gang-wu-qu",
+      "to_station_id": "cn-xian-wu-zhuang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.913,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-guodu-15-cn-xian-guo-duxi-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-guodu-15",
+      "to_stop_id": "cn-xian-guo-duxi-15",
+      "from_station_id": "cn-xian-guodu",
+      "to_station_id": "cn-xian-guo-duxi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.496,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-huxian-xihu-cn-xian-epang-gongnan-xihu",
+      "line_id": "cn-xian-line-xihu",
+      "from_stop_id": "cn-xian-huxian-xihu",
+      "to_stop_id": "cn-xian-epang-gongnan-xihu",
+      "from_station_id": "cn-xian-huxian",
+      "to_station_id": "cn-xian-epang-gongnan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 24.59,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 36.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 1600,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-han-yao-8-cn-xian-qujiang-chixi-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-han-yao-8",
+      "to_stop_id": "cn-xian-qujiang-chixi-8",
+      "from_station_id": "cn-xian-han-yao",
+      "to_station_id": "cn-xian-qujiang-chixi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.341,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-han-yuan-dian-4-cn-xian-xian-zhan-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-han-yuan-dian-4",
+      "to_stop_id": "cn-xian-xian-zhan-4",
+      "from_station_id": "cn-xian-han-yuan-dian",
+      "to_station_id": "cn-xian-xian-zhan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.103,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hancheng-lu-1-cn-xian-zaoyuan-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-hancheng-lu-1",
+      "to_stop_id": "cn-xian-zaoyuan-1",
+      "from_station_id": "cn-xian-hancheng-lu",
+      "to_station_id": "cn-xian-zaoyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.249,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hancheng-nanlu-5-cn-xian-xiyaotou-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-hancheng-nanlu-5",
+      "to_stop_id": "cn-xian-xiyaotou-5",
+      "from_station_id": "cn-xian-hancheng-nanlu",
+      "to_station_id": "cn-xian-xiyaotou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.798,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hang-tian-da-dao-4-cn-xian-fei-tian-lu-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-hang-tian-da-dao-4",
+      "to_stop_id": "cn-xian-fei-tian-lu-4",
+      "from_station_id": "cn-xian-hang-tian-da-dao",
+      "to_station_id": "cn-xian-fei-tian-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.929,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hang-tian-dong-lu-4-cn-xian-hang-tian-xin-cheng-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-hang-tian-dong-lu-4",
+      "to_stop_id": "cn-xian-hang-tian-xin-cheng-4",
+      "from_station_id": "cn-xian-hang-tian-dong-lu",
+      "to_station_id": "cn-xian-hang-tian-xin-cheng",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.524,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hangtiancheng-15-cn-xian-changan-guangchang-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-hangtiancheng-15",
+      "to_stop_id": "cn-xian-changan-guangchang-15",
+      "from_station_id": "cn-xian-hangtiancheng",
+      "to_station_id": "cn-xian-changan-guangchang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.477,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hangtiancheng-2-cn-xian-feng-qi-yuan-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-hangtiancheng-2",
+      "to_stop_id": "cn-xian-feng-qi-yuan-2",
+      "from_station_id": "cn-xian-hangtiancheng",
+      "to_station_id": "cn-xian-feng-qi-yuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.247,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hansenzhai-8-cn-xian-wanshou-nanlu-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-hansenzhai-8",
+      "to_stop_id": "cn-xian-wanshou-nanlu-8",
+      "from_station_id": "cn-xian-hansenzhai",
+      "to_station_id": "cn-xian-wanshou-nanlu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.893,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-he-ping-men-4-cn-xian-jianzhu-keji-daxue-lijiacun-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-he-ping-men-4",
+      "to_stop_id": "cn-xian-jianzhu-keji-daxue-lijiacun-4",
+      "from_station_id": "cn-xian-he-ping-men",
+      "to_station_id": "cn-xian-jianzhu-keji-daxue-lijiacun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.952,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hejiaying-2-cn-xian-wei-qu-nan-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-hejiaying-2",
+      "to_stop_id": "cn-xian-wei-qu-nan-2",
+      "from_station_id": "cn-xian-hejiaying",
+      "to_station_id": "cn-xian-wei-qu-nan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.734,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-heshao-14-cn-xian-gangwu-dadao-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-heshao-14",
+      "to_stop_id": "cn-xian-gangwu-dadao-14",
+      "from_station_id": "cn-xian-heshao",
+      "to_station_id": "cn-xian-gangwu-dadao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.015,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-honghui-yiyuan-beiqu-2-cn-xian-caotan-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-honghui-yiyuan-beiqu-2",
+      "to_stop_id": "cn-xian-caotan-2",
+      "from_station_id": "cn-xian-honghui-yiyuan-beiqu",
+      "to_station_id": "cn-xian-caotan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.419,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hongmiaopo-8-cn-xian-dafengge-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-hongmiaopo-8",
+      "to_stop_id": "cn-xian-dafengge-8",
+      "from_station_id": "cn-xian-hongmiaopo",
+      "to_station_id": "cn-xian-dafengge",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.335,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hongqichang-10-cn-xian-xian-gongda-wude-lu-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-hongqichang-10",
+      "to_stop_id": "cn-xian-xian-gongda-wude-lu-10",
+      "from_station_id": "cn-xian-hongqichang",
+      "to_station_id": "cn-xian-xian-gongda-wude-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.25,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hongqing-9-cn-xian-tianwang-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-hongqing-9",
+      "to_stop_id": "cn-xian-tianwang-9",
+      "from_station_id": "cn-xian-hongqing",
+      "to_station_id": "cn-xian-tianwang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.227,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-houwei-zhai-1-cn-xian-fengdong-zimaoyuan-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-houwei-zhai-1",
+      "to_stop_id": "cn-xian-fengdong-zimaoyuan-1",
+      "from_station_id": "cn-xian-houwei-zhai",
+      "to_station_id": "cn-xian-fengdong-zimaoyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.731,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-hu-jia-miao-3-cn-xian-tong-hua-men-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-hu-jia-miao-3",
+      "to_stop_id": "cn-xian-tong-hua-men-3",
+      "from_station_id": "cn-xian-hu-jia-miao",
+      "to_station_id": "cn-xian-tong-hua-men",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.893,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-huang-qutou-5-cn-xian-ligongda-qujiang-xiaoqu-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-huang-qutou-5",
+      "to_stop_id": "cn-xian-ligongda-qujiang-xiaoqu-5",
+      "from_station_id": "cn-xian-huang-qutou",
+      "to_station_id": "cn-xian-ligongda-qujiang-xiaoqu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.182,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-huangzipo-15-cn-xian-hangtiancheng-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-huangzipo-15",
+      "to_stop_id": "cn-xian-hangtiancheng-15",
+      "from_station_id": "cn-xian-huangzipo",
+      "to_station_id": "cn-xian-hangtiancheng",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.603,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-huanlegu-16-cn-xian-shijingli-16",
+      "line_id": "cn-xian-line-16",
+      "from_stop_id": "cn-xian-huanlegu-16",
+      "to_stop_id": "cn-xian-shijingli-16",
+      "from_station_id": "cn-xian-huanlegu",
+      "to_station_id": "cn-xian-shijingli",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.949,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 25.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-huanlegu-5-cn-xian-wenjiaoyuan-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-huanlegu-5",
+      "to_stop_id": "cn-xian-wenjiaoyuan-5",
+      "from_station_id": "cn-xian-huanlegu",
+      "to_station_id": "cn-xian-wenjiaoyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.084,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-huaqingchi-9-cn-xian-xihuayuan-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-huaqingchi-9",
+      "to_stop_id": "cn-xian-xihuayuan-9",
+      "from_station_id": "cn-xian-huaqingchi",
+      "to_station_id": "cn-xian-xihuayuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.168,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-chanhe-1-cn-xian-chang-le-po-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-chanhe-1",
+      "to_stop_id": "cn-xian-chang-le-po-1",
+      "from_station_id": "cn-xian-chanhe",
+      "to_station_id": "cn-xian-chang-le-po",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.305,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-ji-xiang-cun-3-cn-xian-tai-bai-nan-lu-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-ji-xiang-cun-3",
+      "to_stop_id": "cn-xian-tai-bai-nan-lu-3",
+      "from_station_id": "cn-xian-ji-xiang-cun",
+      "to_station_id": "cn-xian-tai-bai-nan-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.567,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jianzhu-keji-daxue-lijiacun-4-cn-xian-xi-an-ke-ji-da-xue-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-jianzhu-keji-daxue-lijiacun-4",
+      "to_stop_id": "cn-xian-xi-an-ke-ji-da-xue-4",
+      "from_station_id": "cn-xian-jianzhu-keji-daxue-lijiacun",
+      "to_station_id": "cn-xian-xi-an-ke-ji-da-xue",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.909,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jianzhu-keji-daxue-lijiacun-5-cn-xian-wenyi-lu-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-jianzhu-keji-daxue-lijiacun-5",
+      "to_stop_id": "cn-xian-wenyi-lu-5",
+      "from_station_id": "cn-xian-jianzhu-keji-daxue-lijiacun",
+      "to_station_id": "cn-xian-wenyi-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.744,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jiaotong-daxue-xingqinggong-6-cn-xian-changlemen-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-jiaotong-daxue-xingqinggong-6",
+      "to_stop_id": "cn-xian-changlemen-6",
+      "from_station_id": "cn-xian-jiaotong-daxue-xingqinggong",
+      "to_station_id": "cn-xian-changlemen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.372,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jichang-t5-14-cn-xian-airport-west-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-jichang-t5-14",
+      "to_stop_id": "cn-xian-airport-west-14",
+      "from_station_id": "cn-xian-jichang-t5",
+      "to_station_id": "cn-xian-airport-west",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 2.733,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jin-hu-tuo-4-cn-xian-hang-tian-da-dao-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-jin-hu-tuo-4",
+      "to_stop_id": "cn-xian-hang-tian-da-dao-4",
+      "from_station_id": "cn-xian-jin-hu-tuo",
+      "to_station_id": "cn-xian-hang-tian-da-dao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.099,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jing-shangcun-10-cn-xian-maoerzhong-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-jing-shangcun-10",
+      "to_stop_id": "cn-xian-maoerzhong-10",
+      "from_station_id": "cn-xian-jing-shangcun",
+      "to_station_id": "cn-xian-maoerzhong",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.369,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jing-shangcun-8-cn-xian-beichen-donglu-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-jing-shangcun-8",
+      "to_stop_id": "cn-xian-beichen-donglu-8",
+      "from_station_id": "cn-xian-jing-shangcun",
+      "to_station_id": "cn-xian-beichen-donglu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.799,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jingjiabao-10-cn-xian-weiyanghu-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-jingjiabao-10",
+      "to_stop_id": "cn-xian-weiyanghu-10",
+      "from_station_id": "cn-xian-jingjiabao",
+      "to_station_id": "cn-xian-weiyanghu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.983,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jinguangmen-5-cn-xian-hancheng-nanlu-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-jinguangmen-5",
+      "to_stop_id": "cn-xian-hancheng-nanlu-5",
+      "from_station_id": "cn-xian-jinguangmen",
+      "to_station_id": "cn-xian-hancheng-nanlu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.614,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jinguangmen-8-cn-xian-tumen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-jinguangmen-8",
+      "to_stop_id": "cn-xian-tumen-8",
+      "from_station_id": "cn-xian-jinguangmen",
+      "to_station_id": "cn-xian-tumen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.903,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jingwei-bandao-10-cn-xian-yangguanzhai-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-jingwei-bandao-10",
+      "to_stop_id": "cn-xian-yangguanzhai-10",
+      "from_station_id": "cn-xian-jingwei-bandao",
+      "to_station_id": "cn-xian-yangguanzhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.969,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-jingyaomen-8-cn-xian-hongmiaopo-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-jingyaomen-8",
+      "to_stop_id": "cn-xian-hongmiaopo-8",
+      "from_station_id": "cn-xian-jingyaomen",
+      "to_station_id": "cn-xian-hongmiaopo",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.025,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-junzhuang-10-cn-xian-chonghuang-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-junzhuang-10",
+      "to_stop_id": "cn-xian-chonghuang-10",
+      "from_station_id": "cn-xian-junzhuang",
+      "to_station_id": "cn-xian-chonghuang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.784,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-kaiyuanmen-1-cn-xian-hancheng-lu-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-kaiyuanmen-1",
+      "to_stop_id": "cn-xian-hancheng-lu-1",
+      "from_station_id": "cn-xian-kaiyuanmen",
+      "to_station_id": "cn-xian-hancheng-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.748,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-kaiyuanmen-8-cn-xian-baijiakou-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-kaiyuanmen-8",
+      "to_stop_id": "cn-xian-baijiakou-8",
+      "from_station_id": "cn-xian-kaiyuanmen",
+      "to_station_id": "cn-xian-baijiakou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.383,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-kang-fu-lu-1-cn-xian-zhao-yang-men-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-kang-fu-lu-1",
+      "to_stop_id": "cn-xian-zhao-yang-men-1",
+      "from_station_id": "cn-xian-kang-fu-lu",
+      "to_station_id": "cn-xian-zhao-yang-men",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.957,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-keji-erlu-8-cn-xian-yanpingmen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-keji-erlu-8",
+      "to_stop_id": "cn-xian-yanpingmen-8",
+      "from_station_id": "cn-xian-keji-erlu",
+      "to_station_id": "cn-xian-yanpingmen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.311,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.7,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-keji-lu-3-cn-xian-yanpingmen-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-keji-lu-3",
+      "to_stop_id": "cn-xian-yanpingmen-3",
+      "from_station_id": "cn-xian-keji-lu",
+      "to_station_id": "cn-xian-yanpingmen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.734,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-keji-lu-6-cn-xian-ganjiazhai-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-keji-lu-6",
+      "to_stop_id": "cn-xian-ganjiazhai-6",
+      "from_station_id": "cn-xian-keji-lu",
+      "to_station_id": "cn-xian-ganjiazhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.989,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-konggang-xincheng-14-cn-xian-jichang-t5-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-konggang-xincheng-14",
+      "to_stop_id": "cn-xian-jichang-t5-14",
+      "from_station_id": "cn-xian-konggang-xincheng",
+      "to_station_id": "cn-xian-jichang-t5",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 3.063,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.3,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-lao-dong-lu-1-cn-xian-kaiyuanmen-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-lao-dong-lu-1",
+      "to_stop_id": "cn-xian-kaiyuanmen-1",
+      "from_station_id": "cn-xian-lao-dong-lu",
+      "to_station_id": "cn-xian-kaiyuanmen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.591,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-ligongda-qujiang-xiaoqu-5-cn-xian-qinglongsi-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-ligongda-qujiang-xiaoqu-5",
+      "to_stop_id": "cn-xian-qinglongsi-5",
+      "from_station_id": "cn-xian-ligongda-qujiang-xiaoqu",
+      "to_station_id": "cn-xian-qinglongsi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.529,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-long-shou-yuan-2-cn-xian-da-ming-gong-xi-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-long-shou-yuan-2",
+      "to_stop_id": "cn-xian-da-ming-gong-xi-2",
+      "from_station_id": "cn-xian-long-shou-yuan",
+      "to_station_id": "cn-xian-da-ming-gong-xi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.429,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-luyuan-dadao-10-cn-xian-xingwang-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-luyuan-dadao-10",
+      "to_stop_id": "cn-xian-xingwang-10",
+      "from_station_id": "cn-xian-luyuan-dadao",
+      "to_station_id": "cn-xian-xingwang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-maoerzhong-10-cn-xian-tuanjiecun-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-maoerzhong-10",
+      "to_stop_id": "cn-xian-tuanjiecun-10",
+      "from_station_id": "cn-xian-maoerzhong",
+      "to_station_id": "cn-xian-tuanjiecun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.191,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-matengkong-5-cn-xian-huang-qutou-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-matengkong-5",
+      "to_stop_id": "cn-xian-huang-qutou-5",
+      "from_station_id": "cn-xian-matengkong",
+      "to_station_id": "cn-xian-huang-qutou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.408,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-matengkong-8-cn-xian-zhiwuyuan-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-matengkong-8",
+      "to_stop_id": "cn-xian-zhiwuyuan-8",
+      "from_station_id": "cn-xian-matengkong",
+      "to_station_id": "cn-xian-zhiwuyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.987,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-miaojiazhai-8-cn-xian-xinkaimen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-miaojiazhai-8",
+      "to_stop_id": "cn-xian-xinkaimen-8",
+      "from_station_id": "cn-xian-miaojiazhai",
+      "to_station_id": "cn-xian-xinkaimen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.591,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-mijiaya-8-cn-xian-xingfu-lindai-bei-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-mijiaya-8",
+      "to_stop_id": "cn-xian-xingfu-lindai-bei-8",
+      "from_station_id": "cn-xian-mijiaya",
+      "to_station_id": "cn-xian-xingfu-lindai-bei",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 2.245,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 25.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-mujiangwang-6-cn-xian-tianjiawan-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-mujiangwang-6",
+      "to_stop_id": "cn-xian-tianjiawan-6",
+      "from_station_id": "cn-xian-mujiangwang",
+      "to_station_id": "cn-xian-tianjiawan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.712,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.7,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-muta-sixi-8-cn-xian-keji-erlu-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-muta-sixi-8",
+      "to_stop_id": "cn-xian-keji-erlu-8",
+      "from_station_id": "cn-xian-muta-sixi",
+      "to_station_id": "cn-xian-keji-erlu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.492,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-mutasi-6-cn-xian-sheng-tiyuguan-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-mutasi-6",
+      "to_stop_id": "cn-xian-sheng-tiyuguan-6",
+      "from_station_id": "cn-xian-mutasi",
+      "to_station_id": "cn-xian-sheng-tiyuguan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.05,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xianghuwan-3-cn-xian-chanba-zhongxin-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-xianghuwan-3",
+      "to_stop_id": "cn-xian-chanba-zhongxin-3",
+      "from_station_id": "cn-xian-xianghuwan",
+      "to_station_id": "cn-xian-chanba-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.568,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-nan-shaomen-2-cn-xian-yong-ning-men-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-nan-shaomen-2",
+      "to_stop_id": "cn-xian-yong-ning-men-2",
+      "from_station_id": "cn-xian-nan-shaomen",
+      "to_station_id": "cn-xian-yong-ning-men",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.868,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-nan-shaomen-5-cn-xian-shengrenmin-yiyuan-huangyancun-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-nan-shaomen-5",
+      "to_stop_id": "cn-xian-shengrenmin-yiyuan-huangyancun-5",
+      "from_station_id": "cn-xian-nan-shaomen",
+      "to_station_id": "cn-xian-shengrenmin-yiyuan-huangyancun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.256,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qiao-zi-kou-6-cn-xian-andingmen-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-qiao-zi-kou-6",
+      "to_stop_id": "cn-xian-andingmen-6",
+      "from_station_id": "cn-xian-qiao-zi-kou",
+      "to_station_id": "cn-xian-andingmen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.748,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 21,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qin-lingxi-9-cn-xian-yinqiao-dadao-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-qin-lingxi-9",
+      "to_stop_id": "cn-xian-yinqiao-dadao-9",
+      "from_station_id": "cn-xian-qin-lingxi",
+      "to_station_id": "cn-xian-yinqiao-dadao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.257,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qinchuangyuan-zhongxin-16-cn-xian-xixian-dasha-16",
+      "line_id": "cn-xian-line-16",
+      "from_stop_id": "cn-xian-qinchuangyuan-zhongxin-16",
+      "to_stop_id": "cn-xian-xixian-dasha-16",
+      "from_station_id": "cn-xian-qinchuangyuan-zhongxin",
+      "to_station_id": "cn-xian-xixian-dasha",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.979,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qinglongsi-3-cn-xian-bei-chi-tou-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-qinglongsi-3",
+      "to_stop_id": "cn-xian-bei-chi-tou-3",
+      "from_station_id": "cn-xian-qinglongsi",
+      "to_station_id": "cn-xian-bei-chi-tou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.705,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qinglongsi-5-cn-xian-yanxiang-lu-beikou-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-qinglongsi-5",
+      "to_stop_id": "cn-xian-yanxiang-lu-beikou-5",
+      "from_station_id": "cn-xian-qinglongsi",
+      "to_station_id": "cn-xian-yanxiang-lu-beikou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.932,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qingong-14-cn-xian-qinhan-xincheng-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-qingong-14",
+      "to_stop_id": "cn-xian-qinhan-xincheng-14",
+      "from_station_id": "cn-xian-qingong",
+      "to_station_id": "cn-xian-qinhan-xincheng",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 2.316,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 25.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qingshaonian-zhongxin-2-cn-xian-feng-cheng-wu-lu-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-qingshaonian-zhongxin-2",
+      "to_stop_id": "cn-xian-feng-cheng-wu-lu-2",
+      "from_station_id": "cn-xian-qingshaonian-zhongxin",
+      "to_station_id": "cn-xian-feng-cheng-wu-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.332,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qingshaonian-zhongxin-8-cn-xian-shi-disan-yiyuan-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-qingshaonian-zhongxin-8",
+      "to_stop_id": "cn-xian-shi-disan-yiyuan-8",
+      "from_station_id": "cn-xian-qingshaonian-zhongxin",
+      "to_station_id": "cn-xian-shi-disan-yiyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.193,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.3,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qinhan-xincheng-14-cn-xian-changling-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-qinhan-xincheng-14",
+      "to_stop_id": "cn-xian-changling-14",
+      "from_station_id": "cn-xian-qinhan-xincheng",
+      "to_station_id": "cn-xian-changling",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.943,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 25.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qujiang-chixi-4-cn-xian-jin-hu-tuo-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-qujiang-chixi-4",
+      "to_stop_id": "cn-xian-jin-hu-tuo-4",
+      "from_station_id": "cn-xian-qujiang-chixi",
+      "to_station_id": "cn-xian-jin-hu-tuo",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.863,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-qujiang-chixi-8-cn-xian-datang-buyecheng-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-qujiang-chixi-8",
+      "to_stop_id": "cn-xian-datang-buyecheng-8",
+      "from_station_id": "cn-xian-qujiang-chixi",
+      "to_station_id": "cn-xian-datang-buyecheng",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.022,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-rencun-6-cn-xian-xian-guoji-yixue-zhongxin-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-rencun-6",
+      "to_stop_id": "cn-xian-xian-guoji-yixue-zhongxin-6",
+      "from_station_id": "cn-xian-rencun",
+      "to_station_id": "cn-xian-xian-guoji-yixue-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.855,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 21.8,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-sa-jin-qiao-1-cn-xian-yu-xiang-men-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-sa-jin-qiao-1",
+      "to_stop_id": "cn-xian-yu-xiang-men-1",
+      "from_station_id": "cn-xian-sa-jin-qiao",
+      "to_station_id": "cn-xian-yu-xiang-men",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.187,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-san-yao-2-cn-xian-dianshita-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-san-yao-2",
+      "to_stop_id": "cn-xian-dianshita-2",
+      "from_station_id": "cn-xian-san-yao",
+      "to_station_id": "cn-xian-dianshita",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.681,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-sanqiao-1-cn-xian-houwei-zhai-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-sanqiao-1",
+      "to_stop_id": "cn-xian-houwei-zhai-1",
+      "from_station_id": "cn-xian-sanqiao",
+      "to_station_id": "cn-xian-houwei-zhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.057,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shaanxi-zhongyiyao-daxue-1-cn-xian-baimahe-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-shaanxi-zhongyiyao-daxue-1",
+      "to_stop_id": "cn-xian-baimahe-1",
+      "from_station_id": "cn-xian-shaanxi-zhongyiyao-daxue",
+      "to_station_id": "cn-xian-baimahe",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.054,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shanglin-lu-1-cn-xian-beihuai-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-shanglin-lu-1",
+      "to_stop_id": "cn-xian-beihuai-1",
+      "from_station_id": "cn-xian-shanglin-lu",
+      "to_station_id": "cn-xian-beihuai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.395,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shanglin-lu-16-cn-xian-fuxing-dadao-bei-16",
+      "line_id": "cn-xian-line-16",
+      "from_stop_id": "cn-xian-shanglin-lu-16",
+      "to_stop_id": "cn-xian-fuxing-dadao-bei-16",
+      "from_station_id": "cn-xian-shanglin-lu",
+      "to_station_id": "cn-xian-fuxing-dadao-bei",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.927,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shanmenkou-8-cn-xian-sheng-tiyuguan-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-shanmenkou-8",
+      "to_stop_id": "cn-xian-sheng-tiyuguan-8",
+      "from_station_id": "cn-xian-shanmenkou",
+      "to_station_id": "cn-xian-sheng-tiyuguan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.459,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7
+      },
+      "travel_time_seconds": 218,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shen-zhou-da-dao-4-cn-xian-hang-tian-dong-lu-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-shen-zhou-da-dao-4",
+      "to_stop_id": "cn-xian-hang-tian-dong-lu-4",
+      "from_station_id": "cn-xian-shen-zhou-da-dao",
+      "to_station_id": "cn-xian-hang-tian-dong-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.188,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-sheng-tiyuguan-6-cn-xian-zhangba-yilu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-sheng-tiyuguan-6",
+      "to_stop_id": "cn-xian-zhangba-yilu-6",
+      "from_station_id": "cn-xian-sheng-tiyuguan",
+      "to_station_id": "cn-xian-zhangba-yilu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.118,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-sheng-tiyuguan-8-cn-xian-muta-sixi-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-sheng-tiyuguan-8",
+      "to_stop_id": "cn-xian-muta-sixi-8",
+      "from_station_id": "cn-xian-sheng-tiyuguan",
+      "to_station_id": "cn-xian-muta-sixi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.029,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.7,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shengrenmin-yiyuan-huangyancun-5-cn-xian-bian-jiacun-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-shengrenmin-yiyuan-huangyancun-5",
+      "to_stop_id": "cn-xian-bian-jiacun-5",
+      "from_station_id": "cn-xian-shengrenmin-yiyuan-huangyancun",
+      "to_station_id": "cn-xian-bian-jiacun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.909,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shi-disan-yiyuan-8-cn-xian-yujiazhai-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-shi-disan-yiyuan-8",
+      "to_stop_id": "cn-xian-yujiazhai-8",
+      "from_station_id": "cn-xian-shi-disan-yiyuan",
+      "to_station_id": "cn-xian-yujiazhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.176,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.3,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shi-jia-jie-3-cn-xian-hu-jia-miao-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-shi-jia-jie-3",
+      "to_stop_id": "cn-xian-hu-jia-miao-3",
+      "from_station_id": "cn-xian-shi-jia-jie",
+      "to_station_id": "cn-xian-hu-jia-miao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.457,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shi-zhong-yi-yi-yuan-4-cn-xian-chang-qing-lu-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-shi-zhong-yi-yi-yuan-4",
+      "to_stop_id": "cn-xian-chang-qing-lu-4",
+      "from_station_id": "cn-xian-shi-zhong-yi-yi-yuan",
+      "to_station_id": "cn-xian-chang-qing-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.188,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shiqiao-lijiao-5-cn-xian-epang-gongnan-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-shiqiao-lijiao-5",
+      "to_stop_id": "cn-xian-epang-gongnan-5",
+      "from_station_id": "cn-xian-shiqiao-lijiao",
+      "to_station_id": "cn-xian-epang-gongnan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.833,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shuangzhai-14-cn-xian-aoti-zhongxin-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-shuangzhai-14",
+      "to_stop_id": "cn-xian-aoti-zhongxin-14",
+      "from_station_id": "cn-xian-shuangzhai",
+      "to_station_id": "cn-xian-aoti-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.885,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 25,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shuangzhai-3-cn-xian-guo-ji-gang-wu-qu-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-shuangzhai-3",
+      "to_stop_id": "cn-xian-guo-ji-gang-wu-qu-3",
+      "from_station_id": "cn-xian-shuangzhai",
+      "to_station_id": "cn-xian-guo-ji-gang-wu-qu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.266,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-shuiliu-10-cn-xian-jingwei-bandao-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-shuiliu-10",
+      "to_stop_id": "cn-xian-jingwei-bandao-10",
+      "from_station_id": "cn-xian-shuiliu",
+      "to_station_id": "cn-xian-jingwei-bandao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.572,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-tai-bai-nan-lu-3-cn-xian-keji-lu-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-tai-bai-nan-lu-3",
+      "to_stop_id": "cn-xian-keji-lu-3",
+      "from_station_id": "cn-xian-tai-bai-nan-lu",
+      "to_station_id": "cn-xian-keji-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.302,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-taiyi-lu-5-cn-xian-jianzhu-keji-daxue-lijiacun-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-taiyi-lu-5",
+      "to_stop_id": "cn-xian-jianzhu-keji-daxue-lijiacun-5",
+      "from_station_id": "cn-xian-taiyi-lu",
+      "to_station_id": "cn-xian-jianzhu-keji-daxue-lijiacun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.945,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-tao-hua-tan-3-cn-xian-guangtaimen-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-tao-hua-tan-3",
+      "to_stop_id": "cn-xian-guangtaimen-3",
+      "from_station_id": "cn-xian-tao-hua-tan",
+      "to_station_id": "cn-xian-guangtaimen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.834,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-ti-yu-chang-2-cn-xian-nan-shaomen-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-ti-yu-chang-2",
+      "to_stop_id": "cn-xian-nan-shaomen-2",
+      "from_station_id": "cn-xian-ti-yu-chang",
+      "to_station_id": "cn-xian-nan-shaomen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.89,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-tianjiawan-6-cn-xian-weixing-cekong-zhongxin-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-tianjiawan-6",
+      "to_stop_id": "cn-xian-weixing-cekong-zhongxin-6",
+      "from_station_id": "cn-xian-tianjiawan",
+      "to_station_id": "cn-xian-weixing-cekong-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.076,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-tianwang-9-cn-xian-baliu-erlu-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-tianwang-9",
+      "to_stop_id": "cn-xian-baliu-erlu-9",
+      "from_station_id": "cn-xian-tianwang",
+      "to_station_id": "cn-xian-baliu-erlu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.799,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-tong-hua-men-1-cn-xian-kang-fu-lu-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-tong-hua-men-1",
+      "to_stop_id": "cn-xian-kang-fu-lu-1",
+      "from_station_id": "cn-xian-tong-hua-men",
+      "to_station_id": "cn-xian-kang-fu-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.003,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-tong-hua-men-3-cn-xian-chang-le-gong-yuan-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-tong-hua-men-3",
+      "to_stop_id": "cn-xian-chang-le-gong-yuan-3",
+      "from_station_id": "cn-xian-tong-hua-men",
+      "to_station_id": "cn-xian-chang-le-gong-yuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.014,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-tuanjiecun-10-cn-xian-hongqichang-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-tuanjiecun-10",
+      "to_stop_id": "cn-xian-hongqichang-10",
+      "from_station_id": "cn-xian-tuanjiecun",
+      "to_station_id": "cn-xian-hongqichang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.548,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-tumen-8-cn-xian-kaiyuanmen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-tumen-8",
+      "to_stop_id": "cn-xian-kaiyuanmen-8",
+      "from_station_id": "cn-xian-tumen",
+      "to_station_id": "cn-xian-kaiyuanmen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.145,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wangsi-5-cn-xian-doumen-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-wangsi-5",
+      "to_stop_id": "cn-xian-doumen-5",
+      "from_station_id": "cn-xian-wangsi",
+      "to_station_id": "cn-xian-doumen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.377,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wanshou-lu-1-cn-xian-tong-hua-men-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-wanshou-lu-1",
+      "to_stop_id": "cn-xian-tong-hua-men-1",
+      "from_station_id": "cn-xian-wanshou-lu",
+      "to_station_id": "cn-xian-tong-hua-men",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.624,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wanshou-lu-8-cn-xian-hansenzhai-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-wanshou-lu-8",
+      "to_stop_id": "cn-xian-hansenzhai-8",
+      "from_station_id": "cn-xian-wanshou-lu",
+      "to_station_id": "cn-xian-hansenzhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.159,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wanshou-nanlu-6-cn-xian-gongyuan-nanlu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-wanshou-nanlu-6",
+      "to_stop_id": "cn-xian-gongyuan-nanlu-6",
+      "from_station_id": "cn-xian-wanshou-nanlu",
+      "to_station_id": "cn-xian-gongyuan-nanlu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.671,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.5,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wanshou-nanlu-8-cn-xian-xidengjiapo-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-wanshou-nanlu-8",
+      "to_stop_id": "cn-xian-xidengjiapo-8",
+      "from_station_id": "cn-xian-wanshou-nanlu",
+      "to_station_id": "cn-xian-xidengjiapo",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.105,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wei-henan-14-cn-xian-qingong-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-wei-henan-14",
+      "to_stop_id": "cn-xian-qingong-14",
+      "from_station_id": "cn-xian-wei-henan",
+      "to_station_id": "cn-xian-qingong",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 4.96,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 27.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wei-qu-nan-2-cn-xian-hangtiancheng-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-wei-qu-nan-2",
+      "to_stop_id": "cn-xian-hangtiancheng-2",
+      "from_station_id": "cn-xian-wei-qu-nan",
+      "to_station_id": "cn-xian-hangtiancheng",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.768,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-weixing-cekong-zhongxin-6-cn-xian-wanshou-nanlu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-weixing-cekong-zhongxin-6",
+      "to_stop_id": "cn-xian-wanshou-nanlu-6",
+      "from_station_id": "cn-xian-weixing-cekong-zhongxin",
+      "to_station_id": "cn-xian-wanshou-nanlu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.106,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-weiyanghu-10-cn-xian-xibao-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-weiyanghu-10",
+      "to_stop_id": "cn-xian-xibao-10",
+      "from_station_id": "cn-xian-weiyanghu",
+      "to_station_id": "cn-xian-xibao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 3.136,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wen-jing-lu-4-cn-xian-xingzheng-zhongxin-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-wen-jing-lu-4",
+      "to_stop_id": "cn-xian-xingzheng-zhongxin-4",
+      "from_station_id": "cn-xian-wen-jing-lu",
+      "to_station_id": "cn-xian-xingzheng-zhongxin",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.973,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wenjiaoyuan-5-cn-xian-gaoqiao-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-wenjiaoyuan-5",
+      "to_stop_id": "cn-xian-gaoqiao-5",
+      "from_station_id": "cn-xian-wenjiaoyuan",
+      "to_station_id": "cn-xian-gaoqiao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.896,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wenjingshan-gongyuan-14-cn-xian-xian-beizhan-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-wenjingshan-gongyuan-14",
+      "to_stop_id": "cn-xian-xian-beizhan-14",
+      "from_station_id": "cn-xian-wenjingshan-gongyuan",
+      "to_station_id": "cn-xian-xian-beizhan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.106,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wenyi-lu-5-cn-xian-nan-shaomen-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-wenyi-lu-5",
+      "to_stop_id": "cn-xian-nan-shaomen-5",
+      "from_station_id": "cn-xian-wenyi-lu",
+      "to_station_id": "cn-xian-nan-shaomen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.794,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wu-lu-kou-1-cn-xian-bei-da-jie-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-wu-lu-kou-1",
+      "to_stop_id": "cn-xian-bei-da-jie-1",
+      "from_station_id": "cn-xian-wu-lu-kou",
+      "to_station_id": "cn-xian-bei-da-jie",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.446,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wu-lu-kou-4-cn-xian-dachaishi-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-wu-lu-kou-4",
+      "to_stop_id": "cn-xian-dachaishi-4",
+      "from_station_id": "cn-xian-wu-lu-kou",
+      "to_station_id": "cn-xian-dachaishi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.177,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-wu-zhuang-3-cn-xian-xianghuwan-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-wu-zhuang-3",
+      "to_stop_id": "cn-xian-xianghuwan-3",
+      "from_station_id": "cn-xian-wu-zhuang",
+      "to_station_id": "cn-xian-xianghuwan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 1.736,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xi-an-ke-ji-da-xue-4-cn-xian-da-yan-ta-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-xi-an-ke-ji-da-xue-4",
+      "to_stop_id": "cn-xian-da-yan-ta-4",
+      "from_station_id": "cn-xian-xi-an-ke-ji-da-xue",
+      "to_station_id": "cn-xian-da-yan-ta",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.142,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-beizhan-14-cn-xian-wei-henan-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-xian-beizhan-14",
+      "to_stop_id": "cn-xian-wei-henan-14",
+      "from_station_id": "cn-xian-xian-beizhan",
+      "to_station_id": "cn-xian-wei-henan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 2.037,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 25.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-beizhan-2-cn-xian-honghui-yiyuan-beiqu-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-xian-beizhan-2",
+      "to_stop_id": "cn-xian-honghui-yiyuan-beiqu-2",
+      "from_station_id": "cn-xian-xian-beizhan",
+      "to_station_id": "cn-xian-honghui-yiyuan-beiqu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.673,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-beizhan-4-cn-xian-yuanding-lu-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-xian-beizhan-4",
+      "to_stop_id": "cn-xian-yuanding-lu-4",
+      "from_station_id": "cn-xian-xian-beizhan",
+      "to_station_id": "cn-xian-yuanding-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.594,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-dongzhan-5-cn-xian-yanminghu-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-xian-dongzhan-5",
+      "to_stop_id": "cn-xian-yanminghu-5",
+      "from_station_id": "cn-xian-xian-dongzhan",
+      "to_station_id": "cn-xian-yanminghu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.363,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-gongda-wude-lu-10-cn-xian-jingjiabao-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-xian-gongda-wude-lu-10",
+      "to_stop_id": "cn-xian-jingjiabao-10",
+      "from_station_id": "cn-xian-xian-gongda-wude-lu",
+      "to_station_id": "cn-xian-jingjiabao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.988,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-gongda-wude-lu-14-cn-xian-wenjingshan-gongyuan-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-xian-gongda-wude-lu-14",
+      "to_stop_id": "cn-xian-wenjingshan-gongyuan-14",
+      "from_station_id": "cn-xian-xian-gongda-wude-lu",
+      "to_station_id": "cn-xian-wenjingshan-gongyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 2.961,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-guoji-yixue-zhongxin-6-cn-xian-xidian-keda-nanxiao-qu-weilai-zhitong-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-xian-guoji-yixue-zhongxin-6",
+      "to_stop_id": "cn-xian-xidian-keda-nanxiao-qu-weilai-zhitong-6",
+      "from_station_id": "cn-xian-xian-guoji-yixue-zhongxin",
+      "to_station_id": "cn-xian-xidian-keda-nanxiao-qu-weilai-zhitong",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.644,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-guoji-zuqiu-zhongxin-16-cn-xian-xiliuying-16",
+      "line_id": "cn-xian-line-16",
+      "from_stop_id": "cn-xian-xian-guoji-zuqiu-zhongxin-16",
+      "to_stop_id": "cn-xian-xiliuying-16",
+      "from_station_id": "cn-xian-xian-guoji-zuqiu-zhongxin",
+      "to_station_id": "cn-xian-xiliuying",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.144,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xian-zhan-4-cn-xian-wu-lu-kou-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-xian-zhan-4",
+      "to_stop_id": "cn-xian-wu-lu-kou-4",
+      "from_station_id": "cn-xian-xian-zhan",
+      "to_station_id": "cn-xian-wu-lu-kou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.016,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xiangwang-9-cn-xian-fangzhicheng-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-xiangwang-9",
+      "to_stop_id": "cn-xian-fangzhicheng-9",
+      "from_station_id": "cn-xian-xiangwang",
+      "to_station_id": "cn-xian-fangzhicheng",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 2.553,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.9,
+        "a_s_per_km": 129.4,
+        "b_s": 110.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xianning-lu-3-cn-xian-yan-xing-men-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-xianning-lu-3",
+      "to_stop_id": "cn-xian-yan-xing-men-3",
+      "from_station_id": "cn-xian-xianning-lu",
+      "to_station_id": "cn-xian-yan-xing-men",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.776,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xianning-lu-6-cn-xian-jiaotong-daxue-xingqinggong-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-xianning-lu-6",
+      "to_stop_id": "cn-xian-jiaotong-daxue-xingqinggong-6",
+      "from_station_id": "cn-xian-xianning-lu",
+      "to_station_id": "cn-xian-jiaotong-daxue-xingqinggong",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.91,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xiao-zhai-2-cn-xian-ti-yu-chang-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-xiao-zhai-2",
+      "to_stop_id": "cn-xian-ti-yu-chang-2",
+      "from_station_id": "cn-xian-xiao-zhai",
+      "to_station_id": "cn-xian-ti-yu-chang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.061,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xiao-zhai-3-cn-xian-ji-xiang-cun-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-xiao-zhai-3",
+      "to_stop_id": "cn-xian-ji-xiang-cun-3",
+      "from_station_id": "cn-xian-xiao-zhai",
+      "to_station_id": "cn-xian-ji-xiang-cun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.239,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xibao-10-cn-xian-shuiliu-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-xibao-10",
+      "to_stop_id": "cn-xian-shuiliu-10",
+      "from_station_id": "cn-xian-xibao",
+      "to_station_id": "cn-xian-shuiliu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.136,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xibei-gongye-daxue-5-cn-xian-fengqing-gongyuan-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-xibei-gongye-daxue-5",
+      "to_stop_id": "cn-xian-fengqing-gongyuan-5",
+      "from_station_id": "cn-xian-xibei-gongye-daxue",
+      "to_station_id": "cn-xian-fengqing-gongyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.147,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xibei-gongye-daxue-6-cn-xian-keji-lu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-xibei-gongye-daxue-6",
+      "to_stop_id": "cn-xian-keji-lu-6",
+      "from_station_id": "cn-xian-xibei-gongye-daxue",
+      "to_station_id": "cn-xian-keji-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.153,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xibu-dadao-xitai-lu-kou-6-cn-xian-guo-duxi-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-xibu-dadao-xitai-lu-kou-6",
+      "to_stop_id": "cn-xian-guo-duxi-6",
+      "from_station_id": "cn-xian-xibu-dadao-xitai-lu-kou",
+      "to_station_id": "cn-xian-guo-duxi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.196,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.4,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xidengjiapo-8-cn-xian-dongdengjiapo-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-xidengjiapo-8",
+      "to_stop_id": "cn-xian-dongdengjiapo-8",
+      "from_station_id": "cn-xian-xidengjiapo",
+      "to_station_id": "cn-xian-dongdengjiapo",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.469,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xidian-keda-nanxiao-qu-weilai-zhitong-6-cn-xian-xian-nanzhan-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-xidian-keda-nanxiao-qu-weilai-zhitong-6",
+      "to_stop_id": "cn-xian-xian-nanzhan-6",
+      "from_station_id": "cn-xian-xidian-keda-nanxiao-qu-weilai-zhitong",
+      "to_station_id": "cn-xian-xian-nanzhan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.834,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xihuayuan-9-cn-xian-xigongchengda-xikeda-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-xihuayuan-9",
+      "to_stop_id": "cn-xian-xigongchengda-xikeda-9",
+      "from_station_id": "cn-xian-xihuayuan",
+      "to_station_id": "cn-xian-xigongchengda-xikeda",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.087,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xiliuying-16-cn-xian-fengdong-chengshi-guangchang-16",
+      "line_id": "cn-xian-line-16",
+      "from_stop_id": "cn-xian-xiliuying-16",
+      "to_stop_id": "cn-xian-fengdong-chengshi-guangchang-16",
+      "from_station_id": "cn-xian-xiliuying",
+      "to_station_id": "cn-xian-fengdong-chengshi-guangchang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.03,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xin-jia-miao-3-cn-xian-shi-jia-jie-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-xin-jia-miao-3",
+      "to_stop_id": "cn-xian-shi-jia-jie-3",
+      "from_station_id": "cn-xian-xin-jia-miao",
+      "to_station_id": "cn-xian-shi-jia-jie",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.563,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xin-zhu-3-cn-xian-shuangzhai-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-xin-zhu-3",
+      "to_stop_id": "cn-xian-shuangzhai-3",
+      "from_station_id": "cn-xian-xin-zhu",
+      "to_station_id": "cn-xian-shuangzhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.197,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xingfu-lindai-bei-8-cn-xian-wanshou-lu-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-xingfu-lindai-bei-8",
+      "to_stop_id": "cn-xian-wanshou-lu-8",
+      "from_station_id": "cn-xian-xingfu-lindai-bei",
+      "to_station_id": "cn-xian-wanshou-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.432,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xingwang-10-cn-xian-zhaohui-guangchang-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-xingwang-10",
+      "to_stop_id": "cn-xian-zhaohui-guangchang-10",
+      "from_station_id": "cn-xian-xingwang",
+      "to_station_id": "cn-xian-zhaohui-guangchang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.517,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.2,
+        "a_s_per_km": 125.6,
+        "b_s": 146.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xingzheng-zhongxin-2-cn-xian-fengcheng-shi-lu-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-xingzheng-zhongxin-2",
+      "to_stop_id": "cn-xian-fengcheng-shi-lu-2",
+      "from_station_id": "cn-xian-xingzheng-zhongxin",
+      "to_station_id": "cn-xian-fengcheng-shi-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.273,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xingzheng-zhongxin-4-cn-xian-shi-zhong-yi-yi-yuan-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-xingzheng-zhongxin-4",
+      "to_stop_id": "cn-xian-shi-zhong-yi-yi-yuan-4",
+      "from_station_id": "cn-xian-xingzheng-zhongxin",
+      "to_station_id": "cn-xian-shi-zhong-yi-yi-yuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.215,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xinkaimen-8-cn-xian-han-yao-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-xinkaimen-8",
+      "to_stop_id": "cn-xian-han-yao-8",
+      "from_station_id": "cn-xian-xinkaimen",
+      "to_station_id": "cn-xian-han-yao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.909,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xinsi-14-cn-xian-shuangzhai-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-xinsi-14",
+      "to_stop_id": "cn-xian-shuangzhai-14",
+      "from_station_id": "cn-xian-xinsi",
+      "to_station_id": "cn-xian-shuangzhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.2,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.4,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xixian-dasha-16-cn-xian-shanglin-lu-16",
+      "line_id": "cn-xian-line-16",
+      "from_stop_id": "cn-xian-xixian-dasha-16",
+      "to_stop_id": "cn-xian-shanglin-lu-16",
+      "from_station_id": "cn-xian-xixian-dasha",
+      "to_station_id": "cn-xian-shanglin-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.837,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-xiyaotou-5-cn-xian-shiqiao-lijiao-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-xiyaotou-5",
+      "to_stop_id": "cn-xian-shiqiao-lijiao-5",
+      "from_station_id": "cn-xian-xiyaotou",
+      "to_station_id": "cn-xian-shiqiao-lijiao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.681,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yan-xing-men-3-cn-xian-qinglongsi-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-yan-xing-men-3",
+      "to_stop_id": "cn-xian-qinglongsi-3",
+      "from_station_id": "cn-xian-yan-xing-men",
+      "to_station_id": "cn-xian-qinglongsi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.51,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yangguanzhai-10-cn-xian-junzhuang-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-yangguanzhai-10",
+      "to_stop_id": "cn-xian-junzhuang-10",
+      "from_station_id": "cn-xian-yangguanzhai",
+      "to_station_id": "cn-xian-junzhuang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.357,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yanminghu-5-cn-xian-yuedengge-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-yanminghu-5",
+      "to_stop_id": "cn-xian-yuedengge-5",
+      "from_station_id": "cn-xian-yanminghu",
+      "to_station_id": "cn-xian-yuedengge",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.175,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yanpingmen-3-cn-xian-zhang-ba-bei-lu-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-yanpingmen-3",
+      "to_stop_id": "cn-xian-zhang-ba-bei-lu-3",
+      "from_station_id": "cn-xian-yanpingmen",
+      "to_station_id": "cn-xian-zhang-ba-bei-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.247,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yanpingmen-8-cn-xian-jinguangmen-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-yanpingmen-8",
+      "to_stop_id": "cn-xian-jinguangmen-8",
+      "from_station_id": "cn-xian-yanpingmen",
+      "to_station_id": "cn-xian-jinguangmen",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.579,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.4,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yanxiang-lu-beikou-5-cn-xian-taiyi-lu-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-yanxiang-lu-beikou-5",
+      "to_stop_id": "cn-xian-taiyi-lu-5",
+      "from_station_id": "cn-xian-yanxiang-lu-beikou",
+      "to_station_id": "cn-xian-taiyi-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.455,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yinghua-guangchang-15-cn-xian-guodu-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-yinghua-guangchang-15",
+      "to_stop_id": "cn-xian-guodu-15",
+      "from_station_id": "cn-xian-yinghua-guangchang",
+      "to_station_id": "cn-xian-guodu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.395,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yingwusi-gongyuan-9-cn-xian-fenghuangchi-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-yingwusi-gongyuan-9",
+      "to_stop_id": "cn-xian-fenghuangchi-9",
+      "from_station_id": "cn-xian-yingwusi-gongyuan",
+      "to_station_id": "cn-xian-fenghuangchi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.949,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yinqiao-dadao-9-cn-xian-dongsancha-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-yinqiao-dadao-9",
+      "to_stop_id": "cn-xian-dongsancha-9",
+      "from_station_id": "cn-xian-yinqiao-dadao",
+      "to_station_id": "cn-xian-dongsancha",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.252,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yishu-zhongxin-14-cn-xian-konggang-xincheng-14",
+      "line_id": "cn-xian-line-14",
+      "from_stop_id": "cn-xian-yishu-zhongxin-14",
+      "to_stop_id": "cn-xian-konggang-xincheng-14",
+      "from_station_id": "cn-xian-yishu-zhongxin",
+      "to_station_id": "cn-xian-konggang-xincheng",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.103,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yong-ning-men-2-cn-xian-zhonglou-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-yong-ning-men-2",
+      "to_stop_id": "cn-xian-zhonglou-2",
+      "from_station_id": "cn-xian-yong-ning-men",
+      "to_station_id": "cn-xian-zhonglou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.427,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-youdian-daxue-15-cn-xian-yinghua-guangchang-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-youdian-daxue-15",
+      "to_stop_id": "cn-xian-yinghua-guangchang-15",
+      "from_station_id": "cn-xian-youdian-daxue",
+      "to_station_id": "cn-xian-yinghua-guangchang",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.286,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yu-xiang-men-1-cn-xian-lao-dong-lu-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-yu-xiang-men-1",
+      "to_stop_id": "cn-xian-lao-dong-lu-1",
+      "from_station_id": "cn-xian-yu-xiang-men",
+      "to_station_id": "cn-xian-lao-dong-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.023,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yuanding-lu-4-cn-xian-feng-cheng-shi-er-lu-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-yuanding-lu-4",
+      "to_stop_id": "cn-xian-feng-cheng-shi-er-lu-4",
+      "from_station_id": "cn-xian-yuanding-lu",
+      "to_station_id": "cn-xian-feng-cheng-shi-er-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.904,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yuchu-10-cn-xian-luyuan-dadao-10",
+      "line_id": "cn-xian-line-10",
+      "from_stop_id": "cn-xian-yuchu-10",
+      "to_stop_id": "cn-xian-luyuan-dadao-10",
+      "from_station_id": "cn-xian-yuchu",
+      "to_station_id": "cn-xian-luyuan-dadao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.855,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yuedengge-5-cn-xian-matengkong-5",
+      "line_id": "cn-xian-line-5",
+      "from_stop_id": "cn-xian-yuedengge-5",
+      "to_stop_id": "cn-xian-matengkong-5",
+      "from_station_id": "cn-xian-yuedengge",
+      "to_station_id": "cn-xian-matengkong",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.929,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yujiazhai-4-cn-xian-da-ming-gong-bei-4",
+      "line_id": "cn-xian-line-4",
+      "from_stop_id": "cn-xian-yujiazhai-4",
+      "to_stop_id": "cn-xian-da-ming-gong-bei-4",
+      "from_station_id": "cn-xian-yujiazhai",
+      "to_station_id": "cn-xian-da-ming-gong-bei",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.003,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-yujiazhai-8-cn-xian-jing-shangcun-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-yujiazhai-8",
+      "to_stop_id": "cn-xian-jing-shangcun-8",
+      "from_station_id": "cn-xian-yujiazhai",
+      "to_station_id": "cn-xian-jing-shangcun",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.926,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.2,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zaohe-1-cn-xian-sanqiao-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-zaohe-1",
+      "to_stop_id": "cn-xian-sanqiao-1",
+      "from_station_id": "cn-xian-zaohe",
+      "to_station_id": "cn-xian-sanqiao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.957,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zaoyuan-1-cn-xian-zaohe-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-zaoyuan-1",
+      "to_stop_id": "cn-xian-zaohe-1",
+      "from_station_id": "cn-xian-zaoyuan",
+      "to_station_id": "cn-xian-zaohe",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.099,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zaozitai-6-cn-xian-xibu-dadao-xitai-lu-kou-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-zaozitai-6",
+      "to_stop_id": "cn-xian-xibu-dadao-xitai-lu-kou-6",
+      "from_station_id": "cn-xian-zaozitai",
+      "to_station_id": "cn-xian-xibu-dadao-xitai-lu-kou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.151,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhang-ba-bei-lu-3-cn-xian-yu-hua-zhai-3",
+      "line_id": "cn-xian-line-3",
+      "from_stop_id": "cn-xian-zhang-ba-bei-lu-3",
+      "to_stop_id": "cn-xian-yu-hua-zhai-3",
+      "from_station_id": "cn-xian-zhang-ba-bei-lu",
+      "to_station_id": "cn-xian-yu-hua-zhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.295,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhang-baliu-lu-6-cn-xian-zaozitai-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-zhang-baliu-lu-6",
+      "to_stop_id": "cn-xian-zaozitai-6",
+      "from_station_id": "cn-xian-zhang-baliu-lu",
+      "to_station_id": "cn-xian-zaozitai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.709,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.7,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhang-basi-lu-6-cn-xian-zhang-baliu-lu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-zhang-basi-lu-6",
+      "to_stop_id": "cn-xian-zhang-baliu-lu-6",
+      "from_station_id": "cn-xian-zhang-basi-lu",
+      "to_station_id": "cn-xian-zhang-baliu-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.274,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.6,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhangba-yilu-6-cn-xian-zhang-basi-lu-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-zhangba-yilu-6",
+      "to_stop_id": "cn-xian-zhang-basi-lu-6",
+      "from_station_id": "cn-xian-zhangba-yilu",
+      "to_station_id": "cn-xian-zhang-basi-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.309,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.7,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhao-yang-men-1-cn-xian-wu-lu-kou-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-zhao-yang-men-1",
+      "to_stop_id": "cn-xian-wu-lu-kou-1",
+      "from_station_id": "cn-xian-zhao-yang-men",
+      "to_station_id": "cn-xian-wu-lu-kou",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.027,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhiwuyuan-8-cn-xian-miaojiazhai-8",
+      "line_id": "cn-xian-line-8",
+      "from_stop_id": "cn-xian-zhiwuyuan-8",
+      "to_stop_id": "cn-xian-miaojiazhai-8",
+      "from_station_id": "cn-xian-zhiwuyuan",
+      "to_station_id": "cn-xian-miaojiazhai",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 1.128,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.1,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhiyang-guangchang-9-cn-xian-yingwusi-gongyuan-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-zhiyang-guangchang-9",
+      "to_stop_id": "cn-xian-yingwusi-gongyuan-9",
+      "from_station_id": "cn-xian-zhiyang-guangchang",
+      "to_station_id": "cn-xian-yingwusi-gongyuan",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.587,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhonghua-xilu-1-cn-xian-baoquan-lu-1",
+      "line_id": "cn-xian-line-1",
+      "from_stop_id": "cn-xian-zhonghua-xilu-1",
+      "to_stop_id": "cn-xian-baoquan-lu-1",
+      "from_station_id": "cn-xian-zhonghua-xilu",
+      "to_station_id": "cn-xian-baoquan-lu",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.544,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhonglou-2-cn-xian-bei-da-jie-2",
+      "line_id": "cn-xian-line-2",
+      "from_stop_id": "cn-xian-zhonglou-2",
+      "to_stop_id": "cn-xian-bei-da-jie-2",
+      "from_station_id": "cn-xian-zhonglou",
+      "to_station_id": "cn-xian-bei-da-jie",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.99,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhonglou-6-cn-xian-guangji-jie-6",
+      "line_id": "cn-xian-line-6",
+      "from_stop_id": "cn-xian-zhonglou-6",
+      "to_stop_id": "cn-xian-guangji-jie-6",
+      "from_station_id": "cn-xian-zhonglou",
+      "to_station_id": "cn-xian-guangji-jie",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "distance_km": 0.726,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.9,
+        "a_s_per_km": 126.1,
+        "b_s": 33.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhu-cunxi-15-cn-xian-fujunmiao-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-zhu-cunxi-15",
+      "to_stop_id": "cn-xian-fujunmiao-15",
+      "from_station_id": "cn-xian-zhu-cunxi",
+      "to_station_id": "cn-xian-fujunmiao",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.243,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zhucun-15-cn-xian-zhu-cunxi-15",
+      "line_id": "cn-xian-line-15",
+      "from_stop_id": "cn-xian-zhucun-15",
+      "to_stop_id": "cn-xian-zhu-cunxi-15",
+      "from_station_id": "cn-xian-zhucun",
+      "to_station_id": "cn-xian-zhu-cunxi",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.54,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xian-seg-cn-xian-zixia-san-lu-9-cn-xian-hongqing-9",
+      "line_id": "cn-xian-line-9",
+      "from_stop_id": "cn-xian-zixia-san-lu-9",
+      "to_stop_id": "cn-xian-hongqing-9",
+      "from_station_id": "cn-xian-zixia-san-lu",
+      "to_station_id": "cn-xian-hongqing",
+      "direction": "both",
+      "source_id": "xianrail-pas-gateway",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.329,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    }
+  ]
+}

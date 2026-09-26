@@ -1,11 +1,8 @@
 import { type AdapterManifest, type SyncCtx, type SyncLayer, syncFares } from '@openmetro/core';
+import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
 import { fareSpec } from './fares.js';
 import { runZhengzhouNormalize } from './run.js';
 
-function rootOf(dataDir: string): string {
-  const m = dataDir.match(/^(.*?)[/\\]data[/\\]cn-zhengzhou$/);
-  return m?.[1] || process.env.OPENMETRO_ROOT || process.cwd();
-}
 
 export const adapter: AdapterManifest = {
   networkId: 'cn-zhengzhou',
@@ -20,7 +17,7 @@ export const adapter: AdapterManifest = {
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
     if (layers.length === 0) return;
-    const root = rootOf(ctx.dataDir);
+    const root = repoRootForDataDir(ctx.dataDir, 'cn-zhengzhou');
     const wantTopology = layers.some(
       (l) => l === 'topology' || l === 'timetables' || l === 'enrichment'
     );

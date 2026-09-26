@@ -1,0 +1,634 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-xian",
+  "generated_at": "2026-09-26T06:25:25.607Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-xian-line-1-pattern-main",
+      "line_id": "cn-xian-line-1",
+      "name": "地铁1号线",
+      "names": {
+        "zh": "地铁1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-xian-fangzhicheng-1",
+        "cn-xian-ban-po-1",
+        "cn-xian-chanhe-1",
+        "cn-xian-chang-le-po-1",
+        "cn-xian-wanshou-lu-1",
+        "cn-xian-tong-hua-men-1",
+        "cn-xian-kang-fu-lu-1",
+        "cn-xian-zhao-yang-men-1",
+        "cn-xian-wu-lu-kou-1",
+        "cn-xian-bei-da-jie-1",
+        "cn-xian-sa-jin-qiao-1",
+        "cn-xian-yu-xiang-men-1",
+        "cn-xian-lao-dong-lu-1",
+        "cn-xian-kaiyuanmen-1",
+        "cn-xian-hancheng-lu-1",
+        "cn-xian-zaoyuan-1",
+        "cn-xian-zaohe-1",
+        "cn-xian-sanqiao-1",
+        "cn-xian-houwei-zhai-1",
+        "cn-xian-fengdong-zimaoyuan-1",
+        "cn-xian-shanglin-lu-1",
+        "cn-xian-beihuai-1",
+        "cn-xian-fenghe-senlingongyuan-1",
+        "cn-xian-shaanxi-zhongyiyao-daxue-1",
+        "cn-xian-baimahe-1",
+        "cn-xian-chenyangzhai-1",
+        "cn-xian-angu-1",
+        "cn-xian-zhonghua-xilu-1",
+        "cn-xian-baoquan-lu-1",
+        "cn-xian-xianyangxi-zhan-1"
+      ],
+      "origin_stop_id": "cn-xian-fangzhicheng-1",
+      "terminal_stop_id": "cn-xian-xianyangxi-zhan-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "01"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1",
+        "loop": false,
+        "origin_name": "纺织城",
+        "terminal_name": "咸阳西站"
+      }
+    },
+    {
+      "id": "cn-xian-line-10-pattern-main",
+      "line_id": "cn-xian-line-10",
+      "name": "地铁10号线",
+      "names": {
+        "zh": "地铁10号线",
+        "en": "Line 10"
+      },
+      "stop_ids": [
+        "cn-xian-jing-shangcun-10",
+        "cn-xian-maoerzhong-10",
+        "cn-xian-tuanjiecun-10",
+        "cn-xian-hongqichang-10",
+        "cn-xian-xian-gongda-wude-lu-10",
+        "cn-xian-jingjiabao-10",
+        "cn-xian-weiyanghu-10",
+        "cn-xian-xibao-10",
+        "cn-xian-shuiliu-10",
+        "cn-xian-jingwei-bandao-10",
+        "cn-xian-yangguanzhai-10",
+        "cn-xian-junzhuang-10",
+        "cn-xian-chonghuang-10",
+        "cn-xian-yuchu-10",
+        "cn-xian-luyuan-dadao-10",
+        "cn-xian-xingwang-10",
+        "cn-xian-zhaohui-guangchang-10"
+      ],
+      "origin_stop_id": "cn-xian-jing-shangcun-10",
+      "terminal_stop_id": "cn-xian-zhaohui-guangchang-10",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "10"
+        }
+      ],
+      "extras": {
+        "line_short_name": "10",
+        "loop": false,
+        "origin_name": "井上村",
+        "terminal_name": "昭慧广场"
+      }
+    },
+    {
+      "id": "cn-xian-line-14-pattern-main",
+      "line_id": "cn-xian-line-14",
+      "name": "地铁14号线",
+      "names": {
+        "zh": "地铁14号线",
+        "en": "Line 14"
+      },
+      "stop_ids": [
+        "cn-xian-heshao-14",
+        "cn-xian-gangwu-dadao-14",
+        "cn-xian-xinsi-14",
+        "cn-xian-shuangzhai-14",
+        "cn-xian-aoti-zhongxin-14",
+        "cn-xian-beichen-14",
+        "cn-xian-xian-gongda-wude-lu-14",
+        "cn-xian-wenjingshan-gongyuan-14",
+        "cn-xian-xian-beizhan-14",
+        "cn-xian-wei-henan-14",
+        "cn-xian-qingong-14",
+        "cn-xian-qinhan-xincheng-14",
+        "cn-xian-changling-14",
+        "cn-xian-baiqizhai-14",
+        "cn-xian-yishu-zhongxin-14",
+        "cn-xian-konggang-xincheng-14",
+        "cn-xian-jichang-t5-14",
+        "cn-xian-airport-west-14"
+      ],
+      "origin_stop_id": "cn-xian-heshao-14",
+      "terminal_stop_id": "cn-xian-airport-west-14",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "14"
+        }
+      ],
+      "extras": {
+        "line_short_name": "14",
+        "loop": false,
+        "origin_name": "贺韶",
+        "terminal_name": "机场西（T1、T2、T3）"
+      }
+    },
+    {
+      "id": "cn-xian-line-15-pattern-main",
+      "line_id": "cn-xian-line-15",
+      "name": "地铁15号线",
+      "names": {
+        "zh": "地铁15号线",
+        "en": "Line 15"
+      },
+      "stop_ids": [
+        "cn-xian-dongzhao-yu-15",
+        "cn-xian-dongchanganjie-15",
+        "cn-xian-huangzipo-15",
+        "cn-xian-hangtiancheng-15",
+        "cn-xian-changan-guangchang-15",
+        "cn-xian-youdian-daxue-15",
+        "cn-xian-yinghua-guangchang-15",
+        "cn-xian-guodu-15",
+        "cn-xian-guo-duxi-15",
+        "cn-xian-zhucun-15",
+        "cn-xian-zhu-cunxi-15",
+        "cn-xian-fujunmiao-15",
+        "cn-xian-xiliu-15"
+      ],
+      "origin_stop_id": "cn-xian-dongzhao-yu-15",
+      "terminal_stop_id": "cn-xian-xiliu-15",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "15"
+        }
+      ],
+      "extras": {
+        "line_short_name": "15",
+        "loop": false,
+        "origin_name": "东兆余",
+        "terminal_name": "细柳"
+      }
+    },
+    {
+      "id": "cn-xian-line-16-pattern-main",
+      "line_id": "cn-xian-line-16",
+      "name": "地铁16号线",
+      "names": {
+        "zh": "地铁16号线",
+        "en": "Line 16"
+      },
+      "stop_ids": [
+        "cn-xian-qinchuangyuan-zhongxin-16",
+        "cn-xian-xixian-dasha-16",
+        "cn-xian-shanglin-lu-16",
+        "cn-xian-fuxing-dadao-bei-16",
+        "cn-xian-xian-guoji-zuqiu-zhongxin-16",
+        "cn-xian-xiliuying-16",
+        "cn-xian-fengdong-chengshi-guangchang-16",
+        "cn-xian-huanlegu-16",
+        "cn-xian-shijingli-16"
+      ],
+      "origin_stop_id": "cn-xian-qinchuangyuan-zhongxin-16",
+      "terminal_stop_id": "cn-xian-shijingli-16",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "16"
+        }
+      ],
+      "extras": {
+        "line_short_name": "16",
+        "loop": false,
+        "origin_name": "秦创原中心",
+        "terminal_name": "诗经里"
+      }
+    },
+    {
+      "id": "cn-xian-line-2-pattern-main",
+      "line_id": "cn-xian-line-2",
+      "name": "地铁2号线",
+      "names": {
+        "zh": "地铁2号线",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-xian-changninggong-2",
+        "cn-xian-hejiaying-2",
+        "cn-xian-wei-qu-nan-2",
+        "cn-xian-hangtiancheng-2",
+        "cn-xian-feng-qi-yuan-2",
+        "cn-xian-san-yao-2",
+        "cn-xian-dianshita-2",
+        "cn-xian-balicun-2",
+        "cn-xian-xiao-zhai-2",
+        "cn-xian-ti-yu-chang-2",
+        "cn-xian-nan-shaomen-2",
+        "cn-xian-yong-ning-men-2",
+        "cn-xian-zhonglou-2",
+        "cn-xian-bei-da-jie-2",
+        "cn-xian-an-yuan-men-2",
+        "cn-xian-long-shou-yuan-2",
+        "cn-xian-da-ming-gong-xi-2",
+        "cn-xian-qingshaonian-zhongxin-2",
+        "cn-xian-feng-cheng-wu-lu-2",
+        "cn-xian-xingzheng-zhongxin-2",
+        "cn-xian-fengcheng-shi-lu-2",
+        "cn-xian-bei-yuan-2",
+        "cn-xian-xian-beizhan-2",
+        "cn-xian-honghui-yiyuan-beiqu-2",
+        "cn-xian-caotan-2"
+      ],
+      "origin_stop_id": "cn-xian-changninggong-2",
+      "terminal_stop_id": "cn-xian-caotan-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "02"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2",
+        "loop": false,
+        "origin_name": "常宁宫",
+        "terminal_name": "草滩"
+      }
+    },
+    {
+      "id": "cn-xian-line-3-pattern-main",
+      "line_id": "cn-xian-line-3",
+      "name": "地铁3号线",
+      "names": {
+        "zh": "地铁3号线",
+        "en": "Line 3"
+      },
+      "stop_ids": [
+        "cn-xian-bao-shui-qu-3",
+        "cn-xian-xin-zhu-3",
+        "cn-xian-shuangzhai-3",
+        "cn-xian-guo-ji-gang-wu-qu-3",
+        "cn-xian-wu-zhuang-3",
+        "cn-xian-xianghuwan-3",
+        "cn-xian-chanba-zhongxin-3",
+        "cn-xian-tao-hua-tan-3",
+        "cn-xian-guangtaimen-3",
+        "cn-xian-xin-jia-miao-3",
+        "cn-xian-shi-jia-jie-3",
+        "cn-xian-hu-jia-miao-3",
+        "cn-xian-tong-hua-men-3",
+        "cn-xian-chang-le-gong-yuan-3",
+        "cn-xian-xianning-lu-3",
+        "cn-xian-yan-xing-men-3",
+        "cn-xian-qinglongsi-3",
+        "cn-xian-bei-chi-tou-3",
+        "cn-xian-da-yan-ta-3",
+        "cn-xian-xiao-zhai-3",
+        "cn-xian-ji-xiang-cun-3",
+        "cn-xian-tai-bai-nan-lu-3",
+        "cn-xian-keji-lu-3",
+        "cn-xian-yanpingmen-3",
+        "cn-xian-zhang-ba-bei-lu-3",
+        "cn-xian-yu-hua-zhai-3"
+      ],
+      "origin_stop_id": "cn-xian-bao-shui-qu-3",
+      "terminal_stop_id": "cn-xian-yu-hua-zhai-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "03"
+        }
+      ],
+      "extras": {
+        "line_short_name": "3",
+        "loop": false,
+        "origin_name": "保税区",
+        "terminal_name": "鱼化寨"
+      }
+    },
+    {
+      "id": "cn-xian-line-4-pattern-main",
+      "line_id": "cn-xian-line-4",
+      "name": "地铁4号线",
+      "names": {
+        "zh": "地铁4号线",
+        "en": "Line 4"
+      },
+      "stop_ids": [
+        "cn-xian-xian-beizhan-4",
+        "cn-xian-yuanding-lu-4",
+        "cn-xian-feng-cheng-shi-er-lu-4",
+        "cn-xian-feng-cheng-jiu-lu-4",
+        "cn-xian-wen-jing-lu-4",
+        "cn-xian-xingzheng-zhongxin-4",
+        "cn-xian-shi-zhong-yi-yi-yuan-4",
+        "cn-xian-chang-qing-lu-4",
+        "cn-xian-bai-hua-cun-4",
+        "cn-xian-yujiazhai-4",
+        "cn-xian-da-ming-gong-bei-4",
+        "cn-xian-da-ming-gong-4",
+        "cn-xian-han-yuan-dian-4",
+        "cn-xian-xian-zhan-4",
+        "cn-xian-wu-lu-kou-4",
+        "cn-xian-dachaishi-4",
+        "cn-xian-he-ping-men-4",
+        "cn-xian-jianzhu-keji-daxue-lijiacun-4",
+        "cn-xian-xi-an-ke-ji-da-xue-4",
+        "cn-xian-da-yan-ta-4",
+        "cn-xian-da-tang-fu-rong-yuan-4",
+        "cn-xian-qujiang-chixi-4",
+        "cn-xian-jin-hu-tuo-4",
+        "cn-xian-hang-tian-da-dao-4",
+        "cn-xian-fei-tian-lu-4",
+        "cn-xian-dongchanganjie-4",
+        "cn-xian-shen-zhou-da-dao-4",
+        "cn-xian-hang-tian-dong-lu-4",
+        "cn-xian-hang-tian-xin-cheng-4"
+      ],
+      "origin_stop_id": "cn-xian-xian-beizhan-4",
+      "terminal_stop_id": "cn-xian-hang-tian-xin-cheng-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "04"
+        }
+      ],
+      "extras": {
+        "line_short_name": "4",
+        "loop": false,
+        "origin_name": "西安北站",
+        "terminal_name": "航天新城"
+      }
+    },
+    {
+      "id": "cn-xian-line-5-pattern-main",
+      "line_id": "cn-xian-line-5",
+      "name": "地铁5号线",
+      "names": {
+        "zh": "地铁5号线",
+        "en": "Line 5"
+      },
+      "stop_ids": [
+        "cn-xian-xian-dongzhan-5",
+        "cn-xian-yanminghu-5",
+        "cn-xian-yuedengge-5",
+        "cn-xian-matengkong-5",
+        "cn-xian-huang-qutou-5",
+        "cn-xian-ligongda-qujiang-xiaoqu-5",
+        "cn-xian-qinglongsi-5",
+        "cn-xian-yanxiang-lu-beikou-5",
+        "cn-xian-taiyi-lu-5",
+        "cn-xian-jianzhu-keji-daxue-lijiacun-5",
+        "cn-xian-wenyi-lu-5",
+        "cn-xian-nan-shaomen-5",
+        "cn-xian-shengrenmin-yiyuan-huangyancun-5",
+        "cn-xian-bian-jiacun-5",
+        "cn-xian-xibei-gongye-daxue-5",
+        "cn-xian-fengqing-gongyuan-5",
+        "cn-xian-jinguangmen-5",
+        "cn-xian-hancheng-nanlu-5",
+        "cn-xian-xiyaotou-5",
+        "cn-xian-shiqiao-lijiao-5",
+        "cn-xian-epang-gongnan-5",
+        "cn-xian-wangsi-5",
+        "cn-xian-doumen-5",
+        "cn-xian-fuxing-dadao-nan-5",
+        "cn-xian-gaojing-5",
+        "cn-xian-huanlegu-5",
+        "cn-xian-wenjiaoyuan-5",
+        "cn-xian-gaoqiao-5",
+        "cn-xian-dongmafang-5",
+        "cn-xian-fengxi-wenhua-gongyuan-5",
+        "cn-xian-diaotai-5",
+        "cn-xian-aoxiang-xiaozhen-5",
+        "cn-xian-chuang-xingangdong-5",
+        "cn-xian-chuangxingang-5"
+      ],
+      "origin_stop_id": "cn-xian-xian-dongzhan-5",
+      "terminal_stop_id": "cn-xian-chuangxingang-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "05"
+        }
+      ],
+      "extras": {
+        "line_short_name": "5",
+        "loop": false,
+        "origin_name": "西安东站",
+        "terminal_name": "创新港"
+      }
+    },
+    {
+      "id": "cn-xian-line-6-pattern-main",
+      "line_id": "cn-xian-line-6",
+      "name": "地铁6号线",
+      "names": {
+        "zh": "地铁6号线",
+        "en": "Line 6"
+      },
+      "stop_ids": [
+        "cn-xian-fangzhicheng-6",
+        "cn-xian-fangerlu-6",
+        "cn-xian-fangliulu-6",
+        "cn-xian-mujiangwang-6",
+        "cn-xian-tianjiawan-6",
+        "cn-xian-weixing-cekong-zhongxin-6",
+        "cn-xian-wanshou-nanlu-6",
+        "cn-xian-gongyuan-nanlu-6",
+        "cn-xian-xianning-lu-6",
+        "cn-xian-jiaotong-daxue-xingqinggong-6",
+        "cn-xian-changlemen-6",
+        "cn-xian-dachaishi-6",
+        "cn-xian-zhonglou-6",
+        "cn-xian-guangji-jie-6",
+        "cn-xian-qiao-zi-kou-6",
+        "cn-xian-andingmen-6",
+        "cn-xian-datang-xishi-6",
+        "cn-xian-xibei-gongye-daxue-6",
+        "cn-xian-keji-lu-6",
+        "cn-xian-ganjiazhai-6",
+        "cn-xian-mutasi-6",
+        "cn-xian-sheng-tiyuguan-6",
+        "cn-xian-zhangba-yilu-6",
+        "cn-xian-zhang-basi-lu-6",
+        "cn-xian-zhang-baliu-lu-6",
+        "cn-xian-zaozitai-6",
+        "cn-xian-xibu-dadao-xitai-lu-kou-6",
+        "cn-xian-guo-duxi-6",
+        "cn-xian-rencun-6",
+        "cn-xian-xian-guoji-yixue-zhongxin-6",
+        "cn-xian-xidian-keda-nanxiao-qu-weilai-zhitong-6",
+        "cn-xian-xian-nanzhan-6"
+      ],
+      "origin_stop_id": "cn-xian-fangzhicheng-6",
+      "terminal_stop_id": "cn-xian-xian-nanzhan-6",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "06"
+        }
+      ],
+      "extras": {
+        "line_short_name": "6",
+        "loop": false,
+        "origin_name": "纺织城",
+        "terminal_name": "西安南站"
+      }
+    },
+    {
+      "id": "cn-xian-line-8-pattern-main",
+      "line_id": "cn-xian-line-8",
+      "name": "地铁8号线",
+      "names": {
+        "zh": "地铁8号线",
+        "en": "Line 8"
+      },
+      "stop_ids": [
+        "cn-xian-sheng-tiyuguan-8",
+        "cn-xian-muta-sixi-8",
+        "cn-xian-keji-erlu-8",
+        "cn-xian-yanpingmen-8",
+        "cn-xian-jinguangmen-8",
+        "cn-xian-tumen-8",
+        "cn-xian-kaiyuanmen-8",
+        "cn-xian-baijiakou-8",
+        "cn-xian-guanghuamen-8",
+        "cn-xian-jingyaomen-8",
+        "cn-xian-hongmiaopo-8",
+        "cn-xian-dafengge-8",
+        "cn-xian-bachengmen-8",
+        "cn-xian-qingshaonian-zhongxin-8",
+        "cn-xian-shi-disan-yiyuan-8",
+        "cn-xian-yujiazhai-8",
+        "cn-xian-jing-shangcun-8",
+        "cn-xian-beichen-donglu-8",
+        "cn-xian-guangtaimen-8",
+        "cn-xian-mijiaya-8",
+        "cn-xian-xingfu-lindai-bei-8",
+        "cn-xian-wanshou-lu-8",
+        "cn-xian-hansenzhai-8",
+        "cn-xian-wanshou-nanlu-8",
+        "cn-xian-xidengjiapo-8",
+        "cn-xian-dongdengjiapo-8",
+        "cn-xian-matengkong-8",
+        "cn-xian-zhiwuyuan-8",
+        "cn-xian-miaojiazhai-8",
+        "cn-xian-xinkaimen-8",
+        "cn-xian-han-yao-8",
+        "cn-xian-qujiang-chixi-8",
+        "cn-xian-datang-buyecheng-8",
+        "cn-xian-dianshita-8",
+        "cn-xian-dongyi-lu-8",
+        "cn-xian-anhuamen-8",
+        "cn-xian-shanmenkou-8"
+      ],
+      "origin_stop_id": "cn-xian-sheng-tiyuguan-8",
+      "terminal_stop_id": "cn-xian-shanmenkou-8",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "08"
+        }
+      ],
+      "extras": {
+        "line_short_name": "8",
+        "loop": true,
+        "origin_name": "省体育馆",
+        "terminal_name": "省体育馆"
+      }
+    },
+    {
+      "id": "cn-xian-line-9-pattern-main",
+      "line_id": "cn-xian-line-9",
+      "name": "地铁9号线",
+      "names": {
+        "zh": "地铁9号线",
+        "en": "Line 9"
+      },
+      "stop_ids": [
+        "cn-xian-qin-lingxi-9",
+        "cn-xian-yinqiao-dadao-9",
+        "cn-xian-dongsancha-9",
+        "cn-xian-huaqingchi-9",
+        "cn-xian-xihuayuan-9",
+        "cn-xian-xigongchengda-xikeda-9",
+        "cn-xian-zhiyang-guangchang-9",
+        "cn-xian-yingwusi-gongyuan-9",
+        "cn-xian-fenghuangchi-9",
+        "cn-xian-zixia-san-lu-9",
+        "cn-xian-hongqing-9",
+        "cn-xian-tianwang-9",
+        "cn-xian-baliu-erlu-9",
+        "cn-xian-xiangwang-9",
+        "cn-xian-fangzhicheng-9"
+      ],
+      "origin_stop_id": "cn-xian-qin-lingxi-9",
+      "terminal_stop_id": "cn-xian-fangzhicheng-9",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "09"
+        }
+      ],
+      "extras": {
+        "line_short_name": "9",
+        "loop": false,
+        "origin_name": "秦陵西",
+        "terminal_name": "纺织城"
+      }
+    },
+    {
+      "id": "cn-xian-line-xihu-pattern-main",
+      "line_id": "cn-xian-line-xihu",
+      "name": "西户线",
+      "names": {
+        "zh": "西户线",
+        "en": "Xihu Line"
+      },
+      "stop_ids": [
+        "cn-xian-huxian-xihu",
+        "cn-xian-epang-gongnan-xihu"
+      ],
+      "origin_stop_id": "cn-xian-huxian-xihu",
+      "terminal_stop_id": "cn-xian-epang-gongnan-xihu",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "xianrail-pas-gateway",
+          "id": "50"
+        }
+      ],
+      "extras": {
+        "line_short_name": "西户线",
+        "loop": false,
+        "origin_name": "户县",
+        "terminal_name": "阿房宫南"
+      }
+    }
+  ]
+}

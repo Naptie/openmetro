@@ -1,11 +1,18 @@
 import {
   applyTimetableServiceStatus,
+  asciiSlug,
   canonicalizePatterns,
+  cleanTime,
+  foldStationName,
+  hexToCss,
+  parsePixel,
+  parseSlCoord,
+  readableSlug,
+  resolveLineShortName,
+  stationIdFor,
   type LineEncoded,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
-  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -49,80 +56,20 @@ export interface ChengduCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-function asciiSlug(s: string): string {
-  return (
-    s
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '') || readableSlug(s)
-  );
-}
 
 /**
  * Official/AMap names may differ by trailing 站, middle dots (`中医大·省医院`),
  * full-width parens, or operational annotations.
  */
-export function foldStationName(zh: string): string {
-  return zh
-    .trim()
-    .replace(ANNOTATION_RE, '')
-    .replace(/[·•・‧・]/g, '')
-    .replace(/[（]/g, '(')
-    .replace(/[）]/g, ')')
-    .replace(/站$/, '')
-    .trim();
-}
 
 function stripAnnotations(zh: string): string {
   return zh.trim().replace(ANNOTATION_RE, '').trim();
 }
 
-function parseSlCoord(sl: string | undefined): { lon: number; lat: number } | undefined {
-  if (!sl) return undefined;
-  const [lonRaw, latRaw] = sl.split(',');
-  const lon = Number(lonRaw);
-  const lat = Number(latRaw);
-  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return undefined;
-  return { lon, lat };
-}
 
-function parsePixel(p: string | undefined): { x: number; y: number } | undefined {
-  if (!p) return undefined;
-  const m = /^(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)$/.exec(p.trim());
-  if (!m) return undefined;
-  return { x: Number(m[1]), y: Number(m[2]) };
-}
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^#/, '').trim();
-  if (m.length !== 6 && m.length !== 3) return undefined;
-  return `#${m.toLowerCase()}`;
-}
 
-function cleanTime(raw: string | undefined): string | undefined {
-  if (!raw) return undefined;
-  const t = raw.trim().replace('：', ':');
-  if (!t || /^[-–—－]+$/.test(t)) return undefined;
-  if (!/^\d{1,2}:\d{2}$/.test(t)) return undefined;
-  return t;
-}
 
-function stationIdFor(en: string | undefined, zh: string): string {
-  const label = (en ?? '').trim();
-  if (label && /[A-Za-z]/.test(label)) {
-    const slug = label
-      .toLowerCase()
-      .replace(/&/g, 'and')
-      .replace(/[''`']/g, '')
-      .replace(/ʳ/g, 'r')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-    if (slug) return slug;
-    return readableSlug(label);
-  }
-  return readableSlug(zh);
-}
 
 function shortSlug(short: string): string {
   return SHORT_SLUG[short] ?? (asciiSlug(short) || readableSlug(short));

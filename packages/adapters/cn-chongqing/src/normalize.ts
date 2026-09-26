@@ -1,10 +1,13 @@
 import {
   deriveLineEnglishName,
+  foldStationName,
+  pinyinToEnglish,
+  readableSlug,
+  resolveLineShortName,
+  stationIdFor,
   type LineEncoded,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
-  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -38,20 +41,6 @@ export interface ChongqingCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-function stationIdFor(en: string | undefined, zh: string): string {
-  const label = (en ?? '').trim();
-  if (label && /[A-Za-z]/.test(label)) {
-    const slug = label
-      .toLowerCase()
-      .replace(/&/g, 'and')
-      .replace(/[''`']/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-    if (slug) return slug;
-    return readableSlug(label);
-  }
-  return readableSlug(zh);
-}
 
 function lineIdFor(shortName: string, name: string): string {
   const ascii = shortName
@@ -61,14 +50,6 @@ function lineIdFor(shortName: string, name: string): string {
   return `${NETWORK_ID}-line-${ascii || readableSlug(name)}`;
 }
 
-function pinyinToEnglish(sp: string | undefined): string | undefined {
-  const t = (sp ?? '').trim();
-  if (!t || !/^[A-Za-z]/.test(t)) return undefined;
-  return t
-    .split(/\s+/)
-    .map((w) => (w ? w[0]!.toUpperCase() + w.slice(1).toLowerCase() : w))
-    .join(' ');
-}
 
 function resolveEnglishName(
   amapEn: string | undefined,
@@ -80,9 +61,6 @@ function resolveEnglishName(
   return pinyinToEnglish(pinyin) ?? zh.trim();
 }
 
-export function foldStationName(zh: string): string {
-  return zh.trim().replace(/[（]/g, '(').replace(/[）]/g, ')').replace(/站$/, '').trim();
-}
 
 function parseAmapSl(sl: string | undefined): { lon: number; lat: number } | undefined {
   if (!sl) return undefined;

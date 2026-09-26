@@ -201,7 +201,9 @@ export function computeNetworkQuality(input: QualityInput): NetworkQualityJson {
     coordCounts[precisionFromCoordSource(typeof src === 'string' ? src : undefined, hasLocation)]++;
     const zh = s.names?.zh;
     const en = s.names?.en;
-    if (zh && en) nameCounts.official++;
+    const enRomanised =
+      typeof en === 'string' && /[A-Za-z]/.test(en) && !/[一-鿿]/.test(en);
+    if (zh && enRomanised) nameCounts.official++;
     else if (zh || en) nameCounts.derived++;
     else nameCounts.default++;
   }

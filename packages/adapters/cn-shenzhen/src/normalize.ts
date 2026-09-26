@@ -1,13 +1,19 @@
 import {
+  asciiSlug,
   coerceStationStatus,
   deriveLineEnglishName,
+  foldStationName,
   hasValidTimes,
+  hexToCss,
+  parsePixel,
+  parseSlCoord,
+  readableSlug,
+  resolveLineShortName,
+  stationIdFor,
   type LineEncoded,
   type LineMode,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
-  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -43,27 +49,8 @@ export interface ShenzhenCanonical {
   stationIdByCode: Map<string, string>;
 }
 
-function asciiSlug(s: string): string {
-  const out = s
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-  if (out) return out;
-  return [...Buffer.from(s, 'utf-8')].map((b) => b.toString(16)).join('');
-}
 
-function stationIdFor(en: string | undefined, zh: string, pinyin?: string): string {
-  if (en && /^[A-Za-z]/.test(en.trim())) return readableSlug(en) || asciiSlug(en);
-  if (pinyin && /[A-Za-z]/.test(pinyin)) return asciiSlug(pinyin);
-  return asciiSlug(zh);
-}
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^#/, '').trim();
-  if (m.length !== 6) return undefined;
-  return `#${m.toLowerCase()}`;
-}
 
 /** Prefer a human short badge; collapse Shenzhen Line 6 branch variants. */
 function officialShortName(ln: string, kn: string): string {
@@ -99,9 +86,6 @@ function lineMode(_ln: string): LineMode {
   return 'metro';
 }
 
-function foldStationName(zh: string): string {
-  return zh.replace(/站$/, '').trim() || zh.trim();
-}
 
 /** Official map `sl` reused by many stations is a placeholder, not a real coord. */
 function collectPlaceholderSl(mapLines: ShMapLine[]): Set<string> {
@@ -128,21 +112,7 @@ function collectPlaceholderSl(mapLines: ShMapLine[]): Set<string> {
   return bad;
 }
 
-function parseSlCoord(sl: string | undefined): { lon: number; lat: number } | undefined {
-  if (!sl) return undefined;
-  const [lonRaw, latRaw] = sl.split(',');
-  const lon = Number(lonRaw);
-  const lat = Number(latRaw);
-  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return undefined;
-  return { lon, lat };
-}
 
-function parsePixel(p: string | undefined): { x: number; y: number } | undefined {
-  if (!p) return undefined;
-  const m = /^(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)$/.exec(p.trim());
-  if (!m) return undefined;
-  return { x: Number(m[1]), y: Number(m[2]) };
-}
 
 function mapLineGeometry(line: ShMapLine): { x: number; y: number }[] {
   const raw = line.c;

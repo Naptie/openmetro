@@ -1,12 +1,20 @@
 import {
   applyTimetableServiceStatus,
+  asciiSlug,
+  cleanTime,
   deriveLineEnglishName,
+  foldStationName,
   hasValidTimes,
+  hexToCss,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  readableSlug,
+  resolveLineShortName,
+  stationIdFor,
   type LineEncoded,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
-  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -82,24 +90,7 @@ export interface WuhanCanonical {
   stopName: Map<string, string>;
 }
 
-function asciiSlug(s: string): string {
-  return (
-    s
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '') || readableSlug(s)
-  );
-}
 
-function pinyinToEnglish(sp: string | undefined): string | undefined {
-  const t = (sp ?? '').trim();
-  if (!t || !/^[A-Za-z]/.test(t)) return undefined;
-  return t
-    .split(/\s+/)
-    .map((w) => (w ? w[0]!.toUpperCase() + w.slice(1).toLowerCase() : w))
-    .join(' ')
-    .replace(/\s+,/g, ',');
-}
 
 function resolveEnglishName(
   amapEn: string | undefined,
@@ -111,51 +102,11 @@ function resolveEnglishName(
   return pinyinToEnglish(pinyin) ?? zh.trim();
 }
 
-function stationIdFor(en: string | undefined, zh: string): string {
-  const label = (en ?? '').trim();
-  if (label && /[A-Za-z]/.test(label)) {
-    const slug = label
-      .toLowerCase()
-      .replace(/&/g, 'and')
-      .replace(/[''`']/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-    if (slug) return slug;
-    return readableSlug(label);
-  }
-  return readableSlug(zh);
-}
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^#/, '').trim();
-  if (m.length !== 6 && m.length !== 3) return undefined;
-  return `#${m.toLowerCase()}`;
-}
 
 /** Official/AMap names may differ by a trailing 站 or full-width parens. */
-export function foldStationName(zh: string): string {
-  return zh.trim().replace(/[（]/g, '(').replace(/[）]/g, ')').replace(/站$/, '').trim();
-}
 
-function parseSlCoord(sl: string | undefined): { lon: number; lat: number } | undefined {
-  if (!sl) return undefined;
-  const [lonRaw, latRaw] = sl.split(',');
-  const lon = Number(lonRaw);
-  const lat = Number(latRaw);
-  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return undefined;
-  // Reject obvious copy-paste corruption (e.g. interchange rows stamped with
-  // another station's coordinate). Wuhan bbox, loose.
-  if (lon < 113.5 || lon > 115.2 || lat < 29.8 || lat > 31.5) return undefined;
-  return { lon, lat };
-}
 
-function parsePixel(p: string | undefined): { x: number; y: number } | undefined {
-  if (!p) return undefined;
-  const m = /^(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)$/.exec(p.trim());
-  if (!m) return undefined;
-  return { x: Number(m[1]), y: Number(m[2]) };
-}
 
 function lineIdFromShort(short: string): string {
   return `${NETWORK_ID}-line-${readableSlug(short) || asciiSlug(short)}`;
@@ -169,19 +120,6 @@ function stopSlug(stopId: string): string {
   return stopId.replace(/^cn-wuhan-/, '');
 }
 
-function cleanTime(raw: string | undefined): string | undefined {
-  if (!raw) return undefined;
-  let t = raw.trim().replace(/[：]/g, ':').replace(/\s+/g, '');
-  if (!t) return undefined;
-  if (t.includes('终点站') || t.includes('——') || t === '-' || t === '--') return undefined;
-  // "6:00-23:00" style sometimes leaks — take first HH:MM if pure time fails.
-  if (!/^\d{1,2}:\d{2}$/.test(t)) {
-    const m = /(\d{1,2}):(\d{2})/.exec(t);
-    if (!m) return undefined;
-    t = `${m[1]}:${m[2]}`;
-  }
-  return t;
-}
 
 function decodeEntities(s: string): string {
   return s

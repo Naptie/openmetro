@@ -1,4 +1,5 @@
 import { existsSync } from 'node:fs';
+import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -35,19 +36,6 @@ export interface WuhanNormalizeOptions {
   skipPlannerTimes?: boolean;
 }
 
-function rootOfDefault(): string {
-  if (process.env.OPENMETRO_ROOT) return process.env.OPENMETRO_ROOT;
-  let dir = dirname(fileURLToPath(import.meta.url));
-  for (let i = 0; i < 6; i++) {
-    if (existsSync(join(dir, 'packages', 'adapters')) && existsSync(join(dir, 'package.json'))) {
-      return dir;
-    }
-    const parent = dirname(dir);
-    if (parent === dir) break;
-    dir = parent;
-  }
-  return resolve(process.cwd());
-}
 
 /** Adjacent station pairs on each line, for official planner times. */
 function collectAdjacentPairs(input: {
@@ -80,7 +68,7 @@ function collectAdjacentPairs(input: {
 }
 
 export async function runWuhanNormalize(opts: WuhanNormalizeOptions = {}): Promise<void> {
-  const root = opts.root ?? rootOfDefault();
+  const root = opts.root ?? findRepoRoot();
   const outDir = join(root, 'data/cn-wuhan');
 
   const sources = await fetchWuhanSources();

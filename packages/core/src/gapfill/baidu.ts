@@ -90,16 +90,8 @@ export function loadBaiduGapfillConfig(
   };
 }
 
-/** GCJ-02 → BD-09 (Baidu). Station coords in canonical data are GCJ-02. */
-export function gcj02ToBd09(lat: number, lng: number): BaiduLatLng {
-  const xPi = (Math.PI * 3000.0) / 180.0;
-  const z = Math.sqrt(lng * lng + lat * lat) + 0.00002 * Math.sin(lat * xPi);
-  const theta = Math.atan2(lat, lng) + 0.000003 * Math.cos(lng * xPi);
-  return {
-    lng: z * Math.cos(theta) + 0.0065,
-    lat: z * Math.sin(theta) + 0.006
-  };
-}
+/** GCJ-02 → BD-09. Single source of truth lives in `geocode/coords.ts`. */
+export { gcj02ToBd09 } from '../geocode/coords.js';
 
 function encodeLatLng(p: BaiduLatLng): string {
   return `${p.lat.toFixed(6)},${p.lng.toFixed(6)}`;

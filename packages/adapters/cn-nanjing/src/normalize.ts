@@ -1,10 +1,19 @@
 import {
+  isUsableEnglish,
+  titleCaseRoman,
+  asciiSlug,
   deriveLineEnglishName,
+  foldStationName,
   hasValidTimes,
+  hexToCss,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  readableSlug,
+  stationIdFor,
   type LineEncoded,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -51,75 +60,25 @@ export interface NanjingCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-function asciiSlug(s: string): string {
-  return (
-    s
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '') || readableSlug(s)
-  );
-}
 
-function pinyinToEnglish(sp: string | undefined): string | undefined {
-  const t = (sp ?? '').trim();
-  if (!t || !/^[A-Za-z]/.test(t)) return undefined;
-  return t
-    .split(/\s+/)
-    .map((w) => (w ? w[0]!.toUpperCase() + w.slice(1).toLowerCase() : w))
-    .join(' ');
-}
 
 function resolveEnglishName(
   amapEn: string | undefined,
   pinyin: string | undefined,
   zh: string
-): string {
+): string | undefined {
   const en = (amapEn ?? '').trim();
-  if (en && /^[A-Za-z]/.test(en)) return en;
-  return pinyinToEnglish(pinyin) ?? zh.trim();
+  if (isUsableEnglish(en)) return en;
+  const fromPinyin = pinyinToEnglish(pinyin);
+  if (fromPinyin) return fromPinyin;
+  // Wikidata fillMissingEnglish in run.ts supplies the rest — never invent names.
+  return undefined;
 }
 
-function stationIdFor(en: string | undefined, zh: string): string {
-  const label = (en ?? '').trim();
-  if (label && /[A-Za-z]/.test(label)) {
-    const slug = label
-      .toLowerCase()
-      .replace(/&/g, 'and')
-      .replace(/[''`']/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-    if (slug) return slug;
-    return readableSlug(label);
-  }
-  return readableSlug(zh);
-}
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^#/, '').trim();
-  if (m.length !== 6) return undefined;
-  return `#${m.toLowerCase()}`;
-}
 
-export function foldStationName(zh: string): string {
-  return zh.trim().replace(/（/g, '(').replace(/）/g, ')').replace(/站$/, '').trim();
-}
 
-function parseSlCoord(sl: string | undefined): { lon: number; lat: number } | undefined {
-  if (!sl) return undefined;
-  const [lonRaw, latRaw] = sl.split(',');
-  const lon = Number(lonRaw);
-  const lat = Number(latRaw);
-  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return undefined;
-  return { lon, lat };
-}
 
-function parsePixel(p: string | undefined): { x: number; y: number } | undefined {
-  if (!p) return undefined;
-  const m = /^(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)$/.exec(p.trim());
-  if (!m) return undefined;
-  return { x: Number(m[1]), y: Number(m[2]) };
-}
 
 function lineIdOf(short: string): string {
   return `${NETWORK_ID}-line-${readableSlug(short) || asciiSlug(short)}`;
@@ -219,14 +178,27 @@ export function normalizeNanjing(
   };
   const physByFold = new Map<string, Phys>();
 
+
+/** AMap often publishes composite names (中山陵音乐台·孝陵卫); official is a part. */
+function findAmapByContainment(
+  byFold: Map<string, AmapStation>,
+  key: string
+): AmapStation | undefined {
+  if (!key) return undefined;
+  for (const [k, st] of byFold) {
+    if (k.includes(key) || key.includes(k)) return st;
+  }
+  return undefined;
+}
+
   const ensurePhys = (zhRaw: string): Phys => {
     const zh = zhRaw.trim();
     const key = foldStationName(zh);
     let phys = physByFold.get(key);
     if (!phys) {
-      const amap = amapStationByName.get(key);
+      const amap = amapStationByName.get(key) ?? findAmapByContainment(amapStationByName, key);
       const pinyin = String(amap?.sp ?? '').trim() || undefined;
-      const en = resolveEnglishName(String(amap?.en ?? ''), pinyin, zh);
+      const en = resolveEnglishName(String(amap?.en ?? ''), pinyin, zh) ?? '';
       phys = {
         id: `${NETWORK_ID}-${stationIdFor(en, zh)}`,
         zh,

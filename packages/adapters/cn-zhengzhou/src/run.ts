@@ -1,4 +1,5 @@
 import { existsSync } from 'node:fs';
+import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -32,22 +33,9 @@ export interface ZhengzhouNormalizeOptions {
   skipSegmentTimes?: boolean;
 }
 
-function rootOfDefault(): string {
-  if (process.env.OPENMETRO_ROOT) return process.env.OPENMETRO_ROOT;
-  let dir = dirname(fileURLToPath(import.meta.url));
-  for (let i = 0; i < 6; i++) {
-    if (existsSync(join(dir, 'packages', 'adapters')) && existsSync(join(dir, 'package.json'))) {
-      return dir;
-    }
-    const parent = dirname(dir);
-    if (parent === dir) break;
-    dir = parent;
-  }
-  return resolve(process.cwd());
-}
 
 export async function runZhengzhouNormalize(opts: ZhengzhouNormalizeOptions = {}): Promise<void> {
-  const root = opts.root ?? rootOfDefault();
+  const root = opts.root ?? findRepoRoot();
   const outDir = join(root, 'data/cn-zhengzhou');
 
   const sources = await fetchZhengzhouSources();

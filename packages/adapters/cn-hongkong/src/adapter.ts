@@ -1,12 +1,9 @@
 import type { AdapterManifest, SyncCtx, SyncLayer } from '@openmetro/core';
+import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
 import { fetchMtrSources } from './fetch.js';
 import { normalizeHongKong } from './normalize.js';
 import { runHongKongNormalize } from './run.js';
 
-function rootOf(dataDir: string): string {
-  const m = dataDir.match(/^(.*?)[/\\]data[/\\]cn-hongkong$/);
-  return m?.[1] || process.env.OPENMETRO_ROOT || process.cwd();
-}
 
 export const adapter: AdapterManifest = {
   networkId: 'cn-hongkong',
@@ -22,7 +19,7 @@ export const adapter: AdapterManifest = {
   },
   async sync(layers: SyncLayer[], ctx: SyncCtx): Promise<void> {
     if (layers.length === 0) return;
-    const root = rootOf(ctx.dataDir);
+    const root = repoRootForDataDir(ctx.dataDir, 'cn-hongkong');
 
     if (layers.some((l) => l === 'topology' || l === 'timetables' || l === 'enrichment')) {
       await runHongKongNormalize({ root });

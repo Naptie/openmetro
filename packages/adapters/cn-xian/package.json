@@ -1,0 +1,30 @@
+{
+  "name": "@openmetro/adapter-cn-xian",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "openmetro": {
+    "networkId": "cn-xian",
+    "entry": "./src/adapter.ts",
+    "displayName": {
+      "zh": "西安",
+      "en": "Xi'an"
+    }
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun --external @openmetro/core",
+    "normalize": "bun run src/run.ts"
+  },
+  "dependencies": {
+    "effect": "^3.22.0",
+    "@openmetro/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.6.0"
+  }
+}

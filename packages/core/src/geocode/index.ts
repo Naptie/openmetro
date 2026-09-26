@@ -26,6 +26,7 @@ import {
 import type { KnownLocation } from './transform.js';
 
 export { CITY_BBOX, cityBbox, isWithinCityBbox } from './city-bbox.js';
+export { bd09ToGcj02 as bd09ToGcj02LatLng, gcj02ToBd09, type LatLng } from './coords.js';
 export {
   haversineKm,
   isCoarseCoordinate,

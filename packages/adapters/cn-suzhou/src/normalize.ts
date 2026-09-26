@@ -1,13 +1,16 @@
 import {
+  asciiSlug,
   coerceStationStatus,
   deriveLineEnglishName,
   hasValidTimes,
+  hexToCss,
+  readableSlug,
+  resolveLineShortName,
+  stationIdFor,
   type LineEncoded,
   type LineStatus,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
-  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -254,25 +257,8 @@ function slug(s: string): string {
   return readableSlug(s) || asciiSlug(s);
 }
 
-function asciiSlug(s: string): string {
-  const out = s
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-  if (out) return out;
-  return [...Buffer.from(s, 'utf-8')].map((b) => b.toString(16)).join('');
-}
 
-function stationIdFor(en: string | undefined, zh: string): string {
-  return en ? slug(en) : asciiSlug(zh);
-}
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^#/, '');
-  if (m.length !== 6) return undefined;
-  return `#${m.toLowerCase()}`;
-}
 
 function firstTime(value: string | undefined): string[] | undefined {
   if (!value) return undefined;

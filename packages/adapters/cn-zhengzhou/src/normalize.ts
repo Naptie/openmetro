@@ -1,10 +1,18 @@
 import {
+  asciiSlug,
+  cleanTime,
   deriveLineEnglishName,
+  foldStationName,
+  hexToCss,
+  parsePixel,
+  parseSlCoord,
+  pinyinToEnglish,
+  readableSlug,
+  resolveLineShortName,
+  stationIdFor,
   type LineEncoded,
   type NetworkEncoded,
   type PatternEncoded,
-  readableSlug,
-  resolveLineShortName,
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
@@ -60,57 +68,15 @@ export interface ZhengzhouCanonical {
   officialLocations: Map<string, { lon: number; lat: number; crs: 'gcj02' }>;
 }
 
-function hexToCss(hex: string | undefined): string | undefined {
-  if (!hex) return undefined;
-  const m = hex.replace(/^#/, '').trim();
-  if (m.length !== 6) return undefined;
-  return `#${m.toLowerCase()}`;
-}
 
-function parseSlCoord(sl: string | undefined): { lon: number; lat: number } | undefined {
-  if (!sl) return undefined;
-  const [lonRaw, latRaw] = sl.split(',');
-  const lon = Number(lonRaw);
-  const lat = Number(latRaw);
-  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return undefined;
-  return { lon, lat };
-}
 
-function parsePixel(p: string | undefined): { x: number; y: number } | undefined {
-  if (!p) return undefined;
-  const m = /^(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)$/.exec(p.trim());
-  if (!m) return undefined;
-  return { x: Number(m[1]), y: Number(m[2]) };
-}
 
 /** Official/AMap names may differ by hospital co-names, parentheticals, or 站. */
-export function foldStationName(zh: string): string {
-  return (
-    zh
-      .trim()
-      .replace(/[（]/g, '(')
-      .replace(/[）]/g, ')')
-      // AMap appends co-named facilities: 五一公园·市中医院 → 五一公园
-      .split('·')[0]!
-      .replace(/\([^)]*\)/g, '')
-      .replace(/站$/, '')
-      .trim()
-  );
-}
 
 /**
  * AMap `sp` is CamelCase pinyin. Title-case it so station English names / ids
  * stay human-readable when `en` / `multilang.n.en` is blank or ALL-CAPS.
  */
-function pinyinToEnglish(sp: string | undefined): string | undefined {
-  const t = (sp ?? '').trim();
-  if (!t || !/^[A-Za-z]/.test(t)) return undefined;
-  return t
-    .split(/\s+/)
-    .map((w) => (w ? w[0]!.toUpperCase() + w.slice(1).toLowerCase() : w))
-    .join(' ')
-    .replace(/\s+,/g, ',');
-}
 
 function titleCaseEn(en: string | undefined): string | undefined {
   const t = (en ?? '').trim();
@@ -252,20 +218,6 @@ function resolveEnglishName(amap: AmapStation | undefined, zh: string): string {
   return extractStationNames(amap, zh).en;
 }
 
-function stationIdFor(en: string | undefined, zh: string): string {
-  const label = (en ?? '').trim();
-  if (label && /[A-Za-z]/.test(label)) {
-    const slug = label
-      .toLowerCase()
-      .replace(/&/g, 'and')
-      .replace(/[''`']/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-    if (slug) return slug;
-    return readableSlug(label);
-  }
-  return readableSlug(zh);
-}
 
 function lineIdOf(cfg: ZzLineConfig): string {
   return `${NETWORK_ID}-line-${cfg.slug}`;
@@ -275,31 +227,8 @@ function stopIdOf(stationId: string, short: string): string {
   return `${stationId}-${short}`;
 }
 
-function asciiSlug(s: string): string {
-  return (
-    s
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '') || readableSlug(s)
-  );
-}
 
 /** Official feed uses `——` / `--` / `—` for non-stopping or terminal rows. */
-function cleanTime(raw: string | undefined): string | undefined {
-  if (!raw) return undefined;
-  const t = raw.trim().replace(/：/g, ':').replace(/\s+/g, '');
-  if (!t) return undefined;
-  if (/^[-–—－]+$/.test(t)) return undefined;
-  // Some cells carry `0:00` placeholders for unpublished short-turns.
-  if (t === '0:00' || t === '00:00') return undefined;
-  // Accept `H:MM` / `HH:MM` / `HH:MM:SS`.
-  const m = /^(\d{1,2}):(\d{2})(?::\d{2})?$/.exec(t);
-  if (!m) return undefined;
-  const h = Number(m[1]);
-  const mm = Number(m[2]);
-  if (h > 25 || mm > 59) return undefined;
-  return `${String(h).padStart(2, '0')}:${String(mm).padStart(2, '0')}`;
-}
 
 function amapLineByName(amap: AmapSubwayDoc): Map<string, AmapLine> {
   const byName = new Map<string, AmapLine>();

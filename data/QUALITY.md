@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-09-25T21:00:09.368Z_
+_Updated 2026-09-26T09:44:13.425Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -159,6 +159,20 @@ _Updated 2026-09-25T21:00:09.368Z_
 | Timetables | ✅ Complete | official | 100% | official=612 |
 | Schematic | ✅ Complete | official | 100% | official=335 |
 | Fares | ✅ Complete | official | 100% | official=83232 |
+
+## 西安地铁 / Xi'an Metro (`cn-xian`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=247, derived=1 |
+| Names | ✅ Complete | official | 100% | official=248 |
+| Segment times | ✅ Complete | official | 100% | official=274, derived=1 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=275 |
+| Transfer times | ✅ Complete | official | 100% | official=82 |
+| Timetables | ✅ Complete | official | 100% | official=553 |
+| Schematic | 🟡 Partial | official | 99% | official=283, default=4 |
+| Fares | ✅ Complete | official | 100% | official=61256 |
 
 ## 郑州地铁 / Zhengzhou Metro (`cn-zhengzhou`)
 

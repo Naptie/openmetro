@@ -1,4 +1,5 @@
 import { existsSync } from 'node:fs';
+import { findRepoRoot, networkDataDir, repoRootForDataDir } from '@openmetro/core';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -6,6 +7,7 @@ import {
   deriveSegmentTimes,
   deriveTransfers,
   enrichLineNamesFromWikidata,
+  fillStationEnglishNames,
   estimateTimesFromDistanceSpeed,
   fillCoordinates,
   fillMissingSegmentTimes,
@@ -29,24 +31,9 @@ export interface HangzhouNormalizeOptions {
   skipFares?: boolean;
 }
 
-function rootOfDefault(): string {
-  if (process.env.OPENMETRO_ROOT) return process.env.OPENMETRO_ROOT;
-  // Walk up from this package so `bun run normalize` from packages/adapters/*
-  // still writes to the monorepo `data/` tree, not a nested package folder.
-  let dir = dirname(fileURLToPath(import.meta.url));
-  for (let i = 0; i < 6; i++) {
-    if (existsSync(join(dir, 'packages', 'adapters')) && existsSync(join(dir, 'package.json'))) {
-      return dir;
-    }
-    const parent = dirname(dir);
-    if (parent === dir) break;
-    dir = parent;
-  }
-  return resolve(process.cwd());
-}
 
 export async function runHangzhouNormalize(opts: HangzhouNormalizeOptions = {}): Promise<void> {
-  const root = opts.root ?? rootOfDefault();
+  const root = opts.root ?? findRepoRoot();
   const outDir = join(root, 'data/cn-hangzhou');
 
   const sources = await fetchHangzhouSources();
@@ -56,11 +43,15 @@ export async function runHangzhouNormalize(opts: HangzhouNormalizeOptions = {}):
     getEnglishLookupLabel: (line: LineEncoded) => line.names.en || line.name
   });
 
+  const enFill = await fillStationEnglishNames(canonical.stations);
+  const stationsWithEn = enFill.stations;
+  console.log(`  wikidata station names: ${enFill.filled}/${enFill.requested} filled`);
+
   let officialMatched = 0;
   let subwayMatched = 0;
   let overpassMatched = 0;
   let geocoded = 0;
-  let stations = canonical.stations;
+  let stations = stationsWithEn;
   if (!opts.skipGeocode) {
     stations = await fillCoordinates(canonical.stations, {
       city: '杭州',

@@ -7,6 +7,7 @@
  * rest of the dataset. No API key is required.
  */
 import type { GeoResult } from './index.js';
+import { bd09ToGcj02 as bd09ToGcj02Lat } from './coords.js';
 
 const OVERPASS_URL = process.env.OVERPASS_URL ?? 'https://overpass-api.de/api/interpreter';
 const USER_AGENT = 'openmetro/0.1 (data enrichment)';
@@ -90,21 +91,17 @@ export function wgs84ToGcj02(lon: number, lat: number): GeoResult {
   return { lon: lon + dLon, lat: lat + dLat, crs: 'gcj02' };
 }
 
-/** BD-09 (Baidu) extra twist over GCJ-02, in radians. */
-const BD_X_PI = (PI * 3000.0) / 180.0;
-
 /**
  * Convert a BD-09 (Baidu) coordinate to GCJ-02.
  *
  * Some official operator feeds publish Baidu coordinates under a plain
  * `longitude`/`latitude` pair; those must not be treated as GCJ-02.
+ * Signature is `(lon, lat)` → `GeoResult` for historical call sites.
+ * Math lives in `coords.ts`.
  */
 export function bd09ToGcj02(lon: number, lat: number): GeoResult {
-  const x = lon - 0.0065;
-  const y = lat - 0.006;
-  const z = Math.sqrt(x * x + y * y) - 0.00002 * Math.sin(y * BD_X_PI);
-  const theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * BD_X_PI);
-  return { lon: z * Math.cos(theta), lat: z * Math.sin(theta), crs: 'gcj02' };
+  const p = bd09ToGcj02Lat(lat, lon);
+  return { lon: p.lng, lat: p.lat, crs: 'gcj02' };
 }
 
 /** Bounding box of `radiusKm` around a point. */
