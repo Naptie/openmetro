@@ -526,10 +526,53 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
         (a, b) => b.p.stop_ids.length - a.p.stop_ids.length
       )[0];
       const trunk = new Set(winner.p.stop_ids);
+      const dropIds = new Set<string>();
       for (const { p, i } of linePatternIdx) {
         const isPrimary = p.id === winner.p.id;
         const junction = isPrimary ? undefined : findJunctionStopId(p.stop_ids, trunk);
-        patterns[i] = { ...p, is_primary: isPrimary, junction_stop_id: junction };
+        // Trim branch to unique+junction so the shared trunk stays exclusive
+        // to the primary (verify: only the junction may be shared).
+        let stopIds = p.stop_ids;
+        if (!isPrimary && junction) {
+          const jIdx = p.stop_ids.indexOf(junction);
+          const lastUnique = p.stop_ids.reduce(
+            (acc, id, idx) => (trunk.has(id) ? acc : idx),
+            -1
+          );
+          if (lastUnique < 0) {
+            dropIds.add(p.id);
+            continue;
+          }
+          if (jIdx >= 0) {
+            const lo = Math.min(lastUnique, jIdx);
+            const hi = Math.max(lastUnique, jIdx);
+            stopIds = p.stop_ids.slice(lo, hi + 1);
+            if (stopIds.length < 2) {
+              dropIds.add(p.id);
+              continue;
+            }
+          }
+        }
+        patterns[i] = {
+          ...p,
+          stop_ids: stopIds,
+          origin_stop_id: stopIds[0]!,
+          terminal_stop_id: stopIds[stopIds.length - 1]!,
+          is_primary: isPrimary,
+          junction_stop_id: junction
+        };
+        const bi = patternBuilds.findIndex((b) => b.patternId === p.id);
+        if (bi >= 0) patternBuilds[bi] = { ...patternBuilds[bi]!, stopIds: [...stopIds] };
+      }
+      if (dropIds.size > 0) {
+        for (let i = patterns.length - 1; i >= 0; i--) {
+          if (dropIds.has(patterns[i]!.id)) {
+            const pid = patterns[i]!.id;
+            patterns.splice(i, 1);
+            const bi = patternBuilds.findIndex((b) => b.patternId === pid);
+            if (bi >= 0) patternBuilds.splice(bi, 1);
+          }
+        }
       }
     }
 
