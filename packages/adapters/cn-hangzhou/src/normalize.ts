@@ -534,23 +534,11 @@ export function normalizeHangzhou(input: HangzhouSources): HangzhouCanonical {
         // to the primary (verify: only the junction may be shared).
         let stopIds = p.stop_ids;
         if (!isPrimary && junction) {
-          const jIdx = p.stop_ids.indexOf(junction);
-          const lastUnique = p.stop_ids.reduce(
-            (acc, id, idx) => (trunk.has(id) ? acc : idx),
-            -1
-          );
-          if (lastUnique < 0) {
+          // Keep every unique stop plus the junction; drop the shared trunk.
+          stopIds = p.stop_ids.filter((id) => !trunk.has(id) || id === junction);
+          if (stopIds.length < 2) {
             dropIds.add(p.id);
             continue;
-          }
-          if (jIdx >= 0) {
-            const lo = Math.min(lastUnique, jIdx);
-            const hi = Math.max(lastUnique, jIdx);
-            stopIds = p.stop_ids.slice(lo, hi + 1);
-            if (stopIds.length < 2) {
-              dropIds.add(p.id);
-              continue;
-            }
           }
         }
         patterns[i] = {
