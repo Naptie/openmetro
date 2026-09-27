@@ -200,7 +200,7 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
             },
             servers: [
               {
-                url: 'https://openmetro.phi.zone',
+                url: 'https://openmetro.dev',
                 description: 'Production'
               },
               {

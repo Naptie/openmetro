@@ -407,7 +407,7 @@ compared against a release.
 
 Live:
 
-- Site + API — <https://openmetro.phi.zone> (OpenAPI at `/swagger`)
+- Site + API — <https://openmetro.dev> (OpenAPI at `/swagger`)
 
 Frontend (`packages/web`, SvelteKit static) and API (`api/index.ts` →
 `createApiApp`) ship in **one Vercel project**, same origin. Canonical JSON is
