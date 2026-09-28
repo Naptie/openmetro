@@ -11,8 +11,11 @@ import {
   fillStraightLineDistances,
   findRepoRoot,
   type LineEncoded,
+  type PatternEncoded,
   type StationEncoded,
+  type StopEncoded,
   syncFares,
+  type TimetableEncoded,
   type TransformStations,
   writeCanonical
 } from '@openmetro/core';
@@ -33,6 +36,97 @@ export interface ShenzhenNormalizeOptions {
   skipEnTimetables?: boolean;
   /** Official station-detail API (`POST /zdxx`) is the primary timetable source. */
   skipZdxxTimetables?: boolean;
+}
+
+
+/**
+ * Interchange arms whose /zdxx payload is empty (e.g. 国展 1230) still need
+ * first/last on that line. Derive from the nearest neighbor on the same
+ * pattern that published times, preserving the direction dest.
+ */
+function fillMissingTimetablesFromNeighbors(
+  timetables: TimetableEncoded[],
+  patterns: PatternEncoded[],
+  stops: StopEncoded[],
+  stations: StationEncoded[],
+  lineStatus: Map<string, string>
+): TimetableEncoded[] {
+  const stopById = new Map(stops.map((s) => [s.id, s]));
+  const stationById = new Map(stations.map((s) => [s.id, s]));
+  const valid = new Set(
+    timetables
+      .filter(
+        (t) =>
+          t.first_train.some((x) => Boolean(x)) && t.last_train.some((x) => Boolean(x))
+      )
+      .map((t) => `${t.station_id}|${t.line_id}`)
+  );
+  const byKey = new Map<string, TimetableEncoded[]>();
+  for (const t of timetables) {
+    const k = `${t.line_id}`;
+    const list = byKey.get(k) ?? [];
+    list.push(t);
+    byKey.set(k, list);
+  }
+  const out = [...timetables];
+  const seen = new Set(out.map((t) => t.id));
+
+  for (const pattern of patterns) {
+    if (lineStatus.get(pattern.line_id) !== 'operating') continue;
+    const lineTt = byKey.get(pattern.line_id) ?? [];
+    if (lineTt.length === 0) continue;
+    const ids = pattern.stop_ids;
+    for (let i = 0; i < ids.length; i++) {
+      const stopId = ids[i]!;
+      const stop = stopById.get(stopId);
+      if (!stop) continue;
+      const station = stationById.get(stop.station_id);
+      if (!station || station.status !== 'operating') continue;
+      const key = `${stop.station_id}|${pattern.line_id}`;
+      if (valid.has(key)) continue;
+
+      // Find nearest stop with times in either direction along the pattern.
+      let donor: TimetableEncoded | undefined;
+      for (const j of [i - 1, i + 1, i - 2, i + 2]) {
+        if (j < 0 || j >= ids.length) continue;
+        const nStop = stopById.get(ids[j]!);
+        if (!nStop) continue;
+        donor = lineTt.find(
+          (t) => t.stop_id === nStop.id && t.first_train.some(Boolean) && t.last_train.some(Boolean)
+        );
+        if (donor) break;
+      }
+      if (!donor) continue;
+
+      for (const dir of ['A', 'B'] as const) {
+        const id = `${pattern.line_id}-${stopId}-derived-${dir}`;
+        if (seen.has(id)) continue;
+        // Dest: pattern terminus opposite the donor when possible.
+        const destStopId =
+          dir === 'A' ? pattern.terminal_stop_id : pattern.origin_stop_id;
+        if (destStopId === stopId) continue;
+        out.push({
+          id,
+          station_id: stop.station_id,
+          stop_id: stopId,
+          line_id: pattern.line_id,
+          destination_stop_id: destStopId,
+          pattern_id: pattern.id,
+          direction_type: 'linear',
+          source_id: 'szmc-zdxx-neighbor-derived',
+          first_train: [...donor.first_train],
+          last_train: [...donor.last_train],
+          extras: {
+            derived_from: donor.id,
+            note: 'first/last derived from adjacent station (empty /zdxx arm)'
+          }
+        });
+        seen.add(id);
+        valid.add(key);
+      }
+    }
+  }
+  return out;
 }
 
 export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}): Promise<void> {
@@ -173,7 +267,14 @@ export async function runShenzhenNormalize(opts: ShenzhenNormalizeOptions = {}):
     console.log(`  zdxx timetables: ${zdxxTt.length} (stations queried: ${codes.length})`);
     if (zdxxTt.length > 0) {
       // Replace EN/planner-derived tables with official per-station detail.
-      canonical.timetables = zdxxTt;
+      const lineStatus = new Map(lines.map((l) => [l.id, l.status]));
+      canonical.timetables = fillMissingTimetablesFromNeighbors(
+        zdxxTt,
+        canonical.patterns,
+        canonical.stops,
+        stations,
+        lineStatus
+      );
     }
   }
 

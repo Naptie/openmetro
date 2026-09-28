@@ -89,8 +89,12 @@ function parseTimeCell(text: string): string | undefined {
 
 /** One service direction at a station: destination + first/last train. */
 export interface TimetableDirection {
-  /** Destination station name (folded zh), e.g. "刘家坪". */
+  /** Destination station name (folded zh), e.g. "刘家坪". Empty for loop full-route. */
   dest: string;
+  /** Ring direction when the label names 内环/外环. */
+  loopDir?: 'loop_inner' | 'loop_outer';
+  /** `short` = 半程 (short-turn toward `dest`); `full` = 全程. */
+  service?: 'full' | 'short';
   first?: string;
   last?: string;
 }
@@ -109,20 +113,85 @@ export function parseTimetableTable(rows: Record<string, unknown>[]): TimetableR
   return parseTimetableSections(rows).sections.flat();
 }
 
-function destFromLabel(raw: string): string | undefined {
-  const t = raw
-    .trim()
-    .replace(/[↑↓↑↓↔→←·]/g, '')
-    .trim();
+/**
+ * Parse a column direction label into dest / loop direction / short-turn.
+ *
+ * Linear: `往江北机场↓` → dest=江北机场.
+ * Loop (环线): `开往沙坪坝→冉家坝→四公里方向（内环）` → loop_inner,
+ * `…（内环半程）` → loop_inner + short-turn dest = last path station.
+ */
+export function parseDirectionLabel(
+  raw: string
+): { dest: string; loopDir?: 'loop_inner' | 'loop_outer'; service?: 'full' | 'short' } | undefined {
+  const t = raw.trim();
   if (!t || /^(首|末|工作|节假|双休|站点|站名|时刻)/.test(t)) return undefined;
+
+  const paren = /[（(]([^)）]+)[)）]/.exec(t);
+  const inner = paren?.[1]?.trim() ?? '';
+  let loopDir: 'loop_inner' | 'loop_outer' | undefined;
+  if (inner.includes('内环') || /(^|[^a-z])内(环)?([^a-z]|$)/.test(inner)) loopDir = 'loop_inner';
+  else if (inner.includes('外环') || /(^|[^a-z])外(环)?([^a-z]|$)/.test(inner)) loopDir = 'loop_outer';
+
+  let service: 'full' | 'short' | undefined;
+  if (inner.includes('半程') || inner.includes('半程车')) service = 'short';
+  else if (inner.includes('全程') || inner.includes('全程车')) service = 'full';
+
+  // Path stations: 开往A→B→C方向 / A-B-C. Last name is the short-turn terminus.
+  let pathDest = '';
+  const go = /开往(.+?)方向/.exec(t) ?? /往(.+)/.exec(t.replace(/[↑↓↔→←·]/g, ''));
+  if (go) {
+    const path = go[1]!.replace(/[（(].*$/, '').trim();
+    const parts = path
+      .split(/[→↔\-–—>/]/)
+      .map((s) => s.trim().replace(/[（(].*$/, ''))
+      .filter(Boolean);
+    if (parts.length > 0) pathDest = foldStationName(parts[parts.length - 1]!);
+  }
+
+  if (loopDir) {
+    return {
+      dest: service === 'short' ? pathDest : '',
+      loopDir,
+      service: service ?? 'full'
+    };
+  }
+
   const m = t.match(/^往(.+)$/);
-  const name = (m ? m[1]! : t).trim();
+  const name = (m ? m[1]! : t).replace(/[↑↓↔→←·]/g, '').trim();
   if (!name) return undefined;
-  return foldStationName(name);
+  return { dest: foldStationName(name) };
+}
+
+function destKeyOf(d: {
+  dest: string;
+  loopDir?: string;
+  service?: string;
+}): string {
+  if (d.loopDir) return `${d.loopDir}:${d.service ?? 'full'}`;
+  return d.dest;
+}
+
+
+/** Resolve a dest label to a stop id; tolerates 江北机场 → 江北机场T2航站楼. */
+function resolveStopIdByFold(
+  map: Map<string, string>,
+  destFold: string
+): string | undefined {
+  if (!destFold) return undefined;
+  const exact = map.get(destFold);
+  if (exact) return exact;
+  for (const [name, id] of map) {
+    if (name.startsWith(destFold) || destFold.startsWith(name)) return id;
+    // e.g. dest 江北机场 vs station 江北机场T2航站楼 (folded).
+    if (name.includes(destFold) && destFold.length >= 2) return id;
+  }
+  return undefined;
 }
 
 interface ColMeta {
   dest?: string;
+  loopDir?: 'loop_inner' | 'loop_outer';
+  service?: 'full' | 'short';
   kind?: 'first' | 'last';
 }
 
@@ -193,9 +262,12 @@ export function parseTimetableSections(rows: Record<string, unknown>[]): Timetab
     for (let c = 2; c <= 40; c++) {
       const cell = parseCell(r[`col${c}`]);
       if (!cell) continue;
-      const dest = destFromLabel(cell.text);
-      if (!dest) continue;
-      metaAt(c).dest = dest;
+      const parsed = parseDirectionLabel(cell.text);
+      if (!parsed) continue;
+      const m = metaAt(c);
+      m.dest = parsed.dest;
+      m.loopDir = parsed.loopDir;
+      m.service = parsed.service;
       found = true;
     }
     return found;
@@ -240,31 +312,49 @@ export function parseTimetableSections(rows: Record<string, unknown>[]): Timetab
     }
 
     // Data row: rebuild per-direction first/last from column metadata.
-    const byDest = new Map<string, TimetableDirection>();
+    // Loop first (neihuan) and last (full/short) share loopDir - one primary
+    // record per ring direction so first+last land together.
+    const byKey = new Map<string, TimetableDirection>();
     for (let c = 2; c <= 40; c++) {
       const raw = parseCell(r[`col${c}`])?.text ?? '';
       const time = parseTimeCell(raw);
       if (!time) continue;
       const meta = colMeta.get(c) ?? {};
-      let dest = meta.dest;
-      if (!dest) {
-        // Fallback block of 4: [firstEnd, firstStart, lastEnd, lastStart].
+      let dest = meta.dest ?? '';
+      const loopDir = meta.loopDir;
+      const service = meta.service;
+      if (!meta.dest && !loopDir) {
         const block = (c - 2) % 4;
         const isEnd = block === 0 || block === 2;
         dest = isEnd ? '\u0000end' : '\u0000start';
       }
-      const dir = byDest.get(dest) ?? { dest };
       const kind: 'first' | 'last' =
         meta.kind ?? ((c - 2) % 4 === 0 || (c - 2) % 4 === 1 ? 'first' : 'last');
+
+      const key = loopDir ?? dest;
+      const dir = byKey.get(key) ?? {
+        dest: loopDir ? '' : dest,
+        loopDir,
+        service: loopDir ? 'full' : undefined
+      };
       if (kind === 'first') {
         if (!dir.first) dir.first = time;
-      } else if (!dir.last) {
+      } else if (!dir.last || (service === 'full' && dir.service === 'short')) {
         dir.last = time;
+        if (loopDir) {
+          if (service === 'short' && dest) {
+            dir.dest = dest;
+            dir.service = 'short';
+          } else {
+            dir.dest = '';
+            dir.service = 'full';
+          }
+        }
       }
-      byDest.set(dest, dir);
+      byKey.set(key, dir);
     }
 
-    const directions = [...byDest.values()].filter((d) => d.first || d.last);
+    const directions = [...byKey.values()].filter((d) => d.first || d.last);
     if (directions.length > 0) {
       current.push({ station: text, directions });
     }
@@ -544,10 +634,25 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
           const stopId = stopIdByFold.get(rowFold);
           if (!stopId) continue;
           for (const dir of row.directions) {
-            const destStopId = stopIdByFold.get(foldStationName(dir.dest));
-            if (!destStopId || destStopId === stopId) continue;
             if (!(dir.first || dir.last)) continue;
-            const id = `${stopId}|${destStopId}`;
+            const destStopId = dir.dest
+              ? resolveStopIdByFold(stopIdByFold, foldStationName(dir.dest))
+              : undefined;
+            if (dir.dest && dir.dest !== '\u0000end' && dir.dest !== '\u0000start') {
+              if (!destStopId || destStopId === stopId) continue;
+            } else if (!cfg.loop) {
+              continue;
+            }
+            const directionType = dir.loopDir
+              ? dir.loopDir
+              : cfg.loop
+                ? sectionPattern.is_primary
+                  ? ('loop_inner' as const)
+                  : ('loop_outer' as const)
+                : ('linear' as const);
+            const id = dir.loopDir
+              ? `${stopId}|${directionType}|${dir.service ?? 'full'}|${destStopId ?? ''}`
+              : `${stopId}|${destStopId}`;
             if (timetables.some((t) => t.id === id)) continue;
             timetables.push({
               id,
@@ -556,11 +661,23 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
               line_id: lineId,
               destination_stop_id: destStopId,
               pattern_id: sectionPattern.id,
-              direction_type: cfg.loop ? 'linear' : 'linear',
-              direction_label: cfg.loop ? (sectionPattern.is_primary ? '内环' : '外环') : undefined,
+              direction_type: directionType,
+              direction_label:
+                dir.loopDir === 'loop_inner'
+                  ? '内环'
+                  : dir.loopDir === 'loop_outer'
+                    ? '外环'
+                    : cfg.loop
+                      ? sectionPattern.is_primary
+                        ? '内环'
+                        : '外环'
+                      : undefined,
               first_train: dir.first ? [dir.first] : [],
               last_train: dir.last ? [dir.last] : [],
-              source_id: CQ_SOURCE
+              source_id: CQ_SOURCE,
+              extras: dir.service === 'short'
+                ? { service: 'short_turn', dest_name: dir.dest }
+                : undefined
             });
           }
         }

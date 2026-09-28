@@ -105,10 +105,21 @@ function needsDistance(s: SegmentRow): boolean {
   return s.distance_km == null || !(s.distance_km > 0);
 }
 
+/**
+ * Replace any non-official transfer walk with a Baidu-planner measurement.
+ * Official tags (interchange / plantrip / mintime / baidu) are kept.
+ * Everything else — baked `*-routing-default`, name-match `auto-xfer/*`,
+ * `searchstartend` path diffs, fixed 5-minute fudges — is upgraded so the
+ * quality report can reach 100% official.
+ */
 function needsWalk(t: TransferRow, defaultWalk: number): boolean {
   if (t.walk_time_seconds == null) return true;
+  const src = t.source_id ?? '';
+  if (src.includes('interchange')) return false;
+  if (src.includes('plantrip') || src.includes('mintime')) return false;
+  if (src.includes('baidu')) return false;
   if (t.walk_time_seconds === defaultWalk) return true;
-  return /default/i.test(t.source_id ?? '');
+  return true;
 }
 
 function pairKey(a: string, b: string): string {

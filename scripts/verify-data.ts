@@ -11,8 +11,8 @@
  *        - every segment has a positive travel time
  *        - linear timetables name a destination; loops use direction_type
  *        - fares cover every operating station; matrix is square
- *        - lines that publish any timetable cover every operating stop
- *          (tram-only networks/lines with zero published times are exempt)
+ *        - every operating station has valid first/last trains on every
+ *          operating line it serves (tram/other/suburban_rail exempt)
  *        - every line carries a non-empty `short_name` unless waived per network
  *
  * The manifest is content-addressed: `aggregate` is the sha256 of the sorted
@@ -26,6 +26,7 @@ import { dirname, join, resolve } from 'node:path';
 import { Effect } from 'effect';
 import {
   evaluateStationSpeed,
+  hasValidTimes,
   haversineKm,
   loadNetwork,
   type NetworkData
@@ -57,6 +58,12 @@ const CANONICAL_FILES = [
  * one fails here.
  */
 const SHORT_NAME_WAIVERS: Partial<Record<string, ReadonlySet<string>>> = {};
+
+/**
+ * Operating `station|line` pairs that still lack published first/last trains.
+ * Pre-existing source/adapter gaps (baseline for burn-down). New pairs fail.
+ */
+const TIMETABLE_COVERAGE_WAIVERS: ReadonlySet<string> = new Set([]);
 
 function sha256(data: string | Uint8Array): string {
   return createHash('sha256').update(data).digest('hex');
@@ -693,13 +700,16 @@ function verifyReferences(network: string, d: NetworkData): void {
     }
   }
 
-  // Coverage: on a line that publishes any timetable, every operating station
-  // must have a timetable record for that line. Stations with zero timetables
-  // on publishing lines are demoted to out_of_service by the adapters.
-  // Interchange exception: if the station publishes times on a *different*
-  // line, a missing record on this line is tolerated (source gap on one arm).
-  const ttByStationLine = new Set(d.timetables.map((t) => `${t.station_id}|${t.line_id}`));
-  const stationsWithAnyTt = new Set(d.timetables.map((t) => t.station_id));
+  // Coverage: every operating station must publish valid first/last trains on
+  // every operating line it serves. A whole line with zero timetables is a
+  // parse/source gap (e.g. Wuhan L4 once dropped every row), not an exemption.
+  // Modes whose operators publish no timetable sheets stay exempt.
+  const TIMETABLE_EXEMPT_MODES = new Set(['tram', 'other', 'suburban_rail']);
+  const validTtByStationLine = new Set<string>();
+  for (const t of d.timetables) {
+    if (!hasValidTimes(t)) continue;
+    validTtByStationLine.add(`${t.station_id}|${t.line_id}`);
+  }
   const stopsByLine = new Map<string, number>();
   for (const stop of d.stops) {
     stopsByLine.set(stop.line_id, (stopsByLine.get(stop.line_id) ?? 0) + 1);
@@ -707,17 +717,16 @@ function verifyReferences(network: string, d: NetworkData): void {
   for (const line of d.lines) {
     if (line.status !== 'operating') continue;
     if ((stopsByLine.get(line.id) ?? 0) === 0) continue;
-    const published = ttByLine.get(line.id);
-    if (!published || published.size === 0) continue;
+    if (TIMETABLE_EXEMPT_MODES.has(line.mode)) continue;
     for (const stop of d.stops) {
       if (stop.line_id !== line.id) continue;
       const station = stationById.get(stop.station_id);
       if (station?.status !== 'operating') continue;
-      if (ttByStationLine.has(`${station.id}|${line.id}`)) continue;
-      assert(
-        stationsWithAnyTt.has(station.id),
+      if (validTtByStationLine.has(`${station.id}|${line.id}`)) continue;
+      if (TIMETABLE_COVERAGE_WAIVERS.has(`${station.id}|${line.id}`)) continue;
+      fail(
         network,
-        `line ${line.id} publishes timetables but operating station ${station.id} has none`
+        `operating station ${station.id} (${station.name ?? ''}) lacks first/last trains on line ${line.id}`
       );
     }
   }

@@ -2,19 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chongqing",
-  "generated_at": "2026-09-24T19:25:36.228Z",
-  "source": [
-    {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-09-24T19:25:36.228Z",
-      "license": "custom",
-      "license_url": null,
-      "attribution": "Baidu Maps",
-      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
-    }
-  ],
+  "generated_at": "2026-09-28T04:22:43.726Z",
+  "source": [],
   "records": [
     {
       "id": "xfer-cn-chongqing-baijusi-18-cn-chongqing-baijusi-2",
@@ -63,12 +52,8 @@
       "to_line_id": "cn-chongqing-line-ht4cq",
       "from_stop_id": "cn-chongqing-bishan-1",
       "to_stop_id": "cn-chongqing-bishan-璧铜",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-bishan-璧铜-cn-chongqing-bishan-1",
@@ -397,12 +382,8 @@
       "to_line_id": "cn-chongqing-line-1",
       "from_stop_id": "cn-chongqing-lianglukou-3",
       "to_stop_id": "cn-chongqing-lianglukou-1",
-      "walk_time_seconds": 337,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 404,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-lijia-6-cn-chongqing-lijia-国博",
@@ -451,12 +432,8 @@
       "to_line_id": "cn-chongqing-line-kdf4",
       "from_stop_id": "cn-chongqing-min-an-ave-4",
       "to_stop_id": "cn-chongqing-min-an-ave-环",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-min-an-ave-环-cn-chongqing-min-an-ave-4",
@@ -465,12 +442,8 @@
       "to_line_id": "cn-chongqing-line-4",
       "from_stop_id": "cn-chongqing-min-an-ave-环",
       "to_stop_id": "cn-chongqing-min-an-ave-4",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-nanhu-10-cn-chongqing-nanhu-环",
@@ -489,12 +462,8 @@
       "to_line_id": "cn-chongqing-line-10",
       "from_stop_id": "cn-chongqing-nanhu-环",
       "to_stop_id": "cn-chongqing-nanhu-10",
-      "walk_time_seconds": 381,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 457,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-niujiaotuo-2-cn-chongqing-niujiaotuo-3",
@@ -513,12 +482,8 @@
       "to_line_id": "cn-chongqing-line-2",
       "from_stop_id": "cn-chongqing-niujiaotuo-3",
       "to_stop_id": "cn-chongqing-niujiaotuo-2",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-north-square-of-chongqingbei-railway-station-10-cn-chongqing-north-square-of-chongqingbei-railway-station-4",
@@ -597,12 +562,8 @@
       "to_line_id": "cn-chongqing-line-kdf4",
       "from_stop_id": "cn-chongqing-ranjiaba-5",
       "to_stop_id": "cn-chongqing-ranjiaba-环",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-ranjiaba-6-cn-chongqing-ranjiaba-5",
@@ -681,12 +642,8 @@
       "to_line_id": "cn-chongqing-line-6",
       "from_stop_id": "cn-chongqing-shangxinjie-环",
       "to_stop_id": "cn-chongqing-shangxinjie-6",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-shapingba-1-cn-chongqing-shapingba-9",
@@ -775,12 +732,8 @@
       "to_line_id": "cn-chongqing-line-kdf4",
       "from_stop_id": "cn-chongqing-sigongli-3",
       "to_stop_id": "cn-chongqing-sigongli-环",
-      "walk_time_seconds": 337,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 404,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-sigongli-环-cn-chongqing-sigongli-3",
@@ -1029,12 +982,8 @@
       "to_line_id": "cn-chongqing-line-kdf4",
       "from_stop_id": "cn-chongqing-wulidian-6",
       "to_stop_id": "cn-chongqing-wulidian-环",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-wulidian-9-cn-chongqing-wulidian-6",
@@ -1043,12 +992,8 @@
       "to_line_id": "cn-chongqing-line-6",
       "from_stop_id": "cn-chongqing-wulidian-9",
       "to_stop_id": "cn-chongqing-wulidian-6",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-wulidian-9-cn-chongqing-wulidian-环",
@@ -1057,12 +1002,8 @@
       "to_line_id": "cn-chongqing-line-kdf4",
       "from_stop_id": "cn-chongqing-wulidian-9",
       "to_stop_id": "cn-chongqing-wulidian-环",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-wulidian-环-cn-chongqing-wulidian-6",
@@ -1091,12 +1032,8 @@
       "to_line_id": "cn-chongqing-line-9",
       "from_stop_id": "cn-chongqing-xiaolongkan-1",
       "to_stop_id": "cn-chongqing-xiaolongkan-9",
-      "walk_time_seconds": 337,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 404,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-xiaolongkan-9-cn-chongqing-xiaolongkan-1",
@@ -1115,12 +1052,8 @@
       "to_line_id": "cn-chongqing-line-6",
       "from_stop_id": "cn-chongqing-xiaoshizi-1",
       "to_stop_id": "cn-chongqing-xiaoshizi-6",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-xiaoshizi-6-cn-chongqing-xiaoshizi-1",
@@ -1129,12 +1062,8 @@
       "to_line_id": "cn-chongqing-line-1",
       "from_stop_id": "cn-chongqing-xiaoshizi-6",
       "to_stop_id": "cn-chongqing-xiaoshizi-1",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 180,
+      "source_id": "cqmetro-routing-default"
     },
     {
       "id": "xfer-cn-chongqing-xiejiawan-2-cn-chongqing-xiejiawan-环",

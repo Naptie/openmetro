@@ -81,3 +81,34 @@ test('mixed official + missing is partial with partial coverage', () => {
   assert.equal(q.coordinates.counts.official, 1);
   assert.equal(q.coordinates.counts.default, 1);
 });
+
+test("baked transfer defaults are default / unavailable, not derived", () => {
+  const q = computeNetworkQuality({
+    ...base,
+    stations: [station({ lon: 1, lat: 2, crs: "gcj02" }, { location_source: "official" })],
+    transfers: [
+      { walk_time_seconds: 120, source_id: "wx-routing-default" },
+      { walk_time_seconds: 300, source_id: "mlm-transfer-default" },
+      { walk_time_seconds: 300, source_id: "sz-mtr-map-transfer-5min" }
+    ]
+  });
+  assert.equal(q.transfer_times.counts.default, 3);
+  assert.equal(q.transfer_times.counts.derived, 0);
+  assert.equal(q.transfer_times.coverage, 0);
+  assert.equal(q.transfer_times.status, "unavailable");
+});
+
+test("planner / baidu transfer walks stay official", () => {
+  const q = computeNetworkQuality({
+    ...base,
+    stations: [station({ lon: 1, lat: 2, crs: "gcj02" }, { location_source: "official" })],
+    transfers: [
+      { walk_time_seconds: 180, source_id: "wuhanrt-lmap-route-mintime" },
+      { walk_time_seconds: 200, source_id: "baidu-transit" },
+      { walk_time_seconds: 90, source_id: "bjsubway-interchange-xml" }
+    ]
+  });
+  assert.equal(q.transfer_times.counts.official, 3);
+  assert.equal(q.transfer_times.coverage, 1);
+  assert.equal(q.transfer_times.status, "complete");
+});

@@ -2,19 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chongqing",
-  "generated_at": "2026-09-24T19:25:36.227Z",
-  "source": [
-    {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-09-24T19:25:36.227Z",
-      "license": "custom",
-      "license_url": null,
-      "attribution": "Baidu Maps",
-      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
-    }
-  ],
+  "generated_at": "2026-09-28T04:22:43.725Z",
+  "source": [],
   "records": [
     {
       "id": "cn-chongqing-seg-cn-chongqing-babinlu-wetland-park-18-cn-chongqing-qiezixi-18",
@@ -45,17 +34,16 @@
       "to_station_id": "cn-chongqing-chongqing-jiaotong-university",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-bagongli-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-chongqing-jiaotong-university-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.343,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-baijusi-18-cn-chongqing-funiuxi-18",
@@ -87,11 +75,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-baijusi-2|cn-chongqing-yudong-2",
+        "cn-chongqing-dajiang-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 3.68,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -127,12 +118,15 @@
       "to_station_id": "cn-chongqing-zhongliangshan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-banshan-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-zhongliangshan-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.764,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -204,12 +198,15 @@
       "to_station_id": "cn-chongqing-fengxilu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-bashan-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-fengxilu-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.699,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -221,17 +218,16 @@
       "to_station_id": "cn-chongqing-hebian",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-bicheng-璧铜|cn-chongqing-tongliangxi-璧铜",
+        "cn-chongqing-hebian-璧铜|cn-chongqing-tongliangxi-璧铜"
+      ],
       "distance_km": 3.135,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 47.6,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-bijin-3-cn-chongqing-shuangfengqiao-3",
@@ -246,13 +242,16 @@
       "extras": {
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 38.5,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
+        "speed_kmh": 37.6,
+        "a_s_per_km": 51.6,
+        "b_s": 87
       },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 189,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-bijin-3-cn-chongqing-terminal-2-of-jiangbei-airport-3",
@@ -267,11 +266,11 @@
       "extras": {
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.3,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
+        "speed_kmh": 25.9,
+        "a_s_per_km": 51.6,
+        "b_s": 87
       },
-      "travel_time_seconds": 119,
+      "travel_time_seconds": 139,
       "travel_time_source": "estimated",
       "travel_time_derived_from": [
         "distance_haversine",
@@ -287,17 +286,16 @@
       "to_station_id": "cn-chongqing-bicheng",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-bishan-璧铜|cn-chongqing-tongliangxi-璧铜",
+        "cn-chongqing-bicheng-璧铜|cn-chongqing-tongliangxi-璧铜"
+      ],
       "distance_km": 1.736,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 36.1,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-bzsu7-9-cn-chongqing-huashigou-9",
@@ -320,12 +318,15 @@
       "to_station_id": "cn-chongqing-xiangjiagang",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-caijia-6|cn-chongqing-beibei-6",
+        "cn-chongqing-xiangjiagang-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 1.898,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -337,20 +338,16 @@
       "to_station_id": "cn-chongqing-erlang",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-caiyunhu-环|loop_inner|full|",
+        "cn-chongqing-erlang-环|loop_inner|full|"
+      ],
       "distance_km": 1.541,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 33.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 164,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-caojiawan-6-cn-chongqing-caijia-6",
@@ -437,12 +434,15 @@
       "to_station_id": "cn-chongqing-yuelai",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-central-park-west-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-yuelai-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 2.384,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -474,20 +474,16 @@
       "to_station_id": "cn-chongqing-jiugongli",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chalukou-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-jiugongli-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.185,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.3,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 132,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-changfulu-3-cn-chongqing-huixing-3",
@@ -498,20 +494,16 @@
       "to_station_id": "cn-chongqing-huixing",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-changfulu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-huixing-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.696,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 36.8,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 166,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-changhe-10-cn-chongqing-terminal-3-of-jiangbei-airport-10",
@@ -523,11 +515,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-changhe-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-terminal-3-of-jiangbei-airport-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 4.565,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -539,12 +534,15 @@
       "to_station_id": "cn-chongqing-liujiaping",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-changshengqiao-6|cn-chongqing-beibei-6",
+        "cn-chongqing-liujiaping-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 1.55,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -596,17 +594,16 @@
       "to_station_id": "cn-chongqing-caiyunhu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chenjiaping-环|loop_inner|full|",
+        "cn-chongqing-caiyunhu-环|loop_inner|full|"
+      ],
       "distance_km": 1.968,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 38.5,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-chenjiaqiao-1-cn-chongqing-daxuecheng-1",
@@ -637,12 +634,15 @@
       "to_station_id": "cn-chongqing-hemulu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chongguang-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-hemulu-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 2.176,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -654,17 +654,16 @@
       "to_station_id": "cn-chongqing-liugongli",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chongqing-jiaotong-university-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-liugongli-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.025,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.5,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-chongqing-library-环-cn-chongqing-tianxingqiao-环",
@@ -675,17 +674,16 @@
       "to_station_id": "cn-chongqing-tianxingqiao",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chongqing-library-环|loop_inner|full|",
+        "cn-chongqing-tianxingqiao-环|loop_inner|full|"
+      ],
       "distance_km": 1.161,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 28.4,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-chongqing-people-s-auditorium-10-cn-chongqing-zengjiayan-10",
@@ -697,11 +695,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chongqing-people-s-auditorium-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-zengjiayan-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 0.752,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -713,17 +714,16 @@
       "to_station_id": "cn-chongqing-sigongli",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chongqing-technology-and-business-university-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-sigongli-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.06,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-chongqing-university-of-technology-18-cn-chongqing-huaxi-industrial-park-18",
@@ -734,12 +734,15 @@
       "to_station_id": "cn-chongqing-huaxi-industrial-park",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chongqing-university-of-technology-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-huaxi-industrial-park-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 1.373,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -751,20 +754,16 @@
       "to_station_id": "cn-chongqing-yudaishan",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chongqing-university-环|loop_inner|full|",
+        "cn-chongqing-yudaishan-环|loop_inner|full|"
+      ],
       "distance_km": 1.901,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 181,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-chongqing-west-station-5-cn-chongqing-huayan-temple-5",
@@ -795,17 +794,16 @@
       "to_station_id": "cn-chongqing-shangqiao",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chongqing-west-station-环|loop_inner|full|",
+        "cn-chongqing-shangqiao-环|loop_inner|full|"
+      ],
       "distance_km": 2.046,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 39.4,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-chunhua-ave-9-cn-chongqing-langui-ave-9",
@@ -837,11 +835,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-chunxuan-ave-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-central-park-west-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.271,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -854,11 +855,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-ciqikou-1|cn-chongqing-bishan-1",
+        "cn-chongqing-shijingpo-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 1.427,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -870,17 +874,16 @@
       "to_station_id": "cn-chongqing-changfulu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-cuiyun-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-changfulu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.55,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.8,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-cuntan-4-cn-chongqing-heishizi-4",
@@ -891,12 +894,15 @@
       "to_station_id": "cn-chongqing-heishizi",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-cuntan-4|cn-chongqing-huangling-4",
+        "cn-chongqing-heishizi-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.47,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -909,11 +915,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dadukou-2|cn-chongqing-yudong-2",
+        "cn-chongqing-xinshancun-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 1.11,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -949,12 +958,15 @@
       "to_station_id": "cn-chongqing-dashiba",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
-      "distance_km": 1.879,
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dalongshan-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-dashiba-5|cn-chongqing-tiaodeng-5"
+      ],
+      "distance_km": 2.108,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -986,17 +998,16 @@
       "to_station_id": "cn-chongqing-qinglong",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 420,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dalu-璧铜|cn-chongqing-tongliangxi-璧铜",
+        "cn-chongqing-qinglong-璧铜|cn-chongqing-tongliangxi-璧铜"
+      ],
       "distance_km": 9.997,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 65.7,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 420,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-danhe-5-cn-chongqing-huxiajie-5",
@@ -1007,12 +1018,15 @@
       "to_station_id": "cn-chongqing-huxiajie",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-danhe-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-huxiajie-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.419,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1024,20 +1038,16 @@
       "to_station_id": "cn-chongqing-tushan",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 360,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-danzishi-环|loop_outer|full|",
+        "cn-chongqing-tushan-环|loop_inner|full|"
+      ],
       "distance_km": 1.343,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31.2,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 155,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-daping-1-cn-chongqing-shiyoulu-1",
@@ -1049,11 +1059,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-daping-1|cn-chongqing-bishan-1",
+        "cn-chongqing-shiyoulu-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 1.133,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1066,11 +1079,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-daping-2|cn-chongqing-yudong-2",
+        "cn-chongqing-yuanjiagang-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 1.547,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1082,12 +1098,15 @@
       "to_station_id": "cn-chongqing-huahuiyuan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-daqingcun-4|cn-chongqing-huangling-4",
+        "cn-chongqing-huahuiyuan-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.167,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1099,20 +1118,16 @@
       "to_station_id": "cn-chongqing-huaxi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dashancun-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-huaxi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 2.252,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 39.9,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 203,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-dashiba-4-cn-chongqing-daqingcun-4",
@@ -1123,12 +1138,15 @@
       "to_station_id": "cn-chongqing-daqingcun",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
-      "distance_km": 0.669,
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dashiba-4|cn-chongqing-huangling-4",
+        "cn-chongqing-daqingcun-4|cn-chongqing-huangling-4"
+      ],
+      "distance_km": 1.037,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1141,11 +1159,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
-      "distance_km": 1.14,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dashiba-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-zhongshutuo-5|cn-chongqing-tiaodeng-5"
+      ],
+      "distance_km": 0.865,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1158,11 +1179,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-daxigou-2|cn-chongqing-yudong-2",
+        "cn-chongqing-zengjiayan-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 0.802,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1195,11 +1219,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dayancun-2|cn-chongqing-yudong-2",
+        "cn-chongqing-mawangchang-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 1.084,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1231,12 +1258,15 @@
       "to_station_id": "cn-chongqing-lijiatuo-daqiao",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dianchang-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-lijiatuo-daqiao-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 1.827,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1248,20 +1278,16 @@
       "to_station_id": "cn-chongqing-honghudonglu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dongbu-park-环|loop_inner|full|",
+        "cn-chongqing-honghudonglu-环|loop_inner|full|"
+      ],
       "distance_km": 0.883,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 23.7,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 134,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-eling-1-cn-chongqing-daping-1",
@@ -1273,11 +1299,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-eling-1|cn-chongqing-bishan-1",
+        "cn-chongqing-daping-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 1.579,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1289,20 +1318,16 @@
       "to_station_id": "cn-chongqing-hualong",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-erlang-环|loop_inner|full|",
+        "cn-chongqing-hualong-环|loop_inner|full|"
+      ],
       "distance_km": 1.389,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 157,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-fengxilu-5-cn-chongqing-chongqing-west-station-5",
@@ -1313,12 +1338,15 @@
       "to_station_id": "cn-chongqing-chongqing-west-station",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 420,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-fengxilu-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-chongqing-west-station-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 2.099,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1330,12 +1358,15 @@
       "to_station_id": "cn-chongqing-daping",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-fotuguan-2|cn-chongqing-yudong-2",
+        "cn-chongqing-daping-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 1.452,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1347,12 +1378,15 @@
       "to_station_id": "cn-chongqing-xietaizi",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-fuhualu-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-xietaizi-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 1.437,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1384,12 +1418,15 @@
       "to_station_id": "cn-chongqing-jin-aoshan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-funiuxi-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-jin-aoshan-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 2.156,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1422,11 +1459,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-fuxing-国博|cn-chongqing-shaheba-国博",
+        "cn-chongqing-hongyanping-国博|cn-chongqing-shaheba-国博"
+      ],
       "distance_km": 1.205,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1438,12 +1478,15 @@
       "to_station_id": "cn-chongqing-toutang",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-gailanxi-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-toutang-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 1.548,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1456,11 +1499,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-gangcheng-4|cn-chongqing-huangling-4",
+        "cn-chongqing-taipingchong-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.812,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1492,13 +1538,20 @@
       "to_station_id": "cn-chongqing-guanyuelu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
       "distance_km": 2.734,
       "extras": {
         "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
-      }
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 43.2,
+        "a_s_per_km": 51.6,
+        "b_s": 87
+      },
+      "travel_time_seconds": 228,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-gaomiaocun-1-cn-chongqing-majiayan-1",
@@ -1509,12 +1562,15 @@
       "to_station_id": "cn-chongqing-majiayan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-gaomiaocun-1|cn-chongqing-bishan-1",
+        "cn-chongqing-majiayan-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 0.96,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1527,11 +1583,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-gaoshita-4|cn-chongqing-huangling-4",
+        "cn-chongqing-pufu-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.959,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1543,12 +1602,15 @@
       "to_station_id": "cn-chongqing-tianlilu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-gaotanyan-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-tianlilu-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 1.209,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1560,12 +1622,15 @@
       "to_station_id": "cn-chongqing-international-expo-center",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-gaoyikou-国博|cn-chongqing-shaheba-国博",
+        "cn-chongqing-international-expo-center-国博|cn-chongqing-shaheba-国博"
+      ],
       "distance_km": 2.287,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1577,20 +1642,16 @@
       "to_station_id": "cn-chongqing-tongyuanju",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-gongmao-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-tongyuanju-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.248,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 33,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 136,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-grand-theater-6-cn-chongqing-jiangbeicheng-6",
@@ -1621,12 +1682,15 @@
       "to_station_id": "cn-chongqing-dazhulin",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-guangdianyuan-6|cn-chongqing-beibei-6",
+        "cn-chongqing-dazhulin-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 2.432,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1638,20 +1702,16 @@
       "to_station_id": "cn-chongqing-hongqihegou",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-guanyinqiao-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-hongqihegou-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.457,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 150,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-guanyinqiao-9-cn-chongqing-liyuchi-9",
@@ -1682,13 +1742,20 @@
       "to_station_id": "cn-chongqing-lianhua",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
       "distance_km": 1.212,
       "extras": {
         "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
-      }
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 29.1,
+        "a_s_per_km": 51.6,
+        "b_s": 87
+      },
+      "travel_time_seconds": 150,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-guoyuan-logistics-hub-4-cn-chongqing-yuzui-4",
@@ -1699,12 +1766,15 @@
       "to_station_id": "cn-chongqing-yuzui",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-guoyuan-logistics-hub-4|cn-chongqing-huangling-4",
+        "cn-chongqing-yuzui-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 2.805,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1716,17 +1786,16 @@
       "to_station_id": "cn-chongqing-luojiaba",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-haitangxi-环|loop_inner|full|",
+        "cn-chongqing-luojiaba-环|loop_inner|full|"
+      ],
       "distance_km": 0.996,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 25.6,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-haixialu-环-cn-chongqing-xiejiawan-环",
@@ -1737,17 +1806,16 @@
       "to_station_id": "cn-chongqing-xiejiawan",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-haixialu-环|loop_inner|full|",
+        "cn-chongqing-xiejiawan-环|loop_inner|full|"
+      ],
       "distance_km": 2.8,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 45.6,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-happy-valley-国博-cn-chongqing-huangmaoping-国博",
@@ -1759,11 +1827,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-happy-valley-国博|cn-chongqing-shaheba-国博",
+        "cn-chongqing-huangmaoping-国博|cn-chongqing-shaheba-国博"
+      ],
       "distance_km": 2.342,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1775,17 +1846,16 @@
       "to_station_id": "cn-chongqing-dalu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 360,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-hebian-璧铜|cn-chongqing-tongliangxi-璧铜",
+        "cn-chongqing-dalu-璧铜|cn-chongqing-tongliangxi-璧铜"
+      ],
       "distance_km": 8.025,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 62.9,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-heishizi-4-cn-chongqing-gangcheng-4",
@@ -1797,11 +1867,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-heishizi-4|cn-chongqing-huangling-4",
+        "cn-chongqing-gangcheng-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.171,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1813,12 +1886,15 @@
       "to_station_id": "cn-chongqing-shipanhe",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 540,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-hejialiang-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-shipanhe-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 1.495,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1850,20 +1926,16 @@
       "to_station_id": "cn-chongqing-min-an-ave",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-honghudonglu-环|loop_inner|full|",
+        "cn-chongqing-min-an-ave-环|loop_inner|full|"
+      ],
       "distance_km": 1.622,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 168,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-hongqihegou-3-cn-chongqing-jiazhoulu-3",
@@ -1874,20 +1946,16 @@
       "to_station_id": "cn-chongqing-jiazhoulu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-hongqihegou-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-jiazhoulu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.193,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.5,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 132,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-hongqihegou-6-cn-chongqing-huahuiyuan-6",
@@ -1898,12 +1966,15 @@
       "to_station_id": "cn-chongqing-huahuiyuan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-hongqihegou-6|cn-chongqing-beibei-6",
+        "cn-chongqing-huahuiyuan-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 1.306,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1916,11 +1987,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-hongtudi-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-longtousi-park-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 1.628,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1972,12 +2046,15 @@
       "to_station_id": "cn-chongqing-fuhualu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-hongyancun-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-fuhualu-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 0.924,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2014,11 +2091,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-houbao-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-qixinggang-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 1.909,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2051,11 +2131,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-huahuiyuan-4|cn-chongqing-huangling-4",
+        "cn-chongqing-longxi-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 0.804,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2087,20 +2170,16 @@
       "to_station_id": "cn-chongqing-chongqing-west-station",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-hualong-环|loop_inner|full|",
+        "cn-chongqing-chongqing-west-station-环|loop_inner|full|"
+      ],
       "distance_km": 1.439,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.4,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 160,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-hualongqiao-9-cn-chongqing-lijiaping-9",
@@ -2111,12 +2190,15 @@
       "to_station_id": "cn-chongqing-lijiaping",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-hualongqiao-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-lijiaping-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 1.538,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2169,11 +2251,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-huangmaoping-国博|cn-chongqing-shaheba-国博",
+        "cn-chongqing-gaoyikou-国博|cn-chongqing-shaheba-国博"
+      ],
       "distance_km": 2.974,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2225,17 +2310,16 @@
       "to_station_id": "cn-chongqing-chalukou",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-huaxi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-chalukou-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.859,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.8,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-huaxi-industrial-park-18-cn-chongqing-babinlu-wetland-park-18",
@@ -2246,12 +2330,15 @@
       "to_station_id": "cn-chongqing-babinlu-wetland-park",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-huaxi-industrial-park-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-babinlu-wetland-park-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 1.809,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2263,20 +2350,16 @@
       "to_station_id": "cn-chongqing-guanyinqiao",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-huaxinjie-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-guanyinqiao-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.149,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.1,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 129,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-huayan-center-5-cn-chongqing-tiaodeng-5",
@@ -2291,11 +2374,11 @@
       "extras": {
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 40.5,
-        "a_s_per_km": 52.5,
-        "b_s": 84.9
+        "speed_kmh": 40.9,
+        "a_s_per_km": 50.7,
+        "b_s": 87.5
       },
-      "travel_time_seconds": 208,
+      "travel_time_seconds": 206,
       "travel_time_source": "estimated",
       "travel_time_derived_from": [
         "distance_haversine",
@@ -2331,20 +2414,16 @@
       "to_station_id": "cn-chongqing-shuanglong",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-huixing-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-shuanglong-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.501,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.3,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 153,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-huxiajie-5-cn-chongqing-chongguang-5",
@@ -2401,11 +2480,14 @@
         "time_estimate": "distance_time_affine",
         "speed_kmh": 59.1,
         "a_s_per_km": 45.5,
-        "b_s": 89.9,
-        "planner_time_source": "baidu-transit"
+        "b_s": 89.9
       },
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 357,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-jiangbeicheng-6-cn-chongqing-wulidian-6",
@@ -2460,13 +2542,16 @@
       "extras": {
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 51.9,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
+        "speed_kmh": 57.2,
+        "a_s_per_km": 37.1,
+        "b_s": 101.9
       },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 248,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-jianqiao-2-cn-chongqing-jinjiawan-2",
@@ -2497,12 +2582,15 @@
       "to_station_id": "cn-chongqing-qixinggang",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jiaochangkou-1|cn-chongqing-bishan-1",
+        "cn-chongqing-qixinggang-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 1.094,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2515,11 +2603,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jiaochangkou-2|cn-chongqing-yudong-2",
+        "cn-chongqing-linjiangmen-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 0.523,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2531,20 +2622,16 @@
       "to_station_id": "cn-chongqing-zhengjiayuanzi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jiazhoulu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-zhengjiayuanzi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 0.871,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 28.2,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 111,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-jiazhoulu-4-cn-chongqing-min-an-ave-4",
@@ -2556,11 +2643,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jiazhoulu-4|cn-chongqing-huangling-4",
+        "cn-chongqing-min-an-ave-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.634,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2572,12 +2662,15 @@
       "to_station_id": "cn-chongqing-tiaodeng",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jin-aoshan-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-tiaodeng-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 2.199,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2630,11 +2723,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jinshansi-6|cn-chongqing-beibei-6",
+        "cn-chongqing-caojiawan-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 4.643,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2646,17 +2742,16 @@
       "to_station_id": "cn-chongqing-yuanyang",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jintonglu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-yuanyang-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 2.121,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 39.4,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-jinyu-3-cn-chongqing-jintonglu-3",
@@ -2667,20 +2762,16 @@
       "to_station_id": "cn-chongqing-jintonglu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jinyu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-jintonglu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 0.939,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.4,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 115,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-jinzhu-3-cn-chongqing-yuhulu-3",
@@ -2691,20 +2782,16 @@
       "to_station_id": "cn-chongqing-yuhulu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jinzhu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-yuhulu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.497,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.2,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 153,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-jiugongli-3-cn-chongqing-qilong-3",
@@ -2715,20 +2802,16 @@
       "to_station_id": "cn-chongqing-qilong",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jiugongli-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-qilong-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.002,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.1,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-jiulongyuan-江跳-cn-chongqing-shuangfu-江跳",
@@ -2739,20 +2822,16 @@
       "to_station_id": "cn-chongqing-shuangfu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 300,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-jiulongyuan-江跳|cn-chongqing-shengquansi-江跳",
+        "cn-chongqing-shuangfu-江跳|cn-chongqing-shengquansi-江跳"
+      ],
       "distance_km": 4.111,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 52.7,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 281,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-jiuquhe-6-cn-chongqing-lijia-6",
@@ -2784,11 +2863,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-kangzhuang-6|cn-chongqing-beibei-6",
+        "cn-chongqing-jiuquhe-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 2.169,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2800,16 +2882,20 @@
       "to_station_id": "cn-chongqing-gaobaohu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chongqing-konggang-square-3|cn-chongqing-jurenba-3",
-        "cn-chongqing-gaobaohu-3|cn-chongqing-jurenba-3"
-      ],
       "distance_km": 1.953,
       "extras": {
-        "distance_source": "haversine"
-      }
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 37.4,
+        "a_s_per_km": 51.6,
+        "b_s": 87
+      },
+      "travel_time_seconds": 188,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-laijiaqiao-1-cn-chongqing-weidianyuan-1",
@@ -2821,11 +2907,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-laijiaqiao-1|cn-chongqing-bishan-1",
+        "cn-chongqing-weidianyuan-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 1.794,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2837,12 +2926,15 @@
       "to_station_id": "cn-chongqing-central-park-east",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-langui-ave-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-central-park-east-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 1.171,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2855,11 +2947,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-lanhualu-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-nanhu-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 1.384,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -2891,17 +2986,16 @@
       "to_station_id": "cn-chongqing-niujiaotuo",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-lianglukou-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-niujiaotuo-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.108,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31.4,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-lianhua-3-cn-chongqing-jurenba-3",
@@ -2916,11 +3010,11 @@
       "extras": {
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 33.4,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
+        "speed_kmh": 30.2,
+        "a_s_per_km": 51.6,
+        "b_s": 87
       },
-      "travel_time_seconds": 139,
+      "travel_time_seconds": 154,
       "travel_time_source": "estimated",
       "travel_time_derived_from": [
         "distance_haversine",
@@ -2997,11 +3091,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-lijiaping-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-mahuangliang-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 0.964,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3013,12 +3110,15 @@
       "to_station_id": "cn-chongqing-chongqing-university-of-technology",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-lijiatuo-daqiao-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-chongqing-university-of-technology-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 1.132,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3030,12 +3130,15 @@
       "to_station_id": "cn-chongqing-huanghuayuan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-linjiangmen-2|cn-chongqing-yudong-2",
+        "cn-chongqing-huanghuayuan-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 1.072,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3047,20 +3150,16 @@
       "to_station_id": "cn-chongqing-chongqing-technology-and-business-university",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-liugongli-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-chongqing-technology-and-business-university-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.063,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.9,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 124,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-liujiaba-2-cn-chongqing-baijusi-2",
@@ -3116,11 +3215,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-liujiaping-6|cn-chongqing-beibei-6",
+        "cn-chongqing-shangxinjie-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 6.651,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3153,11 +3255,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-liujiayuanzi-国博|cn-chongqing-shaheba-国博",
+        "cn-chongqing-siyuan-国博|cn-chongqing-shaheba-国博"
+      ],
       "distance_km": 2.843,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3230,11 +3335,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-longfengxi-6|cn-chongqing-beibei-6",
+        "cn-chongqing-zhuangyuanbei-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 1.598,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3246,17 +3354,16 @@
       "to_station_id": "cn-chongqing-tongjiayuanzi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-longtousi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-tongjiayuanzi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.396,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.4,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-longtousi-park-10-cn-chongqing-south-square-of-chongqingbei-railway-station-10",
@@ -3267,12 +3374,15 @@
       "to_station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 60,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-longtousi-park-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-south-square-of-chongqingbei-railway-station-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 0.904,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3285,11 +3395,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-longxi-4|cn-chongqing-huangling-4",
+        "cn-chongqing-jiazhoulu-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 0.835,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3321,12 +3434,15 @@
       "to_station_id": "cn-chongqing-longxing",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-longyi-ave-4|cn-chongqing-huangling-4",
+        "cn-chongqing-longxing-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.517,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3338,12 +3454,15 @@
       "to_station_id": "cn-chongqing-ganyue-ave",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-lujiagou-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-ganyue-ave-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 0.952,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3355,20 +3474,16 @@
       "to_station_id": "cn-chongqing-sigongli",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-luojiaba-环|loop_inner|full|",
+        "cn-chongqing-sigongli-环|loop_inner|full|"
+      ],
       "distance_km": 1.259,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 30,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 151,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-luqi-4-cn-chongqing-guoyuan-logistics-hub-4",
@@ -3380,11 +3495,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-luqi-4|cn-chongqing-huangling-4",
+        "cn-chongqing-guoyuan-logistics-hub-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 2.42,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3397,11 +3515,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-lushan-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-central-park-east-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 1.569,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3454,11 +3575,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-mawangchang-2|cn-chongqing-yudong-2",
+        "cn-chongqing-pingan-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 0.893,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3490,17 +3614,16 @@
       "to_station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-min-an-ave-环|loop_inner|full|",
+        "cn-chongqing-south-square-of-chongqingbei-railway-station-环|loop_inner|full|"
+      ],
       "distance_km": 1.965,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 38.4,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-minxinjiayuan-10-cn-chongqing-sanyawan-10",
@@ -3511,12 +3634,15 @@
       "to_station_id": "cn-chongqing-sanyawan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 540,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-minxinjiayuan-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-sanyawan-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 2.11,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3548,20 +3674,16 @@
       "to_station_id": "cn-chongqing-haixialu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-nanhu-环|loop_inner|full|",
+        "cn-chongqing-haixialu-环|loop_inner|full|"
+      ],
       "distance_km": 1.053,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 26.7,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 142,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-nanping-3-cn-chongqing-gongmao-3",
@@ -3572,20 +3694,16 @@
       "to_station_id": "cn-chongqing-gongmao",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-nanping-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-gongmao-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 0.881,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 28.6,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 111,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-nanqiaosi-环-cn-chongqing-sports-park-环",
@@ -3596,20 +3714,16 @@
       "to_station_id": "cn-chongqing-sports-park",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-nanqiaosi-环|loop_inner|full|",
+        "cn-chongqing-sports-park-环|loop_inner|full|"
+      ],
       "distance_km": 1.051,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 26.6,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 142,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-niujiaotuo-2-cn-chongqing-liziba-2",
@@ -3620,12 +3734,15 @@
       "to_station_id": "cn-chongqing-liziba",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-niujiaotuo-2|cn-chongqing-yudong-2",
+        "cn-chongqing-liziba-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 0.989,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3637,17 +3754,16 @@
       "to_station_id": "cn-chongqing-huaxinjie",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-niujiaotuo-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-huaxinjie-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 0.643,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 24.4,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-north-square-of-chongqingbei-railway-station-10-cn-chongqing-minxinjiayuan-10",
@@ -3658,12 +3774,15 @@
       "to_station_id": "cn-chongqing-minxinjiayuan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-north-square-of-chongqingbei-railway-station-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-minxinjiayuan-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 2.199,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3675,12 +3794,15 @@
       "to_station_id": "cn-chongqing-toutang",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-north-square-of-chongqingbei-railway-station-4|cn-chongqing-huangling-4",
+        "cn-chongqing-toutang-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 2.203,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3712,20 +3834,16 @@
       "to_station_id": "cn-chongqing-chenjiaping",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-olympic-sports-center-环|loop_inner|full|",
+        "cn-chongqing-chenjiaping-环|loop_inner|full|"
+      ],
       "distance_km": 1.187,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 28.9,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 148,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-panxi-4-cn-chongqing-dashiba-4",
@@ -3742,7 +3860,7 @@
         "cn-chongqing-panxi-4|cn-chongqing-huangling-4",
         "cn-chongqing-dashiba-4|cn-chongqing-huangling-4"
       ],
-      "distance_km": 1.518,
+      "distance_km": 1.304,
       "extras": {
         "distance_source": "haversine"
       }
@@ -3756,12 +3874,15 @@
       "to_station_id": "cn-chongqing-dadukou",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-pingan-2|cn-chongqing-yudong-2",
+        "cn-chongqing-dadukou-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 1.013,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3773,12 +3894,15 @@
       "to_station_id": "cn-chongqing-tongzilin",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-pufu-4|cn-chongqing-huangling-4",
+        "cn-chongqing-tongzilin-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.853,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3810,17 +3934,16 @@
       "to_station_id": "cn-chongqing-bagongli",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-qilong-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-bagongli-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.28,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 33.4,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-qinggangping-9-cn-chongqing-baoshenghu-9",
@@ -3832,11 +3955,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-qinggangping-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-baoshenghu-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 2.056,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3848,17 +3974,16 @@
       "to_station_id": "cn-chongqing-sci-tech-innovation-center",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-qinglong-璧铜|cn-chongqing-tongliangxi-璧铜",
+        "cn-chongqing-sci-tech-innovation-center-璧铜|cn-chongqing-tongliangxi-璧铜"
+      ],
       "distance_km": 4.98,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 56,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-qingxihe-国博-cn-chongqing-liujiayuanzi-国博",
@@ -3889,12 +4014,15 @@
       "to_station_id": "cn-chongqing-changshengqiao",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-qiujiawan-6|cn-chongqing-beibei-6",
+        "cn-chongqing-changshengqiao-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 1.661,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3927,11 +4055,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-qixinggang-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-chongqing-people-s-auditorium-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 1.052,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -3983,17 +4114,16 @@
       "to_station_id": "cn-chongqing-dongbu-park",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-ranjiaba-环|loop_inner|full|",
+        "cn-chongqing-dongbu-park-环|loop_inner|full|"
+      ],
       "distance_km": 0.772,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 21.5,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-renhe-5-cn-chongqing-xingfu-square-5",
@@ -4005,11 +4135,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-renhe-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-xingfu-square-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.552,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4021,20 +4154,16 @@
       "to_station_id": "cn-chongqing-shangxinjie",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-renji-环|loop_inner|full|",
+        "cn-chongqing-shangxinjie-环|loop_inner|full|"
+      ],
       "distance_km": 1.02,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 26,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 141,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-sanbanxi-4-cn-chongqing-longyi-ave-4",
@@ -4065,12 +4194,15 @@
       "to_station_id": "cn-chongqing-shangwanlu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 420,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-sanyawan-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-shangwanlu-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 2.665,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4082,17 +4214,16 @@
       "to_station_id": "cn-chongqing-tongliang-longcheng-paradise-walk",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-sci-tech-innovation-center-璧铜|cn-chongqing-tongliangxi-璧铜",
+        "cn-chongqing-tongliang-longcheng-paradise-walk-璧铜|cn-chongqing-tongliangxi-璧铜"
+      ],
       "distance_km": 3.263,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 48.5,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shanghao-环-cn-chongqing-haitangxi-环",
@@ -4103,17 +4234,16 @@
       "to_station_id": "cn-chongqing-haitangxi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shanghao-环|loop_inner|full|",
+        "cn-chongqing-haitangxi-环|loop_inner|full|"
+      ],
       "distance_km": 1.481,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.9,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shangqiao-环-cn-chongqing-fengmingshan-环",
@@ -4124,17 +4254,16 @@
       "to_station_id": "cn-chongqing-fengmingshan",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shangqiao-环|loop_inner|full|",
+        "cn-chongqing-fengmingshan-环|loop_inner|full|"
+      ],
       "distance_km": 0.927,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 24.5,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shangwanlu-10-cn-chongqing-huanshan-park-10",
@@ -4186,11 +4315,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shangxinjie-6|cn-chongqing-beibei-6",
+        "cn-chongqing-xiaoshizi-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 1.387,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4202,17 +4334,16 @@
       "to_station_id": "cn-chongqing-shanghao",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shangxinjie-环|loop_inner|full|",
+        "cn-chongqing-shanghao-环|loop_inner|full|"
+      ],
       "distance_km": 1.118,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shapingba-1-cn-chongqing-yanggongqiao-1",
@@ -4263,17 +4394,16 @@
       "to_station_id": "cn-chongqing-chongqing-university",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shapingba-环|loop_inner|full|",
+        "cn-chongqing-chongqing-university-环|loop_inner|full|"
+      ],
       "distance_km": 1.373,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31.5,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shichuan-4-cn-chongqing-huangling-4",
@@ -4289,8 +4419,8 @@
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 34.7,
-        "a_s_per_km": 50.9,
-        "b_s": 82.9
+        "a_s_per_km": 51.1,
+        "b_s": 82.1
       },
       "travel_time_seconds": 162,
       "travel_time_source": "estimated",
@@ -4309,11 +4439,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shiheqing-4|cn-chongqing-huangling-4",
+        "cn-chongqing-fusheng-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.982,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4345,20 +4478,16 @@
       "to_station_id": "cn-chongqing-jiulongyuan",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 360,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shilinsi-江跳|cn-chongqing-shengquansi-江跳",
+        "cn-chongqing-jiulongyuan-江跳|cn-chongqing-shengquansi-江跳"
+      ],
       "distance_km": 7.325,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 61.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 427,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shimahelijiao-4-cn-chongqing-yudaishan-4",
@@ -4389,12 +4518,15 @@
       "to_station_id": "cn-chongqing-shangwanlu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shipanhe-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-shangwanlu-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 1.657,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4427,11 +4559,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shiqiaopu-1|cn-chongqing-bishan-1",
+        "cn-chongqing-gaomiaocun-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 1.57,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4463,12 +4598,15 @@
       "to_station_id": "cn-chongqing-bashan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shixinlu-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-bashan-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 0.927,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4500,17 +4638,16 @@
       "to_station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shiziping-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-south-square-of-chongqingbei-railway-station-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 0.599,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 23.2,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 60,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shuangbei-1-cn-chongqing-laijiaqiao-1",
@@ -4522,11 +4659,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shuangbei-1|cn-chongqing-bishan-1",
+        "cn-chongqing-laijiaqiao-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 6.104,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4538,16 +4678,20 @@
       "to_station_id": "cn-chongqing-konggang-square",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chongqing-shuangfengqiao-3|cn-chongqing-jurenba-3",
-        "cn-chongqing-konggang-square-3|cn-chongqing-jurenba-3"
-      ],
       "distance_km": 0.828,
       "extras": {
-        "distance_source": "haversine"
-      }
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.9,
+        "a_s_per_km": 51.6,
+        "b_s": 87
+      },
+      "travel_time_seconds": 130,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shuangfu-江跳-cn-chongqing-xiangtang-江跳",
@@ -4558,17 +4702,16 @@
       "to_station_id": "cn-chongqing-xiangtang",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 300,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shuangfu-江跳|cn-chongqing-shengquansi-江跳",
+        "cn-chongqing-xiangtang-江跳|cn-chongqing-shengquansi-江跳"
+      ],
       "distance_km": 5.255,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 56.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-shuanglong-3-cn-chongqing-bijin-3",
@@ -4579,17 +4722,16 @@
       "to_station_id": "cn-chongqing-bijin",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-shuanglong-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-bijin-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.992,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 38.6,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-sichuan-fine-arts-institute-18-cn-chongqing-dianchang-18",
@@ -4600,12 +4742,15 @@
       "to_station_id": "cn-chongqing-dianchang",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-sichuan-fine-arts-institute-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-dianchang-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 0.945,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4617,20 +4762,16 @@
       "to_station_id": "cn-chongqing-nanping",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-sigongli-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-nanping-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.201,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.5,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 133,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-sigongli-环-cn-chongqing-nanhu-环",
@@ -4641,17 +4782,16 @@
       "to_station_id": "cn-chongqing-nanhu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-sigongli-环|loop_inner|full|",
+        "cn-chongqing-nanhu-环|loop_inner|full|"
+      ],
       "distance_km": 1.837,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.2,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-siyuan-国博-cn-chongqing-fuxing-国博",
@@ -4662,12 +4802,15 @@
       "to_station_id": "cn-chongqing-fuxing",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-siyuan-国博|cn-chongqing-shaheba-国博",
+        "cn-chongqing-fuxing-国博|cn-chongqing-shaheba-国博"
+      ],
       "distance_km": 1.683,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4699,17 +4842,16 @@
       "to_station_id": "cn-chongqing-longtousi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-south-square-of-chongqingbei-railway-station-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-longtousi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.121,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31.8,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-south-square-of-chongqingbei-railway-station-环-cn-chongqing-yulu-环",
@@ -4720,20 +4862,16 @@
       "to_station_id": "cn-chongqing-yulu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-south-square-of-chongqingbei-railway-station-环|loop_inner|full|",
+        "cn-chongqing-yulu-环|loop_inner|full|"
+      ],
       "distance_km": 1.548,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 33.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 165,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-southwest-university-6-cn-chongqing-beibei-6",
@@ -4768,20 +4906,16 @@
       "to_station_id": "cn-chongqing-ranjiaba",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-sports-park-环|loop_inner|full|",
+        "cn-chongqing-ranjiaba-环|loop_inner|full|"
+      ],
       "distance_km": 1.083,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27.3,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 143,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-taipingchong-4-cn-chongqing-tangjiatuo-4",
@@ -4792,12 +4926,15 @@
       "to_station_id": "cn-chongqing-tangjiatuo",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-taipingchong-4|cn-chongqing-huangling-4",
+        "cn-chongqing-tangjiatuo-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 1.703,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4829,20 +4966,16 @@
       "to_station_id": "cn-chongqing-shiziping",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tangjiayuanzi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-shiziping-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 0.863,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 28.2,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 110,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-tanzikou-18-cn-chongqing-huangjueping-18",
@@ -4854,11 +4987,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tanzikou-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-huangjueping-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 1.076,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4895,11 +5031,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-terminal-2-of-jiangbei-airport-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-yubei-square-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 0.816,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4911,12 +5050,15 @@
       "to_station_id": "cn-chongqing-terminal-2-of-jiangbei-airport",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-terminal-3-of-jiangbei-airport-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-terminal-2-of-jiangbei-airport-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 1.999,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -4928,20 +5070,16 @@
       "to_station_id": "cn-chongqing-cuiyun",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-the-expo-garden-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-cuiyun-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.518,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.5,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 154,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-the-expo-garden-center-5-cn-chongqing-danhe-5",
@@ -4952,12 +5090,15 @@
       "to_station_id": "cn-chongqing-danhe",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-the-expo-garden-center-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-danhe-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.327,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5009,20 +5150,16 @@
       "to_station_id": "cn-chongqing-shapingba",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tianxingqiao-环|loop_inner|full|",
+        "cn-chongqing-shapingba-环|loop_inner|full|"
+      ],
       "distance_km": 1.542,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 33.8,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 164,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-tiaodeng-18-cn-chongqing-tiaodengnan-18",
@@ -5057,20 +5194,16 @@
       "to_station_id": "cn-chongqing-shilinsi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tiaodeng-江跳|cn-chongqing-shengquansi-江跳",
+        "cn-chongqing-shilinsi-江跳|cn-chongqing-shengquansi-江跳"
+      ],
       "distance_km": 0.852,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 23.1,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 133,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-tieshanping-4-cn-chongqing-luqi-4",
@@ -5082,11 +5215,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tieshanping-4|cn-chongqing-huangling-4",
+        "cn-chongqing-luqi-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 4.766,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5098,20 +5234,16 @@
       "to_station_id": "cn-chongqing-jinyu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tongjiayuanzi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-jinyu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.693,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 36.7,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 166,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-tongliang-longcheng-paradise-walk-璧铜-cn-chongqing-tongliangxi-璧铜",
@@ -5126,13 +5258,16 @@
       "extras": {
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 48.4,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
+        "speed_kmh": 55.5,
+        "a_s_per_km": 30.1,
+        "b_s": 113.9
       },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 212,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-tongyuanju-3-cn-chongqing-lianglukou-3",
@@ -5143,17 +5278,16 @@
       "to_station_id": "cn-chongqing-lianglukou",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tongyuanju-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-lianglukou-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.86,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.8,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-tongzilin-4-cn-chongqing-shichuan-4",
@@ -5164,12 +5298,15 @@
       "to_station_id": "cn-chongqing-shichuan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tongzilin-4|cn-chongqing-huangling-4",
+        "cn-chongqing-shichuan-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 2.623,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5221,20 +5358,16 @@
       "to_station_id": "cn-chongqing-renji",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-tushan-环|loop_inner|full|",
+        "cn-chongqing-renji-环|loop_inner|full|"
+      ],
       "distance_km": 1.263,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.9,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 152,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-tuwan-9-cn-chongqing-hongyancun-9",
@@ -5266,11 +5399,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-wangjiazhuang-国博|cn-chongqing-shaheba-国博",
+        "cn-chongqing-qingxihe-国博|cn-chongqing-shaheba-国博"
+      ],
       "distance_km": 2.293,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5303,11 +5439,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-weidianyuan-1|cn-chongqing-bishan-1",
+        "cn-chongqing-chenjiaqiao-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 3.334,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5359,17 +5498,16 @@
       "to_station_id": "cn-chongqing-danzishi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 60,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-wulidian-环|loop_inner|full|",
+        "cn-chongqing-danzishi-环|loop_outer|full|"
+      ],
       "distance_km": 2.649,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 44.4,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-xiangjiagang-6-cn-chongqing-longfengxi-6",
@@ -5381,11 +5519,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 480,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xiangjiagang-6|cn-chongqing-beibei-6",
+        "cn-chongqing-longfengxi-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 8.7,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5397,17 +5538,16 @@
       "to_station_id": "cn-chongqing-jiangjin-high-speed-railway",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xiangtang-江跳|cn-chongqing-shengquansi-江跳",
+        "cn-chongqing-jiangjin-high-speed-railway-江跳|cn-chongqing-shengquansi-江跳"
+      ],
       "distance_km": 4.324,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 53.5,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-xiaolongkan-1-cn-chongqing-shapingba-1",
@@ -5459,11 +5599,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xiaoshizi-1|cn-chongqing-bishan-1",
+        "cn-chongqing-jiaochangkou-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 1.146,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5476,11 +5619,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xiaoshizi-6|cn-chongqing-beibei-6",
+        "cn-chongqing-grand-theater-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 1.242,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5512,20 +5658,16 @@
       "to_station_id": "cn-chongqing-olympic-sports-center",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xiejiawan-环|loop_inner|full|",
+        "cn-chongqing-olympic-sports-center-环|loop_inner|full|"
+      ],
       "distance_km": 1.565,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.1,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 165,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-xietaizi-1-cn-chongqing-shiqiaopu-1",
@@ -5536,12 +5678,15 @@
       "to_station_id": "cn-chongqing-shiqiaopu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xietaizi-1|cn-chongqing-bishan-1",
+        "cn-chongqing-shiqiaopu-1|cn-chongqing-bishan-1"
+      ],
       "distance_km": 1.528,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5554,11 +5699,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xietaizi-18|cn-chongqing-tiaodengnan-18",
+        "cn-chongqing-olympic-sports-center-18|cn-chongqing-tiaodengnan-18"
+      ],
       "distance_km": 1.728,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5570,12 +5718,15 @@
       "to_station_id": "cn-chongqing-shiqiaopu",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xietaizi-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-shiqiaopu-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.528,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5587,12 +5738,15 @@
       "to_station_id": "cn-chongqing-ranjiaba",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 420,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xingfu-square-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-ranjiaba-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 2.19,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5604,12 +5758,15 @@
       "to_station_id": "cn-chongqing-chunhua-ave",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xingke-ave-9|cn-chongqing-huashigou-9",
+        "cn-chongqing-chunhua-ave-9|cn-chongqing-huashigou-9"
+      ],
       "distance_km": 2.122,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5641,17 +5798,16 @@
       "to_station_id": "cn-chongqing-dashancun",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-xuetangwan-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-dashancun-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.647,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 36.4,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-yanggongqiao-1-cn-chongqing-lieshimu-1",
@@ -5723,11 +5879,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yanping-4|cn-chongqing-huangling-4",
+        "cn-chongqing-shiheqing-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 2.677,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5759,17 +5918,16 @@
       "to_station_id": "cn-chongqing-the-expo-garden",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yuanyang-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-the-expo-garden-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.521,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.6,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 360,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-yubei-square-10-cn-chongqing-lushan-10",
@@ -5780,12 +5938,15 @@
       "to_station_id": "cn-chongqing-lushan",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yubei-square-10|cn-chongqing-wangjiazhuang-10",
+        "cn-chongqing-lushan-10|cn-chongqing-wangjiazhuang-10"
+      ],
       "distance_km": 2.087,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5817,17 +5978,16 @@
       "to_station_id": "cn-chongqing-nanqiaosi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yudaishan-环|loop_inner|full|",
+        "cn-chongqing-nanqiaosi-环|loop_inner|full|"
+      ],
       "distance_km": 1.21,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.2,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-yudong-3-cn-chongqing-jinzhu-3",
@@ -5838,20 +5998,16 @@
       "to_station_id": "cn-chongqing-jinzhu",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yudong-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-jinzhu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.743,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.1,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 169,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-yuegang-ave-5-cn-chongqing-chunxuan-ave-5",
@@ -5863,11 +6019,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yuegang-ave-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-chunxuan-ave-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.228,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5943,12 +6102,15 @@
       "to_station_id": "cn-chongqing-the-expo-garden-center",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yuhegou-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-the-expo-garden-center-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 2.29,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -5960,20 +6122,16 @@
       "to_station_id": "cn-chongqing-xuetangwan",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yuhulu-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-xuetangwan-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 2.288,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 40,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 206,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-yulu-环-cn-chongqing-wulidian-环",
@@ -5984,20 +6142,16 @@
       "to_station_id": "cn-chongqing-wulidian",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-yulu-环|loop_inner|full|",
+        "cn-chongqing-wulidian-环|loop_inner|full|"
+      ],
       "distance_km": 1.322,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.9,
-        "a_s_per_km": 45.4,
-        "b_s": 94.3
-      },
-      "travel_time_seconds": 154,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-yuzui-4-cn-chongqing-yanping-4",
@@ -6048,12 +6202,15 @@
       "to_station_id": "cn-chongqing-niujiaotuo",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-zengjiayan-2|cn-chongqing-yudong-2",
+        "cn-chongqing-niujiaotuo-2|cn-chongqing-yudong-2"
+      ],
       "distance_km": 0.97,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -6065,20 +6222,16 @@
       "to_station_id": "cn-chongqing-tangjiayuanzi",
       "direction": "both",
       "source_id": "cqmetro-official",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-zhengjiayuanzi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3",
+        "cn-chongqing-tangjiayuanzi-3|cn-chongqing-terminal-2-of-jiangbei-airport-3"
+      ],
       "distance_km": 1.034,
       "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.5,
-        "a_s_per_km": 66.9,
-        "b_s": 52.5
-      },
-      "travel_time_seconds": 122,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "affine_time_model"
-      ]
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-chongqing-seg-cn-chongqing-zhongliangshan-5-cn-chongqing-jinjianlu-5",
@@ -6090,11 +6243,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-zhongliangshan-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-jinjianlu-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.898,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -6106,12 +6262,15 @@
       "to_station_id": "cn-chongqing-hongyancun",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-zhongshutuo-5|cn-chongqing-tiaodeng-5",
+        "cn-chongqing-hongyancun-5|cn-chongqing-tiaodeng-5"
+      ],
       "distance_km": 1.326,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -6124,11 +6283,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-zhuangyuanbei-6|cn-chongqing-beibei-6",
+        "cn-chongqing-southwest-university-6|cn-chongqing-beibei-6"
+      ],
       "distance_km": 2.805,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {

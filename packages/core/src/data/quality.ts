@@ -103,10 +103,14 @@ function precisionFromTransfer(t: {
   // Operator-published interchange times and route-planner waits are official.
   if (src.includes('interchange')) return 'official';
   if (src.includes('plantrip') || src.includes('mintime')) return 'official';
-  if (src.includes('searchstartend')) return 'derived';
   if (src.includes('baidu')) return 'official';
-  // A documented network average is still an operator value, but not a
-  // measured station-pair walk — count as derived.
+  // Baked network constants (`*-routing-default`, `mlm-transfer-default`,
+  // fixed 5-minute map fudge) are placeholders, not measurements — report
+  // them as unavailable so they cannot masquerade as derived coverage.
+  if (/default/i.test(src)) return 'default';
+  if (/map-transfer-5min|transfer-5min/.test(src)) return 'default';
+  if (src.includes('searchstartend')) return 'derived';
+  // Heuristic / modelled walks (auto-xfer name matching, averages).
   return 'derived';
 }
 

@@ -214,11 +214,15 @@ export function normalizeMacau(sources: MlmSources): MacauCanonical {
     if (lk) patternByLineKey.set(lk, p);
   }
 
-  const lineKeyOfZh = (zh: string): string => {
+  // Pick the line that serves BOTH endpoints. Interchanges (蓮花, 協和醫院)
+  // sit on Taipa + a shuttle; keying by fromZh alone dropped the shuttle rows.
+  const lineKeyOfPair = (fromZh: string, toZh: string): string | undefined => {
     for (const line of sources.lines) {
-      if (line.stationsZh.includes(zh)) return line.key;
+      if (line.stationsZh.includes(fromZh) && line.stationsZh.includes(toZh)) {
+        return line.key;
+      }
     }
-    return 'taipa';
+    return undefined;
   };
 
   const timetables: TimetableEncoded[] = [];
@@ -226,7 +230,8 @@ export function normalizeMacau(sources: MlmSources): MacauCanonical {
     const fromId = stationIdByZh.get(row.fromZh);
     const toId = stationIdByZh.get(row.toZh);
     if (!fromId || !toId) continue;
-    const lk = lineKeyOfZh(row.fromZh);
+    const lk = lineKeyOfPair(row.fromZh, row.toZh);
+    if (!lk) continue;
     const line = sources.lines.find((l) => l.key === lk);
     if (!line) continue;
     const order = line.stationsZh;

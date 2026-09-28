@@ -254,6 +254,10 @@ export function parseTimetableArticle(html: string): TimetableDaySection[] {
       .map((c) => c.trim())
       .filter((c) => /上行|下行|外环|内环/.test(c) && /[（(].*[)）]/.test(c));
 
+  /** Table-header cell `车站` — not station names that merely contain it (武汉火车站). */
+  const hasStationHeaderCell = (line: string) =>
+    line.split('|').some((c) => c.trim() === '车站');
+
   const lastDestsFromHeader = (headerLine: string): string[] => {
     const dests: string[] = [];
     const re = /终点站[:：]\s*([^)）|]+)/g;
@@ -302,7 +306,7 @@ export function parseTimetableArticle(html: string): TimetableDaySection[] {
     // Direction header row — may carry one or two headers on the same line,
     // or two consecutive single-header lines before the table body.
     const dCells = dirCells(line);
-    if (dCells.length > 0 && /上行|下行|外环|内环/.test(line) && !/车站/.test(line)) {
+    if (dCells.length > 0 && /上行|下行|外环|内环/.test(line) && !hasStationHeaderCell(line)) {
       const noRowsYet = activeDirs.every((d) => d.rows.length === 0);
       if (dCells.length >= 2) {
         activeDirs = dCells.map((h) => makeDir(h));
@@ -382,7 +386,7 @@ export function parseTimetableArticle(html: string): TimetableDaySection[] {
         // search for next station-like cell
         for (let split = leftWidth; split < rawCells.length; split++) {
           const c = rawCells[split] ?? '';
-          if (c && !isTimeLike(c) && !/^\d{1,2}$/.test(c) && !/车站/.test(c)) {
+          if (c && !isTimeLike(c) && !/^\d{1,2}$/.test(c) && c.trim() !== '车站') {
             const lc = rawCells.slice(0, split);
             const rc = rawCells.slice(split, split + rightWidth);
             emitDual(activeDirs, lc, rc, leftLastCount, rightLastCount);

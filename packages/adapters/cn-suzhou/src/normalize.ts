@@ -217,7 +217,9 @@ function parseMetroTimes(js: string): Map<string, TimeBlock[]> {
     let o: RegExpExecArray | null;
     while ((o = objRe.exec(rawBody)) !== null) {
       try {
-        const parsed = JSON.parse(o[0].replace(/(\w+):/g, '"$1":')) as {
+        const parsed = JSON.parse(
+          o[0].replace(/([{,]\s*)([A-Za-z_]\w*):/g, '$1"$2":')
+        ) as {
           Time?: Record<string, string>;
           lineID?: string;
         };
@@ -229,9 +231,15 @@ function parseMetroTimes(js: string): Map<string, TimeBlock[]> {
     out.set(id, blocks);
     // Also accept simplified parse via regex fields if JSON-ish parse failed
     if (blocks.length === 0) {
-      const lineID = /"lineID":"([^"]+)"/.exec(rawBody)?.[1] ?? '';
-      const grab = (k: string) => new RegExp(`"${k}":"([^"]*)"`).exec(rawBody)?.[1];
-      if (lineID) {
+      // Fallback: walk every `{...Time...}` fragment so multi-line interchange
+      // entries are not truncated to the first lineID.
+      const fragRe = /\{[^{}]*"Time":\{[^{}]*\}[^{}]*\}/g;
+      let f: RegExpExecArray | null;
+      while ((f = fragRe.exec(rawBody)) !== null) {
+        const frag = f[0];
+        const lineID = /"lineID":"([^"]+)"/.exec(frag)?.[1] ?? '';
+        if (!lineID) continue;
+        const grab = (k: string) => new RegExp(`"${k}":"([^"]*)"`).exec(frag)?.[1];
         blocks.push({
           lineID,
           down_begintime: grab('down_begintime'),
@@ -241,8 +249,8 @@ function parseMetroTimes(js: string): Map<string, TimeBlock[]> {
           downDirectionID: grab('downDirectionID'),
           upDirectionID: grab('upDirectionID')
         });
-        out.set(id, blocks);
       }
+      if (blocks.length > 0) out.set(id, blocks);
     }
   }
   return out;

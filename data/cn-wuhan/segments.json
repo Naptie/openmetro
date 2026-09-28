@@ -2,19 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-wuhan",
-  "generated_at": "2026-09-24T17:13:30.897Z",
-  "source": [
-    {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-09-24T17:13:30.897Z",
-      "license": "custom",
-      "license_url": null,
-      "attribution": "Baidu Maps",
-      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
-    }
-  ],
+  "generated_at": "2026-09-28T03:06:54.916Z",
+  "source": [],
   "records": [
     {
       "id": "cn-wuhan-seg-cn-wuhan-baibutinghuayuan-road-21-cn-wuhan-xinrong-21",
@@ -27,9 +16,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.691,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -43,13 +34,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.412,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1389
-      },
-      "distance_km": 1.389
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-baisha-6th-road-5-cn-wuhan-guangxia-5",
@@ -62,9 +52,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.09,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -78,13 +70,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.499,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2584
-      },
-      "distance_km": 2.584
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-banqiao-7-cn-wuhan-yezhihu-7",
@@ -97,13 +88,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.595,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1130
-      },
-      "distance_km": 1.13
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-baotong-temple-2-cn-wuhan-zhongnan-road-2",
@@ -116,9 +106,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.123,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -132,9 +124,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.073,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -148,9 +142,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.592,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -164,9 +160,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.485,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -180,13 +178,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.078,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2130
-      },
-      "distance_km": 2.13
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-canglong-east-street-2-cn-wuhan-xiuhu-2",
@@ -199,9 +196,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.451,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -215,13 +214,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.529,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2718
-      },
-      "distance_km": 2.718
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-changlingshan-11-cn-wuhan-weilai-1st-road-11",
@@ -234,9 +232,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.134,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -250,9 +250,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.397,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -266,13 +268,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.875,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1408
-      },
-      "distance_km": 1.408
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-changqing-huayuan-2-cn-wuhan-jinyintan-2",
@@ -285,9 +286,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.096,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -301,13 +304,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.86,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2135
-      },
-      "distance_km": 2.135
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-changqingcheng-2-cn-wuhan-hongtu-boulevard-2",
@@ -320,9 +322,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 2.524,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -336,9 +340,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.425,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -352,9 +358,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.128,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -368,9 +376,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.365,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -384,9 +394,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.053,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -400,13 +412,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.082,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2183
-      },
-      "distance_km": 2.183
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dahualing-7-cn-wuhan-jiangxiaketing-7",
@@ -419,9 +430,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.582,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -435,13 +448,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 4.202,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4429
-      },
-      "distance_km": 4.429
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-danshuichi-1-cn-wuhan-xuzhouxincun-1",
@@ -454,9 +466,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.518,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -470,13 +484,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.19,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1031
-      },
-      "distance_km": 1.031
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dazhi-road-6-cn-wuhan-jianghan-road-6",
@@ -489,13 +502,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.469,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1031
-      },
-      "distance_km": 1.031
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dijiao-1-cn-wuhan-xinrong-1",
@@ -508,13 +520,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.06,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1031
-      },
-      "distance_km": 1.031
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dingziqiao-11-cn-wuhan-mafangshan-11",
@@ -527,9 +538,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.837,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -543,13 +556,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.809,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1450
-      },
-      "distance_km": 1.45
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dongting-4-cn-wuhan-yuejiazui-4",
@@ -562,13 +574,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.965,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1033
-      },
-      "distance_km": 1.033
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-dongwu-boulevard-1-cn-wuhan-matoutan-park-1",
@@ -581,9 +592,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.883,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -597,9 +610,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.785,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -613,9 +628,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.179,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -629,9 +646,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.04,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -645,9 +664,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.409,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -661,13 +682,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.926,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 796
-      },
-      "distance_km": 0.796
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-erya-road-6-cn-wuhan-haikou-3rd-road-6",
@@ -680,9 +700,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.393,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -696,9 +718,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.632,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -712,13 +736,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.121,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 576
-      },
-      "distance_km": 0.576
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-fanhu-2-cn-wuhan-hankou-railway-station-2",
@@ -731,9 +754,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.044,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -747,9 +772,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.463,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -763,13 +790,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.422,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1454
-      },
-      "distance_km": 1.454
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-fenghuocun-5-cn-wuhan-bapu-street-5",
@@ -782,13 +808,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.237,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1247
-      },
-      "distance_km": 1.247
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-fenglin-16-cn-wuhan-dajunshan-16",
@@ -801,9 +826,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.924,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -817,9 +844,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.545,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -833,9 +862,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.987,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -849,9 +880,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.446,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -865,9 +898,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.417,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -881,9 +916,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.704,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -897,13 +934,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.746,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 599
-      },
-      "distance_km": 0.599
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gangkoucun-12-cn-wuhan-fangcao-road-12",
@@ -916,13 +952,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.16,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1766
-      },
-      "distance_km": 1.766
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gaoche-21-cn-wuhan-wuhu-21",
@@ -935,9 +970,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.132,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -951,13 +988,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.746,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1805
-      },
-      "distance_km": 1.805
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-garden-expo-north-6-cn-wuhan-polytechnic-university-6",
@@ -970,13 +1006,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.145,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2116
-      },
-      "distance_km": 2.116
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-garden-expo-north-7-cn-wuhan-garden-expo-7",
@@ -989,13 +1024,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.209,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2149
-      },
-      "distance_km": 2.149
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gongrencun-5-cn-wuhan-wugang-5",
@@ -1008,13 +1042,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.804,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1909
-      },
-      "distance_km": 1.909
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gongye-4th-road-4-cn-wuhan-yangchunhu-4",
@@ -1027,9 +1060,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.049,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1043,9 +1078,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 2.538,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1059,9 +1096,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.125,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1075,9 +1114,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.134,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1091,9 +1132,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.957,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1107,13 +1150,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.972,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 974
-      },
-      "distance_km": 0.974
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guanggu-6th-road-11-cn-wuhan-baoxie-11",
@@ -1126,9 +1168,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.047,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1142,13 +1186,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.786,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4945
-      },
-      "distance_km": 4.945
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guanggu-boulevard-2-cn-wuhan-huazhong-university-of-sci-and-tech-2",
@@ -1161,9 +1204,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.923,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1177,9 +1222,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.048,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1193,13 +1240,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.289,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3585
-      },
-      "distance_km": 3.585
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guangxia-5-cn-wuhan-zhangjiawan-5",
@@ -1212,13 +1258,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.882,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1883
-      },
-      "distance_km": 1.883
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guanshan-boulevard-11-cn-wuhan-wuhandong-railway-station-11",
@@ -1231,9 +1276,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.083,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1247,13 +1294,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 3.038,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3167
-      },
-      "distance_km": 3.167
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-gujiashan-19-cn-wuhan-huashanxincheng-19",
@@ -1266,13 +1312,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.62,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4379
-      },
-      "distance_km": 4.379
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-guoboxincheng-12-cn-wuhan-south-international-expo-center-12",
@@ -1285,9 +1330,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.871,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1301,9 +1348,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.433,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1317,9 +1366,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.516,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1333,9 +1384,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.9,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1349,9 +1402,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.79,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1365,9 +1420,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.314,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1381,13 +1438,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 480,
       "travel_time_source": "planner",
+      "distance_km": 4.362,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 6001
-      },
-      "distance_km": 6.001
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hankou-north-1-cn-wuhan-shekouxincheng-1",
@@ -1400,13 +1456,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.287,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3368
-      },
-      "distance_km": 3.368
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hankou-railway-station-2-cn-wuhan-changgang-road-2",
@@ -1419,9 +1474,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.555,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1435,9 +1492,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.819,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1451,9 +1510,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.983,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1467,9 +1528,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.303,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1483,9 +1546,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.581,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1499,9 +1564,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.076,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1515,13 +1582,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.334,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2282
-      },
-      "distance_km": 2.282
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-heping-park-5-cn-wuhan-honggangcheng-5",
@@ -1534,9 +1600,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.634,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1550,13 +1618,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.777,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1833
-      },
-      "distance_km": 1.833
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hongshan-road-8-cn-wuhan-xiaohongshan-8",
@@ -1569,9 +1636,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.371,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1585,9 +1654,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.142,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1601,9 +1672,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.067,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1617,13 +1690,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 3.752,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3980
-      },
-      "distance_km": 3.98
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hongtu-boulevard-8-cn-wuhan-tazihu-8",
@@ -1636,13 +1708,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.99,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2793
-      },
-      "distance_km": 2.793
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hongxia-5-cn-wuhan-huangjiahu-wuhan-university-of-sci-and-tech-5",
@@ -1655,13 +1726,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 1.352,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1288
-      },
-      "distance_km": 1.288
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-houhu-boulevard-21-cn-wuhan-baibutinghuayuan-road-21",
@@ -1674,9 +1744,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.178,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1690,9 +1762,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.411,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1706,9 +1780,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.084,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1722,9 +1798,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.311,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1738,13 +1816,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.732,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4234
-      },
-      "distance_km": 4.234
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huanglongshan-road-2-cn-wuhan-wuhandong-railway-station-2",
@@ -1757,9 +1834,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.07,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1773,9 +1852,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.913,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1789,13 +1870,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.259,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1195
-      },
-      "distance_km": 1.195
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huangpu-road-8-cn-wuhan-xujiapeng-8",
@@ -1808,9 +1888,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.186,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1824,13 +1906,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 6.31,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 6768
-      },
-      "distance_km": 6.768
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huashanxincheng-19-cn-wuhan-huashanhe-19",
@@ -1843,13 +1924,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.687,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2022
-      },
-      "distance_km": 2.022
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huazhong-university-of-sci-and-tech-2-cn-wuhan-luoxiong-road-2",
@@ -1862,9 +1942,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.902,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1878,9 +1960,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.119,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1894,9 +1978,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.037,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -1910,13 +1996,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.192,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1847
-      },
-      "distance_km": 1.847
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hubei-university-7-cn-wuhan-xinhe-street-7",
@@ -1929,13 +2014,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.067,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2126
-      },
-      "distance_km": 2.126
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hubei-university-of-chinese-mideicine-5-cn-wuhan-baisha-6th-road-5",
@@ -1948,13 +2032,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 2.877,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4859
-      },
-      "distance_km": 4.859
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hubei-university-of-technology-7-cn-wuhan-banqiao-7",
@@ -1967,13 +2050,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.041,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1080
-      },
-      "distance_km": 1.08
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huiji-2nd-road-3-cn-wuhan-zhaojiatiao-3",
@@ -1986,13 +2068,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.767,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 941
-      },
-      "distance_km": 0.941
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-hukou-11-cn-wuhan-tongji-hospital-11",
@@ -2005,13 +2086,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.719,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1715
-      },
-      "distance_km": 1.715
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-huquan-11-cn-wuhan-wuhan-sports-university-11",
@@ -2024,9 +2104,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.002,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2040,9 +2122,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.271,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2056,13 +2140,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.265,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2502
-      },
-      "distance_km": 2.502
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jiang-an-road-11-cn-wuhan-ziyanghu-11",
@@ -2075,13 +2158,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.256,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 765
-      },
-      "distance_km": 0.765
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jiangang-6-cn-wuhan-qianjincun-6",
@@ -2094,13 +2176,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.94,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1467
-      },
-      "distance_km": 1.467
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jiangcheng-boulevard-6-cn-wuhan-checheng-east-road-6",
@@ -2113,9 +2194,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.132,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2129,9 +2212,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.872,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2145,9 +2230,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.923,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2161,9 +2248,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.071,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2177,9 +2266,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.233,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2193,9 +2284,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.991,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2209,9 +2302,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 0.993,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2225,9 +2320,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.25,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2241,13 +2338,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.487,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1273
-      },
-      "distance_km": 1.273
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jinronggang-north-2-cn-wuhan-huanglongshan-road-2",
@@ -2260,13 +2356,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.95,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3174
-      },
-      "distance_km": 3.174
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jintan-road-8-cn-wuhan-hongtu-boulevard-8",
@@ -2279,9 +2374,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.97,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2295,9 +2392,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.695,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2311,13 +2410,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.317,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2450
-      },
-      "distance_km": 2.45
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jinyintan-2-cn-wuhan-changqingcheng-2",
@@ -2330,13 +2428,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.496,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2861
-      },
-      "distance_km": 2.861
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jixian-4-cn-wuhan-xintian-4",
@@ -2349,9 +2446,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.366,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2365,13 +2464,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 2.568,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3296
-      },
-      "distance_km": 3.296
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-jiyuqiao-5-cn-wuhan-sancenglou-5",
@@ -2384,9 +2482,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.068,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2400,13 +2500,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.037,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2061
-      },
-      "distance_km": 2.061
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-julong-boulevard-7-cn-wuhan-tangyunhai-road-7",
@@ -2419,9 +2518,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.017,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2435,9 +2536,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.014,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2451,9 +2554,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.23,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2467,13 +2572,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.881,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3580
-      },
-      "distance_km": 3.58
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-laoguancun-6-cn-wuhan-jiangcheng-boulevard-6",
@@ -2486,13 +2590,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 2.304,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4591
-      },
-      "distance_km": 4.591
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-liji-north-road-1-cn-wuhan-chongren-road-1",
@@ -2505,13 +2608,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.879,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 885
-      },
-      "distance_km": 0.885
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-lingjiaohu-3-cn-wuhan-xianggang-road-3",
@@ -2524,13 +2626,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.868,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1090
-      },
-      "distance_km": 1.09
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-linzhang-avenue-4-cn-wuhan-caidian-square-4",
@@ -2543,9 +2644,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.266,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2559,13 +2662,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.01,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 842
-      },
-      "distance_km": 0.842
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-liyuan-8-cn-wuhan-hubei-provincial-museum-and-hubei-daily-8",
@@ -2578,9 +2680,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.199,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2594,9 +2698,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.097,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2610,13 +2716,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.038,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1160
-      },
-      "distance_km": 1.16
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-luojiazhuang-3-cn-wuhan-erqi-branch-road-3",
@@ -2629,13 +2734,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.686,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 796
-      },
-      "distance_km": 0.796
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-luoxiong-road-2-cn-wuhan-optics-valley-square-2",
@@ -2648,9 +2752,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.575,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2664,13 +2770,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.971,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2321
-      },
-      "distance_km": 2.321
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-mafangshan-11-cn-wuhan-huquan-11",
@@ -2683,9 +2788,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.154,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2699,9 +2806,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.608,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2715,13 +2824,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.316,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1130
-      },
-      "distance_km": 1.13
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-matoutan-park-1-cn-wuhan-sandian-1",
@@ -2734,13 +2842,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.951,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1998
-      },
-      "distance_km": 1.998
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-matoutan-park-6-cn-wuhan-five-rings-sports-center-6",
@@ -2753,9 +2860,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.295,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2769,9 +2878,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.427,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2785,9 +2896,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.353,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2801,9 +2914,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.983,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2817,9 +2932,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.447,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2833,9 +2950,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.846,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2849,9 +2968,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.458,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2865,9 +2986,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.243,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2881,13 +3004,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.948,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1482
-      },
-      "distance_km": 1.482
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-optics-valley-square-11-cn-wuhan-guanshan-boulevard-11",
@@ -2900,9 +3022,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.71,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2916,9 +3040,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.556,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2932,9 +3058,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.221,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2948,9 +3076,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.93,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2964,9 +3094,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.376,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2980,9 +3112,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.665,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -2996,9 +3130,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.774,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3012,13 +3148,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.478,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 963
-      },
-      "distance_km": 0.963
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-qiaokou-road-1-cn-wuhan-taipingyang-1",
@@ -3031,9 +3166,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.969,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3047,9 +3184,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.994,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3063,13 +3202,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.998,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2280
-      },
-      "distance_km": 2.28
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-qingnianlu-2-cn-wuhan-wangjiadun-east-2",
@@ -3082,9 +3220,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.954,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3098,9 +3238,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.339,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3114,9 +3256,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.923,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3130,13 +3274,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 540,
       "travel_time_source": "planner",
+      "distance_km": 9.593,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 10675
-      },
-      "distance_km": 10.675
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-qintai-6-cn-wuhan-zhongjiacun-6",
@@ -3149,9 +3292,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.92,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3165,13 +3310,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.016,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1376
-      },
-      "distance_km": 1.376
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-qushuilou-7-cn-wuhan-xianggang-road-7",
@@ -3184,13 +3328,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.285,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1090
-      },
-      "distance_km": 1.09
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-renhe-road-4-cn-wuhan-gongye-4th-road-4",
@@ -3203,9 +3346,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.634,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3219,9 +3364,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 1.839,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3235,9 +3382,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.39,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3251,13 +3400,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.676,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1691
-      },
-      "distance_km": 1.691
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sandian-1-cn-wuhan-jinghe-1",
@@ -3270,9 +3418,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.112,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3286,9 +3436,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.027,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3302,9 +3454,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.544,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3318,13 +3472,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.911,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1164
-      },
-      "distance_km": 1.164
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sanyang-road-7-cn-wuhan-xujiapeng-7",
@@ -3337,13 +3490,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.155,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3435
-      },
-      "distance_km": 3.435
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sanyanqiao-6-cn-wuhan-xianggang-road-6",
@@ -3356,9 +3508,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.033,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3372,13 +3526,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.36,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1238
-      },
-      "distance_km": 1.238
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shakou-21-cn-wuhan-junmincun-21",
@@ -3391,13 +3544,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 3.586,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4805
-      },
-      "distance_km": 4.805
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shamao-16-cn-wuhan-tonghang-airport-16",
@@ -3410,13 +3562,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.567,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1572
-      },
-      "distance_km": 1.572
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shekouxincheng-1-cn-wuhan-tengzigang-1",
@@ -3429,13 +3580,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.118,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1099
-      },
-      "distance_km": 1.099
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shenjiaji-21-cn-wuhan-qinglung-21",
@@ -3448,13 +3598,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 2.915,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3201
-      },
-      "distance_km": 3.201
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shigang-21-cn-wuhan-jintai-21",
@@ -3467,13 +3616,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.926,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1956
-      },
-      "distance_km": 1.956
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shilipu-4-cn-wuhan-qilimiao-4",
@@ -3486,9 +3634,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.164,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3502,9 +3652,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.554,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3518,9 +3670,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.828,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3534,13 +3688,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.87,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3071
-      },
-      "distance_km": 3.071
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-shuiguohu-8-cn-wuhan-hongshan-road-8",
@@ -3553,13 +3706,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.749,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1293
-      },
-      "distance_km": 1.293
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-simenkou-and-yellow-crane-tower-5-cn-wuhan-tanhualin-and-wushengmen-5",
@@ -3572,13 +3724,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.854,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 860
-      },
-      "distance_km": 0.86
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sixin-boulevard-3-cn-wuhan-taojialing-3",
@@ -3591,9 +3742,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.344,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3607,9 +3760,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.138,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3623,9 +3778,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.277,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3639,9 +3796,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.414,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3655,13 +3814,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.876,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3719
-      },
-      "distance_km": 3.719
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-south-international-expo-center-16-cn-wuhan-laoguancun-16",
@@ -3674,13 +3832,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.593,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 795
-      },
-      "distance_km": 0.795
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-south-international-expo-center-6-cn-wuhan-laoguancun-6",
@@ -3693,13 +3850,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.593,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 795
-      },
-      "distance_km": 0.795
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-south-taizihu-16-cn-wuhan-zhuankou-16",
@@ -3712,13 +3868,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.172,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2211
-      },
-      "distance_km": 2.211
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-sports-center-3-cn-wuhan-sanjiaohu-3",
@@ -3731,9 +3886,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.432,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3747,13 +3904,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.663,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1544
-      },
-      "distance_km": 1.544
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tangjiadun-6-cn-wuhan-sanyanqiao-6",
@@ -3766,9 +3922,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.92,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3782,13 +3940,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 5.058,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 5143
-      },
-      "distance_km": 5.143
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tanhualin-and-wushengmen-5-cn-wuhan-jiyuqiao-5",
@@ -3801,13 +3958,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.851,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1065
-      },
-      "distance_km": 1.065
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tanxinpei-park-7-cn-wuhan-beihua-street-7",
@@ -3820,9 +3976,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.391,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3836,13 +3994,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.917,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 847
-      },
-      "distance_km": 0.847
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tazihu-8-cn-wuhan-zhongyi-road-8",
@@ -3855,9 +4012,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.413,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3871,9 +4030,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.897,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3887,13 +4048,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.011,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2202
-      },
-      "distance_km": 2.202
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tianyang-avenue-7-cn-wuhan-tenglong-avenue-7",
@@ -3906,13 +4066,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 4.301,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4427
-      },
-      "distance_km": 4.427
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tieji-road-4-cn-wuhan-luojiagang-4",
@@ -3925,13 +4084,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.022,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1190
-      },
-      "distance_km": 1.19
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tongji-hospital-11-cn-wuhan-guanggu-shengwuyuan-11",
@@ -3944,9 +4102,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.444,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -3960,13 +4120,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.183,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 947
-      },
-      "distance_km": 0.947
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-tuanjie-boulevard-12-cn-wuhan-yuanlin-road-12",
@@ -3979,13 +4138,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.646,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2350
-      },
-      "distance_km": 2.35
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wangjiadun-12-cn-wuhan-tuanjie-boulevard-12",
@@ -3998,13 +4156,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.517,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2006
-      },
-      "distance_km": 2.006
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wangjiadun-8-cn-wuhan-yuejiazui-8",
@@ -4017,9 +4174,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.452,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4033,9 +4192,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.513,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4049,9 +4210,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.151,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4065,13 +4228,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 2.46,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3815
-      },
-      "distance_km": 3.815
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wangjiawan-4-cn-wuhan-shilipu-4",
@@ -4084,9 +4246,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.925,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4100,13 +4264,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.402,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4946
-      },
-      "distance_km": 4.946
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-weilai-1st-road-11-cn-wuhan-future-3rd-road-11",
@@ -4119,9 +4282,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.009,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4135,9 +4300,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.202,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4151,9 +4318,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.633,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4167,13 +4336,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 360,
       "travel_time_source": "planner",
+      "distance_km": 4.401,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4964
-      },
-      "distance_km": 4.964
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuchang-railway-station-4-cn-wuhan-meiyuanxiaoqu-4",
@@ -4186,9 +4354,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.93,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4202,13 +4372,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.582,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1195
-      },
-      "distance_km": 1.195
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wudong-19-cn-wuhan-gujiashan-19",
@@ -4221,13 +4390,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 2.921,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3537
-      },
-      "distance_km": 3.537
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wugang-5-cn-wuhan-changqian-5",
@@ -4240,9 +4408,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.884,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4256,13 +4426,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.512,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1449
-      },
-      "distance_km": 1.449
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhan-bioengineering-institute-21-cn-wuhan-yangluo-21",
@@ -4275,13 +4444,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.671,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2777
-      },
-      "distance_km": 2.777
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhan-business-district-3-cn-wuhan-yunfei-road-3",
@@ -4294,13 +4462,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.982,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 926
-      },
-      "distance_km": 0.926
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhan-business-district-7-cn-wuhan-wangjiadun-east-7",
@@ -4313,13 +4480,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.614,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2561
-      },
-      "distance_km": 2.561
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhan-sports-university-11-cn-wuhan-optics-valley-square-11",
@@ -4332,9 +4498,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.229,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4348,9 +4516,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.631,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4364,9 +4534,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.455,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4380,13 +4552,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 4.571,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4565
-      },
-      "distance_km": 4.565
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-wuhuan-boulevard-1-cn-wuhan-dongwu-boulevard-1",
@@ -4399,9 +4570,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.278,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4415,9 +4588,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.152,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4431,9 +4606,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.348,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4447,13 +4624,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.07,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 771
-      },
-      "distance_km": 0.771
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xianggang-road-6-cn-wuhan-miaoli-road-6",
@@ -4466,9 +4642,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.87,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4482,9 +4660,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.744,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4498,13 +4678,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.611,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1299
-      },
-      "distance_km": 1.299
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xiaoguishan-2-cn-wuhan-pangxiejia-2",
@@ -4517,9 +4696,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.901,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4533,9 +4714,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.008,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4549,13 +4732,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.141,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2119
-      },
-      "distance_km": 2.119
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xiezihe-16-cn-wuhan-wanhu-16",
@@ -4568,13 +4750,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.564,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1374
-      },
-      "distance_km": 1.374
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xincheng-11th-road-6-cn-wuhan-matoutan-park-6",
@@ -4587,9 +4768,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.364,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4603,13 +4786,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.16,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3208
-      },
-      "distance_km": 3.208
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xingye-road-3-cn-wuhan-houhu-boulevard-3",
@@ -4622,9 +4804,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.018,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4638,9 +4822,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.027,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4654,9 +4840,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.258,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4670,9 +4858,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.045,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4686,9 +4876,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.676,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4702,13 +4894,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.602,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2595
-      },
-      "distance_km": 2.595
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xinrong-21-cn-wuhan-xingfuwan-21",
@@ -4721,13 +4912,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.944,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1031
-      },
-      "distance_km": 1.031
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xintian-4-cn-wuhan-huangjinkou-4",
@@ -4740,13 +4930,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 2.25,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2735
-      },
-      "distance_km": 2.735
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xiuhu-2-cn-wuhan-jinronggang-north-2",
@@ -4759,9 +4948,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.582,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4775,9 +4966,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.483,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4791,9 +4984,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.617,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4807,9 +5002,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.215,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4823,9 +5020,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.355,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4839,13 +5038,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.873,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1057
-      },
-      "distance_km": 1.057
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xunlimen-2-cn-wuhan-zhongshan-park-2",
@@ -4858,13 +5056,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.31,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1057
-      },
-      "distance_km": 1.057
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-xuzhouxincun-1-cn-wuhan-erqilu-1",
@@ -4877,9 +5074,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.792,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4893,9 +5092,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.701,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4909,13 +5110,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.802,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1053
-      },
-      "distance_km": 1.053
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yangjiawan-2-cn-wuhan-huquan-2",
@@ -4928,9 +5128,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.423,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4944,13 +5146,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.425,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1466
-      },
-      "distance_km": 1.466
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yangluo-development-zone-21-cn-wuhan-shigang-21",
@@ -4963,13 +5164,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.21,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3209
-      },
-      "distance_km": 3.209
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yangyuan-and-tiesiyuan-5-cn-wuhan-yujiatou-5",
@@ -4982,9 +5182,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.284,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -4998,13 +5200,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.152,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 2520
-      },
-      "distance_km": 2.52
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yezhihu-8-cn-wuhan-huangjiahu-ditiexiaozhen-8",
@@ -5017,13 +5218,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
+      "distance_km": 3.386,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 4939
-      },
-      "distance_km": 4.939
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yongantang-4-cn-wuhan-yulong-road-4",
@@ -5036,9 +5236,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.214,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5052,13 +5254,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.881,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1346
-      },
-      "distance_km": 1.346
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yuanlin-road-12-cn-wuhan-gangduhuayuan-12",
@@ -5071,9 +5272,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.556,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5087,9 +5290,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.185,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5103,13 +5308,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 1.002,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1137
-      },
-      "distance_km": 1.137
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-yuejiazui-8-cn-wuhan-liyuan-8",
@@ -5122,9 +5326,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 0.813,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5138,9 +5344,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.38,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5154,9 +5362,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.629,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5170,9 +5380,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.897,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5186,9 +5398,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.902,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5202,9 +5416,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.583,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5218,13 +5434,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.92,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 682
-      },
-      "distance_km": 0.682
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhaojiatiao-8-cn-wuhan-huangpu-road-8",
@@ -5237,13 +5452,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.494,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 1454
-      },
-      "distance_km": 1.454
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhifang-avenue-7-cn-wuhan-qinglongshan-ditiexiaozhen-7",
@@ -5256,13 +5470,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.028,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3122
-      },
-      "distance_km": 3.122
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhiyin-4-cn-wuhan-jixian-4",
@@ -5275,13 +5488,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.104,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3487
-      },
-      "distance_km": 3.487
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhongjiacun-4-cn-wuhan-lanjiang-road-4",
@@ -5294,13 +5506,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.759,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 964
-      },
-      "distance_km": 0.964
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhongjiacun-6-cn-wuhan-maying-road-6",
@@ -5313,13 +5524,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.269,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 880
-      },
-      "distance_km": 0.88
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhongnan-hospital-8-cn-wuhan-shuiguohu-8",
@@ -5332,9 +5542,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.166,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5348,9 +5560,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.923,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5364,9 +5578,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.923,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5380,9 +5596,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.882,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5396,9 +5614,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.719,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5412,13 +5632,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 3.163,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3228
-      },
-      "distance_km": 3.228
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhuankou-16-cn-wuhan-xiaojunshan-16",
@@ -5431,13 +5650,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 360,
       "travel_time_source": "planner",
+      "distance_km": 7.79,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 7988
-      },
-      "distance_km": 7.988
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhuanyang-boulevard-3-cn-wuhan-dongfeng-motor-corporation-3",
@@ -5450,9 +5668,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.469,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5466,9 +5686,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.909,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5482,13 +5704,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.847,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 948
-      },
-      "distance_km": 0.948
+        "distance_source": "haversine"
+      }
     },
     {
       "id": "cn-wuhan-seg-cn-wuhan-zhuyeshan-8-cn-wuhan-zhaojiatiao-8",
@@ -5501,9 +5722,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 1.264,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5517,9 +5740,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 2.021,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5533,9 +5758,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
+      "distance_km": 0.824,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5549,9 +5776,11 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
+      "distance_km": 0.977,
       "extras": {
         "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime"
+        "planner_time_source": "lmap-route-mintime",
+        "distance_source": "haversine"
       }
     },
     {
@@ -5565,13 +5794,12 @@
       "source_id": "wuhanrt-helios",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
+      "distance_km": 3.836,
       "extras": {
         "planner_source": "route",
         "planner_time_source": "lmap-route-mintime",
-        "distance_source": "baidu_path",
-        "distance_meters": 3864
-      },
-      "distance_km": 3.864
+        "distance_source": "haversine"
+      }
     }
   ]
 }
