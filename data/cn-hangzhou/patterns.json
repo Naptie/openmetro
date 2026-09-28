@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-hangzhou",
-  "generated_at": "2026-09-22T19:30:48.988Z",
+  "generated_at": "2026-09-28T09:55:49.662Z",
   "source": [],
   "records": [
     {
@@ -68,7 +68,7 @@
       }
     },
     {
-      "id": "cn-hangzhou-line-10-pattern-huanglong-sports-center-10-to-yisheng-road-10",
+      "id": "cn-hangzhou-line-10-pattern-yisheng-road-10-to-huanglong-sports-center-10",
       "line_id": "cn-hangzhou-line-10",
       "name": "10号线",
       "names": {
@@ -76,21 +76,21 @@
         "en": "Line 10"
       },
       "stop_ids": [
-        "cn-hangzhou-huanglong-sports-center-10",
-        "cn-hangzhou-wensan-road-10",
-        "cn-hangzhou-xueyuan-road-10",
-        "cn-hangzhou-cuibai-road-10",
-        "cn-hangzhou-beida-bridge-10",
-        "cn-hangzhou-hemu-10",
-        "cn-hangzhou-huayuangang-10",
-        "cn-hangzhou-dujiaqiao-10",
-        "cn-hangzhou-xiangyuan-road-10",
-        "cn-hangzhou-hangxing-road-10",
+        "cn-hangzhou-yisheng-road-10",
         "cn-hangzhou-jinde-road-10",
-        "cn-hangzhou-yisheng-road-10"
+        "cn-hangzhou-hangxing-road-10",
+        "cn-hangzhou-xiangyuan-road-10",
+        "cn-hangzhou-dujiaqiao-10",
+        "cn-hangzhou-huayuangang-10",
+        "cn-hangzhou-hemu-10",
+        "cn-hangzhou-beida-bridge-10",
+        "cn-hangzhou-cuibai-road-10",
+        "cn-hangzhou-xueyuan-road-10",
+        "cn-hangzhou-wensan-road-10",
+        "cn-hangzhou-huanglong-sports-center-10"
       ],
-      "origin_stop_id": "cn-hangzhou-huanglong-sports-center-10",
-      "terminal_stop_id": "cn-hangzhou-yisheng-road-10",
+      "origin_stop_id": "cn-hangzhou-yisheng-road-10",
+      "terminal_stop_id": "cn-hangzhou-huanglong-sports-center-10",
       "is_primary": true,
       "source_ids": [
         {
@@ -99,18 +99,17 @@
         }
       ],
       "extras": {
-        "direction_title": "往逸盛路方向",
-        "dest_name": "逸盛路",
-        "origin_name": "黄龙体育中心",
-        "terminal_name": "逸盛路",
+        "direction_title": "往黄龙体育中心方向",
+        "dest_name": "黄龙体育中心",
+        "origin_name": "逸盛路",
+        "terminal_name": "黄龙体育中心",
         "source_key": "10号线",
         "line_short_name": "10",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-10-pattern-yisheng-road-10-to-huanglong-sports-center-10"
+        "pattern_role": "direction"
       }
     },
     {
-      "id": "cn-hangzhou-line-16-pattern-jiuzhou-street-16-to-lvting-lu-16",
+      "id": "cn-hangzhou-line-16-pattern-lvting-lu-16-to-jiuzhou-street-16",
       "line_id": "cn-hangzhou-line-16",
       "name": "16号线",
       "names": {
@@ -118,21 +117,21 @@
         "en": "Line 16"
       },
       "stop_ids": [
-        "cn-hangzhou-jiuzhou-street-16",
-        "cn-hangzhou-linan-square-16",
-        "cn-hangzhou-zhejiang-aandf-university-16",
-        "cn-hangzhou-qingshanhu-16",
-        "cn-hangzhou-babaili-16",
-        "cn-hangzhou-qingshanhu-sci-tech-city-16",
-        "cn-hangzhou-nanfeng-16",
-        "cn-hangzhou-nanhu-16",
-        "cn-hangzhou-zhongtai-16",
-        "cn-hangzhou-yuhang-road-16",
+        "cn-hangzhou-lvting-lu-16",
         "cn-hangzhou-fengxin-road-16",
-        "cn-hangzhou-lvting-lu-16"
+        "cn-hangzhou-yuhang-road-16",
+        "cn-hangzhou-zhongtai-16",
+        "cn-hangzhou-nanhu-16",
+        "cn-hangzhou-nanfeng-16",
+        "cn-hangzhou-qingshanhu-sci-tech-city-16",
+        "cn-hangzhou-babaili-16",
+        "cn-hangzhou-qingshanhu-16",
+        "cn-hangzhou-zhejiang-aandf-university-16",
+        "cn-hangzhou-linan-square-16",
+        "cn-hangzhou-jiuzhou-street-16"
       ],
-      "origin_stop_id": "cn-hangzhou-jiuzhou-street-16",
-      "terminal_stop_id": "cn-hangzhou-lvting-lu-16",
+      "origin_stop_id": "cn-hangzhou-lvting-lu-16",
+      "terminal_stop_id": "cn-hangzhou-jiuzhou-street-16",
       "is_primary": true,
       "source_ids": [
         {
@@ -141,18 +140,17 @@
         }
       ],
       "extras": {
-        "direction_title": "往绿汀路方向",
-        "dest_name": "绿汀路",
-        "origin_name": "九州街",
-        "terminal_name": "绿汀路",
+        "direction_title": "往九州街方向",
+        "dest_name": "九州街",
+        "origin_name": "绿汀路",
+        "terminal_name": "九州街",
         "source_key": "16号线",
         "line_short_name": "16",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-16-pattern-lvting-lu-16-to-jiuzhou-street-16"
+        "pattern_role": "direction"
       }
     },
     {
-      "id": "cn-hangzhou-line-19-pattern-west-railway-station-19-to-yongsheng-road-19",
+      "id": "cn-hangzhou-line-19-pattern-yongsheng-road-19-to-west-railway-station-19",
       "line_id": "cn-hangzhou-line-19",
       "name": "19号线",
       "names": {
@@ -160,26 +158,26 @@
         "en": "Line 19"
       },
       "stop_ids": [
-        "cn-hangzhou-west-railway-station-19",
-        "cn-hangzhou-chuangjing-road-19",
-        "cn-hangzhou-haichuangyuan-19",
-        "cn-hangzhou-jingchang-lu-19",
-        "cn-hangzhou-north-xixi-wetland-19",
-        "cn-hangzhou-wulian-19",
-        "cn-hangzhou-wensan-road-19",
-        "cn-hangzhou-shentangqiao-19",
-        "cn-hangzhou-west-lake-cultural-square-19",
-        "cn-hangzhou-yicheng-lu-19",
-        "cn-hangzhou-east-railway-station-east-square-19",
-        "cn-hangzhou-yudao-19",
-        "cn-hangzhou-pinglan-road-19",
-        "cn-hangzhou-gengwen-road-19",
-        "cn-hangzhou-zhixing-road-19",
+        "cn-hangzhou-yongsheng-road-19",
         "cn-hangzhou-xiaoshan-international-airport-19",
-        "cn-hangzhou-yongsheng-road-19"
+        "cn-hangzhou-zhixing-road-19",
+        "cn-hangzhou-gengwen-road-19",
+        "cn-hangzhou-pinglan-road-19",
+        "cn-hangzhou-yudao-19",
+        "cn-hangzhou-east-railway-station-east-square-19",
+        "cn-hangzhou-yicheng-lu-19",
+        "cn-hangzhou-west-lake-cultural-square-19",
+        "cn-hangzhou-shentangqiao-19",
+        "cn-hangzhou-wensan-road-19",
+        "cn-hangzhou-wulian-19",
+        "cn-hangzhou-north-xixi-wetland-19",
+        "cn-hangzhou-jingchang-lu-19",
+        "cn-hangzhou-haichuangyuan-19",
+        "cn-hangzhou-chuangjing-road-19",
+        "cn-hangzhou-west-railway-station-19"
       ],
-      "origin_stop_id": "cn-hangzhou-west-railway-station-19",
-      "terminal_stop_id": "cn-hangzhou-yongsheng-road-19",
+      "origin_stop_id": "cn-hangzhou-yongsheng-road-19",
+      "terminal_stop_id": "cn-hangzhou-west-railway-station-19",
       "is_primary": true,
       "source_ids": [
         {
@@ -188,18 +186,17 @@
         }
       ],
       "extras": {
-        "direction_title": "往永盛路方向",
-        "dest_name": "永盛路",
-        "origin_name": "火车西站",
-        "terminal_name": "永盛路",
+        "direction_title": "往火车西站方向",
+        "dest_name": "火车西站",
+        "origin_name": "永盛路",
+        "terminal_name": "火车西站",
         "source_key": "19号线",
         "line_short_name": "19",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-19-pattern-yongsheng-road-19-to-west-railway-station-19"
+        "pattern_role": "direction"
       }
     },
     {
-      "id": "cn-hangzhou-line-2-pattern-chaoyang-2-to-liangzhu-2",
+      "id": "cn-hangzhou-line-2-pattern-liangzhu-2-to-chaoyang-2",
       "line_id": "cn-hangzhou-line-2",
       "name": "2号线",
       "names": {
@@ -207,42 +204,42 @@
         "en": "Line 2"
       },
       "stop_ids": [
-        "cn-hangzhou-chaoyang-2",
-        "cn-hangzhou-caojiaqiao-2",
-        "cn-hangzhou-panshui-2",
-        "cn-hangzhou-renmin-road-2",
-        "cn-hangzhou-hangfachang-2",
-        "cn-hangzhou-peoples-square-2",
-        "cn-hangzhou-jiansheyi-road-2",
-        "cn-hangzhou-jianshesan-road-2",
-        "cn-hangzhou-zhenning-road-2",
-        "cn-hangzhou-feihong-road-2",
-        "cn-hangzhou-yingfeng-road-2",
-        "cn-hangzhou-qianjiang-century-city-2",
-        "cn-hangzhou-qianjiang-road-2",
-        "cn-hangzhou-qingchun-square-2",
-        "cn-hangzhou-qingling-road-2",
-        "cn-hangzhou-north-jianguo-road-2",
-        "cn-hangzhou-north-zhonghe-road-2",
-        "cn-hangzhou-fengqi-road-2",
-        "cn-hangzhou-wulinmen-2",
-        "cn-hangzhou-shentangqiao-2",
-        "cn-hangzhou-xianing-bridge-2",
-        "cn-hangzhou-xueyuan-road-2",
-        "cn-hangzhou-gucui-road-2",
-        "cn-hangzhou-fengtan-road-2",
-        "cn-hangzhou-wenxin-2",
-        "cn-hangzhou-sanba-2",
-        "cn-hangzhou-xialongwei-2",
-        "cn-hangzhou-sandun-2",
-        "cn-hangzhou-dunxiang-street-2",
-        "cn-hangzhou-jinjiadu-2",
-        "cn-hangzhou-baiyang-2",
+        "cn-hangzhou-liangzhu-2",
         "cn-hangzhou-dufucun-2",
-        "cn-hangzhou-liangzhu-2"
+        "cn-hangzhou-baiyang-2",
+        "cn-hangzhou-jinjiadu-2",
+        "cn-hangzhou-dunxiang-street-2",
+        "cn-hangzhou-sandun-2",
+        "cn-hangzhou-xialongwei-2",
+        "cn-hangzhou-sanba-2",
+        "cn-hangzhou-wenxin-2",
+        "cn-hangzhou-fengtan-road-2",
+        "cn-hangzhou-gucui-road-2",
+        "cn-hangzhou-xueyuan-road-2",
+        "cn-hangzhou-xianing-bridge-2",
+        "cn-hangzhou-shentangqiao-2",
+        "cn-hangzhou-wulinmen-2",
+        "cn-hangzhou-fengqi-road-2",
+        "cn-hangzhou-north-zhonghe-road-2",
+        "cn-hangzhou-north-jianguo-road-2",
+        "cn-hangzhou-qingling-road-2",
+        "cn-hangzhou-qingchun-square-2",
+        "cn-hangzhou-qianjiang-road-2",
+        "cn-hangzhou-qianjiang-century-city-2",
+        "cn-hangzhou-yingfeng-road-2",
+        "cn-hangzhou-feihong-road-2",
+        "cn-hangzhou-zhenning-road-2",
+        "cn-hangzhou-jianshesan-road-2",
+        "cn-hangzhou-jiansheyi-road-2",
+        "cn-hangzhou-peoples-square-2",
+        "cn-hangzhou-hangfachang-2",
+        "cn-hangzhou-renmin-road-2",
+        "cn-hangzhou-panshui-2",
+        "cn-hangzhou-caojiaqiao-2",
+        "cn-hangzhou-chaoyang-2"
       ],
-      "origin_stop_id": "cn-hangzhou-chaoyang-2",
-      "terminal_stop_id": "cn-hangzhou-liangzhu-2",
+      "origin_stop_id": "cn-hangzhou-liangzhu-2",
+      "terminal_stop_id": "cn-hangzhou-chaoyang-2",
       "is_primary": true,
       "source_ids": [
         {
@@ -251,18 +248,17 @@
         }
       ],
       "extras": {
-        "direction_title": "往良渚方向",
-        "dest_name": "良渚",
-        "origin_name": "朝阳",
-        "terminal_name": "良渚",
+        "direction_title": "往朝阳方向",
+        "dest_name": "朝阳",
+        "origin_name": "良渚",
+        "terminal_name": "朝阳",
         "source_key": "2号线",
         "line_short_name": "2",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-2-pattern-liangzhu-2-to-chaoyang-2"
+        "pattern_role": "direction"
       }
     },
     {
-      "id": "cn-hangzhou-line-3-pattern-south-xixi-wetland-3-to-shima-3",
+      "id": "cn-hangzhou-line-3-pattern-shima-3-to-dingqiao-3",
       "line_id": "cn-hangzhou-line-3",
       "name": "3号线（星桥-石马）",
       "names": {
@@ -270,14 +266,14 @@
         "en": "Line 3 (星桥-石马)"
       },
       "stop_ids": [
-        "cn-hangzhou-south-xixi-wetland-3",
-        "cn-hangzhou-liuxia-3",
-        "cn-hangzhou-pingfeng-3",
+        "cn-hangzhou-shima-3",
         "cn-hangzhou-xiaoheshan-3",
-        "cn-hangzhou-shima-3"
+        "cn-hangzhou-pingfeng-3",
+        "cn-hangzhou-liuxia-3",
+        "cn-hangzhou-south-xixi-wetland-3"
       ],
-      "origin_stop_id": "cn-hangzhou-south-xixi-wetland-3",
-      "terminal_stop_id": "cn-hangzhou-shima-3",
+      "origin_stop_id": "cn-hangzhou-shima-3",
+      "terminal_stop_id": "cn-hangzhou-south-xixi-wetland-3",
       "is_primary": false,
       "source_ids": [
         {
@@ -286,23 +282,19 @@
         }
       ],
       "extras": {
-        "direction_title": "往星桥方向",
-        "dest_name": "星桥",
+        "direction_title": "往丁桥方向",
+        "dest_name": "丁桥",
         "origin_name": "石马",
-        "terminal_name": "星桥",
+        "terminal_name": "丁桥",
         "branch": "星桥-石马",
         "source_key": "3号线（星桥-石马）",
         "line_short_name": "3",
-        "pattern_role": "branch",
-        "reverse_of": "cn-hangzhou-line-3-pattern-xingqiao-3-to-shima-3",
-        "stub_of": "cn-hangzhou-line-3-pattern-shima-3-to-xingqiao-3",
-        "stubbed_from_n": 28,
-        "junction_index_in_source": 4
+        "pattern_role": "branch"
       },
       "junction_stop_id": "cn-hangzhou-south-xixi-wetland-3"
     },
     {
-      "id": "cn-hangzhou-line-3-pattern-wushanqiancun-3-to-xingqiao-3",
+      "id": "cn-hangzhou-line-3-pattern-xingqiao-3-to-wushanqiancun-3",
       "line_id": "cn-hangzhou-line-3",
       "name": "3号线（星桥-吴山前村）",
       "names": {
@@ -310,44 +302,44 @@
         "en": "Line 3 (星桥-吴山前村)"
       },
       "stop_ids": [
-        "cn-hangzhou-wushanqiancun-3",
-        "cn-hangzhou-tangjiacun-3",
-        "cn-hangzhou-west-railway-station-3",
-        "cn-hangzhou-north-longzhou-road-3",
-        "cn-hangzhou-west-wenyi-road-3",
-        "cn-hangzhou-lvting-lu-3",
-        "cn-hangzhou-chuangming-road-3",
-        "cn-hangzhou-quanfeng-3",
-        "cn-hangzhou-gaojiao-road-3",
-        "cn-hangzhou-liansheng-road-3",
-        "cn-hangzhou-hongyuan-3",
-        "cn-hangzhou-south-xixi-wetland-3",
-        "cn-hangzhou-huawu-3",
-        "cn-hangzhou-dongyue-3",
-        "cn-hangzhou-gudun-road-3",
-        "cn-hangzhou-gudang-xincun-3",
-        "cn-hangzhou-gudang-3",
-        "cn-hangzhou-huanglong-sports-center-3",
-        "cn-hangzhou-huanglong-cave-3",
-        "cn-hangzhou-wulinmen-3",
-        "cn-hangzhou-wulin-square-3",
-        "cn-hangzhou-west-lake-cultural-square-3",
-        "cn-hangzhou-chaowang-road-3",
-        "cn-hangzhou-xiangji-temple-3",
-        "cn-hangzhou-daguan-3",
-        "cn-hangzhou-shanxian-3",
-        "cn-hangzhou-xintiandi-street-3",
-        "cn-hangzhou-qilun-square-3",
-        "cn-hangzhou-huafeng-road-3",
-        "cn-hangzhou-tongxie-road-3",
-        "cn-hangzhou-taohuahu-park-3",
-        "cn-hangzhou-dingqiao-3",
-        "cn-hangzhou-huahe-street-3",
+        "cn-hangzhou-xingqiao-3",
         "cn-hangzhou-huangheshan-3",
-        "cn-hangzhou-xingqiao-3"
+        "cn-hangzhou-huahe-street-3",
+        "cn-hangzhou-dingqiao-3",
+        "cn-hangzhou-taohuahu-park-3",
+        "cn-hangzhou-tongxie-road-3",
+        "cn-hangzhou-huafeng-road-3",
+        "cn-hangzhou-qilun-square-3",
+        "cn-hangzhou-xintiandi-street-3",
+        "cn-hangzhou-shanxian-3",
+        "cn-hangzhou-daguan-3",
+        "cn-hangzhou-xiangji-temple-3",
+        "cn-hangzhou-chaowang-road-3",
+        "cn-hangzhou-west-lake-cultural-square-3",
+        "cn-hangzhou-wulin-square-3",
+        "cn-hangzhou-wulinmen-3",
+        "cn-hangzhou-huanglong-cave-3",
+        "cn-hangzhou-huanglong-sports-center-3",
+        "cn-hangzhou-gudang-3",
+        "cn-hangzhou-gudang-xincun-3",
+        "cn-hangzhou-gudun-road-3",
+        "cn-hangzhou-dongyue-3",
+        "cn-hangzhou-huawu-3",
+        "cn-hangzhou-south-xixi-wetland-3",
+        "cn-hangzhou-hongyuan-3",
+        "cn-hangzhou-liansheng-road-3",
+        "cn-hangzhou-gaojiao-road-3",
+        "cn-hangzhou-quanfeng-3",
+        "cn-hangzhou-cj2t8-3",
+        "cn-hangzhou-lvting-lu-3",
+        "cn-hangzhou-west-wenyi-road-3",
+        "cn-hangzhou-north-longzhou-road-3",
+        "cn-hangzhou-west-railway-station-3",
+        "cn-hangzhou-tangjiacun-3",
+        "cn-hangzhou-wushanqiancun-3"
       ],
-      "origin_stop_id": "cn-hangzhou-wushanqiancun-3",
-      "terminal_stop_id": "cn-hangzhou-xingqiao-3",
+      "origin_stop_id": "cn-hangzhou-xingqiao-3",
+      "terminal_stop_id": "cn-hangzhou-wushanqiancun-3",
       "is_primary": true,
       "source_ids": [
         {
@@ -356,15 +348,14 @@
         }
       ],
       "extras": {
-        "direction_title": "往星桥方向",
-        "dest_name": "星桥",
-        "origin_name": "吴山前村",
-        "terminal_name": "星桥",
+        "direction_title": "往吴山前村方向",
+        "dest_name": "吴山前村",
+        "origin_name": "星桥",
+        "terminal_name": "吴山前村",
         "branch": "星桥-吴山前村",
         "source_key": "3号线（星桥-吴山前村）",
         "line_short_name": "3",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-3-pattern-xingqiao-3-to-wushanqiancun-3"
+        "pattern_role": "branch"
       }
     },
     {
@@ -430,7 +421,7 @@
       }
     },
     {
-      "id": "cn-hangzhou-line-5-pattern-guniangqiao-5-to-nan-hudong-5",
+      "id": "cn-hangzhou-line-5-pattern-nan-hudong-5-to-guniangqiao-5",
       "line_id": "cn-hangzhou-line-5",
       "name": "5号线",
       "names": {
@@ -438,49 +429,49 @@
         "en": "Line 5"
       },
       "stop_ids": [
-        "cn-hangzhou-guniangqiao-5",
-        "cn-hangzhou-shuangqiao-5",
-        "cn-hangzhou-south-railway-station-5",
-        "cn-hangzhou-middle-tonghui-road-5",
-        "cn-hangzhou-north-yucai-road-5",
-        "cn-hangzhou-peoples-square-5",
-        "cn-hangzhou-jinji-road-5",
-        "cn-hangzhou-boao-road-5",
-        "cn-hangzhou-binkang-road-5",
-        "cn-hangzhou-jianghui-road-5",
-        "cn-hangzhou-jucai-road-5",
-        "cn-hangzhou-changhe-5",
-        "cn-hangzhou-nanxingqiao-5",
-        "cn-hangzhou-houchaomen-5",
-        "cn-hangzhou-jiangcheng-road-5",
-        "cn-hangzhou-chengzhan-5",
-        "cn-hangzhou-wanan-bridge-5",
-        "cn-hangzhou-north-jianguo-road-5",
-        "cn-hangzhou-baoshan-bridge-5",
-        "cn-hangzhou-datieguan-5",
-        "cn-hangzhou-hangyang-5",
-        "cn-hangzhou-dongxinyuan-5",
-        "cn-hangzhou-xiwen-stree-5",
-        "cn-hangzhou-shanxian-5",
-        "cn-hangzhou-east-gongchen-bridge-5",
-        "cn-hangzhou-the-grand-canal-5",
-        "cn-hangzhou-hemu-5",
-        "cn-hangzhou-pingshui-street-5",
-        "cn-hangzhou-sanba-5",
-        "cn-hangzhou-zijingang-campus-zhejiang-university-5",
-        "cn-hangzhou-jiangcun-5",
-        "cn-hangzhou-wuchang-5",
-        "cn-hangzhou-yongfu-5",
-        "cn-hangzhou-cangqian-campus-hangzhou-normal-university-5",
-        "cn-hangzhou-liangmu-road-5",
-        "cn-hangzhou-chuangjing-road-5",
-        "cn-hangzhou-gexiang-5",
-        "cn-hangzhou-lvting-lu-5",
+        "cn-hangzhou-nan-hudong-5",
         "cn-hangzhou-jinxing-5",
-        "cn-hangzhou-nan-hudong-5"
+        "cn-hangzhou-lvting-lu-5",
+        "cn-hangzhou-gexiang-5",
+        "cn-hangzhou-chuangjing-road-5",
+        "cn-hangzhou-liangmu-road-5",
+        "cn-hangzhou-cangqian-campus-hangzhou-normal-university-5",
+        "cn-hangzhou-yongfu-5",
+        "cn-hangzhou-wuchang-5",
+        "cn-hangzhou-jiangcun-5",
+        "cn-hangzhou-zijingang-campus-zhejiang-university-5",
+        "cn-hangzhou-sanba-5",
+        "cn-hangzhou-pingshui-street-5",
+        "cn-hangzhou-hemu-5",
+        "cn-hangzhou-the-grand-canal-5",
+        "cn-hangzhou-east-gongchen-bridge-5",
+        "cn-hangzhou-shanxian-5",
+        "cn-hangzhou-xiwen-stree-5",
+        "cn-hangzhou-dongxinyuan-5",
+        "cn-hangzhou-hangyang-5",
+        "cn-hangzhou-datieguan-5",
+        "cn-hangzhou-baoshan-bridge-5",
+        "cn-hangzhou-north-jianguo-road-5",
+        "cn-hangzhou-wanan-bridge-5",
+        "cn-hangzhou-chengzhan-5",
+        "cn-hangzhou-jiangcheng-road-5",
+        "cn-hangzhou-houchaomen-5",
+        "cn-hangzhou-nanxingqiao-5",
+        "cn-hangzhou-changhe-5",
+        "cn-hangzhou-jucai-road-5",
+        "cn-hangzhou-jianghui-road-5",
+        "cn-hangzhou-binkang-road-5",
+        "cn-hangzhou-boao-road-5",
+        "cn-hangzhou-jinji-road-5",
+        "cn-hangzhou-peoples-square-5",
+        "cn-hangzhou-north-yucai-road-5",
+        "cn-hangzhou-middle-tonghui-road-5",
+        "cn-hangzhou-south-railway-station-5",
+        "cn-hangzhou-shuangqiao-5",
+        "cn-hangzhou-guniangqiao-5"
       ],
-      "origin_stop_id": "cn-hangzhou-guniangqiao-5",
-      "terminal_stop_id": "cn-hangzhou-nan-hudong-5",
+      "origin_stop_id": "cn-hangzhou-nan-hudong-5",
+      "terminal_stop_id": "cn-hangzhou-guniangqiao-5",
       "is_primary": true,
       "source_ids": [
         {
@@ -489,14 +480,13 @@
         }
       ],
       "extras": {
-        "direction_title": "往南湖东方向",
-        "dest_name": "南湖东",
-        "origin_name": "姑娘桥",
-        "terminal_name": "南湖东",
+        "direction_title": "往姑娘桥方向",
+        "dest_name": "姑娘桥",
+        "origin_name": "南湖东",
+        "terminal_name": "姑娘桥",
         "source_key": "5号线",
         "line_short_name": "5",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-5-pattern-nan-hudong-5-to-guniangqiao-5"
+        "pattern_role": "direction"
       }
     },
     {
@@ -559,11 +549,11 @@
         "branch": "枸桔弄-桂花西路",
         "source_key": "6号线（枸桔弄-桂花西路）",
         "line_short_name": "6",
-        "pattern_role": "direction"
+        "pattern_role": "branch"
       }
     },
     {
-      "id": "cn-hangzhou-line-6-pattern-xiangshan-campus-china-academy-of-art-6-to-shuangpu-6",
+      "id": "cn-hangzhou-line-6-pattern-shuangpu-6-to-goujulong-6",
       "line_id": "cn-hangzhou-line-6",
       "name": "6号线（枸桔弄-双浦）",
       "names": {
@@ -571,13 +561,13 @@
         "en": "Line 6 (枸桔弄-双浦)"
       },
       "stop_ids": [
-        "cn-hangzhou-xiangshan-campus-china-academy-of-art-6",
-        "cn-hangzhou-xiaming-street-6",
+        "cn-hangzhou-shuangpu-6",
         "cn-hangzhou-kehai-road-6",
-        "cn-hangzhou-shuangpu-6"
+        "cn-hangzhou-xiaming-street-6",
+        "cn-hangzhou-xiangshan-campus-china-academy-of-art-6"
       ],
-      "origin_stop_id": "cn-hangzhou-xiangshan-campus-china-academy-of-art-6",
-      "terminal_stop_id": "cn-hangzhou-shuangpu-6",
+      "origin_stop_id": "cn-hangzhou-shuangpu-6",
+      "terminal_stop_id": "cn-hangzhou-xiangshan-campus-china-academy-of-art-6",
       "is_primary": false,
       "source_ids": [
         {
@@ -586,23 +576,19 @@
         }
       ],
       "extras": {
-        "direction_title": "往双浦方向",
-        "dest_name": "双浦",
-        "origin_name": "枸桔弄",
-        "terminal_name": "双浦",
+        "direction_title": "往枸桔弄方向",
+        "dest_name": "枸桔弄",
+        "origin_name": "双浦",
+        "terminal_name": "枸桔弄",
         "branch": "枸桔弄-双浦",
         "source_key": "6号线（枸桔弄-双浦）",
         "line_short_name": "6",
-        "pattern_role": "branch",
-        "reverse_of": "cn-hangzhou-line-6-pattern-shuangpu-6-to-goujulong-6",
-        "stub_of": "cn-hangzhou-line-6-pattern-goujulong-6-to-shuangpu-6",
-        "stubbed_from_n": 25,
-        "junction_index_in_source": 21
+        "pattern_role": "branch"
       },
       "junction_stop_id": "cn-hangzhou-xiangshan-campus-china-academy-of-art-6"
     },
     {
-      "id": "cn-hangzhou-line-7-pattern-jiangdonger-road-7-to-wushan-square-7",
+      "id": "cn-hangzhou-line-7-pattern-wushan-square-7-to-jiangdonger-road-7",
       "line_id": "cn-hangzhou-line-7",
       "name": "7号线",
       "names": {
@@ -610,33 +596,33 @@
         "en": "Line 7"
       },
       "stop_ids": [
-        "cn-hangzhou-jiangdonger-road-7",
-        "cn-hangzhou-qicheng-road-7",
-        "cn-hangzhou-middle-qingliu-road-7",
-        "cn-hangzhou-tangxinxian-7",
-        "cn-hangzhou-yipeng-7",
-        "cn-hangzhou-xinzhen-road-7",
-        "cn-hangzhou-yongsheng-road-7",
-        "cn-hangzhou-xiaoshan-international-airport-7",
-        "cn-hangzhou-xingang-7",
-        "cn-hangzhou-kanshan-7",
-        "cn-hangzhou-yingzhong-7",
-        "cn-hangzhou-hehuan-road-7",
-        "cn-hangzhou-xinjie-7",
-        "cn-hangzhou-xinhan-road-7",
-        "cn-hangzhou-xinxing-road-7",
-        "cn-hangzhou-jianshesan-road-7",
-        "cn-hangzhou-mingxing-road-7",
-        "cn-hangzhou-xingyi-7",
-        "cn-hangzhou-aoti-zhongxin-7",
-        "cn-hangzhou-citizen-center-7",
-        "cn-hangzhou-guanyintang-7",
-        "cn-hangzhou-moyetang-7",
+        "cn-hangzhou-wushan-square-7",
         "cn-hangzhou-jiangcheng-road-7",
-        "cn-hangzhou-wushan-square-7"
+        "cn-hangzhou-moyetang-7",
+        "cn-hangzhou-guanyintang-7",
+        "cn-hangzhou-citizen-center-7",
+        "cn-hangzhou-aoti-zhongxin-7",
+        "cn-hangzhou-xingyi-7",
+        "cn-hangzhou-mingxing-road-7",
+        "cn-hangzhou-jianshesan-road-7",
+        "cn-hangzhou-xinxing-road-7",
+        "cn-hangzhou-xinhan-road-7",
+        "cn-hangzhou-xinjie-7",
+        "cn-hangzhou-hehuan-road-7",
+        "cn-hangzhou-yingzhong-7",
+        "cn-hangzhou-kanshan-7",
+        "cn-hangzhou-xingang-7",
+        "cn-hangzhou-xiaoshan-international-airport-7",
+        "cn-hangzhou-yongsheng-road-7",
+        "cn-hangzhou-xinzhen-road-7",
+        "cn-hangzhou-yipeng-7",
+        "cn-hangzhou-tangxinxian-7",
+        "cn-hangzhou-middle-qingliu-road-7",
+        "cn-hangzhou-qicheng-road-7",
+        "cn-hangzhou-jiangdonger-road-7"
       ],
-      "origin_stop_id": "cn-hangzhou-jiangdonger-road-7",
-      "terminal_stop_id": "cn-hangzhou-wushan-square-7",
+      "origin_stop_id": "cn-hangzhou-wushan-square-7",
+      "terminal_stop_id": "cn-hangzhou-jiangdonger-road-7",
       "is_primary": true,
       "source_ids": [
         {
@@ -645,18 +631,17 @@
         }
       ],
       "extras": {
-        "direction_title": "往吴山广场方向",
-        "dest_name": "吴山广场",
-        "origin_name": "江东二路",
-        "terminal_name": "吴山广场",
+        "direction_title": "往江东二路方向",
+        "dest_name": "江东二路",
+        "origin_name": "吴山广场",
+        "terminal_name": "江东二路",
         "source_key": "7号线",
         "line_short_name": "7",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-7-pattern-wushan-square-7-to-jiangdonger-road-7"
+        "pattern_role": "direction"
       }
     },
     {
-      "id": "cn-hangzhou-line-8-pattern-south-wenhai-road-8-to-xinwan-road-8",
+      "id": "cn-hangzhou-line-8-pattern-xinwan-road-8-to-south-wenhai-road-8",
       "line_id": "cn-hangzhou-line-8",
       "name": "8号线",
       "names": {
@@ -664,18 +649,18 @@
         "en": "Line 8"
       },
       "stop_ids": [
-        "cn-hangzhou-south-wenhai-road-8",
-        "cn-hangzhou-gongshang-university-yunbin-8",
-        "cn-hangzhou-qiaotoubao-8",
-        "cn-hangzhou-hezhuang-road-8",
-        "cn-hangzhou-qingxisan-road-8",
-        "cn-hangzhou-middle-qingliu-road-8",
-        "cn-hangzhou-cangbeicun-8",
+        "cn-hangzhou-xinwan-road-8",
         "cn-hangzhou-fengloucun-8",
-        "cn-hangzhou-xinwan-road-8"
+        "cn-hangzhou-cangbeicun-8",
+        "cn-hangzhou-middle-qingliu-road-8",
+        "cn-hangzhou-qingxisan-road-8",
+        "cn-hangzhou-hezhuang-road-8",
+        "cn-hangzhou-qiaotoubao-8",
+        "cn-hangzhou-gongshang-university-yunbin-8",
+        "cn-hangzhou-south-wenhai-road-8"
       ],
-      "origin_stop_id": "cn-hangzhou-south-wenhai-road-8",
-      "terminal_stop_id": "cn-hangzhou-xinwan-road-8",
+      "origin_stop_id": "cn-hangzhou-xinwan-road-8",
+      "terminal_stop_id": "cn-hangzhou-south-wenhai-road-8",
       "is_primary": true,
       "source_ids": [
         {
@@ -684,18 +669,17 @@
         }
       ],
       "extras": {
-        "direction_title": "往新湾路方向",
-        "dest_name": "新湾路",
-        "origin_name": "文海南路",
-        "terminal_name": "新湾路",
+        "direction_title": "往文海南路方向",
+        "dest_name": "文海南路",
+        "origin_name": "新湾路",
+        "terminal_name": "文海南路",
         "source_key": "8号线",
         "line_short_name": "8",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-8-pattern-xinwan-road-8-to-south-wenhai-road-8"
+        "pattern_role": "direction"
       }
     },
     {
-      "id": "cn-hangzhou-line-9-pattern-guanyintang-9-to-longan-9",
+      "id": "cn-hangzhou-line-9-pattern-longan-9-to-guanyintang-9",
       "line_id": "cn-hangzhou-line-9",
       "name": "9号线",
       "names": {
@@ -703,30 +687,30 @@
         "en": "Line 9"
       },
       "stop_ids": [
-        "cn-hangzhou-guanyintang-9",
-        "cn-hangzhou-xinye-road-9",
-        "cn-hangzhou-qianjiang-road-9",
-        "cn-hangzhou-jianghehui-9",
-        "cn-hangzhou-sanbao-9",
-        "cn-hangzhou-yudao-9",
-        "cn-hangzhou-wubao-9",
-        "cn-hangzhou-liubao-9",
-        "cn-hangzhou-south-hongpu-road-9",
-        "cn-hangzhou-jiumu-road-9",
-        "cn-hangzhou-coach-center-9",
-        "cn-hangzhou-south-qiaosi-9",
-        "cn-hangzhou-qiaosi-9",
-        "cn-hangzhou-wengmei-9",
-        "cn-hangzhou-linpingnan-railway-station-9",
-        "cn-hangzhou-nanyuan-9",
-        "cn-hangzhou-linping-9",
-        "cn-hangzhou-qiushan-avenue-9",
-        "cn-hangzhou-heyu-road-9",
+        "cn-hangzhou-longan-9",
         "cn-hangzhou-wuzhou-road-9",
-        "cn-hangzhou-longan-9"
+        "cn-hangzhou-heyu-road-9",
+        "cn-hangzhou-qiushan-avenue-9",
+        "cn-hangzhou-linping-9",
+        "cn-hangzhou-nanyuan-9",
+        "cn-hangzhou-linpingnan-railway-station-9",
+        "cn-hangzhou-wengmei-9",
+        "cn-hangzhou-qiaosi-9",
+        "cn-hangzhou-south-qiaosi-9",
+        "cn-hangzhou-coach-center-9",
+        "cn-hangzhou-jiumu-road-9",
+        "cn-hangzhou-south-hongpu-road-9",
+        "cn-hangzhou-liubao-9",
+        "cn-hangzhou-wubao-9",
+        "cn-hangzhou-yudao-9",
+        "cn-hangzhou-sanbao-9",
+        "cn-hangzhou-jianghehui-9",
+        "cn-hangzhou-qianjiang-road-9",
+        "cn-hangzhou-xinye-road-9",
+        "cn-hangzhou-guanyintang-9"
       ],
-      "origin_stop_id": "cn-hangzhou-guanyintang-9",
-      "terminal_stop_id": "cn-hangzhou-longan-9",
+      "origin_stop_id": "cn-hangzhou-longan-9",
+      "terminal_stop_id": "cn-hangzhou-guanyintang-9",
       "is_primary": true,
       "source_ids": [
         {
@@ -735,14 +719,13 @@
         }
       ],
       "extras": {
-        "direction_title": "往龙安方向",
-        "dest_name": "龙安",
-        "origin_name": "观音塘",
-        "terminal_name": "龙安",
+        "direction_title": "往观音塘方向",
+        "dest_name": "观音塘",
+        "origin_name": "龙安",
+        "terminal_name": "观音塘",
         "source_key": "9号线",
         "line_short_name": "9",
-        "pattern_role": "direction",
-        "reverse_of": "cn-hangzhou-line-9-pattern-longan-9-to-guanyintang-9"
+        "pattern_role": "direction"
       }
     }
   ]

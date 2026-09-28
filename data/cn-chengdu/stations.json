@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chengdu",
-  "generated_at": "2026-09-24T19:21:45.437Z",
+  "generated_at": "2026-09-28T09:54:30.408Z",
   "source": [],
   "records": [
     {
@@ -58,7 +58,7 @@
       }
     },
     {
-      "id": "cn-chengdu-3r-tianfu-street",
+      "id": "cn-chengdu-3-tianfu-street",
       "name": "天府三街",
       "names": {
         "zh": "天府三街",
@@ -227,7 +227,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:30"
+          "02:31"
         ],
         "station_no": "0223",
         "transfer_lines": [
@@ -325,7 +325,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:22"
+          "02:23"
         ],
         "station_no": "0231",
         "transfer_lines": [
@@ -856,7 +856,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:26"
+          "02:27"
         ],
         "station_no": "0227",
         "transfer_lines": [
@@ -1041,7 +1041,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:07"
+          "02:08"
         ],
         "station_no": "0246",
         "transfer_lines": [
@@ -1090,7 +1090,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:11",
+          "02:12",
           "07:22"
         ],
         "station_no": "0242",
@@ -1469,25 +1469,11 @@
         "zh": "中医大省医院",
         "en": "Chengdu University of TCM & Sichuan Provincial People's Hospital"
       },
-      "location": {
-        "lon": 104.040612,
-        "lat": 30.666106,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1087,
-        "y": 855,
-        "crs": "schematic"
-      },
       "status": "operating",
       "source_ids": [
         {
           "source": "chengdurail-station-time",
           "id": "0232"
-        },
-        {
-          "source": "amap-subway-5101",
-          "id": "BV09313344"
         },
         {
           "source": "chengdurail-station-time",
@@ -1496,7 +1482,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:21",
+          "02:22",
           "04:14",
           "05:21"
         ],
@@ -1511,9 +1497,6 @@
           "4号线",
           "5号线"
         ],
-        "pinyin": "ZhongYi Da Sheng YiYuan",
-        "location_source": "source",
-        "location_provider": "amap_subway",
         "names_source": "source"
       }
     },
@@ -1794,7 +1777,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:10"
+          "02:11"
         ],
         "station_no": "0243",
         "transfer_lines": [
@@ -1892,7 +1875,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:17",
+          "02:18",
           "03:19"
         ],
         "station_no": "0236",
@@ -2306,6 +2289,55 @@
       }
     },
     {
+      "id": "cn-chengdu-damianpu",
+      "name": "大面铺",
+      "names": {
+        "zh": "大面铺",
+        "en": "Damianpu"
+      },
+      "location": {
+        "lon": 104.201298,
+        "lat": 30.5924,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2019,
+        "y": 1042,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "0254"
+        },
+        {
+          "source": "amap-subway-5101",
+          "id": "BV10365107"
+        },
+        {
+          "source": "chengdurail-station-time",
+          "id": "大面铺"
+        }
+      ],
+      "extras": {
+        "official_codes": [
+          "02:06"
+        ],
+        "station_no": "0254",
+        "transfer_lines": [
+          "02"
+        ],
+        "lines": [
+          "2号线"
+        ],
+        "pinyin": "DaMianPu",
+        "location_source": "subway",
+        "location_provider": "amap_subway",
+        "names_source": "source"
+      }
+    },
+    {
       "id": "cn-chengdu-datian",
       "name": "大田",
       "names": {
@@ -2600,7 +2632,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:13",
+          "02:14",
           "08:13"
         ],
         "station_no": "0240",
@@ -2802,7 +2834,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:16"
+          "02:17"
         ],
         "station_no": "0237",
         "transfer_lines": [
@@ -5035,7 +5067,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:08"
+          "02:09"
         ],
         "station_no": "0245",
         "transfer_lines": [
@@ -6332,7 +6364,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:09",
+          "02:10",
           "30:05"
         ],
         "station_no": "0244",
@@ -6640,6 +6672,55 @@
           "17号线"
         ],
         "pinyin": "JiCheChang",
+        "location_source": "subway",
+        "location_provider": "amap_subway",
+        "names_source": "source"
+      }
+    },
+    {
+      "id": "cn-chengdu-jiepai",
+      "name": "界牌",
+      "names": {
+        "zh": "界牌",
+        "en": "Jiepai"
+      },
+      "location": {
+        "lon": 104.225134,
+        "lat": 30.582802,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2121,
+        "y": 1099,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "0256"
+        },
+        {
+          "source": "amap-subway-5101",
+          "id": "BV10365106"
+        },
+        {
+          "source": "chengdurail-station-time",
+          "id": "界牌"
+        }
+      ],
+      "extras": {
+        "official_codes": [
+          "02:04"
+        ],
+        "station_no": "0256",
+        "transfer_lines": [
+          "02"
+        ],
+        "lines": [
+          "2号线"
+        ],
+        "pinyin": "JiePai",
         "location_source": "subway",
         "location_provider": "amap_subway",
         "names_source": "source"
@@ -7129,7 +7210,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:28"
+          "02:29"
         ],
         "station_no": "0225",
         "transfer_lines": [
@@ -7562,7 +7643,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:29"
+          "02:30"
         ],
         "station_no": "0224",
         "transfer_lines": [
@@ -8349,6 +8430,55 @@
       }
     },
     {
+      "id": "cn-chengdu-lianshanpo",
+      "name": "连山坡",
+      "names": {
+        "zh": "连山坡",
+        "en": "Lianshanpo"
+      },
+      "location": {
+        "lon": 104.212757,
+        "lat": 30.58758,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2069,
+        "y": 1070,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "0255"
+        },
+        {
+          "source": "amap-subway-5101",
+          "id": "BV10365111"
+        },
+        {
+          "source": "chengdurail-station-time",
+          "id": "连山坡"
+        }
+      ],
+      "extras": {
+        "official_codes": [
+          "02:05"
+        ],
+        "station_no": "0255",
+        "transfer_lines": [
+          "02"
+        ],
+        "lines": [
+          "2号线"
+        ],
+        "pinyin": "Lian ShanPo",
+        "location_source": "subway",
+        "location_provider": "amap_subway",
+        "names_source": "source"
+      }
+    },
+    {
       "id": "cn-chengdu-liaojiawan",
       "name": "廖家湾",
       "names": {
@@ -8932,6 +9062,55 @@
       }
     },
     {
+      "id": "cn-chengdu-longping-road",
+      "name": "龙平路",
+      "names": {
+        "zh": "龙平路",
+        "en": "Longping Road"
+      },
+      "location": {
+        "lon": 104.258988,
+        "lat": 30.572923,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2280,
+        "y": 1182,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "0258"
+        },
+        {
+          "source": "amap-subway-5101",
+          "id": "BV10365109"
+        },
+        {
+          "source": "chengdurail-station-time",
+          "id": "龙平路"
+        }
+      ],
+      "extras": {
+        "official_codes": [
+          "02:02"
+        ],
+        "station_no": "0258",
+        "transfer_lines": [
+          "02"
+        ],
+        "lines": [
+          "2号线"
+        ],
+        "pinyin": "LongPing Lu",
+        "location_source": "subway",
+        "location_provider": "amap_subway",
+        "names_source": "source"
+      }
+    },
+    {
       "id": "cn-chengdu-longqiao-road",
       "name": "龙桥路",
       "names": {
@@ -8978,6 +9157,55 @@
           "19号线"
         ],
         "pinyin": "LongQiao Lu",
+        "location_source": "subway",
+        "location_provider": "amap_subway",
+        "names_source": "source"
+      }
+    },
+    {
+      "id": "cn-chengdu-longquanyi",
+      "name": "龙泉驿",
+      "names": {
+        "zh": "龙泉驿",
+        "en": "Longquanyi"
+      },
+      "location": {
+        "lon": 104.267966,
+        "lat": 30.560111,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2369,
+        "y": 1231,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "0259"
+        },
+        {
+          "source": "amap-subway-5101",
+          "id": "BV10365110"
+        },
+        {
+          "source": "chengdurail-station-time",
+          "id": "龙泉驿"
+        }
+      ],
+      "extras": {
+        "official_codes": [
+          "02:01"
+        ],
+        "station_no": "0259",
+        "transfer_lines": [
+          "02"
+        ],
+        "lines": [
+          "2号线"
+        ],
+        "pinyin": "LongQuanYi",
         "location_source": "subway",
         "location_provider": "amap_subway",
         "names_source": "source"
@@ -10093,7 +10321,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:14"
+          "02:15"
         ],
         "station_no": "0239",
         "transfer_lines": [
@@ -10142,7 +10370,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:15",
+          "02:16",
           "06:27"
         ],
         "station_no": "0238",
@@ -10336,7 +10564,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:19",
+          "02:20",
           "17:12"
         ],
         "station_no": "0234",
@@ -12887,6 +13115,55 @@
       }
     },
     {
+      "id": "cn-chengdu-shufang",
+      "name": "书房",
+      "names": {
+        "zh": "书房",
+        "en": "Shufang"
+      },
+      "location": {
+        "lon": 104.242134,
+        "lat": 30.575626,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2193,
+        "y": 1137,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "chengdurail-station-time",
+          "id": "0257"
+        },
+        {
+          "source": "amap-subway-5101",
+          "id": "BV10365108"
+        },
+        {
+          "source": "chengdurail-station-time",
+          "id": "书房"
+        }
+      ],
+      "extras": {
+        "official_codes": [
+          "02:03"
+        ],
+        "station_no": "0257",
+        "transfer_lines": [
+          "02"
+        ],
+        "lines": [
+          "2号线"
+        ],
+        "pinyin": "ShuFang",
+        "location_source": "subway",
+        "location_provider": "amap_subway",
+        "names_source": "source"
+      }
+    },
+    {
       "id": "cn-chengdu-shuhan-road-east",
       "name": "蜀汉路东",
       "names": {
@@ -12920,7 +13197,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:23"
+          "02:24"
         ],
         "station_no": "0230",
         "transfer_lines": [
@@ -13973,7 +14250,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:12"
+          "02:13"
         ],
         "station_no": "0241",
         "transfer_lines": [
@@ -14373,7 +14650,7 @@
       "extras": {
         "official_codes": [
           "01:07",
-          "02:18"
+          "02:19"
         ],
         "station_no": "0126",
         "transfer_lines": [
@@ -14476,7 +14753,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:31",
+          "02:32",
           "102:Y3"
         ],
         "station_no": "0222",
@@ -14691,7 +14968,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:20"
+          "02:21"
         ],
         "station_no": "0233",
         "transfer_lines": [
@@ -17558,7 +17835,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:32",
+          "02:33",
           "06:09"
         ],
         "station_no": "0221",
@@ -17708,7 +17985,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:25",
+          "02:26",
           "27:20"
         ],
         "station_no": "0228",
@@ -17809,7 +18086,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:27"
+          "02:28"
         ],
         "station_no": "0226",
         "transfer_lines": [
@@ -18054,7 +18331,7 @@
       ],
       "extras": {
         "official_codes": [
-          "02:24",
+          "02:25",
           "07:07"
         ],
         "station_no": "0229",

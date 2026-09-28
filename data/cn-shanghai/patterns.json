@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-shanghai",
-  "generated_at": "2026-09-21T07:35:30.844Z",
+  "generated_at": "2026-09-28T10:05:52.002Z",
   "source": [],
   "records": [
     {
@@ -51,13 +51,10 @@
           "source": "shmetro-slsddl",
           "id": "1"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
-      "id": "cn-shanghai-line-10-pattern-longxi-road-10-to-hangzhong-road-10",
+      "id": "cn-shanghai-line-10-pattern-branch-e888aae4b8ade8b7af",
       "line_id": "cn-shanghai-line-10",
       "name": "航中路支线",
       "names": {
@@ -65,13 +62,13 @@
         "en": "航中路 branch"
       },
       "stop_ids": [
-        "cn-shanghai-longxi-road-10",
-        "cn-shanghai-longbai-xincun-10",
+        "cn-shanghai-hangzhong-road-10",
         "cn-shanghai-ziteng-road-10",
-        "cn-shanghai-hangzhong-road-10"
+        "cn-shanghai-longbai-xincun-10",
+        "cn-shanghai-longxi-road-10"
       ],
-      "origin_stop_id": "cn-shanghai-longxi-road-10",
-      "terminal_stop_id": "cn-shanghai-hangzhong-road-10",
+      "origin_stop_id": "cn-shanghai-hangzhong-road-10",
+      "terminal_stop_id": "cn-shanghai-longxi-road-10",
       "is_primary": false,
       "junction_stop_id": "cn-shanghai-longxi-road-10",
       "source_ids": [
@@ -81,11 +78,7 @@
         }
       ],
       "extras": {
-        "branch_note": "10号线虹桥火车站站~新江湾城站为主线段，航中路站~龙溪路站为支线段。",
-        "pattern_role": "branch",
-        "stub_of": "cn-shanghai-line-10-pattern-branch-e888aae4b8ade8b7af",
-        "stubbed_from_n": 33,
-        "junction_index_in_source": 3
+        "branch_note": "10号线虹桥火车站站~新江湾城站为主线段，航中路站~龙溪路站为支线段。"
       }
     },
     {
@@ -140,13 +133,10 @@
           "source": "shmetro-slsddl",
           "id": "10"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
-      "id": "cn-shanghai-line-11-pattern-jiading-xincheng-11-to-huaqiao-11",
+      "id": "cn-shanghai-line-11-pattern-branch-e88ab1e6a1a5",
       "line_id": "cn-shanghai-line-11",
       "name": "花桥支线",
       "names": {
@@ -154,17 +144,17 @@
         "en": "花桥 branch"
       },
       "stop_ids": [
-        "cn-shanghai-jiading-xincheng-11",
-        "cn-shanghai-shanghai-circuit-11",
-        "cn-shanghai-east-changji-road-11",
-        "cn-shanghai-shanghai-automobile-city-11",
-        "cn-shanghai-anting-11",
-        "cn-shanghai-zhaofeng-road-11",
+        "cn-shanghai-huaqiao-11",
         "cn-shanghai-guangming-road-11",
-        "cn-shanghai-huaqiao-11"
+        "cn-shanghai-zhaofeng-road-11",
+        "cn-shanghai-anting-11",
+        "cn-shanghai-shanghai-automobile-city-11",
+        "cn-shanghai-east-changji-road-11",
+        "cn-shanghai-shanghai-circuit-11",
+        "cn-shanghai-jiading-xincheng-11"
       ],
-      "origin_stop_id": "cn-shanghai-jiading-xincheng-11",
-      "terminal_stop_id": "cn-shanghai-huaqiao-11",
+      "origin_stop_id": "cn-shanghai-huaqiao-11",
+      "terminal_stop_id": "cn-shanghai-jiading-xincheng-11",
       "is_primary": false,
       "junction_stop_id": "cn-shanghai-jiading-xincheng-11",
       "source_ids": [
@@ -174,11 +164,7 @@
         }
       ],
       "extras": {
-        "branch_note": "11号线嘉定北站~迪士尼站为主线段，花桥站~嘉定新城站为支线段。",
-        "pattern_role": "branch",
-        "stub_of": "cn-shanghai-line-11-pattern-branch-e88ab1e6a1a5",
-        "stubbed_from_n": 37,
-        "junction_index_in_source": 7
+        "branch_note": "11号线嘉定北站~迪士尼站为主线段，花桥站~嘉定新城站为支线段。"
       }
     },
     {
@@ -232,10 +218,7 @@
           "source": "shmetro-slsddl",
           "id": "11"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-12-pattern-main",
@@ -287,10 +270,7 @@
           "source": "shmetro-slsddl",
           "id": "12"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-13-pattern-main",
@@ -341,10 +321,7 @@
           "source": "shmetro-slsddl",
           "id": "13"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-14-pattern-main",
@@ -394,10 +371,7 @@
           "source": "shmetro-slsddl",
           "id": "14"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-15-pattern-main",
@@ -447,10 +421,7 @@
           "source": "shmetro-slsddl",
           "id": "15"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-16-pattern-main",
@@ -483,10 +454,7 @@
           "source": "shmetro-slsddl",
           "id": "16"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-17-pattern-main",
@@ -520,10 +488,7 @@
           "source": "shmetro-slsddl",
           "id": "17"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-18-pattern-main",
@@ -574,10 +539,7 @@
           "source": "shmetro-slsddl",
           "id": "18"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-2-pattern-main",
@@ -628,10 +590,7 @@
           "source": "shmetro-slsddl",
           "id": "2"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-3-pattern-main",
@@ -680,10 +639,7 @@
           "source": "shmetro-slsddl",
           "id": "3"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-4-pattern-main",
@@ -729,10 +685,7 @@
           "source": "shmetro-slsddl",
           "id": "4"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-41-pattern-main",
@@ -758,13 +711,10 @@
           "source": "shmetro-slsddl",
           "id": "41"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
-      "id": "cn-shanghai-line-5-pattern-dongchuan-road-5-to-minhang-development-zone-5",
+      "id": "cn-shanghai-line-5-pattern-branch-e997b5e8a18ce5bc80e58f91e58cba",
       "line_id": "cn-shanghai-line-5",
       "name": "闵行开发区支线",
       "names": {
@@ -772,14 +722,14 @@
         "en": "闵行开发区 branch"
       },
       "stop_ids": [
-        "cn-shanghai-dongchuan-road-5",
-        "cn-shanghai-jinping-road-5",
-        "cn-shanghai-huaning-road-5",
+        "cn-shanghai-minhang-development-zone-5",
         "cn-shanghai-wenjing-road-5",
-        "cn-shanghai-minhang-development-zone-5"
+        "cn-shanghai-huaning-road-5",
+        "cn-shanghai-jinping-road-5",
+        "cn-shanghai-dongchuan-road-5"
       ],
-      "origin_stop_id": "cn-shanghai-dongchuan-road-5",
-      "terminal_stop_id": "cn-shanghai-minhang-development-zone-5",
+      "origin_stop_id": "cn-shanghai-minhang-development-zone-5",
+      "terminal_stop_id": "cn-shanghai-dongchuan-road-5",
       "is_primary": false,
       "junction_stop_id": "cn-shanghai-dongchuan-road-5",
       "source_ids": [
@@ -789,11 +739,7 @@
         }
       ],
       "extras": {
-        "branch_note": "5号线莘庄站~奉贤新城站为主线段，东川路站~闵行开发区站为支线段。",
-        "pattern_role": "branch",
-        "stub_of": "cn-shanghai-line-5-pattern-branch-e997b5e8a18ce5bc80e58f91e58cba",
-        "stubbed_from_n": 11,
-        "junction_index_in_source": 4
+        "branch_note": "5号线莘庄站~奉贤新城站为主线段，东川路站~闵行开发区站为支线段。"
       }
     },
     {
@@ -829,10 +775,7 @@
           "source": "shmetro-slsddl",
           "id": "5"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-51-pattern-main",
@@ -859,10 +802,7 @@
           "source": "shmetro-slsddl",
           "id": "51"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-6-pattern-main",
@@ -910,10 +850,7 @@
           "source": "shmetro-slsddl",
           "id": "6"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-7-pattern-main",
@@ -966,10 +903,7 @@
           "source": "shmetro-slsddl",
           "id": "7"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-8-pattern-main",
@@ -1019,10 +953,7 @@
           "source": "shmetro-slsddl",
           "id": "8"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     },
     {
       "id": "cn-shanghai-line-9-pattern-main",
@@ -1077,10 +1008,7 @@
           "source": "shmetro-slsddl",
           "id": "9"
         }
-      ],
-      "extras": {
-        "pattern_role": "direction"
-      }
+      ]
     }
   ]
 }

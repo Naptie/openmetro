@@ -2,9 +2,77 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-zhengzhou",
-  "generated_at": "2026-09-25T19:52:11.995Z",
+  "generated_at": "2026-09-28T10:10:57.399Z",
   "source": [],
   "records": [
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-11rh5u1-2-cn-zhengzhou-maozhuang-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-11rh5u1-2",
+      "to_stop_id": "cn-zhengzhou-maozhuang-2",
+      "from_station_id": "cn-zhengzhou-11rh5u1",
+      "to_station_id": "cn-zhengzhou-maozhuang",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 152,
+      "travel_time_source": "source",
+      "distance_km": 1.359,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-a8m6el-1-cn-zhengzhou-bishagang-1",
+      "line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-a8m6el-1",
+      "to_stop_id": "cn-zhengzhou-bishagang-1",
+      "from_station_id": "cn-zhengzhou-a8m6el",
+      "to_station_id": "cn-zhengzhou-bishagang",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 132,
+      "travel_time_source": "source",
+      "distance_km": 1.008,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-a8m6el-5-cn-zhengzhou-yuejigongyuan-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-a8m6el-5",
+      "to_stop_id": "cn-zhengzhou-yuejigongyuan-5",
+      "from_station_id": "cn-zhengzhou-a8m6el",
+      "to_station_id": "cn-zhengzhou-yuejigongyuan",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 212,
+      "travel_time_source": "source",
+      "distance_km": 1.633,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-abh43v-5-cn-zhengzhou-shi-dier-renminyiyuan-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-abh43v-5",
+      "to_stop_id": "cn-zhengzhou-shi-dier-renminyiyuan-5",
+      "from_station_id": "cn-zhengzhou-abh43v",
+      "to_station_id": "cn-zhengzhou-shi-dier-renminyiyuan",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 157,
+      "travel_time_source": "source",
+      "distance_km": 1.21,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-anning-lu-6-cn-zhengzhou-donglinsi-6",
       "line_id": "cn-zhengzhou-line-6",
@@ -14,17 +82,13 @@
       "to_station_id": "cn-zhengzhou-donglinsi",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 212,
+      "travel_time_source": "source",
       "distance_km": 2.76,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 49.5,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 212,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-aoxiang-lu-郑许-cn-zhengzhou-chang-an-lu-nan-郑许",
@@ -41,6 +105,40 @@
       "extras": {
         "distance_source": "source",
         "planner": "zzmetro-api-price"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-arbo99-12-cn-zhengzhou-dongfengdong-lu-12",
+      "line_id": "cn-zhengzhou-line-12",
+      "from_stop_id": "cn-zhengzhou-arbo99-12",
+      "to_stop_id": "cn-zhengzhou-dongfengdong-lu-12",
+      "from_station_id": "cn-zhengzhou-arbo99",
+      "to_station_id": "cn-zhengzhou-dongfengdong-lu",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "distance_km": 1.212,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-arbo99-5-cn-zhengzhou-zhacheng-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-arbo99-5",
+      "to_stop_id": "cn-zhengzhou-zhacheng-5",
+      "from_station_id": "cn-zhengzhou-arbo99",
+      "to_station_id": "cn-zhengzhou-zhacheng",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 188,
+      "travel_time_source": "source",
+      "distance_km": 1.448,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -69,17 +167,13 @@
       "to_station_id": "cn-zhengzhou-dongfeng-lu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.182,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-baqian-郑许-cn-zhengzhou-shuangmiaoli-郑许",
@@ -150,12 +244,12 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-binhe-xincheng-3-cn-zhengzhou-sizhao-3",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-binhe-xincheng-3-cn-zhengzhou-f24d-3",
       "line_id": "cn-zhengzhou-line-3",
       "from_stop_id": "cn-zhengzhou-binhe-xincheng-3",
-      "to_stop_id": "cn-zhengzhou-sizhao-3",
+      "to_stop_id": "cn-zhengzhou-f24d-3",
       "from_station_id": "cn-zhengzhou-binhe-xincheng",
-      "to_station_id": "cn-zhengzhou-sizhao",
+      "to_station_id": "cn-zhengzhou-f24d",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 121,
@@ -209,17 +303,13 @@
       "to_station_id": "cn-zhengzhou-fenghuangtai-nan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.103,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-boxuelu-1-cn-zhengzhou-zhengzhou-sports-center-1",
@@ -239,6 +329,40 @@
       }
     },
     {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-bvs4s-2-cn-zhengzhou-longhaidonglu-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "from_stop_id": "cn-zhengzhou-bvs4s-2",
+      "to_stop_id": "cn-zhengzhou-longhaidonglu-2",
+      "from_station_id": "cn-zhengzhou-bvs4s",
+      "to_station_id": "cn-zhengzhou-longhaidonglu",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 134,
+      "travel_time_source": "source",
+      "distance_km": 1.065,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-bvs4s-3-cn-zhengzhou-zhengzhou-wenmiao-3",
+      "line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-bvs4s-3",
+      "to_stop_id": "cn-zhengzhou-zhengzhou-wenmiao-3",
+      "from_station_id": "cn-zhengzhou-bvs4s",
+      "to_station_id": "cn-zhengzhou-zhengzhou-wenmiao",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 98,
+      "travel_time_source": "source",
+      "distance_km": 0.755,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-bwyf2h-城郊-cn-zhengzhou-jichangdong-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "from_stop_id": "cn-zhengzhou-bwyf2h-城郊",
@@ -250,6 +374,23 @@
       "travel_time_seconds": 184,
       "travel_time_source": "source",
       "distance_km": 1.931,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-c2a7s-1-cn-zhengzhou-zijingshan-1",
+      "line_id": "cn-zhengzhou-line-1",
+      "from_stop_id": "cn-zhengzhou-c2a7s-1",
+      "to_stop_id": "cn-zhengzhou-zijingshan-1",
+      "from_station_id": "cn-zhengzhou-c2a7s",
+      "to_station_id": "cn-zhengzhou-zijingshan",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 148,
+      "travel_time_source": "source",
+      "distance_km": 1.04,
       "extras": {
         "planner": "zzmetro-api-price",
         "distance_source": "source"
@@ -273,20 +414,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-central-business-district-5-cn-zhengzhou-ertong-yiyuan-5",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-central-business-district-5-cn-zhengzhou-arbo99-5",
       "line_id": "cn-zhengzhou-line-5",
       "from_stop_id": "cn-zhengzhou-central-business-district-5",
-      "to_stop_id": "cn-zhengzhou-ertong-yiyuan-5",
+      "to_stop_id": "cn-zhengzhou-arbo99-5",
       "from_station_id": "cn-zhengzhou-central-business-district",
-      "to_station_id": "cn-zhengzhou-ertong-yiyuan",
+      "to_station_id": "cn-zhengzhou-arbo99",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 251,
       "travel_time_source": "source",
       "distance_km": 1.934,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -332,17 +473,13 @@
       "to_station_id": "cn-zhengzhou-zhengzhoudong-railway-station",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 240,
+      "travel_time_source": "source",
       "distance_km": 1.097,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 46.6,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-changzhuang-6-cn-zhengzhou-olympic-sports-center-6",
@@ -353,17 +490,13 @@
       "to_station_id": "cn-zhengzhou-olympic-sports-center",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 644,
+      "travel_time_source": "source",
       "distance_km": 1.66,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 38.5,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 644,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-chaohe-3-cn-zhengzhou-binhe-xincheng-3",
@@ -451,6 +584,23 @@
       }
     },
     {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-cmuvf-城郊-cn-zhengzhou-shibalihe-城郊",
+      "line_id": "cn-zhengzhou-line-chengjiao",
+      "from_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "to_stop_id": "cn-zhengzhou-shibalihe-城郊",
+      "from_station_id": "cn-zhengzhou-cmuvf",
+      "to_station_id": "cn-zhengzhou-shibalihe",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 163,
+      "travel_time_source": "source",
+      "distance_km": 1.722,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-convention-and-exhibition-center-1-cn-zhengzhou-huanghenan-lu-1",
       "line_id": "cn-zhengzhou-line-1",
       "from_stop_id": "cn-zhengzhou-convention-and-exhibition-center-1",
@@ -485,37 +635,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-dashiqiao-3-cn-zhengzhou-renmingongyuan-3",
-      "line_id": "cn-zhengzhou-line-3",
-      "from_stop_id": "cn-zhengzhou-dashiqiao-3",
-      "to_stop_id": "cn-zhengzhou-renmingongyuan-3",
-      "from_station_id": "cn-zhengzhou-dashiqiao",
-      "to_station_id": "cn-zhengzhou-renmingongyuan",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-cufa9-5-cn-zhengzhou-tonghuai-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-cufa9-5",
+      "to_stop_id": "cn-zhengzhou-tonghuai-5",
+      "from_station_id": "cn-zhengzhou-cufa9",
+      "to_station_id": "cn-zhengzhou-tonghuai",
       "direction": "both",
       "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 117,
+      "travel_time_seconds": 176,
       "travel_time_source": "source",
-      "distance_km": 0.897,
+      "distance_km": 1.354,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-dashiqiao-7-cn-zhengzhou-zhengda-yifuyuan-7",
-      "line_id": "cn-zhengzhou-line-7",
-      "from_stop_id": "cn-zhengzhou-dashiqiao-7",
-      "to_stop_id": "cn-zhengzhou-zhengda-yifuyuan-7",
-      "from_station_id": "cn-zhengzhou-dashiqiao",
-      "to_station_id": "cn-zhengzhou-zhengda-yifuyuan",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 180,
-      "travel_time_source": "source",
-      "distance_km": 1.647,
-      "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -527,17 +660,13 @@
       "to_station_id": "cn-zhengzhou-wulongkou",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 0.862,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 22.9,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-daxue-zhonglu-6-cn-zhengzhou-songhuai-6",
@@ -548,17 +677,13 @@
       "to_station_id": "cn-zhengzhou-songhuai",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.347,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-daxue-zhonglu-7-cn-zhengzhou-shi-dier-renminyiyuan-7",
@@ -612,37 +737,37 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-dongdajie-2-cn-zhengzhou-longhaidonglu-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "from_stop_id": "cn-zhengzhou-dongdajie-2",
-      "to_stop_id": "cn-zhengzhou-longhaidonglu-2",
-      "from_station_id": "cn-zhengzhou-dongdajie",
-      "to_station_id": "cn-zhengzhou-longhaidonglu",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-dn2nt-3-cn-zhengzhou-renmingongyuan-3",
+      "line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-dn2nt-3",
+      "to_stop_id": "cn-zhengzhou-renmingongyuan-3",
+      "from_station_id": "cn-zhengzhou-dn2nt",
+      "to_station_id": "cn-zhengzhou-renmingongyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 134,
+      "travel_time_seconds": 117,
       "travel_time_source": "source",
-      "distance_km": 1.065,
+      "distance_km": 0.897,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-dongdajie-3-cn-zhengzhou-zhengzhou-wenmiao-3",
-      "line_id": "cn-zhengzhou-line-3",
-      "from_stop_id": "cn-zhengzhou-dongdajie-3",
-      "to_stop_id": "cn-zhengzhou-zhengzhou-wenmiao-3",
-      "from_station_id": "cn-zhengzhou-dongdajie",
-      "to_station_id": "cn-zhengzhou-zhengzhou-wenmiao",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-dn2nt-7-cn-zhengzhou-zhengda-yifuyuan-7",
+      "line_id": "cn-zhengzhou-line-7",
+      "from_stop_id": "cn-zhengzhou-dn2nt-7",
+      "to_stop_id": "cn-zhengzhou-zhengda-yifuyuan-7",
+      "from_station_id": "cn-zhengzhou-dn2nt",
+      "to_station_id": "cn-zhengzhou-zhengda-yifuyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 98,
+      "travel_time_seconds": 180,
       "travel_time_source": "source",
-      "distance_km": 0.755,
+      "distance_km": 1.647,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -671,17 +796,13 @@
       "to_station_id": "cn-zhengzhou-zaozhuang",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.312,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-dongfengdong-lu-12-cn-zhengzhou-gaotie-gongyuan-12",
@@ -730,9 +851,9 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 50.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "speed_kmh": 45.1,
+        "a_s_per_km": 58,
+        "b_s": 58.5,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 211,
@@ -747,17 +868,13 @@
       "to_station_id": "cn-zhengzhou-donglinhu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 157,
+      "travel_time_source": "source",
       "distance_km": 1.72,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.5,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 157,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-dongqing-jie-8-cn-zhengzhou-nanliu-8",
@@ -768,17 +885,13 @@
       "to_station_id": "cn-zhengzhou-nanliu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.613,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.5,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-dongshilipu-3-cn-zhengzhou-tongtai-lu-3",
@@ -862,8 +975,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 43.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 310,
@@ -895,17 +1008,13 @@
       "to_station_id": "cn-zhengzhou-longxiu-gongyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 0.736,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 18.6,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-erligang-dong-6-cn-zhengzhou-erligang-6",
@@ -916,33 +1025,29 @@
       "to_station_id": "cn-zhengzhou-erligang",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 0.822,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 25.4,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-erqi-guangchang-1-cn-zhengzhou-renmin-lu-1",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-erqi-guangchang-1-cn-zhengzhou-c2a7s-1",
       "line_id": "cn-zhengzhou-line-1",
       "from_stop_id": "cn-zhengzhou-erqi-guangchang-1",
-      "to_stop_id": "cn-zhengzhou-renmin-lu-1",
+      "to_stop_id": "cn-zhengzhou-c2a7s-1",
       "from_station_id": "cn-zhengzhou-erqi-guangchang",
-      "to_station_id": "cn-zhengzhou-renmin-lu",
+      "to_station_id": "cn-zhengzhou-c2a7s",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 134,
       "travel_time_source": "source",
       "distance_km": 0.967,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -980,38 +1085,25 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-ertong-yiyuan-12-cn-zhengzhou-dongfengdong-lu-12",
-      "line_id": "cn-zhengzhou-line-12",
-      "from_stop_id": "cn-zhengzhou-ertong-yiyuan-12",
-      "to_stop_id": "cn-zhengzhou-dongfengdong-lu-12",
-      "from_station_id": "cn-zhengzhou-ertong-yiyuan",
-      "to_station_id": "cn-zhengzhou-dongfengdong-lu",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-f24d-3-cn-zhengzhou-binhe-xincheng-nan-3",
+      "line_id": "cn-zhengzhou-line-3",
+      "from_stop_id": "cn-zhengzhou-f24d-3",
+      "to_stop_id": "cn-zhengzhou-binhe-xincheng-nan-3",
+      "from_station_id": "cn-zhengzhou-f24d",
+      "to_station_id": "cn-zhengzhou-binhe-xincheng-nan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 120,
-      "travel_time_source": "source",
-      "distance_km": 1.212,
+      "distance_km": 0.98,
       "extras": {
         "distance_source": "source",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 41.2,
+        "a_s_per_km": 65.2,
+        "b_s": 61,
         "planner": "zzmetro-api-price"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-ertong-yiyuan-5-cn-zhengzhou-zhacheng-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "from_stop_id": "cn-zhengzhou-ertong-yiyuan-5",
-      "to_stop_id": "cn-zhengzhou-zhacheng-5",
-      "from_station_id": "cn-zhengzhou-ertong-yiyuan",
-      "to_station_id": "cn-zhengzhou-zhacheng",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 188,
-      "travel_time_source": "source",
-      "distance_km": 1.448,
-      "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
-      }
+      },
+      "travel_time_seconds": 121,
+      "travel_time_source": "source"
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-fenghuangtai-3-cn-zhengzhou-dongshilipu-3",
@@ -1039,17 +1131,13 @@
       "to_station_id": "cn-zhengzhou-erligang-dong",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 2.058,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.4,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-fengqing-lu-4-cn-zhengzhou-zhangjiacun-4",
@@ -1077,33 +1165,29 @@
       "to_station_id": "cn-zhengzhou-changzhuang",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 2.111,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 41.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-fengzhuang-5-cn-zhengzhou-jingguang-nanlu-5",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-fengzhuang-5-cn-zhengzhou-abh43v-5",
       "line_id": "cn-zhengzhou-line-5",
       "from_stop_id": "cn-zhengzhou-fengzhuang-5",
-      "to_stop_id": "cn-zhengzhou-jingguang-nanlu-5",
+      "to_stop_id": "cn-zhengzhou-abh43v-5",
       "from_station_id": "cn-zhengzhou-fengzhuang",
-      "to_station_id": "cn-zhengzhou-jingguang-nanlu",
+      "to_station_id": "cn-zhengzhou-abh43v",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 135,
       "travel_time_source": "source",
       "distance_km": 1.037,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -1166,17 +1250,47 @@
       "to_station_id": "cn-zhengzhou-lihuqiao",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.17,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-fxxo-5-cn-zhengzhou-zhongyixilu-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "from_stop_id": "cn-zhengzhou-fxxo-5",
+      "to_stop_id": "cn-zhengzhou-zhongyixilu-5",
+      "from_station_id": "cn-zhengzhou-fxxo",
+      "to_station_id": "cn-zhengzhou-zhongyixilu",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 140,
+      "travel_time_source": "source",
+      "distance_km": 1.075,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-fxxo-6-cn-zhengzhou-yanzhuang-6",
+      "line_id": "cn-zhengzhou-line-6",
+      "from_stop_id": "cn-zhengzhou-fxxo-6",
+      "to_stop_id": "cn-zhengzhou-yanzhuang-6",
+      "from_station_id": "cn-zhengzhou-fxxo",
+      "to_station_id": "cn-zhengzhou-yanzhuang",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
       "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      "travel_time_source": "source",
+      "distance_km": 0.985,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-gangqu-bei-城郊-cn-zhengzhou-kangpinghu-城郊",
@@ -1192,8 +1306,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 34.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 163,
@@ -1230,8 +1344,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 33,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 155,
@@ -1263,17 +1377,13 @@
       "to_station_id": "cn-zhengzhou-changhe-jie",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.375,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 33,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-getianyuan-郑许-cn-zhengzhou-yonghe-lu-郑许",
@@ -1327,20 +1437,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-haitansi-3-cn-zhengzhou-dashiqiao-3",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-haitansi-3-cn-zhengzhou-dn2nt-3",
       "line_id": "cn-zhengzhou-line-3",
       "from_stop_id": "cn-zhengzhou-haitansi-3",
-      "to_stop_id": "cn-zhengzhou-dashiqiao-3",
+      "to_stop_id": "cn-zhengzhou-dn2nt-3",
       "from_station_id": "cn-zhengzhou-haitansi",
-      "to_station_id": "cn-zhengzhou-dashiqiao",
+      "to_station_id": "cn-zhengzhou-dn2nt",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 146,
       "travel_time_source": "source",
       "distance_km": 1.124,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -1386,17 +1496,13 @@
       "to_station_id": "cn-zhengzhou-mazhai",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 131,
+      "travel_time_source": "source",
       "distance_km": 1.25,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 131,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-henan-orthopaedics-hospital-3-cn-zhengzhou-putian-xi-3",
@@ -1433,20 +1539,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-henan-peoples-hospital-5-cn-zhengzhou-yaozhai-5",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-henan-peoples-hospital-5-cn-zhengzhou-fxxo-5",
       "line_id": "cn-zhengzhou-line-5",
       "from_stop_id": "cn-zhengzhou-henan-peoples-hospital-5",
-      "to_stop_id": "cn-zhengzhou-yaozhai-5",
+      "to_stop_id": "cn-zhengzhou-fxxo-5",
       "from_station_id": "cn-zhengzhou-henan-peoples-hospital",
-      "to_station_id": "cn-zhengzhou-yaozhai",
+      "to_station_id": "cn-zhengzhou-fxxo",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 187,
       "travel_time_source": "source",
       "distance_km": 1.44,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -1501,23 +1607,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-houhe-lu-5-cn-zhengzhou-tonghuai-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "from_stop_id": "cn-zhengzhou-houhe-lu-5",
-      "to_stop_id": "cn-zhengzhou-tonghuai-5",
-      "from_station_id": "cn-zhengzhou-houhe-lu",
-      "to_station_id": "cn-zhengzhou-tonghuai",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 176,
-      "travel_time_source": "source",
-      "distance_km": 1.354,
-      "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
-      }
-    },
-    {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-hua-nancheng-east-城郊-cn-zhengzhou-mengzhuang-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "from_stop_id": "cn-zhengzhou-hua-nancheng-east-城郊",
@@ -1530,9 +1619,9 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 61.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "speed_kmh": 61.8,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 257,
@@ -1552,8 +1641,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 44.4,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 192,
@@ -1573,8 +1662,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 46.6,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 257,
@@ -1666,20 +1755,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-huanghenan-lu-12-cn-zhengzhou-ertong-yiyuan-12",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-huanghenan-lu-12-cn-zhengzhou-arbo99-12",
       "line_id": "cn-zhengzhou-line-12",
       "from_stop_id": "cn-zhengzhou-huanghenan-lu-12",
-      "to_stop_id": "cn-zhengzhou-ertong-yiyuan-12",
+      "to_stop_id": "cn-zhengzhou-arbo99-12",
       "from_station_id": "cn-zhengzhou-huanghenan-lu",
-      "to_station_id": "cn-zhengzhou-ertong-yiyuan",
+      "to_station_id": "cn-zhengzhou-arbo99",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 180,
       "travel_time_source": "source",
       "distance_km": 1.701,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -1700,23 +1789,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-huijiqu-zhengfu-2-cn-zhengzhou-maozhuang-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "from_stop_id": "cn-zhengzhou-huijiqu-zhengfu-2",
-      "to_stop_id": "cn-zhengzhou-maozhuang-2",
-      "from_station_id": "cn-zhengzhou-huijiqu-zhengfu",
-      "to_station_id": "cn-zhengzhou-maozhuang",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 152,
-      "travel_time_source": "source",
-      "distance_km": 1.359,
-      "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
-      }
-    },
-    {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-huochetou-tiyuchang-6-cn-zhengzhou-daxue-zhonglu-6",
       "line_id": "cn-zhengzhou-line-6",
       "from_stop_id": "cn-zhengzhou-huochetou-tiyuchang-6",
@@ -1725,17 +1797,13 @@
       "to_station_id": "cn-zhengzhou-daxue-zhonglu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 0.986,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27.6,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-huozhan-jie-4-cn-zhengzhou-qilihe-4",
@@ -1755,20 +1823,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-jiahe-2-cn-zhengzhou-huijiqu-zhengfu-2",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-jiahe-2-cn-zhengzhou-11rh5u1-2",
       "line_id": "cn-zhengzhou-line-2",
       "from_stop_id": "cn-zhengzhou-jiahe-2",
-      "to_stop_id": "cn-zhengzhou-huijiqu-zhengfu-2",
+      "to_stop_id": "cn-zhengzhou-11rh5u1-2",
       "from_station_id": "cn-zhengzhou-jiahe",
-      "to_station_id": "cn-zhengzhou-huijiqu-zhengfu",
+      "to_station_id": "cn-zhengzhou-11rh5u1",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 170,
       "travel_time_source": "source",
       "distance_km": 1.693,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -1784,9 +1852,9 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 49.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "speed_kmh": 49.4,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 217,
@@ -1861,23 +1929,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-jingguang-nanlu-5-cn-zhengzhou-shi-dier-renminyiyuan-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "from_stop_id": "cn-zhengzhou-jingguang-nanlu-5",
-      "to_stop_id": "cn-zhengzhou-shi-dier-renminyiyuan-5",
-      "from_station_id": "cn-zhengzhou-jingguang-nanlu",
-      "to_station_id": "cn-zhengzhou-shi-dier-renminyiyuan",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 157,
-      "travel_time_source": "source",
-      "distance_km": 1.21,
-      "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
-      }
-    },
-    {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-jinghu-7-cn-zhengzhou-nanhuan-gongyuan-7",
       "line_id": "cn-zhengzhou-line-7",
       "from_stop_id": "cn-zhengzhou-jinghu-7",
@@ -1912,25 +1963,21 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-jinhuiqiao-6-cn-zhengzhou-yaozhai-6",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-jinhuiqiao-6-cn-zhengzhou-fxxo-6",
       "line_id": "cn-zhengzhou-line-6",
       "from_stop_id": "cn-zhengzhou-jinhuiqiao-6",
-      "to_stop_id": "cn-zhengzhou-yaozhai-6",
+      "to_stop_id": "cn-zhengzhou-fxxo-6",
       "from_station_id": "cn-zhengzhou-jinhuiqiao",
-      "to_station_id": "cn-zhengzhou-yaozhai",
+      "to_station_id": "cn-zhengzhou-fxxo",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.751,
       "extras": {
-        "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 38.8,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
-        "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-jinrongdao-bei-4-cn-zhengzhou-jinrongdao-nan-4",
@@ -1975,17 +2022,13 @@
       "to_station_id": "cn-zhengzhou-xiaoying",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 2.239,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 42.9,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-jinshuidonglu-5-cn-zhengzhou-zhengzhoudong-railway-station-5",
@@ -2030,17 +2073,13 @@
       "to_station_id": "cn-zhengzhou-henan-jianyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 184,
+      "travel_time_source": "source",
       "distance_km": 2.34,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 46.4,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 184,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-kangningjie-5-cn-zhengzhou-henan-orthopaedics-hospital-5",
@@ -2072,9 +2111,9 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "speed_kmh": 30.1,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 163,
@@ -2094,8 +2133,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 25.8,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 127,
@@ -2161,17 +2200,13 @@
       "to_station_id": "cn-zhengzhou-longwangmiao",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.876,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 40.5,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-lijiang-lu-7-cn-zhengzhou-jinghu-7",
@@ -2199,17 +2234,13 @@
       "to_station_id": "cn-zhengzhou-fengwan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.737,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 38.2,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-lishangyin-gongyuan-10-cn-zhengzhou-miaowang-10",
@@ -2294,6 +2325,23 @@
       "extras": {
         "distance_source": "source",
         "planner": "zzmetro-api-price"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-llntp-郑许-cn-zhengzhou-yuanlinggucheng-xi-郑许",
+      "line_id": "cn-zhengzhou-line-zhengxu",
+      "from_stop_id": "cn-zhengzhou-llntp-郑许",
+      "to_stop_id": "cn-zhengzhou-yuanlinggucheng-xi-郑许",
+      "from_station_id": "cn-zhengzhou-llntp",
+      "to_station_id": "cn-zhengzhou-yuanlinggucheng-xi",
+      "direction": "both",
+      "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 240,
+      "travel_time_source": "source",
+      "distance_km": 2.348,
+      "extras": {
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -2407,17 +2455,13 @@
       "to_station_id": "cn-zhengzhou-zhengda-yifuyuan-dongqu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 2.397,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 46.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-longwang-nan-郑许-cn-zhengzhou-shuanghehu-bei-郑许",
@@ -2462,17 +2506,13 @@
       "to_station_id": "cn-zhengzhou-luboyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 2.442,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 48.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-longxiu-gongyuan-6-cn-zhengzhou-huochetou-tiyuchang-6",
@@ -2483,17 +2523,13 @@
       "to_station_id": "cn-zhengzhou-huochetou-tiyuchang",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.906,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 40.9,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-longzihu-1-cn-zhengzhou-wenyuanbeilu-1",
@@ -2560,8 +2596,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 38.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 32.9,
+        "b_s": 101.7,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 120,
@@ -2614,9 +2650,9 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 48.3,
-        "a_s_per_km": 35.1,
-        "b_s": 84.9,
+        "speed_kmh": 48.9,
+        "a_s_per_km": 33.5,
+        "b_s": 85.7,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 240,
@@ -2648,17 +2684,13 @@
       "to_station_id": "cn-zhengzhou-anning-lu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 143,
+      "travel_time_source": "source",
       "distance_km": 1.33,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.4,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 143,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-mengzhuang-城郊-cn-zhengzhou-gangqu-bei-城郊",
@@ -2674,8 +2706,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 40.2,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 163,
@@ -2728,9 +2760,9 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 36.8,
-        "a_s_per_km": 41.5,
-        "b_s": 93.9,
+        "speed_kmh": 37.8,
+        "a_s_per_km": 38.3,
+        "b_s": 95,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 120,
@@ -2745,17 +2777,13 @@
       "to_station_id": "cn-zhengzhou-daxue-kejiyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 2.359,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 47.4,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-nansanhuan-2-cn-zhengzhou-zhanmatun-2",
@@ -2773,27 +2801,6 @@
         "distance_source": "source",
         "planner": "zzmetro-api-price"
       }
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-nansihuan-城郊-cn-zhengzhou-shibalihe-城郊",
-      "line_id": "cn-zhengzhou-line-chengjiao",
-      "from_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "to_stop_id": "cn-zhengzhou-shibalihe-城郊",
-      "from_station_id": "cn-zhengzhou-nansihuan",
-      "to_station_id": "cn-zhengzhou-shibalihe",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "distance_km": 1.722,
-      "extras": {
-        "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 39.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
-        "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 163,
-      "travel_time_source": "source"
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-nanwulibao-2-cn-zhengzhou-huazhai-2",
@@ -2928,8 +2935,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 39.5,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 180,
@@ -2944,17 +2951,13 @@
       "to_station_id": "cn-zhengzhou-olympic-sports-center-west",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 451,
+      "travel_time_source": "source",
       "distance_km": 1.45,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.6,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 451,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-olympic-sports-center-west-6-cn-zhengzhou-jinzhen-lu-6",
@@ -2965,17 +2968,13 @@
       "to_station_id": "cn-zhengzhou-jinzhen-lu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 101,
+      "travel_time_source": "source",
       "distance_km": 1.47,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 30.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 101,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-putian-8-cn-zhengzhou-sheng-shekeyuan-8",
@@ -2986,17 +2985,13 @@
       "to_station_id": "cn-zhengzhou-sheng-shekeyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 3.689,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 53.4,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-putian-xi-3-cn-zhengzhou-yinggang-3",
@@ -3024,17 +3019,13 @@
       "to_station_id": "cn-zhengzhou-putian",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 2.859,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 49.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-qilihe-4-cn-zhengzhou-guoshusuo-4",
@@ -3071,20 +3062,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-qiliyan-5-cn-zhengzhou-houhe-lu-5",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-qiliyan-5-cn-zhengzhou-cufa9-5",
       "line_id": "cn-zhengzhou-line-5",
       "from_stop_id": "cn-zhengzhou-qiliyan-5",
-      "to_stop_id": "cn-zhengzhou-houhe-lu-5",
+      "to_stop_id": "cn-zhengzhou-cufa9-5",
       "from_station_id": "cn-zhengzhou-qiliyan",
-      "to_station_id": "cn-zhengzhou-houhe-lu",
+      "to_station_id": "cn-zhengzhou-cufa9",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 110,
       "travel_time_source": "source",
       "distance_km": 0.848,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -3096,17 +3087,13 @@
       "to_station_id": "cn-zhengzhou-xiangying",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.704,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 38.4,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-qinghua-fuzhong-4-cn-zhengzhou-longhu-zhonghuan-bei-4",
@@ -3134,33 +3121,29 @@
       "to_station_id": "cn-zhengzhou-jinrongdao-xi",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 2.468,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 45.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-qinglinglu-1-cn-zhengzhou-wuyi-gongyuan-1",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-qinglinglu-1-cn-zhengzhou-a8m6el-1",
       "line_id": "cn-zhengzhou-line-1",
       "from_stop_id": "cn-zhengzhou-qinglinglu-1",
-      "to_stop_id": "cn-zhengzhou-wuyi-gongyuan-1",
+      "to_stop_id": "cn-zhengzhou-a8m6el-1",
       "from_station_id": "cn-zhengzhou-qinglinglu",
-      "to_station_id": "cn-zhengzhou-wuyi-gongyuan",
+      "to_station_id": "cn-zhengzhou-a8m6el",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 131,
       "travel_time_source": "source",
       "distance_km": 0.944,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -3174,23 +3157,6 @@
       "source_id": "zzmetro-api",
       "travel_time_seconds": 120,
       "travel_time_source": "estimated"
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-renmin-lu-1-cn-zhengzhou-zijingshan-1",
-      "line_id": "cn-zhengzhou-line-1",
-      "from_stop_id": "cn-zhengzhou-renmin-lu-1",
-      "to_stop_id": "cn-zhengzhou-zijingshan-1",
-      "from_station_id": "cn-zhengzhou-renmin-lu",
-      "to_station_id": "cn-zhengzhou-zijingshan",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 148,
-      "travel_time_source": "source",
-      "distance_km": 1.04,
-      "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
-      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-renmingongyuan-3-cn-zhengzhou-erqi-guangchang-3",
@@ -3308,8 +3274,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 39,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 196,
@@ -3324,17 +3290,13 @@
       "to_station_id": "cn-zhengzhou-fuze-lu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.882,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 40.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-sheng-zhongyiyuan-8-cn-zhengzhou-baimiao-8",
@@ -3345,17 +3307,13 @@
       "to_station_id": "cn-zhengzhou-baimiao",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.768,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 38,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-shi-dier-renminyiyuan-5-cn-zhengzhou-qiliyan-5",
@@ -3422,8 +3380,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 46.8,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 222,
@@ -3545,8 +3503,8 @@
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 38.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 256,
@@ -3570,27 +3528,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-sizhao-3-cn-zhengzhou-binhe-xincheng-nan-3",
-      "line_id": "cn-zhengzhou-line-3",
-      "from_stop_id": "cn-zhengzhou-sizhao-3",
-      "to_stop_id": "cn-zhengzhou-binhe-xincheng-nan-3",
-      "from_station_id": "cn-zhengzhou-sizhao",
-      "to_station_id": "cn-zhengzhou-binhe-xincheng-nan",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "distance_km": 0.98,
-      "extras": {
-        "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.2,
-        "a_s_per_km": 66.9,
-        "b_s": 56.5,
-        "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 121,
-      "travel_time_source": "source"
-    },
-    {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-songhuai-6-cn-zhengzhou-tonghuai-6",
       "line_id": "cn-zhengzhou-line-6",
       "from_stop_id": "cn-zhengzhou-songhuai-6",
@@ -3599,17 +3536,13 @@
       "to_station_id": "cn-zhengzhou-tonghuai",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.518,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.2,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-tianjianhu-8-cn-zhengzhou-qinggongye-daxue-8",
@@ -3620,17 +3553,13 @@
       "to_station_id": "cn-zhengzhou-qinggongye-daxue",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 2.435,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 48.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-tielu-1-cn-zhengzhou-citizen-center-1",
@@ -3692,17 +3621,13 @@
       "to_station_id": "cn-zhengzhou-wolonggang",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 0.85,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 25.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-tongle-3-cn-zhengzhou-nanyang-xincun-3",
@@ -3730,17 +3655,13 @@
       "to_station_id": "cn-zhengzhou-sheng-zhongyiyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.136,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-tongtai-lu-3-cn-zhengzhou-xizhou-3",
@@ -3823,9 +3744,9 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.3,
-        "a_s_per_km": 48.9,
-        "b_s": 85.2,
+        "speed_kmh": 31.9,
+        "a_s_per_km": 42.8,
+        "b_s": 95.5,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 109,
@@ -3840,17 +3761,13 @@
       "to_station_id": "cn-zhengzhou-lijianggou",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.023,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.2,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-wulongkou-8-cn-zhengzhou-tongle-8",
@@ -3861,17 +3778,13 @@
       "to_station_id": "cn-zhengzhou-tongle",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 2.289,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 44.5,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-wutongjie-1-cn-zhengzhou-lanzhai-1",
@@ -3891,58 +3804,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-wuyi-gongyuan-1-cn-zhengzhou-bishagang-1",
-      "line_id": "cn-zhengzhou-line-1",
-      "from_stop_id": "cn-zhengzhou-wuyi-gongyuan-1",
-      "to_stop_id": "cn-zhengzhou-bishagang-1",
-      "from_station_id": "cn-zhengzhou-wuyi-gongyuan",
-      "to_station_id": "cn-zhengzhou-bishagang",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 132,
-      "travel_time_source": "source",
-      "distance_km": 1.008,
-      "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-wuyi-gongyuan-5-cn-zhengzhou-yuejigongyuan-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "from_stop_id": "cn-zhengzhou-wuyi-gongyuan-5",
-      "to_stop_id": "cn-zhengzhou-yuejigongyuan-5",
-      "from_station_id": "cn-zhengzhou-wuyi-gongyuan",
-      "to_station_id": "cn-zhengzhou-yuejigongyuan",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "distance_km": 1.633,
-      "extras": {
-        "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.6,
-        "a_s_per_km": 45.1,
-        "b_s": 78.6,
-        "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 212,
-      "travel_time_source": "source"
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-xi-dajie-3-cn-zhengzhou-dongdajie-3",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-xi-dajie-3-cn-zhengzhou-bvs4s-3",
       "line_id": "cn-zhengzhou-line-3",
       "from_stop_id": "cn-zhengzhou-xi-dajie-3",
-      "to_stop_id": "cn-zhengzhou-dongdajie-3",
+      "to_stop_id": "cn-zhengzhou-bvs4s-3",
       "from_station_id": "cn-zhengzhou-xi-dajie",
-      "to_station_id": "cn-zhengzhou-dongdajie",
+      "to_station_id": "cn-zhengzhou-bvs4s",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 83,
       "travel_time_source": "source",
       "distance_km": 0.637,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -3954,17 +3829,13 @@
       "to_station_id": "cn-zhengzhou-zhengzhou-daxue",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.506,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.2,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-xiaoqiao-城郊-cn-zhengzhou-huanancheng-west-城郊",
@@ -3979,9 +3850,9 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 51.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "speed_kmh": 52,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 256,
@@ -3996,17 +3867,13 @@
       "to_station_id": "cn-zhengzhou-jinhuiqiao",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.021,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-xiaoying-8-cn-zhengzhou-longhu-zhonghuan-nan-8",
@@ -4017,17 +3884,13 @@
       "to_station_id": "cn-zhengzhou-longhu-zhonghuan-nan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.885,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 40.3,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-xiliuhu-1-cn-zhengzhou-xisanhuan-1",
@@ -4098,20 +3961,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-xinzheng-airport-郑许-cn-zhengzhou-zun-dalu-郑许",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-xinzheng-airport-郑许-cn-zhengzhou-llntp-郑许",
       "line_id": "cn-zhengzhou-line-zhengxu",
       "from_stop_id": "cn-zhengzhou-xinzheng-airport-郑许",
-      "to_stop_id": "cn-zhengzhou-zun-dalu-郑许",
+      "to_stop_id": "cn-zhengzhou-llntp-郑许",
       "from_station_id": "cn-zhengzhou-xinzheng-airport",
-      "to_station_id": "cn-zhengzhou-zun-dalu",
+      "to_station_id": "cn-zhengzhou-llntp",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 240,
       "travel_time_source": "source",
       "distance_km": 4.903,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -4242,55 +4105,13 @@
       "to_station_id": "cn-zhengzhou-bolan-zhongxin",
       "direction": "both",
       "source_id": "zzmetro-api-price",
-      "distance_km": 1.862,
-      "extras": {
-        "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 40.8,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
-        "planner": "zzmetro-api-price"
-      },
       "travel_time_seconds": 180,
-      "travel_time_source": "source"
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-yaozhai-5-cn-zhengzhou-zhongyixilu-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "from_stop_id": "cn-zhengzhou-yaozhai-5",
-      "to_stop_id": "cn-zhengzhou-zhongyixilu-5",
-      "from_station_id": "cn-zhengzhou-yaozhai",
-      "to_station_id": "cn-zhengzhou-zhongyixilu",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 140,
       "travel_time_source": "source",
-      "distance_km": 1.075,
+      "distance_km": 1.862,
       "extras": {
         "distance_source": "source",
         "planner": "zzmetro-api-price"
       }
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-yaozhai-6-cn-zhengzhou-yanzhuang-6",
-      "line_id": "cn-zhengzhou-line-6",
-      "from_stop_id": "cn-zhengzhou-yaozhai-6",
-      "to_stop_id": "cn-zhengzhou-yanzhuang-6",
-      "from_station_id": "cn-zhengzhou-yaozhai",
-      "to_station_id": "cn-zhengzhou-yanzhuang",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "distance_km": 0.985,
-      "extras": {
-        "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
-        "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-yaozhuang-4-cn-zhengzhou-langzhuang-4",
@@ -4356,17 +4177,13 @@
       "to_station_id": "cn-zhengzhou-dongqing-jie",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
       "distance_km": 1.231,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-yixueyuan-1-cn-zhengzhou-zhengzhou-railway-station-1",
@@ -4496,17 +4313,13 @@
       "to_station_id": "cn-zhengzhou-xiaoying",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 2.396,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 46,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-zhacheng-5-cn-zhengzhou-jinshuidonglu-5",
@@ -4560,25 +4373,21 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-zhanmatun-2-cn-zhengzhou-nansihuan-2",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-zhanmatun-2-cn-zhengzhou-cmuvf-2",
       "line_id": "cn-zhengzhou-line-2",
       "from_stop_id": "cn-zhengzhou-zhanmatun-2",
-      "to_stop_id": "cn-zhengzhou-nansihuan-2",
+      "to_stop_id": "cn-zhengzhou-cmuvf-2",
       "from_station_id": "cn-zhengzhou-zhanmatun",
-      "to_station_id": "cn-zhengzhou-nansihuan",
+      "to_station_id": "cn-zhengzhou-cmuvf",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 224,
+      "travel_time_source": "source",
       "distance_km": 2.417,
       "extras": {
-        "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 43,
-        "a_s_per_km": 54.9,
-        "b_s": 67.8,
-        "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 224,
-      "travel_time_source": "source"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-zhengda-yifuyuan-7-cn-zhengzhou-yixueyuan-7",
@@ -4606,17 +4415,13 @@
       "to_station_id": "cn-zhengzhou-gaotie-gongyuan",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.439,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-zhengzhou-central-hospital-10-cn-zhengzhou-lucheng-guangchang-10",
@@ -4636,20 +4441,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-zhengzhou-central-hospital-5-cn-zhengzhou-wuyi-gongyuan-5",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-zhengzhou-central-hospital-5-cn-zhengzhou-a8m6el-5",
       "line_id": "cn-zhengzhou-line-5",
       "from_stop_id": "cn-zhengzhou-zhengzhou-central-hospital-5",
-      "to_stop_id": "cn-zhengzhou-wuyi-gongyuan-5",
+      "to_stop_id": "cn-zhengzhou-a8m6el-5",
       "from_station_id": "cn-zhengzhou-zhengzhou-central-hospital",
-      "to_station_id": "cn-zhengzhou-wuyi-gongyuan",
+      "to_station_id": "cn-zhengzhou-a8m6el",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 133,
       "travel_time_source": "source",
       "distance_km": 1.023,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -4678,17 +4483,13 @@
       "to_station_id": "cn-zhengzhou-yinping-lu",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.902,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 40.1,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-zhengzhou-railway-station-1-cn-zhengzhou-erqi-guangchang-1",
@@ -4725,20 +4526,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-zhengzhou-renminyiyuan-7-cn-zhengzhou-dashiqiao-7",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-zhengzhou-renminyiyuan-7-cn-zhengzhou-dn2nt-7",
       "line_id": "cn-zhengzhou-line-7",
       "from_stop_id": "cn-zhengzhou-zhengzhou-renminyiyuan-7",
-      "to_stop_id": "cn-zhengzhou-dashiqiao-7",
+      "to_stop_id": "cn-zhengzhou-dn2nt-7",
       "from_station_id": "cn-zhengzhou-zhengzhou-renminyiyuan",
-      "to_station_id": "cn-zhengzhou-dashiqiao",
+      "to_station_id": "cn-zhengzhou-dn2nt",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 180,
       "travel_time_source": "source",
       "distance_km": 1.739,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -4852,17 +4653,13 @@
       "to_station_id": "cn-zhengzhou-putian-xi",
       "direction": "both",
       "source_id": "zzmetro-api-price",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
       "distance_km": 1.652,
       "extras": {
         "distance_source": "source",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 47.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
         "planner": "zzmetro-api-price"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "source"
+      }
     },
     {
       "id": "cn-zhengzhou-seg-cn-zhengzhou-zhengzhouxi-railway-station-10-cn-zhengzhou-lishangyin-gongyuan-10",
@@ -4933,20 +4730,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-zijingshan-2-cn-zhengzhou-dongdajie-2",
+      "id": "cn-zhengzhou-seg-cn-zhengzhou-zijingshan-2-cn-zhengzhou-bvs4s-2",
       "line_id": "cn-zhengzhou-line-2",
       "from_stop_id": "cn-zhengzhou-zijingshan-2",
-      "to_stop_id": "cn-zhengzhou-dongdajie-2",
+      "to_stop_id": "cn-zhengzhou-bvs4s-2",
       "from_station_id": "cn-zhengzhou-zijingshan",
-      "to_station_id": "cn-zhengzhou-dongdajie",
+      "to_station_id": "cn-zhengzhou-bvs4s",
       "direction": "both",
       "source_id": "zzmetro-api-price",
       "travel_time_seconds": 174,
       "travel_time_source": "source",
       "distance_km": 1.596,
       "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
+        "planner": "zzmetro-api-price",
+        "distance_source": "source"
       }
     },
     {
@@ -4962,30 +4759,13 @@
       "extras": {
         "distance_source": "source",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 49.7,
-        "a_s_per_km": 35.2,
-        "b_s": 97.5,
+        "speed_kmh": 50,
+        "a_s_per_km": 34.3,
+        "b_s": 99.3,
         "planner": "zzmetro-api-price"
       },
       "travel_time_seconds": 286,
       "travel_time_source": "source"
-    },
-    {
-      "id": "cn-zhengzhou-seg-cn-zhengzhou-zun-dalu-郑许-cn-zhengzhou-yuanlinggucheng-xi-郑许",
-      "line_id": "cn-zhengzhou-line-zhengxu",
-      "from_stop_id": "cn-zhengzhou-zun-dalu-郑许",
-      "to_stop_id": "cn-zhengzhou-yuanlinggucheng-xi-郑许",
-      "from_station_id": "cn-zhengzhou-zun-dalu",
-      "to_station_id": "cn-zhengzhou-yuanlinggucheng-xi",
-      "direction": "both",
-      "source_id": "zzmetro-api-price",
-      "travel_time_seconds": 240,
-      "travel_time_source": "source",
-      "distance_km": 2.348,
-      "extras": {
-        "distance_source": "source",
-        "planner": "zzmetro-api-price"
-      }
     }
   ]
 }

@@ -8,13 +8,19 @@
   "city": {
     "id": "CN-4201",
     "name": {
-      "zh": "CN-4201",
-      "en": "CN-4201"
+      "zh": "武汉市",
+      "en": "Wuhan"
     },
-    "country": "",
-    "population": null,
-    "area": null,
-    "location": null
+    "country": "CN",
+    "population": 12326518,
+    "area": 8569.15,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        114.2975,
+        30.595
+      ]
+    }
   },
   "country_code": "CN",
   "currency": "CNY",
@@ -67,8 +73,8 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 322,
-        "derived": 0,
+        "official": 321,
+        "derived": 1,
         "default": 0
       }
     },
@@ -77,19 +83,19 @@
       "coverage": 1,
       "status": "derived",
       "counts": {
-        "official": 0,
-        "derived": 322,
+        "official": 1,
+        "derived": 321,
         "default": 0
       }
     },
     "transfer_times": {
       "precision": "official",
-      "coverage": 1,
-      "status": "complete",
+      "coverage": 0.72,
+      "status": "partial",
       "counts": {
         "official": 72,
-        "derived": 28,
-        "default": 0
+        "derived": 0,
+        "default": 28
       }
     },
     "timetables": {

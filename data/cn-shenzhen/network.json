@@ -8,13 +8,19 @@
   "city": {
     "id": "CN-4403",
     "name": {
-      "zh": "CN-4403",
-      "en": "CN-4403"
+      "zh": "深圳市",
+      "en": "Shenzhen"
     },
-    "country": "",
-    "population": null,
-    "area": null,
-    "location": null
+    "country": "CN",
+    "population": 17681600,
+    "area": 1997.27,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        114.054444444,
+        22.546666666
+      ]
+    }
   },
   "country_code": "CN",
   "currency": "CNY",
@@ -47,9 +53,9 @@
       "coverage": 1,
       "status": "complete",
       "counts": {
-        "official": 208,
-        "derived": 142,
-        "default": 1
+        "official": 351,
+        "derived": 0,
+        "default": 0
       }
     },
     "names": {
@@ -63,12 +69,12 @@
       }
     },
     "segment_times": {
-      "precision": "derived",
+      "precision": "official",
       "coverage": 1,
-      "status": "derived",
+      "status": "complete",
       "counts": {
-        "official": 0,
-        "derived": 416,
+        "official": 416,
+        "derived": 0,
         "default": 0
       }
     },
@@ -78,18 +84,18 @@
       "status": "derived",
       "counts": {
         "official": 0,
-        "derived": 414,
-        "default": 2
+        "derived": 416,
+        "default": 0
       }
     },
     "transfer_times": {
-      "precision": "default",
-      "coverage": 0,
-      "status": "unavailable",
+      "precision": "official",
+      "coverage": 0.82,
+      "status": "partial",
       "counts": {
-        "official": 0,
+        "official": 160,
         "derived": 0,
-        "default": 194
+        "default": 34
       }
     },
     "timetables": {
@@ -114,12 +120,12 @@
     },
     "fares": {
       "precision": "official",
-      "coverage": 1,
-      "status": "complete",
+      "coverage": 0.99,
+      "status": "partial",
       "counts": {
-        "official": 122850,
+        "official": 122150,
         "derived": 0,
-        "default": 0
+        "default": 700
       }
     }
   }

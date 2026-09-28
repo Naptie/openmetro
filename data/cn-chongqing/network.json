@@ -8,13 +8,19 @@
   "city": {
     "id": "CN-50",
     "name": {
-      "zh": "CN-50",
-      "en": "CN-50"
+      "zh": "重庆市",
+      "en": "Chongqing"
     },
-    "country": "",
-    "population": null,
-    "area": null,
-    "location": null
+    "country": "CN",
+    "population": 32054159,
+    "area": 82403,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        106.506944444,
+        29.55
+      ]
+    }
   },
   "country_code": "CN",
   "currency": "CNY",
@@ -83,12 +89,12 @@
     },
     "transfer_times": {
       "precision": "derived",
-      "coverage": 1,
-      "status": "derived",
+      "coverage": 0.02,
+      "status": "partial",
       "counts": {
         "official": 0,
-        "derived": 122,
-        "default": 0
+        "derived": 2,
+        "default": 120
       }
     },
     "timetables": {

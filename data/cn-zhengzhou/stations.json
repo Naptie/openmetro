@@ -2,20 +2,74 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-zhengzhou",
-  "generated_at": "2026-09-25T19:52:25.692Z",
-  "source": [
-    {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-09-25T19:52:25.692Z",
-      "license": "custom",
-      "license_url": null,
-      "attribution": "Baidu Maps",
-      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
-    }
-  ],
+  "generated_at": "2026-09-28T10:10:57.396Z",
+  "source": [],
   "records": [
+    {
+      "id": "cn-zhengzhou-11rh5u1",
+      "name": "惠济区政府站",
+      "names": {
+        "zh": "惠济区政府站",
+        "en": "Huijiquzhengfu Station"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10216"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10216"
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-a8m6el",
+      "name": "五一公园站",
+      "names": {
+        "zh": "五一公园站",
+        "en": "Wuyigongyuan Station"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10124"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10532"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10124",
+          "10532"
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-abh43v",
+      "name": "京广南路站",
+      "names": {
+        "zh": "京广南路站",
+        "en": "Station abh43v"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10525"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10525"
+        ]
+      }
+    },
     {
       "id": "cn-zhengzhou-anning-lu",
       "name": "安宁路站",
@@ -84,6 +138,31 @@
         "amap_name": "翱翔路",
         "amap_en_full": "AOXIANG LU",
         "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-arbo99",
+      "name": "儿童医院站",
+      "names": {
+        "zh": "儿童医院站",
+        "en": "Station arbo99"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10510"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "11231"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10510",
+          "11231"
+        ]
       }
     },
     {
@@ -447,11 +526,36 @@
       }
     },
     {
+      "id": "cn-zhengzhou-bvs4s",
+      "name": "东大街站",
+      "names": {
+        "zh": "东大街站",
+        "en": "Dongdajie Station"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10229"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10331"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10229",
+          "10331"
+        ]
+      }
+    },
+    {
       "id": "cn-zhengzhou-bwyf2h",
       "name": "3号航站楼站",
       "names": {
         "zh": "3号航站楼站",
-        "en": "Terminal 3"
+        "en": "Station bwyf2h"
       },
       "status": "out_of_service",
       "source_ids": [
@@ -463,15 +567,27 @@
       "extras": {
         "official_zids": [
           "10951"
-        ],
-        "location_source": "baidu-place",
-        "baidu_place_uid": "45ca906277a888126268588e",
-        "baidu_place_name": "3号航站楼"
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-c2a7s",
+      "name": "人民路站",
+      "names": {
+        "zh": "人民路站",
+        "en": "Station c2a7s"
       },
-      "location": {
-        "lon": 113.887369,
-        "lat": 34.522616,
-        "crs": "gcj02"
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10130"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10130"
+        ]
       }
     },
     {
@@ -830,6 +946,31 @@
       }
     },
     {
+      "id": "cn-zhengzhou-cmuvf",
+      "name": "南四环站",
+      "names": {
+        "zh": "南四环站",
+        "en": "Station cmuvf"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10236"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10936"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10236",
+          "10936"
+        ]
+      }
+    },
+    {
       "id": "cn-zhengzhou-convention-and-exhibition-center",
       "name": "会展中心站",
       "names": {
@@ -870,44 +1011,23 @@
       }
     },
     {
-      "id": "cn-zhengzhou-dashiqiao",
-      "name": "大石桥站",
+      "id": "cn-zhengzhou-cufa9",
+      "name": "后河芦站",
       "names": {
-        "zh": "大石桥站",
-        "en": "Dashiqiao"
-      },
-      "location": {
-        "lon": 113.655734,
-        "lat": 34.765011,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1015,
-        "y": 660,
-        "crs": "schematic"
+        "zh": "后河芦站",
+        "en": "Station cufa9"
       },
       "status": "operating",
       "source_ids": [
         {
           "source": "zzmetro-api",
-          "id": "10327"
-        },
-        {
-          "source": "zzmetro-api",
-          "id": "10741"
+          "id": "10528"
         }
       ],
       "extras": {
-        "pinyin": "DaShiQiao ShiFuYou BaoJianYuan",
-        "poiid": "BV09379201",
         "official_zids": [
-          "10327",
-          "10741"
-        ],
-        "co_name": "市妇幼保健院",
-        "amap_name": "大石桥·市妇幼保健院",
-        "amap_en_full": "DASHIQIAO / SHIFUYOUBAOJIANYUAN",
-        "location_source": "source"
+          "10528"
+        ]
       }
     },
     {
@@ -1056,44 +1176,28 @@
       }
     },
     {
-      "id": "cn-zhengzhou-dongdajie",
-      "name": "东大街站",
+      "id": "cn-zhengzhou-dn2nt",
+      "name": "大石桥站",
       "names": {
-        "zh": "东大街站",
-        "en": "Dongdajie"
-      },
-      "location": {
-        "lon": 113.68299,
-        "lat": 34.748829,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1235,
-        "y": 773,
-        "crs": "schematic"
+        "zh": "大石桥站",
+        "en": "Station dn2nt"
       },
       "status": "operating",
       "source_ids": [
         {
           "source": "zzmetro-api",
-          "id": "10229"
+          "id": "10327"
         },
         {
           "source": "zzmetro-api",
-          "id": "10331"
+          "id": "10741"
         }
       ],
       "extras": {
-        "pinyin": "DongDaJie Shi DiYi RenMin YiYuan",
-        "poiid": "BV09381696",
         "official_zids": [
-          "10229",
-          "10331"
-        ],
-        "co_name": "市第一人民医院",
-        "amap_name": "东大街·市第一人民医院",
-        "amap_en_full": "DONGDAJIE / SHIDIYIRENMINYIYUAN",
-        "location_source": "source"
+          "10327",
+          "10741"
+        ]
       }
     },
     {
@@ -1607,44 +1711,29 @@
       }
     },
     {
-      "id": "cn-zhengzhou-ertong-yiyuan",
-      "name": "儿童医院站",
+      "id": "cn-zhengzhou-f24d",
+      "name": "司赵站",
       "names": {
-        "zh": "儿童医院站",
-        "en": "Ertong Yiyuan"
+        "zh": "司赵站",
+        "en": "Station f24d"
       },
       "location": {
-        "lon": 113.750767,
-        "lat": 34.776122,
+        "lon": 113.80514362610643,
+        "lat": 34.69130016153626,
         "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1725,
-        "y": 598,
-        "crs": "schematic"
       },
       "status": "operating",
       "source_ids": [
         {
           "source": "zzmetro-api",
-          "id": "10510"
-        },
-        {
-          "source": "zzmetro-api",
-          "id": "11231"
+          "id": "10344"
         }
       ],
       "extras": {
-        "pinyin": "ErTong YiYuan YiHe YiYuan",
-        "poiid": "BV10705657",
         "official_zids": [
-          "10510",
-          "11231"
+          "10344"
         ],
-        "co_name": "颐和医院",
-        "amap_name": "儿童医院·颐和医院",
-        "amap_en_full": "CHILDREN’S HOSPITAL",
-        "location_source": "source"
+        "location_source": "overpass"
       }
     },
     {
@@ -1930,6 +2019,31 @@
         "amap_name": "福泽路",
         "amap_en_full": "FUZE LU",
         "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-fxxo",
+      "name": "姚砦站",
+      "names": {
+        "zh": "姚砦站",
+        "en": "Station fxxo"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "10507"
+        },
+        {
+          "source": "zzmetro-api",
+          "id": "10626"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "10507",
+          "10626"
+        ]
       }
     },
     {
@@ -2413,42 +2527,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-houhe-lu",
-      "name": "后河芦站",
-      "names": {
-        "zh": "后河芦站",
-        "en": "Houhe Lu"
-      },
-      "location": {
-        "lon": 113.618989,
-        "lat": 34.720587,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 916,
-        "y": 920,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "10528"
-        }
-      ],
-      "extras": {
-        "pinyin": "HouHe Lu Shi DiBa RenMin YiYuan",
-        "poiid": "BV09380245",
-        "official_zids": [
-          "10528"
-        ],
-        "co_name": "市第八人民医院",
-        "amap_name": "后河芦·市第八人民医院",
-        "amap_en_full": "HOUHELU / SHIDIBARENMINYIYUAN",
-        "location_source": "source"
-      }
-    },
-    {
       "id": "cn-zhengzhou-hua-nancheng-east",
       "name": "华南城东站",
       "names": {
@@ -2705,42 +2783,6 @@
         ],
         "amap_name": "花寨",
         "amap_en_full": "HUAZHAI",
-        "location_source": "source"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-huijiqu-zhengfu",
-      "name": "惠济区政府站",
-      "names": {
-        "zh": "惠济区政府站",
-        "en": "Huijiqu Zhengfu"
-      },
-      "location": {
-        "lon": 113.611847,
-        "lat": 34.866048,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 825,
-        "y": 80,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "10216"
-        }
-      ],
-      "extras": {
-        "pinyin": "HuiJiQu ZhengFu ShiSanYuan HuiJi YuanQu",
-        "poiid": "BV09379211",
-        "official_zids": [
-          "10216"
-        ],
-        "co_name": "市三院惠济院区",
-        "amap_name": "惠济区政府·市三院惠济院区",
-        "amap_en_full": "HUIJI QU ZHENGFU / SHISANYUANHUIJIYUANQU",
         "location_source": "source"
       }
     },
@@ -3056,42 +3098,6 @@
         ],
         "amap_name": "经北五路",
         "amap_en_full": "JINGBEIWU LU",
-        "location_source": "source"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-jingguang-nanlu",
-      "name": "京广南路站",
-      "names": {
-        "zh": "京广南路站",
-        "en": "Jingguang Nanlu"
-      },
-      "location": {
-        "lon": 113.656817,
-        "lat": 34.720213,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1107,
-        "y": 920,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "10525"
-        }
-      ],
-      "extras": {
-        "pinyin": "JingGuang NanLu Shi DiLiu RenMin YiYuan",
-        "poiid": "BV09380219",
-        "official_zids": [
-          "10525"
-        ],
-        "co_name": "市第六人民医院",
-        "amap_name": "京广南路·市第六人民医院",
-        "amap_en_full": "JINGGUANGNANLU / SHIDILIURENMINYIYUAN",
         "location_source": "source"
       }
     },
@@ -3968,6 +3974,26 @@
         "amap_name": "刘庄",
         "amap_en_full": "LIUZHUANG",
         "location_source": "source"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-llntp",
+      "name": "遵大路站",
+      "names": {
+        "zh": "遵大路站",
+        "en": "Station llntp"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "zzmetro-api",
+          "id": "11735"
+        }
+      ],
+      "extras": {
+        "official_zids": [
+          "11735"
+        ]
       }
     },
     {
@@ -4896,47 +4922,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-nansihuan",
-      "name": "南四环站",
-      "names": {
-        "zh": "南四环站",
-        "en": "Nansihuan"
-      },
-      "location": {
-        "lon": 113.681891,
-        "lat": 34.6633,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1240,
-        "y": 1140,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "10236"
-        },
-        {
-          "source": "zzmetro-api",
-          "id": "10936"
-        }
-      ],
-      "extras": {
-        "pinyin": "NanSiHuan (ZhengZhou HangKongGang Zhan)",
-        "poiid": "BV09416244",
-        "official_zids": [
-          "10236",
-          "10936"
-        ],
-        "co_name": "郑州航空港站",
-        "amap_name": "南四环(郑州航空港站)",
-        "amap_en_full": "S. 4th Ring Road (Zhengzhou Airport Railway Station)",
-        "location_source": "source"
-      }
-    },
-    {
       "id": "cn-zhengzhou-nanwulibao",
       "name": "南五里堡站",
       "names": {
@@ -5526,56 +5511,12 @@
       "name": "须水站",
       "names": {
         "zh": "须水站",
-        "en": "Xushui"
+        "en": "Station qj2x"
       },
       "status": "out_of_service",
       "source_ids": [],
       "extras": {
-        "official_zids": [],
-        "location_source": "baidu-place",
-        "baidu_place_uid": "c192ffa4bc1c5b03b35c6aac",
-        "baidu_place_name": "须水"
-      },
-      "location": {
-        "lon": 113.527052,
-        "lat": 34.780853,
-        "crs": "gcj02"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-renmin-lu",
-      "name": "人民路站",
-      "names": {
-        "zh": "人民路站",
-        "en": "Renmin Lu"
-      },
-      "location": {
-        "lon": 113.673865,
-        "lat": 34.757566,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1184,
-        "y": 695,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "10130"
-        }
-      ],
-      "extras": {
-        "pinyin": "RenMin Lu HeNan ZhongYiYi FuYuan",
-        "poiid": "BV09237662",
-        "official_zids": [
-          "10130"
-        ],
-        "co_name": "河南中医一附院",
-        "amap_name": "人民路·河南中医一附院",
-        "amap_en_full": "Renmin Road The First Affiliated Hospital of Henan University of CM",
-        "location_source": "source"
+        "official_zids": []
       }
     },
     {
@@ -6224,42 +6165,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-sizhao",
-      "name": "司赵站",
-      "names": {
-        "zh": "司赵站",
-        "en": "Sizhao"
-      },
-      "location": {
-        "lon": 113.79513,
-        "lat": 34.67691,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1906,
-        "y": 1097,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "10344"
-        }
-      ],
-      "extras": {
-        "pinyin": "SiZhao ShiQiYuan BinHe YuanQu",
-        "poiid": "BV09381695",
-        "official_zids": [
-          "10344"
-        ],
-        "co_name": "市七院滨河院区",
-        "amap_name": "司赵·市七院滨河院区",
-        "amap_en_full": "SIZHAO / SHIQIYUANBINHEYUANQU",
-        "location_source": "source"
-      }
-    },
-    {
       "id": "cn-zhengzhou-songhuai",
       "name": "嵩淮站",
       "names": {
@@ -6726,47 +6631,6 @@
         ],
         "amap_name": "梧桐街",
         "amap_en_full": "WUTONGJIE",
-        "location_source": "source"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-wuyi-gongyuan",
-      "name": "五一公园站",
-      "names": {
-        "zh": "五一公园站",
-        "en": "Wuyi Gongyuan"
-      },
-      "location": {
-        "lon": 113.613576,
-        "lat": 34.756657,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 839,
-        "y": 710,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "10124"
-        },
-        {
-          "source": "zzmetro-api",
-          "id": "10532"
-        }
-      ],
-      "extras": {
-        "pinyin": "WuYi GongYuan Shi ZhongYiYuan",
-        "poiid": "BV09379353",
-        "official_zids": [
-          "10124",
-          "10532"
-        ],
-        "co_name": "市中医院",
-        "amap_name": "五一公园·市中医院",
-        "amap_en_full": "WUYIGONGYUAN / SHIZHONGYIYUAN",
         "location_source": "source"
       }
     },
@@ -7312,47 +7176,6 @@
         ],
         "amap_name": "燕庄",
         "amap_en_full": "YANZHUANG",
-        "location_source": "source"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-yaozhai",
-      "name": "姚砦站",
-      "names": {
-        "zh": "姚砦站",
-        "en": "Yaozhai"
-      },
-      "location": {
-        "lon": 113.707797,
-        "lat": 34.772601,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 1412,
-        "y": 599,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "10507"
-        },
-        {
-          "source": "zzmetro-api",
-          "id": "10626"
-        }
-      ],
-      "extras": {
-        "pinyin": "YaoZhai NieZhuang",
-        "poiid": "BV11194037",
-        "official_zids": [
-          "10507",
-          "10626"
-        ],
-        "co_name": "聂庄",
-        "amap_name": "姚砦·聂庄",
-        "amap_en_full": "YAOZHAI",
         "location_source": "source"
       }
     },
@@ -8453,42 +8276,6 @@
         ],
         "amap_name": "综合保税区",
         "amap_en_full": "ZONGHEBAOSHUIQU",
-        "location_source": "source"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-zun-dalu",
-      "name": "遵大路站",
-      "names": {
-        "zh": "遵大路站",
-        "en": "Zun Dalu"
-      },
-      "location": {
-        "lon": 113.839034,
-        "lat": 34.48573,
-        "crs": "gcj02"
-      },
-      "schematic": {
-        "x": 2024,
-        "y": 1856,
-        "crs": "schematic"
-      },
-      "status": "operating",
-      "source_ids": [
-        {
-          "source": "zzmetro-api",
-          "id": "11735"
-        }
-      ],
-      "extras": {
-        "pinyin": "Zun DaLu ShiYiYuan HangKongGang YuanQu",
-        "poiid": "BV09384005",
-        "official_zids": [
-          "11735"
-        ],
-        "co_name": "市一院航空港院区",
-        "amap_name": "遵大路·市一院航空港院区",
-        "amap_en_full": "ZUNDA LU / SHIYIYUANHANGKONGGANGYUANQU",
         "location_source": "source"
       }
     }

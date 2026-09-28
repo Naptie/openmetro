@@ -2,9 +2,191 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/timetables.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-zhengzhou",
-  "generated_at": "2026-09-25T19:52:11.996Z",
+  "generated_at": "2026-09-28T10:10:57.401Z",
   "source": [],
   "records": [
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-11rh5u1-2-to-cn-zhengzhou-cmuvf-linear-primary",
+      "station_id": "cn-zhengzhou-11rh5u1",
+      "stop_id": "cn-zhengzhou-11rh5u1-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "南四环站",
+      "first_train": [
+        "06:02"
+      ],
+      "last_train": [
+        "23:02"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-11rh5u1-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-11rh5u1",
+      "stop_id": "cn-zhengzhou-11rh5u1-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:29"
+      ],
+      "last_train": [
+        "23:49"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-a8m6el-1-to-cn-zhengzhou-henan-university-of-technology-linear-primary",
+      "station_id": "cn-zhengzhou-a8m6el",
+      "stop_id": "cn-zhengzhou-a8m6el-1",
+      "line_id": "cn-zhengzhou-line-1",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-henan-university-of-technology-1",
+      "pattern_id": "cn-zhengzhou-line-1-pattern-cn-zhengzhou-henan-university-of-technology-1-to-cn-zhengzhou-new-campus-of-henan-university-1",
+      "direction_type": "linear",
+      "direction_label": "河南工业大学站",
+      "first_train": [
+        "06:10"
+      ],
+      "last_train": [
+        "23:51"
+      ],
+      "extras": {
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
+            "dest_name": "西流湖",
+            "last_train": "0:28"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-a8m6el-1-to-cn-zhengzhou-new-campus-of-henan-university-linear-primary",
+      "station_id": "cn-zhengzhou-a8m6el",
+      "stop_id": "cn-zhengzhou-a8m6el-1",
+      "line_id": "cn-zhengzhou-line-1",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-new-campus-of-henan-university-1",
+      "pattern_id": "cn-zhengzhou-line-1-pattern-cn-zhengzhou-henan-university-of-technology-1-to-cn-zhengzhou-new-campus-of-henan-university-1",
+      "direction_type": "linear",
+      "direction_label": "河南大学新区站",
+      "first_train": [
+        "05:37"
+      ],
+      "last_train": [
+        "23:24"
+      ],
+      "extras": {
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
+            "dest_name": "市体育中心",
+            "last_train": "23:50"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-a8m6el-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
+      "station_id": "cn-zhengzhou-a8m6el",
+      "stop_id": "cn-zhengzhou-a8m6el-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "source_id": "zzmetro-operating-hours",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_inner",
+      "direction_label": "（内环）月季公园-黄河路-郑州东站",
+      "first_train": [
+        "06:10"
+      ],
+      "last_train": [
+        "24:09"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-a8m6el-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
+      "station_id": "cn-zhengzhou-a8m6el",
+      "stop_id": "cn-zhengzhou-a8m6el-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "source_id": "zzmetro-operating-hours",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_outer",
+      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
+      "first_train": [
+        "06:03"
+      ],
+      "last_train": [
+        "23:03"
+      ],
+      "extras": {
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_name": "半程（终点站航海广场）",
+            "last_train": "23:33"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-abh43v-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
+      "station_id": "cn-zhengzhou-abh43v",
+      "stop_id": "cn-zhengzhou-abh43v-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "source_id": "zzmetro-operating-hours",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_inner",
+      "direction_label": "（内环）月季公园-黄河路-郑州东站",
+      "first_train": [
+        "06:08"
+      ],
+      "last_train": [
+        "23:54"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-abh43v-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
+      "station_id": "cn-zhengzhou-abh43v",
+      "stop_id": "cn-zhengzhou-abh43v-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "source_id": "zzmetro-operating-hours",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_outer",
+      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
+      "first_train": [
+        "06:04"
+      ],
+      "last_train": [
+        "23:18"
+      ],
+      "extras": {
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_name": "半程（终点站航海广场）",
+            "last_train": "23:48"
+          }
+        ]
+      }
+    },
     {
       "id": "cn-zhengzhou-cn-zhengzhou-anning-lu-6-to-cn-zhengzhou-jiayu-linear-primary",
       "station_id": "cn-zhengzhou-anning-lu",
@@ -80,6 +262,90 @@
       ],
       "last_train": [
         "21:09"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-arbo99-12-to-cn-zhengzhou-lianghu-linear-primary",
+      "station_id": "cn-zhengzhou-arbo99",
+      "stop_id": "cn-zhengzhou-arbo99-12",
+      "line_id": "cn-zhengzhou-line-12",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-lianghu-12",
+      "pattern_id": "cn-zhengzhou-line-12-pattern-cn-zhengzhou-lianghu-12-to-cn-zhengzhou-longzihu-dong-12",
+      "direction_type": "linear",
+      "direction_label": "梁湖站",
+      "first_train": [
+        "06:12"
+      ],
+      "last_train": [
+        "23:42"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-arbo99-12-to-cn-zhengzhou-longzihu-linear-primary",
+      "station_id": "cn-zhengzhou-arbo99",
+      "stop_id": "cn-zhengzhou-arbo99-12",
+      "line_id": "cn-zhengzhou-line-12",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-longzihu-12",
+      "pattern_id": "cn-zhengzhou-line-12-pattern-cn-zhengzhou-lianghu-12-to-cn-zhengzhou-longzihu-dong-12",
+      "direction_type": "linear",
+      "direction_label": "龙子湖东站",
+      "first_train": [
+        "06:12"
+      ],
+      "last_train": [
+        "23:12"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-arbo99-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
+      "station_id": "cn-zhengzhou-arbo99",
+      "stop_id": "cn-zhengzhou-arbo99-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "source_id": "zzmetro-operating-hours",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_inner",
+      "direction_label": "（内环）月季公园-黄河路-郑州东站",
+      "first_train": [
+        "06:21"
+      ],
+      "last_train": [
+        "23:21"
+      ],
+      "extras": {
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_name": "半程（终点站七里河）",
+            "last_train": "23:51"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-arbo99-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
+      "station_id": "cn-zhengzhou-arbo99",
+      "stop_id": "cn-zhengzhou-arbo99-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "source_id": "zzmetro-operating-hours",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_outer",
+      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
+      "first_train": [
+        "06:06"
+      ],
+      "last_train": [
+        "23:52"
       ],
       "extras": {
         "service": "primary"
@@ -286,33 +552,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-beisanhuan-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-beisanhuan-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-beisanhuan",
       "stop_id": "cn-zhengzhou-beisanhuan-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:09"
-      ],
-      "last_train": [
-        "23:28"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-beisanhuan-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-beisanhuan",
-      "stop_id": "cn-zhengzhou-beisanhuan-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -320,6 +566,26 @@
       ],
       "last_train": [
         "23:23"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-beisanhuan-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-beisanhuan",
+      "stop_id": "cn-zhengzhou-beisanhuan-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:09"
+      ],
+      "last_train": [
+        "23:28"
       ],
       "extras": {
         "service": "primary"
@@ -407,7 +673,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:26"
+            "last_train": "0:26"
           }
         ]
       }
@@ -568,7 +834,141 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:27"
+            "last_train": "0:27"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-bvs4s-2-to-cn-zhengzhou-cmuvf-linear-primary",
+      "station_id": "cn-zhengzhou-bvs4s",
+      "stop_id": "cn-zhengzhou-bvs4s-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "南四环站",
+      "first_train": [
+        "06:08"
+      ],
+      "last_train": [
+        "23:35"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-bvs4s-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-bvs4s",
+      "stop_id": "cn-zhengzhou-bvs4s-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:16"
+      ],
+      "last_train": [
+        "23:16"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-bvs4s-3-to-cn-zhengzhou-binhe-xincheng-linear-primary",
+      "station_id": "cn-zhengzhou-bvs4s",
+      "stop_id": "cn-zhengzhou-bvs4s-3",
+      "line_id": "cn-zhengzhou-line-3",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-binhe-xincheng-3",
+      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
+      "direction_type": "linear",
+      "direction_label": "滨河新城南站",
+      "first_train": [
+        "06:10"
+      ],
+      "last_train": [
+        "23:23"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-bvs4s-3-to-cn-zhengzhou-henan-sports-center-linear-primary",
+      "station_id": "cn-zhengzhou-bvs4s",
+      "stop_id": "cn-zhengzhou-bvs4s-3",
+      "line_id": "cn-zhengzhou-line-3",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-henan-sports-center-3",
+      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
+      "direction_type": "linear",
+      "direction_label": "省体育中心站",
+      "first_train": [
+        "05:43"
+      ],
+      "last_train": [
+        "23:33"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-c2a7s-1-to-cn-zhengzhou-henan-university-of-technology-linear-primary",
+      "station_id": "cn-zhengzhou-c2a7s",
+      "stop_id": "cn-zhengzhou-c2a7s-1",
+      "line_id": "cn-zhengzhou-line-1",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-henan-university-of-technology-1",
+      "pattern_id": "cn-zhengzhou-line-1-pattern-cn-zhengzhou-henan-university-of-technology-1-to-cn-zhengzhou-new-campus-of-henan-university-1",
+      "direction_type": "linear",
+      "direction_label": "河南工业大学站",
+      "first_train": [
+        "05:56"
+      ],
+      "last_train": [
+        "23:37"
+      ],
+      "extras": {
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
+            "dest_name": "西流湖",
+            "last_train": "0:14"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-c2a7s-1-to-cn-zhengzhou-new-campus-of-henan-university-linear-primary",
+      "station_id": "cn-zhengzhou-c2a7s",
+      "stop_id": "cn-zhengzhou-c2a7s-1",
+      "line_id": "cn-zhengzhou-line-1",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-new-campus-of-henan-university-1",
+      "pattern_id": "cn-zhengzhou-line-1-pattern-cn-zhengzhou-henan-university-of-technology-1-to-cn-zhengzhou-new-campus-of-henan-university-1",
+      "direction_type": "linear",
+      "direction_label": "河南大学新区站",
+      "first_train": [
+        "05:51"
+      ],
+      "last_train": [
+        "23:38"
+      ],
+      "extras": {
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
+            "dest_name": "市体育中心",
+            "last_train": "0:04"
           }
         ]
       }
@@ -619,7 +1019,7 @@
       "stop_id": "cn-zhengzhou-central-business-district-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -644,7 +1044,7 @@
       "stop_id": "cn-zhengzhou-central-business-district-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -843,7 +1243,7 @@
       "stop_id": "cn-zhengzhou-chengdongnanlu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -862,7 +1262,7 @@
       "stop_id": "cn-zhengzhou-chengdongnanlu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -1009,6 +1409,46 @@
       }
     },
     {
+      "id": "cn-zhengzhou-cn-zhengzhou-cmuvf-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-cmuvf",
+      "stop_id": "cn-zhengzhou-cmuvf-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:00"
+      ],
+      "last_train": [
+        "23:00"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-cmuvf-城郊-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station-linear-primary",
+      "station_id": "cn-zhengzhou-cmuvf",
+      "stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "line_id": "cn-zhengzhou-line-chengjiao",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "direction_type": "linear",
+      "direction_label": "郑州航空港站",
+      "first_train": [
+        "06:00"
+      ],
+      "last_train": [
+        "23:00"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
       "id": "cn-zhengzhou-cn-zhengzhou-convention-and-exhibition-center-1-to-cn-zhengzhou-henan-university-of-technology-linear-primary",
       "station_id": "cn-zhengzhou-convention-and-exhibition-center",
       "stop_id": "cn-zhengzhou-convention-and-exhibition-center-1",
@@ -1030,7 +1470,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:04"
+            "last_train": "0:04"
           }
         ]
       }
@@ -1057,7 +1497,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:14"
+            "last_train": "0:14"
           }
         ]
       }
@@ -1103,83 +1543,47 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-dashiqiao-3-to-cn-zhengzhou-binhe-xincheng-linear-primary",
-      "station_id": "cn-zhengzhou-dashiqiao",
-      "stop_id": "cn-zhengzhou-dashiqiao-3",
-      "line_id": "cn-zhengzhou-line-3",
+      "id": "cn-zhengzhou-cn-zhengzhou-cufa9-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
+      "station_id": "cn-zhengzhou-cufa9",
+      "stop_id": "cn-zhengzhou-cufa9-5",
+      "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-binhe-xincheng-3",
-      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
-      "direction_type": "linear",
-      "direction_label": "滨河新城南站",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_inner",
+      "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
-        "06:02"
+        "06:01"
       ],
       "last_train": [
-        "23:14"
+        "24:01"
       ],
       "extras": {
         "service": "primary"
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-dashiqiao-3-to-cn-zhengzhou-henan-sports-center-linear-primary",
-      "station_id": "cn-zhengzhou-dashiqiao",
-      "stop_id": "cn-zhengzhou-dashiqiao-3",
-      "line_id": "cn-zhengzhou-line-3",
+      "id": "cn-zhengzhou-cn-zhengzhou-cufa9-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
+      "station_id": "cn-zhengzhou-cufa9",
+      "stop_id": "cn-zhengzhou-cufa9-5",
+      "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-henan-sports-center-3",
-      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
-      "direction_type": "linear",
-      "direction_label": "省体育中心站",
-      "first_train": [
-        "05:51"
-      ],
-      "last_train": [
-        "23:40"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-dashiqiao-7-to-cn-zhengzhou-dongzhao-linear-primary",
-      "station_id": "cn-zhengzhou-dashiqiao",
-      "stop_id": "cn-zhengzhou-dashiqiao-7",
-      "line_id": "cn-zhengzhou-line-7",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-dongzhao-7",
-      "pattern_id": "cn-zhengzhou-line-7-pattern-cn-zhengzhou-dongzhao-7-to-cn-zhengzhou-nangangliu-7",
-      "direction_type": "linear",
-      "direction_label": "东赵",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_outer",
+      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
         "06:11"
       ],
       "last_train": [
-        "23:24"
+        "23:11"
       ],
       "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-dashiqiao-7-to-cn-zhengzhou-nangangliu-linear-primary",
-      "station_id": "cn-zhengzhou-dashiqiao",
-      "stop_id": "cn-zhengzhou-dashiqiao-7",
-      "line_id": "cn-zhengzhou-line-7",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nangangliu-7",
-      "pattern_id": "cn-zhengzhou-line-7-pattern-cn-zhengzhou-dongzhao-7-to-cn-zhengzhou-nangangliu-7",
-      "direction_type": "linear",
-      "direction_label": "南岗刘",
-      "first_train": [
-        "06:05"
-      ],
-      "last_train": [
-        "23:23"
-      ],
-      "extras": {
-        "service": "primary"
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_name": "半程（终点站航海广场）",
+            "last_train": "23:41"
+          }
+        ]
       }
     },
     {
@@ -1383,49 +1787,9 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-dongdajie-2-to-cn-zhengzhou-jiahe-linear-primary",
-      "station_id": "cn-zhengzhou-dongdajie",
-      "stop_id": "cn-zhengzhou-dongdajie-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:16"
-      ],
-      "last_train": [
-        "23:16"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-dongdajie-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-dongdajie",
-      "stop_id": "cn-zhengzhou-dongdajie-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "南四环站",
-      "first_train": [
-        "06:08"
-      ],
-      "last_train": [
-        "23:35"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-dongdajie-3-to-cn-zhengzhou-binhe-xincheng-linear-primary",
-      "station_id": "cn-zhengzhou-dongdajie",
-      "stop_id": "cn-zhengzhou-dongdajie-3",
+      "id": "cn-zhengzhou-cn-zhengzhou-dn2nt-3-to-cn-zhengzhou-binhe-xincheng-linear-primary",
+      "station_id": "cn-zhengzhou-dn2nt",
+      "stop_id": "cn-zhengzhou-dn2nt-3",
       "line_id": "cn-zhengzhou-line-3",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-binhe-xincheng-3",
@@ -1433,7 +1797,67 @@
       "direction_type": "linear",
       "direction_label": "滨河新城南站",
       "first_train": [
-        "06:10"
+        "06:02"
+      ],
+      "last_train": [
+        "23:14"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-dn2nt-3-to-cn-zhengzhou-henan-sports-center-linear-primary",
+      "station_id": "cn-zhengzhou-dn2nt",
+      "stop_id": "cn-zhengzhou-dn2nt-3",
+      "line_id": "cn-zhengzhou-line-3",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-henan-sports-center-3",
+      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
+      "direction_type": "linear",
+      "direction_label": "省体育中心站",
+      "first_train": [
+        "05:51"
+      ],
+      "last_train": [
+        "23:40"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-dn2nt-7-to-cn-zhengzhou-dongzhao-linear-primary",
+      "station_id": "cn-zhengzhou-dn2nt",
+      "stop_id": "cn-zhengzhou-dn2nt-7",
+      "line_id": "cn-zhengzhou-line-7",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-dongzhao-7",
+      "pattern_id": "cn-zhengzhou-line-7-pattern-cn-zhengzhou-dongzhao-7-to-cn-zhengzhou-nangangliu-7",
+      "direction_type": "linear",
+      "direction_label": "东赵",
+      "first_train": [
+        "06:11"
+      ],
+      "last_train": [
+        "23:24"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-dn2nt-7-to-cn-zhengzhou-nangangliu-linear-primary",
+      "station_id": "cn-zhengzhou-dn2nt",
+      "stop_id": "cn-zhengzhou-dn2nt-7",
+      "line_id": "cn-zhengzhou-line-7",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-nangangliu-7",
+      "pattern_id": "cn-zhengzhou-line-7-pattern-cn-zhengzhou-dongzhao-7-to-cn-zhengzhou-nangangliu-7",
+      "direction_type": "linear",
+      "direction_label": "南岗刘",
+      "first_train": [
+        "06:05"
       ],
       "last_train": [
         "23:23"
@@ -1443,20 +1867,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-dongdajie-3-to-cn-zhengzhou-henan-sports-center-linear-primary",
-      "station_id": "cn-zhengzhou-dongdajie",
-      "stop_id": "cn-zhengzhou-dongdajie-3",
-      "line_id": "cn-zhengzhou-line-3",
+      "id": "cn-zhengzhou-cn-zhengzhou-dongfeng-lu-2-to-cn-zhengzhou-cmuvf-linear-primary",
+      "station_id": "cn-zhengzhou-dongfeng-lu",
+      "stop_id": "cn-zhengzhou-dongfeng-lu-2",
+      "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-henan-sports-center-3",
-      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
-      "direction_label": "省体育中心站",
+      "direction_label": "南四环站",
       "first_train": [
-        "05:43"
+        "06:11"
       ],
       "last_train": [
-        "23:33"
+        "23:25"
       ],
       "extras": {
         "service": "primary"
@@ -1469,7 +1893,7 @@
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "贾河站",
       "first_train": [
@@ -1477,26 +1901,6 @@
       ],
       "last_train": [
         "23:26"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-dongfeng-lu-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-dongfeng-lu",
-      "stop_id": "cn-zhengzhou-dongfeng-lu-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "南四环站",
-      "first_train": [
-        "06:11"
-      ],
-      "last_train": [
-        "23:25"
       ],
       "extras": {
         "service": "primary"
@@ -1631,7 +2035,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:22"
+            "last_train": "0:22"
           }
         ]
       }
@@ -1671,6 +2075,26 @@
       ],
       "last_train": [
         "22:33"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-donglinsi-6-to-cn-zhengzhou-jiayu-linear-primary",
+      "station_id": "cn-zhengzhou-donglinsi",
+      "stop_id": "cn-zhengzhou-donglinsi-6",
+      "line_id": "cn-zhengzhou-line-6",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiayu-6",
+      "pattern_id": "cn-zhengzhou-line-6-pattern-cn-zhengzhou-qinghua-fuzhong-6-to-cn-zhengzhou-jiayu-6",
+      "direction_type": "linear",
+      "direction_label": "贾峪站",
+      "first_train": [
+        "06:17"
+      ],
+      "last_train": [
+        "24:00"
       ],
       "extras": {
         "service": "primary"
@@ -1877,13 +2301,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-enpinghu-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-enpinghu-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-enpinghu",
       "stop_id": "cn-zhengzhou-enpinghu-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -1903,7 +2327,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -1917,33 +2341,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-erligang-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-erligang-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-erligang",
       "stop_id": "cn-zhengzhou-erligang-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:12"
-      ],
-      "last_train": [
-        "23:12"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-erligang-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-erligang",
-      "stop_id": "cn-zhengzhou-erligang-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -1951,6 +2355,26 @@
       ],
       "last_train": [
         "23:39"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-erligang-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-erligang",
+      "stop_id": "cn-zhengzhou-erligang-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:12"
+      ],
+      "last_train": [
+        "23:12"
       ],
       "extras": {
         "service": "primary"
@@ -2058,7 +2482,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:16"
+            "last_train": "0:16"
           }
         ]
       }
@@ -2085,7 +2509,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:02"
+            "last_train": "0:02"
           }
         ]
       }
@@ -2171,84 +2595,40 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-ertong-yiyuan-12-to-cn-zhengzhou-lianghu-linear-primary",
-      "station_id": "cn-zhengzhou-ertong-yiyuan",
-      "stop_id": "cn-zhengzhou-ertong-yiyuan-12",
-      "line_id": "cn-zhengzhou-line-12",
+      "id": "cn-zhengzhou-cn-zhengzhou-f24d-3-to-cn-zhengzhou-binhe-xincheng-linear-primary",
+      "station_id": "cn-zhengzhou-f24d",
+      "stop_id": "cn-zhengzhou-f24d-3",
+      "line_id": "cn-zhengzhou-line-3",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-lianghu-12",
-      "pattern_id": "cn-zhengzhou-line-12-pattern-cn-zhengzhou-lianghu-12-to-cn-zhengzhou-longzihu-dong-12",
+      "destination_stop_id": "cn-zhengzhou-binhe-xincheng-3",
+      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
       "direction_type": "linear",
-      "direction_label": "梁湖站",
+      "direction_label": "滨河新城南站",
       "first_train": [
-        "06:12"
+        "06:08"
       ],
       "last_train": [
-        "23:42"
+        "23:54"
       ],
       "extras": {
         "service": "primary"
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-ertong-yiyuan-12-to-cn-zhengzhou-longzihu-linear-primary",
-      "station_id": "cn-zhengzhou-ertong-yiyuan",
-      "stop_id": "cn-zhengzhou-ertong-yiyuan-12",
-      "line_id": "cn-zhengzhou-line-12",
+      "id": "cn-zhengzhou-cn-zhengzhou-f24d-3-to-cn-zhengzhou-henan-sports-center-linear-primary",
+      "station_id": "cn-zhengzhou-f24d",
+      "stop_id": "cn-zhengzhou-f24d-3",
+      "line_id": "cn-zhengzhou-line-3",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-longzihu-12",
-      "pattern_id": "cn-zhengzhou-line-12-pattern-cn-zhengzhou-lianghu-12-to-cn-zhengzhou-longzihu-dong-12",
+      "destination_stop_id": "cn-zhengzhou-henan-sports-center-3",
+      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
       "direction_type": "linear",
-      "direction_label": "龙子湖东站",
+      "direction_label": "省体育中心站",
       "first_train": [
-        "06:12"
+        "06:02"
       ],
       "last_train": [
-        "23:12"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-ertong-yiyuan-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
-      "station_id": "cn-zhengzhou-ertong-yiyuan",
-      "stop_id": "cn-zhengzhou-ertong-yiyuan-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_inner",
-      "direction_label": "（内环）月季公园-黄河路-郑州东站",
-      "first_train": [
-        "06:21"
-      ],
-      "last_train": [
-        "23:21"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_name": "半程（终点站七里河）",
-            "last_train": "23:51"
-          }
-        ]
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-ertong-yiyuan-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
-      "station_id": "cn-zhengzhou-ertong-yiyuan",
-      "stop_id": "cn-zhengzhou-ertong-yiyuan-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_outer",
-      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
-      "first_train": [
-        "06:06"
-      ],
-      "last_train": [
-        "23:52"
+        "23:01"
       ],
       "extras": {
         "service": "primary"
@@ -2420,7 +2800,7 @@
       "stop_id": "cn-zhengzhou-fengzhuang-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -2439,7 +2819,7 @@
       "stop_id": "cn-zhengzhou-fengzhuang-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -2544,7 +2924,7 @@
       "stop_id": "cn-zhengzhou-futa-dong-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -2558,7 +2938,7 @@
         "short_turns": [
           {
             "dest_name": "半程（终点站七里河）",
-            "last_train": "00:09"
+            "last_train": "0:09"
           }
         ]
       }
@@ -2569,7 +2949,7 @@
       "stop_id": "cn-zhengzhou-futa-dong-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -2623,13 +3003,97 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-gangqu-bei-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-fxxo-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
+      "station_id": "cn-zhengzhou-fxxo",
+      "stop_id": "cn-zhengzhou-fxxo-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "source_id": "zzmetro-operating-hours",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_inner",
+      "direction_label": "（内环）月季公园-黄河路-郑州东站",
+      "first_train": [
+        "06:13"
+      ],
+      "last_train": [
+        "23:13"
+      ],
+      "extras": {
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_name": "半程（终点站七里河）",
+            "last_train": "23:43"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-fxxo-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
+      "station_id": "cn-zhengzhou-fxxo",
+      "stop_id": "cn-zhengzhou-fxxo-5",
+      "line_id": "cn-zhengzhou-line-5",
+      "source_id": "zzmetro-operating-hours",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
+      "direction_type": "loop_outer",
+      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
+      "first_train": [
+        "06:13"
+      ],
+      "last_train": [
+        "23:59"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-fxxo-6-to-cn-zhengzhou-jiayu-linear-primary",
+      "station_id": "cn-zhengzhou-fxxo",
+      "stop_id": "cn-zhengzhou-fxxo-6",
+      "line_id": "cn-zhengzhou-line-6",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiayu-6",
+      "pattern_id": "cn-zhengzhou-line-6-pattern-cn-zhengzhou-qinghua-fuzhong-6-to-cn-zhengzhou-jiayu-6",
+      "direction_type": "linear",
+      "direction_label": "贾峪站",
+      "first_train": [
+        "06:11"
+      ],
+      "last_train": [
+        "23:11"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-fxxo-6-to-cn-zhengzhou-qinghua-fuzhong-linear-primary",
+      "station_id": "cn-zhengzhou-fxxo",
+      "stop_id": "cn-zhengzhou-fxxo-6",
+      "line_id": "cn-zhengzhou-line-6",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-qinghua-fuzhong-6",
+      "pattern_id": "cn-zhengzhou-line-6-pattern-cn-zhengzhou-qinghua-fuzhong-6-to-cn-zhengzhou-jiayu-6",
+      "direction_type": "linear",
+      "direction_label": "清华附中站",
+      "first_train": [
+        "06:02"
+      ],
+      "last_train": [
+        "23:26"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-gangqu-bei-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-gangqu-bei",
       "stop_id": "cn-zhengzhou-gangqu-bei-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -2649,7 +3113,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -2703,13 +3167,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-gangquhuizhang-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-gangquhuizhang-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-gangquhuizhang",
       "stop_id": "cn-zhengzhou-gangquhuizhang-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -2729,7 +3193,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -2863,33 +3327,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-guanhutun-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-guanhutun-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-guanhutun",
       "stop_id": "cn-zhengzhou-guanhutun-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:05"
-      ],
-      "last_train": [
-        "23:24"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-guanhutun-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-guanhutun",
-      "stop_id": "cn-zhengzhou-guanhutun-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -2897,6 +3341,26 @@
       ],
       "last_train": [
         "23:27"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-guanhutun-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-guanhutun",
+      "stop_id": "cn-zhengzhou-guanhutun-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:05"
+      ],
+      "last_train": [
+        "23:24"
       ],
       "extras": {
         "service": "primary"
@@ -2988,7 +3452,7 @@
       "stop_id": "cn-zhengzhou-haitansi-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -3013,7 +3477,7 @@
       "stop_id": "cn-zhengzhou-haitansi-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -3032,7 +3496,7 @@
       "stop_id": "cn-zhengzhou-hanghaiguangchang-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -3051,7 +3515,7 @@
       "stop_id": "cn-zhengzhou-hanghaiguangchang-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -3150,7 +3614,7 @@
       "stop_id": "cn-zhengzhou-henan-orthopaedics-hospital-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -3164,7 +3628,7 @@
         "short_turns": [
           {
             "dest_name": "半程（终点站七里河）",
-            "last_train": "00:01"
+            "last_train": "0:01"
           }
         ]
       }
@@ -3175,7 +3639,7 @@
       "stop_id": "cn-zhengzhou-henan-orthopaedics-hospital-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -3194,7 +3658,7 @@
       "stop_id": "cn-zhengzhou-henan-peoples-hospital-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -3219,7 +3683,7 @@
       "stop_id": "cn-zhengzhou-henan-peoples-hospital-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -3320,57 +3784,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-houhe-lu-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
-      "station_id": "cn-zhengzhou-houhe-lu",
-      "stop_id": "cn-zhengzhou-houhe-lu-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_inner",
-      "direction_label": "（内环）月季公园-黄河路-郑州东站",
-      "first_train": [
-        "06:01"
-      ],
-      "last_train": [
-        "24:01"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-houhe-lu-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
-      "station_id": "cn-zhengzhou-houhe-lu",
-      "stop_id": "cn-zhengzhou-houhe-lu-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_outer",
-      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
-      "first_train": [
-        "06:11"
-      ],
-      "last_train": [
-        "23:11"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_name": "半程（终点站航海广场）",
-            "last_train": "23:41"
-          }
-        ]
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-hua-nancheng-east-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-hua-nancheng-east-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-hua-nancheng-east",
       "stop_id": "cn-zhengzhou-hua-nancheng-east-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -3390,7 +3810,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -3404,13 +3824,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-huanancheng-west-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-huanancheng-west-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-huanancheng-west",
       "stop_id": "cn-zhengzhou-huanancheng-west-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -3430,7 +3850,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -3444,13 +3864,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-huanancheng-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-huanancheng-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-huanancheng",
       "stop_id": "cn-zhengzhou-huanancheng-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -3470,7 +3890,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -3484,33 +3904,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-huanghe-yingbinguan-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-huanghe-yingbinguan-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-huanghe-yingbinguan",
       "stop_id": "cn-zhengzhou-huanghe-yingbinguan-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:24"
-      ],
-      "last_train": [
-        "23:44"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-huanghe-yingbinguan-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-huanghe-yingbinguan",
-      "stop_id": "cn-zhengzhou-huanghe-yingbinguan-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -3518,6 +3918,26 @@
       ],
       "last_train": [
         "23:07"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-huanghe-yingbinguan-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-huanghe-yingbinguan",
+      "stop_id": "cn-zhengzhou-huanghe-yingbinguan-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:24"
+      ],
+      "last_train": [
+        "23:44"
       ],
       "extras": {
         "service": "primary"
@@ -3564,33 +3984,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-huanghelu-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-huanghelu-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-huanghelu",
       "stop_id": "cn-zhengzhou-huanghelu-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:02"
-      ],
-      "last_train": [
-        "23:22"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-huanghelu-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-huanghelu",
-      "stop_id": "cn-zhengzhou-huanghelu-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -3604,12 +4004,32 @@
       }
     },
     {
+      "id": "cn-zhengzhou-cn-zhengzhou-huanghelu-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-huanghelu",
+      "stop_id": "cn-zhengzhou-huanghelu-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:02"
+      ],
+      "last_train": [
+        "23:22"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
       "id": "cn-zhengzhou-cn-zhengzhou-huanghelu-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
       "station_id": "cn-zhengzhou-huanghelu",
       "stop_id": "cn-zhengzhou-huanghelu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -3634,7 +4054,7 @@
       "stop_id": "cn-zhengzhou-huanghelu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -3669,7 +4089,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:01"
+            "last_train": "0:01"
           }
         ]
       }
@@ -3696,7 +4116,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:17"
+            "last_train": "0:17"
           }
         ]
       }
@@ -3742,33 +4162,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-huazhai-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-huazhai-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-huazhai",
       "stop_id": "cn-zhengzhou-huazhai-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:07"
-      ],
-      "last_train": [
-        "23:07"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-huazhai-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-huazhai",
-      "stop_id": "cn-zhengzhou-huazhai-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -3782,40 +4182,20 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-huijiqu-zhengfu-2-to-cn-zhengzhou-jiahe-linear-primary",
-      "station_id": "cn-zhengzhou-huijiqu-zhengfu",
-      "stop_id": "cn-zhengzhou-huijiqu-zhengfu-2",
+      "id": "cn-zhengzhou-cn-zhengzhou-huazhai-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-huazhai",
+      "stop_id": "cn-zhengzhou-huazhai-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "贾河站",
       "first_train": [
-        "06:29"
+        "06:07"
       ],
       "last_train": [
-        "23:49"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-huijiqu-zhengfu-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-huijiqu-zhengfu",
-      "stop_id": "cn-zhengzhou-huijiqu-zhengfu-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "南四环站",
-      "first_train": [
-        "06:02"
-      ],
-      "last_train": [
-        "23:02"
+        "23:07"
       ],
       "extras": {
         "service": "primary"
@@ -3902,13 +4282,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-jiahe",
       "stop_id": "cn-zhengzhou-jiahe-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -3942,13 +4322,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-jichangdong-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-jichangdong-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-jichangdong",
       "stop_id": "cn-zhengzhou-jichangdong-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -3968,7 +4348,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -4022,33 +4402,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-jindalu-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-jindalu-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-jindalu",
       "stop_id": "cn-zhengzhou-jindalu-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:19"
-      ],
-      "last_train": [
-        "23:39"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-jindalu-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-jindalu",
-      "stop_id": "cn-zhengzhou-jindalu-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -4062,12 +4422,32 @@
       }
     },
     {
+      "id": "cn-zhengzhou-cn-zhengzhou-jindalu-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-jindalu",
+      "stop_id": "cn-zhengzhou-jindalu-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:19"
+      ],
+      "last_train": [
+        "23:39"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
       "id": "cn-zhengzhou-cn-zhengzhou-jingbeierlu-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
       "station_id": "cn-zhengzhou-jingbeierlu",
       "stop_id": "cn-zhengzhou-jingbeierlu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -4081,7 +4461,7 @@
         "short_turns": [
           {
             "dest_name": "半程（终点站七里河）",
-            "last_train": "00:04"
+            "last_train": "0:04"
           }
         ]
       }
@@ -4092,7 +4472,7 @@
       "stop_id": "cn-zhengzhou-jingbeierlu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -4146,50 +4526,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-jingguang-nanlu-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
-      "station_id": "cn-zhengzhou-jingguang-nanlu",
-      "stop_id": "cn-zhengzhou-jingguang-nanlu-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_inner",
-      "direction_label": "（内环）月季公园-黄河路-郑州东站",
-      "first_train": [
-        "06:08"
-      ],
-      "last_train": [
-        "23:54"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-jingguang-nanlu-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
-      "station_id": "cn-zhengzhou-jingguang-nanlu",
-      "stop_id": "cn-zhengzhou-jingguang-nanlu-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_outer",
-      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
-      "first_train": [
-        "06:04"
-      ],
-      "last_train": [
-        "23:18"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_name": "半程（终点站航海广场）",
-            "last_train": "23:48"
-          }
-        ]
-      }
-    },
-    {
       "id": "cn-zhengzhou-cn-zhengzhou-jinghu-7-to-cn-zhengzhou-dongzhao-linear-primary",
       "station_id": "cn-zhengzhou-jinghu",
       "stop_id": "cn-zhengzhou-jinghu-7",
@@ -4235,7 +4571,7 @@
       "stop_id": "cn-zhengzhou-jingkaizhongxinguangchang-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -4249,7 +4585,7 @@
         "short_turns": [
           {
             "dest_name": "半程（终点站七里河）",
-            "last_train": "00:07"
+            "last_train": "0:07"
           }
         ]
       }
@@ -4260,7 +4596,7 @@
       "stop_id": "cn-zhengzhou-jingkaizhongxinguangchang-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -4439,7 +4775,7 @@
       "stop_id": "cn-zhengzhou-jinshuidonglu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -4464,7 +4800,7 @@
       "stop_id": "cn-zhengzhou-jinshuidonglu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -4478,33 +4814,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-jinwa-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-jinwa-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-jinwa",
       "stop_id": "cn-zhengzhou-jinwa-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:22"
-      ],
-      "last_train": [
-        "23:41"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-jinwa-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-jinwa",
-      "stop_id": "cn-zhengzhou-jinwa-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -4512,6 +4828,26 @@
       ],
       "last_train": [
         "23:09"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-jinwa-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-jinwa",
+      "stop_id": "cn-zhengzhou-jinwa-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:22"
+      ],
+      "last_train": [
+        "23:41"
       ],
       "extras": {
         "service": "primary"
@@ -4563,7 +4899,7 @@
       "stop_id": "cn-zhengzhou-kangningjie-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -4573,7 +4909,13 @@
         "23:30"
       ],
       "extras": {
-        "service": "primary"
+        "service": "primary",
+        "short_turns": [
+          {
+            "dest_name": "半程（终点站七里河）",
+            "last_train": "0:00"
+          }
+        ]
       }
     },
     {
@@ -4582,7 +4924,7 @@
       "stop_id": "cn-zhengzhou-kangningjie-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -4596,13 +4938,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-kangpinghu-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-kangpinghu-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-kangpinghu",
       "stop_id": "cn-zhengzhou-kangpinghu-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -4622,7 +4964,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -4656,13 +4998,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-lanhe-park-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-lanhe-park-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-lanhe-park",
       "stop_id": "cn-zhengzhou-lanhe-park-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -4682,7 +5024,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -5003,33 +5345,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-liulin-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-liulin-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-liulin",
       "stop_id": "cn-zhengzhou-liulin-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:14"
-      ],
-      "last_train": [
-        "23:33"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-liulin-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-liulin",
-      "stop_id": "cn-zhengzhou-liulin-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -5037,6 +5359,26 @@
       ],
       "last_train": [
         "23:18"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-liulin-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-liulin",
+      "stop_id": "cn-zhengzhou-liulin-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:14"
+      ],
+      "last_train": [
+        "23:33"
       ],
       "extras": {
         "service": "primary"
@@ -5083,33 +5425,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-liuzhuang-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-liuzhuang-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-liuzhuang",
       "stop_id": "cn-zhengzhou-liuzhuang-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:16"
-      ],
-      "last_train": [
-        "23:36"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-liuzhuang-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-liuzhuang",
-      "stop_id": "cn-zhengzhou-liuzhuang-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -5123,33 +5445,73 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-longhaidonglu-2-to-cn-zhengzhou-jiahe-linear-primary",
-      "station_id": "cn-zhengzhou-longhaidonglu",
-      "stop_id": "cn-zhengzhou-longhaidonglu-2",
+      "id": "cn-zhengzhou-cn-zhengzhou-liuzhuang-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-liuzhuang",
+      "stop_id": "cn-zhengzhou-liuzhuang-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "贾河站",
       "first_train": [
-        "06:14"
+        "06:16"
       ],
       "last_train": [
-        "23:14"
+        "23:36"
       ],
       "extras": {
         "service": "primary"
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-longhaidonglu-2-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-llntp-郑许-to-cn-zhengzhou-chang-an-lu-bei-linear-primary",
+      "station_id": "cn-zhengzhou-llntp",
+      "stop_id": "cn-zhengzhou-llntp-郑许",
+      "line_id": "cn-zhengzhou-line-zhengxu",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-chang-an-lu-bei-郑许",
+      "pattern_id": "cn-zhengzhou-line-zhengxu-pattern-cn-zhengzhou-chang-an-lu-bei-to-cn-zhengzhou-xuchangdong-station",
+      "direction_type": "linear",
+      "direction_label": "长安路北站",
+      "first_train": [
+        "06:02"
+      ],
+      "last_train": [
+        "21:56"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-llntp-郑许-to-cn-zhengzhou-xuchangdong-station-linear-primary",
+      "station_id": "cn-zhengzhou-llntp",
+      "stop_id": "cn-zhengzhou-llntp-郑许",
+      "line_id": "cn-zhengzhou-line-zhengxu",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-xuchangdong-station-郑许",
+      "pattern_id": "cn-zhengzhou-line-zhengxu-pattern-cn-zhengzhou-chang-an-lu-bei-to-cn-zhengzhou-xuchangdong-station",
+      "direction_type": "linear",
+      "direction_label": "许昌东站",
+      "first_train": [
+        "06:19"
+      ],
+      "last_train": [
+        "21:19"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-longhaidonglu-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-longhaidonglu",
       "stop_id": "cn-zhengzhou-longhaidonglu-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -5163,12 +5525,32 @@
       }
     },
     {
+      "id": "cn-zhengzhou-cn-zhengzhou-longhaidonglu-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-longhaidonglu",
+      "stop_id": "cn-zhengzhou-longhaidonglu-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:14"
+      ],
+      "last_train": [
+        "23:14"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
       "id": "cn-zhengzhou-cn-zhengzhou-longhaixilu-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
       "station_id": "cn-zhengzhou-longhaixilu",
       "stop_id": "cn-zhengzhou-longhaixilu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -5187,7 +5569,7 @@
       "stop_id": "cn-zhengzhou-longhaixilu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -5775,7 +6157,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:23"
+            "last_train": "0:23"
           }
         ]
       }
@@ -5908,33 +6290,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-maozhuang-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-maozhuang-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-maozhuang",
       "stop_id": "cn-zhengzhou-maozhuang-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:27"
-      ],
-      "last_train": [
-        "23:46"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-maozhuang-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-maozhuang",
-      "stop_id": "cn-zhengzhou-maozhuang-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -5942,6 +6304,26 @@
       ],
       "last_train": [
         "23:04"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-maozhuang-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-maozhuang",
+      "stop_id": "cn-zhengzhou-maozhuang-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:27"
+      ],
+      "last_train": [
+        "23:46"
       ],
       "extras": {
         "service": "primary"
@@ -5988,13 +6370,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-mengzhuang-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-mengzhuang-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-mengzhuang",
       "stop_id": "cn-zhengzhou-mengzhuang-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -6014,7 +6396,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -6089,7 +6471,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:07"
+            "last_train": "0:07"
           }
         ]
       }
@@ -6116,7 +6498,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:12"
+            "last_train": "0:12"
           }
         ]
       }
@@ -6222,33 +6604,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-nansanhuan-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-nansanhuan-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-nansanhuan",
       "stop_id": "cn-zhengzhou-nansanhuan-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:05"
-      ],
-      "last_train": [
-        "23:05"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-nansanhuan-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-nansanhuan",
-      "stop_id": "cn-zhengzhou-nansanhuan-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -6262,73 +6624,33 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-nansihuan-2-to-cn-zhengzhou-jiahe-linear-primary",
-      "station_id": "cn-zhengzhou-nansihuan",
-      "stop_id": "cn-zhengzhou-nansihuan-2",
+      "id": "cn-zhengzhou-cn-zhengzhou-nansanhuan-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-nansanhuan",
+      "stop_id": "cn-zhengzhou-nansanhuan-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "贾河站",
       "first_train": [
-        "06:00"
+        "06:05"
       ],
       "last_train": [
-        "23:00"
+        "23:05"
       ],
       "extras": {
         "service": "primary"
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-nansihuan-城郊-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station-linear-primary",
-      "station_id": "cn-zhengzhou-nansihuan",
-      "stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "line_id": "cn-zhengzhou-line-chengjiao",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
-      "direction_type": "linear",
-      "direction_label": "郑州航空港站",
-      "first_train": [
-        "06:00"
-      ],
-      "last_train": [
-        "23:00"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-nanwulibao-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-nanwulibao-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-nanwulibao",
       "stop_id": "cn-zhengzhou-nanwulibao-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:10"
-      ],
-      "last_train": [
-        "23:10"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-nanwulibao-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-nanwulibao",
-      "stop_id": "cn-zhengzhou-nanwulibao-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -6342,12 +6664,32 @@
       }
     },
     {
+      "id": "cn-zhengzhou-cn-zhengzhou-nanwulibao-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-nanwulibao",
+      "stop_id": "cn-zhengzhou-nanwulibao-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:10"
+      ],
+      "last_train": [
+        "23:10"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
       "id": "cn-zhengzhou-cn-zhengzhou-nanwulibao-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
       "station_id": "cn-zhengzhou-nanwulibao",
       "stop_id": "cn-zhengzhou-nanwulibao-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -6366,7 +6708,7 @@
       "stop_id": "cn-zhengzhou-nanwulibao-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -6621,7 +6963,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:19"
+            "last_train": "0:19"
           }
         ]
       }
@@ -6912,7 +7254,7 @@
       "stop_id": "cn-zhengzhou-qilihe-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -6931,7 +7273,7 @@
       "stop_id": "cn-zhengzhou-qilihe-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -6950,7 +7292,7 @@
       "stop_id": "cn-zhengzhou-qiliyan-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -6969,7 +7311,7 @@
       "stop_id": "cn-zhengzhou-qiliyan-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -7110,7 +7452,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:30"
+            "last_train": "0:30"
           }
         ]
       }
@@ -7138,60 +7480,6 @@
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
             "last_train": "23:48"
-          }
-        ]
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-renmin-lu-1-to-cn-zhengzhou-henan-university-of-technology-linear-primary",
-      "station_id": "cn-zhengzhou-renmin-lu",
-      "stop_id": "cn-zhengzhou-renmin-lu-1",
-      "line_id": "cn-zhengzhou-line-1",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-henan-university-of-technology-1",
-      "pattern_id": "cn-zhengzhou-line-1-pattern-cn-zhengzhou-henan-university-of-technology-1-to-cn-zhengzhou-new-campus-of-henan-university-1",
-      "direction_type": "linear",
-      "direction_label": "河南工业大学站",
-      "first_train": [
-        "05:56"
-      ],
-      "last_train": [
-        "23:37"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
-            "dest_name": "西流湖",
-            "last_train": "00:14"
-          }
-        ]
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-renmin-lu-1-to-cn-zhengzhou-new-campus-of-henan-university-linear-primary",
-      "station_id": "cn-zhengzhou-renmin-lu",
-      "stop_id": "cn-zhengzhou-renmin-lu-1",
-      "line_id": "cn-zhengzhou-line-1",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-new-campus-of-henan-university-1",
-      "pattern_id": "cn-zhengzhou-line-1-pattern-cn-zhengzhou-henan-university-of-technology-1-to-cn-zhengzhou-new-campus-of-henan-university-1",
-      "direction_type": "linear",
-      "direction_label": "河南大学新区站",
-      "first_train": [
-        "05:51"
-      ],
-      "last_train": [
-        "23:38"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
-            "dest_name": "市体育中心",
-            "last_train": "00:04"
           }
         ]
       }
@@ -7282,7 +7570,7 @@
       "stop_id": "cn-zhengzhou-shakoulu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -7307,7 +7595,7 @@
       "stop_id": "cn-zhengzhou-shakoulu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -7321,33 +7609,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-shamen-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-shamen-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-shamen",
       "stop_id": "cn-zhengzhou-shamen-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:12"
-      ],
-      "last_train": [
-        "23:31"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-shamen-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-shamen",
-      "stop_id": "cn-zhengzhou-shamen-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -7355,6 +7623,26 @@
       ],
       "last_train": [
         "23:20"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-shamen-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-shamen",
+      "stop_id": "cn-zhengzhou-shamen-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:12"
+      ],
+      "last_train": [
+        "23:31"
       ],
       "extras": {
         "service": "primary"
@@ -7441,13 +7729,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-shawoli-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-shawoli-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-shawoli",
       "stop_id": "cn-zhengzhou-shawoli-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -7467,7 +7755,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -7475,6 +7763,26 @@
       ],
       "last_train": [
         "23:06"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-sheng-shekeyuan-8-to-cn-zhengzhou-lumiao-linear-primary",
+      "station_id": "cn-zhengzhou-sheng-shekeyuan",
+      "stop_id": "cn-zhengzhou-sheng-shekeyuan-8",
+      "line_id": "cn-zhengzhou-line-8",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-lumiao-8",
+      "pattern_id": "cn-zhengzhou-line-8-pattern-cn-zhengzhou-tianjianhu-8-to-cn-zhengzhou-lumiao-8",
+      "direction_type": "linear",
+      "direction_label": "鲁庙",
+      "first_train": [
+        "06:03"
+      ],
+      "last_train": [
+        "24:00"
       ],
       "extras": {
         "service": "primary"
@@ -7546,7 +7854,7 @@
       "stop_id": "cn-zhengzhou-shi-dier-renminyiyuan-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -7565,7 +7873,7 @@
       "stop_id": "cn-zhengzhou-shi-dier-renminyiyuan-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -7665,13 +7973,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-shibalihe-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-shibalihe-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-shibalihe",
       "stop_id": "cn-zhengzhou-shibalihe-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -7691,7 +7999,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -7945,13 +8253,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-shuanghudadao-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-shuanghudadao-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-shuanghudadao",
       "stop_id": "cn-zhengzhou-shuanghudadao-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -7971,7 +8279,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -8019,46 +8327,6 @@
       ],
       "last_train": [
         "21:43"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-sizhao-3-to-cn-zhengzhou-binhe-xincheng-linear-primary",
-      "station_id": "cn-zhengzhou-sizhao",
-      "stop_id": "cn-zhengzhou-sizhao-3",
-      "line_id": "cn-zhengzhou-line-3",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-binhe-xincheng-3",
-      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
-      "direction_type": "linear",
-      "direction_label": "滨河新城南站",
-      "first_train": [
-        "06:08"
-      ],
-      "last_train": [
-        "23:54"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-sizhao-3-to-cn-zhengzhou-henan-sports-center-linear-primary",
-      "station_id": "cn-zhengzhou-sizhao",
-      "stop_id": "cn-zhengzhou-sizhao-3",
-      "line_id": "cn-zhengzhou-line-3",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-henan-sports-center-3",
-      "pattern_id": "cn-zhengzhou-line-3-pattern-cn-zhengzhou-henan-sports-center-3-to-cn-zhengzhou-binhe-xincheng-nan-3",
-      "direction_type": "linear",
-      "direction_label": "省体育中心站",
-      "first_train": [
-        "06:02"
-      ],
-      "last_train": [
-        "23:01"
       ],
       "extras": {
         "service": "primary"
@@ -8197,7 +8465,7 @@
       "stop_id": "cn-zhengzhou-tonghuai-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -8222,7 +8490,7 @@
       "stop_id": "cn-zhengzhou-tonghuai-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -8696,104 +8964,6 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-wuyi-gongyuan-1-to-cn-zhengzhou-henan-university-of-technology-linear-primary",
-      "station_id": "cn-zhengzhou-wuyi-gongyuan",
-      "stop_id": "cn-zhengzhou-wuyi-gongyuan-1",
-      "line_id": "cn-zhengzhou-line-1",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-henan-university-of-technology-1",
-      "pattern_id": "cn-zhengzhou-line-1-pattern-cn-zhengzhou-henan-university-of-technology-1-to-cn-zhengzhou-new-campus-of-henan-university-1",
-      "direction_type": "linear",
-      "direction_label": "河南工业大学站",
-      "first_train": [
-        "06:10"
-      ],
-      "last_train": [
-        "23:51"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
-            "dest_name": "西流湖",
-            "last_train": "00:28"
-          }
-        ]
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-wuyi-gongyuan-1-to-cn-zhengzhou-new-campus-of-henan-university-linear-primary",
-      "station_id": "cn-zhengzhou-wuyi-gongyuan",
-      "stop_id": "cn-zhengzhou-wuyi-gongyuan-1",
-      "line_id": "cn-zhengzhou-line-1",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-new-campus-of-henan-university-1",
-      "pattern_id": "cn-zhengzhou-line-1-pattern-cn-zhengzhou-henan-university-of-technology-1-to-cn-zhengzhou-new-campus-of-henan-university-1",
-      "direction_type": "linear",
-      "direction_label": "河南大学新区站",
-      "first_train": [
-        "05:37"
-      ],
-      "last_train": [
-        "23:24"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
-            "dest_name": "市体育中心",
-            "last_train": "23:50"
-          }
-        ]
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-wuyi-gongyuan-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
-      "station_id": "cn-zhengzhou-wuyi-gongyuan",
-      "stop_id": "cn-zhengzhou-wuyi-gongyuan-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_inner",
-      "direction_label": "（内环）月季公园-黄河路-郑州东站",
-      "first_train": [
-        "06:10"
-      ],
-      "last_train": [
-        "24:09"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-wuyi-gongyuan-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
-      "station_id": "cn-zhengzhou-wuyi-gongyuan",
-      "stop_id": "cn-zhengzhou-wuyi-gongyuan-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_outer",
-      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
-      "first_train": [
-        "06:03"
-      ],
-      "last_train": [
-        "23:03"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_name": "半程（终点站航海广场）",
-            "last_train": "23:33"
-          }
-        ]
-      }
-    },
-    {
       "id": "cn-zhengzhou-cn-zhengzhou-xi-dajie-3-to-cn-zhengzhou-binhe-xincheng-linear-primary",
       "station_id": "cn-zhengzhou-xi-dajie",
       "stop_id": "cn-zhengzhou-xi-dajie-3",
@@ -8874,13 +9044,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-xiaoqiao-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-xiaoqiao-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-xiaoqiao",
       "stop_id": "cn-zhengzhou-xiaoqiao-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -8900,7 +9070,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -9121,13 +9291,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-xinzheng-airport-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-xinzheng-airport-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-xinzheng-airport",
       "stop_id": "cn-zhengzhou-xinzheng-airport-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -9147,7 +9317,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -9222,7 +9392,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:32"
+            "last_train": "0:32"
           }
         ]
       }
@@ -9496,7 +9666,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:09"
+            "last_train": "0:09"
           }
         ]
       }
@@ -9523,7 +9693,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:09"
+            "last_train": "0:09"
           }
         ]
       }
@@ -9563,90 +9733,6 @@
       ],
       "last_train": [
         "23:24"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-yaozhai-5-to-cn-zhengzhou-yuejigongyuan-loop_inner-primary",
-      "station_id": "cn-zhengzhou-yaozhai",
-      "stop_id": "cn-zhengzhou-yaozhai-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_inner",
-      "direction_label": "（内环）月季公园-黄河路-郑州东站",
-      "first_train": [
-        "06:13"
-      ],
-      "last_train": [
-        "23:13"
-      ],
-      "extras": {
-        "service": "primary",
-        "short_turns": [
-          {
-            "dest_name": "半程（终点站七里河）",
-            "last_train": "23:43"
-          }
-        ]
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-yaozhai-5-to-cn-zhengzhou-yuejigongyuan-loop_outer-primary",
-      "station_id": "cn-zhengzhou-yaozhai",
-      "stop_id": "cn-zhengzhou-yaozhai-5",
-      "line_id": "cn-zhengzhou-line-5",
-      "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
-      "direction_type": "loop_outer",
-      "direction_label": "（外环）月季公园-南五里堡-郑州东站",
-      "first_train": [
-        "06:13"
-      ],
-      "last_train": [
-        "23:59"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-yaozhai-6-to-cn-zhengzhou-jiayu-linear-primary",
-      "station_id": "cn-zhengzhou-yaozhai",
-      "stop_id": "cn-zhengzhou-yaozhai-6",
-      "line_id": "cn-zhengzhou-line-6",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiayu-6",
-      "pattern_id": "cn-zhengzhou-line-6-pattern-cn-zhengzhou-qinghua-fuzhong-6-to-cn-zhengzhou-jiayu-6",
-      "direction_type": "linear",
-      "direction_label": "贾峪站",
-      "first_train": [
-        "06:11"
-      ],
-      "last_train": [
-        "23:11"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-yaozhai-6-to-cn-zhengzhou-qinghua-fuzhong-linear-primary",
-      "station_id": "cn-zhengzhou-yaozhai",
-      "stop_id": "cn-zhengzhou-yaozhai-6",
-      "line_id": "cn-zhengzhou-line-6",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-qinghua-fuzhong-6",
-      "pattern_id": "cn-zhengzhou-line-6-pattern-cn-zhengzhou-qinghua-fuzhong-6-to-cn-zhengzhou-jiayu-6",
-      "direction_type": "linear",
-      "direction_label": "清华附中站",
-      "first_train": [
-        "06:02"
-      ],
-      "last_train": [
-        "23:26"
       ],
       "extras": {
         "service": "primary"
@@ -9834,7 +9920,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:21"
+            "last_train": "0:21"
           }
         ]
       }
@@ -10032,7 +10118,7 @@
       "stop_id": "cn-zhengzhou-yuejigongyuan-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -10057,7 +10143,7 @@
       "stop_id": "cn-zhengzhou-yuejigongyuan-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -10162,7 +10248,7 @@
       "stop_id": "cn-zhengzhou-zhacheng-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -10187,7 +10273,7 @@
       "stop_id": "cn-zhengzhou-zhacheng-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -10281,33 +10367,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-zhanmatun-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-zhanmatun-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-zhanmatun",
       "stop_id": "cn-zhengzhou-zhanmatun-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:03"
-      ],
-      "last_train": [
-        "23:03"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-zhanmatun-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-zhanmatun",
-      "stop_id": "cn-zhengzhou-zhanmatun-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -10315,6 +10381,26 @@
       ],
       "last_train": [
         "23:48"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-zhanmatun-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-zhanmatun",
+      "stop_id": "cn-zhengzhou-zhanmatun-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:03"
+      ],
+      "last_train": [
+        "23:03"
       ],
       "extras": {
         "service": "primary"
@@ -10446,7 +10532,7 @@
       "stop_id": "cn-zhengzhou-zhengzhou-central-hospital-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -10465,7 +10551,7 @@
       "stop_id": "cn-zhengzhou-zhengzhou-central-hospital-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -10572,13 +10658,13 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -10613,7 +10699,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:19"
+            "last_train": "0:19"
           }
         ]
       }
@@ -10671,7 +10757,7 @@
       "stop_id": "cn-zhengzhou-zhengzhou-renminyiyuan-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -10696,7 +10782,7 @@
       "stop_id": "cn-zhengzhou-zhengzhou-renminyiyuan-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -10972,7 +11058,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:24"
+            "last_train": "0:24"
           }
         ]
       }
@@ -10983,7 +11069,7 @@
       "stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -11008,7 +11094,7 @@
       "stop_id": "cn-zhengzhou-zhengzhoudong-railway-station-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -11087,7 +11173,7 @@
       "stop_id": "cn-zhengzhou-zhongyixilu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -11112,7 +11198,7 @@
       "stop_id": "cn-zhengzhou-zhongyixilu-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -11131,7 +11217,7 @@
       "stop_id": "cn-zhengzhou-zhongyuan-tower-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_inner",
       "direction_label": "（内环）月季公园-黄河路-郑州东站",
       "first_train": [
@@ -11145,7 +11231,7 @@
         "short_turns": [
           {
             "dest_name": "半程（终点站七里河）",
-            "last_train": "00:11"
+            "last_train": "0:11"
           }
         ]
       }
@@ -11156,7 +11242,7 @@
       "stop_id": "cn-zhengzhou-zhongyuan-tower-5",
       "line_id": "cn-zhengzhou-line-5",
       "source_id": "zzmetro-operating-hours",
-      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-wuyi-gongyuan-5",
+      "pattern_id": "cn-zhengzhou-line-5-pattern-cn-zhengzhou-yuejigongyuan-5-to-cn-zhengzhou-a8m6el-5",
       "direction_type": "loop_outer",
       "direction_label": "（外环）月季公园-南五里堡-郑州东站",
       "first_train": [
@@ -11191,7 +11277,7 @@
           {
             "dest_stop_id": "cn-zhengzhou-xiliuhu-1",
             "dest_name": "西流湖",
-            "last_train": "00:12"
+            "last_train": "0:12"
           }
         ]
       }
@@ -11218,39 +11304,19 @@
           {
             "dest_stop_id": "cn-zhengzhou-zhengzhou-sports-center-1",
             "dest_name": "市体育中心",
-            "last_train": "00:06"
+            "last_train": "0:06"
           }
         ]
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-zijingshan-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-zijingshan-2-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-zijingshan",
       "stop_id": "cn-zhengzhou-zijingshan-2",
       "line_id": "cn-zhengzhou-line-2",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-jiahe-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
-      "direction_type": "linear",
-      "direction_label": "贾河站",
-      "first_train": [
-        "06:00"
-      ],
-      "last_train": [
-        "23:19"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-zijingshan-2-to-cn-zhengzhou-nansihuan-linear-primary",
-      "station_id": "cn-zhengzhou-zijingshan",
-      "stop_id": "cn-zhengzhou-zijingshan-2",
-      "line_id": "cn-zhengzhou-line-2",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-2",
-      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-nansihuan-2",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
       "direction_type": "linear",
       "direction_label": "南四环站",
       "first_train": [
@@ -11264,13 +11330,33 @@
       }
     },
     {
-      "id": "cn-zhengzhou-cn-zhengzhou-zonghebaoshuiqu-城郊-to-cn-zhengzhou-nansihuan-linear-primary",
+      "id": "cn-zhengzhou-cn-zhengzhou-zijingshan-2-to-cn-zhengzhou-jiahe-linear-primary",
+      "station_id": "cn-zhengzhou-zijingshan",
+      "stop_id": "cn-zhengzhou-zijingshan-2",
+      "line_id": "cn-zhengzhou-line-2",
+      "source_id": "zzmetro-operating-hours",
+      "destination_stop_id": "cn-zhengzhou-jiahe-2",
+      "pattern_id": "cn-zhengzhou-line-2-pattern-cn-zhengzhou-jiahe-2-to-cn-zhengzhou-cmuvf-2",
+      "direction_type": "linear",
+      "direction_label": "贾河站",
+      "first_train": [
+        "06:00"
+      ],
+      "last_train": [
+        "23:19"
+      ],
+      "extras": {
+        "service": "primary"
+      }
+    },
+    {
+      "id": "cn-zhengzhou-cn-zhengzhou-zonghebaoshuiqu-城郊-to-cn-zhengzhou-cmuvf-linear-primary",
       "station_id": "cn-zhengzhou-zonghebaoshuiqu",
       "stop_id": "cn-zhengzhou-zonghebaoshuiqu-城郊",
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-nansihuan-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "destination_stop_id": "cn-zhengzhou-cmuvf-城郊",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "贾河/刘庄",
       "first_train": [
@@ -11290,7 +11376,7 @@
       "line_id": "cn-zhengzhou-line-chengjiao",
       "source_id": "zzmetro-operating-hours",
       "destination_stop_id": "cn-zhengzhou-zhengzhou-hangkonggang-railway-station-城郊",
-      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-nansihuan-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
+      "pattern_id": "cn-zhengzhou-line-chengjiao-pattern-cn-zhengzhou-cmuvf-to-cn-zhengzhou-zhengzhou-hangkonggang-railway-station",
       "direction_type": "linear",
       "direction_label": "郑州航空港站",
       "first_train": [
@@ -11298,46 +11384,6 @@
       ],
       "last_train": [
         "23:39"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-zun-dalu-郑许-to-cn-zhengzhou-chang-an-lu-bei-linear-primary",
-      "station_id": "cn-zhengzhou-zun-dalu",
-      "stop_id": "cn-zhengzhou-zun-dalu-郑许",
-      "line_id": "cn-zhengzhou-line-zhengxu",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-chang-an-lu-bei-郑许",
-      "pattern_id": "cn-zhengzhou-line-zhengxu-pattern-cn-zhengzhou-chang-an-lu-bei-to-cn-zhengzhou-xuchangdong-station",
-      "direction_type": "linear",
-      "direction_label": "长安路北站",
-      "first_train": [
-        "06:02"
-      ],
-      "last_train": [
-        "21:56"
-      ],
-      "extras": {
-        "service": "primary"
-      }
-    },
-    {
-      "id": "cn-zhengzhou-cn-zhengzhou-zun-dalu-郑许-to-cn-zhengzhou-xuchangdong-station-linear-primary",
-      "station_id": "cn-zhengzhou-zun-dalu",
-      "stop_id": "cn-zhengzhou-zun-dalu-郑许",
-      "line_id": "cn-zhengzhou-line-zhengxu",
-      "source_id": "zzmetro-operating-hours",
-      "destination_stop_id": "cn-zhengzhou-xuchangdong-station-郑许",
-      "pattern_id": "cn-zhengzhou-line-zhengxu-pattern-cn-zhengzhou-chang-an-lu-bei-to-cn-zhengzhou-xuchangdong-station",
-      "direction_type": "linear",
-      "direction_label": "许昌东站",
-      "first_train": [
-        "06:19"
-      ],
-      "last_train": [
-        "21:19"
       ],
       "extras": {
         "service": "primary"

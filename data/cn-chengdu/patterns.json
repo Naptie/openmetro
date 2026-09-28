@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chengdu",
-  "generated_at": "2026-09-24T19:21:45.439Z",
+  "generated_at": "2026-09-28T09:54:30.411Z",
   "source": [],
   "records": [
     {
@@ -67,7 +67,7 @@
         "cn-chengdu-incubation-park-1",
         "cn-chengdu-jincheng-plaza-1",
         "cn-chengdu-century-city-1",
-        "cn-chengdu-3r-tianfu-street-1",
+        "cn-chengdu-3-tianfu-street-1",
         "cn-chengdu-5-tianfu-street-1",
         "cn-chengdu-huafu-avenue-1",
         "cn-chengdu-sihe-1",
@@ -337,7 +337,7 @@
       }
     },
     {
-      "id": "cn-chengdu-line-2-pattern-xipu-railway-station-2-to-chengdu-academy-of-governance-2",
+      "id": "cn-chengdu-line-2-pattern-xipu-railway-station-2-to-longquanyi-2",
       "line_id": "cn-chengdu-line-2",
       "name": "2号线",
       "names": {
@@ -370,22 +370,28 @@
         "cn-chengdu-chengyu-flyover-2",
         "cn-chengdu-huiwangling-2",
         "cn-chengdu-honghe-2",
-        "cn-chengdu-chengdu-academy-of-governance-2"
+        "cn-chengdu-chengdu-academy-of-governance-2",
+        "cn-chengdu-damianpu-2",
+        "cn-chengdu-lianshanpo-2",
+        "cn-chengdu-jiepai-2",
+        "cn-chengdu-shufang-2",
+        "cn-chengdu-longping-road-2",
+        "cn-chengdu-longquanyi-2"
       ],
       "origin_stop_id": "cn-chengdu-xipu-railway-station-2",
-      "terminal_stop_id": "cn-chengdu-chengdu-academy-of-governance-2",
+      "terminal_stop_id": "cn-chengdu-longquanyi-2",
       "is_primary": true,
       "source_ids": [
         {
           "source": "chengdurail-station-time",
-          "id": "犀浦-成都行政学院"
+          "id": "犀浦-龙泉驿"
         }
       ],
       "extras": {
-        "description": "犀浦-成都行政学院",
+        "description": "犀浦-龙泉驿",
         "direction": "02",
         "origin_name": "犀浦",
-        "terminal_name": "成都行政学院",
+        "terminal_name": "龙泉驿",
         "line_short_name": "2",
         "pattern_role": "direction"
       }

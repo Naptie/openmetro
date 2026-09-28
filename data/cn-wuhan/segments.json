@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-wuhan",
-  "generated_at": "2026-09-28T03:06:54.916Z",
+  "generated_at": "2026-09-28T10:11:56.421Z",
   "source": [],
   "records": [
     {
@@ -1004,13 +1004,12 @@
       "to_station_id": "cn-wuhan-polytechnic-university",
       "direction": "both",
       "source_id": "wuhanrt-helios",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 282,
       "travel_time_source": "planner",
-      "distance_km": 1.145,
+      "distance_km": 1.202,
       "extras": {
-        "planner_source": "route",
-        "planner_time_source": "lmap-route-mintime",
-        "distance_source": "haversine"
+        "planner_source": "pathphp",
+        "planner_time_source": "pathphp"
       }
     },
     {
