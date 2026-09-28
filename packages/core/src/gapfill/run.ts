@@ -225,11 +225,15 @@ function walkBetweenRides(
     score: number;
   };
   const hits: Hit[] = [];
+  const isRide = (s: BaiduTransitStep | undefined) => s?.type === 3;
   for (let i = 0; i < steps.length; i++) {
-    if (steps[i].type !== 5 && steps[i].type !== 4) continue;
+    const t = steps[i].type;
+    if (t !== 5 && t !== 4) continue;
     const prev = steps[i - 1];
     const next = steps[i + 1];
-    if (prev?.type !== 3 || !next || next.type !== 3) continue;
+    // Classic transfer: walk between two rides. HK payloads sometimes
+    // bookend with walk, so allow a walk adjacent to at least one ride.
+    if ((!isRide(prev) && !isRide(next)) || !prev || !next) continue;
     const w = steps[i] as {
       duration?: number;
       distance?: number;
