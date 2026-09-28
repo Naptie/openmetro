@@ -239,12 +239,21 @@ export function pureMetroSteps(steps: BaiduTransitStep[][] | undefined): BaiduTr
     const v = s.vehicle ?? {};
     if (v.type === 1) return true;
     const n = v.name ?? '';
-    return n.includes('地铁') || n.includes('轨道');
+    // CN: 地铁/轨道/轻轨; HK: 港铁 / 荃湾线 / 东铁线 …
+    return (
+      n.includes('地铁') ||
+      n.includes('轨道') ||
+      n.includes('轻轨') ||
+      n.includes('港铁') ||
+      n.includes('MTR') ||
+      /[东西南北中]铁|线$/.test(n)
+    );
   };
   let sawRide = false;
   for (const s of flat) {
     const t = s.type ?? -1;
-    if (t === 5) continue; // walk
+    // Lite uses 5, Direction v2 maps walk to 5; some payloads use 4.
+    if (t === 5 || t === 4) continue; // walk
     if (isMetroRide(s)) {
       sawRide = true;
       continue;

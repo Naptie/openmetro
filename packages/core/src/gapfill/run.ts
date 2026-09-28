@@ -226,7 +226,7 @@ function walkBetweenRides(
   };
   const hits: Hit[] = [];
   for (let i = 0; i < steps.length; i++) {
-    if (steps[i].type !== 5) continue;
+    if (steps[i].type !== 5 && steps[i].type !== 4) continue;
     const prev = steps[i - 1];
     const next = steps[i + 1];
     if (prev?.type !== 3 || !next || next.type !== 3) continue;
@@ -370,7 +370,36 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
           if (best && best.score >= 80) break;
           await new Promise((r) => setTimeout(r, Math.ceil(1000 / loaded.qps)));
         }
+        // Reject Place hits far from the rest of the network — Baidu region
+        // filters are loose and a garbage name can geocode 1000km+ away
+        // (zhengzhou `c2a7s` once landed 1639km from 二七广场).
+        const networkCenter = (() => {
+          let sx = 0;
+          let sy = 0;
+          let n = 0;
+          for (const s of stationsDoc.records) {
+            const loc = s.location;
+            if (!loc || loc.lon == null || loc.lat == null) continue;
+            sx += loc.lon;
+            sy += loc.lat;
+            n++;
+          }
+          return n > 0 ? { lon: sx / n, lat: sy / n } : undefined;
+        })();
+        const farFromNetwork = (lng: number, lat: number): boolean => {
+          if (!networkCenter) return false;
+          const dLon = (lng - networkCenter.lon) * Math.cos((networkCenter.lat * Math.PI) / 180);
+          const dLat = lat - networkCenter.lat;
+          const deg = Math.sqrt(dLon * dLon + dLat * dLat);
+          return deg > 0.8; // ~80km
+        };
         if (best && best.score >= 40 && best.hit.location) {
+          if (farFromNetwork(best.hit.location.lng, best.hit.location.lat)) {
+            failures.push(
+              `coord ${zh}: Baidu hit too far from network (${best.hit.name})`
+            );
+            continue;
+          }
           st.location = {
             lon: best.hit.location.lng,
             lat: best.hit.location.lat,
