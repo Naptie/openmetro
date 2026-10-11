@@ -1,0 +1,1890 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-fuzhou",
+  "generated_at": "2026-10-11T12:26:33.225Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-11T12:26:33.225Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-agriculture-and-forestry-university-5-cn-fuzhou-hongtang-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-agriculture-and-forestry-university-5",
+      "to_stop_id": "cn-fuzhou-hongtang-5",
+      "from_station_id": "cn-fuzhou-agriculture-and-forestry-university",
+      "to_station_id": "cn-fuzhou-hongtang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.311,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-airport-滨海快线-cn-fuzhou-wenling-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-airport-滨海快线",
+      "to_stop_id": "cn-fuzhou-wenling-滨海快线",
+      "from_station_id": "cn-fuzhou-airport",
+      "to_station_id": "cn-fuzhou-wenling",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 5.499,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-ancient-luozhou-town-5-cn-fuzhou-qianjin-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-ancient-luozhou-town-5",
+      "to_stop_id": "cn-fuzhou-qianjin-5",
+      "from_station_id": "cn-fuzhou-ancient-luozhou-town",
+      "to_station_id": "cn-fuzhou-qianjin",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.121,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-anping-1-cn-fuzhou-liangcuo-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-anping-1",
+      "to_stop_id": "cn-fuzhou-liangcuo-1",
+      "from_station_id": "cn-fuzhou-anping",
+      "to_station_id": "cn-fuzhou-liangcuo",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.306,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-aofengzhou-4-cn-fuzhou-huahai-park-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-aofengzhou-4",
+      "to_stop_id": "cn-fuzhou-huahai-park-4",
+      "from_station_id": "cn-fuzhou-aofengzhou",
+      "to_station_id": "cn-fuzhou-huahai-park",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.734,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-baihuting-1-cn-fuzhou-huluzhen-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-baihuting-1",
+      "to_stop_id": "cn-fuzhou-huluzhen-1",
+      "from_station_id": "cn-fuzhou-baihuting",
+      "to_station_id": "cn-fuzhou-huluzhen",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.283,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-banzhou-4-cn-fuzhou-jianxin-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-banzhou-4",
+      "to_stop_id": "cn-fuzhou-jianxin-4",
+      "from_station_id": "cn-fuzhou-banzhou",
+      "to_station_id": "cn-fuzhou-jianxin",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.866,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-binhai-cbd-滨海快线-cn-fuzhou-airport-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-binhai-cbd-滨海快线",
+      "to_stop_id": "cn-fuzhou-airport-滨海快线",
+      "from_station_id": "cn-fuzhou-binhai-cbd",
+      "to_station_id": "cn-fuzhou-airport",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 8.167,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-chating-1-cn-fuzhou-dadao-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-chating-1",
+      "to_stop_id": "cn-fuzhou-dadao-1",
+      "from_station_id": "cn-fuzhou-chating",
+      "to_station_id": "cn-fuzhou-dadao",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.461,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-chengmen-1-cn-fuzhou-sanjiaocheng-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-chengmen-1",
+      "to_stop_id": "cn-fuzhou-sanjiaocheng-1",
+      "from_station_id": "cn-fuzhou-chengmen",
+      "to_station_id": "cn-fuzhou-sanjiaocheng",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.004,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-chengmen-4-cn-fuzhou-luozhou-hot-spring-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-chengmen-4",
+      "to_stop_id": "cn-fuzhou-luozhou-hot-spring-4",
+      "from_station_id": "cn-fuzhou-chengmen",
+      "to_station_id": "cn-fuzhou-luozhou-hot-spring",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.293,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-dadao-1-cn-fuzhou-shangteng-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-dadao-1",
+      "to_stop_id": "cn-fuzhou-shangteng-1",
+      "from_station_id": "cn-fuzhou-dadao",
+      "to_station_id": "cn-fuzhou-shangteng",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.824,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-dashuju-滨海快线-cn-fuzhou-binhai-cbd-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-dashuju-滨海快线",
+      "to_stop_id": "cn-fuzhou-binhai-cbd-滨海快线",
+      "from_station_id": "cn-fuzhou-dashuju",
+      "to_station_id": "cn-fuzhou-binhai-cbd",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.444,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-difengjiang-5-cn-fuzhou-ancient-luozhou-town-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-difengjiang-5",
+      "to_stop_id": "cn-fuzhou-ancient-luozhou-town-5",
+      "from_station_id": "cn-fuzhou-difengjiang",
+      "to_station_id": "cn-fuzhou-ancient-luozhou-town",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.598,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-difengjiang-滨海快线-cn-fuzhou-xiangqian-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-difengjiang-滨海快线",
+      "to_stop_id": "cn-fuzhou-xiangqian-滨海快线",
+      "from_station_id": "cn-fuzhou-difengjiang",
+      "to_station_id": "cn-fuzhou-xiangqian",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 8.14,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-dongjiekou-1-cn-fuzhou-nanmendou-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-dongjiekou-1",
+      "to_stop_id": "cn-fuzhou-nanmendou-1",
+      "from_station_id": "cn-fuzhou-dongjiekou",
+      "to_station_id": "cn-fuzhou-nanmendou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.149,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-dongjiekou-4-cn-fuzhou-provincial-hospital-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-dongjiekou-4",
+      "to_stop_id": "cn-fuzhou-provincial-hospital-4",
+      "from_station_id": "cn-fuzhou-dongjiekou",
+      "to_station_id": "cn-fuzhou-provincial-hospital",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.836,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-dongling-5-cn-fuzhou-taiyu-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-dongling-5",
+      "to_stop_id": "cn-fuzhou-taiyu-5",
+      "from_station_id": "cn-fuzhou-dongling",
+      "to_station_id": "cn-fuzhou-taiyu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.914,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-dongmen-4-cn-fuzhou-sanjiaochi-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-dongmen-4",
+      "to_stop_id": "cn-fuzhou-sanjiaochi-4",
+      "from_station_id": "cn-fuzhou-dongmen",
+      "to_station_id": "cn-fuzhou-sanjiaochi",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.184,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-dongmen-滨海快线-cn-fuzhou-mindu-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-dongmen-滨海快线",
+      "to_stop_id": "cn-fuzhou-mindu-滨海快线",
+      "from_station_id": "cn-fuzhou-dongmen",
+      "to_station_id": "cn-fuzhou-mindu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.409,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-dongyu-fujian-normal-university-2-cn-fuzhou-houting-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-dongyu-fujian-normal-university-2",
+      "to_stop_id": "cn-fuzhou-houting-2",
+      "from_station_id": "cn-fuzhou-dongyu-fujian-normal-university",
+      "to_station_id": "cn-fuzhou-houting",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.762,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-doumen-1-cn-fuzhou-shudou-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-doumen-1",
+      "to_stop_id": "cn-fuzhou-shudou-1",
+      "from_station_id": "cn-fuzhou-doumen",
+      "to_station_id": "cn-fuzhou-shudou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.726,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-exhibition-center-4-cn-fuzhou-linpu-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-exhibition-center-4",
+      "to_stop_id": "cn-fuzhou-linpu-4",
+      "from_station_id": "cn-fuzhou-exhibition-center",
+      "to_station_id": "cn-fuzhou-linpu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.621,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-fenggangli-5-cn-fuzhou-pushang-dadao-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-fenggangli-5",
+      "to_stop_id": "cn-fuzhou-pushang-dadao-5",
+      "from_station_id": "cn-fuzhou-fenggangli",
+      "to_station_id": "cn-fuzhou-pushang-dadao",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.769,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-fenghuangchi-4-cn-fuzhou-luzhuang-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-fenghuangchi-4",
+      "to_stop_id": "cn-fuzhou-luzhuang-4",
+      "from_station_id": "cn-fuzhou-fenghuangchi",
+      "to_station_id": "cn-fuzhou-luzhuang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.176,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-fuzhou-railway-station-1-cn-fuzhou-doumen-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-fuzhou-railway-station-1",
+      "to_stop_id": "cn-fuzhou-doumen-1",
+      "from_station_id": "cn-fuzhou-fuzhou-railway-station",
+      "to_station_id": "cn-fuzhou-doumen",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.094,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-fuzhou-railway-station-滨海快线-cn-fuzhou-dongmen-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-fuzhou-railway-station-滨海快线",
+      "to_stop_id": "cn-fuzhou-dongmen-滨海快线",
+      "from_station_id": "cn-fuzhou-fuzhou-railway-station",
+      "to_station_id": "cn-fuzhou-dongmen",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.84,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-fuzhou-south-railway-station-1-cn-fuzhou-anping-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-fuzhou-south-railway-station-1",
+      "to_stop_id": "cn-fuzhou-anping-1",
+      "from_station_id": "cn-fuzhou-fuzhou-south-railway-station",
+      "to_station_id": "cn-fuzhou-anping",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.228,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-fuzhou-university-2-cn-fuzhou-dongyu-fujian-normal-university-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-fuzhou-university-2",
+      "to_stop_id": "cn-fuzhou-dongyu-fujian-normal-university-2",
+      "from_station_id": "cn-fuzhou-fuzhou-university",
+      "to_station_id": "cn-fuzhou-dongyu-fujian-normal-university",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.934,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-gaishan-zhulan-5-cn-fuzhou-yixu-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-gaishan-zhulan-5",
+      "to_stop_id": "cn-fuzhou-yixu-5",
+      "from_station_id": "cn-fuzhou-gaishan-zhulan",
+      "to_station_id": "cn-fuzhou-yixu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.036,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-guangminggang-4-cn-fuzhou-aofengzhou-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-guangminggang-4",
+      "to_stop_id": "cn-fuzhou-aofengzhou-4",
+      "from_station_id": "cn-fuzhou-guangminggang",
+      "to_station_id": "cn-fuzhou-aofengzhou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.153,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-gushan-2-cn-fuzhou-yangli-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-gushan-2",
+      "to_stop_id": "cn-fuzhou-yangli-2",
+      "from_station_id": "cn-fuzhou-gushan",
+      "to_station_id": "cn-fuzhou-yangli",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.939,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-hangcheng-6-cn-fuzhou-zhenghe-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-hangcheng-6",
+      "to_stop_id": "cn-fuzhou-zhenghe-6",
+      "from_station_id": "cn-fuzhou-hangcheng",
+      "to_station_id": "cn-fuzhou-zhenghe",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.388,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-hengyu-4-cn-fuzhou-houyu-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-hengyu-4",
+      "to_stop_id": "cn-fuzhou-houyu-4",
+      "from_station_id": "cn-fuzhou-hengyu",
+      "to_station_id": "cn-fuzhou-houyu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.913,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-heshang-6-cn-fuzhou-shajing-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-heshang-6",
+      "to_stop_id": "cn-fuzhou-shajing-6",
+      "from_station_id": "cn-fuzhou-heshang",
+      "to_station_id": "cn-fuzhou-shajing",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.344,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-hongtang-4-cn-fuzhou-jinniushan-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-hongtang-4",
+      "to_stop_id": "cn-fuzhou-jinniushan-4",
+      "from_station_id": "cn-fuzhou-hongtang",
+      "to_station_id": "cn-fuzhou-jinniushan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.202,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-hongtang-5-cn-fuzhou-zhenban-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-hongtang-5",
+      "to_stop_id": "cn-fuzhou-zhenban-5",
+      "from_station_id": "cn-fuzhou-hongtang",
+      "to_station_id": "cn-fuzhou-zhenban",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.898,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-hongwan-2-cn-fuzhou-jinshan-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-hongwan-2",
+      "to_stop_id": "cn-fuzhou-jinshan-2",
+      "from_station_id": "cn-fuzhou-hongwan",
+      "to_station_id": "cn-fuzhou-jinshan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.225,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-houting-2-cn-fuzhou-juyuanzhou-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-houting-2",
+      "to_stop_id": "cn-fuzhou-juyuanzhou-2",
+      "from_station_id": "cn-fuzhou-houting",
+      "to_station_id": "cn-fuzhou-juyuanzhou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.85,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-houyu-4-cn-fuzhou-qianyu-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-houyu-4",
+      "to_stop_id": "cn-fuzhou-qianyu-4",
+      "from_station_id": "cn-fuzhou-houyu",
+      "to_station_id": "cn-fuzhou-qianyu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.1,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-huahai-park-4-cn-fuzhou-exhibition-center-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-huahai-park-4",
+      "to_stop_id": "cn-fuzhou-exhibition-center-4",
+      "from_station_id": "cn-fuzhou-huahai-park",
+      "to_station_id": "cn-fuzhou-exhibition-center",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.48,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-huangshan-1-cn-fuzhou-paixia-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-huangshan-1",
+      "to_stop_id": "cn-fuzhou-paixia-1",
+      "from_station_id": "cn-fuzhou-huangshan",
+      "to_station_id": "cn-fuzhou-paixia",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.087,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-huluzhen-1-cn-fuzhou-huangshan-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-huluzhen-1",
+      "to_stop_id": "cn-fuzhou-huangshan-1",
+      "from_station_id": "cn-fuzhou-huluzhen",
+      "to_station_id": "cn-fuzhou-huangshan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.932,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-jianxin-4-cn-fuzhou-hongtang-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-jianxin-4",
+      "to_stop_id": "cn-fuzhou-hongtang-4",
+      "from_station_id": "cn-fuzhou-jianxin",
+      "to_station_id": "cn-fuzhou-hongtang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.581,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-jingxi-houyu-5-cn-fuzhou-agriculture-and-forestry-university-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-jingxi-houyu-5",
+      "to_stop_id": "cn-fuzhou-agriculture-and-forestry-university-5",
+      "from_station_id": "cn-fuzhou-jingxi-houyu",
+      "to_station_id": "cn-fuzhou-agriculture-and-forestry-university",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.17,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-jinniushan-4-cn-fuzhou-fenghuangchi-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-jinniushan-4",
+      "to_stop_id": "cn-fuzhou-fenghuangchi-4",
+      "from_station_id": "cn-fuzhou-jinniushan",
+      "to_station_id": "cn-fuzhou-fenghuangchi",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.122,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-jinshan-2-cn-fuzhou-jinxiang-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-jinshan-2",
+      "to_stop_id": "cn-fuzhou-jinxiang-2",
+      "from_station_id": "cn-fuzhou-jinshan",
+      "to_station_id": "cn-fuzhou-jinxiang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.886,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-jinshan-5-cn-fuzhou-fenggangli-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-jinshan-5",
+      "to_stop_id": "cn-fuzhou-fenggangli-5",
+      "from_station_id": "cn-fuzhou-jinshan",
+      "to_station_id": "cn-fuzhou-fenggangli",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.076,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-jinxiang-2-cn-fuzhou-xiangban-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-jinxiang-2",
+      "to_stop_id": "cn-fuzhou-xiangban-2",
+      "from_station_id": "cn-fuzhou-jinxiang",
+      "to_station_id": "cn-fuzhou-xiangban",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.017,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-jinyu-2-cn-fuzhou-fuzhou-university-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-jinyu-2",
+      "to_stop_id": "cn-fuzhou-fuzhou-university-2",
+      "from_station_id": "cn-fuzhou-jinyu",
+      "to_station_id": "cn-fuzhou-fuzhou-university",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.035,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-juyuanzhou-2-cn-fuzhou-hongwan-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-juyuanzhou-2",
+      "to_stop_id": "cn-fuzhou-hongwan-2",
+      "from_station_id": "cn-fuzhou-juyuanzhou",
+      "to_station_id": "cn-fuzhou-hongwan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.73,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-liangcuo-1-cn-fuzhou-xiayang-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-liangcuo-1",
+      "to_stop_id": "cn-fuzhou-xiayang-1",
+      "from_station_id": "cn-fuzhou-liangcuo",
+      "to_station_id": "cn-fuzhou-xiayang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.254,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-liangcuo-6-cn-fuzhou-xiayang-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-liangcuo-6",
+      "to_stop_id": "cn-fuzhou-xiayang-6",
+      "from_station_id": "cn-fuzhou-liangcuo",
+      "to_station_id": "cn-fuzhou-xiayang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.254,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-linpu-4-cn-fuzhou-chengmen-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-linpu-4",
+      "to_stop_id": "cn-fuzhou-chengmen-4",
+      "from_station_id": "cn-fuzhou-linpu",
+      "to_station_id": "cn-fuzhou-chengmen",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.265,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-linpu-6-cn-fuzhou-zhanglan-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-linpu-6",
+      "to_stop_id": "cn-fuzhou-zhanglan-6",
+      "from_station_id": "cn-fuzhou-linpu",
+      "to_station_id": "cn-fuzhou-zhanglan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.637,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-longjiang-5-cn-fuzhou-fuzhou-south-railway-station-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-longjiang-5",
+      "to_stop_id": "cn-fuzhou-fuzhou-south-railway-station-5",
+      "from_station_id": "cn-fuzhou-longjiang",
+      "to_station_id": "cn-fuzhou-fuzhou-south-railway-station",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.96,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-lulei-1-cn-fuzhou-fuzhou-south-railway-station-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-lulei-1",
+      "to_stop_id": "cn-fuzhou-fuzhou-south-railway-station-1",
+      "from_station_id": "cn-fuzhou-lulei",
+      "to_station_id": "cn-fuzhou-fuzhou-south-railway-station",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.197,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-luohanshan-1-cn-fuzhou-fuzhou-railway-station-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-luohanshan-1",
+      "to_stop_id": "cn-fuzhou-fuzhou-railway-station-1",
+      "from_station_id": "cn-fuzhou-luohanshan",
+      "to_station_id": "cn-fuzhou-fuzhou-railway-station",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.458,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-luozhou-hot-spring-4-cn-fuzhou-difengjiang-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-luozhou-hot-spring-4",
+      "to_stop_id": "cn-fuzhou-difengjiang-4",
+      "from_station_id": "cn-fuzhou-luozhou-hot-spring",
+      "to_station_id": "cn-fuzhou-difengjiang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.397,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-luzhuang-4-cn-fuzhou-ximen-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-luzhuang-4",
+      "to_stop_id": "cn-fuzhou-ximen-4",
+      "from_station_id": "cn-fuzhou-luzhuang",
+      "to_station_id": "cn-fuzhou-ximen",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.694,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-marong-5-cn-fuzhou-jinshan-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-marong-5",
+      "to_stop_id": "cn-fuzhou-jinshan-5",
+      "from_station_id": "cn-fuzhou-marong",
+      "to_station_id": "cn-fuzhou-jinshan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.972,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-mindu-滨海快线-cn-fuzhou-nangongyuan-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-mindu-滨海快线",
+      "to_stop_id": "cn-fuzhou-nangongyuan-滨海快线",
+      "from_station_id": "cn-fuzhou-mindu",
+      "to_station_id": "cn-fuzhou-nangongyuan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.272,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-nangongyuan-滨海快线-cn-fuzhou-sanchajie-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-nangongyuan-滨海快线",
+      "to_stop_id": "cn-fuzhou-sanchajie-滨海快线",
+      "from_station_id": "cn-fuzhou-nangongyuan",
+      "to_station_id": "cn-fuzhou-sanchajie",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.33,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-nanmendou-1-cn-fuzhou-chating-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-nanmendou-1",
+      "to_stop_id": "cn-fuzhou-chating-1",
+      "from_station_id": "cn-fuzhou-nanmendou",
+      "to_station_id": "cn-fuzhou-chating",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.796,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-nanmendou-2-cn-fuzhou-shuibu-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-nanmendou-2",
+      "to_stop_id": "cn-fuzhou-shuibu-2",
+      "from_station_id": "cn-fuzhou-nanmendou",
+      "to_station_id": "cn-fuzhou-shuibu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.096,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-ninghua-2-cn-fuzhou-xiyang-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-ninghua-2",
+      "to_stop_id": "cn-fuzhou-xiyang-2",
+      "from_station_id": "cn-fuzhou-ninghua",
+      "to_station_id": "cn-fuzhou-xiyang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.055,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-paixia-1-cn-fuzhou-chengmen-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-paixia-1",
+      "to_stop_id": "cn-fuzhou-chengmen-1",
+      "from_station_id": "cn-fuzhou-paixia",
+      "to_station_id": "cn-fuzhou-chengmen",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.867,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-pandun-6-cn-fuzhou-linpu-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-pandun-6",
+      "to_stop_id": "cn-fuzhou-linpu-6",
+      "from_station_id": "cn-fuzhou-pandun",
+      "to_station_id": "cn-fuzhou-linpu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.93,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-panyu-5-cn-fuzhou-wushan-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-panyu-5",
+      "to_stop_id": "cn-fuzhou-wushan-5",
+      "from_station_id": "cn-fuzhou-panyu",
+      "to_station_id": "cn-fuzhou-wushan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.788,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-pingshan-1-cn-fuzhou-dongjiekou-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-pingshan-1",
+      "to_stop_id": "cn-fuzhou-dongjiekou-1",
+      "from_station_id": "cn-fuzhou-pingshan",
+      "to_station_id": "cn-fuzhou-dongjiekou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.166,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-provincial-hospital-4-cn-fuzhou-dongmen-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-provincial-hospital-4",
+      "to_stop_id": "cn-fuzhou-dongmen-4",
+      "from_station_id": "cn-fuzhou-provincial-hospital",
+      "to_station_id": "cn-fuzhou-dongmen",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.748,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-pushang-dadao-5-cn-fuzhou-xiajing-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-pushang-dadao-5",
+      "to_stop_id": "cn-fuzhou-xiajing-5",
+      "from_station_id": "cn-fuzhou-pushang-dadao",
+      "to_station_id": "cn-fuzhou-xiajing",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.048,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-qianjin-5-cn-fuzhou-longjiang-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-qianjin-5",
+      "to_stop_id": "cn-fuzhou-longjiang-5",
+      "from_station_id": "cn-fuzhou-qianjin",
+      "to_station_id": "cn-fuzhou-longjiang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.998,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-qianyu-2-cn-fuzhou-shangyang-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-qianyu-2",
+      "to_stop_id": "cn-fuzhou-shangyang-2",
+      "from_station_id": "cn-fuzhou-qianyu",
+      "to_station_id": "cn-fuzhou-shangyang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.403,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-qianyu-4-cn-fuzhou-guangminggang-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-qianyu-4",
+      "to_stop_id": "cn-fuzhou-guangminggang-4",
+      "from_station_id": "cn-fuzhou-qianyu",
+      "to_station_id": "cn-fuzhou-guangminggang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.855,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-sanchajie-1-cn-fuzhou-baihuting-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-sanchajie-1",
+      "to_stop_id": "cn-fuzhou-baihuting-1",
+      "from_station_id": "cn-fuzhou-sanchajie",
+      "to_station_id": "cn-fuzhou-baihuting",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.306,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-sanchajie-滨海快线-cn-fuzhou-difengjiang-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-sanchajie-滨海快线",
+      "to_stop_id": "cn-fuzhou-difengjiang-滨海快线",
+      "from_station_id": "cn-fuzhou-sanchajie",
+      "to_station_id": "cn-fuzhou-difengjiang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 5.343,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-sanjiaocheng-1-cn-fuzhou-lulei-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-sanjiaocheng-1",
+      "to_stop_id": "cn-fuzhou-lulei-1",
+      "from_station_id": "cn-fuzhou-sanjiaocheng",
+      "to_station_id": "cn-fuzhou-lulei",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.37,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-sanjiaochi-4-cn-fuzhou-zhuyu-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-sanjiaochi-4",
+      "to_stop_id": "cn-fuzhou-zhuyu-4",
+      "from_station_id": "cn-fuzhou-sanjiaochi",
+      "to_station_id": "cn-fuzhou-zhuyu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.163,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shadi-2-cn-fuzhou-shangjie-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-shadi-2",
+      "to_stop_id": "cn-fuzhou-shangjie-2",
+      "from_station_id": "cn-fuzhou-shadi",
+      "to_station_id": "cn-fuzhou-shangjie",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.74,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shajing-6-cn-fuzhou-xiawu-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-shajing-6",
+      "to_stop_id": "cn-fuzhou-xiawu-6",
+      "from_station_id": "cn-fuzhou-shajing",
+      "to_station_id": "cn-fuzhou-xiawu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.157,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shangjie-2-cn-fuzhou-jinyu-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-shangjie-2",
+      "to_stop_id": "cn-fuzhou-jinyu-2",
+      "from_station_id": "cn-fuzhou-shangjie",
+      "to_station_id": "cn-fuzhou-jinyu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.593,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shangteng-1-cn-fuzhou-sanchajie-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-shangteng-1",
+      "to_stop_id": "cn-fuzhou-sanchajie-1",
+      "from_station_id": "cn-fuzhou-shangteng",
+      "to_station_id": "cn-fuzhou-sanchajie",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.165,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shangyang-2-cn-fuzhou-gushan-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-shangyang-2",
+      "to_stop_id": "cn-fuzhou-gushan-2",
+      "from_station_id": "cn-fuzhou-shangyang",
+      "to_station_id": "cn-fuzhou-gushan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.895,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shiyang-6-cn-fuzhou-wuhang-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-shiyang-6",
+      "to_stop_id": "cn-fuzhou-wuhang-6",
+      "from_station_id": "cn-fuzhou-shiyang",
+      "to_station_id": "cn-fuzhou-wuhang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.577,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shouzhan-滨海快线-cn-fuzhou-dashuju-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-shouzhan-滨海快线",
+      "to_stop_id": "cn-fuzhou-dashuju-滨海快线",
+      "from_station_id": "cn-fuzhou-shouzhan",
+      "to_station_id": "cn-fuzhou-dashuju",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 480,
+      "travel_time_source": "planner",
+      "distance_km": 11.831,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shudou-1-cn-fuzhou-pingshan-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-shudou-1",
+      "to_stop_id": "cn-fuzhou-pingshan-1",
+      "from_station_id": "cn-fuzhou-shudou",
+      "to_station_id": "cn-fuzhou-pingshan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.178,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-shuibu-2-cn-fuzhou-ziyang-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-shuibu-2",
+      "to_stop_id": "cn-fuzhou-ziyang-2",
+      "from_station_id": "cn-fuzhou-shuibu",
+      "to_station_id": "cn-fuzhou-ziyang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.299,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-suyang-2-cn-fuzhou-shadi-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-suyang-2",
+      "to_stop_id": "cn-fuzhou-shadi-2",
+      "from_station_id": "cn-fuzhou-suyang",
+      "to_station_id": "cn-fuzhou-shadi",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.014,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-taiyu-5-cn-fuzhou-panyu-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-taiyu-5",
+      "to_stop_id": "cn-fuzhou-panyu-5",
+      "from_station_id": "cn-fuzhou-taiyu",
+      "to_station_id": "cn-fuzhou-panyu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.376,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-wuhang-6-cn-fuzhou-heshang-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-wuhang-6",
+      "to_stop_id": "cn-fuzhou-heshang-6",
+      "from_station_id": "cn-fuzhou-wuhang",
+      "to_station_id": "cn-fuzhou-heshang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.525,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-wuliting-2-cn-fuzhou-qianyu-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-wuliting-2",
+      "to_stop_id": "cn-fuzhou-qianyu-2",
+      "from_station_id": "cn-fuzhou-wuliting",
+      "to_station_id": "cn-fuzhou-qianyu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.04,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-wushan-5-cn-fuzhou-gaishan-zhulan-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-wushan-5",
+      "to_stop_id": "cn-fuzhou-gaishan-zhulan-5",
+      "from_station_id": "cn-fuzhou-wushan",
+      "to_station_id": "cn-fuzhou-gaishan-zhulan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.052,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiajing-5-cn-fuzhou-dongling-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-xiajing-5",
+      "to_stop_id": "cn-fuzhou-dongling-5",
+      "from_station_id": "cn-fuzhou-xiajing",
+      "to_station_id": "cn-fuzhou-dongling",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.331,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiangban-2-cn-fuzhou-ninghua-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-xiangban-2",
+      "to_stop_id": "cn-fuzhou-ninghua-2",
+      "from_station_id": "cn-fuzhou-xiangban",
+      "to_station_id": "cn-fuzhou-ninghua",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.759,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiangfeng-1-cn-fuzhou-xiushan-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-xiangfeng-1",
+      "to_stop_id": "cn-fuzhou-xiushan-1",
+      "from_station_id": "cn-fuzhou-xiangfeng",
+      "to_station_id": "cn-fuzhou-xiushan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.375,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiangqian-滨海快线-cn-fuzhou-shouzhan-滨海快线",
+      "line_id": "cn-fuzhou-line-eg37cz",
+      "from_stop_id": "cn-fuzhou-xiangqian-滨海快线",
+      "to_stop_id": "cn-fuzhou-shouzhan-滨海快线",
+      "from_station_id": "cn-fuzhou-xiangqian",
+      "to_station_id": "cn-fuzhou-shouzhan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 9.875,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiawu-6-cn-fuzhou-wanshou-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-xiawu-6",
+      "to_stop_id": "cn-fuzhou-wanshou-6",
+      "from_station_id": "cn-fuzhou-xiawu",
+      "to_station_id": "cn-fuzhou-wanshou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.423,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiayang-1-cn-fuzhou-sanjiangkou-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-xiayang-1",
+      "to_stop_id": "cn-fuzhou-sanjiangkou-1",
+      "from_station_id": "cn-fuzhou-xiayang",
+      "to_station_id": "cn-fuzhou-sanjiangkou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.799,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiayang-6-cn-fuzhou-yingqian-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-xiayang-6",
+      "to_stop_id": "cn-fuzhou-yingqian-6",
+      "from_station_id": "cn-fuzhou-xiayang",
+      "to_station_id": "cn-fuzhou-yingqian",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 480,
+      "travel_time_source": "planner",
+      "distance_km": 6.155,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-ximen-4-cn-fuzhou-dongjiekou-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-ximen-4",
+      "to_stop_id": "cn-fuzhou-dongjiekou-4",
+      "from_station_id": "cn-fuzhou-ximen",
+      "to_station_id": "cn-fuzhou-dongjiekou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.93,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiushan-1-cn-fuzhou-luohanshan-1",
+      "line_id": "cn-fuzhou-line-1",
+      "from_stop_id": "cn-fuzhou-xiushan-1",
+      "to_stop_id": "cn-fuzhou-luohanshan-1",
+      "from_station_id": "cn-fuzhou-xiushan",
+      "to_station_id": "cn-fuzhou-luohanshan",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.896,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-xiyang-2-cn-fuzhou-nanmendou-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-xiyang-2",
+      "to_stop_id": "cn-fuzhou-nanmendou-2",
+      "from_station_id": "cn-fuzhou-xiyang",
+      "to_station_id": "cn-fuzhou-nanmendou",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.809,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-yingqian-6-cn-fuzhou-hangcheng-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-yingqian-6",
+      "to_stop_id": "cn-fuzhou-hangcheng-6",
+      "from_station_id": "cn-fuzhou-yingqian",
+      "to_station_id": "cn-fuzhou-hangcheng",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.782,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-yixu-5-cn-fuzhou-difengjiang-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-yixu-5",
+      "to_stop_id": "cn-fuzhou-difengjiang-5",
+      "from_station_id": "cn-fuzhou-yixu",
+      "to_station_id": "cn-fuzhou-difengjiang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.802,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-zhanglan-6-cn-fuzhou-liangcuo-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-zhanglan-6",
+      "to_stop_id": "cn-fuzhou-liangcuo-6",
+      "from_station_id": "cn-fuzhou-zhanglan",
+      "to_station_id": "cn-fuzhou-liangcuo",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.892,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-zhenban-5-cn-fuzhou-marong-5",
+      "line_id": "cn-fuzhou-line-5",
+      "from_stop_id": "cn-fuzhou-zhenban-5",
+      "to_stop_id": "cn-fuzhou-marong-5",
+      "from_station_id": "cn-fuzhou-zhenban",
+      "to_station_id": "cn-fuzhou-marong",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.288,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-zhenghe-6-cn-fuzhou-shiyang-6",
+      "line_id": "cn-fuzhou-line-6",
+      "from_stop_id": "cn-fuzhou-zhenghe-6",
+      "to_stop_id": "cn-fuzhou-shiyang-6",
+      "from_station_id": "cn-fuzhou-zhenghe",
+      "to_station_id": "cn-fuzhou-shiyang",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.214,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-zhuyu-4-cn-fuzhou-hengyu-4",
+      "line_id": "cn-fuzhou-line-4",
+      "from_stop_id": "cn-fuzhou-zhuyu-4",
+      "to_stop_id": "cn-fuzhou-hengyu-4",
+      "from_station_id": "cn-fuzhou-zhuyu",
+      "to_station_id": "cn-fuzhou-hengyu",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.497,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-fuzhou-seg-cn-fuzhou-ziyang-2-cn-fuzhou-wuliting-2",
+      "line_id": "cn-fuzhou-line-2",
+      "from_stop_id": "cn-fuzhou-ziyang-2",
+      "to_stop_id": "cn-fuzhou-wuliting-2",
+      "from_station_id": "cn-fuzhou-ziyang",
+      "to_station_id": "cn-fuzhou-wuliting",
+      "direction": "both",
+      "source_id": "fzmtr-services-schedule",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.33,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    }
+  ]
+}

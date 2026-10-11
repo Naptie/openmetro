@@ -1,0 +1,1813 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-xiamen",
+  "generated_at": "2026-10-11T11:35:56.047Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-11T11:35:56.047Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-andou-3-cn-xiamen-banshang-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-andou-3",
+      "to_stop_id": "cn-xiamen-banshang-3",
+      "from_station_id": "cn-xiamen-andou",
+      "to_station_id": "cn-xiamen-banshang",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.86,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-banshang-3-cn-xiamen-huli-chuangxinyuan-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-banshang-3",
+      "to_stop_id": "cn-xiamen-huli-chuangxinyuan-3",
+      "from_station_id": "cn-xiamen-banshang",
+      "to_station_id": "cn-xiamen-huli-chuangxinyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.038,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-beitou-6-cn-xiamen-xingbin-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-beitou-6",
+      "to_stop_id": "cn-xiamen-xingbin-6",
+      "from_station_id": "cn-xiamen-beitou",
+      "to_station_id": "cn-xiamen-xingbin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 135,
+      "travel_time_source": "planner",
+      "distance_km": 1.117,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-bingzhou-4-cn-xiamen-chengchang-4",
+      "line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-bingzhou-4",
+      "to_stop_id": "cn-xiamen-chengchang-4",
+      "from_station_id": "cn-xiamen-bingzhou",
+      "to_station_id": "cn-xiamen-chengchang",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 364,
+      "travel_time_source": "planner",
+      "distance_km": 3.866,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-caitang-2-cn-xiamen-gudishi-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-caitang-2",
+      "to_stop_id": "cn-xiamen-gudishi-2",
+      "from_station_id": "cn-xiamen-caitang",
+      "to_station_id": "cn-xiamen-gudishi",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.042,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 30.5,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-chengchang-4-cn-xiamen-hongkeng-4",
+      "line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-chengchang-4",
+      "to_stop_id": "cn-xiamen-hongkeng-4",
+      "from_station_id": "cn-xiamen-chengchang",
+      "to_station_id": "cn-xiamen-hongkeng",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 693,
+      "travel_time_source": "planner",
+      "distance_km": 6.888,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-chengyi-guangchang-1-cn-xiamen-jimei-ruanjianyuan-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-chengyi-guangchang-1",
+      "to_stop_id": "cn-xiamen-jimei-ruanjianyuan-1",
+      "from_station_id": "cn-xiamen-chengyi-guangchang",
+      "to_station_id": "cn-xiamen-jimei-ruanjianyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.238,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-dianqian-1-cn-xiamen-gaoqi-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-dianqian-1",
+      "to_stop_id": "cn-xiamen-gaoqi-1",
+      "from_station_id": "cn-xiamen-dianqian",
+      "to_station_id": "cn-xiamen-gaoqi",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.407,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-dingmei-2-cn-xiamen-maluan-zhongxin-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-dingmei-2",
+      "to_stop_id": "cn-xiamen-maluan-zhongxin-2",
+      "from_station_id": "cn-xiamen-dingmei",
+      "to_station_id": "cn-xiamen-maluan-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.361,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 32.9,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 149,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-dingmei-6-cn-xiamen-maluan-zhongxin-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-dingmei-6",
+      "to_stop_id": "cn-xiamen-maluan-zhongxin-6",
+      "from_station_id": "cn-xiamen-dingmei",
+      "to_station_id": "cn-xiamen-maluan-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 149,
+      "travel_time_source": "planner",
+      "distance_km": 1.361,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-dongfu-2-cn-xiamen-dongyao-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-dongfu-2",
+      "to_stop_id": "cn-xiamen-dongyao-2",
+      "from_station_id": "cn-xiamen-dongfu",
+      "to_station_id": "cn-xiamen-dongyao",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 2.353,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 36.5,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-dongjie-3-cn-xiamen-hongkeng-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-dongjie-3",
+      "to_stop_id": "cn-xiamen-hongkeng-3",
+      "from_station_id": "cn-xiamen-dongjie",
+      "to_station_id": "cn-xiamen-hongkeng",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.97,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-dongren-6-cn-xiamen-guanren-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-dongren-6",
+      "to_stop_id": "cn-xiamen-guanren-6",
+      "from_station_id": "cn-xiamen-dongren",
+      "to_station_id": "cn-xiamen-guanren",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 206,
+      "travel_time_source": "planner",
+      "distance_km": 1.901,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-dongyao-2-cn-xiamen-dingmei-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-dongyao-2",
+      "to_stop_id": "cn-xiamen-dingmei-2",
+      "from_station_id": "cn-xiamen-dongyao",
+      "to_station_id": "cn-xiamen-dingmei",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.298,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 32.5,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-dongzhai-2-cn-xiamen-liangan-jinrong-zhongxin-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-dongzhai-2",
+      "to_stop_id": "cn-xiamen-liangan-jinrong-zhongxin-2",
+      "from_station_id": "cn-xiamen-dongzhai",
+      "to_station_id": "cn-xiamen-liangan-jinrong-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.696,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.7,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-gaoqi-1-cn-xiamen-jimei-xuecun-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-gaoqi-1",
+      "to_stop_id": "cn-xiamen-jimei-xuecun-1",
+      "from_station_id": "cn-xiamen-gaoqi",
+      "to_station_id": "cn-xiamen-jimei-xuecun",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 3.84,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-guanren-1-cn-xiamen-chengyi-guangchang-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-guanren-1",
+      "to_stop_id": "cn-xiamen-chengyi-guangchang-1",
+      "from_station_id": "cn-xiamen-guanren",
+      "to_station_id": "cn-xiamen-chengyi-guangchang",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.21,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-guanren-6-cn-xiamen-xinglinwan-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-guanren-6",
+      "to_stop_id": "cn-xiamen-xinglinwan-6",
+      "from_station_id": "cn-xiamen-guanren",
+      "to_station_id": "cn-xiamen-xinglinwan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 195,
+      "travel_time_source": "planner",
+      "distance_km": 1.906,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-guanxun-4-cn-xiamen-bingzhou-4",
+      "line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-guanxun-4",
+      "to_stop_id": "cn-xiamen-bingzhou-4",
+      "from_station_id": "cn-xiamen-guanxun",
+      "to_station_id": "cn-xiamen-bingzhou",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 288,
+      "travel_time_source": "planner",
+      "distance_km": 2.946,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-guanyinshan-2-cn-xiamen-dongzhai-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-guanyinshan-2",
+      "to_stop_id": "cn-xiamen-dongzhai-2",
+      "from_station_id": "cn-xiamen-guanyinshan",
+      "to_station_id": "cn-xiamen-dongzhai",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.637,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 25.8,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-gudishi-2-cn-xiamen-lingdou-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-gudishi-2",
+      "to_stop_id": "cn-xiamen-lingdou-2",
+      "from_station_id": "cn-xiamen-gudishi",
+      "to_station_id": "cn-xiamen-lingdou",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.044,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 30.6,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-guluo-3-cn-xiamen-xiangan-shimin-gongyuan-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-guluo-3",
+      "to_stop_id": "cn-xiamen-xiangan-shimin-gongyuan-3",
+      "from_station_id": "cn-xiamen-guluo",
+      "to_station_id": "cn-xiamen-xiangan-shimin-gongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.946,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-guoji-bolan-zhongxin-3-cn-xiamen-dongjie-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-guoji-bolan-zhongxin-3",
+      "to_stop_id": "cn-xiamen-dongjie-3",
+      "from_station_id": "cn-xiamen-guoji-bolan-zhongxin",
+      "to_station_id": "cn-xiamen-dongjie",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.459,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-haicang-shangwu-zhongxin-2-cn-xiamen-haicangwan-gongyuan-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-haicang-shangwu-zhongxin-2",
+      "to_stop_id": "cn-xiamen-haicangwan-gongyuan-2",
+      "from_station_id": "cn-xiamen-haicang-shangwu-zhongxin",
+      "to_station_id": "cn-xiamen-haicangwan-gongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.182,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31.8,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-haicang-xingzheng-zhongxin-2-cn-xiamen-haicang-shangwu-zhongxin-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-haicang-xingzheng-zhongxin-2",
+      "to_stop_id": "cn-xiamen-haicang-shangwu-zhongxin-2",
+      "from_station_id": "cn-xiamen-haicang-xingzheng-zhongxin",
+      "to_station_id": "cn-xiamen-haicang-shangwu-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.973,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 29.9,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-haicangwan-gongyuan-2-cn-xiamen-youlun-zhongxin-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-haicangwan-gongyuan-2",
+      "to_stop_id": "cn-xiamen-youlun-zhongxin-2",
+      "from_station_id": "cn-xiamen-haicangwan-gongyuan",
+      "to_station_id": "cn-xiamen-youlun-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 2.719,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 37.4,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-hecuo-2-cn-xiamen-guanyinshan-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-hecuo-2",
+      "to_stop_id": "cn-xiamen-guanyinshan-2",
+      "from_station_id": "cn-xiamen-hecuo",
+      "to_station_id": "cn-xiamen-guanyinshan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.928,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 29.6,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-hongkeng-3-cn-xiamen-linqian-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-hongkeng-3",
+      "to_stop_id": "cn-xiamen-linqian-3",
+      "from_station_id": "cn-xiamen-hongkeng",
+      "to_station_id": "cn-xiamen-linqian",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.807,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-hongkeng-4-cn-xiamen-qianwu-4",
+      "line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-hongkeng-4",
+      "to_stop_id": "cn-xiamen-qianwu-4",
+      "from_station_id": "cn-xiamen-hongkeng",
+      "to_station_id": "cn-xiamen-qianwu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 2.979,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 37,
+        "a_s_per_km": 90.7,
+        "b_s": 20.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 306,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-houcun-3-cn-xiamen-caicuo-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-houcun-3",
+      "to_stop_id": "cn-xiamen-caicuo-3",
+      "from_station_id": "cn-xiamen-houcun",
+      "to_station_id": "cn-xiamen-caicuo",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.183,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 33.3,
+        "a_s_per_km": 58.7,
+        "b_s": 58.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-houpu-2-cn-xiamen-caitang-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-houpu-2",
+      "to_stop_id": "cn-xiamen-caitang-2",
+      "from_station_id": "cn-xiamen-houpu",
+      "to_station_id": "cn-xiamen-caitang",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.826,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28.3,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-houxi-4-cn-xiamen-xiamen-beizhan-4",
+      "line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-houxi-4",
+      "to_stop_id": "cn-xiamen-xiamen-beizhan-4",
+      "from_station_id": "cn-xiamen-houxi",
+      "to_station_id": "cn-xiamen-xiamen-beizhan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 278,
+      "travel_time_source": "planner",
+      "distance_km": 2.849,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-huarong-lu-3-cn-xiamen-huojuyuan-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-huarong-lu-3",
+      "to_stop_id": "cn-xiamen-huojuyuan-3",
+      "from_station_id": "cn-xiamen-huarong-lu",
+      "to_station_id": "cn-xiamen-huojuyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.959,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-hubin-donglu-1-cn-xiamen-lianban-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-hubin-donglu-1",
+      "to_stop_id": "cn-xiamen-lianban-1",
+      "from_station_id": "cn-xiamen-hubin-donglu",
+      "to_station_id": "cn-xiamen-lianban",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.797,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-hubin-donglu-3-cn-xiamen-tiyuzhongxin-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-hubin-donglu-3",
+      "to_stop_id": "cn-xiamen-tiyuzhongxin-3",
+      "from_station_id": "cn-xiamen-hubin-donglu",
+      "to_station_id": "cn-xiamen-tiyuzhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.277,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-hubin-zhonglu-2-cn-xiamen-tiyuzhongxin-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-hubin-zhonglu-2",
+      "to_stop_id": "cn-xiamen-tiyuzhongxin-2",
+      "from_station_id": "cn-xiamen-hubin-zhonglu",
+      "to_station_id": "cn-xiamen-tiyuzhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.187,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31.7,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-huli-chuangxinyuan-3-cn-xiamen-wuyuan-wan-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-huli-chuangxinyuan-3",
+      "to_stop_id": "cn-xiamen-wuyuan-wan-3",
+      "from_station_id": "cn-xiamen-huli-chuangxinyuan",
+      "to_station_id": "cn-xiamen-wuyuan-wan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.531,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-huli-gongyuan-3-cn-xiamen-huarong-lu-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-huli-gongyuan-3",
+      "to_stop_id": "cn-xiamen-huarong-lu-3",
+      "from_station_id": "cn-xiamen-huli-gongyuan",
+      "to_station_id": "cn-xiamen-huarong-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.655,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-huojuyuan-1-cn-xiamen-dianqian-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-huojuyuan-1",
+      "to_stop_id": "cn-xiamen-dianqian-1",
+      "from_station_id": "cn-xiamen-huojuyuan",
+      "to_station_id": "cn-xiamen-dianqian",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.455,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-huojuyuan-3-cn-xiamen-xiao-dongshan-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-huojuyuan-3",
+      "to_stop_id": "cn-xiamen-xiao-dongshan-3",
+      "from_station_id": "cn-xiamen-huojuyuan",
+      "to_station_id": "cn-xiamen-xiao-dongshan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.766,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jiangjunci-1-cn-xiamen-wenzao-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-jiangjunci-1",
+      "to_stop_id": "cn-xiamen-wenzao-1",
+      "from_station_id": "cn-xiamen-jiangjunci",
+      "to_station_id": "cn-xiamen-wenzao",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.853,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jiangtou-2-cn-xiamen-houpu-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-jiangtou-2",
+      "to_stop_id": "cn-xiamen-houpu-2",
+      "from_station_id": "cn-xiamen-jiangtou",
+      "to_station_id": "cn-xiamen-houpu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.851,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28.6,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jianye-lu-2-cn-xiamen-hubin-zhonglu-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-jianye-lu-2",
+      "to_stop_id": "cn-xiamen-hubin-zhonglu-2",
+      "from_station_id": "cn-xiamen-jianye-lu",
+      "to_station_id": "cn-xiamen-hubin-zhonglu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.155,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31.5,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jiao-meidong-6-cn-xiamen-yinong-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-jiao-meidong-6",
+      "to_stop_id": "cn-xiamen-yinong-6",
+      "from_station_id": "cn-xiamen-jiao-meidong",
+      "to_station_id": "cn-xiamen-yinong",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 306,
+      "travel_time_source": "planner",
+      "distance_km": 2.915,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jiaohai-lu-6-cn-xiamen-jiao-meidong-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-jiaohai-lu-6",
+      "to_stop_id": "cn-xiamen-jiao-meidong-6",
+      "from_station_id": "cn-xiamen-jiaohai-lu",
+      "to_station_id": "cn-xiamen-jiao-meidong",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 163,
+      "travel_time_source": "planner",
+      "distance_km": 1.423,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jiaojiang-lu-6-cn-xiamen-jiaomei-zhongxin-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-jiaojiang-lu-6",
+      "to_stop_id": "cn-xiamen-jiaomei-zhongxin-6",
+      "from_station_id": "cn-xiamen-jiaojiang-lu",
+      "to_station_id": "cn-xiamen-jiaomei-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 129,
+      "travel_time_source": "planner",
+      "distance_km": 0.923,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jiaomei-zhongxin-6-cn-xiamen-wenpu-lu-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-jiaomei-zhongxin-6",
+      "to_stop_id": "cn-xiamen-wenpu-lu-6",
+      "from_station_id": "cn-xiamen-jiaomei-zhongxin",
+      "to_station_id": "cn-xiamen-wenpu-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 151,
+      "travel_time_source": "planner",
+      "distance_km": 1.101,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jimei-dadao-1-cn-xiamen-tianshui-lu-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-jimei-dadao-1",
+      "to_stop_id": "cn-xiamen-tianshui-lu-1",
+      "from_station_id": "cn-xiamen-jimei-dadao",
+      "to_station_id": "cn-xiamen-tianshui-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.251,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jimei-ruanjianyuan-1-cn-xiamen-jimei-dadao-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-jimei-ruanjianyuan-1",
+      "to_stop_id": "cn-xiamen-jimei-dadao-1",
+      "from_station_id": "cn-xiamen-jimei-ruanjianyuan",
+      "to_station_id": "cn-xiamen-jimei-dadao",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.084,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jimei-ruanjianyuan-bei-4-cn-xiamen-houxi-4",
+      "line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-jimei-ruanjianyuan-bei-4",
+      "to_stop_id": "cn-xiamen-houxi-4",
+      "from_station_id": "cn-xiamen-jimei-ruanjianyuan-bei",
+      "to_station_id": "cn-xiamen-houxi",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 165,
+      "travel_time_source": "planner",
+      "distance_km": 1.485,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-jimei-xuecun-1-cn-xiamen-yuanboyuan-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-jimei-xuecun-1",
+      "to_stop_id": "cn-xiamen-yuanboyuan-1",
+      "from_station_id": "cn-xiamen-jimei-xuecun",
+      "to_station_id": "cn-xiamen-yuanboyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.631,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-lianban-1-cn-xiamen-lianhua-lukou-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-lianban-1",
+      "to_stop_id": "cn-xiamen-lianhua-lukou-1",
+      "from_station_id": "cn-xiamen-lianban",
+      "to_station_id": "cn-xiamen-lianhua-lukou",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.946,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-liangan-jinrong-zhongxin-2-cn-xiamen-wutong-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-liangan-jinrong-zhongxin-2",
+      "to_stop_id": "cn-xiamen-wutong-2",
+      "from_station_id": "cn-xiamen-liangan-jinrong-zhongxin",
+      "to_station_id": "cn-xiamen-wutong",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.818,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28.3,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-lianhua-lukou-1-cn-xiamen-lvcuo-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-lianhua-lukou-1",
+      "to_stop_id": "cn-xiamen-lvcuo-1",
+      "from_station_id": "cn-xiamen-lianhua-lukou",
+      "to_station_id": "cn-xiamen-lvcuo",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.952,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-lindai-6-cn-xiamen-dingmei-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-lindai-6",
+      "to_stop_id": "cn-xiamen-dingmei-6",
+      "from_station_id": "cn-xiamen-lindai",
+      "to_station_id": "cn-xiamen-dingmei",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 195,
+      "travel_time_source": "planner",
+      "distance_km": 1.746,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-lingdou-2-cn-xiamen-ruanjianyuan-erqi-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-lingdou-2",
+      "to_stop_id": "cn-xiamen-ruanjianyuan-erqi-2",
+      "from_station_id": "cn-xiamen-lingdou",
+      "to_station_id": "cn-xiamen-ruanjianyuan-erqi",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.219,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31.8,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-linqian-3-cn-xiamen-guluo-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-linqian-3",
+      "to_stop_id": "cn-xiamen-guluo-3",
+      "from_station_id": "cn-xiamen-linqian",
+      "to_station_id": "cn-xiamen-guluo",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.263,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-lvcuo-1-cn-xiamen-wushipu-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-lvcuo-1",
+      "to_stop_id": "cn-xiamen-wushipu-1",
+      "from_station_id": "cn-xiamen-lvcuo",
+      "to_station_id": "cn-xiamen-wushipu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.927,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-lvcuo-2-cn-xiamen-jiangtou-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-lvcuo-2",
+      "to_stop_id": "cn-xiamen-jiangtou-2",
+      "from_station_id": "cn-xiamen-lvcuo",
+      "to_station_id": "cn-xiamen-jiangtou",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.023,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 30.4,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-maluan-zhongxin-2-cn-xiamen-xinyang-dadao-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-maluan-zhongxin-2",
+      "to_stop_id": "cn-xiamen-xinyang-dadao-2",
+      "from_station_id": "cn-xiamen-maluan-zhongxin",
+      "to_station_id": "cn-xiamen-xinyang-dadao",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.25,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 32.1,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-maluan-zhongxin-6-cn-xiamen-xibin-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-maluan-zhongxin-6",
+      "to_stop_id": "cn-xiamen-xibin-6",
+      "from_station_id": "cn-xiamen-maluan-zhongxin",
+      "to_station_id": "cn-xiamen-xibin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 426,
+      "travel_time_source": "planner",
+      "distance_km": 3.919,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-maqing-lu-2-cn-xiamen-haicang-xingzheng-zhongxin-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-maqing-lu-2",
+      "to_stop_id": "cn-xiamen-haicang-xingzheng-zhongxin-2",
+      "from_station_id": "cn-xiamen-maqing-lu",
+      "to_station_id": "cn-xiamen-haicang-xingzheng-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.767,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 27.6,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-neimao-6-cn-xiamen-dongren-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-neimao-6",
+      "to_stop_id": "cn-xiamen-dongren-6",
+      "from_station_id": "cn-xiamen-neimao",
+      "to_station_id": "cn-xiamen-dongren",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 116,
+      "travel_time_source": "planner",
+      "distance_km": 0.892,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-pubian-3-cn-xiamen-houcun-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-pubian-3",
+      "to_stop_id": "cn-xiamen-houcun-3",
+      "from_station_id": "cn-xiamen-pubian",
+      "to_station_id": "cn-xiamen-houcun",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.839,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28,
+        "a_s_per_km": 58.7,
+        "b_s": 58.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-rencai-zhongxin-3-cn-xiamen-huli-gongyuan-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-rencai-zhongxin-3",
+      "to_stop_id": "cn-xiamen-huli-gongyuan-3",
+      "from_station_id": "cn-xiamen-rencai-zhongxin",
+      "to_station_id": "cn-xiamen-huli-gongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.963,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-ruanjianyuan-erqi-2-cn-xiamen-hecuo-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-ruanjianyuan-erqi-2",
+      "to_stop_id": "cn-xiamen-hecuo-2",
+      "from_station_id": "cn-xiamen-ruanjianyuan-erqi",
+      "to_station_id": "cn-xiamen-hecuo",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.921,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 29.3,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-shidi-gongyuan-2-cn-xiamen-zhongzhai-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-shidi-gongyuan-2",
+      "to_stop_id": "cn-xiamen-zhongzhai-2",
+      "from_station_id": "cn-xiamen-shidi-gongyuan",
+      "to_station_id": "cn-xiamen-zhongzhai",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.351,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 32.6,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-tangbian-1-cn-xiamen-huojuyuan-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-tangbian-1",
+      "to_stop_id": "cn-xiamen-huojuyuan-1",
+      "from_station_id": "cn-xiamen-tangbian",
+      "to_station_id": "cn-xiamen-huojuyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.747,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-tianshui-lu-1-cn-xiamen-xiamen-beizhan-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-tianshui-lu-1",
+      "to_stop_id": "cn-xiamen-xiamen-beizhan-1",
+      "from_station_id": "cn-xiamen-tianshui-lu",
+      "to_station_id": "cn-xiamen-xiamen-beizhan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.399,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-tianzhushan-2-cn-xiamen-dongfu-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-tianzhushan-2",
+      "to_stop_id": "cn-xiamen-dongfu-2",
+      "from_station_id": "cn-xiamen-tianzhushan",
+      "to_station_id": "cn-xiamen-dongfu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.746,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34.7,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-tiyuzhongxin-2-cn-xiamen-yuxiu-donglu-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-tiyuzhongxin-2",
+      "to_stop_id": "cn-xiamen-yuxiu-donglu-2",
+      "from_station_id": "cn-xiamen-tiyuzhongxin",
+      "to_station_id": "cn-xiamen-yuxiu-donglu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.762,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 27.7,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-tiyuzhongxin-3-cn-xiamen-rencai-zhongxin-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-tiyuzhongxin-3",
+      "to_stop_id": "cn-xiamen-rencai-zhongxin-3",
+      "from_station_id": "cn-xiamen-tiyuzhongxin",
+      "to_station_id": "cn-xiamen-rencai-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.568,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-wengjiao-lu-2-cn-xiamen-maqing-lu-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-wengjiao-lu-2",
+      "to_stop_id": "cn-xiamen-maqing-lu-2",
+      "from_station_id": "cn-xiamen-wengjiao-lu",
+      "to_station_id": "cn-xiamen-maqing-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 3.921,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 38.9,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-wenpu-lu-6-cn-xiamen-jiaohai-lu-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-wenpu-lu-6",
+      "to_stop_id": "cn-xiamen-jiaohai-lu-6",
+      "from_station_id": "cn-xiamen-wenpu-lu",
+      "to_station_id": "cn-xiamen-jiaohai-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 128,
+      "travel_time_source": "planner",
+      "distance_km": 1.055,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-wenzao-1-cn-xiamen-hubin-donglu-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-wenzao-1",
+      "to_stop_id": "cn-xiamen-hubin-donglu-1",
+      "from_station_id": "cn-xiamen-wenzao",
+      "to_station_id": "cn-xiamen-hubin-donglu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.014,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-wushipu-1-cn-xiamen-tangbian-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-wushipu-1",
+      "to_stop_id": "cn-xiamen-tangbian-1",
+      "from_station_id": "cn-xiamen-wushipu",
+      "to_station_id": "cn-xiamen-tangbian",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.911,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-wutong-2-cn-xiamen-shidi-gongyuan-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-wutong-2",
+      "to_stop_id": "cn-xiamen-shidi-gongyuan-2",
+      "from_station_id": "cn-xiamen-wutong",
+      "to_station_id": "cn-xiamen-shidi-gongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.812,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28.1,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-wuyuan-wan-3-cn-xiamen-guoji-bolan-zhongxin-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-wuyuan-wan-3",
+      "to_stop_id": "cn-xiamen-guoji-bolan-zhongxin-3",
+      "from_station_id": "cn-xiamen-wuyuan-wan",
+      "to_station_id": "cn-xiamen-guoji-bolan-zhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.957,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xiamen-beizhan-1-cn-xiamen-yannei-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-xiamen-beizhan-1",
+      "to_stop_id": "cn-xiamen-yannei-1",
+      "from_station_id": "cn-xiamen-xiamen-beizhan",
+      "to_station_id": "cn-xiamen-yannei",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 0.838,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 27.2,
+        "a_s_per_km": 53.8,
+        "b_s": 65.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xiamen-beizhan-4-cn-xiamen-guanxun-4",
+      "line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-xiamen-beizhan-4",
+      "to_stop_id": "cn-xiamen-guanxun-4",
+      "from_station_id": "cn-xiamen-xiamen-beizhan",
+      "to_station_id": "cn-xiamen-guanxun",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 709,
+      "travel_time_source": "planner",
+      "distance_km": 7.751,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xiamen-huochezhan-3-cn-xiamen-hubin-donglu-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-xiamen-huochezhan-3",
+      "to_stop_id": "cn-xiamen-hubin-donglu-3",
+      "from_station_id": "cn-xiamen-xiamen-huochezhan",
+      "to_station_id": "cn-xiamen-hubin-donglu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.653,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xiangan-shimin-gongyuan-3-cn-xiamen-pubian-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-xiangan-shimin-gongyuan-3",
+      "to_stop_id": "cn-xiamen-pubian-3",
+      "from_station_id": "cn-xiamen-xiangan-shimin-gongyuan",
+      "to_station_id": "cn-xiamen-pubian",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.997,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xiao-dongshan-3-cn-xiamen-andou-3",
+      "line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-xiao-dongshan-3",
+      "to_stop_id": "cn-xiamen-andou-3",
+      "from_station_id": "cn-xiamen-xiao-dongshan",
+      "to_station_id": "cn-xiamen-andou",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.321,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xibin-6-cn-xiamen-beitou-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-xibin-6",
+      "to_stop_id": "cn-xiamen-beitou-6",
+      "from_station_id": "cn-xiamen-xibin",
+      "to_station_id": "cn-xiamen-beitou",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 117,
+      "travel_time_source": "planner",
+      "distance_km": 0.927,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xinan-2-cn-xiamen-wengjiao-lu-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-xinan-2",
+      "to_stop_id": "cn-xiamen-wengjiao-lu-2",
+      "from_station_id": "cn-xiamen-xinan",
+      "to_station_id": "cn-xiamen-wengjiao-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.009,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 30.3,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xingbin-6-cn-xiamen-neimao-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-xingbin-6",
+      "to_stop_id": "cn-xiamen-neimao-6",
+      "from_station_id": "cn-xiamen-xingbin",
+      "to_station_id": "cn-xiamen-neimao",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 105,
+      "travel_time_source": "planner",
+      "distance_km": 0.806,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xingjin-lu-1-cn-xiamen-guanren-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-xingjin-lu-1",
+      "to_stop_id": "cn-xiamen-guanren-1",
+      "from_station_id": "cn-xiamen-xingjin-lu",
+      "to_station_id": "cn-xiamen-guanren",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.39,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xinglincun-1-cn-xiamen-xingjin-lu-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-xinglincun-1",
+      "to_stop_id": "cn-xiamen-xingjin-lu-1",
+      "from_station_id": "cn-xiamen-xinglincun",
+      "to_station_id": "cn-xiamen-xingjin-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.621,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xinglinwan-6-cn-xiamen-huaqiao-daxue-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-xinglinwan-6",
+      "to_stop_id": "cn-xiamen-huaqiao-daxue-6",
+      "from_station_id": "cn-xiamen-xinglinwan",
+      "to_station_id": "cn-xiamen-huaqiao-daxue",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.552,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 30.9,
+        "a_s_per_km": 95.7,
+        "b_s": 32,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 177,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-xinyang-dadao-2-cn-xiamen-xinan-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-xinyang-dadao-2",
+      "to_stop_id": "cn-xiamen-xinan-2",
+      "from_station_id": "cn-xiamen-xinyang-dadao",
+      "to_station_id": "cn-xiamen-xinan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.289,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 32.5,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-yinong-6-cn-xiamen-lindai-6",
+      "line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-yinong-6",
+      "to_stop_id": "cn-xiamen-lindai-6",
+      "from_station_id": "cn-xiamen-yinong",
+      "to_station_id": "cn-xiamen-lindai",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 137,
+      "travel_time_source": "planner",
+      "distance_km": 1.206,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-youlun-zhongxin-2-cn-xiamen-jianye-lu-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-youlun-zhongxin-2",
+      "to_stop_id": "cn-xiamen-jianye-lu-2",
+      "from_station_id": "cn-xiamen-youlun-zhongxin",
+      "to_station_id": "cn-xiamen-jianye-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.006,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 30.2,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-yuanboyuan-1-cn-xiamen-xinglincun-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-yuanboyuan-1",
+      "to_stop_id": "cn-xiamen-xinglincun-1",
+      "from_station_id": "cn-xiamen-yuanboyuan",
+      "to_station_id": "cn-xiamen-xinglincun",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.977,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-yuxiu-donglu-2-cn-xiamen-lvcuo-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-yuxiu-donglu-2",
+      "to_stop_id": "cn-xiamen-lvcuo-2",
+      "from_station_id": "cn-xiamen-yuxiu-donglu",
+      "to_station_id": "cn-xiamen-lvcuo",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.613,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34.2,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-zhenhai-lu-1-cn-xiamen-zhongshan-gongyuan-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-zhenhai-lu-1",
+      "to_stop_id": "cn-xiamen-zhongshan-gongyuan-1",
+      "from_station_id": "cn-xiamen-zhenhai-lu",
+      "to_station_id": "cn-xiamen-zhongshan-gongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.915,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-zhongshan-gongyuan-1-cn-xiamen-jiangjunci-1",
+      "line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-zhongshan-gongyuan-1",
+      "to_stop_id": "cn-xiamen-jiangjunci-1",
+      "from_station_id": "cn-xiamen-zhongshan-gongyuan",
+      "to_station_id": "cn-xiamen-jiangjunci",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.158,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-xiamen-seg-cn-xiamen-zhongzhai-2-cn-xiamen-wuyuan-wan-2",
+      "line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-zhongzhai-2",
+      "to_stop_id": "cn-xiamen-wuyuan-wan-2",
+      "from_station_id": "cn-xiamen-zhongzhai",
+      "to_station_id": "cn-xiamen-wuyuan-wan",
+      "direction": "both",
+      "source_id": "amap-subway-3502",
+      "distance_km": 1.126,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31.2,
+        "a_s_per_km": 83.3,
+        "b_s": 36,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    }
+  ]
+}

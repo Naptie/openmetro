@@ -1,0 +1,300 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-xiamen",
+  "generated_at": "2026-10-11T11:35:56.051Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-11T11:35:56.051Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-xiamen-dingmei-2-cn-xiamen-dingmei-6",
+      "station_id": "cn-xiamen-dingmei",
+      "from_line_id": "cn-xiamen-line-2",
+      "to_line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-dingmei-2",
+      "to_stop_id": "cn-xiamen-dingmei-6",
+      "walk_time_seconds": 245,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 294,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-dingmei-6-cn-xiamen-dingmei-2",
+      "station_id": "cn-xiamen-dingmei",
+      "from_line_id": "cn-xiamen-line-6",
+      "to_line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-dingmei-6",
+      "to_stop_id": "cn-xiamen-dingmei-2",
+      "walk_time_seconds": 245,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 294,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-guanren-1-cn-xiamen-guanren-6",
+      "station_id": "cn-xiamen-guanren",
+      "from_line_id": "cn-xiamen-line-1",
+      "to_line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-guanren-1",
+      "to_stop_id": "cn-xiamen-guanren-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-guanren-6-cn-xiamen-guanren-1",
+      "station_id": "cn-xiamen-guanren",
+      "from_line_id": "cn-xiamen-line-6",
+      "to_line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-guanren-6",
+      "to_stop_id": "cn-xiamen-guanren-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-hongkeng-3-cn-xiamen-hongkeng-4",
+      "station_id": "cn-xiamen-hongkeng",
+      "from_line_id": "cn-xiamen-line-3",
+      "to_line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-hongkeng-3",
+      "to_stop_id": "cn-xiamen-hongkeng-4",
+      "walk_time_seconds": 296,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 355,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-hongkeng-4-cn-xiamen-hongkeng-3",
+      "station_id": "cn-xiamen-hongkeng",
+      "from_line_id": "cn-xiamen-line-4",
+      "to_line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-hongkeng-4",
+      "to_stop_id": "cn-xiamen-hongkeng-3",
+      "walk_time_seconds": 296,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 355,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-hubin-donglu-1-cn-xiamen-hubin-donglu-3",
+      "station_id": "cn-xiamen-hubin-donglu",
+      "from_line_id": "cn-xiamen-line-1",
+      "to_line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-hubin-donglu-1",
+      "to_stop_id": "cn-xiamen-hubin-donglu-3",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-hubin-donglu-3-cn-xiamen-hubin-donglu-1",
+      "station_id": "cn-xiamen-hubin-donglu",
+      "from_line_id": "cn-xiamen-line-3",
+      "to_line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-hubin-donglu-3",
+      "to_stop_id": "cn-xiamen-hubin-donglu-1",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-huojuyuan-1-cn-xiamen-huojuyuan-3",
+      "station_id": "cn-xiamen-huojuyuan",
+      "from_line_id": "cn-xiamen-line-1",
+      "to_line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-huojuyuan-1",
+      "to_stop_id": "cn-xiamen-huojuyuan-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-huojuyuan-3-cn-xiamen-huojuyuan-1",
+      "station_id": "cn-xiamen-huojuyuan",
+      "from_line_id": "cn-xiamen-line-3",
+      "to_line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-huojuyuan-3",
+      "to_stop_id": "cn-xiamen-huojuyuan-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-lvcuo-1-cn-xiamen-lvcuo-2",
+      "station_id": "cn-xiamen-lvcuo",
+      "from_line_id": "cn-xiamen-line-1",
+      "to_line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-lvcuo-1",
+      "to_stop_id": "cn-xiamen-lvcuo-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-lvcuo-2-cn-xiamen-lvcuo-1",
+      "station_id": "cn-xiamen-lvcuo",
+      "from_line_id": "cn-xiamen-line-2",
+      "to_line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-lvcuo-2",
+      "to_stop_id": "cn-xiamen-lvcuo-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-maluan-zhongxin-2-cn-xiamen-maluan-zhongxin-6",
+      "station_id": "cn-xiamen-maluan-zhongxin",
+      "from_line_id": "cn-xiamen-line-2",
+      "to_line_id": "cn-xiamen-line-6",
+      "from_stop_id": "cn-xiamen-maluan-zhongxin-2",
+      "to_stop_id": "cn-xiamen-maluan-zhongxin-6",
+      "walk_time_seconds": 245,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 294,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-maluan-zhongxin-6-cn-xiamen-maluan-zhongxin-2",
+      "station_id": "cn-xiamen-maluan-zhongxin",
+      "from_line_id": "cn-xiamen-line-6",
+      "to_line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-maluan-zhongxin-6",
+      "to_stop_id": "cn-xiamen-maluan-zhongxin-2",
+      "walk_time_seconds": 245,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 294,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-tiyuzhongxin-2-cn-xiamen-tiyuzhongxin-3",
+      "station_id": "cn-xiamen-tiyuzhongxin",
+      "from_line_id": "cn-xiamen-line-2",
+      "to_line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-tiyuzhongxin-2",
+      "to_stop_id": "cn-xiamen-tiyuzhongxin-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-tiyuzhongxin-3-cn-xiamen-tiyuzhongxin-2",
+      "station_id": "cn-xiamen-tiyuzhongxin",
+      "from_line_id": "cn-xiamen-line-3",
+      "to_line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-tiyuzhongxin-3",
+      "to_stop_id": "cn-xiamen-tiyuzhongxin-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-wuyuan-wan-2-cn-xiamen-wuyuan-wan-3",
+      "station_id": "cn-xiamen-wuyuan-wan",
+      "from_line_id": "cn-xiamen-line-2",
+      "to_line_id": "cn-xiamen-line-3",
+      "from_stop_id": "cn-xiamen-wuyuan-wan-2",
+      "to_stop_id": "cn-xiamen-wuyuan-wan-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-wuyuan-wan-3-cn-xiamen-wuyuan-wan-2",
+      "station_id": "cn-xiamen-wuyuan-wan",
+      "from_line_id": "cn-xiamen-line-3",
+      "to_line_id": "cn-xiamen-line-2",
+      "from_stop_id": "cn-xiamen-wuyuan-wan-3",
+      "to_stop_id": "cn-xiamen-wuyuan-wan-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-xiamen-beizhan-1-cn-xiamen-xiamen-beizhan-4",
+      "station_id": "cn-xiamen-xiamen-beizhan",
+      "from_line_id": "cn-xiamen-line-1",
+      "to_line_id": "cn-xiamen-line-4",
+      "from_stop_id": "cn-xiamen-xiamen-beizhan-1",
+      "to_stop_id": "cn-xiamen-xiamen-beizhan-4",
+      "walk_time_seconds": 228,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 273,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-xiamen-xiamen-beizhan-4-cn-xiamen-xiamen-beizhan-1",
+      "station_id": "cn-xiamen-xiamen-beizhan",
+      "from_line_id": "cn-xiamen-line-4",
+      "to_line_id": "cn-xiamen-line-1",
+      "from_stop_id": "cn-xiamen-xiamen-beizhan-4",
+      "to_stop_id": "cn-xiamen-xiamen-beizhan-1",
+      "walk_time_seconds": 228,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 273,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

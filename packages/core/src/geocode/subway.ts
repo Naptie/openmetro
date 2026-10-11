@@ -144,13 +144,21 @@ function stripParenthetical(name: string): string {
  * Build a name -> station lookup. Both exact and parenthetical-stripped keys
  * are indexed so official names without parentheses can still hit AMap's
  * line-disambiguated variants (e.g. 国家会展中心 -> 国家会展中心(2号线)).
+ * A bare alias is skipped when the bare name is itself a station in the
+ * dataset: system twins like 彭家庄(云巴) must not shadow the metro POI 彭家庄.
  */
 export function indexSubwayStations(stations: SubwayStation[]): Map<string, SubwayStation> {
   const index = new Map<string, SubwayStation>();
+  const exactNames = new Set<string>();
+  for (const st of stations) {
+    if (st.name) exactNames.add(st.name);
+  }
   for (const st of stations) {
     if (!index.has(st.name)) index.set(st.name, st);
     const bare = stripParenthetical(st.name);
-    if (bare && !index.has(bare)) index.set(bare, st);
+    if (bare && bare !== st.name && !exactNames.has(bare) && !index.has(bare)) {
+      index.set(bare, st);
+    }
   }
   return index;
 }

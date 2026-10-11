@@ -255,8 +255,7 @@ export function parseTimetableArticle(html: string): TimetableDaySection[] {
       .filter((c) => /上行|下行|外环|内环/.test(c) && /[（(].*[)）]/.test(c));
 
   /** Table-header cell `车站` — not station names that merely contain it (武汉火车站). */
-  const hasStationHeaderCell = (line: string) =>
-    line.split('|').some((c) => c.trim() === '车站');
+  const hasStationHeaderCell = (line: string) => line.split('|').some((c) => c.trim() === '车站');
 
   const lastDestsFromHeader = (headerLine: string): string[] => {
     const dests: string[] = [];

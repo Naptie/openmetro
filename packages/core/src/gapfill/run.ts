@@ -399,9 +399,7 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
         };
         if (best && best.score >= 40 && best.hit.location) {
           if (farFromNetwork(best.hit.location.lng, best.hit.location.lat)) {
-            failures.push(
-              `coord ${zh}: Baidu hit too far from network (${best.hit.name})`
-            );
+            failures.push(`coord ${zh}: Baidu hit too far from network (${best.hit.name})`);
             continue;
           }
           st.location = {

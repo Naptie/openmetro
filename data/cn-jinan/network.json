@@ -1,0 +1,132 @@
+{
+  "id": "cn-jinan",
+  "name": "济南轨道交通",
+  "names": {
+    "zh": "济南轨道交通",
+    "en": "Jinan Rail Transit"
+  },
+  "city": {
+    "id": "CN-3701",
+    "name": {
+      "zh": "济南市",
+      "en": "Jinan"
+    },
+    "country": "CN",
+    "population": 9202432,
+    "area": 10244.45,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        116.983333333,
+        36.666666666
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑/坐标/英文名来自 AMap Subway（官网仅发布图片版线网图、时刻表与票价表，无结构化接口）；首末班来自百度路径规划（directionlite transit），每次同步实时查询，云巴环线按外环/内环收割；8号线与4号线共线贯通（邢村立交桥东 0 秒换乘）；济阳线为 2 元单一票制，其余线路按官方里程票制计价。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 143,
+        "derived": 2,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 145,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 145,
+        "derived": 3,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 115,
+        "derived": 33,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 36,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 296,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 155,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 20880,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

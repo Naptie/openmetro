@@ -1,0 +1,2702 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-jinan",
+  "generated_at": "2026-10-11T11:16:33.416Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-11T11:16:33.416Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-jinan-seg-cn-jinan-ancheng-jie-3-cn-jinan-olympic-sports-center-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-ancheng-jie-3",
+      "to_stop_id": "cn-jinan-olympic-sports-center-3",
+      "from_station_id": "cn-jinan-ancheng-jie",
+      "to_station_id": "cn-jinan-olympic-sports-center",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.794,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-ancheng-jie-6-cn-jinan-central-business-district-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-ancheng-jie-6",
+      "to_stop_id": "cn-jinan-central-business-district-6",
+      "from_station_id": "cn-jinan-ancheng-jie",
+      "to_station_id": "cn-jinan-central-business-district",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.688,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.5,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-aoti-donglu-4-cn-jinan-olympic-sports-center-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-aoti-donglu-4",
+      "to_stop_id": "cn-jinan-olympic-sports-center-4",
+      "from_station_id": "cn-jinan-aoti-donglu",
+      "to_station_id": "cn-jinan-olympic-sports-center",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.423,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-bajianpu-2-cn-jinan-jiangjiazhuang-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-bajianpu-2",
+      "to_stop_id": "cn-jinan-jiangjiazhuang-2",
+      "from_station_id": "cn-jinan-bajianpu",
+      "to_station_id": "cn-jinan-jiangjiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.097,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-bajianpu-3-cn-jinan-huayuandonglu-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-bajianpu-3",
+      "to_stop_id": "cn-jinan-huayuandonglu-3",
+      "from_station_id": "cn-jinan-bajianpu",
+      "to_station_id": "cn-jinan-huayuandonglu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.467,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-baliqiao-2-cn-jinan-yikanglu-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-baliqiao-2",
+      "to_stop_id": "cn-jinan-yikanglu-2",
+      "from_station_id": "cn-jinan-baliqiao",
+      "to_station_id": "cn-jinan-yikanglu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.998,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-baoshan-2-cn-jinan-pengjiazhuang-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-baoshan-2",
+      "to_stop_id": "cn-jinan-pengjiazhuang-2",
+      "from_station_id": "cn-jinan-baoshan",
+      "to_station_id": "cn-jinan-pengjiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 3.727,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.3,
+        "a_s_per_km": 138.1,
+        "b_s": 88,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-bayi-lijiaoqiao-4-cn-jinan-wuli-paifang-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-bayi-lijiaoqiao-4",
+      "to_stop_id": "cn-jinan-wuli-paifang-4",
+      "from_station_id": "cn-jinan-bayi-lijiaoqiao",
+      "to_station_id": "cn-jinan-wuli-paifang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.513,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-beiyuan-2-cn-jinan-lishanlu-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-beiyuan-2",
+      "to_stop_id": "cn-jinan-lishanlu-2",
+      "from_station_id": "cn-jinan-beiyuan",
+      "to_station_id": "cn-jinan-lishanlu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.692,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-caihong-hu-YB-cn-jinan-chunyi-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-caihong-hu-YB",
+      "to_stop_id": "cn-jinan-chunyi-lu-YB",
+      "from_station_id": "cn-jinan-caihong-hu",
+      "to_station_id": "cn-jinan-chunyi-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.115,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-caihonghu-east-YB-cn-jinan-caihong-hu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-caihonghu-east-YB",
+      "to_stop_id": "cn-jinan-caihong-hu-YB",
+      "from_station_id": "cn-jinan-caihonghu-east",
+      "to_station_id": "cn-jinan-caihong-hu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.595,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-central-business-district-6-cn-jinan-maoling-shan-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-central-business-district-6",
+      "to_stop_id": "cn-jinan-maoling-shan-6",
+      "from_station_id": "cn-jinan-central-business-district",
+      "to_station_id": "cn-jinan-maoling-shan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.644,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.3,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chuangxingu-1-cn-jinan-gongyanyuan-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-chuangxingu-1",
+      "to_stop_id": "cn-jinan-gongyanyuan-1",
+      "from_station_id": "cn-jinan-chuangxingu",
+      "to_station_id": "cn-jinan-gongyanyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 2.048,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.9,
+        "a_s_per_km": 155.7,
+        "b_s": 26.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chuanliu-3-cn-jinan-qujiazhuang-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-chuanliu-3",
+      "to_stop_id": "cn-jinan-qujiazhuang-3",
+      "from_station_id": "cn-jinan-chuanliu",
+      "to_station_id": "cn-jinan-qujiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.633,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunbo-lu-8-cn-jinan-shandong-highway-technician-college-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-chunbo-lu-8",
+      "to_stop_id": "cn-jinan-shandong-highway-technician-college-8",
+      "from_station_id": "cn-jinan-chunbo-lu",
+      "to_station_id": "cn-jinan-shandong-highway-technician-college",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.147,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunbo-lu-sky-shuttle-YB-cn-jinan-suncun-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-chunbo-lu-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-suncun-YB",
+      "from_station_id": "cn-jinan-chunbo-lu-sky-shuttle",
+      "to_station_id": "cn-jinan-suncun",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.924,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunfeng-yuedong-gongyuan-4-cn-jinan-shandong-first-medical-university-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-chunfeng-yuedong-gongyuan-4",
+      "to_stop_id": "cn-jinan-shandong-first-medical-university-4",
+      "from_station_id": "cn-jinan-chunfeng-yuedong-gongyuan",
+      "to_station_id": "cn-jinan-shandong-first-medical-university",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.199,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16,
+        "a_s_per_km": 119,
+        "b_s": 137.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunhui-lu-YB-cn-jinan-jinan-innovation-zone-experimental-high-school-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-chunhui-lu-YB",
+      "to_stop_id": "cn-jinan-jinan-innovation-zone-experimental-high-school-YB",
+      "from_station_id": "cn-jinan-chunhui-lu",
+      "to_station_id": "cn-jinan-jinan-innovation-zone-experimental-high-school",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.59,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.1,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunjing-lu-YB-cn-jinan-kechuang-cheng-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-chunjing-lu-YB",
+      "to_stop_id": "cn-jinan-kechuang-cheng-YB",
+      "from_station_id": "cn-jinan-chunjing-lu",
+      "to_station_id": "cn-jinan-kechuang-cheng",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.769,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunxiu-lu-YB-cn-jinan-tangxuan-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-chunxiu-lu-YB",
+      "to_stop_id": "cn-jinan-tangxuan-lu-YB",
+      "from_station_id": "cn-jinan-chunxiu-lu",
+      "to_station_id": "cn-jinan-tangxuan-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.964,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunxuan-lu-YB-cn-jinan-shagou-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-chunxuan-lu-YB",
+      "to_stop_id": "cn-jinan-shagou-YB",
+      "from_station_id": "cn-jinan-chunxuan-lu",
+      "to_station_id": "cn-jinan-shagou",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.63,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunyi-lu-YB-cn-jinan-chunxuan-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-chunyi-lu-YB",
+      "to_stop_id": "cn-jinan-chunxuan-lu-YB",
+      "from_station_id": "cn-jinan-chunyi-lu",
+      "to_station_id": "cn-jinan-chunxuan-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.786,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-chunyuan-lu-YB-cn-jinan-jinan-maternity-and-child-care-hospital-east-area-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-chunyuan-lu-YB",
+      "to_stop_id": "cn-jinan-jinan-maternity-and-child-care-hospital-east-area-YB",
+      "from_station_id": "cn-jinan-chunyuan-lu",
+      "to_station_id": "cn-jinan-jinan-maternity-and-child-care-hospital-east-area",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.691,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.2,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-cuizhai-JY-cn-jinan-yellow-river-convention-and-exhibition-center-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-cuizhai-JY",
+      "to_stop_id": "cn-jinan-yellow-river-convention-and-exhibition-center-JY",
+      "from_station_id": "cn-jinan-cuizhai",
+      "to_station_id": "cn-jinan-yellow-river-convention-and-exhibition-center",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.725,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-daxuecheng-1-cn-jinan-yuanboyuan-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-daxuecheng-1",
+      "to_stop_id": "cn-jinan-yuanboyuan-1",
+      "from_station_id": "cn-jinan-daxuecheng",
+      "to_station_id": "cn-jinan-yuanboyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.9,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-dayang-1-cn-jinan-wangfuzhuang-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-dayang-1",
+      "to_stop_id": "cn-jinan-wangfuzhuang-1",
+      "from_station_id": "cn-jinan-dayang",
+      "to_station_id": "cn-jinan-wangfuzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 3.855,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-dayang-4-cn-jinan-jinanxi-railway-station-west-square-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-dayang-4",
+      "to_stop_id": "cn-jinan-jinanxi-railway-station-west-square-4",
+      "from_station_id": "cn-jinan-dayang",
+      "to_station_id": "cn-jinan-jinanxi-railway-station-west-square",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.492,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-dingjiazhuang-3-cn-jinan-ancheng-jie-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-dingjiazhuang-3",
+      "to_stop_id": "cn-jinan-ancheng-jie-3",
+      "from_station_id": "cn-jinan-dingjiazhuang",
+      "to_station_id": "cn-jinan-ancheng-jie",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.995,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-duandian-4-cn-jinan-lashan-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-duandian-4",
+      "to_stop_id": "cn-jinan-lashan-4",
+      "from_station_id": "cn-jinan-duandian",
+      "to_station_id": "cn-jinan-lashan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.881,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-erhuanxilu-2-cn-jinan-laotun-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-erhuanxilu-2",
+      "to_stop_id": "cn-jinan-laotun-2",
+      "from_station_id": "cn-jinan-erhuanxilu",
+      "to_station_id": "cn-jinan-laotun",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.001,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-fangte-1-cn-jinan-jinan-west-railway-station-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-fangte-1",
+      "to_stop_id": "cn-jinan-jinan-west-railway-station-1",
+      "from_station_id": "cn-jinan-fangte",
+      "to_station_id": "cn-jinan-jinan-west-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.521,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-fenghuang-beilu-2-cn-jinan-baoshan-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-fenghuang-beilu-2",
+      "to_stop_id": "cn-jinan-baoshan-2",
+      "from_station_id": "cn-jinan-fenghuang-beilu",
+      "to_station_id": "cn-jinan-baoshan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 3.763,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-fenghuang-beilu-6-cn-jinan-xujiazhuang-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-fenghuang-beilu-6",
+      "to_stop_id": "cn-jinan-xujiazhuang-6",
+      "from_station_id": "cn-jinan-fenghuang-beilu",
+      "to_station_id": "cn-jinan-xujiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.072,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.3,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-gold-industrial-park-4-cn-jinan-linjiazhuang-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-gold-industrial-park-4",
+      "to_stop_id": "cn-jinan-linjiazhuang-4",
+      "from_station_id": "cn-jinan-gold-industrial-park",
+      "to_station_id": "cn-jinan-linjiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.25,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-hanyu-jingu-4-cn-jinan-shuntai-guangchang-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-hanyu-jingu-4",
+      "to_stop_id": "cn-jinan-shuntai-guangchang-4",
+      "from_station_id": "cn-jinan-hanyu-jingu",
+      "to_station_id": "cn-jinan-shuntai-guangchang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-jinan-cn-jinan-hanyu-jingu-4-down",
+        "cn-jinan-cn-jinan-shuntai-guangchang-4-down"
+      ],
+      "distance_km": 0.621,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-hua-erzhuang-beijie-JY-cn-jinan-huihe-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-hua-erzhuang-beijie-JY",
+      "to_stop_id": "cn-jinan-huihe-JY",
+      "from_station_id": "cn-jinan-hua-erzhuang-beijie",
+      "to_station_id": "cn-jinan-huihe",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 540,
+      "travel_time_source": "planner",
+      "distance_km": 6.075,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-huangqishan-north-8-cn-jinan-huangtuya-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-huangqishan-north-8",
+      "to_stop_id": "cn-jinan-huangtuya-8",
+      "from_station_id": "cn-jinan-huangqishan-north",
+      "to_station_id": "cn-jinan-huangtuya",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.731,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-huangtuya-8-cn-jinan-shandong-university-of-finance-and-economics-zhangqiu-campus-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-huangtuya-8",
+      "to_stop_id": "cn-jinan-shandong-university-of-finance-and-economics-zhangqiu-campus-8",
+      "from_station_id": "cn-jinan-huangtuya",
+      "to_station_id": "cn-jinan-shandong-university-of-finance-and-economics-zhangqiu-campus",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.079,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-huayuandonglu-3-cn-jinan-dingjiazhuang-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-huayuandonglu-3",
+      "to_stop_id": "cn-jinan-dingjiazhuang-3",
+      "from_station_id": "cn-jinan-huayuandonglu",
+      "to_station_id": "cn-jinan-dingjiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.664,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-huihe-JY-cn-jinan-xinyuan-school-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-huihe-JY",
+      "to_stop_id": "cn-jinan-xinyuan-school-JY",
+      "from_station_id": "cn-jinan-huihe",
+      "to_station_id": "cn-jinan-xinyuan-school",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 600,
+      "travel_time_source": "planner",
+      "distance_km": 7.327,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jiangjiazhuang-2-cn-jinan-fenghuang-beilu-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-jiangjiazhuang-2",
+      "to_stop_id": "cn-jinan-fenghuang-beilu-2",
+      "from_station_id": "cn-jinan-jiangjiazhuang",
+      "to_station_id": "cn-jinan-fenghuang-beilu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.662,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jiangshuiquan-lu-4-cn-jinan-yanshan-lijiaoqiao-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-jiangshuiquan-lu-4",
+      "to_stop_id": "cn-jinan-yanshan-lijiaoqiao-4",
+      "from_station_id": "cn-jinan-jiangshuiquan-lu",
+      "to_station_id": "cn-jinan-yanshan-lijiaoqiao",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.695,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jibei-primary-school-JY-cn-jinan-jiyang-citizen-service-center-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-jibei-primary-school-JY",
+      "to_stop_id": "cn-jinan-jiyang-citizen-service-center-JY",
+      "from_station_id": "cn-jinan-jibei-primary-school",
+      "to_station_id": "cn-jinan-jiyang-citizen-service-center",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.174,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jichangnan-3-cn-jinan-linkong-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-jichangnan-3",
+      "to_stop_id": "cn-jinan-linkong-3",
+      "from_station_id": "cn-jinan-jichangnan",
+      "to_station_id": "cn-jinan-linkong",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.434,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jiluolu-2-cn-jinan-shengchanlu-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-jiluolu-2",
+      "to_stop_id": "cn-jinan-shengchanlu-2",
+      "from_station_id": "cn-jinan-jiluolu",
+      "to_station_id": "cn-jinan-shengchanlu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.027,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinan-innovation-zone-experimental-high-school-YB-cn-jinan-jinan-innovation-zone-no-1-middle-school-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-jinan-innovation-zone-experimental-high-school-YB",
+      "to_stop_id": "cn-jinan-jinan-innovation-zone-no-1-middle-school-YB",
+      "from_station_id": "cn-jinan-jinan-innovation-zone-experimental-high-school",
+      "to_station_id": "cn-jinan-jinan-innovation-zone-no-1-middle-school",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.725,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.5,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinan-innovation-zone-no-1-middle-school-YB-cn-jinan-xijuye-he-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-jinan-innovation-zone-no-1-middle-school-YB",
+      "to_stop_id": "cn-jinan-xijuye-he-YB",
+      "from_station_id": "cn-jinan-jinan-innovation-zone-no-1-middle-school",
+      "to_station_id": "cn-jinan-xijuye-he",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.852,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.6,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinan-maternity-and-child-care-hospital-east-area-YB-cn-jinan-shandong-polytechnic-sky-shuttle-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-jinan-maternity-and-child-care-hospital-east-area-YB",
+      "to_stop_id": "cn-jinan-shandong-polytechnic-sky-shuttle-YB",
+      "from_station_id": "cn-jinan-jinan-maternity-and-child-care-hospital-east-area",
+      "to_station_id": "cn-jinan-shandong-polytechnic-sky-shuttle",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.021,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.8,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinan-railway-station-bei-2-cn-jinan-jiluolu-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-jinan-railway-station-bei-2",
+      "to_stop_id": "cn-jinan-jiluolu-2",
+      "from_station_id": "cn-jinan-jinan-railway-station-bei",
+      "to_station_id": "cn-jinan-jiluolu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.298,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinan-west-railway-station-1-cn-jinan-dayang-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-jinan-west-railway-station-1",
+      "to_stop_id": "cn-jinan-dayang-1",
+      "from_station_id": "cn-jinan-jinan-west-railway-station",
+      "to_station_id": "cn-jinan-dayang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.046,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinandong-railway-station-3-cn-jinan-peijiaying-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-3",
+      "to_stop_id": "cn-jinan-peijiaying-3",
+      "from_station_id": "cn-jinan-jinandong-railway-station",
+      "to_station_id": "cn-jinan-peijiaying",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.389,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinandong-railway-station-6-cn-jinan-xiangquan-jie-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-6",
+      "to_stop_id": "cn-jinan-xiangquan-jie-6",
+      "from_station_id": "cn-jinan-jinandong-railway-station",
+      "to_station_id": "cn-jinan-xiangquan-jie",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 2.357,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18.6,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinandong-railway-station-jiyang-line-JY-cn-jinan-cuizhai-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-jiyang-line-JY",
+      "to_stop_id": "cn-jinan-cuizhai-JY",
+      "from_station_id": "cn-jinan-jinandong-railway-station-jiyang-line",
+      "to_station_id": "cn-jinan-cuizhai",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 11.953,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 19.9,
+        "a_s_per_km": 169,
+        "b_s": 122.2,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 1140,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jinanxi-railway-station-west-square-4-cn-jinan-chunfeng-yuedong-gongyuan-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-jinanxi-railway-station-west-square-4",
+      "to_stop_id": "cn-jinan-chunfeng-yuedong-gongyuan-4",
+      "from_station_id": "cn-jinan-jinanxi-railway-station-west-square",
+      "to_station_id": "cn-jinan-chunfeng-yuedong-gongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.732,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-jiyang-citizen-service-center-JY-cn-jinan-jiyang-north-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-jiyang-citizen-service-center-JY",
+      "to_stop_id": "cn-jinan-jiyang-north-JY",
+      "from_station_id": "cn-jinan-jiyang-citizen-service-center",
+      "to_station_id": "cn-jinan-jiyang-north",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 2.687,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.8,
+        "a_s_per_km": 169,
+        "b_s": 122.2,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-kaituo-lu-6-cn-jinan-qilusoft-park-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-kaituo-lu-6",
+      "to_stop_id": "cn-jinan-qilusoft-park-6",
+      "from_station_id": "cn-jinan-kaituo-lu",
+      "to_station_id": "cn-jinan-qilusoft-park",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.096,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.3,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-kechuang-cheng-YB-cn-jinan-chunbo-lu-sky-shuttle-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-kechuang-cheng-YB",
+      "to_stop_id": "cn-jinan-chunbo-lu-sky-shuttle-YB",
+      "from_station_id": "cn-jinan-kechuang-cheng",
+      "to_station_id": "cn-jinan-chunbo-lu-sky-shuttle",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.954,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-kehang-lu-YB-cn-jinan-chunxiu-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-kehang-lu-YB",
+      "to_stop_id": "cn-jinan-chunxiu-lu-YB",
+      "from_station_id": "cn-jinan-kehang-lu",
+      "to_station_id": "cn-jinan-chunxiu-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.884,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-keyuan-lu-YB-cn-jinan-shijidadao-chunxuanlu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-keyuan-lu-YB",
+      "to_stop_id": "cn-jinan-shijidadao-chunxuanlu-YB",
+      "from_station_id": "cn-jinan-keyuan-lu",
+      "to_station_id": "cn-jinan-shijidadao-chunxuanlu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.007,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.7,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-laotun-2-cn-jinan-baliqiao-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-laotun-2",
+      "to_stop_id": "cn-jinan-baliqiao-2",
+      "from_station_id": "cn-jinan-laotun",
+      "to_station_id": "cn-jinan-baliqiao",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.887,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-lashan-2-cn-jinan-erhuanxilu-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-lashan-2",
+      "to_stop_id": "cn-jinan-erhuanxilu-2",
+      "from_station_id": "cn-jinan-lashan",
+      "to_station_id": "cn-jinan-erhuanxilu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.152,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-lashan-4-cn-jinan-lashanhe-gongyuan-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-lashan-4",
+      "to_stop_id": "cn-jinan-lashanhe-gongyuan-4",
+      "from_station_id": "cn-jinan-lashan",
+      "to_station_id": "cn-jinan-lashanhe-gongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.333,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-lashanhe-gongyuan-4-cn-jinan-dayang-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-lashanhe-gongyuan-4",
+      "to_stop_id": "cn-jinan-dayang-4",
+      "from_station_id": "cn-jinan-lashanhe-gongyuan",
+      "to_station_id": "cn-jinan-dayang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.822,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-lashannan-2-cn-jinan-lashan-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-lashannan-2",
+      "to_stop_id": "cn-jinan-lashan-2",
+      "from_station_id": "cn-jinan-lashannan",
+      "to_station_id": "cn-jinan-lashan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 3.649,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-liangwang-6-cn-jinan-liangwang-west-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-liangwang-6",
+      "to_stop_id": "cn-jinan-liangwang-west-6",
+      "from_station_id": "cn-jinan-liangwang",
+      "to_station_id": "cn-jinan-liangwang-west",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.037,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.1,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-liangwang-west-6-cn-jinan-jinandong-railway-station-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-liangwang-west-6",
+      "to_stop_id": "cn-jinan-jinandong-railway-station-6",
+      "from_station_id": "cn-jinan-liangwang-west",
+      "to_station_id": "cn-jinan-jinandong-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.511,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.6,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-licheng-no-2-high-school-tangye-campus-4-cn-jinan-tangye-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-4",
+      "to_stop_id": "cn-jinan-tangye-4",
+      "from_station_id": "cn-jinan-licheng-no-2-high-school-tangye-campus",
+      "to_station_id": "cn-jinan-tangye",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.45,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle-YB-cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "from_station_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle",
+      "to_station_id": "cn-jinan-pengjiazhuang-sky-shuttle",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.608,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-licheng-wenbo-center-YB-cn-jinan-tangye-sky-shuttle-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-licheng-wenbo-center-YB",
+      "to_stop_id": "cn-jinan-tangye-sky-shuttle-YB",
+      "from_station_id": "cn-jinan-licheng-wenbo-center",
+      "to_station_id": "cn-jinan-tangye-sky-shuttle",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.416,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-lingangbeilu-3-cn-jinan-chuanliu-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-lingangbeilu-3",
+      "to_stop_id": "cn-jinan-chuanliu-3",
+      "from_station_id": "cn-jinan-lingangbeilu",
+      "to_station_id": "cn-jinan-chuanliu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.338,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-linjiazhuang-4-cn-jinan-hanyu-jingu-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-linjiazhuang-4",
+      "to_stop_id": "cn-jinan-hanyu-jingu-4",
+      "from_station_id": "cn-jinan-linjiazhuang",
+      "to_station_id": "cn-jinan-hanyu-jingu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.537,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-linkong-3-cn-jinan-lingangbeilu-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-linkong-3",
+      "to_stop_id": "cn-jinan-lingangbeilu-3",
+      "from_station_id": "cn-jinan-linkong",
+      "to_station_id": "cn-jinan-lingangbeilu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.516,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-lishanlu-2-cn-jinan-qilipu-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-lishanlu-2",
+      "to_stop_id": "cn-jinan-qilipu-2",
+      "from_station_id": "cn-jinan-lishanlu",
+      "to_station_id": "cn-jinan-qilipu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.417,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-longao-building-3-cn-jinan-mengjiazhuang-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-longao-building-3",
+      "to_stop_id": "cn-jinan-mengjiazhuang-3",
+      "from_station_id": "cn-jinan-longao-building",
+      "to_station_id": "cn-jinan-mengjiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.953,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-maoling-shan-6-cn-jinan-qilihelu-south-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-maoling-shan-6",
+      "to_stop_id": "cn-jinan-qilihelu-south-6",
+      "from_station_id": "cn-jinan-maoling-shan",
+      "to_station_id": "cn-jinan-qilihelu-south",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.46,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.9,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-mengjiazhuang-3-cn-jinan-longdong-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-mengjiazhuang-3",
+      "to_stop_id": "cn-jinan-longdong-3",
+      "from_station_id": "cn-jinan-mengjiazhuang",
+      "to_station_id": "cn-jinan-longdong",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.736,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.2,
+        "a_s_per_km": 112.5,
+        "b_s": 162.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-nanxinzhuang-4-cn-jinan-yingshi-jie-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-nanxinzhuang-4",
+      "to_stop_id": "cn-jinan-yingshi-jie-4",
+      "from_station_id": "cn-jinan-nanxinzhuang",
+      "to_station_id": "cn-jinan-yingshi-jie",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.87,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-olympic-sports-center-3-cn-jinan-longao-building-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-olympic-sports-center-3",
+      "to_stop_id": "cn-jinan-longao-building-3",
+      "from_station_id": "cn-jinan-olympic-sports-center",
+      "to_station_id": "cn-jinan-longao-building",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.275,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-olympic-sports-center-4-cn-jinan-zhuanshan-xilu-mixc-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-olympic-sports-center-4",
+      "to_stop_id": "cn-jinan-zhuanshan-xilu-mixc-4",
+      "from_station_id": "cn-jinan-olympic-sports-center",
+      "to_station_id": "cn-jinan-zhuanshan-xilu-mixc",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.921,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-peijiaying-3-cn-jinan-wangsheren-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-peijiaying-3",
+      "to_stop_id": "cn-jinan-wangsheren-3",
+      "from_station_id": "cn-jinan-peijiaying",
+      "to_station_id": "cn-jinan-wangsheren",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.273,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-pengjiazhuang-4-cn-jinan-licheng-no-2-high-school-tangye-campus-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-pengjiazhuang-4",
+      "to_stop_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-4",
+      "from_station_id": "cn-jinan-pengjiazhuang",
+      "to_station_id": "cn-jinan-licheng-no-2-high-school-tangye-campus",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.782,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-pengjiazhuang-sky-shuttle-YB-cn-jinan-tangye-donglu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-tangye-donglu-YB",
+      "from_station_id": "cn-jinan-pengjiazhuang-sky-shuttle",
+      "to_station_id": "cn-jinan-tangye-donglu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.63,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.5,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-qianfo-mountain-4-cn-jinan-quancheng-park-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-qianfo-mountain-4",
+      "to_stop_id": "cn-jinan-quancheng-park-4",
+      "from_station_id": "cn-jinan-qianfo-mountain",
+      "to_station_id": "cn-jinan-quancheng-park",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.301,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-qiingning-JY-cn-jinan-hua-erzhuang-beijie-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-qiingning-JY",
+      "to_stop_id": "cn-jinan-hua-erzhuang-beijie-JY",
+      "from_station_id": "cn-jinan-qiingning",
+      "to_station_id": "cn-jinan-hua-erzhuang-beijie",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.537,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-qilihelu-south-6-cn-jinan-shanda-nanlu-east-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-qilihelu-south-6",
+      "to_stop_id": "cn-jinan-shanda-nanlu-east-6",
+      "from_station_id": "cn-jinan-qilihelu-south",
+      "to_station_id": "cn-jinan-shanda-nanlu-east",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.555,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.3,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-qilipu-2-cn-jinan-zhudian-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-qilipu-2",
+      "to_stop_id": "cn-jinan-zhudian-2",
+      "from_station_id": "cn-jinan-qilipu",
+      "to_station_id": "cn-jinan-zhudian",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.536,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-qilusoft-park-6-cn-jinan-tianluo-lu-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-qilusoft-park-6",
+      "to_stop_id": "cn-jinan-tianluo-lu-6",
+      "from_station_id": "cn-jinan-qilusoft-park",
+      "to_station_id": "cn-jinan-tianluo-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.383,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.9,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-qingyuan-dajie-8-cn-jinan-xiuyuan-he-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-qingyuan-dajie-8",
+      "to_stop_id": "cn-jinan-xiuyuan-he-8",
+      "from_station_id": "cn-jinan-qingyuan-dajie",
+      "to_station_id": "cn-jinan-xiuyuan-he",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.257,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-quancheng-park-4-cn-jinan-shandong-sports-center-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-quancheng-park-4",
+      "to_stop_id": "cn-jinan-shandong-sports-center-4",
+      "from_station_id": "cn-jinan-quancheng-park",
+      "to_station_id": "cn-jinan-shandong-sports-center",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.841,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-qujiazhuang-3-cn-jinan-tantou-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-qujiazhuang-3",
+      "to_stop_id": "cn-jinan-tantou-3",
+      "from_station_id": "cn-jinan-qujiazhuang",
+      "to_station_id": "cn-jinan-tantou",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.182,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shagou-YB-cn-jinan-kehang-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-shagou-YB",
+      "to_stop_id": "cn-jinan-kehang-lu-YB",
+      "from_station_id": "cn-jinan-shagou",
+      "to_station_id": "cn-jinan-kehang-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.908,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shanda-nanlu-east-6-cn-jinan-shandong-university-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-shanda-nanlu-east-6",
+      "to_stop_id": "cn-jinan-shandong-university-6",
+      "from_station_id": "cn-jinan-shanda-nanlu-east",
+      "to_station_id": "cn-jinan-shandong-university",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.583,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.9,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandalu-south-4-cn-jinan-shanshi-donglu-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-shandalu-south-4",
+      "to_stop_id": "cn-jinan-shanshi-donglu-4",
+      "from_station_id": "cn-jinan-shandalu-south",
+      "to_station_id": "cn-jinan-shanshi-donglu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.856,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-highway-technician-college-8-cn-jinan-supercomputing-center-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-shandong-highway-technician-college-8",
+      "to_stop_id": "cn-jinan-supercomputing-center-8",
+      "from_station_id": "cn-jinan-shandong-highway-technician-college",
+      "to_station_id": "cn-jinan-supercomputing-center",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.034,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-museum-4-cn-jinan-jiangshuiquan-lu-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-shandong-museum-4",
+      "to_stop_id": "cn-jinan-jiangshuiquan-lu-4",
+      "from_station_id": "cn-jinan-shandong-museum",
+      "to_station_id": "cn-jinan-jiangshuiquan-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.828,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-polytechnic-8-cn-jinan-chunbo-lu-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-shandong-polytechnic-8",
+      "to_stop_id": "cn-jinan-chunbo-lu-8",
+      "from_station_id": "cn-jinan-shandong-polytechnic",
+      "to_station_id": "cn-jinan-chunbo-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.788,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-polytechnic-sky-shuttle-YB-cn-jinan-zhuangke-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-shandong-polytechnic-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-zhuangke-YB",
+      "from_station_id": "cn-jinan-shandong-polytechnic-sky-shuttle",
+      "to_station_id": "cn-jinan-zhuangke",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.068,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18.1,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-sports-center-4-cn-jinan-bayi-lijiaoqiao-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-shandong-sports-center-4",
+      "to_stop_id": "cn-jinan-bayi-lijiaoqiao-4",
+      "from_station_id": "cn-jinan-shandong-sports-center",
+      "to_station_id": "cn-jinan-bayi-lijiaoqiao",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.063,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-university-longshan-8-cn-jinan-shengjing-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-shandong-university-longshan-8",
+      "to_stop_id": "cn-jinan-shengjing-8",
+      "from_station_id": "cn-jinan-shandong-university-longshan",
+      "to_station_id": "cn-jinan-shengjing",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.299,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-university-of-finance-and-economics-zhangqiu-campus-8-cn-jinan-shandong-xiandai-university-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-shandong-university-of-finance-and-economics-zhangqiu-campus-8",
+      "to_stop_id": "cn-jinan-shandong-xiandai-university-8",
+      "from_station_id": "cn-jinan-shandong-university-of-finance-and-economics-zhangqiu-campus",
+      "to_station_id": "cn-jinan-shandong-xiandai-university",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.007,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-xiandai-university-8-cn-jinan-shandong-polytechnic-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-shandong-xiandai-university-8",
+      "to_stop_id": "cn-jinan-shandong-polytechnic-8",
+      "from_station_id": "cn-jinan-shandong-xiandai-university",
+      "to_station_id": "cn-jinan-shandong-polytechnic",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.467,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-yingcai-university-north-campus-JY-cn-jinan-qiingning-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-shandong-yingcai-university-north-campus-JY",
+      "to_stop_id": "cn-jinan-qiingning-JY",
+      "from_station_id": "cn-jinan-shandong-yingcai-university-north-campus",
+      "to_station_id": "cn-jinan-qiingning",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.051,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shandong-youth-university-of-political-science-8-cn-jinan-xingcun-lijiaoqiao-east-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-shandong-youth-university-of-political-science-8",
+      "to_stop_id": "cn-jinan-xingcun-lijiaoqiao-east-8",
+      "from_station_id": "cn-jinan-shandong-youth-university-of-political-science",
+      "to_station_id": "cn-jinan-xingcun-lijiaoqiao-east",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.898,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 21.4,
+        "a_s_per_km": 106.5,
+        "b_s": 116.5,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shanshi-donglu-4-cn-jinan-qianfo-mountain-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-shanshi-donglu-4",
+      "to_stop_id": "cn-jinan-qianfo-mountain-4",
+      "from_station_id": "cn-jinan-shanshi-donglu",
+      "to_station_id": "cn-jinan-qianfo-mountain",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.031,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shengchanlu-2-cn-jinan-beiyuan-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-shengchanlu-2",
+      "to_stop_id": "cn-jinan-beiyuan-2",
+      "from_station_id": "cn-jinan-shengchanlu",
+      "to_station_id": "cn-jinan-beiyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.58,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shengjing-8-cn-jinan-huangqishan-north-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-shengjing-8",
+      "to_stop_id": "cn-jinan-huangqishan-north-8",
+      "from_station_id": "cn-jinan-shengjing",
+      "to_station_id": "cn-jinan-huangqishan-north",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.873,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shiji-dadao-6-cn-jinan-kaituo-lu-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-shiji-dadao-6",
+      "to_stop_id": "cn-jinan-kaituo-lu-6",
+      "from_station_id": "cn-jinan-shiji-dadao",
+      "to_station_id": "cn-jinan-kaituo-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.248,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.1,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shijidadao-chunxuanlu-YB-cn-jinan-chunhui-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-shijidadao-chunxuanlu-YB",
+      "to_stop_id": "cn-jinan-chunhui-lu-YB",
+      "from_station_id": "cn-jinan-shijidadao-chunxuanlu",
+      "to_station_id": "cn-jinan-chunhui-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.6,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.5,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-shuntai-guangchang-4-cn-jinan-aoti-donglu-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-shuntai-guangchang-4",
+      "to_stop_id": "cn-jinan-aoti-donglu-4",
+      "from_station_id": "cn-jinan-shuntai-guangchang",
+      "to_station_id": "cn-jinan-aoti-donglu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.523,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-suncun-YB-cn-jinan-caihonghu-east-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-suncun-YB",
+      "to_stop_id": "cn-jinan-caihonghu-east-YB",
+      "from_station_id": "cn-jinan-suncun",
+      "to_station_id": "cn-jinan-caihonghu-east",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.553,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-supercomputing-center-8-cn-jinan-shandong-youth-university-of-political-science-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-supercomputing-center-8",
+      "to_stop_id": "cn-jinan-shandong-youth-university-of-political-science-8",
+      "from_station_id": "cn-jinan-supercomputing-center",
+      "to_station_id": "cn-jinan-shandong-youth-university-of-political-science",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.235,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-tangxuan-lu-YB-cn-jinan-licheng-wenbo-center-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-tangxuan-lu-YB",
+      "to_stop_id": "cn-jinan-licheng-wenbo-center-YB",
+      "from_station_id": "cn-jinan-tangxuan-lu",
+      "to_station_id": "cn-jinan-licheng-wenbo-center",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.399,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 11.3,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6
+      },
+      "travel_time_seconds": 127,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-tangye-4-cn-jinan-tangye-gongyuan-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-tangye-4",
+      "to_stop_id": "cn-jinan-tangye-gongyuan-4",
+      "from_station_id": "cn-jinan-tangye",
+      "to_station_id": "cn-jinan-tangye-gongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.178,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-tangye-donglu-YB-cn-jinan-wujiazhuang-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-tangye-donglu-YB",
+      "to_stop_id": "cn-jinan-wujiazhuang-YB",
+      "from_station_id": "cn-jinan-tangye-donglu",
+      "to_station_id": "cn-jinan-wujiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.476,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.1,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-tangye-gongyuan-4-cn-jinan-xingcun-lijiaoqiao-east-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-tangye-gongyuan-4",
+      "to_stop_id": "cn-jinan-xingcun-lijiaoqiao-east-4",
+      "from_station_id": "cn-jinan-tangye-gongyuan",
+      "to_station_id": "cn-jinan-xingcun-lijiaoqiao-east",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.399,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-tangye-sky-shuttle-YB-cn-jinan-zhenguan-jie-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-tangye-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-zhenguan-jie-YB",
+      "from_station_id": "cn-jinan-tangye-sky-shuttle",
+      "to_station_id": "cn-jinan-zhenguan-jie",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.73,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-tantou-3-cn-jinan-jinandong-railway-station-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-tantou-3",
+      "to_stop_id": "cn-jinan-jinandong-railway-station-3",
+      "from_station_id": "cn-jinan-tantou",
+      "to_station_id": "cn-jinan-jinandong-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.505,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-tianluo-lu-6-cn-jinan-ancheng-jie-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-tianluo-lu-6",
+      "to_stop_id": "cn-jinan-ancheng-jie-6",
+      "from_station_id": "cn-jinan-tianluo-lu",
+      "to_station_id": "cn-jinan-ancheng-jie",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.763,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.6,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-wangfuzhuang-1-cn-jinan-yufuhe-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-wangfuzhuang-1",
+      "to_stop_id": "cn-jinan-yufuhe-1",
+      "from_station_id": "cn-jinan-wangfuzhuang",
+      "to_station_id": "cn-jinan-yufuhe",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.935,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-wangfuzhuang-2-cn-jinan-lashannan-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-wangfuzhuang-2",
+      "to_stop_id": "cn-jinan-lashannan-2",
+      "from_station_id": "cn-jinan-wangfuzhuang",
+      "to_station_id": "cn-jinan-lashannan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.856,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-wangsheren-3-cn-jinan-zhangmatun-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-wangsheren-3",
+      "to_stop_id": "cn-jinan-zhangmatun-3",
+      "from_station_id": "cn-jinan-wangsheren",
+      "to_station_id": "cn-jinan-zhangmatun",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.138,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-wangsheren-lijiaoqiao-6-cn-jinan-fenghuang-beilu-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-wangsheren-lijiaoqiao-6",
+      "to_stop_id": "cn-jinan-fenghuang-beilu-6",
+      "from_station_id": "cn-jinan-wangsheren-lijiaoqiao",
+      "to_station_id": "cn-jinan-fenghuang-beilu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.581,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.8,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-wenlvcheng-4-cn-jinan-gold-industrial-park-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-wenlvcheng-4",
+      "to_stop_id": "cn-jinan-gold-industrial-park-4",
+      "from_station_id": "cn-jinan-wenlvcheng",
+      "to_station_id": "cn-jinan-gold-industrial-park",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.211,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-wujiangshan-east-YB-cn-jinan-keyuan-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-wujiangshan-east-YB",
+      "to_stop_id": "cn-jinan-keyuan-lu-YB",
+      "from_station_id": "cn-jinan-wujiangshan-east",
+      "to_station_id": "cn-jinan-keyuan-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 0.646,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.7,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-wujiazhuang-YB-cn-jinan-wujiangshan-east-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-wujiazhuang-YB",
+      "to_stop_id": "cn-jinan-wujiangshan-east-YB",
+      "from_station_id": "cn-jinan-wujiazhuang",
+      "to_station_id": "cn-jinan-wujiangshan-east",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.296,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 19.3,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-wuli-paifang-4-cn-jinan-nanxinzhuang-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-wuli-paifang-4",
+      "to_stop_id": "cn-jinan-nanxinzhuang-4",
+      "from_station_id": "cn-jinan-wuli-paifang",
+      "to_station_id": "cn-jinan-nanxinzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.935,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xiangquan-jie-6-cn-jinan-wangsheren-lijiaoqiao-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-xiangquan-jie-6",
+      "to_stop_id": "cn-jinan-wangsheren-lijiaoqiao-6",
+      "from_station_id": "cn-jinan-xiangquan-jie",
+      "to_station_id": "cn-jinan-wangsheren-lijiaoqiao",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.52,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.7,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xijuye-he-YB-cn-jinan-dazheng-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-xijuye-he-YB",
+      "to_stop_id": "cn-jinan-dazheng-lu-YB",
+      "from_station_id": "cn-jinan-xijuye-he",
+      "to_station_id": "cn-jinan-dazheng-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.271,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 19.2,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xingcun-lijiaoqiao-east-4-cn-jinan-xingcun-lijiaoqiao-west-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-xingcun-lijiaoqiao-east-4",
+      "to_stop_id": "cn-jinan-xingcun-lijiaoqiao-west-4",
+      "from_station_id": "cn-jinan-xingcun-lijiaoqiao-east",
+      "to_station_id": "cn-jinan-xingcun-lijiaoqiao-west",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.561,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xingcun-lijiaoqiao-west-4-cn-jinan-wenlvcheng-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-xingcun-lijiaoqiao-west-4",
+      "to_stop_id": "cn-jinan-wenlvcheng-4",
+      "from_station_id": "cn-jinan-xingcun-lijiaoqiao-west",
+      "to_station_id": "cn-jinan-wenlvcheng",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.788,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xinyuan-school-JY-cn-jinan-jibei-primary-school-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-xinyuan-school-JY",
+      "to_stop_id": "cn-jinan-jibei-primary-school-JY",
+      "from_station_id": "cn-jinan-xinyuan-school",
+      "to_station_id": "cn-jinan-jibei-primary-school",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.105,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xiuyuan-he-8-cn-jinan-shandong-university-longshan-8",
+      "line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-xiuyuan-he-8",
+      "to_stop_id": "cn-jinan-shandong-university-longshan-8",
+      "from_station_id": "cn-jinan-xiuyuan-he",
+      "to_station_id": "cn-jinan-shandong-university-longshan",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.761,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xujiazhuang-6-cn-jinan-shiji-dadao-6",
+      "line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-xujiazhuang-6",
+      "to_stop_id": "cn-jinan-shiji-dadao-6",
+      "from_station_id": "cn-jinan-xujiazhuang",
+      "to_station_id": "cn-jinan-shiji-dadao",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.028,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.9,
+        "a_s_per_km": 151.8,
+        "b_s": 77.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xuma-YB-cn-jinan-chunyuan-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-xuma-YB",
+      "to_stop_id": "cn-jinan-chunyuan-lu-YB",
+      "from_station_id": "cn-jinan-xuma",
+      "to_station_id": "cn-jinan-chunyuan-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "distance_km": 1.041,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.9,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-xuma-YB-cn-jinan-dazheng-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-xuma-YB",
+      "to_stop_id": "cn-jinan-dazheng-lu-YB",
+      "from_station_id": "cn-jinan-xuma",
+      "to_station_id": "cn-jinan-dazheng-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701:loop-closure",
+      "extras": {
+        "role": "loop_closure",
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.3,
+        "a_s_per_km": 128.1,
+        "b_s": 75.6
+      },
+      "distance_km": 0.458,
+      "travel_time_seconds": 134,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-yanshan-lijiaoqiao-4-cn-jinan-shandalu-south-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-yanshan-lijiaoqiao-4",
+      "to_stop_id": "cn-jinan-shandalu-south-4",
+      "from_station_id": "cn-jinan-yanshan-lijiaoqiao",
+      "to_station_id": "cn-jinan-shandalu-south",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.041,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-yellow-river-convention-and-exhibition-center-JY-cn-jinan-shandong-yingcai-university-north-campus-JY",
+      "line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-yellow-river-convention-and-exhibition-center-JY",
+      "to_stop_id": "cn-jinan-shandong-yingcai-university-north-campus-JY",
+      "from_station_id": "cn-jinan-yellow-river-convention-and-exhibition-center",
+      "to_station_id": "cn-jinan-shandong-yingcai-university-north-campus",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 2.352,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-yikanglu-2-cn-jinan-jinan-railway-station-bei-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-yikanglu-2",
+      "to_stop_id": "cn-jinan-jinan-railway-station-bei-2",
+      "from_station_id": "cn-jinan-yikanglu",
+      "to_station_id": "cn-jinan-jinan-railway-station-bei",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.214,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-yingshi-jie-4-cn-jinan-duandian-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-yingshi-jie-4",
+      "to_stop_id": "cn-jinan-duandian-4",
+      "from_station_id": "cn-jinan-yingshi-jie",
+      "to_station_id": "cn-jinan-duandian",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.847,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-yuanboyuan-1-cn-jinan-chuangxingu-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-yuanboyuan-1",
+      "to_stop_id": "cn-jinan-chuangxingu-1",
+      "from_station_id": "cn-jinan-yuanboyuan",
+      "to_station_id": "cn-jinan-chuangxingu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.943,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-yufuhe-1-cn-jinan-zhaoying-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-yufuhe-1",
+      "to_stop_id": "cn-jinan-zhaoying-1",
+      "from_station_id": "cn-jinan-yufuhe",
+      "to_station_id": "cn-jinan-zhaoying",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.22,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-zhangmatun-3-cn-jinan-bajianpu-3",
+      "line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-zhangmatun-3",
+      "to_stop_id": "cn-jinan-bajianpu-3",
+      "from_station_id": "cn-jinan-zhangmatun",
+      "to_station_id": "cn-jinan-bajianpu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 2.465,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-zhaoying-1-cn-jinan-ziweilu-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-zhaoying-1",
+      "to_stop_id": "cn-jinan-ziweilu-1",
+      "from_station_id": "cn-jinan-zhaoying",
+      "to_station_id": "cn-jinan-ziweilu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.345,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-zhenguan-jie-YB-cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-zhenguan-jie-YB",
+      "to_stop_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle-YB",
+      "from_station_id": "cn-jinan-zhenguan-jie",
+      "to_station_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.816,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-zhuangke-YB-cn-jinan-chunjing-lu-YB",
+      "line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-zhuangke-YB",
+      "to_stop_id": "cn-jinan-chunjing-lu-YB",
+      "from_station_id": "cn-jinan-zhuangke",
+      "to_station_id": "cn-jinan-chunjing-lu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.858,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-zhuanshan-xilu-mixc-4-cn-jinan-shandong-museum-4",
+      "line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-zhuanshan-xilu-mixc-4",
+      "to_stop_id": "cn-jinan-shandong-museum-4",
+      "from_station_id": "cn-jinan-zhuanshan-xilu-mixc",
+      "to_station_id": "cn-jinan-shandong-museum",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.719,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-zhudian-2-cn-jinan-bajianpu-2",
+      "line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-zhudian-2",
+      "to_stop_id": "cn-jinan-bajianpu-2",
+      "from_station_id": "cn-jinan-zhudian",
+      "to_station_id": "cn-jinan-bajianpu",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.156,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-jinan-seg-cn-jinan-ziweilu-1-cn-jinan-daxuecheng-1",
+      "line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-ziweilu-1",
+      "to_stop_id": "cn-jinan-daxuecheng-1",
+      "from_station_id": "cn-jinan-ziweilu",
+      "to_station_id": "cn-jinan-daxuecheng",
+      "direction": "both",
+      "source_id": "amap-subway-3701",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.917,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    }
+  ]
+}

@@ -130,7 +130,8 @@ export function parseDirectionLabel(
   const inner = paren?.[1]?.trim() ?? '';
   let loopDir: 'loop_inner' | 'loop_outer' | undefined;
   if (inner.includes('内环') || /(^|[^a-z])内(环)?([^a-z]|$)/.test(inner)) loopDir = 'loop_inner';
-  else if (inner.includes('外环') || /(^|[^a-z])外(环)?([^a-z]|$)/.test(inner)) loopDir = 'loop_outer';
+  else if (inner.includes('外环') || /(^|[^a-z])外(环)?([^a-z]|$)/.test(inner))
+    loopDir = 'loop_outer';
 
   let service: 'full' | 'short' | undefined;
   if (inner.includes('半程') || inner.includes('半程车')) service = 'short';
@@ -162,21 +163,13 @@ export function parseDirectionLabel(
   return { dest: foldStationName(name) };
 }
 
-function destKeyOf(d: {
-  dest: string;
-  loopDir?: string;
-  service?: string;
-}): string {
+function _destKeyOf(d: { dest: string; loopDir?: string; service?: string }): string {
   if (d.loopDir) return `${d.loopDir}:${d.service ?? 'full'}`;
   return d.dest;
 }
 
-
 /** Resolve a dest label to a stop id; tolerates 江北机场 → 江北机场T2航站楼. */
-function resolveStopIdByFold(
-  map: Map<string, string>,
-  destFold: string
-): string | undefined {
+function resolveStopIdByFold(map: Map<string, string>, destFold: string): string | undefined {
   if (!destFold) return undefined;
   const exact = map.get(destFold);
   if (exact) return exact;
@@ -675,9 +668,8 @@ export function normalizeChongqing(input: ChongqingSources): ChongqingCanonical 
               first_train: dir.first ? [dir.first] : [],
               last_train: dir.last ? [dir.last] : [],
               source_id: CQ_SOURCE,
-              extras: dir.service === 'short'
-                ? { service: 'short_turn', dest_name: dir.dest }
-                : undefined
+              extras:
+                dir.service === 'short' ? { service: 'short_turn', dest_name: dir.dest } : undefined
             });
           }
         }

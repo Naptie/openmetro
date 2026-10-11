@@ -24,6 +24,8 @@ export interface BaiduLegTimes {
   direction?: string | null;
   lineColor?: string | null;
   lineId?: string | null;
+  /** Intermediate stop names in travel order (when the planner exposes them). */
+  stopNames?: string[] | null;
 }
 
 export interface BaiduStationRef {
@@ -46,7 +48,9 @@ export function lastDepartureFromArrival(
   const arr = parseHHMM(arrivalHm ?? '');
   const durMin = durationSeconds != null ? durationSeconds / 60 : null;
   if (arr == null || durMin == null || durMin <= 0) return null;
-  let dep = arr - durMin;
+  // Planner durations carry sub-minute precision; floor so the estimate stays
+  // a parseable HH:MM and never overstates the last departure.
+  let dep = Math.floor(arr - durMin);
   const first = parseHHMM(firstHm ?? '');
   // Keep the chain on the service day (after-midnight last trains).
   if (first != null && dep < first - 30) dep += 24 * 60;
@@ -60,7 +64,10 @@ export function lastDepartureFromArrival(
 export async function fetchBaiduSubwayLeg(
   ak: string,
   origin: BaiduStationRef,
-  destination: BaiduStationRef
+  destination: BaiduStationRef,
+  opts: {
+    /** Prefer the leg whose vehicle name contains this substring (multi-leg ODs). */ lineNameHint?: string;
+  } = {}
 ): Promise<BaiduLegTimes | null> {
   const o = gcj02ToBd09(origin.lat, origin.lon);
   const d = gcj02ToBd09(destination.lat, destination.lon);
@@ -78,30 +85,54 @@ export async function fetchBaiduSubwayLeg(
       routes?: { steps?: { vehicle?: Record<string, unknown>; duration?: number }[][] }[];
     };
   };
-  if (j.status !== 0 || !j.result?.routes?.[0]) return null;
-  for (const group of j.result.routes[0].steps ?? []) {
-    for (const step of group) {
-      const v = step.vehicle ?? {};
-      const type = v.type as number | undefined;
-      const name = String(v.name ?? '');
-      if (type !== 1 && !name.includes('地铁')) continue;
-      const si = (v.start_info ?? {}) as { start_time?: string };
-      const ei = (v.end_info ?? {}) as { end_time?: string };
-      const first = si.start_time || (v.start_time as string | undefined) || null;
-      const lastArr = ei.end_time || (v.end_time as string | undefined) || null;
-      return {
-        firstDeparture: first,
-        lastArrival: lastArr,
-        lastDepartureEst: lastDepartureFromArrival(lastArr, first, step.duration ?? null),
-        durationSeconds: step.duration ?? null,
-        lineName: name || null,
-        direction: (v.direct_text as string | undefined) || null,
-        lineColor: (v.line_color as string | undefined) || null,
-        lineId: (v.line_id as string | undefined) || null
-      };
+  if (j.status !== 0 || !j.result?.routes?.length) return null;
+  const parseLeg = (
+    v: Record<string, unknown>,
+    duration: number | undefined
+  ): BaiduLegTimes | null => {
+    const type = v.type as number | undefined;
+    const name = String(v.name ?? '');
+    if (type !== 1 && !name.includes('地铁') && !name.includes('云巴')) return null;
+    const si = (v.start_info ?? {}) as { start_time?: string };
+    const ei = (v.end_info ?? {}) as { end_time?: string };
+    const first = si.start_time || (v.start_time as string | undefined) || null;
+    const lastArr = ei.end_time || (v.end_time as string | undefined) || null;
+    const stopNames = Array.isArray(v.stop_info)
+      ? (v.stop_info as { stop_name?: string }[])
+          .map((s) => String(s.stop_name ?? '').trim())
+          .filter((s) => s.length > 0)
+      : null;
+    return {
+      firstDeparture: first,
+      lastArrival: lastArr,
+      lastDepartureEst: lastDepartureFromArrival(lastArr, first, duration ?? null),
+      durationSeconds: duration ?? null,
+      lineName: name || null,
+      direction: (v.direct_text as string | undefined) || null,
+      lineColor: (v.line_color as string | undefined) || null,
+      lineId: (v.line_id as string | undefined) || null,
+      stopNames
+    };
+  };
+  // Prefer the requested operator line across every route; fall back to the
+  // first transit leg of the best route (previous behaviour).
+  const fallback: BaiduLegTimes[] = [];
+  for (const route of j.result.routes) {
+    for (const group of route.steps ?? []) {
+      for (const step of group) {
+        const leg = parseLeg(step.vehicle ?? {}, step.duration);
+        if (!leg) continue;
+        if (opts.lineNameHint && (leg.lineName ?? '').includes(opts.lineNameHint)) return leg;
+        fallback.push(leg);
+      }
     }
   }
-  return null;
+  if (opts.lineNameHint) {
+    // The hint names an operator line that the planner knows — do not settle
+    // for an unrelated line's leg when the hint was requested.
+    return null;
+  }
+  return fallback[0] ?? null;
 }
 
 export interface HarvestedStationDir {

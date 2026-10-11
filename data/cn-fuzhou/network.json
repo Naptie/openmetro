@@ -1,0 +1,132 @@
+{
+  "id": "cn-fuzhou",
+  "name": "福州地铁",
+  "names": {
+    "zh": "福州地铁",
+    "en": "Fuzhou Metro"
+  },
+  "city": {
+    "id": "CN-3501",
+    "name": {
+      "zh": "福州市",
+      "en": "Fuzhou"
+    },
+    "country": "CN",
+    "population": 8291268,
+    "area": 12250.72,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        119.291666666,
+        26.076944444
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑与首末班车来自官网 fzmtr.com /services/schedule 页内嵌的官方结构化数据（每站每方向首末班、官方站序与 CMS 站点 id，含 2025-09 开通的滨海快线及其大站快车首末班文本）；票价来自官网票价线路查询接口 /api/system/way/list（官方预计算 OD 表）；坐标/拼音/站名罗马化取自 AMap Subway（官网 CMS 无坐标与英文名），英文名由 AMap multilang 与 Wikidata 补全；区间运行时间由首末班车链推导，缺失项由百度路径规划 gapfill 层补齐。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 101,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 101,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 110,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 110,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 32,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 232,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 116,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 10100,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

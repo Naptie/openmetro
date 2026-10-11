@@ -38,7 +38,6 @@ export interface ShenzhenNormalizeOptions {
   skipZdxxTimetables?: boolean;
 }
 
-
 /**
  * Interchange arms whose /zdxx payload is empty (e.g. 国展 1230) still need
  * first/last on that line. Derive from the nearest neighbor on the same
@@ -55,10 +54,7 @@ function fillMissingTimetablesFromNeighbors(
   const stationById = new Map(stations.map((s) => [s.id, s]));
   const valid = new Set(
     timetables
-      .filter(
-        (t) =>
-          t.first_train.some((x) => Boolean(x)) && t.last_train.some((x) => Boolean(x))
-      )
+      .filter((t) => t.first_train.some((x) => Boolean(x)) && t.last_train.some((x) => Boolean(x)))
       .map((t) => `${t.station_id}|${t.line_id}`)
   );
   const byKey = new Map<string, TimetableEncoded[]>();
@@ -81,7 +77,7 @@ function fillMissingTimetablesFromNeighbors(
       const stop = stopById.get(stopId);
       if (!stop) continue;
       const station = stationById.get(stop.station_id);
-      if (!station || station.status !== 'operating') continue;
+      if (station?.status !== 'operating') continue;
       const key = `${stop.station_id}|${pattern.line_id}`;
       if (valid.has(key)) continue;
 
@@ -102,8 +98,7 @@ function fillMissingTimetablesFromNeighbors(
         const id = `${pattern.line_id}-${stopId}-derived-${dir}`;
         if (seen.has(id)) continue;
         // Dest: pattern terminus opposite the donor when possible.
-        const destStopId =
-          dir === 'A' ? pattern.terminal_stop_id : pattern.origin_stop_id;
+        const destStopId = dir === 'A' ? pattern.terminal_stop_id : pattern.origin_stop_id;
         if (destStopId === stopId) continue;
         out.push({
           id,

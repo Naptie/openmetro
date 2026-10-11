@@ -49,6 +49,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-fuzhou": {
+      "name": "@openmetro/adapter-cn-fuzhou",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-guangzhou": {
       "name": "@openmetro/adapter-cn-guangzhou",
       "version": "0.1.0",
@@ -75,6 +87,18 @@
     },
     "packages/adapters/cn-hongkong": {
       "name": "@openmetro/adapter-cn-hongkong",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
+    "packages/adapters/cn-jinan": {
+      "name": "@openmetro/adapter-cn-jinan",
       "version": "0.1.0",
       "dependencies": {
         "@openmetro/core": "workspace:*",
@@ -147,6 +171,18 @@
     },
     "packages/adapters/cn-wuhan": {
       "name": "@openmetro/adapter-cn-wuhan",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
+    "packages/adapters/cn-xiamen": {
+      "name": "@openmetro/adapter-cn-xiamen",
       "version": "0.1.0",
       "dependencies": {
         "@openmetro/core": "workspace:*",
@@ -401,11 +437,15 @@
 
     "@openmetro/adapter-cn-chongqing": ["@openmetro/adapter-cn-chongqing@workspace:packages/adapters/cn-chongqing"],
 
+    "@openmetro/adapter-cn-fuzhou": ["@openmetro/adapter-cn-fuzhou@workspace:packages/adapters/cn-fuzhou"],
+
     "@openmetro/adapter-cn-guangzhou": ["@openmetro/adapter-cn-guangzhou@workspace:packages/adapters/cn-guangzhou"],
 
     "@openmetro/adapter-cn-hangzhou": ["@openmetro/adapter-cn-hangzhou@workspace:packages/adapters/cn-hangzhou"],
 
     "@openmetro/adapter-cn-hongkong": ["@openmetro/adapter-cn-hongkong@workspace:packages/adapters/cn-hongkong"],
+
+    "@openmetro/adapter-cn-jinan": ["@openmetro/adapter-cn-jinan@workspace:packages/adapters/cn-jinan"],
 
     "@openmetro/adapter-cn-macau": ["@openmetro/adapter-cn-macau@workspace:packages/adapters/cn-macau"],
 
@@ -418,6 +458,8 @@
     "@openmetro/adapter-cn-suzhou": ["@openmetro/adapter-cn-suzhou@workspace:packages/adapters/cn-suzhou"],
 
     "@openmetro/adapter-cn-wuhan": ["@openmetro/adapter-cn-wuhan@workspace:packages/adapters/cn-wuhan"],
+
+    "@openmetro/adapter-cn-xiamen": ["@openmetro/adapter-cn-xiamen@workspace:packages/adapters/cn-xiamen"],
 
     "@openmetro/adapter-cn-xian": ["@openmetro/adapter-cn-xian@workspace:packages/adapters/cn-xian"],
 

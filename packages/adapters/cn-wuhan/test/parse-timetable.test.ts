@@ -1,4 +1,4 @@
-import { test, expect } from 'bun:test';
+import { expect, test } from 'bun:test';
 import { parseTimetableArticle } from '../src/normalize.ts';
 
 /**
@@ -40,7 +40,9 @@ test('parses dual-column timetable when endpoints contain 车站', () => {
 
 test('still skips the 车站 | 首班车 | 末班车 table header', () => {
   const sections = parseTimetableArticle(line4Article);
-  const stations = sections.flatMap((s) => s.directions.flatMap((d) => d.rows.map((r) => r.station)));
+  const stations = sections.flatMap((s) =>
+    s.directions.flatMap((d) => d.rows.map((r) => r.station))
+  );
   expect(stations).not.toContain('车站');
   expect(stations).not.toContain('首班车');
 });

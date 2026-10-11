@@ -217,9 +217,7 @@ function parseMetroTimes(js: string): Map<string, TimeBlock[]> {
     let o: RegExpExecArray | null;
     while ((o = objRe.exec(rawBody)) !== null) {
       try {
-        const parsed = JSON.parse(
-          o[0].replace(/([{,]\s*)([A-Za-z_]\w*):/g, '$1"$2":')
-        ) as {
+        const parsed = JSON.parse(o[0].replace(/([{,]\s*)([A-Za-z_]\w*):/g, '$1"$2":')) as {
           Time?: Record<string, string>;
           lineID?: string;
         };

@@ -62,7 +62,6 @@ export async function runChongqingNormalize(opts: ChongqingNormalizeOptions = {}
       onOverpassMatch: () => overpassMatched++,
       onGeocode: () => geocoded++
     });
-
   }
 
   {

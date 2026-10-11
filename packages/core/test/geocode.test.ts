@@ -181,6 +181,21 @@ test('indexSubwayStations still indexes AMap line-suffixed names by bare key', (
   assert.equal(findSubwayStation(idx, '林岳东')?.name, '林岳东(2号线)');
 });
 
+test('indexSubwayStations never lets a bare alias shadow an exact station twin', () => {
+  // Jinan: the SkyShuttle twin is listed before the metro station in AMap's
+  // doc order; the bare alias must not steal the metro POI's key.
+  const idx = indexSubwayStations([
+    subwayHit('彭家庄(云巴)', 117.230211, 36.709118),
+    subwayHit('彭家庄', 117.229862, 36.70961)
+  ]);
+  assert.equal(findSubwayStation(idx, '彭家庄')?.name, '彭家庄');
+  assert.equal(findSubwayStation(idx, '彭家庄')?.location.lon, 117.229862);
+  assert.equal(findSubwayStation(idx, '彭家庄(云巴)')?.name, '彭家庄(云巴)');
+  // Without a verbatim bare station the line-suffixed alias still registers.
+  const idx2 = indexSubwayStations([subwayHit('国家会展中心(2号线)', 121.299, 31.188)]);
+  assert.equal(findSubwayStation(idx2, '国家会展中心')?.name, '国家会展中心(2号线)');
+});
+
 test('findSubwayStation does not strip official query names onto AMap metro twins', () => {
   // AMap is metro-only; 陈村(城际) must not resolve to the metro POI 陈村.
   const metroLoc = subwayHit('陈村', 113.236869, 22.967991);

@@ -1,0 +1,670 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-jinan",
+  "generated_at": "2026-10-11T11:16:33.417Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-11T11:16:33.417Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-jinan-ancheng-jie-3-cn-jinan-ancheng-jie-6",
+      "station_id": "cn-jinan-ancheng-jie",
+      "from_line_id": "cn-jinan-line-3",
+      "to_line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-ancheng-jie-3",
+      "to_stop_id": "cn-jinan-ancheng-jie-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-ancheng-jie-6-cn-jinan-ancheng-jie-3",
+      "station_id": "cn-jinan-ancheng-jie",
+      "from_line_id": "cn-jinan-line-6",
+      "to_line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-ancheng-jie-6",
+      "to_stop_id": "cn-jinan-ancheng-jie-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-bajianpu-2-cn-jinan-bajianpu-3",
+      "station_id": "cn-jinan-bajianpu",
+      "from_line_id": "cn-jinan-line-2",
+      "to_line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-bajianpu-2",
+      "to_stop_id": "cn-jinan-bajianpu-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-bajianpu-3-cn-jinan-bajianpu-2",
+      "station_id": "cn-jinan-bajianpu",
+      "from_line_id": "cn-jinan-line-3",
+      "to_line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-bajianpu-3",
+      "to_stop_id": "cn-jinan-bajianpu-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-chunbo-lu-8-cn-jinan-chunbo-lu-sky-shuttle-YB",
+      "station_id": "cn-jinan-chunbo-lu",
+      "from_line_id": "cn-jinan-line-8",
+      "to_line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-chunbo-lu-8",
+      "to_stop_id": "cn-jinan-chunbo-lu-sky-shuttle-YB",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 159,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-chunbo-lu-sky-shuttle-YB-cn-jinan-chunbo-lu-8",
+      "station_id": "cn-jinan-chunbo-lu-sky-shuttle",
+      "from_line_id": "cn-jinan-line-yb",
+      "to_line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-chunbo-lu-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-chunbo-lu-8",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 159,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-dayang-1-cn-jinan-dayang-4",
+      "station_id": "cn-jinan-dayang",
+      "from_line_id": "cn-jinan-line-1",
+      "to_line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-dayang-1",
+      "to_stop_id": "cn-jinan-dayang-4",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-dayang-4-cn-jinan-dayang-1",
+      "station_id": "cn-jinan-dayang",
+      "from_line_id": "cn-jinan-line-4",
+      "to_line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-dayang-4",
+      "to_stop_id": "cn-jinan-dayang-1",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-fenghuang-beilu-2-cn-jinan-fenghuang-beilu-6",
+      "station_id": "cn-jinan-fenghuang-beilu",
+      "from_line_id": "cn-jinan-line-2",
+      "to_line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-fenghuang-beilu-2",
+      "to_stop_id": "cn-jinan-fenghuang-beilu-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-fenghuang-beilu-6-cn-jinan-fenghuang-beilu-2",
+      "station_id": "cn-jinan-fenghuang-beilu",
+      "from_line_id": "cn-jinan-line-6",
+      "to_line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-fenghuang-beilu-6",
+      "to_stop_id": "cn-jinan-fenghuang-beilu-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-jinandong-railway-station-3-cn-jinan-jinandong-railway-station-6",
+      "station_id": "cn-jinan-jinandong-railway-station",
+      "from_line_id": "cn-jinan-line-3",
+      "to_line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-3",
+      "to_stop_id": "cn-jinan-jinandong-railway-station-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-jinandong-railway-station-3-cn-jinan-jinandong-railway-station-jiyang-line-JY",
+      "station_id": "cn-jinan-jinandong-railway-station",
+      "from_line_id": "cn-jinan-line-3",
+      "to_line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-3",
+      "to_stop_id": "cn-jinan-jinandong-railway-station-jiyang-line-JY",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 176,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-jinandong-railway-station-6-cn-jinan-jinandong-railway-station-3",
+      "station_id": "cn-jinan-jinandong-railway-station",
+      "from_line_id": "cn-jinan-line-6",
+      "to_line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-6",
+      "to_stop_id": "cn-jinan-jinandong-railway-station-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-jinandong-railway-station-6-cn-jinan-jinandong-railway-station-jiyang-line-JY",
+      "station_id": "cn-jinan-jinandong-railway-station",
+      "from_line_id": "cn-jinan-line-6",
+      "to_line_id": "cn-jinan-line-jy",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-6",
+      "to_stop_id": "cn-jinan-jinandong-railway-station-jiyang-line-JY",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 176,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-jinandong-railway-station-jiyang-line-JY-cn-jinan-jinandong-railway-station-3",
+      "station_id": "cn-jinan-jinandong-railway-station-jiyang-line",
+      "from_line_id": "cn-jinan-line-jy",
+      "to_line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-jiyang-line-JY",
+      "to_stop_id": "cn-jinan-jinandong-railway-station-3",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 176,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-jinandong-railway-station-jiyang-line-JY-cn-jinan-jinandong-railway-station-6",
+      "station_id": "cn-jinan-jinandong-railway-station-jiyang-line",
+      "from_line_id": "cn-jinan-line-jy",
+      "to_line_id": "cn-jinan-line-6",
+      "from_stop_id": "cn-jinan-jinandong-railway-station-jiyang-line-JY",
+      "to_stop_id": "cn-jinan-jinandong-railway-station-6",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_STA_SUFFIX",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 176,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-lashan-2-cn-jinan-lashan-4",
+      "station_id": "cn-jinan-lashan",
+      "from_line_id": "cn-jinan-line-2",
+      "to_line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-lashan-2",
+      "to_stop_id": "cn-jinan-lashan-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-lashan-4-cn-jinan-lashan-2",
+      "station_id": "cn-jinan-lashan",
+      "from_line_id": "cn-jinan-line-4",
+      "to_line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-lashan-4",
+      "to_stop_id": "cn-jinan-lashan-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-licheng-no-2-high-school-tangye-campus-4-cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle-YB",
+      "station_id": "cn-jinan-licheng-no-2-high-school-tangye-campus",
+      "from_line_id": "cn-jinan-line-4",
+      "to_line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-4",
+      "to_stop_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle-YB",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 112,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle-YB-cn-jinan-licheng-no-2-high-school-tangye-campus-4",
+      "station_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle",
+      "from_line_id": "cn-jinan-line-yb",
+      "to_line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-licheng-no-2-high-school-tangye-campus-4",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 112,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-olympic-sports-center-3-cn-jinan-olympic-sports-center-4",
+      "station_id": "cn-jinan-olympic-sports-center",
+      "from_line_id": "cn-jinan-line-3",
+      "to_line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-olympic-sports-center-3",
+      "to_stop_id": "cn-jinan-olympic-sports-center-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-olympic-sports-center-4-cn-jinan-olympic-sports-center-3",
+      "station_id": "cn-jinan-olympic-sports-center",
+      "from_line_id": "cn-jinan-line-4",
+      "to_line_id": "cn-jinan-line-3",
+      "from_stop_id": "cn-jinan-olympic-sports-center-4",
+      "to_stop_id": "cn-jinan-olympic-sports-center-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-pengjiazhuang-2-cn-jinan-pengjiazhuang-4",
+      "station_id": "cn-jinan-pengjiazhuang",
+      "from_line_id": "cn-jinan-line-2",
+      "to_line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-pengjiazhuang-2",
+      "to_stop_id": "cn-jinan-pengjiazhuang-4",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-pengjiazhuang-2-cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "station_id": "cn-jinan-pengjiazhuang",
+      "from_line_id": "cn-jinan-line-2",
+      "to_line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-pengjiazhuang-2",
+      "to_stop_id": "cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 63,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-pengjiazhuang-4-cn-jinan-pengjiazhuang-2",
+      "station_id": "cn-jinan-pengjiazhuang",
+      "from_line_id": "cn-jinan-line-4",
+      "to_line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-pengjiazhuang-4",
+      "to_stop_id": "cn-jinan-pengjiazhuang-2",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-pengjiazhuang-4-cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "station_id": "cn-jinan-pengjiazhuang",
+      "from_line_id": "cn-jinan-line-4",
+      "to_line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-pengjiazhuang-4",
+      "to_stop_id": "cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 63,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-pengjiazhuang-sky-shuttle-YB-cn-jinan-pengjiazhuang-2",
+      "station_id": "cn-jinan-pengjiazhuang-sky-shuttle",
+      "from_line_id": "cn-jinan-line-yb",
+      "to_line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-pengjiazhuang-2",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 63,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-pengjiazhuang-sky-shuttle-YB-cn-jinan-pengjiazhuang-4",
+      "station_id": "cn-jinan-pengjiazhuang-sky-shuttle",
+      "from_line_id": "cn-jinan-line-yb",
+      "to_line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-pengjiazhuang-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-pengjiazhuang-4",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 63,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-shandong-polytechnic-8-cn-jinan-shandong-polytechnic-sky-shuttle-YB",
+      "station_id": "cn-jinan-shandong-polytechnic",
+      "from_line_id": "cn-jinan-line-8",
+      "to_line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-shandong-polytechnic-8",
+      "to_stop_id": "cn-jinan-shandong-polytechnic-sky-shuttle-YB",
+      "walk_time_seconds": 296,
+      "walk_distance_meters": 355,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 82,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-shandong-polytechnic-sky-shuttle-YB-cn-jinan-shandong-polytechnic-8",
+      "station_id": "cn-jinan-shandong-polytechnic-sky-shuttle",
+      "from_line_id": "cn-jinan-line-yb",
+      "to_line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-shandong-polytechnic-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-shandong-polytechnic-8",
+      "walk_time_seconds": 296,
+      "walk_distance_meters": 355,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 82,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-tangye-4-cn-jinan-tangye-sky-shuttle-YB",
+      "station_id": "cn-jinan-tangye",
+      "from_line_id": "cn-jinan-line-4",
+      "to_line_id": "cn-jinan-line-yb",
+      "from_stop_id": "cn-jinan-tangye-4",
+      "to_stop_id": "cn-jinan-tangye-sky-shuttle-YB",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 139,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-tangye-sky-shuttle-YB-cn-jinan-tangye-4",
+      "station_id": "cn-jinan-tangye-sky-shuttle",
+      "from_line_id": "cn-jinan-line-yb",
+      "to_line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-tangye-sky-shuttle-YB",
+      "to_stop_id": "cn-jinan-tangye-4",
+      "walk_time_seconds": 462,
+      "walk_distance_meters": 554,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_EXACT",
+        "rules_fired": [
+          "NAME_EXACT",
+          "NAME_TOKEN"
+        ],
+        "dist_m": 139,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-wangfuzhuang-1-cn-jinan-wangfuzhuang-2",
+      "station_id": "cn-jinan-wangfuzhuang",
+      "from_line_id": "cn-jinan-line-1",
+      "to_line_id": "cn-jinan-line-2",
+      "from_stop_id": "cn-jinan-wangfuzhuang-1",
+      "to_stop_id": "cn-jinan-wangfuzhuang-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-wangfuzhuang-2-cn-jinan-wangfuzhuang-1",
+      "station_id": "cn-jinan-wangfuzhuang",
+      "from_line_id": "cn-jinan-line-2",
+      "to_line_id": "cn-jinan-line-1",
+      "from_stop_id": "cn-jinan-wangfuzhuang-2",
+      "to_stop_id": "cn-jinan-wangfuzhuang-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-xingcun-lijiaoqiao-east-4-cn-jinan-xingcun-lijiaoqiao-east-8",
+      "station_id": "cn-jinan-xingcun-lijiaoqiao-east",
+      "from_line_id": "cn-jinan-line-4",
+      "to_line_id": "cn-jinan-line-8",
+      "from_stop_id": "cn-jinan-xingcun-lijiaoqiao-east-4",
+      "to_stop_id": "cn-jinan-xingcun-lijiaoqiao-east-8",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-jinan-xingcun-lijiaoqiao-east-8-cn-jinan-xingcun-lijiaoqiao-east-4",
+      "station_id": "cn-jinan-xingcun-lijiaoqiao-east",
+      "from_line_id": "cn-jinan-line-8",
+      "to_line_id": "cn-jinan-line-4",
+      "from_stop_id": "cn-jinan-xingcun-lijiaoqiao-east-8",
+      "to_stop_id": "cn-jinan-xingcun-lijiaoqiao-east-4",
+      "walk_time_seconds": 122,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}
