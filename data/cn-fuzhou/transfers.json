@@ -2,19 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-fuzhou",
-  "generated_at": "2026-10-11T12:26:33.226Z",
-  "source": [
-    {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-10-11T12:26:33.226Z",
-      "license": "custom",
-      "license_url": null,
-      "attribution": "Baidu Maps",
-      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
-    }
-  ],
+  "generated_at": "2026-10-12T11:00:52.858Z",
+  "source": [],
   "records": [
     {
       "id": "xfer-cn-fuzhou-chengmen-1-cn-fuzhou-chengmen-4",
@@ -23,12 +12,8 @@
       "to_line_id": "cn-fuzhou-line-4",
       "from_stop_id": "cn-fuzhou-chengmen-1",
       "to_stop_id": "cn-fuzhou-chengmen-4",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-chengmen-4-cn-fuzhou-chengmen-1",
@@ -37,12 +22,8 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-chengmen-4",
       "to_stop_id": "cn-fuzhou-chengmen-1",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-difengjiang-4-cn-fuzhou-difengjiang-5",
@@ -51,12 +32,8 @@
       "to_line_id": "cn-fuzhou-line-5",
       "from_stop_id": "cn-fuzhou-difengjiang-4",
       "to_stop_id": "cn-fuzhou-difengjiang-5",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-difengjiang-4-cn-fuzhou-difengjiang-滨海快线",
@@ -65,12 +42,8 @@
       "to_line_id": "cn-fuzhou-line-eg37cz",
       "from_stop_id": "cn-fuzhou-difengjiang-4",
       "to_stop_id": "cn-fuzhou-difengjiang-滨海快线",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-difengjiang-5-cn-fuzhou-difengjiang-4",
@@ -79,12 +52,8 @@
       "to_line_id": "cn-fuzhou-line-4",
       "from_stop_id": "cn-fuzhou-difengjiang-5",
       "to_stop_id": "cn-fuzhou-difengjiang-4",
-      "walk_time_seconds": 122,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 146,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-difengjiang-5-cn-fuzhou-difengjiang-滨海快线",
@@ -93,12 +62,8 @@
       "to_line_id": "cn-fuzhou-line-eg37cz",
       "from_stop_id": "cn-fuzhou-difengjiang-5",
       "to_stop_id": "cn-fuzhou-difengjiang-滨海快线",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-difengjiang-滨海快线-cn-fuzhou-difengjiang-4",
@@ -107,12 +72,8 @@
       "to_line_id": "cn-fuzhou-line-4",
       "from_stop_id": "cn-fuzhou-difengjiang-滨海快线",
       "to_stop_id": "cn-fuzhou-difengjiang-4",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-difengjiang-滨海快线-cn-fuzhou-difengjiang-5",
@@ -121,12 +82,8 @@
       "to_line_id": "cn-fuzhou-line-5",
       "from_stop_id": "cn-fuzhou-difengjiang-滨海快线",
       "to_stop_id": "cn-fuzhou-difengjiang-5",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-dongjiekou-1-cn-fuzhou-dongjiekou-4",
@@ -135,12 +92,8 @@
       "to_line_id": "cn-fuzhou-line-4",
       "from_stop_id": "cn-fuzhou-dongjiekou-1",
       "to_stop_id": "cn-fuzhou-dongjiekou-4",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-dongjiekou-4-cn-fuzhou-dongjiekou-1",
@@ -149,12 +102,8 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-dongjiekou-4",
       "to_stop_id": "cn-fuzhou-dongjiekou-1",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-dongmen-4-cn-fuzhou-dongmen-滨海快线",
@@ -163,12 +112,8 @@
       "to_line_id": "cn-fuzhou-line-eg37cz",
       "from_stop_id": "cn-fuzhou-dongmen-4",
       "to_stop_id": "cn-fuzhou-dongmen-滨海快线",
-      "walk_time_seconds": 205,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 246,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-dongmen-滨海快线-cn-fuzhou-dongmen-4",
@@ -177,12 +122,8 @@
       "to_line_id": "cn-fuzhou-line-4",
       "from_stop_id": "cn-fuzhou-dongmen-滨海快线",
       "to_stop_id": "cn-fuzhou-dongmen-4",
-      "walk_time_seconds": 205,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 246,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-fuzhou-railway-station-1-cn-fuzhou-fuzhou-railway-station-滨海快线",
@@ -191,12 +132,8 @@
       "to_line_id": "cn-fuzhou-line-eg37cz",
       "from_stop_id": "cn-fuzhou-fuzhou-railway-station-1",
       "to_stop_id": "cn-fuzhou-fuzhou-railway-station-滨海快线",
-      "walk_time_seconds": 205,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 246,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-fuzhou-railway-station-滨海快线-cn-fuzhou-fuzhou-railway-station-1",
@@ -205,12 +142,8 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-fuzhou-railway-station-滨海快线",
       "to_stop_id": "cn-fuzhou-fuzhou-railway-station-1",
-      "walk_time_seconds": 205,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 246,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-fuzhou-south-railway-station-1-cn-fuzhou-fuzhou-south-railway-station-5",
@@ -219,12 +152,8 @@
       "to_line_id": "cn-fuzhou-line-5",
       "from_stop_id": "cn-fuzhou-fuzhou-south-railway-station-1",
       "to_stop_id": "cn-fuzhou-fuzhou-south-railway-station-5",
-      "walk_time_seconds": 337,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 404,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-fuzhou-south-railway-station-5-cn-fuzhou-fuzhou-south-railway-station-1",
@@ -233,12 +162,8 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-fuzhou-south-railway-station-5",
       "to_stop_id": "cn-fuzhou-fuzhou-south-railway-station-1",
-      "walk_time_seconds": 337,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 404,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-hongtang-4-cn-fuzhou-hongtang-5",
@@ -247,12 +172,8 @@
       "to_line_id": "cn-fuzhou-line-5",
       "from_stop_id": "cn-fuzhou-hongtang-4",
       "to_stop_id": "cn-fuzhou-hongtang-5",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-hongtang-5-cn-fuzhou-hongtang-4",
@@ -261,12 +182,8 @@
       "to_line_id": "cn-fuzhou-line-4",
       "from_stop_id": "cn-fuzhou-hongtang-5",
       "to_stop_id": "cn-fuzhou-hongtang-4",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-jinshan-2-cn-fuzhou-jinshan-5",
@@ -275,12 +192,8 @@
       "to_line_id": "cn-fuzhou-line-5",
       "from_stop_id": "cn-fuzhou-jinshan-2",
       "to_stop_id": "cn-fuzhou-jinshan-5",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-jinshan-5-cn-fuzhou-jinshan-2",
@@ -289,12 +202,8 @@
       "to_line_id": "cn-fuzhou-line-2",
       "from_stop_id": "cn-fuzhou-jinshan-5",
       "to_stop_id": "cn-fuzhou-jinshan-2",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-liangcuo-1-cn-fuzhou-liangcuo-6",
@@ -303,12 +212,8 @@
       "to_line_id": "cn-fuzhou-line-6",
       "from_stop_id": "cn-fuzhou-liangcuo-1",
       "to_stop_id": "cn-fuzhou-liangcuo-6",
-      "walk_time_seconds": 122,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 146,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-liangcuo-6-cn-fuzhou-liangcuo-1",
@@ -317,12 +222,8 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-liangcuo-6",
       "to_stop_id": "cn-fuzhou-liangcuo-1",
-      "walk_time_seconds": 122,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 146,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-linpu-4-cn-fuzhou-linpu-6",
@@ -331,12 +232,8 @@
       "to_line_id": "cn-fuzhou-line-6",
       "from_stop_id": "cn-fuzhou-linpu-4",
       "to_stop_id": "cn-fuzhou-linpu-6",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-linpu-6-cn-fuzhou-linpu-4",
@@ -345,12 +242,8 @@
       "to_line_id": "cn-fuzhou-line-4",
       "from_stop_id": "cn-fuzhou-linpu-6",
       "to_stop_id": "cn-fuzhou-linpu-4",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-nanmendou-1-cn-fuzhou-nanmendou-2",
@@ -359,12 +252,8 @@
       "to_line_id": "cn-fuzhou-line-2",
       "from_stop_id": "cn-fuzhou-nanmendou-1",
       "to_stop_id": "cn-fuzhou-nanmendou-2",
-      "walk_time_seconds": 290,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 348,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-nanmendou-2-cn-fuzhou-nanmendou-1",
@@ -373,12 +262,8 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-nanmendou-2",
       "to_stop_id": "cn-fuzhou-nanmendou-1",
-      "walk_time_seconds": 199,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 236,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-qianyu-2-cn-fuzhou-qianyu-4",
@@ -387,12 +272,8 @@
       "to_line_id": "cn-fuzhou-line-4",
       "from_stop_id": "cn-fuzhou-qianyu-2",
       "to_stop_id": "cn-fuzhou-qianyu-4",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-qianyu-4-cn-fuzhou-qianyu-2",
@@ -401,12 +282,8 @@
       "to_line_id": "cn-fuzhou-line-2",
       "from_stop_id": "cn-fuzhou-qianyu-4",
       "to_stop_id": "cn-fuzhou-qianyu-2",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-sanchajie-1-cn-fuzhou-sanchajie-滨海快线",
@@ -415,12 +292,8 @@
       "to_line_id": "cn-fuzhou-line-eg37cz",
       "from_stop_id": "cn-fuzhou-sanchajie-1",
       "to_stop_id": "cn-fuzhou-sanchajie-滨海快线",
-      "walk_time_seconds": 225,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 270,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-sanchajie-滨海快线-cn-fuzhou-sanchajie-1",
@@ -429,12 +302,8 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-sanchajie-滨海快线",
       "to_stop_id": "cn-fuzhou-sanchajie-1",
-      "walk_time_seconds": 205,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 246,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-xiayang-1-cn-fuzhou-xiayang-6",
@@ -443,12 +312,8 @@
       "to_line_id": "cn-fuzhou-line-6",
       "from_stop_id": "cn-fuzhou-xiayang-1",
       "to_stop_id": "cn-fuzhou-xiayang-6",
-      "walk_time_seconds": 122,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 146,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     },
     {
       "id": "xfer-cn-fuzhou-xiayang-6-cn-fuzhou-xiayang-1",
@@ -457,12 +322,8 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-xiayang-6",
       "to_stop_id": "cn-fuzhou-xiayang-1",
-      "walk_time_seconds": 193,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 231,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "walk_time_seconds": 120,
+      "source_id": "fzmr-routing-default"
     }
   ]
 }

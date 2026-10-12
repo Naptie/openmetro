@@ -2,19 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-beijing",
-  "generated_at": "2026-09-24T16:57:42.501Z",
-  "source": [
-    {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-09-24T16:57:42.501Z",
-      "license": "custom",
-      "license_url": null,
-      "attribution": "Baidu Maps",
-      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
-    }
-  ],
+  "generated_at": "2026-10-12T11:01:37.041Z",
+  "source": [],
   "records": [
     {
       "id": "xfer-cn-beijing-anhua-qiao-12-cn-beijing-anhua-qiao-8",
@@ -42,7 +31,9 @@
       "from_line_id": "cn-beijing-line-10",
       "to_line_id": "cn-beijing-line-89",
       "from_stop_id": "cn-beijing-bagou-10",
-      "to_stop_id": "cn-beijing-bagou-89"
+      "to_stop_id": "cn-beijing-bagou-89",
+      "walk_time_seconds": 300,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-bagou-89-cn-beijing-bagou-10",
@@ -234,7 +225,9 @@
       "from_line_id": "cn-beijing-line-88",
       "to_line_id": "cn-beijing-line-10",
       "from_stop_id": "cn-beijing-caoqiao-88",
-      "to_stop_id": "cn-beijing-caoqiao-10"
+      "to_stop_id": "cn-beijing-caoqiao-10",
+      "walk_time_seconds": 300,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-caoqiao-88-cn-beijing-caoqiao-19",
@@ -242,7 +235,9 @@
       "from_line_id": "cn-beijing-line-88",
       "to_line_id": "cn-beijing-line-19",
       "from_stop_id": "cn-beijing-caoqiao-88",
-      "to_stop_id": "cn-beijing-caoqiao-19"
+      "to_stop_id": "cn-beijing-caoqiao-19",
+      "walk_time_seconds": 300,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-capital-univ-of-economics-business-10-cn-beijing-capital-univ-of-economics-business-95",
@@ -522,7 +517,9 @@
       "from_line_id": "cn-beijing-line-12",
       "to_line_id": "cn-beijing-line-3",
       "from_stop_id": "cn-beijing-dongbabei-12",
-      "to_stop_id": "cn-beijing-dongbabei-3"
+      "to_stop_id": "cn-beijing-dongbabei-3",
+      "walk_time_seconds": 210,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-dongbabei-3-cn-beijing-dongbabei-12",
@@ -530,7 +527,9 @@
       "from_line_id": "cn-beijing-line-3",
       "to_line_id": "cn-beijing-line-12",
       "from_stop_id": "cn-beijing-dongbabei-3",
-      "to_stop_id": "cn-beijing-dongbabei-12"
+      "to_stop_id": "cn-beijing-dongbabei-12",
+      "walk_time_seconds": 130,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-dongdan-1-cn-beijing-dongdan-5",
@@ -582,7 +581,9 @@
       "from_line_id": "cn-beijing-line-95",
       "to_line_id": "cn-beijing-line-16",
       "from_stop_id": "cn-beijing-dongguantou-nan-95",
-      "to_stop_id": "cn-beijing-dongguantou-nan-16"
+      "to_stop_id": "cn-beijing-dongguantou-nan-16",
+      "walk_time_seconds": 370,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-dongsi-5-cn-beijing-dongsi-6",
@@ -880,7 +881,9 @@
       "from_line_id": "cn-beijing-line-9",
       "to_line_id": "cn-beijing-line-16",
       "from_stop_id": "cn-beijing-guojia-tushuguan-9",
-      "to_stop_id": "cn-beijing-guojia-tushuguan-16"
+      "to_stop_id": "cn-beijing-guojia-tushuguan-16",
+      "walk_time_seconds": 319,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-guojia-tushuguan-9-cn-beijing-guojia-tushuguan-4",
@@ -1132,7 +1135,9 @@
       "from_line_id": "cn-beijing-line-6",
       "to_line_id": "cn-beijing-line-11",
       "from_stop_id": "cn-beijing-jin-anqiao-6",
-      "to_stop_id": "cn-beijing-jin-anqiao-11"
+      "to_stop_id": "cn-beijing-jin-anqiao-11",
+      "walk_time_seconds": 357,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-jin-anqiao-6-cn-beijing-jin-anqiao-91",
@@ -1332,7 +1337,9 @@
       "from_line_id": "cn-beijing-line-73",
       "to_line_id": "cn-beijing-line-16",
       "from_stop_id": "cn-beijing-malianwa-73",
-      "to_stop_id": "cn-beijing-malianwa-16"
+      "to_stop_id": "cn-beijing-malianwa-16",
+      "walk_time_seconds": 451,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-military-museum-1-cn-beijing-military-museum-9",
@@ -1370,7 +1377,9 @@
       "from_line_id": "cn-beijing-line-19",
       "to_line_id": "cn-beijing-line-10",
       "from_stop_id": "cn-beijing-mudanyuan-19",
-      "to_stop_id": "cn-beijing-mudanyuan-10"
+      "to_stop_id": "cn-beijing-mudanyuan-10",
+      "walk_time_seconds": 260,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-muxidi-1-cn-beijing-muxidi-16",
@@ -1490,7 +1499,9 @@
       "from_line_id": "cn-beijing-line-1",
       "to_line_id": "cn-beijing-line-6",
       "from_stop_id": "cn-beijing-pingguoyuan-1",
-      "to_stop_id": "cn-beijing-pingguoyuan-6"
+      "to_stop_id": "cn-beijing-pingguoyuan-6",
+      "walk_time_seconds": 234,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-pingguoyuan-1-cn-beijing-pingguoyuan-91",
@@ -1498,7 +1509,9 @@
       "from_line_id": "cn-beijing-line-1",
       "to_line_id": "cn-beijing-line-91",
       "from_stop_id": "cn-beijing-pingguoyuan-1",
-      "to_stop_id": "cn-beijing-pingguoyuan-91"
+      "to_stop_id": "cn-beijing-pingguoyuan-91",
+      "walk_time_seconds": 234,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-pingguoyuan-6-cn-beijing-pingguoyuan-1",
@@ -1656,13 +1669,7 @@
       "from_line_id": "cn-beijing-line-10",
       "to_line_id": "cn-beijing-line-12",
       "from_stop_id": "cn-beijing-sanyuan-qiao-10",
-      "to_stop_id": "cn-beijing-sanyuan-qiao-12",
-      "walk_time_seconds": 381,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 457,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "to_stop_id": "cn-beijing-sanyuan-qiao-12"
     },
     {
       "id": "xfer-cn-beijing-sanyuan-qiao-10-cn-beijing-sanyuan-qiao-98",
@@ -1708,13 +1715,7 @@
       "from_line_id": "cn-beijing-line-98",
       "to_line_id": "cn-beijing-line-12",
       "from_stop_id": "cn-beijing-sanyuan-qiao-98",
-      "to_stop_id": "cn-beijing-sanyuan-qiao-12",
-      "walk_time_seconds": 337,
-      "source_id": "baidu-transit",
-      "walk_distance_meters": 404,
-      "extras": {
-        "walk_source": "baidu-transit"
-      }
+      "to_stop_id": "cn-beijing-sanyuan-qiao-12"
     },
     {
       "id": "xfer-cn-beijing-shaoyaoju-10-cn-beijing-shaoyaoju-13",
@@ -1958,7 +1959,9 @@
       "from_line_id": "cn-beijing-line-17",
       "to_line_id": "cn-beijing-line-73",
       "from_stop_id": "cn-beijing-tiantongyuandong-17",
-      "to_stop_id": "cn-beijing-tiantongyuandong-73"
+      "to_stop_id": "cn-beijing-tiantongyuandong-73",
+      "walk_time_seconds": 254,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-tiantongyuandong-73-cn-beijing-tiantongyuandong-17",
@@ -2238,7 +2241,9 @@
       "from_line_id": "cn-beijing-line-4",
       "to_line_id": "cn-beijing-line-19",
       "from_stop_id": "cn-beijing-xingong-4",
-      "to_stop_id": "cn-beijing-xingong-19"
+      "to_stop_id": "cn-beijing-xingong-19",
+      "walk_time_seconds": 155,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-xitucheng-10-cn-beijing-xitucheng-94",
@@ -2346,7 +2351,9 @@
       "from_line_id": "cn-beijing-line-92",
       "to_line_id": "cn-beijing-line-95",
       "from_stop_id": "cn-beijing-yancun-dong-92",
-      "to_stop_id": "cn-beijing-yancun-dong-95"
+      "to_stop_id": "cn-beijing-yancun-dong-95",
+      "walk_time_seconds": 68,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-yancun-dong-95-cn-beijing-yancun-dong-92",
@@ -2354,7 +2361,9 @@
       "from_line_id": "cn-beijing-line-95",
       "to_line_id": "cn-beijing-line-92",
       "from_stop_id": "cn-beijing-yancun-dong-95",
-      "to_stop_id": "cn-beijing-yancun-dong-92"
+      "to_stop_id": "cn-beijing-yancun-dong-92",
+      "walk_time_seconds": 158,
+      "source_id": "bjsubway-searchstartend"
     },
     {
       "id": "xfer-cn-beijing-yong-an-li-1-cn-beijing-yong-an-li-17",
