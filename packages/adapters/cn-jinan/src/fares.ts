@@ -18,9 +18,9 @@
  * segment km are harvested one adjacent pair at a time from the Baidu
  * Direction planner (in-vehicle leg distance), with a haversine fallback.
  */
-import { readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { entitySchemaUrl, haversineKm, proxyUrl } from '@openmetro/core';
+import { adapterCacheDir, entitySchemaUrl, haversineKm, proxyUrl } from '@openmetro/core';
 import { JINAN_LINES } from './lines.js';
 
 export const JINAN_MILEAGE_TARIFF = {
@@ -59,10 +59,10 @@ interface DistanceCache {
   distances: Record<string, number>;
 }
 
-async function loadDistanceCache(dataDir: string): Promise<DistanceCache> {
+async function loadDistanceCache(): Promise<DistanceCache> {
   try {
     const raw = JSON.parse(
-      await readFile(join(dataDir, 'official-distances.json'), 'utf-8')
+      await readFile(join(adapterCacheDir('cn-jinan'), 'official-distances.json'), 'utf-8')
     ) as DistanceCache;
     if (raw && typeof raw.distances === 'object') return raw;
   } catch {
@@ -186,7 +186,7 @@ export async function harvestAndApplySegmentDistances(
     }
   }
 
-  const cache = await loadDistanceCache(dataDir);
+  const cache = await loadDistanceCache();
   let harvested = 0;
   let cached = 0;
   let misses = 0;
@@ -215,8 +215,9 @@ export async function harvestAndApplySegmentDistances(
     await sleep(delayMs);
   }
   cache.harvestedAt = new Date().toISOString();
+  await mkdir(adapterCacheDir('cn-jinan'), { recursive: true });
   await writeFile(
-    join(dataDir, 'official-distances.json'),
+    join(adapterCacheDir('cn-jinan'), 'official-distances.json'),
     `${JSON.stringify(cache, null, 2)}\n`,
     'utf-8'
   );

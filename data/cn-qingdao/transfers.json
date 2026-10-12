@@ -1,0 +1,608 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-qingdao",
+  "generated_at": "2026-10-12T07:28:30.334Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-12T07:28:30.334Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-qingdao-cuobuling-3-cn-qingdao-cuobuling-4",
+      "station_id": "cn-qingdao-cuobuling",
+      "from_line_id": "cn-qingdao-line-3",
+      "to_line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-cuobuling-3",
+      "to_stop_id": "cn-qingdao-cuobuling-4",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-cuobuling-4-cn-qingdao-cuobuling-3",
+      "station_id": "cn-qingdao-cuobuling",
+      "from_line_id": "cn-qingdao-line-4",
+      "to_line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-cuobuling-4",
+      "to_stop_id": "cn-qingdao-cuobuling-3",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-guanxiangshan-qingdao-municipal-hospital-1-cn-qingdao-guanxiangshan-qingdao-municipal-hospital-4",
+      "station_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital",
+      "from_line_id": "cn-qingdao-line-1",
+      "to_line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital-1",
+      "to_stop_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital-4",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-guanxiangshan-qingdao-municipal-hospital-4-cn-qingdao-guanxiangshan-qingdao-municipal-hospital-1",
+      "station_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital",
+      "from_line_id": "cn-qingdao-line-4",
+      "to_line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital-4",
+      "to_stop_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital-1",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-haipo-bridge-hiser-hospital-1-cn-qingdao-haipo-bridge-hiser-hospital-4",
+      "station_id": "cn-qingdao-haipo-bridge-hiser-hospital",
+      "from_line_id": "cn-qingdao-line-1",
+      "to_line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-haipo-bridge-hiser-hospital-1",
+      "to_stop_id": "cn-qingdao-haipo-bridge-hiser-hospital-4",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-haipo-bridge-hiser-hospital-4-cn-qingdao-haipo-bridge-hiser-hospital-1",
+      "station_id": "cn-qingdao-haipo-bridge-hiser-hospital",
+      "from_line_id": "cn-qingdao-line-4",
+      "to_line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-haipo-bridge-hiser-hospital-4",
+      "to_stop_id": "cn-qingdao-haipo-bridge-hiser-hospital-1",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-hall-of-the-people-3-cn-qingdao-hall-of-the-people-4",
+      "station_id": "cn-qingdao-hall-of-the-people",
+      "from_line_id": "cn-qingdao-line-3",
+      "to_line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-hall-of-the-people-3",
+      "to_stop_id": "cn-qingdao-hall-of-the-people-4",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-hall-of-the-people-4-cn-qingdao-hall-of-the-people-3",
+      "station_id": "cn-qingdao-hall-of-the-people",
+      "from_line_id": "cn-qingdao-line-4",
+      "to_line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-hall-of-the-people-4",
+      "to_stop_id": "cn-qingdao-hall-of-the-people-3",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-jinggangshan-rd-1-cn-qingdao-jinggangshan-rd-13",
+      "station_id": "cn-qingdao-jinggangshan-rd",
+      "from_line_id": "cn-qingdao-line-1",
+      "to_line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-jinggangshan-rd-1",
+      "to_stop_id": "cn-qingdao-jinggangshan-rd-13",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-jinggangshan-rd-13-cn-qingdao-jinggangshan-rd-1",
+      "station_id": "cn-qingdao-jinggangshan-rd",
+      "from_line_id": "cn-qingdao-line-13",
+      "to_line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-jinggangshan-rd-13",
+      "to_stop_id": "cn-qingdao-jinggangshan-rd-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-liaoyang-east-rd-2-cn-qingdao-liaoyang-east-rd-4",
+      "station_id": "cn-qingdao-liaoyang-east-rd",
+      "from_line_id": "cn-qingdao-line-2",
+      "to_line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-liaoyang-east-rd-2",
+      "to_stop_id": "cn-qingdao-liaoyang-east-rd-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-liaoyang-east-rd-4-cn-qingdao-liaoyang-east-rd-2",
+      "station_id": "cn-qingdao-liaoyang-east-rd",
+      "from_line_id": "cn-qingdao-line-4",
+      "to_line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-liaoyang-east-rd-4",
+      "to_stop_id": "cn-qingdao-liaoyang-east-rd-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-licun-2-cn-qingdao-licun-3",
+      "station_id": "cn-qingdao-licun",
+      "from_line_id": "cn-qingdao-line-2",
+      "to_line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-licun-2",
+      "to_stop_id": "cn-qingdao-licun-3",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-licun-3-cn-qingdao-licun-2",
+      "station_id": "cn-qingdao-licun",
+      "from_line_id": "cn-qingdao-line-3",
+      "to_line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-licun-3",
+      "to_stop_id": "cn-qingdao-licun-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-may-4th-square-2-cn-qingdao-may-4th-square-3",
+      "station_id": "cn-qingdao-may-4th-square",
+      "from_line_id": "cn-qingdao-line-2",
+      "to_line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-may-4th-square-2",
+      "to_stop_id": "cn-qingdao-may-4th-square-3",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-may-4th-square-2-cn-qingdao-may-4th-square-8",
+      "station_id": "cn-qingdao-may-4th-square",
+      "from_line_id": "cn-qingdao-line-2",
+      "to_line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-may-4th-square-2",
+      "to_stop_id": "cn-qingdao-may-4th-square-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-may-4th-square-3-cn-qingdao-may-4th-square-2",
+      "station_id": "cn-qingdao-may-4th-square",
+      "from_line_id": "cn-qingdao-line-3",
+      "to_line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-may-4th-square-3",
+      "to_stop_id": "cn-qingdao-may-4th-square-2",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-may-4th-square-3-cn-qingdao-may-4th-square-8",
+      "station_id": "cn-qingdao-may-4th-square",
+      "from_line_id": "cn-qingdao-line-3",
+      "to_line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-may-4th-square-3",
+      "to_stop_id": "cn-qingdao-may-4th-square-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-may-4th-square-8-cn-qingdao-may-4th-square-2",
+      "station_id": "cn-qingdao-may-4th-square",
+      "from_line_id": "cn-qingdao-line-8",
+      "to_line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-may-4th-square-8",
+      "to_stop_id": "cn-qingdao-may-4th-square-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-may-4th-square-8-cn-qingdao-may-4th-square-3",
+      "station_id": "cn-qingdao-may-4th-square",
+      "from_line_id": "cn-qingdao-line-8",
+      "to_line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-may-4th-square-8",
+      "to_stop_id": "cn-qingdao-may-4th-square-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-miaoling-rd-11-cn-qingdao-miaoling-rd-2",
+      "station_id": "cn-qingdao-miaoling-rd",
+      "from_line_id": "cn-qingdao-line-11",
+      "to_line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-miaoling-rd-11",
+      "to_stop_id": "cn-qingdao-miaoling-rd-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-miaoling-rd-2-cn-qingdao-miaoling-rd-11",
+      "station_id": "cn-qingdao-miaoling-rd",
+      "from_line_id": "cn-qingdao-line-2",
+      "to_line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-miaoling-rd-2",
+      "to_stop_id": "cn-qingdao-miaoling-rd-11",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-qingdao-north-railway-station-1-cn-qingdao-qingdao-north-railway-station-3",
+      "station_id": "cn-qingdao-qingdao-north-railway-station",
+      "from_line_id": "cn-qingdao-line-1",
+      "to_line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-1",
+      "to_stop_id": "cn-qingdao-qingdao-north-railway-station-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-qingdao-north-railway-station-1-cn-qingdao-qingdao-north-railway-station-8",
+      "station_id": "cn-qingdao-qingdao-north-railway-station",
+      "from_line_id": "cn-qingdao-line-1",
+      "to_line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-1",
+      "to_stop_id": "cn-qingdao-qingdao-north-railway-station-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-qingdao-north-railway-station-3-cn-qingdao-qingdao-north-railway-station-1",
+      "station_id": "cn-qingdao-qingdao-north-railway-station",
+      "from_line_id": "cn-qingdao-line-3",
+      "to_line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-3",
+      "to_stop_id": "cn-qingdao-qingdao-north-railway-station-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-qingdao-north-railway-station-3-cn-qingdao-qingdao-north-railway-station-8",
+      "station_id": "cn-qingdao-qingdao-north-railway-station",
+      "from_line_id": "cn-qingdao-line-3",
+      "to_line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-3",
+      "to_stop_id": "cn-qingdao-qingdao-north-railway-station-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-qingdao-north-railway-station-8-cn-qingdao-qingdao-north-railway-station-1",
+      "station_id": "cn-qingdao-qingdao-north-railway-station",
+      "from_line_id": "cn-qingdao-line-8",
+      "to_line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-8",
+      "to_stop_id": "cn-qingdao-qingdao-north-railway-station-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-qingdao-north-railway-station-8-cn-qingdao-qingdao-north-railway-station-3",
+      "station_id": "cn-qingdao-qingdao-north-railway-station",
+      "from_line_id": "cn-qingdao-line-8",
+      "to_line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-8",
+      "to_stop_id": "cn-qingdao-qingdao-north-railway-station-3",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-qingdao-railway-station-1-cn-qingdao-qingdao-railway-station-3",
+      "station_id": "cn-qingdao-qingdao-railway-station",
+      "from_line_id": "cn-qingdao-line-1",
+      "to_line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-qingdao-railway-station-1",
+      "to_stop_id": "cn-qingdao-qingdao-railway-station-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-qingdao-railway-station-3-cn-qingdao-qingdao-railway-station-1",
+      "station_id": "cn-qingdao-qingdao-railway-station",
+      "from_line_id": "cn-qingdao-line-3",
+      "to_line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-qingdao-railway-station-3",
+      "to_stop_id": "cn-qingdao-qingdao-railway-station-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-taidong-1-cn-qingdao-taidong-2",
+      "station_id": "cn-qingdao-taidong",
+      "from_line_id": "cn-qingdao-line-1",
+      "to_line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-taidong-1",
+      "to_stop_id": "cn-qingdao-taidong-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-taidong-2-cn-qingdao-taidong-1",
+      "station_id": "cn-qingdao-taidong",
+      "from_line_id": "cn-qingdao-line-2",
+      "to_line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-taidong-2",
+      "to_stop_id": "cn-qingdao-taidong-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-taishan-rd-2-cn-qingdao-taishan-rd-4",
+      "station_id": "cn-qingdao-taishan-rd",
+      "from_line_id": "cn-qingdao-line-2",
+      "to_line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-taishan-rd-2",
+      "to_stop_id": "cn-qingdao-taishan-rd-4",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-taishan-rd-4-cn-qingdao-taishan-rd-2",
+      "station_id": "cn-qingdao-taishan-rd",
+      "from_line_id": "cn-qingdao-line-4",
+      "to_line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-taishan-rd-4",
+      "to_stop_id": "cn-qingdao-taishan-rd-2",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-wangjiagang-1-cn-qingdao-wangjiagang-6",
+      "station_id": "cn-qingdao-wangjiagang",
+      "from_line_id": "cn-qingdao-line-1",
+      "to_line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-wangjiagang-1",
+      "to_stop_id": "cn-qingdao-wangjiagang-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-wangjiagang-6-cn-qingdao-wangjiagang-1",
+      "station_id": "cn-qingdao-wangjiagang",
+      "from_line_id": "cn-qingdao-line-6",
+      "to_line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-wangjiagang-6",
+      "to_stop_id": "cn-qingdao-wangjiagang-1",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-xintun-13-cn-qingdao-xintun-6",
+      "station_id": "cn-qingdao-xintun",
+      "from_line_id": "cn-qingdao-line-13",
+      "to_line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-xintun-13",
+      "to_stop_id": "cn-qingdao-xintun-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-xintun-6-cn-qingdao-xintun-13",
+      "station_id": "cn-qingdao-xintun",
+      "from_line_id": "cn-qingdao-line-6",
+      "to_line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-xintun-6",
+      "to_stop_id": "cn-qingdao-xintun-13",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-xiwujiacun-4-cn-qingdao-xiwujiacun-8",
+      "station_id": "cn-qingdao-xiwujiacun",
+      "from_line_id": "cn-qingdao-line-4",
+      "to_line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-xiwujiacun-4",
+      "to_stop_id": "cn-qingdao-xiwujiacun-8",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-xiwujiacun-8-cn-qingdao-xiwujiacun-4",
+      "station_id": "cn-qingdao-xiwujiacun",
+      "from_line_id": "cn-qingdao-line-8",
+      "to_line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-xiwujiacun-8",
+      "to_stop_id": "cn-qingdao-xiwujiacun-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-zhangcun-11-cn-qingdao-zhangcun-4",
+      "station_id": "cn-qingdao-zhangcun",
+      "from_line_id": "cn-qingdao-line-11",
+      "to_line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-zhangcun-11",
+      "to_stop_id": "cn-qingdao-zhangcun-4",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-qingdao-zhangcun-4-cn-qingdao-zhangcun-11",
+      "station_id": "cn-qingdao-zhangcun",
+      "from_line_id": "cn-qingdao-line-4",
+      "to_line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-zhangcun-4",
+      "to_stop_id": "cn-qingdao-zhangcun-11",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

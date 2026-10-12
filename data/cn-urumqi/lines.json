@@ -1,0 +1,82 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-urumqi",
+  "generated_at": "2026-10-12T09:03:47.197Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-urumqi-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "aliases": [
+        "轨道交通1号线"
+      ],
+      "color": "#2249a3",
+      "short_name": "1",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "amap-subway-6501",
+          "id": "1号线"
+        },
+        {
+          "source": "amap-subway-6501",
+          "id": "900000073875"
+        },
+        {
+          "source": "amap-subway-6501",
+          "id": "900000073876"
+        }
+      ],
+      "extras": {
+        "names_source": "source",
+        "amap_color": "2249A3",
+        "amap_name": "1号线",
+        "baidu_vehicle_name": "地铁1号线",
+        "service_note": "常规运行图为每年10月8日至次年6月30日（休息日全日间隔15分钟）；夏季旅游旺季运营方临时延长运营约1小时（最近一次为2026-07-01至10-07），规划器数据在延长期间早于实际末班约1小时，以运营方公告为准",
+        "fare_policy": "mileage"
+      }
+    },
+    {
+      "id": "cn-urumqi-line-apm",
+      "name": "机场捷运",
+      "names": {
+        "zh": "机场捷运",
+        "en": "Airport MRT"
+      },
+      "aliases": [],
+      "color": "#ffa500",
+      "short_name": "机场捷运",
+      "mode": "other",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "amap-subway-6501",
+          "id": "机场捷运"
+        },
+        {
+          "source": "amap-subway-6501",
+          "id": "900000215647"
+        },
+        {
+          "source": "amap-subway-6501",
+          "id": "900000215648"
+        }
+      ],
+      "extras": {
+        "names_source": "source",
+        "amap_color": "FFA500",
+        "amap_name": "机场捷运",
+        "baidu_vehicle_name": "捷运",
+        "service_note": "机场捷运为2号线一期（南门—华山街段尚在建）先期开通段，2025-04-17开通，国际机场站与1号线换乘，未来延伸机场东站并贯通2号线"
+      }
+    }
+  ]
+}

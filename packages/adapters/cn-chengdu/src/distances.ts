@@ -1,5 +1,6 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { adapterCacheDir } from '@openmetro/core';
 import { fetchTravel } from './fetch.js';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -32,7 +33,7 @@ export async function harvestOfficialSegmentDistances(
     distance_km?: number;
   }[];
 
-  const cachePath = join(dataDir, 'official-distances.json');
+  const cachePath = join(adapterCacheDir('cn-chengdu'), 'official-distances.json');
   let cache: OfficialDistanceCache = { meters: {} };
   try {
     cache = JSON.parse(await readFile(cachePath, 'utf-8')) as OfficialDistanceCache;
@@ -92,6 +93,7 @@ export async function harvestOfficialSegmentDistances(
     }
   }
   await Promise.all(Array.from({ length: Math.min(concurrency, todo.length) }, () => worker()));
+  await mkdir(adapterCacheDir('cn-chengdu'), { recursive: true });
   await writeFile(cachePath, `${JSON.stringify(cache, null, 2)}\n`, 'utf-8');
   console.log(`  official distances: ok ${ok}, fail ${fail}, cache ${cachePath}`);
   return cache;
@@ -197,7 +199,7 @@ export async function triangulateJunctionEdges(
   }
   await writeFile(segsPath, `${JSON.stringify(doc, null, 2)}\n`, 'utf-8');
 
-  const cachePath = join(dataDir, 'official-distances.json');
+  const cachePath = join(adapterCacheDir('cn-chengdu'), 'official-distances.json');
   const cache = JSON.parse(await readFile(cachePath, 'utf-8')) as OfficialDistanceCache & {
     inferred?: Record<string, unknown>;
   };
@@ -213,6 +215,7 @@ export async function triangulateJunctionEdges(
       inputs_m: pairMeters
     }
   };
+  await mkdir(adapterCacheDir('cn-chengdu'), { recursive: true });
   await writeFile(cachePath, `${JSON.stringify(cache, null, 2)}\n`, 'utf-8');
   console.log(
     `  triangulated ${nodes.size} edges at ${junctionStationId}: ` +

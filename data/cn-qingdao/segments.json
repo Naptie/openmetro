@@ -1,0 +1,3410 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-qingdao",
+  "generated_at": "2026-10-12T07:28:30.333Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-12T07:28:30.333Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-anshun-rd-1-cn-qingdao-shengli-bridge-textile-valley-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-anshun-rd-1",
+      "to_stop_id": "cn-qingdao-shengli-bridge-textile-valley-1",
+      "from_station_id": "cn-qingdao-anshun-rd",
+      "to_station_id": "cn-qingdao-shengli-bridge-textile-valley",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.649,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-anzi-1-cn-qingdao-tianmushan-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-anzi-1",
+      "to_stop_id": "cn-qingdao-tianmushan-rd-1",
+      "from_station_id": "cn-qingdao-anzi",
+      "to_station_id": "cn-qingdao-tianmushan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.9,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-aokema-bridge-8-cn-qingdao-may-4th-square-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-aokema-bridge-8",
+      "to_stop_id": "cn-qingdao-may-4th-square-8",
+      "from_station_id": "cn-qingdao-aokema-bridge",
+      "to_station_id": "cn-qingdao-may-4th-square",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 2.303,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 22.2,
+        "a_s_per_km": 87,
+        "b_s": 147,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-aoshanwei-11-cn-qingdao-shandong-university-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-aoshanwei-11",
+      "to_stop_id": "cn-qingdao-shandong-university-11",
+      "from_station_id": "cn-qingdao-aoshanwei",
+      "to_station_id": "cn-qingdao-shandong-university",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.884,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-beijiushui-11-cn-qingdao-miaoshi-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-beijiushui-11",
+      "to_stop_id": "cn-qingdao-miaoshi-11",
+      "from_station_id": "cn-qingdao-beijiushui",
+      "to_station_id": "cn-qingdao-miaoshi",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 6.759,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-beiling-1-cn-qingdao-xiaocunzhuang-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-beiling-1",
+      "to_stop_id": "cn-qingdao-xiaocunzhuang-1",
+      "from_station_id": "cn-qingdao-beiling",
+      "to_station_id": "cn-qingdao-xiaocunzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.235,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-beimenwai-6-cn-qingdao-wangjiagang-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-beimenwai-6",
+      "to_stop_id": "cn-qingdao-wangjiagang-6",
+      "from_station_id": "cn-qingdao-beimenwai",
+      "to_station_id": "cn-qingdao-wangjiagang",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.424,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-beizhai-11-cn-qingdao-beijiushui-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-beizhai-11",
+      "to_stop_id": "cn-qingdao-beijiushui-11",
+      "from_station_id": "cn-qingdao-beizhai",
+      "to_station_id": "cn-qingdao-beijiushui",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.591,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-buxi-4-cn-qingdao-dabudong-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-buxi-4",
+      "to_stop_id": "cn-qingdao-dabudong-4",
+      "from_station_id": "cn-qingdao-buxi",
+      "to_station_id": "cn-qingdao-dabudong",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.315,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-cangan-rd-1-cn-qingdao-qingdao-north-railway-station-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-cangan-rd-1",
+      "to_stop_id": "cn-qingdao-qingdao-north-railway-station-1",
+      "from_station_id": "cn-qingdao-cangan-rd",
+      "to_station_id": "cn-qingdao-qingdao-north-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.356,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-changle-rd-4-cn-qingdao-haipohe-park-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-changle-rd-4",
+      "to_stop_id": "cn-qingdao-haipohe-park-4",
+      "from_station_id": "cn-qingdao-changle-rd",
+      "to_station_id": "cn-qingdao-haipohe-park",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.387,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-changsha-rd-3-cn-qingdao-shuangshan-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-changsha-rd-3",
+      "to_stop_id": "cn-qingdao-shuangshan-3",
+      "from_station_id": "cn-qingdao-changsha-rd",
+      "to_station_id": "cn-qingdao-shuangshan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.896,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.9,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1
+      },
+      "travel_time_seconds": 250,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-chaoyangshan-13-cn-qingdao-xintun-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-chaoyangshan-13",
+      "to_stop_id": "cn-qingdao-xintun-13",
+      "from_station_id": "cn-qingdao-chaoyangshan",
+      "to_station_id": "cn-qingdao-xintun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.641,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-china-university-of-petroleum-1-cn-qingdao-wangjiagang-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-china-university-of-petroleum-1",
+      "to_stop_id": "cn-qingdao-wangjiagang-1",
+      "from_station_id": "cn-qingdao-china-university-of-petroleum",
+      "to_station_id": "cn-qingdao-wangjiagang",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.949,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.6,
+        "a_s_per_km": 77.4,
+        "b_s": 200,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-convention-center-11-cn-qingdao-qingdao-no-2-middle-school-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-convention-center-11",
+      "to_stop_id": "cn-qingdao-qingdao-no-2-middle-school-11",
+      "from_station_id": "cn-qingdao-convention-center",
+      "to_station_id": "cn-qingdao-qingdao-no-2-middle-school",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.159,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-cuobuling-3-cn-qingdao-dunhua-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-cuobuling-3",
+      "to_stop_id": "cn-qingdao-dunhua-rd-3",
+      "from_station_id": "cn-qingdao-cuobuling",
+      "to_station_id": "cn-qingdao-dunhua-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.756,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 11.8,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-cuobuling-4-cn-qingdao-fuliao-flyover-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-cuobuling-4",
+      "to_stop_id": "cn-qingdao-fuliao-flyover-4",
+      "from_station_id": "cn-qingdao-cuobuling",
+      "to_station_id": "cn-qingdao-fuliao-flyover",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.772,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dabudong-4-cn-qingdao-liaoyang-east-rd-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-dabudong-4",
+      "to_stop_id": "cn-qingdao-liaoyang-east-rd-4",
+      "from_station_id": "cn-qingdao-dabudong",
+      "to_station_id": "cn-qingdao-liaoyang-east-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.289,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dajian-8-cn-qingdao-hongdao-railway-station-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-dajian-8",
+      "to_stop_id": "cn-qingdao-hongdao-railway-station-8",
+      "from_station_id": "cn-qingdao-dajian",
+      "to_station_id": "cn-qingdao-hongdao-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 4.088,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dashan-8-cn-qingdao-xiwujiacun-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-dashan-8",
+      "to_stop_id": "cn-qingdao-xiwujiacun-8",
+      "from_station_id": "cn-qingdao-dashan",
+      "to_station_id": "cn-qingdao-xiwujiacun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.757,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dayang-8-cn-qingdao-qingdao-north-railway-station-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-dayang-8",
+      "to_stop_id": "cn-qingdao-qingdao-north-railway-station-8",
+      "from_station_id": "cn-qingdao-dayang",
+      "to_station_id": "cn-qingdao-qingdao-north-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 8.453,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dazhu-mountain-13-cn-qingdao-zhangjialou-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-dazhu-mountain-13",
+      "to_stop_id": "cn-qingdao-zhangjialou-13",
+      "from_station_id": "cn-qingdao-dazhu-mountain",
+      "to_station_id": "cn-qingdao-zhangjialou",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 6.373,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dengying-4-cn-qingdao-dahedong-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-dengying-4",
+      "to_stop_id": "cn-qingdao-dahedong-4",
+      "from_station_id": "cn-qingdao-dengying",
+      "to_station_id": "cn-qingdao-dahedong",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.499,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.7,
+        "a_s_per_km": 134.4,
+        "b_s": 100.5,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dingjiahe-1-cn-qingdao-jinggangshan-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-dingjiahe-1",
+      "to_stop_id": "cn-qingdao-jinggangshan-rd-1",
+      "from_station_id": "cn-qingdao-dingjiahe",
+      "to_station_id": "cn-qingdao-jinggangshan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.327,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dongguozhuang-1-cn-qingdao-goucha-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-dongguozhuang-1",
+      "to_stop_id": "cn-qingdao-goucha-1",
+      "from_station_id": "cn-qingdao-dongguozhuang",
+      "to_station_id": "cn-qingdao-goucha",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.398,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-donghan-2-cn-qingdao-liaoyang-east-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-donghan-2",
+      "to_stop_id": "cn-qingdao-liaoyang-east-rd-2",
+      "from_station_id": "cn-qingdao-donghan",
+      "to_station_id": "cn-qingdao-liaoyang-east-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.42,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.6,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dongjiakou-port-13-cn-qingdao-poli-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-dongjiakou-port-13",
+      "to_stop_id": "cn-qingdao-poli-13",
+      "from_station_id": "cn-qingdao-dongjiakou-port",
+      "to_station_id": "cn-qingdao-poli",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.81,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dongjiaxiazhuang-4-cn-qingdao-xiongan-road-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-dongjiaxiazhuang-4",
+      "to_stop_id": "cn-qingdao-xiongan-road-4",
+      "from_station_id": "cn-qingdao-dongjiaxiazhuang",
+      "to_station_id": "cn-qingdao-xiongan-road",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.226,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-duanjiabu-4-cn-qingdao-dengying-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-duanjiabu-4",
+      "to_stop_id": "cn-qingdao-dengying-4",
+      "from_station_id": "cn-qingdao-duanjiabu",
+      "to_station_id": "cn-qingdao-dengying",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.983,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-dunhua-rd-3-cn-qingdao-ningxia-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-dunhua-rd-3",
+      "to_stop_id": "cn-qingdao-ningxia-rd-3",
+      "from_station_id": "cn-qingdao-dunhua-rd",
+      "to_station_id": "cn-qingdao-ningxia-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.802,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 11.7,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-expo-center-11-cn-qingdao-wenquan-east-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-expo-center-11",
+      "to_stop_id": "cn-qingdao-wenquan-east-11",
+      "from_station_id": "cn-qingdao-expo-center",
+      "to_station_id": "cn-qingdao-wenquan-east",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.683,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-fenggang-rd-1-cn-qingdao-liuting-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-fenggang-rd-1",
+      "to_stop_id": "cn-qingdao-liuting-1",
+      "from_station_id": "cn-qingdao-fenggang-rd",
+      "to_station_id": "cn-qingdao-liuting",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.013,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-fenghuangdao-1-cn-qingdao-shanli-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-fenghuangdao-1",
+      "to_stop_id": "cn-qingdao-shanli-1",
+      "from_station_id": "cn-qingdao-fenghuangdao",
+      "to_station_id": "cn-qingdao-shanli",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.551,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-fenghuangshan-rd-13-cn-qingdao-shuangzhu-rd-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-fenghuangshan-rd-13",
+      "to_stop_id": "cn-qingdao-shuangzhu-rd-13",
+      "from_station_id": "cn-qingdao-fenghuangshan-rd",
+      "to_station_id": "cn-qingdao-shuangzhu-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.413,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-fitness-center-hongdao-international-convention-and-exhibition-center-8-cn-qingdao-guantao-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-fitness-center-hongdao-international-convention-and-exhibition-center-8",
+      "to_stop_id": "cn-qingdao-guantao-8",
+      "from_station_id": "cn-qingdao-fitness-center-hongdao-international-convention-and-exhibition-center",
+      "to_station_id": "cn-qingdao-guantao",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 5.225,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-fuliao-flyover-4-cn-qingdao-hongshanpo-qingdao-women-and-children-s-hospital-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-fuliao-flyover-4",
+      "to_stop_id": "cn-qingdao-hongshanpo-qingdao-women-and-children-s-hospital-4",
+      "from_station_id": "cn-qingdao-fuliao-flyover",
+      "to_station_id": "cn-qingdao-hongshanpo-qingdao-women-and-children-s-hospital",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.755,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-fushansuo-2-cn-qingdao-may-4th-square-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-fushansuo-2",
+      "to_stop_id": "cn-qingdao-may-4th-square-2",
+      "from_station_id": "cn-qingdao-fushansuo",
+      "to_station_id": "cn-qingdao-may-4th-square",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.969,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 13.3,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-gangtou-6-cn-qingdao-xuejiapozi-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-gangtou-6",
+      "to_stop_id": "cn-qingdao-xuejiapozi-6",
+      "from_station_id": "cn-qingdao-gangtou",
+      "to_station_id": "cn-qingdao-xuejiapozi",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.834,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-gaoxiong-rd-2-cn-qingdao-qingdao-central-fawu-unit-yanerdao-road-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-gaoxiong-rd-2",
+      "to_stop_id": "cn-qingdao-qingdao-central-fawu-unit-yanerdao-road-2",
+      "from_station_id": "cn-qingdao-gaoxiong-rd",
+      "to_station_id": "cn-qingdao-qingdao-central-fawu-unit-yanerdao-road",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.787,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 11.8,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-gaoyu-11-cn-qingdao-zangcun-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-gaoyu-11",
+      "to_stop_id": "cn-qingdao-zangcun-11",
+      "from_station_id": "cn-qingdao-gaoyu",
+      "to_station_id": "cn-qingdao-zangcun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.012,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-gongkou-bay-13-cn-qingdao-dongjiakou-port-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-gongkou-bay-13",
+      "to_stop_id": "cn-qingdao-dongjiakou-port-13",
+      "from_station_id": "cn-qingdao-gongkou-bay",
+      "to_station_id": "cn-qingdao-dongjiakou-port",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.753,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-goucha-1-cn-qingdao-qingdao-agricultural-university-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-goucha-1",
+      "to_stop_id": "cn-qingdao-qingdao-agricultural-university-1",
+      "from_station_id": "cn-qingdao-goucha",
+      "to_station_id": "cn-qingdao-qingdao-agricultural-university",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.646,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-guangrao-rd-1-cn-qingdao-guanxiangshan-qingdao-municipal-hospital-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-guangrao-rd-1",
+      "to_stop_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital-1",
+      "from_station_id": "cn-qingdao-guangrao-rd",
+      "to_station_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.193,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-guantao-8-cn-qingdao-hongdao-science-and-technology-museum-fangte-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-guantao-8",
+      "to_stop_id": "cn-qingdao-hongdao-science-and-technology-museum-fangte-8",
+      "from_station_id": "cn-qingdao-guantao",
+      "to_station_id": "cn-qingdao-hongdao-science-and-technology-museum-fangte",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.501,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-guanxiangshan-qingdao-municipal-hospital-1-cn-qingdao-zhongshan-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital-1",
+      "to_stop_id": "cn-qingdao-zhongshan-rd-1",
+      "from_station_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital",
+      "to_station_id": "cn-qingdao-zhongshan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.729,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-guanxiangshan-qingdao-municipal-hospital-4-cn-qingdao-taishan-rd-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital-4",
+      "to_stop_id": "cn-qingdao-taishan-rd-4",
+      "from_station_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital",
+      "to_station_id": "cn-qingdao-taishan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.368,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-guzhenkou-13-cn-qingdao-longwan-bay-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-guzhenkou-13",
+      "to_stop_id": "cn-qingdao-longwan-bay-13",
+      "from_station_id": "cn-qingdao-guzhenkou",
+      "to_station_id": "cn-qingdao-longwan-bay",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 7.681,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-haian-rd-2-cn-qingdao-haichuan-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-haian-rd-2",
+      "to_stop_id": "cn-qingdao-haichuan-rd-2",
+      "from_station_id": "cn-qingdao-haian-rd",
+      "to_station_id": "cn-qingdao-haichuan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.216,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-haichuan-rd-2-cn-qingdao-haiyou-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-haichuan-rd-2",
+      "to_stop_id": "cn-qingdao-haiyou-rd-2",
+      "from_station_id": "cn-qingdao-haichuan-rd",
+      "to_station_id": "cn-qingdao-haiyou-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.96,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 13.4,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-haier-rd-3-cn-qingdao-metro-building-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-haier-rd-3",
+      "to_stop_id": "cn-qingdao-metro-building-3",
+      "from_station_id": "cn-qingdao-haier-rd",
+      "to_station_id": "cn-qingdao-metro-building",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.005,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.5,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-haipo-bridge-hiser-hospital-1-cn-qingdao-taidong-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-haipo-bridge-hiser-hospital-1",
+      "to_stop_id": "cn-qingdao-taidong-1",
+      "from_station_id": "cn-qingdao-haipo-bridge-hiser-hospital",
+      "to_station_id": "cn-qingdao-taidong",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.536,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-haipo-bridge-hiser-hospital-4-cn-qingdao-xiwujiacun-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-haipo-bridge-hiser-hospital-4",
+      "to_stop_id": "cn-qingdao-xiwujiacun-4",
+      "from_station_id": "cn-qingdao-haipo-bridge-hiser-hospital",
+      "to_station_id": "cn-qingdao-xiwujiacun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.865,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-haipohe-park-4-cn-qingdao-haipo-bridge-hiser-hospital-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-haipohe-park-4",
+      "to_stop_id": "cn-qingdao-haipo-bridge-hiser-hospital-4",
+      "from_station_id": "cn-qingdao-haipohe-park",
+      "to_station_id": "cn-qingdao-haipo-bridge-hiser-hospital",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.107,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-haixin-bridge-2-cn-qingdao-taidong-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-haixin-bridge-2",
+      "to_stop_id": "cn-qingdao-taidong-2",
+      "from_station_id": "cn-qingdao-haixin-bridge",
+      "to_station_id": "cn-qingdao-taidong",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.106,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.8,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-haiyou-rd-2-cn-qingdao-maidao-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-haiyou-rd-2",
+      "to_stop_id": "cn-qingdao-maidao-2",
+      "from_station_id": "cn-qingdao-haiyou-rd",
+      "to_station_id": "cn-qingdao-maidao",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.178,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.9,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-hall-of-the-people-3-cn-qingdao-qingdao-railway-station-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-hall-of-the-people-3",
+      "to_stop_id": "cn-qingdao-qingdao-railway-station-3",
+      "from_station_id": "cn-qingdao-hall-of-the-people",
+      "to_station_id": "cn-qingdao-qingdao-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.4,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.7,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-hall-of-the-people-4-cn-qingdao-xinhaoshan-the-affiliated-hospital-of-qingdao-university-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-hall-of-the-people-4",
+      "to_stop_id": "cn-qingdao-xinhaoshan-the-affiliated-hospital-of-qingdao-university-4",
+      "from_station_id": "cn-qingdao-hall-of-the-people",
+      "to_station_id": "cn-qingdao-xinhaoshan-the-affiliated-hospital-of-qingdao-university",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.775,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-health-center-8-cn-qingdao-fitness-center-hongdao-international-convention-and-exhibition-center-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-health-center-8",
+      "to_stop_id": "cn-qingdao-fitness-center-hongdao-international-convention-and-exhibition-center-8",
+      "from_station_id": "cn-qingdao-health-center",
+      "to_station_id": "cn-qingdao-fitness-center-hongdao-international-convention-and-exhibition-center",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.575,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-heluobu-sino-german-ecopark-6-cn-qingdao-shanwanghe-fulai-community-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-heluobu-sino-german-ecopark-6",
+      "to_stop_id": "cn-qingdao-shanwanghe-fulai-community-6",
+      "from_station_id": "cn-qingdao-heluobu-sino-german-ecopark",
+      "to_station_id": "cn-qingdao-shanwanghe-fulai-community",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.058,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-hongdao-railway-station-8-cn-qingdao-health-center-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-hongdao-railway-station-8",
+      "to_stop_id": "cn-qingdao-health-center-8",
+      "from_station_id": "cn-qingdao-hongdao-railway-station",
+      "to_station_id": "cn-qingdao-health-center",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.362,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-hongdao-science-and-technology-museum-fangte-8-cn-qingdao-dayang-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-hongdao-science-and-technology-museum-fangte-8",
+      "to_stop_id": "cn-qingdao-dayang-8",
+      "from_station_id": "cn-qingdao-hongdao-science-and-technology-museum-fangte",
+      "to_station_id": "cn-qingdao-dayang",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.742,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-hongshanpo-qingdao-women-and-children-s-hospital-4-cn-qingdao-jingsong-3rd-rd-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-hongshanpo-qingdao-women-and-children-s-hospital-4",
+      "to_stop_id": "cn-qingdao-jingsong-3rd-rd-4",
+      "from_station_id": "cn-qingdao-hongshanpo-qingdao-women-and-children-s-hospital",
+      "to_station_id": "cn-qingdao-jingsong-3rd-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.294,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-hualoushan-rd-2-cn-qingdao-donghan-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-hualoushan-rd-2",
+      "to_stop_id": "cn-qingdao-donghan-2",
+      "from_station_id": "cn-qingdao-hualoushan-rd",
+      "to_station_id": "cn-qingdao-donghan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 2.326,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 23.4,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-huashan-6-cn-qingdao-xinghaitan-rd-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-huashan-6",
+      "to_stop_id": "cn-qingdao-xinghaitan-rd-6",
+      "from_station_id": "cn-qingdao-huashan",
+      "to_station_id": "cn-qingdao-xinghaitan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.997,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-huiquan-square-3-cn-qingdao-hall-of-the-people-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-huiquan-square-3",
+      "to_stop_id": "cn-qingdao-hall-of-the-people-3",
+      "from_station_id": "cn-qingdao-huiquan-square",
+      "to_station_id": "cn-qingdao-hall-of-the-people",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.271,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.1,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-international-horticultural-expo-garden-11-cn-qingdao-beizhai-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-international-horticultural-expo-garden-11",
+      "to_stop_id": "cn-qingdao-beizhai-11",
+      "from_station_id": "cn-qingdao-international-horticultural-expo-garden",
+      "to_station_id": "cn-qingdao-beizhai",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.745,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jialingjiang-west-rd-13-cn-qingdao-xiangjiang-rd-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-jialingjiang-west-rd-13",
+      "to_stop_id": "cn-qingdao-xiangjiang-rd-13",
+      "from_station_id": "cn-qingdao-jialingjiang-west-rd",
+      "to_station_id": "cn-qingdao-xiangjiang-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.401,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jiangxi-rd-3-cn-qingdao-may-4th-square-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-jiangxi-rd-3",
+      "to_stop_id": "cn-qingdao-may-4th-square-3",
+      "from_station_id": "cn-qingdao-jiangxi-rd",
+      "to_station_id": "cn-qingdao-may-4th-square",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.58,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.9,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jiaodong-8-cn-qingdao-dajian-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-jiaodong-8",
+      "to_stop_id": "cn-qingdao-dajian-8",
+      "from_station_id": "cn-qingdao-jiaodong",
+      "to_station_id": "cn-qingdao-dajian",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 8.602,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jiaodong-airport-8-cn-qingdao-jiaodong-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-jiaodong-airport-8",
+      "to_stop_id": "cn-qingdao-jiaodong-8",
+      "from_station_id": "cn-qingdao-jiaodong-airport",
+      "to_station_id": "cn-qingdao-jiaodong",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 5.482,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jiaozhou-north-railway-station-8-cn-qingdao-jiaodong-airport-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-jiaozhou-north-railway-station-8",
+      "to_stop_id": "cn-qingdao-jiaodong-airport-8",
+      "from_station_id": "cn-qingdao-jiaozhou-north-railway-station",
+      "to_station_id": "cn-qingdao-jiaodong-airport",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 5.911,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jimiya-13-cn-qingdao-lingshanwei-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-jimiya-13",
+      "to_stop_id": "cn-qingdao-lingshanwei-13",
+      "from_station_id": "cn-qingdao-jimiya",
+      "to_station_id": "cn-qingdao-lingshanwei",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.502,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jinggangshan-rd-1-cn-qingdao-taihangshan-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-jinggangshan-rd-1",
+      "to_stop_id": "cn-qingdao-taihangshan-rd-1",
+      "from_station_id": "cn-qingdao-jinggangshan-rd",
+      "to_station_id": "cn-qingdao-taihangshan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.831,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jinggangshan-rd-13-cn-qingdao-jimiya-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-jinggangshan-rd-13",
+      "to_stop_id": "cn-qingdao-jimiya-13",
+      "from_station_id": "cn-qingdao-jinggangshan-rd",
+      "to_station_id": "cn-qingdao-jimiya",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.918,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jingsong-3rd-rd-4-cn-qingdao-buxi-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-jingsong-3rd-rd-4",
+      "to_stop_id": "cn-qingdao-buxi-4",
+      "from_station_id": "cn-qingdao-jingsong-3rd-rd",
+      "to_station_id": "cn-qingdao-buxi",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.823,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-jiudingshan-6-cn-qingdao-qiantangjiang-rd-qingdao-technical-college-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-jiudingshan-6",
+      "to_stop_id": "cn-qingdao-qiantangjiang-rd-qingdao-technical-college-6",
+      "from_station_id": "cn-qingdao-jiudingshan",
+      "to_station_id": "cn-qingdao-qiantangjiang-rd-qingdao-technical-college",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.593,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-junfeng-rd-3-cn-qingdao-licun-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-junfeng-rd-3",
+      "to_stop_id": "cn-qingdao-licun-3",
+      "from_station_id": "cn-qingdao-junfeng-rd",
+      "to_station_id": "cn-qingdao-licun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.076,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.7,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-kutao-11-cn-qingdao-ocean-university-of-china-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-kutao-11",
+      "to_stop_id": "cn-qingdao-ocean-university-of-china-11",
+      "from_station_id": "cn-qingdao-kutao",
+      "to_station_id": "cn-qingdao-ocean-university-of-china",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.047,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-langya-13-cn-qingdao-gongkou-bay-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-langya-13",
+      "to_stop_id": "cn-qingdao-gongkou-bay-13",
+      "from_station_id": "cn-qingdao-langya",
+      "to_station_id": "cn-qingdao-gongkou-bay",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.464,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-lianghe-13-cn-qingdao-yinzhu-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-lianghe-13",
+      "to_stop_id": "cn-qingdao-yinzhu-13",
+      "from_station_id": "cn-qingdao-lianghe",
+      "to_station_id": "cn-qingdao-yinzhu",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.982,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-liaoyang-east-rd-2-cn-qingdao-tongan-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-liaoyang-east-rd-2",
+      "to_stop_id": "cn-qingdao-tongan-rd-2",
+      "from_station_id": "cn-qingdao-liaoyang-east-rd",
+      "to_station_id": "cn-qingdao-tongan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.818,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.2,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-liaoyang-east-rd-4-cn-qingdao-dongjiaxiazhuang-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-liaoyang-east-rd-4",
+      "to_stop_id": "cn-qingdao-dongjiaxiazhuang-4",
+      "from_station_id": "cn-qingdao-liaoyang-east-rd",
+      "to_station_id": "cn-qingdao-dongjiaxiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.571,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-licun-2-cn-qingdao-zaoshan-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-licun-2",
+      "to_stop_id": "cn-qingdao-zaoshan-rd-2",
+      "from_station_id": "cn-qingdao-licun",
+      "to_station_id": "cn-qingdao-zaoshan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.048,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 13.7,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-licun-3-cn-qingdao-wannianquan-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-licun-3",
+      "to_stop_id": "cn-qingdao-wannianquan-rd-3",
+      "from_station_id": "cn-qingdao-licun",
+      "to_station_id": "cn-qingdao-wannianquan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.277,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.7,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-licun-park-2-cn-qingdao-licun-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-licun-park-2",
+      "to_stop_id": "cn-qingdao-licun-2",
+      "from_station_id": "cn-qingdao-licun-park",
+      "to_station_id": "cn-qingdao-licun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.938,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 13.7,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-lijin-rd-2-cn-qingdao-taishan-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-lijin-rd-2",
+      "to_stop_id": "cn-qingdao-taishan-rd-2",
+      "from_station_id": "cn-qingdao-lijin-rd",
+      "to_station_id": "cn-qingdao-taishan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.241,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.5,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-lingshan-bay-6-cn-qingdao-xintun-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-lingshan-bay-6",
+      "to_stop_id": "cn-qingdao-xintun-6",
+      "from_station_id": "cn-qingdao-lingshan-bay",
+      "to_station_id": "cn-qingdao-xintun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.278,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-lingshanwei-13-cn-qingdao-xueyuan-rd-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-lingshanwei-13",
+      "to_stop_id": "cn-qingdao-xueyuan-rd-13",
+      "from_station_id": "cn-qingdao-lingshanwei",
+      "to_station_id": "cn-qingdao-xueyuan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.871,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-liuting-1-cn-qingdao-xianjiazhai-north-coach-station-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-liuting-1",
+      "to_stop_id": "cn-qingdao-xianjiazhai-north-coach-station-1",
+      "from_station_id": "cn-qingdao-liuting",
+      "to_station_id": "cn-qingdao-xianjiazhai-north-coach-station",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.223,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-longwan-bay-13-cn-qingdao-langya-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-longwan-bay-13",
+      "to_stop_id": "cn-qingdao-langya-13",
+      "from_station_id": "cn-qingdao-longwan-bay",
+      "to_station_id": "cn-qingdao-langya",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.863,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-maidao-2-cn-qingdao-gaoxiong-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-maidao-2",
+      "to_stop_id": "cn-qingdao-gaoxiong-rd-2",
+      "from_station_id": "cn-qingdao-maidao",
+      "to_station_id": "cn-qingdao-gaoxiong-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.2,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.1,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-majialou-6-cn-qingdao-zhuamashan-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-majialou-6",
+      "to_stop_id": "cn-qingdao-zhuamashan-6",
+      "from_station_id": "cn-qingdao-majialou",
+      "to_station_id": "cn-qingdao-zhuamashan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.715,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-maojiashan-qingdao-huanghai-university-6-cn-qingdao-ximenwai-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-maojiashan-qingdao-huanghai-university-6",
+      "to_stop_id": "cn-qingdao-ximenwai-6",
+      "from_station_id": "cn-qingdao-maojiashan-qingdao-huanghai-university",
+      "to_station_id": "cn-qingdao-ximenwai",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.219,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-may-4th-square-2-cn-qingdao-zhiquan-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-may-4th-square-2",
+      "to_stop_id": "cn-qingdao-zhiquan-rd-2",
+      "from_station_id": "cn-qingdao-may-4th-square",
+      "to_station_id": "cn-qingdao-zhiquan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.602,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.6,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-may-4th-square-3-cn-qingdao-yanan-3rd-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-may-4th-square-3",
+      "to_stop_id": "cn-qingdao-yanan-3rd-rd-3",
+      "from_station_id": "cn-qingdao-may-4th-square",
+      "to_station_id": "cn-qingdao-yanan-3rd-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.713,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 11.2,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-metro-building-3-cn-qingdao-changsha-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-metro-building-3",
+      "to_stop_id": "cn-qingdao-changsha-rd-3",
+      "from_station_id": "cn-qingdao-metro-building",
+      "to_station_id": "cn-qingdao-changsha-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.582,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18.2,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-miaoling-rd-11-cn-qingdao-convention-center-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-miaoling-rd-11",
+      "to_stop_id": "cn-qingdao-convention-center-11",
+      "from_station_id": "cn-qingdao-miaoling-rd",
+      "to_station_id": "cn-qingdao-convention-center",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.854,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-miaoling-rd-2-cn-qingdao-shilaoren-beach-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-miaoling-rd-2",
+      "to_stop_id": "cn-qingdao-shilaoren-beach-2",
+      "from_station_id": "cn-qingdao-miaoling-rd",
+      "to_station_id": "cn-qingdao-shilaoren-beach",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.947,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-miaoshi-11-cn-qingdao-puli-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-miaoshi-11",
+      "to_stop_id": "cn-qingdao-puli-11",
+      "from_station_id": "cn-qingdao-miaoshi",
+      "to_station_id": "cn-qingdao-puli",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.159,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-nanbeitun-1-cn-qingdao-xingangshan-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-nanbeitun-1",
+      "to_stop_id": "cn-qingdao-xingangshan-rd-1",
+      "from_station_id": "cn-qingdao-nanbeitun",
+      "to_station_id": "cn-qingdao-xingangshan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.025,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-nanling-1-cn-qingdao-xingguo-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-nanling-1",
+      "to_stop_id": "cn-qingdao-xingguo-rd-1",
+      "from_station_id": "cn-qingdao-nanling",
+      "to_station_id": "cn-qingdao-xingguo-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.144,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-nanzhaike-4-cn-qingdao-xiaolaoshan-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-nanzhaike-4",
+      "to_stop_id": "cn-qingdao-xiaolaoshan-4",
+      "from_station_id": "cn-qingdao-nanzhaike",
+      "to_station_id": "cn-qingdao-xiaolaoshan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.4,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-ningxia-rd-3-cn-qingdao-jiangxi-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-ningxia-rd-3",
+      "to_stop_id": "cn-qingdao-jiangxi-rd-3",
+      "from_station_id": "cn-qingdao-ningxia-rd",
+      "to_station_id": "cn-qingdao-jiangxi-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.916,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 13.2,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-ocean-university-of-china-11-cn-qingdao-international-horticultural-expo-garden-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-ocean-university-of-china-11",
+      "to_stop_id": "cn-qingdao-international-horticultural-expo-garden-11",
+      "from_station_id": "cn-qingdao-ocean-university-of-china",
+      "to_station_id": "cn-qingdao-international-horticultural-expo-garden",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.731,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-oceantec-valley-11-cn-qingdao-shuipo-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-oceantec-valley-11",
+      "to_stop_id": "cn-qingdao-shuipo-11",
+      "from_station_id": "cn-qingdao-oceantec-valley",
+      "to_station_id": "cn-qingdao-shuipo",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.222,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-pashan-qingdao-binhai-university-6-cn-qingdao-west-coast-campus-of-the-affiliated-hospital-of-qingdao-university-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-pashan-qingdao-binhai-university-6",
+      "to_stop_id": "cn-qingdao-west-coast-campus-of-the-affiliated-hospital-of-qingdao-university-6",
+      "from_station_id": "cn-qingdao-pashan-qingdao-binhai-university",
+      "to_station_id": "cn-qingdao-west-coast-campus-of-the-affiliated-hospital-of-qingdao-university",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.902,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-pengjiazhuang-4-cn-qingdao-nanzhaike-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-pengjiazhuang-4",
+      "to_stop_id": "cn-qingdao-nanzhaike-4",
+      "from_station_id": "cn-qingdao-pengjiazhuang",
+      "to_station_id": "cn-qingdao-nanzhaike",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.897,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-poli-13-cn-qingdao-dongjiakou-railway-station-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-poli-13",
+      "to_stop_id": "cn-qingdao-dongjiakou-railway-station-13",
+      "from_station_id": "cn-qingdao-poli",
+      "to_station_id": "cn-qingdao-dongjiakou-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 4.881,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31,
+        "a_s_per_km": 79.7,
+        "b_s": 175.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-puli-11-cn-qingdao-aoshanwei-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-puli-11",
+      "to_stop_id": "cn-qingdao-aoshanwei-11",
+      "from_station_id": "cn-qingdao-puli",
+      "to_station_id": "cn-qingdao-aoshanwei",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 5.572,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qiantangjiang-rd-qingdao-technical-college-6-cn-qingdao-pashan-qingdao-binhai-university-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-qiantangjiang-rd-qingdao-technical-college-6",
+      "to_stop_id": "cn-qingdao-pashan-qingdao-binhai-university-6",
+      "from_station_id": "cn-qingdao-qiantangjiang-rd-qingdao-technical-college",
+      "to_station_id": "cn-qingdao-pashan-qingdao-binhai-university",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.439,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-agricultural-university-1-cn-qingdao-zhengyang-middle-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-qingdao-agricultural-university-1",
+      "to_stop_id": "cn-qingdao-zhengyang-middle-rd-1",
+      "from_station_id": "cn-qingdao-qingdao-agricultural-university",
+      "to_station_id": "cn-qingdao-zhengyang-middle-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.011,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-central-fawu-unit-yanerdao-road-2-cn-qingdao-fushansuo-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-qingdao-central-fawu-unit-yanerdao-road-2",
+      "to_stop_id": "cn-qingdao-fushansuo-2",
+      "from_station_id": "cn-qingdao-qingdao-central-fawu-unit-yanerdao-road",
+      "to_station_id": "cn-qingdao-fushansuo",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.027,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 14.2,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-central-hospital-1-cn-qingdao-shuiqinggou-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-qingdao-central-hospital-1",
+      "to_stop_id": "cn-qingdao-shuiqinggou-1",
+      "from_station_id": "cn-qingdao-qingdao-central-hospital",
+      "to_station_id": "cn-qingdao-shuiqinggou",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.586,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-international-cruise-terminal-2-cn-qingdao-xiaogang-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-qingdao-international-cruise-terminal-2",
+      "to_stop_id": "cn-qingdao-xiaogang-2",
+      "from_station_id": "cn-qingdao-qingdao-international-cruise-terminal",
+      "to_station_id": "cn-qingdao-xiaogang",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.915,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.4,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-no-2-middle-school-11-cn-qingdao-qingdao-university-of-science-and-technology-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-qingdao-no-2-middle-school-11",
+      "to_stop_id": "cn-qingdao-qingdao-university-of-science-and-technology-11",
+      "from_station_id": "cn-qingdao-qingdao-no-2-middle-school",
+      "to_station_id": "cn-qingdao-qingdao-university-of-science-and-technology",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.629,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-no-9-high-school-xingfuxiaozhen-6-cn-qingdao-heluobu-sino-german-ecopark-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-qingdao-no-9-high-school-xingfuxiaozhen-6",
+      "to_stop_id": "cn-qingdao-heluobu-sino-german-ecopark-6",
+      "from_station_id": "cn-qingdao-qingdao-no-9-high-school-xingfuxiaozhen",
+      "to_station_id": "cn-qingdao-heluobu-sino-german-ecopark",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.903,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-north-railway-station-1-cn-qingdao-anshun-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-1",
+      "to_stop_id": "cn-qingdao-anshun-rd-1",
+      "from_station_id": "cn-qingdao-qingdao-north-railway-station",
+      "to_station_id": "cn-qingdao-anshun-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.166,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-north-railway-station-3-cn-qingdao-yongping-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-3",
+      "to_stop_id": "cn-qingdao-yongping-rd-3",
+      "from_station_id": "cn-qingdao-qingdao-north-railway-station",
+      "to_station_id": "cn-qingdao-yongping-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.534,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.8,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-north-railway-station-8-cn-qingdao-yanjia-shan-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-qingdao-north-railway-station-8",
+      "to_stop_id": "cn-qingdao-yanjia-shan-8",
+      "from_station_id": "cn-qingdao-qingdao-north-railway-station",
+      "to_station_id": "cn-qingdao-yanjia-shan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 4.593,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 27.5,
+        "a_s_per_km": 87,
+        "b_s": 147,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-railway-station-1-cn-qingdao-xizhen-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-qingdao-railway-station-1",
+      "to_stop_id": "cn-qingdao-xizhen-1",
+      "from_station_id": "cn-qingdao-qingdao-railway-station",
+      "to_station_id": "cn-qingdao-xizhen",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.831,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingdao-university-of-science-and-technology-11-cn-qingdao-zhangcun-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-qingdao-university-of-science-and-technology-11",
+      "to_stop_id": "cn-qingdao-zhangcun-11",
+      "from_station_id": "cn-qingdao-qingdao-university-of-science-and-technology",
+      "to_station_id": "cn-qingdao-zhangcun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.879,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-qingjiang-rd-3-cn-qingdao-cuobuling-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-qingjiang-rd-3",
+      "to_stop_id": "cn-qingdao-cuobuling-3",
+      "from_station_id": "cn-qingdao-qingjiang-rd",
+      "to_station_id": "cn-qingdao-cuobuling",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.484,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16.1,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-ruijin-rd-1-cn-qingdao-zunyi-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-ruijin-rd-1",
+      "to_stop_id": "cn-qingdao-zunyi-rd-1",
+      "from_station_id": "cn-qingdao-ruijin-rd",
+      "to_station_id": "cn-qingdao-zunyi-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.463,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shandong-university-11-cn-qingdao-oceantec-valley-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-shandong-university-11",
+      "to_stop_id": "cn-qingdao-oceantec-valley-11",
+      "from_station_id": "cn-qingdao-shandong-university",
+      "to_station_id": "cn-qingdao-oceantec-valley",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.811,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shanli-1-cn-qingdao-nanbeitun-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-shanli-1",
+      "to_stop_id": "cn-qingdao-nanbeitun-1",
+      "from_station_id": "cn-qingdao-shanli",
+      "to_station_id": "cn-qingdao-nanbeitun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.436,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shanwanghe-fulai-community-6-cn-qingdao-hengyunshan-rd-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-shanwanghe-fulai-community-6",
+      "to_stop_id": "cn-qingdao-hengyunshan-rd-6",
+      "from_station_id": "cn-qingdao-shanwanghe-fulai-community",
+      "to_station_id": "cn-qingdao-hengyunshan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.602,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18.4,
+        "a_s_per_km": 67.4,
+        "b_s": 200.5,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shazikou-4-cn-qingdao-duanjiabu-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-shazikou-4",
+      "to_stop_id": "cn-qingdao-duanjiabu-4",
+      "from_station_id": "cn-qingdao-shazikou",
+      "to_station_id": "cn-qingdao-duanjiabu",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.288,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shenghai-rd-world-expo-city-13-cn-qingdao-dazhu-mountain-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-shenghai-rd-world-expo-city-13",
+      "to_stop_id": "cn-qingdao-dazhu-mountain-13",
+      "from_station_id": "cn-qingdao-shenghai-rd-world-expo-city",
+      "to_station_id": "cn-qingdao-dazhu-mountain",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.268,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shengli-bridge-textile-valley-1-cn-qingdao-qingdao-central-hospital-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-shengli-bridge-textile-valley-1",
+      "to_stop_id": "cn-qingdao-qingdao-central-hospital-1",
+      "from_station_id": "cn-qingdao-shengli-bridge-textile-valley",
+      "to_station_id": "cn-qingdao-qingdao-central-hospital",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.01,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shiji-ave-13-cn-qingdao-shenghai-rd-world-expo-city-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-shiji-ave-13",
+      "to_stop_id": "cn-qingdao-shenghai-rd-world-expo-city-13",
+      "from_station_id": "cn-qingdao-shiji-ave",
+      "to_station_id": "cn-qingdao-shenghai-rd-world-expo-city",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.475,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shilaoren-beach-2-cn-qingdao-haian-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-shilaoren-beach-2",
+      "to_stop_id": "cn-qingdao-haian-rd-2",
+      "from_station_id": "cn-qingdao-shilaoren-beach",
+      "to_station_id": "cn-qingdao-haian-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.586,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18.1,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shuangshan-3-cn-qingdao-qingjiang-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-shuangshan-3",
+      "to_stop_id": "cn-qingdao-qingjiang-rd-3",
+      "from_station_id": "cn-qingdao-shuangshan",
+      "to_station_id": "cn-qingdao-qingjiang-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 2.095,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 16,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shuangzhu-rd-13-cn-qingdao-shiji-ave-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-shuangzhu-rd-13",
+      "to_stop_id": "cn-qingdao-shiji-ave-13",
+      "from_station_id": "cn-qingdao-shuangzhu-rd",
+      "to_station_id": "cn-qingdao-shiji-ave",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.818,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shuipo-11-cn-qingdao-expo-center-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-shuipo-11",
+      "to_stop_id": "cn-qingdao-expo-center-11",
+      "from_station_id": "cn-qingdao-shuipo",
+      "to_station_id": "cn-qingdao-expo-center",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.132,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-shuiqinggou-1-cn-qingdao-beiling-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-shuiqinggou-1",
+      "to_stop_id": "cn-qingdao-beiling-1",
+      "from_station_id": "cn-qingdao-shuiqinggou",
+      "to_station_id": "cn-qingdao-beiling",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.563,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-taidong-1-cn-qingdao-guangrao-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-taidong-1",
+      "to_stop_id": "cn-qingdao-guangrao-rd-1",
+      "from_station_id": "cn-qingdao-taidong",
+      "to_station_id": "cn-qingdao-guangrao-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.339,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-taidong-2-cn-qingdao-lijin-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-taidong-2",
+      "to_stop_id": "cn-qingdao-lijin-rd-2",
+      "from_station_id": "cn-qingdao-taidong",
+      "to_station_id": "cn-qingdao-lijin-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.741,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 10.7,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-taihangshan-rd-1-cn-qingdao-china-university-of-petroleum-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-taihangshan-rd-1",
+      "to_stop_id": "cn-qingdao-china-university-of-petroleum-1",
+      "from_station_id": "cn-qingdao-taihangshan-rd",
+      "to_station_id": "cn-qingdao-china-university-of-petroleum",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.871,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-taipingjiao-park-yiliao-3-cn-qingdao-zhongshan-park-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-taipingjiao-park-yiliao-3",
+      "to_stop_id": "cn-qingdao-zhongshan-park-3",
+      "from_station_id": "cn-qingdao-taipingjiao-park-yiliao",
+      "to_station_id": "cn-qingdao-zhongshan-park",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.956,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.6,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-taishan-rd-2-cn-qingdao-qingdao-international-cruise-terminal-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-taishan-rd-2",
+      "to_stop_id": "cn-qingdao-qingdao-international-cruise-terminal-2",
+      "from_station_id": "cn-qingdao-taishan-rd",
+      "to_station_id": "cn-qingdao-qingdao-international-cruise-terminal",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.939,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 13.8,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-taishan-rd-4-cn-qingdao-changle-rd-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-taishan-rd-4",
+      "to_stop_id": "cn-qingdao-changle-rd-4",
+      "from_station_id": "cn-qingdao-taishan-rd",
+      "to_station_id": "cn-qingdao-changle-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.06,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-tianmushan-rd-1-cn-qingdao-xuejiadao-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-tianmushan-rd-1",
+      "to_stop_id": "cn-qingdao-xuejiadao-1",
+      "from_station_id": "cn-qingdao-tianmushan-rd",
+      "to_station_id": "cn-qingdao-xuejiadao",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.898,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-tongan-rd-2-cn-qingdao-miaoling-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-tongan-rd-2",
+      "to_stop_id": "cn-qingdao-miaoling-rd-2",
+      "from_station_id": "cn-qingdao-tongan-rd",
+      "to_station_id": "cn-qingdao-miaoling-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.451,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-tuandao-1-cn-qingdao-fenghuangdao-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-tuandao-1",
+      "to_stop_id": "cn-qingdao-fenghuangdao-1",
+      "from_station_id": "cn-qingdao-tuandao",
+      "to_station_id": "cn-qingdao-fenghuangdao",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 6.846,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-wangjiagang-6-cn-qingdao-jiudingshan-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-wangjiagang-6",
+      "to_stop_id": "cn-qingdao-jiudingshan-6",
+      "from_station_id": "cn-qingdao-wangjiagang",
+      "to_station_id": "cn-qingdao-jiudingshan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.641,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-wannianquan-rd-3-cn-qingdao-haier-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-wannianquan-rd-3",
+      "to_stop_id": "cn-qingdao-haier-rd-3",
+      "from_station_id": "cn-qingdao-wannianquan-rd",
+      "to_station_id": "cn-qingdao-haier-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.41,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-wenquan-east-11-cn-qingdao-gaoyu-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-wenquan-east-11",
+      "to_stop_id": "cn-qingdao-gaoyu-11",
+      "from_station_id": "cn-qingdao-wenquan-east",
+      "to_station_id": "cn-qingdao-gaoyu",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.912,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-west-coast-campus-of-the-affiliated-hospital-of-qingdao-university-6-cn-qingdao-gangtou-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-west-coast-campus-of-the-affiliated-hospital-of-qingdao-university-6",
+      "to_stop_id": "cn-qingdao-gangtou-6",
+      "from_station_id": "cn-qingdao-west-coast-campus-of-the-affiliated-hospital-of-qingdao-university",
+      "to_station_id": "cn-qingdao-gangtou",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.547,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiangjiang-rd-13-cn-qingdao-jinggangshan-rd-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-xiangjiang-rd-13",
+      "to_stop_id": "cn-qingdao-jinggangshan-rd-13",
+      "from_station_id": "cn-qingdao-xiangjiang-rd",
+      "to_station_id": "cn-qingdao-jinggangshan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.428,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xianjiazhai-north-coach-station-1-cn-qingdao-ruijin-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-xianjiazhai-north-coach-station-1",
+      "to_stop_id": "cn-qingdao-ruijin-rd-1",
+      "from_station_id": "cn-qingdao-xianjiazhai-north-coach-station",
+      "to_station_id": "cn-qingdao-ruijin-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.412,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiao-shuiqinggou-8-cn-qingdao-dashan-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-xiao-shuiqinggou-8",
+      "to_stop_id": "cn-qingdao-dashan-8",
+      "from_station_id": "cn-qingdao-xiao-shuiqinggou",
+      "to_station_id": "cn-qingdao-dashan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.447,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiaocunzhuang-1-cn-qingdao-haipo-bridge-hiser-hospital-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-xiaocunzhuang-1",
+      "to_stop_id": "cn-qingdao-haipo-bridge-hiser-hospital-1",
+      "from_station_id": "cn-qingdao-xiaocunzhuang",
+      "to_station_id": "cn-qingdao-haipo-bridge-hiser-hospital",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.223,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiaogang-2-cn-qingdao-sichuan-rd-qingdao-ferry-terminal-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-xiaogang-2",
+      "to_stop_id": "cn-qingdao-sichuan-rd-qingdao-ferry-terminal-2",
+      "from_station_id": "cn-qingdao-xiaogang",
+      "to_station_id": "cn-qingdao-sichuan-rd-qingdao-ferry-terminal",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.917,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.2,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiaolaoshan-4-cn-qingdao-shazikou-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-xiaolaoshan-4",
+      "to_stop_id": "cn-qingdao-shazikou-4",
+      "from_station_id": "cn-qingdao-xiaolaoshan",
+      "to_station_id": "cn-qingdao-shazikou",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.37,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiaozhaizi-1-cn-qingdao-fenggang-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-xiaozhaizi-1",
+      "to_stop_id": "cn-qingdao-fenggang-rd-1",
+      "from_station_id": "cn-qingdao-xiaozhaizi",
+      "to_station_id": "cn-qingdao-fenggang-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.241,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-ximenwai-6-cn-qingdao-beimenwai-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-ximenwai-6",
+      "to_stop_id": "cn-qingdao-beimenwai-6",
+      "from_station_id": "cn-qingdao-ximenwai",
+      "to_station_id": "cn-qingdao-beimenwai",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.035,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xingangshan-rd-1-cn-qingdao-anzi-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-xingangshan-rd-1",
+      "to_stop_id": "cn-qingdao-anzi-1",
+      "from_station_id": "cn-qingdao-xingangshan-rd",
+      "to_station_id": "cn-qingdao-anzi",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.166,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xingguo-rd-1-cn-qingdao-yongnian-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-xingguo-rd-1",
+      "to_stop_id": "cn-qingdao-yongnian-rd-1",
+      "from_station_id": "cn-qingdao-xingguo-rd",
+      "to_station_id": "cn-qingdao-yongnian-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.356,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xinghaitan-rd-6-cn-qingdao-zhaojiamiao-film-metropolis-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-xinghaitan-rd-6",
+      "to_stop_id": "cn-qingdao-zhaojiamiao-film-metropolis-6",
+      "from_station_id": "cn-qingdao-xinghaitan-rd",
+      "to_station_id": "cn-qingdao-zhaojiamiao-film-metropolis",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.25,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xinhaoshan-the-affiliated-hospital-of-qingdao-university-4-cn-qingdao-guanxiangshan-qingdao-municipal-hospital-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-xinhaoshan-the-affiliated-hospital-of-qingdao-university-4",
+      "to_stop_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital-4",
+      "from_station_id": "cn-qingdao-xinhaoshan-the-affiliated-hospital-of-qingdao-university",
+      "to_station_id": "cn-qingdao-guanxiangshan-qingdao-municipal-hospital",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.739,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xintun-13-cn-qingdao-lianghe-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-xintun-13",
+      "to_stop_id": "cn-qingdao-lianghe-13",
+      "from_station_id": "cn-qingdao-xintun",
+      "to_station_id": "cn-qingdao-lianghe",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.99,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xintun-6-cn-qingdao-huashan-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-xintun-6",
+      "to_stop_id": "cn-qingdao-huashan-6",
+      "from_station_id": "cn-qingdao-xintun",
+      "to_station_id": "cn-qingdao-huashan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.167,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiongan-road-4-cn-qingdao-zhangcun-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-xiongan-road-4",
+      "to_stop_id": "cn-qingdao-zhangcun-4",
+      "from_station_id": "cn-qingdao-xiongan-road",
+      "to_station_id": "cn-qingdao-zhangcun",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.79,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiwujiacun-4-cn-qingdao-cuobuling-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-xiwujiacun-4",
+      "to_stop_id": "cn-qingdao-cuobuling-4",
+      "from_station_id": "cn-qingdao-xiwujiacun",
+      "to_station_id": "cn-qingdao-cuobuling",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.33,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xiwujiacun-8-cn-qingdao-aokema-bridge-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-xiwujiacun-8",
+      "to_stop_id": "cn-qingdao-aokema-bridge-8",
+      "from_station_id": "cn-qingdao-xiwujiacun",
+      "to_station_id": "cn-qingdao-aokema-bridge",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.52,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xizhen-1-cn-qingdao-tuandao-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-xizhen-1",
+      "to_stop_id": "cn-qingdao-tuandao-1",
+      "from_station_id": "cn-qingdao-xizhen",
+      "to_station_id": "cn-qingdao-tuandao",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.735,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xuejiadao-1-cn-qingdao-dingjiahe-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-xuejiadao-1",
+      "to_stop_id": "cn-qingdao-dingjiahe-1",
+      "from_station_id": "cn-qingdao-xuejiadao",
+      "to_station_id": "cn-qingdao-dingjiahe",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.696,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xuejiapozi-6-cn-qingdao-majialou-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-xuejiapozi-6",
+      "to_stop_id": "cn-qingdao-majialou-6",
+      "from_station_id": "cn-qingdao-xuejiapozi",
+      "to_station_id": "cn-qingdao-majialou",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.589,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-xueyuan-rd-13-cn-qingdao-chaoyangshan-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-xueyuan-rd-13",
+      "to_stop_id": "cn-qingdao-chaoyangshan-13",
+      "from_station_id": "cn-qingdao-xueyuan-rd",
+      "to_station_id": "cn-qingdao-chaoyangshan",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.986,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-yanan-3rd-rd-3-cn-qingdao-taipingjiao-park-yiliao-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-yanan-3rd-rd-3",
+      "to_stop_id": "cn-qingdao-taipingjiao-park-yiliao-3",
+      "from_station_id": "cn-qingdao-yanan-3rd-rd",
+      "to_station_id": "cn-qingdao-taipingjiao-park-yiliao",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.544,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18.1,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-yanjia-shan-8-cn-qingdao-xiao-shuiqinggou-8",
+      "line_id": "cn-qingdao-line-8",
+      "from_stop_id": "cn-qingdao-yanjia-shan-8",
+      "to_stop_id": "cn-qingdao-xiao-shuiqinggou-8",
+      "from_station_id": "cn-qingdao-yanjia-shan",
+      "to_station_id": "cn-qingdao-xiao-shuiqinggou",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.544,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-yinzhu-13-cn-qingdao-fenghuangshan-rd-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-yinzhu-13",
+      "to_stop_id": "cn-qingdao-fenghuangshan-rd-13",
+      "from_station_id": "cn-qingdao-yinzhu",
+      "to_station_id": "cn-qingdao-fenghuangshan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.134,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-yongnian-rd-1-cn-qingdao-cangan-rd-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-yongnian-rd-1",
+      "to_stop_id": "cn-qingdao-cangan-rd-1",
+      "from_station_id": "cn-qingdao-yongnian-rd",
+      "to_station_id": "cn-qingdao-cangan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.259,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-yongping-rd-3-cn-qingdao-zhenhua-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-yongping-rd-3",
+      "to_stop_id": "cn-qingdao-zhenhua-rd-3",
+      "from_station_id": "cn-qingdao-yongping-rd",
+      "to_station_id": "cn-qingdao-zhenhua-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 1.241,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.8,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zangcun-11-cn-qingdao-qiangu-mountain-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-zangcun-11",
+      "to_stop_id": "cn-qingdao-qiangu-mountain-11",
+      "from_station_id": "cn-qingdao-zangcun",
+      "to_station_id": "cn-qingdao-qiangu-mountain",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 2.799,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 27.9,
+        "a_s_per_km": 76.2,
+        "b_s": 146.9,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zaoshan-rd-2-cn-qingdao-hualoushan-rd-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-zaoshan-rd-2",
+      "to_stop_id": "cn-qingdao-hualoushan-rd-2",
+      "from_station_id": "cn-qingdao-zaoshan-rd",
+      "to_station_id": "cn-qingdao-hualoushan-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.873,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 11.2,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhangcun-11-cn-qingdao-kutao-11",
+      "line_id": "cn-qingdao-line-11",
+      "from_stop_id": "cn-qingdao-zhangcun-11",
+      "to_stop_id": "cn-qingdao-kutao-11",
+      "from_station_id": "cn-qingdao-zhangcun",
+      "to_station_id": "cn-qingdao-kutao",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.78,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhangcun-4-cn-qingdao-pengjiazhuang-4",
+      "line_id": "cn-qingdao-line-4",
+      "from_stop_id": "cn-qingdao-zhangcun-4",
+      "to_stop_id": "cn-qingdao-pengjiazhuang-4",
+      "from_station_id": "cn-qingdao-zhangcun",
+      "to_station_id": "cn-qingdao-pengjiazhuang",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.555,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhangjialou-13-cn-qingdao-guzhenkou-13",
+      "line_id": "cn-qingdao-line-13",
+      "from_stop_id": "cn-qingdao-zhangjialou-13",
+      "to_stop_id": "cn-qingdao-guzhenkou-13",
+      "from_station_id": "cn-qingdao-zhangjialou",
+      "to_station_id": "cn-qingdao-guzhenkou",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 5.901,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhaojiamiao-film-metropolis-6-cn-qingdao-maojiashan-qingdao-huanghai-university-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-zhaojiamiao-film-metropolis-6",
+      "to_stop_id": "cn-qingdao-maojiashan-qingdao-huanghai-university-6",
+      "from_station_id": "cn-qingdao-zhaojiamiao-film-metropolis",
+      "to_station_id": "cn-qingdao-maojiashan-qingdao-huanghai-university",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.124,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhengyang-middle-rd-1-cn-qingdao-xiaozhaizi-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-zhengyang-middle-rd-1",
+      "to_stop_id": "cn-qingdao-xiaozhaizi-1",
+      "from_station_id": "cn-qingdao-zhengyang-middle-rd",
+      "to_station_id": "cn-qingdao-xiaozhaizi",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.15,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhenhua-rd-3-cn-qingdao-junfeng-rd-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-zhenhua-rd-3",
+      "to_stop_id": "cn-qingdao-junfeng-rd-3",
+      "from_station_id": "cn-qingdao-zhenhua-rd",
+      "to_station_id": "cn-qingdao-junfeng-rd",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.97,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 13.5,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhiquan-rd-2-cn-qingdao-haixin-bridge-2",
+      "line_id": "cn-qingdao-line-2",
+      "from_stop_id": "cn-qingdao-zhiquan-rd-2",
+      "to_stop_id": "cn-qingdao-haixin-bridge-2",
+      "from_station_id": "cn-qingdao-zhiquan-rd",
+      "to_station_id": "cn-qingdao-haixin-bridge",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.859,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.4,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhongshan-park-3-cn-qingdao-huiquan-square-3",
+      "line_id": "cn-qingdao-line-3",
+      "from_stop_id": "cn-qingdao-zhongshan-park-3",
+      "to_stop_id": "cn-qingdao-huiquan-square-3",
+      "from_station_id": "cn-qingdao-zhongshan-park",
+      "to_station_id": "cn-qingdao-huiquan-square",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "distance_km": 0.961,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 11.6,
+        "a_s_per_km": 76.7,
+        "b_s": 181.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhongshan-rd-1-cn-qingdao-qingdao-railway-station-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-zhongshan-rd-1",
+      "to_stop_id": "cn-qingdao-qingdao-railway-station-1",
+      "from_station_id": "cn-qingdao-zhongshan-rd",
+      "to_station_id": "cn-qingdao-qingdao-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.352,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zhuamashan-6-cn-qingdao-qingdao-no-9-high-school-xingfuxiaozhen-6",
+      "line_id": "cn-qingdao-line-6",
+      "from_stop_id": "cn-qingdao-zhuamashan-6",
+      "to_stop_id": "cn-qingdao-qingdao-no-9-high-school-xingfuxiaozhen-6",
+      "from_station_id": "cn-qingdao-zhuamashan",
+      "to_station_id": "cn-qingdao-qingdao-no-9-high-school-xingfuxiaozhen",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.351,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-qingdao-seg-cn-qingdao-zunyi-rd-1-cn-qingdao-nanling-1",
+      "line_id": "cn-qingdao-line-1",
+      "from_stop_id": "cn-qingdao-zunyi-rd-1",
+      "to_stop_id": "cn-qingdao-nanling-1",
+      "from_station_id": "cn-qingdao-zunyi-rd",
+      "to_station_id": "cn-qingdao-nanling",
+      "direction": "both",
+      "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.481,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    }
+  ]
+}

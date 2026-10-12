@@ -133,6 +133,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-qingdao": {
+      "name": "@openmetro/adapter-cn-qingdao",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-shanghai": {
       "name": "@openmetro/adapter-cn-shanghai",
       "version": "0.1.0",
@@ -159,6 +171,18 @@
     },
     "packages/adapters/cn-suzhou": {
       "name": "@openmetro/adapter-cn-suzhou",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
+    "packages/adapters/cn-urumqi": {
+      "name": "@openmetro/adapter-cn-urumqi",
       "version": "0.1.0",
       "dependencies": {
         "@openmetro/core": "workspace:*",
@@ -451,11 +475,15 @@
 
     "@openmetro/adapter-cn-nanjing": ["@openmetro/adapter-cn-nanjing@workspace:packages/adapters/cn-nanjing"],
 
+    "@openmetro/adapter-cn-qingdao": ["@openmetro/adapter-cn-qingdao@workspace:packages/adapters/cn-qingdao"],
+
     "@openmetro/adapter-cn-shanghai": ["@openmetro/adapter-cn-shanghai@workspace:packages/adapters/cn-shanghai"],
 
     "@openmetro/adapter-cn-shenzhen": ["@openmetro/adapter-cn-shenzhen@workspace:packages/adapters/cn-shenzhen"],
 
     "@openmetro/adapter-cn-suzhou": ["@openmetro/adapter-cn-suzhou@workspace:packages/adapters/cn-suzhou"],
+
+    "@openmetro/adapter-cn-urumqi": ["@openmetro/adapter-cn-urumqi@workspace:packages/adapters/cn-urumqi"],
 
     "@openmetro/adapter-cn-wuhan": ["@openmetro/adapter-cn-wuhan@workspace:packages/adapters/cn-wuhan"],
 

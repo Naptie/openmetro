@@ -223,7 +223,7 @@ Responses are **lean projections** of the canonical records: provenance
 every dataset and every derived artifact is reachable.
 
 - `GET /api/health` — liveness probe
-- `GET /api/networks` — list available networks (`cn-beijing`, `cn-shanghai`, `cn-guangzhou`) with metadata
+- `GET /api/networks` — list available networks (`cn-beijing`, `cn-qingdao`, …) with metadata
 - `GET /api/networks/:id` — one network's metadata (city, currency, timezone,
   routing defaults) plus `synced_at`, when the canonical data was last
   synchronized (max `generated_at` across its files; only filled by the detail

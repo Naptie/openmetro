@@ -1,0 +1,132 @@
+{
+  "id": "cn-qingdao",
+  "name": "青岛地铁",
+  "names": {
+    "zh": "青岛地铁",
+    "en": "Qingdao Metro"
+  },
+  "city": {
+    "id": "CN-3702",
+    "name": {
+      "zh": "青岛市",
+      "en": "Qingdao"
+    },
+    "country": "CN",
+    "population": 10071722,
+    "area": 11282,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        120.4,
+        36.116666666
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑/坐标/英文名/示意图像素来自 AMap Subway（3702_drw_qingdao），并与官网查询系统（qd-metro.com/data/execute.php siteSearch）逐线站表交叉校验，官方逐线站号存于 stop extras.station_code；首末班来自百度路径规划（directionlite transit），每次同步实时查询（官网无机器可读时刻表，官方发布渠道为青岛地铁 APP/公众号，仅图片）；票价来自官网信息公开栏发布的《青岛地铁票价信息表.xlsx》全网 OD 矩阵，pjSearch 接口抽样校验；11/13 号线已更名蓝谷快线/西海岸快线，8 号线另有快速列车班次（本数据模型不含列车等级）。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 176,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 176,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 186,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 186,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 42,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 374,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 195,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 30800,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

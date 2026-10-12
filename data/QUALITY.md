@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-11T12:28:11.790Z_
+_Updated 2026-10-12T09:13:26.911Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -146,6 +146,20 @@ _Updated 2026-10-11T12:28:11.790Z_
 | Schematic | 🟡 Partial | official | 94% | official=267, default=16 |
 | Fares | ✅ Complete | official | 100% | official=61752 |
 
+## 青岛地铁 / Qingdao Metro (`cn-qingdao`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=176 |
+| Names | ✅ Complete | official | 100% | official=176 |
+| Segment times | ✅ Complete | official | 100% | official=186, derived=1 |
+| Segment distances | ✅ Complete | official | 100% | official=186, derived=1 |
+| Transfer times | ✅ Complete | official | 100% | official=42 |
+| Timetables | ✅ Complete | official | 100% | official=374 |
+| Schematic | ✅ Complete | official | 100% | official=195 |
+| Fares | ✅ Complete | official | 100% | official=30800 |
+
 ## 上海地铁 / Shanghai Metro (`cn-shanghai`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -187,6 +201,20 @@ _Updated 2026-10-11T12:28:11.790Z_
 | Timetables | ✅ Complete | official | 100% | official=534 |
 | Schematic | ✅ Complete | official | 100% | official=279 |
 | Fares | 🟡 Partial | official | 97% | official=54990, default=1892 |
+
+## 乌鲁木齐地铁 / Ürümqi Metro (`cn-urumqi`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=22 |
+| Names | ✅ Complete | official | 100% | official=22 |
+| Segment times | ✅ Complete | official | 100% | official=21 |
+| Segment distances | ✅ Complete | official | 100% | official=21 |
+| Transfer times | ❌ Unavailable | default | 0% | default=2 |
+| Timetables | ✅ Complete | official | 100% | official=42 |
+| Schematic | ✅ Complete | official | 100% | official=23 |
+| Fares | 🟡 Partial | official | 91% | official=420, default=42 |
 
 ## 武汉地铁 / Wuhan Metro (`cn-wuhan`)
 

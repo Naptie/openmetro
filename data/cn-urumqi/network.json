@@ -1,0 +1,132 @@
+{
+  "id": "cn-urumqi",
+  "name": "乌鲁木齐地铁",
+  "names": {
+    "zh": "乌鲁木齐地铁",
+    "en": "Ürümqi Metro"
+  },
+  "city": {
+    "id": "CN-6501",
+    "name": {
+      "zh": "乌鲁木齐市",
+      "en": "Ürümqi"
+    },
+    "country": "CN",
+    "population": 4054369,
+    "area": 13783.1,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        87.6125,
+        43.8225
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑/坐标/英文名来自 AMap Subway（官网仅发布图片版线网图、首末班车时刻表与票价表，无结构化接口，未做 OCR）；首末班车、区间耗时/距离与 OD 票价实时查询百度路径规划（direction/v2/transit），并经腾讯地图（direction/v1/transit）独立交叉核验一致。运营时刻口径：常规运行图为每年10月8日至次年6月30日；夏季旅游旺季运营方临时延长运营约1小时（2026年周期为07-01至10-07），延长期间规划器末班数据早于实际约1小时、恢复常规图后一致（2026-10-12 核验：规划器末班 23:30 与 10-08 切换公告吻合；官网时刻表图片当时仍为旺季版本），请以运营方公告为准；机场捷运为 2 号线一期先期开通段（T4 航站楼捷运，2025-04-17 开通），其 OD 票价运营方未公布（票价矩阵记 null）。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 22,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 22,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 21,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 21,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 2
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 42,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 23,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 0.91,
+      "status": "partial",
+      "counts": {
+        "official": 420,
+        "derived": 0,
+        "default": 42
+      }
+    }
+  }
+}

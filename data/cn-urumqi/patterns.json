@@ -1,0 +1,78 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-urumqi",
+  "generated_at": "2026-10-12T09:03:47.197Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-urumqi-pattern-1-primary",
+      "line_id": "cn-urumqi-line-1",
+      "name": "国际机场 → 三屯碑",
+      "names": {
+        "zh": "国际机场→三屯碑",
+        "en": "国际机场 to 三屯碑"
+      },
+      "stop_ids": [
+        "cn-urumqi-international-airport-1",
+        "cn-urumqi-dadiwopu-1",
+        "cn-urumqi-xuanrendun-1",
+        "cn-urumqi-sangong-1",
+        "cn-urumqi-yingbin-road-crossing-1",
+        "cn-urumqi-botanical-garden-1",
+        "cn-urumqi-sports-center-1",
+        "cn-urumqi-tieluju-1",
+        "cn-urumqi-xiaoxigou-1",
+        "cn-urumqi-zhongyinggong-1",
+        "cn-urumqi-xinjiang-library-1",
+        "cn-urumqi-balou-1",
+        "cn-urumqi-wangjialiang-1",
+        "cn-urumqi-nanhu-north-road-1",
+        "cn-urumqi-nanhu-square-1",
+        "cn-urumqi-xinxing-street-1",
+        "cn-urumqi-beimen-1",
+        "cn-urumqi-nanmen-1",
+        "cn-urumqi-erdaoqiao-1",
+        "cn-urumqi-xinjiang-university-1",
+        "cn-urumqi-santunbei-1"
+      ],
+      "origin_stop_id": "cn-urumqi-international-airport-1",
+      "terminal_stop_id": "cn-urumqi-santunbei-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-6501",
+          "id": "1号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1"
+      }
+    },
+    {
+      "id": "cn-urumqi-pattern-apm-primary",
+      "line_id": "cn-urumqi-line-apm",
+      "name": "国际机场 → 国际机场北",
+      "names": {
+        "zh": "国际机场→国际机场北",
+        "en": "国际机场 to 国际机场北"
+      },
+      "stop_ids": [
+        "cn-urumqi-international-airport-apm",
+        "cn-urumqi-north-international-airport-apm"
+      ],
+      "origin_stop_id": "cn-urumqi-international-airport-apm",
+      "terminal_stop_id": "cn-urumqi-north-international-airport-apm",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-6501",
+          "id": "机场捷运"
+        }
+      ],
+      "extras": {
+        "line_short_name": "机场捷运"
+      }
+    }
+  ]
+}

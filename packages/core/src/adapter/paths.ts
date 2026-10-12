@@ -40,3 +40,15 @@ export function repoRootForDataDir(dataDir: string, networkId: string): string {
 export function networkDataDir(networkId: string, root?: string): string {
   return join(root ?? findRepoRoot(), 'data', networkId);
 }
+
+/**
+ * Scratch cache dir for adapter-side artifacts that must never appear in the
+ * canonical `data/<networkId>/` tree (planner distance caches, downloaded
+ * source workbooks, …). Lives under the git-ignored `tmp/` scratch dir so
+ * every city's data folder stays identical: the canonical files only.
+ * Contents are regenerable — caches only exist to spare repeat planner
+ * queries.
+ */
+export function adapterCacheDir(networkId: string, root?: string): string {
+  return join(root ?? findRepoRoot(), 'tmp', 'cache', networkId);
+}
