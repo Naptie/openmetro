@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-12T09:13:26.911Z_
+_Updated 2026-10-13T07:09:05.252Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -201,6 +201,20 @@ _Updated 2026-10-12T09:13:26.911Z_
 | Timetables | ✅ Complete | official | 100% | official=534 |
 | Schematic | ✅ Complete | official | 100% | official=279 |
 | Fares | 🟡 Partial | official | 97% | official=54990, default=1892 |
+
+## 天津轨道交通 / Tianjin Rail Transit (`cn-tianjin`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=239 |
+| Names | ✅ Complete | official | 100% | official=239 |
+| Segment times | ✅ Complete | official | 100% | official=258, derived=3 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=261 |
+| Transfer times | ✅ Complete | official | 100% | official=78 |
+| Timetables | ✅ Complete | official | 100% | official=531 |
+| Schematic | ✅ Complete | official | 100% | official=274 |
+| Fares | 🟡 Partial | official | 92% | official=52302, default=4580 |
 
 ## 乌鲁木齐地铁 / Ürümqi Metro (`cn-urumqi`)
 

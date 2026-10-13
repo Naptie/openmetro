@@ -220,7 +220,13 @@ export function applyDerivedTimes(
     // Keep authoritative official/planner times; override estimated/unset/last_train
     // gaps with derived values so we never discard real measurements.
     if (s.travel_time_source === 'source' || s.travel_time_source === 'planner') return s;
-    const d = byPair.get(`${s.from_stop_id}|${s.to_stop_id}`);
+    // Segments are undirected (`direction: "both"`), and a chain derivation can
+    // win in either orientation (e.g. a short-turn pattern whose timetable rows
+    // omit the destination terminus, tipping the reversed chain's coverage) —
+    // so accept the reversed pair key as well.
+    const d =
+      byPair.get(`${s.from_stop_id}|${s.to_stop_id}`) ??
+      byPair.get(`${s.to_stop_id}|${s.from_stop_id}`);
     if (!d) return s;
     return {
       ...s,

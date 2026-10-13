@@ -1,0 +1,4494 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-tianjin",
+  "generated_at": "2026-10-13T07:03:39.003Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-13T07:03:39.003Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-anshandao-1-cn-tianjin-yingkoudao-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-anshandao-1",
+      "to_stop_id": "cn-tianjin-yingkoudao-1",
+      "from_station_id": "cn-tianjin-anshandao",
+      "to_station_id": "cn-tianjin-yingkoudao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.913,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-anshanxidao-6-cn-tianjin-tiantuo-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-anshanxidao-6",
+      "to_stop_id": "cn-tianjin-tiantuo-6",
+      "from_station_id": "cn-tianjin-anshanxidao",
+      "to_station_id": "cn-tianjin-tiantuo",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.812,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-baimiao-4-cn-tianjin-beiyangqiao-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-baimiao-4",
+      "to_stop_id": "cn-tianjin-beiyangqiao-4",
+      "from_station_id": "cn-tianjin-baimiao",
+      "to_station_id": "cn-tianjin-beiyangqiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.978,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-beicang-4-cn-tianjin-guoyuannandao-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-beicang-4",
+      "to_stop_id": "cn-tianjin-guoyuannandao-4",
+      "from_station_id": "cn-tianjin-beicang",
+      "to_station_id": "cn-tianjin-guoyuannandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.131,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-beichendao-5-cn-tianjin-danhebeidao-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-beichendao-5",
+      "to_stop_id": "cn-tianjin-danhebeidao-5",
+      "from_station_id": "cn-tianjin-beichendao",
+      "to_station_id": "cn-tianjin-danhebeidao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.569,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-beininggongyuan-6-cn-tianjin-beizhan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-beininggongyuan-6",
+      "to_stop_id": "cn-tianjin-beizhan-6",
+      "from_station_id": "cn-tianjin-beininggongyuan",
+      "to_station_id": "cn-tianjin-beizhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.356,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-beiyangqiao-4-cn-tianjin-xigugongyuan-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-beiyangqiao-4",
+      "to_stop_id": "cn-tianjin-xigugongyuan-4",
+      "from_station_id": "cn-tianjin-beiyangqiao",
+      "to_station_id": "cn-tianjin-xigugongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.957,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-beiyunhe-6-cn-tianjin-beizhulin-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-beiyunhe-6",
+      "to_stop_id": "cn-tianjin-beizhulin-6",
+      "from_station_id": "cn-tianjin-beiyunhe",
+      "to_station_id": "cn-tianjin-beizhulin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.667,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-beizhan-3-cn-tianjin-zhongshanlu-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-beizhan-3",
+      "to_stop_id": "cn-tianjin-zhongshanlu-3",
+      "from_station_id": "cn-tianjin-beizhan",
+      "to_station_id": "cn-tianjin-zhongshanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.553,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-beizhan-6-cn-tianjin-xinkaihe-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-beizhan-6",
+      "to_stop_id": "cn-tianjin-xinkaihe-6",
+      "from_station_id": "cn-tianjin-beizhan",
+      "to_station_id": "cn-tianjin-xinkaihe",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.467,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-beizhulin-6-cn-tianjin-xizhan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-beizhulin-6",
+      "to_stop_id": "cn-tianjin-xizhan-6",
+      "from_station_id": "cn-tianjin-beizhulin",
+      "to_station_id": "cn-tianjin-xizhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.625,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-benxilu-1-cn-tianjin-qinjiandao-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-benxilu-1",
+      "to_stop_id": "cn-tianjin-qinjiandao-1",
+      "from_station_id": "cn-tianjin-benxilu",
+      "to_station_id": "cn-tianjin-qinjiandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.457,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-bianxing-2-cn-tianjin-caozhuang-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-bianxing-2",
+      "to_stop_id": "cn-tianjin-caozhuang-2",
+      "from_station_id": "cn-tianjin-bianxing",
+      "to_station_id": "cn-tianjin-caozhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "distance_km": 1.557,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 33.8,
+        "a_s_per_km": 54.9,
+        "b_s": 80.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-binhaiguojijichang-2-cn-tianjin-konggangjingjiqu-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-binhaiguojijichang-2",
+      "to_stop_id": "cn-tianjin-konggangjingjiqu-2",
+      "from_station_id": "cn-tianjin-binhaiguojijichang",
+      "to_station_id": "cn-tianjin-konggangjingjiqu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 300,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-tianjin-cn-tianjin-binhaiguojijichang-2-main-d1",
+        "cn-tianjin-cn-tianjin-konggangjingjiqu-2-main-d1"
+      ],
+      "distance_km": 3.711,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-caijingdaxue-1-cn-tianjin-shuanglin-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-caijingdaxue-1",
+      "to_stop_id": "cn-tianjin-shuanglin-1",
+      "from_station_id": "cn-tianjin-caijingdaxue",
+      "to_station_id": "cn-tianjin-shuanglin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.504,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-caijingdaxue-10-cn-tianjin-weishanlu-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-caijingdaxue-10",
+      "to_stop_id": "cn-tianjin-weishanlu-10",
+      "from_station_id": "cn-tianjin-caijingdaxue",
+      "to_station_id": "cn-tianjin-weishanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.487,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-chailou-4-cn-tianjin-shuangjie-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-chailou-4",
+      "to_stop_id": "cn-tianjin-shuangjie-4",
+      "from_station_id": "cn-tianjin-chailou",
+      "to_station_id": "cn-tianjin-shuangjie",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.961,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-changhonggongyuan-2-cn-tianjin-xianyanglu-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-changhonggongyuan-2",
+      "to_stop_id": "cn-tianjin-xianyanglu-2",
+      "from_station_id": "cn-tianjin-changhonggongyuan",
+      "to_station_id": "cn-tianjin-xianyanglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.246,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-changhonggongyuan-6-cn-tianjin-yibindao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-changhonggongyuan-6",
+      "to_stop_id": "cn-tianjin-yibindao-6",
+      "from_station_id": "cn-tianjin-changhonggongyuan",
+      "to_station_id": "cn-tianjin-yibindao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.266,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-changlinglu-10-cn-tianjin-yaohuanlu-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-changlinglu-10",
+      "to_stop_id": "cn-tianjin-yaohuanlu-10",
+      "from_station_id": "cn-tianjin-changlinglu",
+      "to_station_id": "cn-tianjin-yaohuanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.87,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-changlinglu-5-cn-tianjin-lingbinlu-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-changlinglu-5",
+      "to_stop_id": "cn-tianjin-lingbinlu-5",
+      "from_station_id": "cn-tianjin-changlinglu",
+      "to_station_id": "cn-tianjin-lingbinlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.67,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-chenglindao-4-cn-tianjin-taichanglu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-chenglindao-4",
+      "to_stop_id": "cn-tianjin-taichanglu-4",
+      "from_station_id": "cn-tianjin-chenglindao",
+      "to_station_id": "cn-tianjin-taichanglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.291,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-chenglindao-5-cn-tianjin-jingjianglu-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-chenglindao-5",
+      "to_stop_id": "cn-tianjin-jingjianglu-5",
+      "from_station_id": "cn-tianjin-chenglindao",
+      "to_station_id": "cn-tianjin-jingjianglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.364,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-chentang-11-cn-tianjin-dongjiangdao-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-chentang-11",
+      "to_stop_id": "cn-tianjin-dongjiangdao-11",
+      "from_station_id": "cn-tianjin-chentang",
+      "to_station_id": "cn-tianjin-dongjiangdao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.95,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-chentangzhuang-1-cn-tianjin-fuxingmen-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-chentangzhuang-1",
+      "to_stop_id": "cn-tianjin-fuxingmen-1",
+      "from_station_id": "cn-tianjin-chentangzhuang",
+      "to_station_id": "cn-tianjin-fuxingmen",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.228,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-chunhailu-10-cn-tianjin-nanzhuqiao-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-chunhailu-10",
+      "to_stop_id": "cn-tianjin-nanzhuqiao-10",
+      "from_station_id": "cn-tianjin-chunhailu",
+      "to_station_id": "cn-tianjin-nanzhuqiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.352,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-cuifuxincun-2-cn-tianjin-jingjianglu-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-cuifuxincun-2",
+      "to_stop_id": "cn-tianjin-jingjianglu-2",
+      "from_station_id": "cn-tianjin-cuifuxincun",
+      "to_station_id": "cn-tianjin-jingjianglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.198,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dabizhuang-6-cn-tianjin-jinzhongjie-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-dabizhuang-6",
+      "to_stop_id": "cn-tianjin-jinzhongjie-6",
+      "from_station_id": "cn-tianjin-dabizhuang",
+      "to_station_id": "cn-tianjin-jinzhongjie",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.176,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-danhebeidao-5-cn-tianjin-beichenkeyiyuanbei-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-danhebeidao-5",
+      "to_stop_id": "cn-tianjin-beichenkeyiyuanbei-5",
+      "from_station_id": "cn-tianjin-danhebeidao",
+      "to_station_id": "cn-tianjin-beichenkeyiyuanbei",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "distance_km": 2.086,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 42.2,
+        "a_s_per_km": 44.2,
+        "b_s": 85.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dawangzhuang-9-cn-tianjin-tianjinzhan-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-dawangzhuang-9",
+      "to_stop_id": "cn-tianjin-tianjinzhan-9",
+      "from_station_id": "cn-tianjin-dawangzhuang",
+      "to_station_id": "cn-tianjin-tianjinzhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.312,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-daxuecheng-3-cn-tianjin-gaoxinqu-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-daxuecheng-3",
+      "to_stop_id": "cn-tianjin-gaoxinqu-3",
+      "from_station_id": "cn-tianjin-daxuecheng",
+      "to_station_id": "cn-tianjin-gaoxinqu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.124,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dengzhoulu-2-cn-tianjin-yudongcheng-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-dengzhoulu-2",
+      "to_stop_id": "cn-tianjin-yudongcheng-2",
+      "from_station_id": "cn-tianjin-dengzhoulu",
+      "to_station_id": "cn-tianjin-yudongcheng",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.441,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dengzhounanlu-4-cn-tianjin-yuejinbeilu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-dengzhounanlu-4",
+      "to_stop_id": "cn-tianjin-yuejinbeilu-4",
+      "from_station_id": "cn-tianjin-dengzhounanlu",
+      "to_station_id": "cn-tianjin-yuejinbeilu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.188,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-donggulu-1-cn-tianjin-shuangqiaohe-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-donggulu-1",
+      "to_stop_id": "cn-tianjin-shuangqiaohe-1",
+      "from_station_id": "cn-tianjin-donggulu",
+      "to_station_id": "cn-tianjin-shuangqiaohe",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "distance_km": 2.249,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 35.2,
+        "a_s_per_km": 80.6,
+        "b_s": 48.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-donghailu-9-cn-tianjin-huizhanzhongxin-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-donghailu-9",
+      "to_stop_id": "cn-tianjin-huizhanzhongxin-9",
+      "from_station_id": "cn-tianjin-donghailu",
+      "to_station_id": "cn-tianjin-huizhanzhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 1.272,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dongjiangdao-11-cn-tianjin-xueyuanbeilu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-dongjiangdao-11",
+      "to_stop_id": "cn-tianjin-xueyuanbeilu-11",
+      "from_station_id": "cn-tianjin-dongjiangdao",
+      "to_station_id": "cn-tianjin-xueyuanbeilu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.249,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-donglikaifaqu-9-cn-tianjin-xinli-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-donglikaifaqu-9",
+      "to_stop_id": "cn-tianjin-xinli-9",
+      "from_station_id": "cn-tianjin-donglikaifaqu",
+      "to_station_id": "cn-tianjin-xinli",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.984,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-donglisanjinglu-11-cn-tianjin-dongliliujinglu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-donglisanjinglu-11",
+      "to_stop_id": "cn-tianjin-dongliliujinglu-11",
+      "from_station_id": "cn-tianjin-donglisanjinglu",
+      "to_station_id": "cn-tianjin-dongliliujinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 1.502,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dongliwentizhongxin-11-cn-tianjin-xunhailu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-dongliwentizhongxin-11",
+      "to_stop_id": "cn-tianjin-xunhailu-11",
+      "from_station_id": "cn-tianjin-dongliwentizhongxin",
+      "to_station_id": "cn-tianjin-xunhailu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.923,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dongliyijinglu-11-cn-tianjin-donglisanjinglu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-dongliyijinglu-11",
+      "to_stop_id": "cn-tianjin-donglisanjinglu-11",
+      "from_station_id": "cn-tianjin-dongliyijinglu",
+      "to_station_id": "cn-tianjin-donglisanjinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.805,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dongnanjiao-2-cn-tianjin-gulou-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-dongnanjiao-2",
+      "to_stop_id": "cn-tianjin-gulou-2",
+      "from_station_id": "cn-tianjin-dongnanjiao",
+      "to_station_id": "cn-tianjin-gulou",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.782,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dongnanjiao-4-cn-tianjin-jinjie-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-dongnanjiao-4",
+      "to_stop_id": "cn-tianjin-jinjie-4",
+      "from_station_id": "cn-tianjin-dongnanjiao",
+      "to_station_id": "cn-tianjin-jinjie",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.587,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dongtinglu-6-cn-tianjin-meilinlu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-dongtinglu-6",
+      "to_stop_id": "cn-tianjin-meilinlu-6",
+      "from_station_id": "cn-tianjin-dongtinglu",
+      "to_station_id": "cn-tianjin-meilinlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.781,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-dongxinglu-9-cn-tianjin-zhigu-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-dongxinglu-9",
+      "to_stop_id": "cn-tianjin-zhigu-9",
+      "from_station_id": "cn-tianjin-dongxinglu",
+      "to_station_id": "cn-tianjin-zhigu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.126,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-erhaoqiao-9-cn-tianjin-yihaoqiao-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-erhaoqiao-9",
+      "to_stop_id": "cn-tianjin-yihaoqiao-9",
+      "from_station_id": "cn-tianjin-erhaoqiao",
+      "to_station_id": "cn-tianjin-yihaoqiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.886,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-erweilu-1-cn-tianjin-haiguangsi-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-erweilu-1",
+      "to_stop_id": "cn-tianjin-haiguangsi-1",
+      "from_station_id": "cn-tianjin-erweilu",
+      "to_station_id": "cn-tianjin-haiguangsi",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.918,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-fangshandao-10-cn-tianjin-jinmaochanyeyuan-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-fangshandao-10",
+      "to_stop_id": "cn-tianjin-jinmaochanyeyuan-10",
+      "from_station_id": "cn-tianjin-fangshandao",
+      "to_station_id": "cn-tianjin-jinmaochanyeyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.837,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-fengchanhe-3-cn-tianjin-huabeijituan-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-fengchanhe-3",
+      "to_stop_id": "cn-tianjin-huabeijituan-3",
+      "from_station_id": "cn-tianjin-fengchanhe",
+      "to_station_id": "cn-tianjin-huabeijituan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.362,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-fuandajie-7-cn-tianjin-haiguangsi-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-fuandajie-7",
+      "to_stop_id": "cn-tianjin-haiguangsi-7",
+      "from_station_id": "cn-tianjin-fuandajie",
+      "to_station_id": "cn-tianjin-haiguangsi",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.784,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-fuxinglu-6-cn-tianjin-renminyiyuan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-fuxinglu-6",
+      "to_stop_id": "cn-tianjin-renminyiyuan-6",
+      "from_station_id": "cn-tianjin-fuxinglu",
+      "to_station_id": "cn-tianjin-renminyiyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.201,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-fuxingmen-1-cn-tianjin-huashanli-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-fuxingmen-1",
+      "to_stop_id": "cn-tianjin-huashanli-1",
+      "from_station_id": "cn-tianjin-fuxingmen",
+      "to_station_id": "cn-tianjin-huashanli",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.237,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-gangguangongsi-9-cn-tianjin-junliangcheng-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-gangguangongsi-9",
+      "to_stop_id": "cn-tianjin-junliangcheng-9",
+      "from_station_id": "cn-tianjin-gangguangongsi",
+      "to_station_id": "cn-tianjin-junliangcheng",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 4.228,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-gaoxinqu-3-cn-tianjin-xuefugongyequ-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-gaoxinqu-3",
+      "to_stop_id": "cn-tianjin-xuefugongyequ-3",
+      "from_station_id": "cn-tianjin-gaoxinqu",
+      "to_station_id": "cn-tianjin-xuefugongyequ",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.727,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-gaozhuangzi-1-cn-tianjin-guojiahuizhanzhongxin-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-gaozhuangzi-1",
+      "to_stop_id": "cn-tianjin-guojiahuizhanzhongxin-1",
+      "from_station_id": "cn-tianjin-gaozhuangzi",
+      "to_station_id": "cn-tianjin-guojiahuizhanzhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 2.545,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-guangkaisimalu-2-cn-tianjin-changhonggongyuan-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-guangkaisimalu-2",
+      "to_stop_id": "cn-tianjin-changhonggongyuan-2",
+      "from_station_id": "cn-tianjin-guangkaisimalu",
+      "to_station_id": "cn-tianjin-changhonggongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.083,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-gulou-2-cn-tianjin-xinanjiao-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-gulou-2",
+      "to_stop_id": "cn-tianjin-xinanjiao-2",
+      "from_station_id": "cn-tianjin-gulou",
+      "to_station_id": "cn-tianjin-xinanjiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.797,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-gulou-7-cn-tianjin-fuandajie-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-gulou-7",
+      "to_stop_id": "cn-tianjin-fuandajie-7",
+      "from_station_id": "cn-tianjin-gulou",
+      "to_station_id": "cn-tianjin-fuandajie",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.907,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-guojiahuizhanzhongxin-1-cn-tianjin-guoruilu-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-guojiahuizhanzhongxin-1",
+      "to_stop_id": "cn-tianjin-guoruilu-1",
+      "from_station_id": "cn-tianjin-guojiahuizhanzhongxin",
+      "to_station_id": "cn-tianjin-guoruilu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.977,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-guoruilu-1-cn-tianjin-donggulu-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-guoruilu-1",
+      "to_stop_id": "cn-tianjin-donggulu-1",
+      "from_station_id": "cn-tianjin-guoruilu",
+      "to_station_id": "cn-tianjin-donggulu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.857,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-guoshanlu-2-cn-tianjin-dengzhoulu-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-guoshanlu-2",
+      "to_stop_id": "cn-tianjin-dengzhoulu-2",
+      "from_station_id": "cn-tianjin-guoshanlu",
+      "to_station_id": "cn-tianjin-dengzhoulu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.272,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-guoyuannandao-4-cn-tianjin-nancang-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-guoyuannandao-4",
+      "to_stop_id": "cn-tianjin-nancang-4",
+      "from_station_id": "cn-tianjin-guoyuannandao",
+      "to_station_id": "cn-tianjin-nancang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.873,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-haiguangsi-1-cn-tianjin-anshandao-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-haiguangsi-1",
+      "to_stop_id": "cn-tianjin-anshandao-1",
+      "from_station_id": "cn-tianjin-haiguangsi",
+      "to_station_id": "cn-tianjin-anshandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.874,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-haiguangsi-7-cn-tianjin-tianjindaxueliulitai-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-haiguangsi-7",
+      "to_stop_id": "cn-tianjin-tianjindaxueliulitai-7",
+      "from_station_id": "cn-tianjin-haiguangsi",
+      "to_station_id": "cn-tianjin-tianjindaxueliulitai",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.073,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-haihedonglu-11-cn-tianjin-huanyudao-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-haihedonglu-11",
+      "to_stop_id": "cn-tianjin-huanyudao-11",
+      "from_station_id": "cn-tianjin-haihedonglu",
+      "to_station_id": "cn-tianjin-huanyudao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.822,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-haihejiaoyuyuanqu-6-cn-tianjin-nankaidaxue-jinnanxiaoqu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-haihejiaoyuyuanqu-6",
+      "to_stop_id": "cn-tianjin-nankaidaxue-jinnanxiaoqu-6",
+      "from_station_id": "cn-tianjin-haihejiaoyuyuanqu",
+      "to_station_id": "cn-tianjin-nankaidaxue-jinnanxiaoqu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.809,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hangmugongyuan-z4-cn-tianjin-ruanjianyuan-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-hangmugongyuan-z4",
+      "to_stop_id": "cn-tianjin-ruanjianyuan-z4",
+      "from_station_id": "cn-tianjin-hangmugongyuan",
+      "to_station_id": "cn-tianjin-ruanjianyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.983,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hangshuanglu-4-cn-tianjin-minhangdaxue-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-hangshuanglu-4",
+      "to_stop_id": "cn-tianjin-minhangdaxue-4",
+      "from_station_id": "cn-tianjin-hangshuanglu",
+      "to_station_id": "cn-tianjin-minhangdaxue",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.334,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hanguyiyuan-z4-cn-tianjin-zhongxinyugang-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-hanguyiyuan-z4",
+      "to_stop_id": "cn-tianjin-zhongxinyugang-z4",
+      "from_station_id": "cn-tianjin-hanguyiyuan",
+      "to_station_id": "cn-tianjin-zhongxinyugang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.225,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hehuinanlu-6-cn-tianjin-xianshuiguxi-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-hehuinanlu-6",
+      "to_stop_id": "cn-tianjin-xianshuiguxi-6",
+      "from_station_id": "cn-tianjin-hehuinanlu",
+      "to_station_id": "cn-tianjin-xianshuiguxi",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 1.168,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hepinglu-3-cn-tianjin-yingkoudao-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-hepinglu-3",
+      "to_stop_id": "cn-tianjin-yingkoudao-3",
+      "from_station_id": "cn-tianjin-hepinglu",
+      "to_station_id": "cn-tianjin-yingkoudao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.098,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hepinglu-4-cn-tianjin-xuzhoudao-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-hepinglu-4",
+      "to_stop_id": "cn-tianjin-xuzhoudao-4",
+      "from_station_id": "cn-tianjin-hepinglu",
+      "to_station_id": "cn-tianjin-xuzhoudao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.746,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-heshunlu-z4-cn-tianjin-zhongxinshengtaicheng-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-heshunlu-z4",
+      "to_stop_id": "cn-tianjin-zhongxinshengtaicheng-z4",
+      "from_station_id": "cn-tianjin-heshunlu",
+      "to_station_id": "cn-tianjin-zhongxinshengtaicheng",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.486,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-honghuli-1-cn-tianjin-xizhan-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-honghuli-1",
+      "to_stop_id": "cn-tianjin-xizhan-1",
+      "from_station_id": "cn-tianjin-honghuli",
+      "to_station_id": "cn-tianjin-xizhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.603,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hongnihedong-1-cn-tianjin-gaozhuangzi-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-hongnihedong-1",
+      "to_stop_id": "cn-tianjin-gaozhuangzi-1",
+      "from_station_id": "cn-tianjin-hongnihedong",
+      "to_station_id": "cn-tianjin-gaozhuangzi",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.462,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hongqinanlu-3-cn-tianjin-wangdingdi-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-hongqinanlu-3",
+      "to_stop_id": "cn-tianjin-wangdingdi-3",
+      "from_station_id": "cn-tianjin-hongqinanlu",
+      "to_station_id": "cn-tianjin-wangdingdi",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.793,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hongqinanlu-6-cn-tianjin-yingfengdao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-hongqinanlu-6",
+      "to_stop_id": "cn-tianjin-yingfengdao-6",
+      "from_station_id": "cn-tianjin-hongqinanlu",
+      "to_station_id": "cn-tianjin-yingfengdao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.743,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hongyuandao-7-cn-tianjin-lubeilu-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-hongyuandao-7",
+      "to_stop_id": "cn-tianjin-lubeilu-7",
+      "from_station_id": "cn-tianjin-hongyuandao",
+      "to_station_id": "cn-tianjin-lubeilu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.949,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-huabeijituan-3-cn-tianjin-tianshili-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-huabeijituan-3",
+      "to_stop_id": "cn-tianjin-tianshili-3",
+      "from_station_id": "cn-tianjin-huabeijituan",
+      "to_station_id": "cn-tianjin-tianshili",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.66,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-huaihedao-5-cn-tianjin-zhiyedaxue-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-huaihedao-5",
+      "to_stop_id": "cn-tianjin-zhiyedaxue-5",
+      "from_station_id": "cn-tianjin-huaihedao",
+      "to_station_id": "cn-tianjin-zhiyedaxue",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.655,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-huanyudao-10-cn-tianjin-liulinlu-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-huanyudao-10",
+      "to_stop_id": "cn-tianjin-liulinlu-10",
+      "from_station_id": "cn-tianjin-huanyudao",
+      "to_station_id": "cn-tianjin-liulinlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.352,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-huanyudao-11-cn-tianjin-xueliannanlu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-huanyudao-11",
+      "to_stop_id": "cn-tianjin-xueliannanlu-11",
+      "from_station_id": "cn-tianjin-huanyudao",
+      "to_station_id": "cn-tianjin-xueliannanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.226,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-huashanli-1-cn-tianjin-caijingdaxue-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-huashanli-1",
+      "to_stop_id": "cn-tianjin-caijingdaxue-1",
+      "from_station_id": "cn-tianjin-huashanli",
+      "to_station_id": "cn-tianjin-caijingdaxue",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.32,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-huayuan-3-cn-tianjin-daxuecheng-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-huayuan-3",
+      "to_stop_id": "cn-tianjin-daxuecheng-3",
+      "from_station_id": "cn-tianjin-huayuan",
+      "to_station_id": "cn-tianjin-daxuecheng",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.205,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-huizhanzhongxin-9-cn-tianjin-taihulu-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-huizhanzhongxin-9",
+      "to_stop_id": "cn-tianjin-taihulu-9",
+      "from_station_id": "cn-tianjin-huizhanzhongxin",
+      "to_station_id": "cn-tianjin-taihulu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.331,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-hujiayuan-9-cn-tianjin-gangguangongsi-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-hujiayuan-9",
+      "to_stop_id": "cn-tianjin-gangguangongsi-9",
+      "from_station_id": "cn-tianjin-hujiayuan",
+      "to_station_id": "cn-tianjin-gangguangongsi",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 480,
+      "travel_time_source": "planner",
+      "distance_km": 8.938,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jianchangdao-5-cn-tianjin-siyuanlu-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-jianchangdao-5",
+      "to_stop_id": "cn-tianjin-siyuanlu-5",
+      "from_station_id": "cn-tianjin-jianchangdao",
+      "to_station_id": "cn-tianjin-siyuanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.747,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jianguo-road-yifeng-area-2-cn-tianjin-dongnanjiao-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-jianguo-road-yifeng-area-2",
+      "to_stop_id": "cn-tianjin-dongnanjiao-2",
+      "from_station_id": "cn-tianjin-jianguo-road-yifeng-area",
+      "to_station_id": "cn-tianjin-dongnanjiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.944,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jiangwanerzhilu-10-cn-tianjin-lijiangdao-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-jiangwanerzhilu-10",
+      "to_stop_id": "cn-tianjin-lijiangdao-10",
+      "from_station_id": "cn-tianjin-jiangwanerzhilu",
+      "to_station_id": "cn-tianjin-lijiangdao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.016,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jianshanlu-6-cn-tianjin-yidaeryuan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-jianshanlu-6",
+      "to_stop_id": "cn-tianjin-yidaeryuan-6",
+      "from_station_id": "cn-tianjin-jianshanlu",
+      "to_station_id": "cn-tianjin-yidaeryuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.658,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jiayuanli-1-cn-tianjin-benxilu-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-jiayuanli-1",
+      "to_stop_id": "cn-tianjin-benxilu-1",
+      "from_station_id": "cn-tianjin-jiayuanli",
+      "to_station_id": "cn-tianjin-benxilu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.216,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jiefangnanlu-6-cn-tianjin-dongtinglu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-jiefangnanlu-6",
+      "to_stop_id": "cn-tianjin-dongtinglu-6",
+      "from_station_id": "cn-tianjin-jiefangnanlu",
+      "to_station_id": "cn-tianjin-dongtinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.072,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jieyuanxidao-2-cn-tianjin-bianxing-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-jieyuanxidao-2",
+      "to_stop_id": "cn-tianjin-bianxing-2",
+      "from_station_id": "cn-tianjin-jieyuanxidao",
+      "to_station_id": "cn-tianjin-bianxing",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.025,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinghedao-6-cn-tianjin-jinglidao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-jinghedao-6",
+      "to_stop_id": "cn-tianjin-jinglidao-6",
+      "from_station_id": "cn-tianjin-jinghedao",
+      "to_station_id": "cn-tianjin-jinglidao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.065,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinghuadongdao-5-cn-tianjin-liqizhuangnan-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-jinghuadongdao-5",
+      "to_stop_id": "cn-tianjin-liqizhuangnan-5",
+      "from_station_id": "cn-tianjin-jinghuadongdao",
+      "to_station_id": "cn-tianjin-liqizhuangnan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.332,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinghuadongdao-jinjing-cn-tianjin-jingwu-jinjing",
+      "line_id": "cn-tianjin-line-jinjing",
+      "from_stop_id": "cn-tianjin-jinghuadongdao-jinjing",
+      "to_stop_id": "cn-tianjin-jingwu-jinjing",
+      "from_station_id": "cn-tianjin-jinghuadongdao",
+      "to_station_id": "cn-tianjin-jingwu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "distance_km": 2.981,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 47.1,
+        "a_s_per_km": 46.4,
+        "b_s": 89.6,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jingjianglu-2-cn-tianjin-shunchiqiao-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-jingjianglu-2",
+      "to_stop_id": "cn-tianjin-shunchiqiao-2",
+      "from_station_id": "cn-tianjin-jingjianglu",
+      "to_station_id": "cn-tianjin-shunchiqiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.892,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jingjianglu-5-cn-tianjin-xingfugongyuan-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-jingjianglu-5",
+      "to_stop_id": "cn-tianjin-xingfugongyuan-5",
+      "from_station_id": "cn-tianjin-jingjianglu",
+      "to_station_id": "cn-tianjin-xingfugongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.29,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinglidao-6-cn-tianjin-tianjindaxu-ebeiyangyuanxiaoqu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-jinglidao-6",
+      "to_stop_id": "cn-tianjin-tianjindaxu-ebeiyangyuanxiaoqu-6",
+      "from_station_id": "cn-tianjin-jinglidao",
+      "to_station_id": "cn-tianjin-tianjindaxu-ebeiyangyuanxiaoqu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.647,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jingwu-jinjing-cn-tianjin-tuanbojiankangcheng-jinjing",
+      "line_id": "cn-tianjin-line-jinjing",
+      "from_stop_id": "cn-tianjin-jingwu-jinjing",
+      "to_stop_id": "cn-tianjin-tuanbojiankangcheng-jinjing",
+      "from_station_id": "cn-tianjin-jingwu",
+      "to_station_id": "cn-tianjin-tuanbojiankangcheng",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 6.19,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinjie-4-cn-tianjin-hepinglu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-jinjie-4",
+      "to_stop_id": "cn-tianjin-hepinglu-4",
+      "from_station_id": "cn-tianjin-jinjie",
+      "to_station_id": "cn-tianjin-hepinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.207,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinmaochanyeyuan-10-cn-tianjin-longhandao-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-jinmaochanyeyuan-10",
+      "to_stop_id": "cn-tianjin-longhandao-10",
+      "from_station_id": "cn-tianjin-jinmaochanyeyuan",
+      "to_station_id": "cn-tianjin-longhandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.924,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinshiqiao-3-cn-tianjin-tianjinzhan-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-jinshiqiao-3",
+      "to_stop_id": "cn-tianjin-tianjinzhan-3",
+      "from_station_id": "cn-tianjin-jinshiqiao",
+      "to_station_id": "cn-tianjin-tianjinzhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.515,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jintanglu-5-cn-tianjin-chenglindao-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-jintanglu-5",
+      "to_stop_id": "cn-tianjin-chenglindao-5",
+      "from_station_id": "cn-tianjin-jintanglu",
+      "to_station_id": "cn-tianjin-chenglindao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.574,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinwanguangchang-3-cn-tianjin-hepinglu-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-jinwanguangchang-3",
+      "to_stop_id": "cn-tianjin-hepinglu-3",
+      "from_station_id": "cn-tianjin-jinwanguangchang",
+      "to_station_id": "cn-tianjin-hepinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.637,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinzhonghedajie-5-cn-tianjin-jianchangdao-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-jinzhonghedajie-5",
+      "to_stop_id": "cn-tianjin-jianchangdao-5",
+      "from_station_id": "cn-tianjin-jinzhonghedajie",
+      "to_station_id": "cn-tianjin-jianchangdao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.041,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinzhonghedajie-6-cn-tianjin-minquanmen-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-jinzhonghedajie-6",
+      "to_stop_id": "cn-tianjin-minquanmen-6",
+      "from_station_id": "cn-tianjin-jinzhonghedajie",
+      "to_station_id": "cn-tianjin-minquanmen",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.829,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-jinzhongjie-6-cn-tianjin-xuzhuangzi-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-jinzhongjie-6",
+      "to_stop_id": "cn-tianjin-xuzhuangzi-6",
+      "from_station_id": "cn-tianjin-jinzhongjie",
+      "to_station_id": "cn-tianjin-xuzhuangzi",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.432,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-junliangcheng-9-cn-tianjin-xiaodongzhuang-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-junliangcheng-9",
+      "to_stop_id": "cn-tianjin-xiaodongzhuang-9",
+      "from_station_id": "cn-tianjin-junliangcheng",
+      "to_station_id": "cn-tianjin-xiaodongzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.905,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-konggangjingjiqu-2-cn-tianjin-guoshanlu-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-konggangjingjiqu-2",
+      "to_stop_id": "cn-tianjin-guoshanlu-2",
+      "from_station_id": "cn-tianjin-konggangjingjiqu",
+      "to_station_id": "cn-tianjin-guoshanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-tianjin-cn-tianjin-konggangjingjiqu-2-main-d1",
+        "cn-tianjin-cn-tianjin-guoshanlu-2-main-d1"
+      ],
+      "distance_km": 2.192,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-langyuan-4-cn-tianjin-chailou-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-langyuan-4",
+      "to_stop_id": "cn-tianjin-chailou-4",
+      "from_station_id": "cn-tianjin-langyuan",
+      "to_station_id": "cn-tianjin-chailou",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.441,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-laoshandao-10-cn-tianjin-xiangshandao-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-laoshandao-10",
+      "to_stop_id": "cn-tianjin-xiangshandao-10",
+      "from_station_id": "cn-tianjin-laoshandao",
+      "to_station_id": "cn-tianjin-xiangshandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.82,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-leyuandao-6-cn-tianjin-jianshanlu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-leyuandao-6",
+      "to_stop_id": "cn-tianjin-jianshanlu-6",
+      "from_station_id": "cn-tianjin-leyuandao",
+      "to_station_id": "cn-tianjin-jianshanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.717,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-liaohebeidao-5-cn-tianjin-huaihedao-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-liaohebeidao-5",
+      "to_stop_id": "cn-tianjin-huaihedao-5",
+      "from_station_id": "cn-tianjin-liaohebeidao",
+      "to_station_id": "cn-tianjin-huaihedao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.176,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-lijiangdao-10-cn-tianjin-changlinglu-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-lijiangdao-10",
+      "to_stop_id": "cn-tianjin-changlinglu-10",
+      "from_station_id": "cn-tianjin-lijiangdao",
+      "to_station_id": "cn-tianjin-changlinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.059,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-lijiangdao-7-cn-tianjin-wanglanzhuang-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-lijiangdao-7",
+      "to_stop_id": "cn-tianjin-wanglanzhuang-7",
+      "from_station_id": "cn-tianjin-lijiangdao",
+      "to_station_id": "cn-tianjin-wanglanzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.346,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-lilou-1-cn-tianjin-hongnihedong-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-lilou-1",
+      "to_stop_id": "cn-tianjin-hongnihedong-1",
+      "from_station_id": "cn-tianjin-lilou",
+      "to_station_id": "cn-tianjin-hongnihedong",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.511,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-lingbinlu-5-cn-tianjin-tiyuzhongxin-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-lingbinlu-5",
+      "to_stop_id": "cn-tianjin-tiyuzhongxin-5",
+      "from_station_id": "cn-tianjin-lingbinlu",
+      "to_station_id": "cn-tianjin-tiyuzhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.743,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-liqizhuangnan-5-cn-tianjin-zhongyiyifuyuan-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-liqizhuangnan-5",
+      "to_stop_id": "cn-tianjin-zhongyiyifuyuan-5",
+      "from_station_id": "cn-tianjin-liqizhuangnan",
+      "to_station_id": "cn-tianjin-zhongyiyifuyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.681,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-lishuidao-11-cn-tianjin-neijianglu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-lishuidao-11",
+      "to_stop_id": "cn-tianjin-neijianglu-11",
+      "from_station_id": "cn-tianjin-lishuidao",
+      "to_station_id": "cn-tianjin-neijianglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.288,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-liulinlu-10-cn-tianjin-caijingdaxue-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-liulinlu-10",
+      "to_stop_id": "cn-tianjin-caijingdaxue-10",
+      "from_station_id": "cn-tianjin-liulinlu",
+      "to_station_id": "cn-tianjin-caijingdaxue",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.14,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-liutan-4-cn-tianjin-baimiao-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-liutan-4",
+      "to_stop_id": "cn-tianjin-baimiao-4",
+      "from_station_id": "cn-tianjin-liutan",
+      "to_station_id": "cn-tianjin-baimiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.78,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-liuweilu-4-cn-tianjin-chenglindao-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-liuweilu-4",
+      "to_stop_id": "cn-tianjin-chenglindao-4",
+      "from_station_id": "cn-tianjin-liuweilu",
+      "to_station_id": "cn-tianjin-chenglindao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.257,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-liuyuan-1-cn-tianjin-ruijingxinyuan-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-liuyuan-1",
+      "to_stop_id": "cn-tianjin-ruijingxinyuan-1",
+      "from_station_id": "cn-tianjin-liuyuan",
+      "to_station_id": "cn-tianjin-ruijingxinyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 1.003,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-longhandao-10-cn-tianjin-huanyudao-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-longhandao-10",
+      "to_stop_id": "cn-tianjin-huanyudao-10",
+      "from_station_id": "cn-tianjin-longhandao",
+      "to_station_id": "cn-tianjin-huanyudao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.134,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-lubeilu-7-cn-tianjin-saidalu-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-lubeilu-7",
+      "to_stop_id": "cn-tianjin-saidalu-7",
+      "from_station_id": "cn-tianjin-lubeilu",
+      "to_station_id": "cn-tianjin-saidalu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.94,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-luchuangyuan-z4-cn-tianjin-heshunlu-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-luchuangyuan-z4",
+      "to_stop_id": "cn-tianjin-heshunlu-z4",
+      "from_station_id": "cn-tianjin-luchuangyuan",
+      "to_station_id": "cn-tianjin-heshunlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.272,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-lushuidao-6-cn-tianjin-shuanggang-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-lushuidao-6",
+      "to_stop_id": "cn-tianjin-shuanggang-6",
+      "from_station_id": "cn-tianjin-lushuidao",
+      "to_station_id": "cn-tianjin-shuanggang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "distance_km": 1.83,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 43.9,
+        "a_s_per_km": 35.4,
+        "b_s": 85.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-magangchang-10-cn-tianjin-chunhailu-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-magangchang-10",
+      "to_stop_id": "cn-tianjin-chunhailu-10",
+      "from_station_id": "cn-tianjin-magangchang",
+      "to_station_id": "cn-tianjin-chunhailu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.836,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-meijiangdao-6-cn-tianjin-zuojiangdao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-meijiangdao-6",
+      "to_stop_id": "cn-tianjin-zuojiangdao-6",
+      "from_station_id": "cn-tianjin-meijiangdao",
+      "to_station_id": "cn-tianjin-zuojiangdao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.191,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-meijianggongyuan-6-cn-tianjin-meijianghuizhanzhongxin-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-meijianggongyuan-6",
+      "to_stop_id": "cn-tianjin-meijianghuizhanzhongxin-6",
+      "from_station_id": "cn-tianjin-meijianggongyuan",
+      "to_station_id": "cn-tianjin-meijianghuizhanzhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.892,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-meijianghuizhanzhongxin-6-cn-tianjin-jiefangnanlu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-meijianghuizhanzhongxin-6",
+      "to_stop_id": "cn-tianjin-jiefangnanlu-6",
+      "from_station_id": "cn-tianjin-meijianghuizhanzhongxin",
+      "to_station_id": "cn-tianjin-jiefangnanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.461,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-meijianghuizhanzhongxinnan-7-cn-tianjin-zhangdaokou-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-meijianghuizhanzhongxinnan-7",
+      "to_stop_id": "cn-tianjin-zhangdaokou-7",
+      "from_station_id": "cn-tianjin-meijianghuizhanzhongxinnan",
+      "to_station_id": "cn-tianjin-zhangdaokou",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.374,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-meilinlu-6-cn-tianjin-lushuidao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-meilinlu-6",
+      "to_stop_id": "cn-tianjin-lushuidao-6",
+      "from_station_id": "cn-tianjin-meilinlu",
+      "to_station_id": "cn-tianjin-lushuidao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "distance_km": 1.232,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34.4,
+        "a_s_per_km": 35.4,
+        "b_s": 85.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-minhangdaxue-4-cn-tianjin-xinxingcun-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-minhangdaxue-4",
+      "to_stop_id": "cn-tianjin-xinxingcun-4",
+      "from_station_id": "cn-tianjin-minhangdaxue",
+      "to_station_id": "cn-tianjin-xinxingcun",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.012,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-minquanmen-6-cn-tianjin-beininggongyuan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-minquanmen-6",
+      "to_stop_id": "cn-tianjin-beininggongyuan-6",
+      "from_station_id": "cn-tianjin-minquanmen",
+      "to_station_id": "cn-tianjin-beininggongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.92,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nancang-4-cn-tianjin-tianmu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-nancang-4",
+      "to_stop_id": "cn-tianjin-tianmu-4",
+      "from_station_id": "cn-tianjin-nancang",
+      "to_station_id": "cn-tianjin-tianmu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.206,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nancuiping-6-cn-tianjin-shuishanggongyuandonglu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-nancuiping-6",
+      "to_stop_id": "cn-tianjin-shuishanggongyuandonglu-6",
+      "from_station_id": "cn-tianjin-nancuiping",
+      "to_station_id": "cn-tianjin-shuishanggongyuandonglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.252,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nanhezhuang-6-cn-tianjin-dabizhuang-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-nanhezhuang-6",
+      "to_stop_id": "cn-tianjin-dabizhuang-6",
+      "from_station_id": "cn-tianjin-nanhezhuang",
+      "to_station_id": "cn-tianjin-dabizhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.089,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nankaidaxue-jinnanxiaoqu-6-cn-tianjin-hehuinanlu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-nankaidaxue-jinnanxiaoqu-6",
+      "to_stop_id": "cn-tianjin-hehuinanlu-6",
+      "from_station_id": "cn-tianjin-nankaidaxue-jinnanxiaoqu",
+      "to_station_id": "cn-tianjin-hehuinanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.633,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nankaidaxuebalitai-11-cn-tianjin-wujiayao-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-nankaidaxuebalitai-11",
+      "to_stop_id": "cn-tianjin-wujiayao-11",
+      "from_station_id": "cn-tianjin-nankaidaxuebalitai",
+      "to_station_id": "cn-tianjin-wujiayao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.665,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nankaidaxuebalitai-7-cn-tianjin-tianta-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-nankaidaxuebalitai-7",
+      "to_stop_id": "cn-tianjin-tianta-7",
+      "from_station_id": "cn-tianjin-nankaidaxuebalitai",
+      "to_station_id": "cn-tianjin-tianta",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.762,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nanlou-1-cn-tianjin-tucheng-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-nanlou-1",
+      "to_stop_id": "cn-tianjin-tucheng-1",
+      "from_station_id": "cn-tianjin-nanlou",
+      "to_station_id": "cn-tianjin-tucheng",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.046,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nansunzhuang-6-cn-tianjin-nanhezhuang-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-nansunzhuang-6",
+      "to_stop_id": "cn-tianjin-nanhezhuang-6",
+      "from_station_id": "cn-tianjin-nansunzhuang",
+      "to_station_id": "cn-tianjin-nanhezhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.355,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-nanzhuqiao-10-cn-tianjin-youyinanlu-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-nanzhuqiao-10",
+      "to_stop_id": "cn-tianjin-youyinanlu-10",
+      "from_station_id": "cn-tianjin-nanzhuqiao",
+      "to_station_id": "cn-tianjin-youyinanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.855,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-neijianglu-11-cn-tianjin-chentang-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-neijianglu-11",
+      "to_stop_id": "cn-tianjin-chentang-11",
+      "from_station_id": "cn-tianjin-neijianglu",
+      "to_station_id": "cn-tianjin-chentang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.645,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-qinjiandao-1-cn-tianjin-honghuli-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-qinjiandao-1",
+      "to_stop_id": "cn-tianjin-honghuli-1",
+      "from_station_id": "cn-tianjin-qinjiandao",
+      "to_station_id": "cn-tianjin-honghuli",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.091,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-renminyiyuan-6-cn-tianjin-changhonggongyuan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-renminyiyuan-6",
+      "to_stop_id": "cn-tianjin-changhonggongyuan-6",
+      "from_station_id": "cn-tianjin-renminyiyuan",
+      "to_station_id": "cn-tianjin-changhonggongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.066,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-ruanjianyuan-z4-cn-tianjin-luchuangyuan-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-ruanjianyuan-z4",
+      "to_stop_id": "cn-tianjin-luchuangyuan-z4",
+      "from_station_id": "cn-tianjin-ruanjianyuan",
+      "to_station_id": "cn-tianjin-luchuangyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.048,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-ruijingxinyuan-1-cn-tianjin-jiayuanli-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-ruijingxinyuan-1",
+      "to_stop_id": "cn-tianjin-jiayuanli-1",
+      "from_station_id": "cn-tianjin-ruijingxinyuan",
+      "to_station_id": "cn-tianjin-jiayuanli",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.064,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shaliunanlu-10-cn-tianjin-fangshandao-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-shaliunanlu-10",
+      "to_stop_id": "cn-tianjin-fangshandao-10",
+      "from_station_id": "cn-tianjin-shaliunanlu",
+      "to_station_id": "cn-tianjin-fangshandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.807,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shaliunanlu-4-cn-tianjin-dengzhounanlu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-shaliunanlu-4",
+      "to_stop_id": "cn-tianjin-dengzhounanlu-4",
+      "from_station_id": "cn-tianjin-shaliunanlu",
+      "to_station_id": "cn-tianjin-dengzhounanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.427,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shiminguangchang-9-cn-tianjin-taida-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-shiminguangchang-9",
+      "to_stop_id": "cn-tianjin-taida-9",
+      "from_station_id": "cn-tianjin-shiminguangchang",
+      "to_station_id": "cn-tianjin-taida",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.203,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shiyijing-road-9-cn-tianjin-dawangzhuang-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-shiyijing-road-9",
+      "to_stop_id": "cn-tianjin-dawangzhuang-9",
+      "from_station_id": "cn-tianjin-shiyijing-road",
+      "to_station_id": "cn-tianjin-dawangzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.804,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shuanggang-6-cn-tianjin-jinghedao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-shuanggang-6",
+      "to_stop_id": "cn-tianjin-jinghedao-6",
+      "from_station_id": "cn-tianjin-shuanggang",
+      "to_station_id": "cn-tianjin-jinghedao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.28,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shuangjie-4-cn-tianjin-xizhaozhuang-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-shuangjie-4",
+      "to_stop_id": "cn-tianjin-xizhaozhuang-4",
+      "from_station_id": "cn-tianjin-shuangjie",
+      "to_station_id": "cn-tianjin-xizhaozhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.221,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shuanglin-1-cn-tianjin-lilou-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-shuanglin-1",
+      "to_stop_id": "cn-tianjin-lilou-1",
+      "from_station_id": "cn-tianjin-shuanglin",
+      "to_station_id": "cn-tianjin-lilou",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.185,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shuishanggongyuandonglu-6-cn-tianjin-zhongliuyiyuan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-shuishanggongyuandonglu-6",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-6",
+      "from_station_id": "cn-tianjin-shuishanggongyuandonglu",
+      "to_station_id": "cn-tianjin-zhongliuyiyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.772,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shuishanggongyuanxilu-11-cn-tianjin-nankaidaxuebalitai-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-shuishanggongyuanxilu-11",
+      "to_stop_id": "cn-tianjin-nankaidaxuebalitai-11",
+      "from_station_id": "cn-tianjin-shuishanggongyuanxilu",
+      "to_station_id": "cn-tianjin-nankaidaxuebalitai",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.303,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-shunchiqiao-2-cn-tianjin-yuanyangguojizhongxin-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-shunchiqiao-2",
+      "to_stop_id": "cn-tianjin-yuanyangguojizhongxin-2",
+      "from_station_id": "cn-tianjin-shunchiqiao",
+      "to_station_id": "cn-tianjin-yuanyangguojizhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.247,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-siyuanlu-5-cn-tianjin-zhichenglu-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-siyuanlu-5",
+      "to_stop_id": "cn-tianjin-zhichenglu-5",
+      "from_station_id": "cn-tianjin-siyuanlu",
+      "to_station_id": "cn-tianjin-zhichenglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.829,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-taichanglu-4-cn-tianjin-wandonglu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-taichanglu-4",
+      "to_stop_id": "cn-tianjin-wandonglu-4",
+      "from_station_id": "cn-tianjin-taichanglu",
+      "to_station_id": "cn-tianjin-wandonglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.991,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-taida-9-cn-tianjin-tanggu-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-taida-9",
+      "to_stop_id": "cn-tianjin-tanggu-9",
+      "from_station_id": "cn-tianjin-taida",
+      "to_station_id": "cn-tianjin-tanggu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.645,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-taihulu-9-cn-tianjin-shiminguangchang-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-taihulu-9",
+      "to_stop_id": "cn-tianjin-shiminguangchang-9",
+      "from_station_id": "cn-tianjin-taihulu",
+      "to_station_id": "cn-tianjin-shiminguangchang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 480,
+      "travel_time_source": "planner",
+      "distance_km": 1.768,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tanggu-9-cn-tianjin-hujiayuan-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-tanggu-9",
+      "to_stop_id": "cn-tianjin-hujiayuan-9",
+      "from_station_id": "cn-tianjin-tanggu",
+      "to_station_id": "cn-tianjin-hujiayuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.794,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianjinbinguan-5-cn-tianjin-wenhuazhongxin-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-tianjinbinguan-5",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-5",
+      "from_station_id": "cn-tianjin-tianjinbinguan",
+      "to_station_id": "cn-tianjin-wenhuazhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.723,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianjinbinguan-6-cn-tianjin-wenhuazhongxin-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-tianjinbinguan-6",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-6",
+      "from_station_id": "cn-tianjin-tianjinbinguan",
+      "to_station_id": "cn-tianjin-wenhuazhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.723,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianjindaxu-ebeiyangyuanxiaoqu-6-cn-tianjin-haihejiaoyuyuanqu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-tianjindaxu-ebeiyangyuanxiaoqu-6",
+      "to_stop_id": "cn-tianjin-haihejiaoyuyuanqu-6",
+      "from_station_id": "cn-tianjin-tianjindaxu-ebeiyangyuanxiaoqu",
+      "to_station_id": "cn-tianjin-haihejiaoyuyuanqu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.246,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianjindaxueliulitai-7-cn-tianjin-nankaidaxuebalitai-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-tianjindaxueliulitai-7",
+      "to_stop_id": "cn-tianjin-nankaidaxuebalitai-7",
+      "from_station_id": "cn-tianjin-tianjindaxueliulitai",
+      "to_station_id": "cn-tianjin-nankaidaxuebalitai",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.147,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianjinzhan-2-cn-tianjin-jianguo-road-yifeng-area-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-tianjinzhan-2",
+      "to_stop_id": "cn-tianjin-jianguo-road-yifeng-area-2",
+      "from_station_id": "cn-tianjin-tianjinzhan",
+      "to_station_id": "cn-tianjin-jianguo-road-yifeng-area",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.942,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianjinzhan-3-cn-tianjin-jinwanguangchang-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-tianjinzhan-3",
+      "to_stop_id": "cn-tianjin-jinwanguangchang-3",
+      "from_station_id": "cn-tianjin-tianjinzhan",
+      "to_station_id": "cn-tianjin-jinwanguangchang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.718,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianmu-4-cn-tianjin-liutan-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-tianmu-4",
+      "to_stop_id": "cn-tianjin-liutan-4",
+      "from_station_id": "cn-tianjin-tianmu",
+      "to_station_id": "cn-tianjin-liutan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.621,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianshili-3-cn-tianjin-yixingfu-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-tianshili-3",
+      "to_stop_id": "cn-tianjin-yixingfu-3",
+      "from_station_id": "cn-tianjin-tianshili",
+      "to_station_id": "cn-tianjin-yixingfu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.985,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianta-3-cn-tianjin-zhoudengjinianguan-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-tianta-3",
+      "to_stop_id": "cn-tianjin-zhoudengjinianguan-3",
+      "from_station_id": "cn-tianjin-tianta",
+      "to_station_id": "cn-tianjin-zhoudengjinianguan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.236,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tianta-7-cn-tianjin-zhongliuyiyuan-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-tianta-7",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-7",
+      "from_station_id": "cn-tianjin-tianta",
+      "to_station_id": "cn-tianjin-zhongliuyiyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.78,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tiantailu-6-cn-tianjin-beiyunhe-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-tiantailu-6",
+      "to_stop_id": "cn-tianjin-beiyunhe-6",
+      "from_station_id": "cn-tianjin-tiantailu",
+      "to_station_id": "cn-tianjin-beiyunhe",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.61,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tiantuo-6-cn-tianjin-yizhongxinyiyuan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-tiantuo-6",
+      "to_stop_id": "cn-tianjin-yizhongxinyiyuan-6",
+      "from_station_id": "cn-tianjin-tiantuo",
+      "to_station_id": "cn-tianjin-yizhongxinyiyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.676,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tiedonglu-3-cn-tianjin-beizhan-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-tiedonglu-3",
+      "to_stop_id": "cn-tianjin-beizhan-3",
+      "from_station_id": "cn-tianjin-tiedonglu",
+      "to_station_id": "cn-tianjin-beizhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.474,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tiyuzhongxin-5-cn-tianjin-zhongliuyiyuan-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-tiyuzhongxin-5",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-5",
+      "from_station_id": "cn-tianjin-tiyuzhongxin",
+      "to_station_id": "cn-tianjin-zhongliuyiyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.021,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tongchengshangwuquxiyuzhuang-4-cn-tianjin-xizhan-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-tongchengshangwuquxiyuzhuang-4",
+      "to_stop_id": "cn-tianjin-xizhan-4",
+      "from_station_id": "cn-tianjin-tongchengshangwuquxiyuzhuang",
+      "to_station_id": "cn-tianjin-xizhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.062,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tonglou-11-cn-tianjin-yingbinguan-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-tonglou-11",
+      "to_stop_id": "cn-tianjin-yingbinguan-11",
+      "from_station_id": "cn-tianjin-tonglou",
+      "to_station_id": "cn-tianjin-yingbinguan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.739,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tuanbojiankangcheng-jinjing-cn-tianjin-tuanboyixueyuan-jinjing",
+      "line_id": "cn-tianjin-line-jinjing",
+      "from_stop_id": "cn-tianjin-tuanbojiankangcheng-jinjing",
+      "to_stop_id": "cn-tianjin-tuanboyixueyuan-jinjing",
+      "from_station_id": "cn-tianjin-tuanbojiankangcheng",
+      "to_station_id": "cn-tianjin-tuanboyixueyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.826,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-tucheng-1-cn-tianjin-chentangzhuang-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-tucheng-1",
+      "to_stop_id": "cn-tianjin-chentangzhuang-1",
+      "from_station_id": "cn-tianjin-tucheng",
+      "to_station_id": "cn-tianjin-chentangzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.537,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-waiyuanfuzhong-6-cn-tianjin-tiantailu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-waiyuanfuzhong-6",
+      "to_stop_id": "cn-tianjin-tiantailu-6",
+      "from_station_id": "cn-tianjin-waiyuanfuzhong",
+      "to_station_id": "cn-tianjin-tiantailu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.808,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wandonglu-4-cn-tianjin-shaliunanlu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-wandonglu-4",
+      "to_stop_id": "cn-tianjin-shaliunanlu-4",
+      "from_station_id": "cn-tianjin-wandonglu",
+      "to_station_id": "cn-tianjin-shaliunanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.872,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wangdingdi-3-cn-tianjin-huayuan-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-wangdingdi-3",
+      "to_stop_id": "cn-tianjin-huayuan-3",
+      "from_station_id": "cn-tianjin-wangdingdi",
+      "to_station_id": "cn-tianjin-huayuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.021,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wanglanzhuang-7-cn-tianjin-meijianghuizhanzhongxinnan-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-wanglanzhuang-7",
+      "to_stop_id": "cn-tianjin-meijianghuizhanzhongxinnan-7",
+      "from_station_id": "cn-tianjin-wanglanzhuang",
+      "to_station_id": "cn-tianjin-meijianghuizhanzhongxinnan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.8,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wanshandao-10-cn-tianjin-shaliunanlu-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-wanshandao-10",
+      "to_stop_id": "cn-tianjin-shaliunanlu-10",
+      "from_station_id": "cn-tianjin-wanshandao",
+      "to_station_id": "cn-tianjin-shaliunanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.827,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-weishanlu-10-cn-tianjin-magangchang-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-weishanlu-10",
+      "to_stop_id": "cn-tianjin-magangchang-10",
+      "from_station_id": "cn-tianjin-weishanlu",
+      "to_station_id": "cn-tianjin-magangchang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.608,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wenhuazhongxin-11-cn-tianjin-yidaeryuan-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-11",
+      "to_stop_id": "cn-tianjin-yidaeryuan-11",
+      "from_station_id": "cn-tianjin-wenhuazhongxin",
+      "to_station_id": "cn-tianjin-yidaeryuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.486,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wenhuazhongxin-5-cn-tianjin-xinanlou-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-5",
+      "to_stop_id": "cn-tianjin-xinanlou-5",
+      "from_station_id": "cn-tianjin-wenhuazhongxin",
+      "to_station_id": "cn-tianjin-xinanlou",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.303,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wenhuazhongxin-6-cn-tianjin-leyuandao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-6",
+      "to_stop_id": "cn-tianjin-leyuandao-6",
+      "from_station_id": "cn-tianjin-wenhuazhongxin",
+      "to_station_id": "cn-tianjin-leyuandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.081,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wujiayao-11-cn-tianjin-tonglou-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-wujiayao-11",
+      "to_stop_id": "cn-tianjin-tonglou-11",
+      "from_station_id": "cn-tianjin-wujiayao",
+      "to_station_id": "cn-tianjin-tonglou",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.057,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-wujiayao-3-cn-tianjin-tianta-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-wujiayao-3",
+      "to_stop_id": "cn-tianjin-tianta-3",
+      "from_station_id": "cn-tianjin-wujiayao",
+      "to_station_id": "cn-tianjin-tianta",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.85,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xiangshandao-10-cn-tianjin-wanshandao-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-xiangshandao-10",
+      "to_stop_id": "cn-tianjin-wanshandao-10",
+      "from_station_id": "cn-tianjin-xiangshandao",
+      "to_station_id": "cn-tianjin-wanshandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.776,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xianyanglu-2-cn-tianjin-jieyuanxidao-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-xianyanglu-2",
+      "to_stop_id": "cn-tianjin-jieyuanxidao-2",
+      "from_station_id": "cn-tianjin-xianyanglu",
+      "to_station_id": "cn-tianjin-jieyuanxidao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.404,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xiaobailou-1-cn-tianjin-xiawafang-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xiaobailou-1",
+      "to_stop_id": "cn-tianjin-xiawafang-1",
+      "from_station_id": "cn-tianjin-xiaobailou",
+      "to_station_id": "cn-tianjin-xiawafang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.258,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xiaodian-3-cn-tianjin-fengchanhe-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-xiaodian-3",
+      "to_stop_id": "cn-tianjin-fengchanhe-3",
+      "from_station_id": "cn-tianjin-xiaodian",
+      "to_station_id": "cn-tianjin-fengchanhe",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.866,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xiaodongzhuang-9-cn-tianjin-donglikaifaqu-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-xiaodongzhuang-9",
+      "to_stop_id": "cn-tianjin-donglikaifaqu-9",
+      "from_station_id": "cn-tianjin-xiaodongzhuang",
+      "to_station_id": "cn-tianjin-donglikaifaqu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 4.301,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xiaojie-4-cn-tianjin-langyuan-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-xiaojie-4",
+      "to_stop_id": "cn-tianjin-langyuan-4",
+      "from_station_id": "cn-tianjin-xiaojie",
+      "to_station_id": "cn-tianjin-langyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.454,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xiawafang-1-cn-tianjin-nanlou-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xiawafang-1",
+      "to_stop_id": "cn-tianjin-nanlou-1",
+      "from_station_id": "cn-tianjin-xiawafang",
+      "to_station_id": "cn-tianjin-nanlou",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.027,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xiawafang-5-cn-tianjin-zhigu-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-xiawafang-5",
+      "to_stop_id": "cn-tianjin-zhigu-5",
+      "from_station_id": "cn-tianjin-xiawafang",
+      "to_station_id": "cn-tianjin-zhigu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.151,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xibeijiao-1-cn-tianjin-xinanjiao-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xibeijiao-1",
+      "to_stop_id": "cn-tianjin-xinanjiao-1",
+      "from_station_id": "cn-tianjin-xibeijiao",
+      "to_station_id": "cn-tianjin-xinanjiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.024,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xigugongyuan-4-cn-tianjin-tongchengshangwuquxiyuzhuang-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-xigugongyuan-4",
+      "to_stop_id": "cn-tianjin-tongchengshangwuquxiyuzhuang-4",
+      "from_station_id": "cn-tianjin-xigugongyuan",
+      "to_station_id": "cn-tianjin-tongchengshangwuquxiyuzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-tianjin-cn-tianjin-xigugongyuan-4-north-d2",
+        "cn-tianjin-cn-tianjin-tongchengshangwuquxiyuzhuang-4-north-d2"
+      ],
+      "distance_km": 0.777,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xikanglu-3-cn-tianjin-wujiayao-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-xikanglu-3",
+      "to_stop_id": "cn-tianjin-wujiayao-3",
+      "from_station_id": "cn-tianjin-xikanglu",
+      "to_station_id": "cn-tianjin-wujiayao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.39,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xinanjiao-1-cn-tianjin-erweilu-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xinanjiao-1",
+      "to_stop_id": "cn-tianjin-erweilu-1",
+      "from_station_id": "cn-tianjin-xinanjiao",
+      "to_station_id": "cn-tianjin-erweilu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.818,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xinanjiao-2-cn-tianjin-guangkaisimalu-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-xinanjiao-2",
+      "to_stop_id": "cn-tianjin-guangkaisimalu-2",
+      "from_station_id": "cn-tianjin-xinanjiao",
+      "to_station_id": "cn-tianjin-guangkaisimalu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.863,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xinanlou-5-cn-tianjin-xiawafang-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-xinanlou-5",
+      "to_stop_id": "cn-tianjin-xiawafang-5",
+      "from_station_id": "cn-tianjin-xinanlou",
+      "to_station_id": "cn-tianjin-xiawafang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.236,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xingfugongyuan-5-cn-tianjin-yueyahe-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-xingfugongyuan-5",
+      "to_stop_id": "cn-tianjin-yueyahe-5",
+      "from_station_id": "cn-tianjin-xingfugongyuan",
+      "to_station_id": "cn-tianjin-yueyahe",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.194,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xinghuadao-7-cn-tianjin-hongyuandao-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-xinghuadao-7",
+      "to_stop_id": "cn-tianjin-hongyuandao-7",
+      "from_station_id": "cn-tianjin-xinghuadao",
+      "to_station_id": "cn-tianjin-hongyuandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.425,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xinkaihe-6-cn-tianjin-waiyuanfuzhong-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-xinkaihe-6",
+      "to_stop_id": "cn-tianjin-waiyuanfuzhong-6",
+      "from_station_id": "cn-tianjin-xinkaihe",
+      "to_station_id": "cn-tianjin-waiyuanfuzhong",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.986,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xinli-9-cn-tianjin-zhangguizhuang-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-xinli-9",
+      "to_stop_id": "cn-tianjin-zhangguizhuang-9",
+      "from_station_id": "cn-tianjin-xinli",
+      "to_station_id": "cn-tianjin-zhangguizhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.531,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xizhan-1-cn-tianjin-xibeijiao-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xizhan-1",
+      "to_stop_id": "cn-tianjin-xibeijiao-1",
+      "from_station_id": "cn-tianjin-xizhan",
+      "to_station_id": "cn-tianjin-xibeijiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.231,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xizhan-6-cn-tianjin-fuxinglu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-xizhan-6",
+      "to_stop_id": "cn-tianjin-fuxinglu-6",
+      "from_station_id": "cn-tianjin-xizhan",
+      "to_station_id": "cn-tianjin-fuxinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.776,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xizhaozhuang-4-cn-tianjin-yanjidao-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-xizhaozhuang-4",
+      "to_stop_id": "cn-tianjin-yanjidao-4",
+      "from_station_id": "cn-tianjin-xizhaozhuang",
+      "to_station_id": "cn-tianjin-yanjidao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.329,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xuefugongyequ-3-cn-tianjin-yangwuzhuang-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-xuefugongyequ-3",
+      "to_stop_id": "cn-tianjin-yangwuzhuang-3",
+      "from_station_id": "cn-tianjin-xuefugongyequ",
+      "to_station_id": "cn-tianjin-yangwuzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.874,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xueliannanlu-11-cn-tianjin-zhaoyuanlu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-xueliannanlu-11",
+      "to_stop_id": "cn-tianjin-zhaoyuanlu-11",
+      "from_station_id": "cn-tianjin-xueliannanlu",
+      "to_station_id": "cn-tianjin-zhaoyuanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.959,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xueyuanbeilu-11-cn-tianjin-haihedonglu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-xueyuanbeilu-11",
+      "to_stop_id": "cn-tianjin-haihedonglu-11",
+      "from_station_id": "cn-tianjin-xueyuanbeilu",
+      "to_station_id": "cn-tianjin-haihedonglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.024,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xunhailu-11-cn-tianjin-dongliyijinglu-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-xunhailu-11",
+      "to_stop_id": "cn-tianjin-dongliyijinglu-11",
+      "from_station_id": "cn-tianjin-xunhailu",
+      "to_station_id": "cn-tianjin-dongliyijinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.016,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xuzhoudao-4-cn-tianjin-liuweilu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-xuzhoudao-4",
+      "to_stop_id": "cn-tianjin-liuweilu-4",
+      "from_station_id": "cn-tianjin-xuzhoudao",
+      "to_station_id": "cn-tianjin-liuweilu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.777,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-xuzhuangzi-6-cn-tianjin-jinzhonghedajie-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-xuzhuangzi-6",
+      "to_stop_id": "cn-tianjin-jinzhonghedajie-6",
+      "from_station_id": "cn-tianjin-xuzhuangzi",
+      "to_station_id": "cn-tianjin-jinzhonghedajie",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.341,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yangwuzhuang-3-cn-tianjin-nanzhan-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-yangwuzhuang-3",
+      "to_stop_id": "cn-tianjin-nanzhan-3",
+      "from_station_id": "cn-tianjin-yangwuzhuang",
+      "to_station_id": "cn-tianjin-nanzhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "distance_km": 1.426,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 33.8,
+        "a_s_per_km": 53,
+        "b_s": 76.3,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yanjidao-4-cn-tianjin-beicang-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-yanjidao-4",
+      "to_stop_id": "cn-tianjin-beicang-4",
+      "from_station_id": "cn-tianjin-yanjidao",
+      "to_station_id": "cn-tianjin-beicang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.248,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yaohuanlu-10-cn-tianjin-yutai-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-yaohuanlu-10",
+      "to_stop_id": "cn-tianjin-yutai-10",
+      "from_station_id": "cn-tianjin-yaohuanlu",
+      "to_station_id": "cn-tianjin-yutai",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 1.408,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yibindao-6-cn-tianjin-anshanxidao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-yibindao-6",
+      "to_stop_id": "cn-tianjin-anshanxidao-6",
+      "from_station_id": "cn-tianjin-yibindao",
+      "to_station_id": "cn-tianjin-anshanxidao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.099,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yidaeryuan-11-cn-tianjin-lishuidao-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-yidaeryuan-11",
+      "to_stop_id": "cn-tianjin-lishuidao-11",
+      "from_station_id": "cn-tianjin-yidaeryuan",
+      "to_station_id": "cn-tianjin-lishuidao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.924,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yidaeryuan-6-cn-tianjin-meijiangdao-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-yidaeryuan-6",
+      "to_stop_id": "cn-tianjin-meijiangdao-6",
+      "from_station_id": "cn-tianjin-yidaeryuan",
+      "to_station_id": "cn-tianjin-meijiangdao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.416,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yihaoqiao-9-cn-tianjin-zhongshanmen-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-yihaoqiao-9",
+      "to_stop_id": "cn-tianjin-zhongshanmen-9",
+      "from_station_id": "cn-tianjin-yihaoqiao",
+      "to_station_id": "cn-tianjin-zhongshanmen",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.694,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yingbinguan-11-cn-tianjin-wenhuazhongxin-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-yingbinguan-11",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-11",
+      "from_station_id": "cn-tianjin-yingbinguan",
+      "to_station_id": "cn-tianjin-wenhuazhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.953,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yingfengdao-6-cn-tianjin-nancuiping-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-yingfengdao-6",
+      "to_stop_id": "cn-tianjin-nancuiping-6",
+      "from_station_id": "cn-tianjin-yingfengdao",
+      "to_station_id": "cn-tianjin-nancuiping",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.049,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yingkoudao-1-cn-tianjin-xiaobailou-1",
+      "line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-yingkoudao-1",
+      "to_stop_id": "cn-tianjin-xiaobailou-1",
+      "from_station_id": "cn-tianjin-yingkoudao",
+      "to_station_id": "cn-tianjin-xiaobailou",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.584,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yingkoudao-3-cn-tianjin-xikanglu-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-yingkoudao-3",
+      "to_stop_id": "cn-tianjin-xikanglu-3",
+      "from_station_id": "cn-tianjin-yingkoudao",
+      "to_station_id": "cn-tianjin-xikanglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.1,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yixingfu-3-cn-tianjin-zhangxingzhuang-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-yixingfu-3",
+      "to_stop_id": "cn-tianjin-zhangxingzhuang-3",
+      "from_station_id": "cn-tianjin-yixingfu",
+      "to_station_id": "cn-tianjin-zhangxingzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.726,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yixingfubei-5-cn-tianjin-liaohebeidao-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-yixingfubei-5",
+      "to_stop_id": "cn-tianjin-liaohebeidao-5",
+      "from_station_id": "cn-tianjin-yixingfubei",
+      "to_station_id": "cn-tianjin-liaohebeidao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.881,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yizhongxinyiyuan-6-cn-tianjin-hongqinanlu-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-yizhongxinyiyuan-6",
+      "to_stop_id": "cn-tianjin-hongqinanlu-6",
+      "from_station_id": "cn-tianjin-yizhongxinyiyuan",
+      "to_station_id": "cn-tianjin-hongqinanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.161,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-youyinanlu-10-cn-tianjin-jiangwanerzhilu-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-youyinanlu-10",
+      "to_stop_id": "cn-tianjin-jiangwanerzhilu-10",
+      "from_station_id": "cn-tianjin-youyinanlu",
+      "to_station_id": "cn-tianjin-jiangwanerzhilu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.007,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yuanyangguojizhongxin-2-cn-tianjin-tianjinzhan-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-yuanyangguojizhongxin-2",
+      "to_stop_id": "cn-tianjin-tianjinzhan-2",
+      "from_station_id": "cn-tianjin-yuanyangguojizhongxin",
+      "to_station_id": "cn-tianjin-tianjinzhan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.815,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yudongcheng-10-cn-tianjin-laoshandao-10",
+      "line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-yudongcheng-10",
+      "to_stop_id": "cn-tianjin-laoshandao-10",
+      "from_station_id": "cn-tianjin-yudongcheng",
+      "to_station_id": "cn-tianjin-laoshandao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 1,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yudongcheng-2-cn-tianjin-cuifuxincun-2",
+      "line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-yudongcheng-2",
+      "to_stop_id": "cn-tianjin-cuifuxincun-2",
+      "from_station_id": "cn-tianjin-yudongcheng",
+      "to_station_id": "cn-tianjin-cuifuxincun",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.917,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yuejinbeilu-4-cn-tianjin-hangshuanglu-4",
+      "line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-yuejinbeilu-4",
+      "to_stop_id": "cn-tianjin-hangshuanglu-4",
+      "from_station_id": "cn-tianjin-yuejinbeilu",
+      "to_station_id": "cn-tianjin-hangshuanglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.345,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yueyahe-5-cn-tianjin-jinzhonghedajie-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-yueyahe-5",
+      "to_stop_id": "cn-tianjin-jinzhonghedajie-5",
+      "from_station_id": "cn-tianjin-yueyahe",
+      "to_station_id": "cn-tianjin-jinzhonghedajie",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.883,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-yushadao-z4-cn-tianjin-hangmugongyuan-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-yushadao-z4",
+      "to_stop_id": "cn-tianjin-hangmugongyuan-z4",
+      "from_station_id": "cn-tianjin-yushadao",
+      "to_station_id": "cn-tianjin-hangmugongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.299,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhaishang-z4-cn-tianjin-hanguyiyuan-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-zhaishang-z4",
+      "to_stop_id": "cn-tianjin-hanguyiyuan-z4",
+      "from_station_id": "cn-tianjin-zhaishang",
+      "to_station_id": "cn-tianjin-hanguyiyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 1.248,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhangdaokou-7-cn-tianjin-xinghuadao-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-zhangdaokou-7",
+      "to_stop_id": "cn-tianjin-xinghuadao-7",
+      "from_station_id": "cn-tianjin-zhangdaokou",
+      "to_station_id": "cn-tianjin-xinghuadao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.115,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhangguizhuang-9-cn-tianjin-erhaoqiao-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-zhangguizhuang-9",
+      "to_stop_id": "cn-tianjin-erhaoqiao-9",
+      "from_station_id": "cn-tianjin-zhangguizhuang",
+      "to_station_id": "cn-tianjin-erhaoqiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.31,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhangxingzhuang-3-cn-tianjin-tiedonglu-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-zhangxingzhuang-3",
+      "to_stop_id": "cn-tianjin-tiedonglu-3",
+      "from_station_id": "cn-tianjin-zhangxingzhuang",
+      "to_station_id": "cn-tianjin-tiedonglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.498,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhangxingzhuang-5-cn-tianjin-yixingfubei-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhangxingzhuang-5",
+      "to_stop_id": "cn-tianjin-yixingfubei-5",
+      "from_station_id": "cn-tianjin-zhangxingzhuang",
+      "to_station_id": "cn-tianjin-yixingfubei",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.477,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhaoyuanlu-11-cn-tianjin-dongliwentizhongxin-11",
+      "line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-zhaoyuanlu-11",
+      "to_stop_id": "cn-tianjin-dongliwentizhongxin-11",
+      "from_station_id": "cn-tianjin-zhaoyuanlu",
+      "to_station_id": "cn-tianjin-dongliwentizhongxin",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.563,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhichenglu-5-cn-tianjin-zhangxingzhuang-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhichenglu-5",
+      "to_stop_id": "cn-tianjin-zhangxingzhuang-5",
+      "from_station_id": "cn-tianjin-zhichenglu",
+      "to_station_id": "cn-tianjin-zhangxingzhuang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.651,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhigu-5-cn-tianjin-jintanglu-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhigu-5",
+      "to_stop_id": "cn-tianjin-jintanglu-5",
+      "from_station_id": "cn-tianjin-zhigu",
+      "to_station_id": "cn-tianjin-jintanglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.89,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhigu-9-cn-tianjin-shiyijing-road-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-zhigu-9",
+      "to_stop_id": "cn-tianjin-shiyijing-road-9",
+      "from_station_id": "cn-tianjin-zhigu",
+      "to_station_id": "cn-tianjin-shiyijing-road",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.438,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhiyedaxue-5-cn-tianjin-beichendao-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhiyedaxue-5",
+      "to_stop_id": "cn-tianjin-beichendao-5",
+      "from_station_id": "cn-tianjin-zhiyedaxue",
+      "to_station_id": "cn-tianjin-beichendao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.286,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhongliuyiyuan-5-cn-tianjin-tianjinbinguan-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-5",
+      "to_stop_id": "cn-tianjin-tianjinbinguan-5",
+      "from_station_id": "cn-tianjin-zhongliuyiyuan",
+      "to_station_id": "cn-tianjin-tianjinbinguan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.538,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhongliuyiyuan-6-cn-tianjin-tianjinbinguan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-6",
+      "to_stop_id": "cn-tianjin-tianjinbinguan-6",
+      "from_station_id": "cn-tianjin-zhongliuyiyuan",
+      "to_station_id": "cn-tianjin-tianjinbinguan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.538,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhongliuyiyuan-7-cn-tianjin-lijiangdao-7",
+      "line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-7",
+      "to_stop_id": "cn-tianjin-lijiangdao-7",
+      "from_station_id": "cn-tianjin-zhongliuyiyuan",
+      "to_station_id": "cn-tianjin-lijiangdao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.195,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhongshanlu-3-cn-tianjin-jinshiqiao-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-zhongshanlu-3",
+      "to_stop_id": "cn-tianjin-jinshiqiao-3",
+      "from_station_id": "cn-tianjin-zhongshanlu",
+      "to_station_id": "cn-tianjin-jinshiqiao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.202,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhongshanmen-9-cn-tianjin-dongxinglu-9",
+      "line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-zhongshanmen-9",
+      "to_stop_id": "cn-tianjin-dongxinglu-9",
+      "from_station_id": "cn-tianjin-zhongshanmen",
+      "to_station_id": "cn-tianjin-dongxinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.898,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhongxinshengtaicheng-z4-cn-tianjin-beitang-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-zhongxinshengtaicheng-z4",
+      "to_stop_id": "cn-tianjin-beitang-z4",
+      "from_station_id": "cn-tianjin-zhongxinshengtaicheng",
+      "to_station_id": "cn-tianjin-beitang",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.824,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhongxinyugang-z4-cn-tianjin-yushadao-z4",
+      "line_id": "cn-tianjin-line-z4",
+      "from_stop_id": "cn-tianjin-zhongxinyugang-z4",
+      "to_stop_id": "cn-tianjin-yushadao-z4",
+      "from_station_id": "cn-tianjin-zhongxinyugang",
+      "to_station_id": "cn-tianjin-yushadao",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 3.993,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhongyiyifuyuan-5-cn-tianjin-changlinglu-5",
+      "line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhongyiyifuyuan-5",
+      "to_stop_id": "cn-tianjin-changlinglu-5",
+      "from_station_id": "cn-tianjin-zhongyiyifuyuan",
+      "to_station_id": "cn-tianjin-changlinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.095,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zhoudengjinianguan-3-cn-tianjin-hongqinanlu-3",
+      "line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-zhoudengjinianguan-3",
+      "to_stop_id": "cn-tianjin-hongqinanlu-3",
+      "from_station_id": "cn-tianjin-zhoudengjinianguan",
+      "to_station_id": "cn-tianjin-hongqinanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.368,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-tianjin-seg-cn-tianjin-zuojiangdao-6-cn-tianjin-meijianggongyuan-6",
+      "line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-zuojiangdao-6",
+      "to_stop_id": "cn-tianjin-meijianggongyuan-6",
+      "from_station_id": "cn-tianjin-zuojiangdao",
+      "to_station_id": "cn-tianjin-meijianggongyuan",
+      "direction": "both",
+      "source_id": "amap-subway-1200",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.854,
+      "extras": {
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
+      }
+    }
+  ]
+}

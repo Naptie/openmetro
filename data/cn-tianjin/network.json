@@ -1,0 +1,132 @@
+{
+  "id": "cn-tianjin",
+  "name": "天津轨道交通",
+  "names": {
+    "zh": "天津轨道交通",
+    "en": "Tianjin Rail Transit"
+  },
+  "city": {
+    "id": "CN-12",
+    "name": {
+      "zh": "天津市",
+      "en": "Tianjin"
+    },
+    "country": "CN",
+    "population": 13866009,
+    "area": 11920,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        117.205555555,
+        39.146666666
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑/坐标/英文名来自 AMap Subway 数据集；首末班车来自官方“运营时刻表”H5 应用（tjgdjt.com 运营服务栏目，static-app.trtpazyz.com）内嵌的逐站两向首末班车数据。4号线南/北段、6号线主线/二期、9号线全线/区间按官方时刻表分列走向。票价按乘坐区间数计价（≤4区间2元、≤9区间3元、≤15区间4元、≥16区间5元，1-11号线与Z4线、津静线及9号线市区段同网）；9号线滨海段（中山门—东海路）独立计价，跨段乘距为网络段票价与滨海段票价之和。除9号线、11号线、Z4线外每周五晚延长运营30分钟。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 239,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 239,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 258,
+        "derived": 3,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 261,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 78,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 531,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 274,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 0.92,
+      "status": "partial",
+      "counts": {
+        "official": 52302,
+        "derived": 0,
+        "default": 4580
+      }
+    }
+  }
+}

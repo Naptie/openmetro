@@ -1,0 +1,1112 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-tianjin",
+  "generated_at": "2026-10-13T07:03:39.004Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-13T07:03:39.004Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-tianjin-beizhan-3-cn-tianjin-beizhan-6",
+      "station_id": "cn-tianjin-beizhan",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-beizhan-3",
+      "to_stop_id": "cn-tianjin-beizhan-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-beizhan-6-cn-tianjin-beizhan-3",
+      "station_id": "cn-tianjin-beizhan",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-beizhan-6",
+      "to_stop_id": "cn-tianjin-beizhan-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-caijingdaxue-1-cn-tianjin-caijingdaxue-10",
+      "station_id": "cn-tianjin-caijingdaxue",
+      "from_line_id": "cn-tianjin-line-1",
+      "to_line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-caijingdaxue-1",
+      "to_stop_id": "cn-tianjin-caijingdaxue-10",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-caijingdaxue-10-cn-tianjin-caijingdaxue-1",
+      "station_id": "cn-tianjin-caijingdaxue",
+      "from_line_id": "cn-tianjin-line-10",
+      "to_line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-caijingdaxue-10",
+      "to_stop_id": "cn-tianjin-caijingdaxue-1",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-changhonggongyuan-2-cn-tianjin-changhonggongyuan-6",
+      "station_id": "cn-tianjin-changhonggongyuan",
+      "from_line_id": "cn-tianjin-line-2",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-changhonggongyuan-2",
+      "to_stop_id": "cn-tianjin-changhonggongyuan-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-changhonggongyuan-6-cn-tianjin-changhonggongyuan-2",
+      "station_id": "cn-tianjin-changhonggongyuan",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-changhonggongyuan-6",
+      "to_stop_id": "cn-tianjin-changhonggongyuan-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-changlinglu-10-cn-tianjin-changlinglu-5",
+      "station_id": "cn-tianjin-changlinglu",
+      "from_line_id": "cn-tianjin-line-10",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-changlinglu-10",
+      "to_stop_id": "cn-tianjin-changlinglu-5",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-changlinglu-5-cn-tianjin-changlinglu-10",
+      "station_id": "cn-tianjin-changlinglu",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-changlinglu-5",
+      "to_stop_id": "cn-tianjin-changlinglu-10",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-chenglindao-4-cn-tianjin-chenglindao-5",
+      "station_id": "cn-tianjin-chenglindao",
+      "from_line_id": "cn-tianjin-line-4",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-chenglindao-4",
+      "to_stop_id": "cn-tianjin-chenglindao-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-chenglindao-5-cn-tianjin-chenglindao-4",
+      "station_id": "cn-tianjin-chenglindao",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-chenglindao-5",
+      "to_stop_id": "cn-tianjin-chenglindao-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-dongnanjiao-2-cn-tianjin-dongnanjiao-4",
+      "station_id": "cn-tianjin-dongnanjiao",
+      "from_line_id": "cn-tianjin-line-2",
+      "to_line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-dongnanjiao-2",
+      "to_stop_id": "cn-tianjin-dongnanjiao-4",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-dongnanjiao-4-cn-tianjin-dongnanjiao-2",
+      "station_id": "cn-tianjin-dongnanjiao",
+      "from_line_id": "cn-tianjin-line-4",
+      "to_line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-dongnanjiao-4",
+      "to_stop_id": "cn-tianjin-dongnanjiao-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-gulou-2-cn-tianjin-gulou-7",
+      "station_id": "cn-tianjin-gulou",
+      "from_line_id": "cn-tianjin-line-2",
+      "to_line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-gulou-2",
+      "to_stop_id": "cn-tianjin-gulou-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-gulou-7-cn-tianjin-gulou-2",
+      "station_id": "cn-tianjin-gulou",
+      "from_line_id": "cn-tianjin-line-7",
+      "to_line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-gulou-7",
+      "to_stop_id": "cn-tianjin-gulou-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-haiguangsi-1-cn-tianjin-haiguangsi-7",
+      "station_id": "cn-tianjin-haiguangsi",
+      "from_line_id": "cn-tianjin-line-1",
+      "to_line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-haiguangsi-1",
+      "to_stop_id": "cn-tianjin-haiguangsi-7",
+      "walk_time_seconds": 454,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 544,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-haiguangsi-7-cn-tianjin-haiguangsi-1",
+      "station_id": "cn-tianjin-haiguangsi",
+      "from_line_id": "cn-tianjin-line-7",
+      "to_line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-haiguangsi-7",
+      "to_stop_id": "cn-tianjin-haiguangsi-1",
+      "walk_time_seconds": 454,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 544,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-hepinglu-3-cn-tianjin-hepinglu-4",
+      "station_id": "cn-tianjin-hepinglu",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-hepinglu-3",
+      "to_stop_id": "cn-tianjin-hepinglu-4",
+      "walk_time_seconds": 541,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 649,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-hepinglu-4-cn-tianjin-hepinglu-3",
+      "station_id": "cn-tianjin-hepinglu",
+      "from_line_id": "cn-tianjin-line-4",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-hepinglu-4",
+      "to_stop_id": "cn-tianjin-hepinglu-3",
+      "walk_time_seconds": 541,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 649,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-hongqinanlu-3-cn-tianjin-hongqinanlu-6",
+      "station_id": "cn-tianjin-hongqinanlu",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-hongqinanlu-3",
+      "to_stop_id": "cn-tianjin-hongqinanlu-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-hongqinanlu-6-cn-tianjin-hongqinanlu-3",
+      "station_id": "cn-tianjin-hongqinanlu",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-hongqinanlu-6",
+      "to_stop_id": "cn-tianjin-hongqinanlu-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-huanyudao-10-cn-tianjin-huanyudao-11",
+      "station_id": "cn-tianjin-huanyudao",
+      "from_line_id": "cn-tianjin-line-10",
+      "to_line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-huanyudao-10",
+      "to_stop_id": "cn-tianjin-huanyudao-11",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-huanyudao-11-cn-tianjin-huanyudao-10",
+      "station_id": "cn-tianjin-huanyudao",
+      "from_line_id": "cn-tianjin-line-11",
+      "to_line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-huanyudao-11",
+      "to_stop_id": "cn-tianjin-huanyudao-10",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-jinghuadongdao-5-cn-tianjin-jinghuadongdao-jinjing",
+      "station_id": "cn-tianjin-jinghuadongdao",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-jinjing",
+      "from_stop_id": "cn-tianjin-jinghuadongdao-5",
+      "to_stop_id": "cn-tianjin-jinghuadongdao-jinjing",
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-jinghuadongdao-jinjing-cn-tianjin-jinghuadongdao-5",
+      "station_id": "cn-tianjin-jinghuadongdao",
+      "from_line_id": "cn-tianjin-line-jinjing",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-jinghuadongdao-jinjing",
+      "to_stop_id": "cn-tianjin-jinghuadongdao-5",
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-jingjianglu-2-cn-tianjin-jingjianglu-5",
+      "station_id": "cn-tianjin-jingjianglu",
+      "from_line_id": "cn-tianjin-line-2",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-jingjianglu-2",
+      "to_stop_id": "cn-tianjin-jingjianglu-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-jingjianglu-5-cn-tianjin-jingjianglu-2",
+      "station_id": "cn-tianjin-jingjianglu",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-jingjianglu-5",
+      "to_stop_id": "cn-tianjin-jingjianglu-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-jinzhonghedajie-5-cn-tianjin-jinzhonghedajie-6",
+      "station_id": "cn-tianjin-jinzhonghedajie",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-jinzhonghedajie-5",
+      "to_stop_id": "cn-tianjin-jinzhonghedajie-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-jinzhonghedajie-6-cn-tianjin-jinzhonghedajie-5",
+      "station_id": "cn-tianjin-jinzhonghedajie",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-jinzhonghedajie-6",
+      "to_stop_id": "cn-tianjin-jinzhonghedajie-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-lijiangdao-10-cn-tianjin-lijiangdao-7",
+      "station_id": "cn-tianjin-lijiangdao",
+      "from_line_id": "cn-tianjin-line-10",
+      "to_line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-lijiangdao-10",
+      "to_stop_id": "cn-tianjin-lijiangdao-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-lijiangdao-7-cn-tianjin-lijiangdao-10",
+      "station_id": "cn-tianjin-lijiangdao",
+      "from_line_id": "cn-tianjin-line-7",
+      "to_line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-lijiangdao-7",
+      "to_stop_id": "cn-tianjin-lijiangdao-10",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-nankaidaxuebalitai-11-cn-tianjin-nankaidaxuebalitai-7",
+      "station_id": "cn-tianjin-nankaidaxuebalitai",
+      "from_line_id": "cn-tianjin-line-11",
+      "to_line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-nankaidaxuebalitai-11",
+      "to_stop_id": "cn-tianjin-nankaidaxuebalitai-7",
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-nankaidaxuebalitai-7-cn-tianjin-nankaidaxuebalitai-11",
+      "station_id": "cn-tianjin-nankaidaxuebalitai",
+      "from_line_id": "cn-tianjin-line-7",
+      "to_line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-nankaidaxuebalitai-7",
+      "to_stop_id": "cn-tianjin-nankaidaxuebalitai-11",
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-shaliunanlu-10-cn-tianjin-shaliunanlu-4",
+      "station_id": "cn-tianjin-shaliunanlu",
+      "from_line_id": "cn-tianjin-line-10",
+      "to_line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-shaliunanlu-10",
+      "to_stop_id": "cn-tianjin-shaliunanlu-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-shaliunanlu-4-cn-tianjin-shaliunanlu-10",
+      "station_id": "cn-tianjin-shaliunanlu",
+      "from_line_id": "cn-tianjin-line-4",
+      "to_line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-shaliunanlu-4",
+      "to_stop_id": "cn-tianjin-shaliunanlu-10",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianjinbinguan-5-cn-tianjin-tianjinbinguan-6",
+      "station_id": "cn-tianjin-tianjinbinguan",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-tianjinbinguan-5",
+      "to_stop_id": "cn-tianjin-tianjinbinguan-6",
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianjinbinguan-6-cn-tianjin-tianjinbinguan-5",
+      "station_id": "cn-tianjin-tianjinbinguan",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-tianjinbinguan-6",
+      "to_stop_id": "cn-tianjin-tianjinbinguan-5",
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianjinzhan-2-cn-tianjin-tianjinzhan-3",
+      "station_id": "cn-tianjin-tianjinzhan",
+      "from_line_id": "cn-tianjin-line-2",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-tianjinzhan-2",
+      "to_stop_id": "cn-tianjin-tianjinzhan-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianjinzhan-2-cn-tianjin-tianjinzhan-9",
+      "station_id": "cn-tianjin-tianjinzhan",
+      "from_line_id": "cn-tianjin-line-2",
+      "to_line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-tianjinzhan-2",
+      "to_stop_id": "cn-tianjin-tianjinzhan-9",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianjinzhan-3-cn-tianjin-tianjinzhan-2",
+      "station_id": "cn-tianjin-tianjinzhan",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-tianjinzhan-3",
+      "to_stop_id": "cn-tianjin-tianjinzhan-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianjinzhan-3-cn-tianjin-tianjinzhan-9",
+      "station_id": "cn-tianjin-tianjinzhan",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-tianjinzhan-3",
+      "to_stop_id": "cn-tianjin-tianjinzhan-9",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianjinzhan-9-cn-tianjin-tianjinzhan-2",
+      "station_id": "cn-tianjin-tianjinzhan",
+      "from_line_id": "cn-tianjin-line-9",
+      "to_line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-tianjinzhan-9",
+      "to_stop_id": "cn-tianjin-tianjinzhan-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianjinzhan-9-cn-tianjin-tianjinzhan-3",
+      "station_id": "cn-tianjin-tianjinzhan",
+      "from_line_id": "cn-tianjin-line-9",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-tianjinzhan-9",
+      "to_stop_id": "cn-tianjin-tianjinzhan-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianta-3-cn-tianjin-tianta-7",
+      "station_id": "cn-tianjin-tianta",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-tianta-3",
+      "to_stop_id": "cn-tianjin-tianta-7",
+      "walk_time_seconds": 438,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 525,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-tianta-7-cn-tianjin-tianta-3",
+      "station_id": "cn-tianjin-tianta",
+      "from_line_id": "cn-tianjin-line-7",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-tianta-7",
+      "to_stop_id": "cn-tianjin-tianta-3",
+      "walk_time_seconds": 438,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 525,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-wenhuazhongxin-11-cn-tianjin-wenhuazhongxin-5",
+      "station_id": "cn-tianjin-wenhuazhongxin",
+      "from_line_id": "cn-tianjin-line-11",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-11",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-5",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-wenhuazhongxin-11-cn-tianjin-wenhuazhongxin-6",
+      "station_id": "cn-tianjin-wenhuazhongxin",
+      "from_line_id": "cn-tianjin-line-11",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-11",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-6",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-wenhuazhongxin-5-cn-tianjin-wenhuazhongxin-11",
+      "station_id": "cn-tianjin-wenhuazhongxin",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-5",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-11",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-wenhuazhongxin-5-cn-tianjin-wenhuazhongxin-6",
+      "station_id": "cn-tianjin-wenhuazhongxin",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-5",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-6",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-wenhuazhongxin-6-cn-tianjin-wenhuazhongxin-11",
+      "station_id": "cn-tianjin-wenhuazhongxin",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-6",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-11",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-wenhuazhongxin-6-cn-tianjin-wenhuazhongxin-5",
+      "station_id": "cn-tianjin-wenhuazhongxin",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-wenhuazhongxin-6",
+      "to_stop_id": "cn-tianjin-wenhuazhongxin-5",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-wujiayao-11-cn-tianjin-wujiayao-3",
+      "station_id": "cn-tianjin-wujiayao",
+      "from_line_id": "cn-tianjin-line-11",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-wujiayao-11",
+      "to_stop_id": "cn-tianjin-wujiayao-3",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-wujiayao-3-cn-tianjin-wujiayao-11",
+      "station_id": "cn-tianjin-wujiayao",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-wujiayao-3",
+      "to_stop_id": "cn-tianjin-wujiayao-11",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xiawafang-1-cn-tianjin-xiawafang-5",
+      "station_id": "cn-tianjin-xiawafang",
+      "from_line_id": "cn-tianjin-line-1",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-xiawafang-1",
+      "to_stop_id": "cn-tianjin-xiawafang-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xiawafang-5-cn-tianjin-xiawafang-1",
+      "station_id": "cn-tianjin-xiawafang",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xiawafang-5",
+      "to_stop_id": "cn-tianjin-xiawafang-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xinanjiao-1-cn-tianjin-xinanjiao-2",
+      "station_id": "cn-tianjin-xinanjiao",
+      "from_line_id": "cn-tianjin-line-1",
+      "to_line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-xinanjiao-1",
+      "to_stop_id": "cn-tianjin-xinanjiao-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xinanjiao-2-cn-tianjin-xinanjiao-1",
+      "station_id": "cn-tianjin-xinanjiao",
+      "from_line_id": "cn-tianjin-line-2",
+      "to_line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xinanjiao-2",
+      "to_stop_id": "cn-tianjin-xinanjiao-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xizhan-1-cn-tianjin-xizhan-4",
+      "station_id": "cn-tianjin-xizhan",
+      "from_line_id": "cn-tianjin-line-1",
+      "to_line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-xizhan-1",
+      "to_stop_id": "cn-tianjin-xizhan-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xizhan-1-cn-tianjin-xizhan-6",
+      "station_id": "cn-tianjin-xizhan",
+      "from_line_id": "cn-tianjin-line-1",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-xizhan-1",
+      "to_stop_id": "cn-tianjin-xizhan-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xizhan-4-cn-tianjin-xizhan-1",
+      "station_id": "cn-tianjin-xizhan",
+      "from_line_id": "cn-tianjin-line-4",
+      "to_line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xizhan-4",
+      "to_stop_id": "cn-tianjin-xizhan-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xizhan-4-cn-tianjin-xizhan-6",
+      "station_id": "cn-tianjin-xizhan",
+      "from_line_id": "cn-tianjin-line-4",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-xizhan-4",
+      "to_stop_id": "cn-tianjin-xizhan-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xizhan-6-cn-tianjin-xizhan-1",
+      "station_id": "cn-tianjin-xizhan",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-xizhan-6",
+      "to_stop_id": "cn-tianjin-xizhan-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-xizhan-6-cn-tianjin-xizhan-4",
+      "station_id": "cn-tianjin-xizhan",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-4",
+      "from_stop_id": "cn-tianjin-xizhan-6",
+      "to_stop_id": "cn-tianjin-xizhan-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-yidaeryuan-11-cn-tianjin-yidaeryuan-6",
+      "station_id": "cn-tianjin-yidaeryuan",
+      "from_line_id": "cn-tianjin-line-11",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-yidaeryuan-11",
+      "to_stop_id": "cn-tianjin-yidaeryuan-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-yidaeryuan-6-cn-tianjin-yidaeryuan-11",
+      "station_id": "cn-tianjin-yidaeryuan",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-11",
+      "from_stop_id": "cn-tianjin-yidaeryuan-6",
+      "to_stop_id": "cn-tianjin-yidaeryuan-11",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-yingkoudao-1-cn-tianjin-yingkoudao-3",
+      "station_id": "cn-tianjin-yingkoudao",
+      "from_line_id": "cn-tianjin-line-1",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-yingkoudao-1",
+      "to_stop_id": "cn-tianjin-yingkoudao-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-yingkoudao-3-cn-tianjin-yingkoudao-1",
+      "station_id": "cn-tianjin-yingkoudao",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-1",
+      "from_stop_id": "cn-tianjin-yingkoudao-3",
+      "to_stop_id": "cn-tianjin-yingkoudao-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-yudongcheng-10-cn-tianjin-yudongcheng-2",
+      "station_id": "cn-tianjin-yudongcheng",
+      "from_line_id": "cn-tianjin-line-10",
+      "to_line_id": "cn-tianjin-line-2",
+      "from_stop_id": "cn-tianjin-yudongcheng-10",
+      "to_stop_id": "cn-tianjin-yudongcheng-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-yudongcheng-2-cn-tianjin-yudongcheng-10",
+      "station_id": "cn-tianjin-yudongcheng",
+      "from_line_id": "cn-tianjin-line-2",
+      "to_line_id": "cn-tianjin-line-10",
+      "from_stop_id": "cn-tianjin-yudongcheng-2",
+      "to_stop_id": "cn-tianjin-yudongcheng-10",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhangxingzhuang-3-cn-tianjin-zhangxingzhuang-5",
+      "station_id": "cn-tianjin-zhangxingzhuang",
+      "from_line_id": "cn-tianjin-line-3",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhangxingzhuang-3",
+      "to_stop_id": "cn-tianjin-zhangxingzhuang-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhangxingzhuang-5-cn-tianjin-zhangxingzhuang-3",
+      "station_id": "cn-tianjin-zhangxingzhuang",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-3",
+      "from_stop_id": "cn-tianjin-zhangxingzhuang-5",
+      "to_stop_id": "cn-tianjin-zhangxingzhuang-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhigu-5-cn-tianjin-zhigu-9",
+      "station_id": "cn-tianjin-zhigu",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-9",
+      "from_stop_id": "cn-tianjin-zhigu-5",
+      "to_stop_id": "cn-tianjin-zhigu-9",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhigu-9-cn-tianjin-zhigu-5",
+      "station_id": "cn-tianjin-zhigu",
+      "from_line_id": "cn-tianjin-line-9",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhigu-9",
+      "to_stop_id": "cn-tianjin-zhigu-5",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhongliuyiyuan-5-cn-tianjin-zhongliuyiyuan-6",
+      "station_id": "cn-tianjin-zhongliuyiyuan",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-5",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhongliuyiyuan-5-cn-tianjin-zhongliuyiyuan-7",
+      "station_id": "cn-tianjin-zhongliuyiyuan",
+      "from_line_id": "cn-tianjin-line-5",
+      "to_line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-5",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-7",
+      "walk_time_seconds": 438,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 525,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhongliuyiyuan-6-cn-tianjin-zhongliuyiyuan-5",
+      "station_id": "cn-tianjin-zhongliuyiyuan",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-6",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhongliuyiyuan-6-cn-tianjin-zhongliuyiyuan-7",
+      "station_id": "cn-tianjin-zhongliuyiyuan",
+      "from_line_id": "cn-tianjin-line-6",
+      "to_line_id": "cn-tianjin-line-7",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-6",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-7",
+      "walk_time_seconds": 438,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 525,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhongliuyiyuan-7-cn-tianjin-zhongliuyiyuan-5",
+      "station_id": "cn-tianjin-zhongliuyiyuan",
+      "from_line_id": "cn-tianjin-line-7",
+      "to_line_id": "cn-tianjin-line-5",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-7",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-5",
+      "walk_time_seconds": 438,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 525,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-tianjin-zhongliuyiyuan-7-cn-tianjin-zhongliuyiyuan-6",
+      "station_id": "cn-tianjin-zhongliuyiyuan",
+      "from_line_id": "cn-tianjin-line-7",
+      "to_line_id": "cn-tianjin-line-6",
+      "from_stop_id": "cn-tianjin-zhongliuyiyuan-7",
+      "to_stop_id": "cn-tianjin-zhongliuyiyuan-6",
+      "walk_time_seconds": 438,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 525,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}
