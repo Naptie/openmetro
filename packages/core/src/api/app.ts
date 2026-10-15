@@ -398,6 +398,7 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
                   from_station_id: from,
                   currency: matrix.currency,
                   unit: matrix.unit,
+                  ...(matrix.basis ? { basis: matrix.basis } : {}),
                   fares
                 };
               }
@@ -505,6 +506,7 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
               return {
                 ...enriched,
                 fare: d.fares ? lookupFare(d.fares, from, to) : null,
+                ...(d.fares?.basis ? { fare_basis: d.fares.basis } : {}),
                 currency: d.fares?.currency ?? null
               };
             },

@@ -34,21 +34,40 @@ export function emptyFareMatrix(stations: { id: string }[]) {
     source: [],
     currency: 'CNY',
     unit: 'yuan',
+    basis: 'base',
     station_ids: sorted.map((s) => s.id),
     fares: sorted.map((_, i) => sorted.map<number | null>((_, j) => (i === j ? 0 : null)))
   } satisfies FareMatrixEncoded;
 }
 
 export async function harvestFares(
-  stations: { id: string; name: string }[]
+  stations: { id: string; name: string }[],
+  previous?: FareMatrixEncoded
 ): Promise<FareMatrixEncoded> {
   const catalog = await fetchFareStations();
   const keyByName = new Map(catalog.map((s) => [foldStationName(s.name), s.id]));
+  const names = new Set(stations.map((s) => foldStationName(s.name)));
+  for (const station of catalog) {
+    if (!names.has(foldStationName(station.name)))
+      throw new Error(`Unmatched fare station: ${station.name}`);
+  }
   const matrix = emptyFareMatrix(stations);
   const stationById = new Map(stations.map((s) => [s.id, s]));
   const keys = matrix.station_ids.map((id) =>
     keyByName.get(foldStationName(stationById.get(id)!.name))
   );
+  const currentIndex = new Map(matrix.station_ids.map((id, i) => [id, i]));
+  if (previous) {
+    for (let i = 0; i < previous.station_ids.length; i++) {
+      const a = currentIndex.get(previous.station_ids[i]!);
+      if (a == null) continue;
+      for (let j = i + 1; j < previous.station_ids.length; j++) {
+        const b = currentIndex.get(previous.station_ids[j]!);
+        if (b != null && previous.fares[i]![j] != null && (keys[a] == null || keys[b] == null))
+          throw new Error('Operator fare catalog lost previously covered stations');
+      }
+    }
+  }
   const pairs: [number, number][] = [];
   for (let i = 0; i < keys.length; i++) {
     for (let j = i + 1; j < keys.length; j++) {
@@ -92,6 +111,7 @@ export async function syncDongguanFares(dataDir: string): Promise<void> {
     id: string;
     name: string;
   }[];
-  const fares = await harvestFares(stations);
+  const previous = await readFile(join(dataDir, 'fares.json'), 'utf8').then(JSON.parse);
+  const fares = await harvestFares(stations, previous);
   await writeFile(join(dataDir, 'fares.json'), `${JSON.stringify(fares, null, 2)}\n`);
 }

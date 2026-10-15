@@ -55,3 +55,16 @@ test('refuses stale AMap topology rather than disconnecting the official station
   stale.amap.l[0]!.st.splice(8, 1);
   expect(() => normalizeDongguan(stale)).toThrow();
 });
+
+test('station identity survives an English name correction', () => {
+  const corrected = structuredClone(sources);
+  for (const line of corrected.amap.l) {
+    for (const station of line.st) {
+      if (station.n === '市民中心') station.multilang!.n!.en = 'Shimin Zhongxin';
+    }
+  }
+  const before = normalizeDongguan(sources).stations.find((s) => s.name === '市民中心')!;
+  const after = normalizeDongguan(corrected).stations.find((s) => s.name === '市民中心')!;
+  expect(after.names.en).toBe('Shimin Zhongxin');
+  expect(after.id).toBe(before.id);
+});

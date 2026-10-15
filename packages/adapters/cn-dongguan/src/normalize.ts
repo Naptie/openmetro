@@ -12,7 +12,6 @@ import {
   type SegmentEncoded,
   type StationEncoded,
   type StopEncoded,
-  stationIdFor,
   type TimetableEncoded
 } from '@openmetro/core';
 import { AMAP_URL, type DongguanSources } from './fetch.js';
@@ -89,14 +88,16 @@ export function normalizeDongguan(input: DongguanSources) {
           throw new Error(`Invalid name/coordinate for ${row.station}`);
         }
         const pixel = parsePixel(a.p);
+        const sourceId = a.poiid ?? a.si;
+        if (!sourceId) throw new Error(`Missing AMap station identity for ${row.station}`);
         station = {
-          id: `${NETWORK_ID}-${stationIdFor(en, a.n, a.sp)}`,
+          id: `${NETWORK_ID}-${sourceId.toLowerCase()}`,
           name: a.n,
           names: { zh: a.n, en },
           status: 'operating',
           location: { ...location, crs: 'gcj02' },
           schematic: pixel ? { ...pixel, crs: 'schematic' } : undefined,
-          source_ids: [{ source: AMAP_URL, id: a.poiid ?? a.si ?? a.n }],
+          source_ids: [{ source: AMAP_URL, id: sourceId }],
           extras: {
             location_source: 'subway',
             location_provider: 'amap_subway',
@@ -217,7 +218,7 @@ export function normalizeDongguan(input: DongguanSources) {
     default_units: { distance: 'km', time: 'seconds', speed: 'km/h' },
     routing: { weight: 'time', default_transfer_seconds: 120, max_transfer_seconds: 600 },
     notes:
-      '线路顺序及工作日/非工作日首末班车自动解析官网最新服务时间文章；坐标、英文名、颜色来自高德公开地铁数据。星期数组采用通常工作周，调休与临时延时以运营方公告为准。区间时间优先由末班车推导，距离为站间直线估计；换乘时间使用路由默认值，可选 gapfill 层可用百度实测数据补齐。票价层仅收集官网旧查询接口支持的基本票价：目前仅2号线，其他OD为null；不包含限期乘车优惠。'
+      '官网常规首末班车；高德坐标、名称及示意图。调休与临时延时以公告为准。区间时间优先由末班车推导，距离为直线估计；未补齐的换乘时间采用120秒。票价为官网查询支持的基本票价，不含优惠；未支持的OD为null。'
   };
   return { network, lines, stations, stops, patterns, segments, timetables };
 }

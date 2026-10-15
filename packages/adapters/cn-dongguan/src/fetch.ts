@@ -1,4 +1,5 @@
 import { officialFetchHeaders, proxyUrl } from '@openmetro/core';
+import { textOf } from './timetables.js';
 
 export const OPERATOR = 'https://www.dggdjt.com/';
 export const AMAP_URL = 'https://webapi.amap.com/subway/data/4419_drw_dongguan.json';
@@ -53,13 +54,27 @@ export async function getText(url: string): Promise<string> {
   throw new Error(`Failed to fetch ${url}`, { cause: last });
 }
 
-/** Discover the current article instead of pinning an article id or copied times. */
-export function timetableArticleUrl(index: string): string {
+function timetableArticles(index: string): { url: string; date: string }[] {
+  const articles = new Map<string, string>();
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' });
   for (const a of index.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
     if (!/服务时间|首末班车|运营时间/.test(a[0]) || !/^\/info\/\d+\.htmx$/.test(a[1]!)) continue;
-    return new URL(a[1]!, OPERATOR).href;
+    const end = index.indexOf('</li>', a.index);
+    const entry = end < 0 ? a[0] : index.slice(a.index, end);
+    const date = /\d{4}-\d{2}-\d{2}/.exec(textOf(entry))?.[0] ?? '';
+    if (date <= today) articles.set(new URL(a[1]!, OPERATOR).href, date);
   }
-  throw new Error('Operator service-time index has no timetable article');
+  const candidates = [...articles].map(([url, date]) => ({ url, date }));
+  candidates.sort((a, b) => b.date.localeCompare(a.date));
+  if (!candidates.length) throw new Error('Operator service-time index has no timetable article');
+  if (candidates.length > 1 && candidates[0]!.date === candidates[1]!.date)
+    throw new Error('Ambiguous operator timetable articles');
+  return candidates;
+}
+
+/** Publication date takes precedence over page order (which can include pinned articles). */
+export function timetableArticleUrl(index: string): string {
+  return timetableArticles(index)[0]!.url;
 }
 
 export async function fetchDongguanSources(): Promise<DongguanSources> {
@@ -68,9 +83,18 @@ export async function fetchDongguanSources(): Promise<DongguanSources> {
   if (!Array.isArray(amap.l) || !['1号线', '2号线'].every((n) => amap.l.some((l) => l.ln === n))) {
     throw new Error('AMap Dongguan feed is missing an operating line');
   }
-  const timetableUrl = timetableArticleUrl(index);
-  console.log(`  operator timetable: ${timetableUrl}`);
-  return { amap, timetableUrl, timetableHtml: await getText(timetableUrl) };
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' });
+  for (const { url: timetableUrl } of timetableArticles(index)) {
+    const timetableHtml = await getText(timetableUrl);
+    const effective = /(\d{4})[年/-](\d{1,2})[月/-](\d{1,2})日?\s*起/.exec(textOf(timetableHtml));
+    if (effective) {
+      const date = `${effective[1]}-${effective[2]!.padStart(2, '0')}-${effective[3]!.padStart(2, '0')}`;
+      if (date > today) continue;
+    }
+    console.log(`  operator timetable: ${timetableUrl}`);
+    return { amap, timetableUrl, timetableHtml };
+  }
+  throw new Error('No operator timetable is effective yet');
 }
 
 export interface OfficialStation {

@@ -177,6 +177,10 @@
 
               <Separator class="my-3" />
 
+              {#if route.fare != null && route.fare_basis === 'base'}
+                <p class="mb-3 text-xs text-muted-foreground">{i18n.t.route_base_fare_note()}</p>
+              {/if}
+
               <!-- Legs timeline -->
               <ol class="flex flex-col">
                 {#each route.legs as leg, i (i + leg.from_station_id + leg.to_station_id)}
