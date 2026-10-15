@@ -1,0 +1,132 @@
+{
+  "id": "cn-dongguan",
+  "name": "东莞轨道交通",
+  "names": {
+    "zh": "东莞轨道交通",
+    "en": "Dongguan Rail Transit"
+  },
+  "city": {
+    "id": "CN-4419",
+    "name": {
+      "zh": "东莞市",
+      "en": "Dongguan"
+    },
+    "country": "CN",
+    "population": 10466625,
+    "area": 2460.08,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        113.74928,
+        23.04749
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "线路顺序及工作日/非工作日首末班车自动解析官网最新服务时间文章；坐标、英文名、颜色来自高德公开地铁数据。星期数组采用通常工作周，调休与临时延时以运营方公告为准。区间时间优先由末班车推导，距离为站间直线估计；换乘时间使用路由默认值，可选 gapfill 层可用百度实测数据补齐。票价层仅收集官网旧查询接口支持的基本票价：目前仅2号线，其他OD为null；不包含限期乘车优惠。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 39,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 39,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 38,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 38,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 2
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 76,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 40,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 0.14,
+      "status": "partial",
+      "counts": {
+        "official": 210,
+        "derived": 0,
+        "default": 1272
+      }
+    }
+  }
+}

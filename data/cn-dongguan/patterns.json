@@ -1,0 +1,108 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dongguan",
+  "generated_at": "2026-10-15T09:41:00.792Z",
+  "source": [
+    {
+      "name": "dggdjt-service-times",
+      "url": "https://www.dggdjt.com/info/17798.htmx",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:41:00.796Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "东莞市轨道交通有限公司"
+    },
+    {
+      "name": "amap-subway-4419",
+      "url": "https://webapi.amap.com/subway/data/4419_drw_dongguan.json",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:41:00.796Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高德地图"
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-dongguan-pattern-1-primary",
+      "line_id": "cn-dongguan-line-1",
+      "name": "东莞西站 → 梅塘站",
+      "names": {
+        "zh": "东莞西站 → 梅塘站",
+        "en": "Dongguanxi Railway Station to Meitang"
+      },
+      "stop_ids": [
+        "cn-dongguan-dongguanxi-railway-station-1",
+        "cn-dongguan-houde-1",
+        "cn-dongguan-changping-1",
+        "cn-dongguan-people-s-hospital-1",
+        "cn-dongguan-quhai-1",
+        "cn-dongguan-batou-1",
+        "cn-dongguan-yuanmei-1",
+        "cn-dongguan-central-square-1",
+        "cn-dongguan-civic-center-1",
+        "cn-dongguan-lixin-1",
+        "cn-dongguan-dongchengnan-railway-station-1",
+        "cn-dongguan-tongsha-park-1",
+        "cn-dongguan-niushan-1",
+        "cn-dongguan-lianping-1",
+        "cn-dongguan-dalingshan-1",
+        "cn-dongguan-jinju-1",
+        "cn-dongguan-guangdong-medical-university-1",
+        "cn-dongguan-songshan-lake-1",
+        "cn-dongguan-songfo-1",
+        "cn-dongguan-dalang-1",
+        "cn-dongguan-lixiang-park-1",
+        "cn-dongguan-fengshan-1",
+        "cn-dongguan-huangjiang-1",
+        "cn-dongguan-huangniupu-1",
+        "cn-dongguan-meitang-1"
+      ],
+      "origin_stop_id": "cn-dongguan-dongguanxi-railway-station-1",
+      "terminal_stop_id": "cn-dongguan-meitang-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "https://www.dggdjt.com/info/17798.htmx",
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "cn-dongguan-pattern-2-primary",
+      "line_id": "cn-dongguan-line-2",
+      "name": "东莞火车站 → 虎门火车站",
+      "names": {
+        "zh": "东莞火车站 → 虎门火车站",
+        "en": "Dongguan Railway Station to Humen Railway Station"
+      },
+      "stop_ids": [
+        "cn-dongguan-dongguan-railway-station-2",
+        "cn-dongguan-chashan-2",
+        "cn-dongguan-liuhua-park-2",
+        "cn-dongguan-xiaqiao-2",
+        "cn-dongguan-tianbao-2",
+        "cn-dongguan-dongcheng-2",
+        "cn-dongguan-qifeng-park-2",
+        "cn-dongguan-civic-center-2",
+        "cn-dongguan-xiping-2",
+        "cn-dongguan-gedi-2",
+        "cn-dongguan-chenwu-2",
+        "cn-dongguan-liaoxia-2",
+        "cn-dongguan-shanmei-2",
+        "cn-dongguan-exhibition-center-2",
+        "cn-dongguan-humen-railway-station-2"
+      ],
+      "origin_stop_id": "cn-dongguan-dongguan-railway-station-2",
+      "terminal_stop_id": "cn-dongguan-humen-railway-station-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "https://www.dggdjt.com/info/17798.htmx",
+          "id": "2"
+        }
+      ]
+    }
+  ]
+}
