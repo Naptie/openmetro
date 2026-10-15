@@ -25,7 +25,7 @@ export const adapter: AdapterManifest = {
     const data = normalizeKaohsiung(
       await fetchKaohsiung({
         fares: layers.includes('fares'),
-        cacheDir: adapterCacheDir('cn-kaohsiung', root)
+        cacheDir: process.env.OPENMETRO_KAOHSIUNG_CACHE_DIR ?? adapterCacheDir('cn-kaohsiung', root)
       })
     );
     // A weekly topology refresh must retain the monthly/opt-in fare harvest.
@@ -61,9 +61,15 @@ export const adapter: AdapterManifest = {
         license: 'odbl',
         license_url: 'https://www.openstreetmap.org/copyright',
         attribution: '© OpenStreetMap contributors; geocoding by Photon / komoot.',
-        notes: 'OSM rail POIs matched automatically by name and city; coordinates are derived.'
+        notes:
+          'Photon candidates verified through OSM API by official ref, mode, operator/network and city bounds; coordinates are derived.'
       }
     ];
+    sources.push({
+      ...sources[1]!,
+      name: 'osm-identity',
+      url: 'https://api.openstreetmap.org/api/0.6/'
+    });
     const operatorSources = [
       ['krtc-stations', '/Guide/station_guide'],
       ['krtc-lrt-stations', '/KLRT/station_guide'],

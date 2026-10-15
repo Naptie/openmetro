@@ -23,4 +23,15 @@ test('shipped network routes every station in both directions, including inter-s
   expect(loop?.total_seconds).toBe(120);
   const interchange = planRoute(graph, data.stops, 'cn-kaohsiung-c24', 'cn-kaohsiung-r13');
   expect(interchange?.transfers).toBe(1);
+  for (const [from, to, seconds] of [
+    ['r3', 'rk1', 3000],
+    ['rk1', 'r3', 3000],
+    ['r3', 'r16', 1800],
+    ['r3', 'r10', 1080],
+    ['o1', 'ot1', 1440],
+    ['ot1', 'o1', 1440]
+  ] as const)
+    expect(
+      planRoute(graph, data.stops, `cn-kaohsiung-${from}`, `cn-kaohsiung-${to}`)?.total_seconds
+    ).toBe(seconds);
 });

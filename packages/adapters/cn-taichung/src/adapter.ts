@@ -22,12 +22,13 @@ export const adapter: AdapterManifest = {
       url,
       version: 'live',
       retrieved_at: new Date().toISOString(),
-      license: name === 'officialStations' ? 'unknown' : 'custom',
-      license_url: name === 'officialStations' ? null : 'https://data.gov.tw/license',
-      attribution:
-        name === 'officialStations'
-          ? '臺中捷運股份有限公司；官方車站清單、站名、順序及識別碼。'
-          : '提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。',
+      license: ['officialStations', 'timetables'].includes(name) ? 'unknown' : 'custom',
+      license_url: ['officialStations', 'timetables'].includes(name)
+        ? null
+        : 'https://data.gov.tw/license',
+      attribution: ['officialStations', 'timetables'].includes(name)
+        ? '臺中捷運股份有限公司；官方車站、現行首末班車及乘車時間。'
+        : '提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。',
       notes: 'Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0.'
     }));
     data.fares.source = sources as typeof data.fares.source;

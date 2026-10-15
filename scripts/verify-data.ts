@@ -25,6 +25,7 @@ import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { Effect } from 'effect';
 import {
+  assertSimpleServiceCoverage,
   evaluateStationSpeed,
   hasValidTimes,
   haversineKm,
@@ -729,6 +730,24 @@ function verifyReferences(network: string, d: NetworkData): void {
         `operating station ${station.id} (${station.name ?? ''}) lacks first/last trains on line ${line.id}`
       );
     }
+  }
+
+  // Adapters with complete simple-line service explicitly promise per-stop
+  // directions. Keep this opt-in: legacy branch/partial-service feeds cannot
+  // be judged by terminal-pair assumptions, and need their own service model.
+  for (const line of d.lines) {
+    if (line.extras?.timetable_coverage !== 'all_stop_directions') continue;
+    const patterns = d.patterns.filter((p) => p.line_id === line.id);
+    assert(
+      patterns.length === 1,
+      network,
+      `strict timetable coverage needs one alignment: ${line.id}`
+    );
+    assertSimpleServiceCoverage(
+      patterns[0]!.stop_ids,
+      line.loop ?? false,
+      d.timetables.filter((t) => t.line_id === line.id)
+    );
   }
 
   // ── Fares ─────────────────────────────────────────────────────

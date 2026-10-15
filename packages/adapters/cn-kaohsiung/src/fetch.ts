@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { officialFetchHeaders, proxyUrl } from '@openmetro/core';
+import { geocodeRailStation } from './geocode.js';
 
 export const ORIGIN = 'https://www.krtc.com.tw';
 export const PHOTON = 'https://photon.komoot.io/api/';
@@ -92,8 +93,9 @@ export function parseTimetable(html: string, loop: boolean): ServiceTime[] {
             : day === 6
               ? '週日'
               : '平日';
-      const row = days.find((d) => d.label === label);
-      if (!row) throw new Error(`KRTC missing day type ${label}`);
+      const matches = days.filter((d) => d.label === label);
+      const row = matches[0];
+      if (!row || matches.length !== 1) throw new Error(`KRTC missing/duplicate day type ${label}`);
       return row[field];
     };
     current.first = Array.from({ length: 7 }, (_, i) => get(i, 'first'));
@@ -181,59 +183,6 @@ async function getText(url: string): Promise<string> {
   }
   throw error;
 }
-const fold = (s: string) =>
-  s
-    .replace(/[（(].*?[）)]/g, '')
-    .replace(/車站$|站$|\s/g, '')
-    .replace(/臺/g, '台');
-
-/** Use rail POIs, never the centre/zoom of an operator's embedded map.
- * The operator currently duplicates C4/C5 map centres and labels C14 as 鹽埕埔.
- * Photon is an automated OSM fallback, bounded to Kaohsiung and exact names.
- */
-async function geocode(
-  station: StationMap,
-  loop: boolean
-): Promise<{ location: StationMap['location']; osmId: string }> {
-  const name = station.zh.replace(/[（(].*?[）)]/g, '');
-  for (const q of [`高雄 ${name} ${loop ? '輕軌' : '捷運'}`, `高雄 ${station.en}`]) {
-    const url = `${PHOTON}?${new URLSearchParams({ q, limit: '10', lat: '22.64', lon: '120.3', bbox: '120.15,22.45,120.5,22.95' })}`;
-    const data = JSON.parse(await getText(url)) as {
-      features: {
-        properties: {
-          osm_key: string;
-          osm_value: string;
-          name: string;
-          osm_type: string;
-          osm_id: number;
-        };
-        geometry: { coordinates: [number, number] };
-      }[];
-    };
-    const candidates = data.features.filter(
-      (f) =>
-        f.properties.osm_key === 'railway' &&
-        /^(station|tram_stop|halt)$/.test(f.properties.osm_value) &&
-        [fold(name), fold(station.en)].includes(fold(f.properties.name))
-    );
-    candidates.sort((a, b) => {
-      const dist = (c: [number, number]) =>
-        Math.hypot(c[0] - station.location.lon, c[1] - station.location.lat);
-      return dist(a.geometry.coordinates) - dist(b.geometry.coordinates);
-    });
-    const hit = candidates[0];
-    if (hit) {
-      const [lon, lat] = hit.geometry.coordinates;
-      if (lon >= 120.15 && lon <= 120.5 && lat >= 22.45 && lat <= 22.95)
-        return {
-          location: { lon, lat, crs: 'wgs84' },
-          osmId: `${hit.properties.osm_type}/${hit.properties.osm_id}`
-        };
-    }
-  }
-  throw new Error(`No rail coordinate match for ${station.zh}`);
-}
-
 export async function fetchKaohsiung(opts: {
   fares: boolean;
   cacheDir: string;
@@ -272,7 +221,7 @@ export async function fetchKaohsiung(opts: {
   const stations = await mapLimit([...entries.values()], async (e) => {
     const url = `${ORIGIN}/${e.section}/station_map?id=${e.id}`;
     const info = parseStationMap(await getText(url));
-    const coords = await geocode(info, e.section === 'KLRT');
+    const coords = await geocodeRailStation(info, e.codes, e.section === 'KLRT', getText);
     if (++resolved % 20 === 0) console.log(`  KRTC coordinates ${resolved}/${entries.size}`);
     return { ...info, ...coords, key: e.codes[0]!, codes: e.codes, section: e.section, url };
   });
@@ -325,6 +274,11 @@ export async function fetchKaohsiung(opts: {
   for (const line of lines.filter((l) => l.code !== 'C'))
     for (let i = 0; i < line.stops.length - 1; i++)
       pairs.set(`${line.stops[i]}|${line.stops[i + 1]}`, [line.stops[i]!, line.stops[i + 1]!]);
+  // Anchor each direction independently. Adjacent rounded quotes are only
+  // cross-checks; their sum overstates long journeys by many minutes.
+  for (const line of lines.filter((l) => l.code !== 'C'))
+    for (const from of [line.stops[0]!, line.stops.at(-1)!])
+      for (const to of line.stops) if (from !== to) pairs.set(`${from}|${to}`, [from, to]);
   if (opts.fares) {
     for (const section of ['Guide', 'KLRT']) {
       const codes = stations.filter((s) => s.section === section).map((s) => s.key);

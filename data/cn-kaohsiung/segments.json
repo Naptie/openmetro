@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-kaohsiung",
-  "generated_at": "2026-10-15T09:27:06.855Z",
+  "generated_at": "2026-10-15T10:13:52.159Z",
   "source": [
     {
       "name": "krtc-stations",
       "url": "https://www.krtc.com.tw/Guide/station_guide",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
       "license": "unknown",
       "license_url": null,
       "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
@@ -18,7 +18,7 @@
       "name": "krtc-lrt-stations",
       "url": "https://www.krtc.com.tw/KLRT/station_guide",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
       "license": "unknown",
       "license_url": null,
       "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
@@ -28,7 +28,7 @@
       "name": "krtc-timetables",
       "url": "https://www.krtc.com.tw/Guide/first_and_last_train",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
       "license": "unknown",
       "license_url": null,
       "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
@@ -38,7 +38,7 @@
       "name": "krtc-lrt-timetables",
       "url": "https://www.krtc.com.tw/KLRT/first_and_last_train",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
       "license": "unknown",
       "license_url": null,
       "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
@@ -48,7 +48,7 @@
       "name": "krtc-lrt-travel-matrix",
       "url": "https://www.krtc.com.tw/KLRT/time_between_train",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
       "license": "unknown",
       "license_url": null,
       "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
@@ -58,7 +58,7 @@
       "name": "krtc-planner",
       "url": "https://www.krtc.com.tw",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
       "license": "unknown",
       "license_url": null,
       "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
@@ -68,11 +68,21 @@
       "name": "photon-osm",
       "url": "https://photon.komoot.io/api/",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
       "license": "odbl",
       "license_url": "https://www.openstreetmap.org/copyright",
       "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
-      "notes": "OSM rail POIs matched automatically by name and city; coordinates are derived."
+      "notes": "Photon candidates verified through OSM API by official ref, mode, operator/network and city bounds; coordinates are derived."
+    },
+    {
+      "name": "osm-identity",
+      "url": "https://api.openstreetmap.org/api/0.6/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "Photon candidates verified through OSM API by official ref, mode, operator/network and city bounds; coordinates are derived."
     }
   ],
   "records": [
@@ -359,7 +369,7 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "source_id": "krtc-lrt-travel-matrix",
-      "distance_km": 0.683,
+      "distance_km": 0.685,
       "extras": {
         "distance_source": "haversine"
       }
@@ -375,7 +385,7 @@
       "travel_time_seconds": 180,
       "travel_time_source": "source",
       "source_id": "krtc-lrt-travel-matrix",
-      "distance_km": 0.683,
+      "distance_km": 0.685,
       "extras": {
         "distance_source": "haversine"
       }
@@ -391,7 +401,7 @@
       "travel_time_seconds": 180,
       "travel_time_source": "source",
       "source_id": "krtc-lrt-travel-matrix",
-      "distance_km": 0.566,
+      "distance_km": 0.558,
       "extras": {
         "distance_source": "haversine"
       }
@@ -407,7 +417,7 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "source_id": "krtc-lrt-travel-matrix",
-      "distance_km": 0.566,
+      "distance_km": 0.558,
       "extras": {
         "distance_source": "haversine"
       }
@@ -1299,14 +1309,16 @@
       "to_stop_id": "cn-kaohsiung-stop-o2",
       "from_station_id": "cn-kaohsiung-o1",
       "to_station_id": "cn-kaohsiung-o2",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.001,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.001
     },
     {
       "id": "cn-kaohsiung-stop-o10-to-o11",
@@ -1315,14 +1327,52 @@
       "to_stop_id": "cn-kaohsiung-stop-o11",
       "from_station_id": "cn-kaohsiung-o10",
       "to_station_id": "cn-kaohsiung-o11",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.744,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.744
+    },
+    {
+      "id": "cn-kaohsiung-stop-o10-to-o9",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o10",
+      "to_stop_id": "cn-kaohsiung-stop-o9",
+      "from_station_id": "cn-kaohsiung-o10",
+      "to_station_id": "cn-kaohsiung-o9",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.673
+    },
+    {
+      "id": "cn-kaohsiung-stop-o11-to-o10",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o11",
+      "to_stop_id": "cn-kaohsiung-stop-o10",
+      "from_station_id": "cn-kaohsiung-o11",
+      "to_station_id": "cn-kaohsiung-o10",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.744
     },
     {
       "id": "cn-kaohsiung-stop-o11-to-o12",
@@ -1331,14 +1381,34 @@
       "to_stop_id": "cn-kaohsiung-stop-o12",
       "from_station_id": "cn-kaohsiung-o11",
       "to_station_id": "cn-kaohsiung-o12",
-      "direction": "both",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.738
+    },
+    {
+      "id": "cn-kaohsiung-stop-o12-to-o11",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o12",
+      "to_stop_id": "cn-kaohsiung-stop-o11",
+      "from_station_id": "cn-kaohsiung-o12",
+      "to_station_id": "cn-kaohsiung-o11",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.738,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.738
     },
     {
       "id": "cn-kaohsiung-stop-o12-to-o13",
@@ -1347,14 +1417,34 @@
       "to_stop_id": "cn-kaohsiung-stop-o13",
       "from_station_id": "cn-kaohsiung-o12",
       "to_station_id": "cn-kaohsiung-o13",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.841,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.841
+    },
+    {
+      "id": "cn-kaohsiung-stop-o13-to-o12",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o13",
+      "to_stop_id": "cn-kaohsiung-stop-o12",
+      "from_station_id": "cn-kaohsiung-o13",
+      "to_station_id": "cn-kaohsiung-o12",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.841
     },
     {
       "id": "cn-kaohsiung-stop-o13-to-o14",
@@ -1363,14 +1453,34 @@
       "to_stop_id": "cn-kaohsiung-stop-o14",
       "from_station_id": "cn-kaohsiung-o13",
       "to_station_id": "cn-kaohsiung-o14",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.871,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.871
+    },
+    {
+      "id": "cn-kaohsiung-stop-o14-to-o13",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o14",
+      "to_stop_id": "cn-kaohsiung-stop-o13",
+      "from_station_id": "cn-kaohsiung-o14",
+      "to_station_id": "cn-kaohsiung-o13",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.871
     },
     {
       "id": "cn-kaohsiung-stop-o14-to-ot1",
@@ -1379,14 +1489,34 @@
       "to_stop_id": "cn-kaohsiung-stop-ot1",
       "from_station_id": "cn-kaohsiung-o14",
       "to_station_id": "cn-kaohsiung-ot1",
-      "direction": "both",
-      "travel_time_seconds": 240,
+      "direction": "forward",
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.946,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.946
+    },
+    {
+      "id": "cn-kaohsiung-stop-o2-to-o1",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o2",
+      "to_stop_id": "cn-kaohsiung-stop-o1",
+      "from_station_id": "cn-kaohsiung-o2",
+      "to_station_id": "cn-kaohsiung-o1",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.001
     },
     {
       "id": "cn-kaohsiung-stop-o2-to-o4",
@@ -1395,14 +1525,34 @@
       "to_stop_id": "cn-kaohsiung-stop-o4",
       "from_station_id": "cn-kaohsiung-o2",
       "to_station_id": "cn-kaohsiung-o4",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.208,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.208
+    },
+    {
+      "id": "cn-kaohsiung-stop-o4-to-o2",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o4",
+      "to_stop_id": "cn-kaohsiung-stop-o2",
+      "from_station_id": "cn-kaohsiung-o4",
+      "to_station_id": "cn-kaohsiung-o2",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.208
     },
     {
       "id": "cn-kaohsiung-stop-o4-to-o5",
@@ -1411,14 +1561,34 @@
       "to_stop_id": "cn-kaohsiung-stop-o5",
       "from_station_id": "cn-kaohsiung-o4",
       "to_station_id": "cn-kaohsiung-r10",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.79,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.79
+    },
+    {
+      "id": "cn-kaohsiung-stop-o5-to-o4",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o5",
+      "to_stop_id": "cn-kaohsiung-stop-o4",
+      "from_station_id": "cn-kaohsiung-r10",
+      "to_station_id": "cn-kaohsiung-o4",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.79
     },
     {
       "id": "cn-kaohsiung-stop-o5-to-o6",
@@ -1427,14 +1597,34 @@
       "to_stop_id": "cn-kaohsiung-stop-o6",
       "from_station_id": "cn-kaohsiung-r10",
       "to_station_id": "cn-kaohsiung-o6",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.987,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.987
+    },
+    {
+      "id": "cn-kaohsiung-stop-o6-to-o5",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o6",
+      "to_stop_id": "cn-kaohsiung-stop-o5",
+      "from_station_id": "cn-kaohsiung-o6",
+      "to_station_id": "cn-kaohsiung-r10",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.987
     },
     {
       "id": "cn-kaohsiung-stop-o6-to-o7",
@@ -1443,14 +1633,34 @@
       "to_stop_id": "cn-kaohsiung-stop-o7",
       "from_station_id": "cn-kaohsiung-o6",
       "to_station_id": "cn-kaohsiung-o7",
-      "direction": "both",
-      "travel_time_seconds": 120,
+      "direction": "forward",
+      "travel_time_seconds": 60,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.635,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.635
+    },
+    {
+      "id": "cn-kaohsiung-stop-o7-to-o6",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o7",
+      "to_stop_id": "cn-kaohsiung-stop-o6",
+      "from_station_id": "cn-kaohsiung-o7",
+      "to_station_id": "cn-kaohsiung-o6",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.635
     },
     {
       "id": "cn-kaohsiung-stop-o7-to-o8",
@@ -1459,14 +1669,34 @@
       "to_stop_id": "cn-kaohsiung-stop-o8",
       "from_station_id": "cn-kaohsiung-o7",
       "to_station_id": "cn-kaohsiung-o8",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.033,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.033
+    },
+    {
+      "id": "cn-kaohsiung-stop-o8-to-o7",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o8",
+      "to_stop_id": "cn-kaohsiung-stop-o7",
+      "from_station_id": "cn-kaohsiung-o8",
+      "to_station_id": "cn-kaohsiung-o7",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.033
     },
     {
       "id": "cn-kaohsiung-stop-o8-to-o9",
@@ -1475,14 +1705,16 @@
       "to_stop_id": "cn-kaohsiung-stop-o9",
       "from_station_id": "cn-kaohsiung-o8",
       "to_station_id": "cn-kaohsiung-o9",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.759,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.759
     },
     {
       "id": "cn-kaohsiung-stop-o9-to-o10",
@@ -1491,14 +1723,52 @@
       "to_stop_id": "cn-kaohsiung-stop-o10",
       "from_station_id": "cn-kaohsiung-o9",
       "to_station_id": "cn-kaohsiung-o10",
-      "direction": "both",
-      "travel_time_seconds": 120,
+      "direction": "forward",
+      "travel_time_seconds": 60,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.673,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.673
+    },
+    {
+      "id": "cn-kaohsiung-stop-o9-to-o8",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o9",
+      "to_stop_id": "cn-kaohsiung-stop-o8",
+      "from_station_id": "cn-kaohsiung-o9",
+      "to_station_id": "cn-kaohsiung-o8",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.759
+    },
+    {
+      "id": "cn-kaohsiung-stop-ot1-to-o14",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-ot1",
+      "to_stop_id": "cn-kaohsiung-stop-o14",
+      "from_station_id": "cn-kaohsiung-ot1",
+      "to_station_id": "cn-kaohsiung-o14",
+      "direction": "forward",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.946
     },
     {
       "id": "cn-kaohsiung-stop-r10-to-r11",
@@ -1507,14 +1777,52 @@
       "to_stop_id": "cn-kaohsiung-stop-r11",
       "from_station_id": "cn-kaohsiung-r10",
       "to_station_id": "cn-kaohsiung-r11",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.887,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.887
+    },
+    {
+      "id": "cn-kaohsiung-stop-r10-to-r9",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r10",
+      "to_stop_id": "cn-kaohsiung-stop-r9",
+      "from_station_id": "cn-kaohsiung-r10",
+      "to_station_id": "cn-kaohsiung-r9",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.729
+    },
+    {
+      "id": "cn-kaohsiung-stop-r11-to-r10",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r11",
+      "to_stop_id": "cn-kaohsiung-stop-r10",
+      "from_station_id": "cn-kaohsiung-r11",
+      "to_station_id": "cn-kaohsiung-r10",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.887
     },
     {
       "id": "cn-kaohsiung-stop-r11-to-r12",
@@ -1523,14 +1831,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r12",
       "from_station_id": "cn-kaohsiung-r11",
       "to_station_id": "cn-kaohsiung-r12",
-      "direction": "both",
-      "travel_time_seconds": 180,
+      "direction": "forward",
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.936,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.936
+    },
+    {
+      "id": "cn-kaohsiung-stop-r12-to-r11",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r12",
+      "to_stop_id": "cn-kaohsiung-stop-r11",
+      "from_station_id": "cn-kaohsiung-r12",
+      "to_station_id": "cn-kaohsiung-r11",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.936
     },
     {
       "id": "cn-kaohsiung-stop-r12-to-r13",
@@ -1539,14 +1867,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r13",
       "from_station_id": "cn-kaohsiung-r12",
       "to_station_id": "cn-kaohsiung-r13",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.044,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.044
+    },
+    {
+      "id": "cn-kaohsiung-stop-r13-to-r12",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r13",
+      "to_stop_id": "cn-kaohsiung-stop-r12",
+      "from_station_id": "cn-kaohsiung-r13",
+      "to_station_id": "cn-kaohsiung-r12",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.044
     },
     {
       "id": "cn-kaohsiung-stop-r13-to-r14",
@@ -1555,14 +1903,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r14",
       "from_station_id": "cn-kaohsiung-r13",
       "to_station_id": "cn-kaohsiung-r14",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.945,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.945
+    },
+    {
+      "id": "cn-kaohsiung-stop-r14-to-r13",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r14",
+      "to_stop_id": "cn-kaohsiung-stop-r13",
+      "from_station_id": "cn-kaohsiung-r14",
+      "to_station_id": "cn-kaohsiung-r13",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.945
     },
     {
       "id": "cn-kaohsiung-stop-r14-to-r15",
@@ -1571,14 +1939,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r15",
       "from_station_id": "cn-kaohsiung-r14",
       "to_station_id": "cn-kaohsiung-r15",
-      "direction": "both",
-      "travel_time_seconds": 180,
+      "direction": "forward",
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.246,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.246
+    },
+    {
+      "id": "cn-kaohsiung-stop-r15-to-r14",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r15",
+      "to_stop_id": "cn-kaohsiung-stop-r14",
+      "from_station_id": "cn-kaohsiung-r15",
+      "to_station_id": "cn-kaohsiung-r14",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.246
     },
     {
       "id": "cn-kaohsiung-stop-r15-to-r16",
@@ -1587,14 +1975,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r16",
       "from_station_id": "cn-kaohsiung-r15",
       "to_station_id": "cn-kaohsiung-r16",
-      "direction": "both",
-      "travel_time_seconds": 180,
+      "direction": "forward",
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.33,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.33
+    },
+    {
+      "id": "cn-kaohsiung-stop-r16-to-r15",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r16",
+      "to_stop_id": "cn-kaohsiung-stop-r15",
+      "from_station_id": "cn-kaohsiung-r16",
+      "to_station_id": "cn-kaohsiung-r15",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.33
     },
     {
       "id": "cn-kaohsiung-stop-r16-to-r17",
@@ -1603,14 +2011,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r17",
       "from_station_id": "cn-kaohsiung-r16",
       "to_station_id": "cn-kaohsiung-r17",
-      "direction": "both",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.652
+    },
+    {
+      "id": "cn-kaohsiung-stop-r17-to-r16",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r17",
+      "to_stop_id": "cn-kaohsiung-stop-r16",
+      "from_station_id": "cn-kaohsiung-r17",
+      "to_station_id": "cn-kaohsiung-r16",
+      "direction": "forward",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.652,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.652
     },
     {
       "id": "cn-kaohsiung-stop-r17-to-r18",
@@ -1619,14 +2047,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r18",
       "from_station_id": "cn-kaohsiung-r17",
       "to_station_id": "cn-kaohsiung-r18",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.779,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.779
+    },
+    {
+      "id": "cn-kaohsiung-stop-r18-to-r17",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r18",
+      "to_stop_id": "cn-kaohsiung-stop-r17",
+      "from_station_id": "cn-kaohsiung-r18",
+      "to_station_id": "cn-kaohsiung-r17",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.779
     },
     {
       "id": "cn-kaohsiung-stop-r18-to-r19",
@@ -1635,14 +2083,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r19",
       "from_station_id": "cn-kaohsiung-r18",
       "to_station_id": "cn-kaohsiung-r19",
-      "direction": "both",
-      "travel_time_seconds": 180,
+      "direction": "forward",
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.214,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.214
+    },
+    {
+      "id": "cn-kaohsiung-stop-r19-to-r18",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r19",
+      "to_stop_id": "cn-kaohsiung-stop-r18",
+      "from_station_id": "cn-kaohsiung-r19",
+      "to_station_id": "cn-kaohsiung-r18",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.214
     },
     {
       "id": "cn-kaohsiung-stop-r19-to-r20",
@@ -1651,14 +2119,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r20",
       "from_station_id": "cn-kaohsiung-r19",
       "to_station_id": "cn-kaohsiung-r20",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.016,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.016
+    },
+    {
+      "id": "cn-kaohsiung-stop-r20-to-r19",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r20",
+      "to_stop_id": "cn-kaohsiung-stop-r19",
+      "from_station_id": "cn-kaohsiung-r20",
+      "to_station_id": "cn-kaohsiung-r19",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.016
     },
     {
       "id": "cn-kaohsiung-stop-r20-to-r21",
@@ -1667,14 +2155,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r21",
       "from_station_id": "cn-kaohsiung-r20",
       "to_station_id": "cn-kaohsiung-r21",
-      "direction": "both",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.939
+    },
+    {
+      "id": "cn-kaohsiung-stop-r21-to-r20",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r21",
+      "to_stop_id": "cn-kaohsiung-stop-r20",
+      "from_station_id": "cn-kaohsiung-r21",
+      "to_station_id": "cn-kaohsiung-r20",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.939,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.939
     },
     {
       "id": "cn-kaohsiung-stop-r21-to-r22",
@@ -1683,14 +2191,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r22",
       "from_station_id": "cn-kaohsiung-r21",
       "to_station_id": "cn-kaohsiung-r22",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.678,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.678
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22-to-r21",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r22",
+      "to_stop_id": "cn-kaohsiung-stop-r21",
+      "from_station_id": "cn-kaohsiung-r22",
+      "to_station_id": "cn-kaohsiung-r21",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.678
     },
     {
       "id": "cn-kaohsiung-stop-r22-to-r22a",
@@ -1699,14 +2227,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r22a",
       "from_station_id": "cn-kaohsiung-r22",
       "to_station_id": "cn-kaohsiung-r22a",
-      "direction": "both",
-      "travel_time_seconds": 120,
+      "direction": "forward",
+      "travel_time_seconds": 60,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.068,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.068
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22a-to-r22",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r22a",
+      "to_stop_id": "cn-kaohsiung-stop-r22",
+      "from_station_id": "cn-kaohsiung-r22a",
+      "to_station_id": "cn-kaohsiung-r22",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.068
     },
     {
       "id": "cn-kaohsiung-stop-r22a-to-r23",
@@ -1715,14 +2263,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r23",
       "from_station_id": "cn-kaohsiung-r22a",
       "to_station_id": "cn-kaohsiung-r23",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.911,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.911
+    },
+    {
+      "id": "cn-kaohsiung-stop-r23-to-r22a",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r23",
+      "to_stop_id": "cn-kaohsiung-stop-r22a",
+      "from_station_id": "cn-kaohsiung-r23",
+      "to_station_id": "cn-kaohsiung-r22a",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.911
     },
     {
       "id": "cn-kaohsiung-stop-r23-to-r24",
@@ -1731,14 +2299,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r24",
       "from_station_id": "cn-kaohsiung-r23",
       "to_station_id": "cn-kaohsiung-r24",
-      "direction": "both",
-      "travel_time_seconds": 240,
+      "direction": "forward",
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 2.387,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 2.387
+    },
+    {
+      "id": "cn-kaohsiung-stop-r24-to-r23",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r24",
+      "to_stop_id": "cn-kaohsiung-stop-r23",
+      "from_station_id": "cn-kaohsiung-r24",
+      "to_station_id": "cn-kaohsiung-r23",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 2.387
     },
     {
       "id": "cn-kaohsiung-stop-r24-to-rk1",
@@ -1747,14 +2335,16 @@
       "to_stop_id": "cn-kaohsiung-stop-rk1",
       "from_station_id": "cn-kaohsiung-r24",
       "to_station_id": "cn-kaohsiung-rk1",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.346,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.346
     },
     {
       "id": "cn-kaohsiung-stop-r3-to-r4",
@@ -1763,14 +2353,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r4",
       "from_station_id": "cn-kaohsiung-r3",
       "to_station_id": "cn-kaohsiung-r4",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.403,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.403
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4-to-r3",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r4",
+      "to_stop_id": "cn-kaohsiung-stop-r3",
+      "from_station_id": "cn-kaohsiung-r4",
+      "to_station_id": "cn-kaohsiung-r3",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.403
     },
     {
       "id": "cn-kaohsiung-stop-r4-to-r4a",
@@ -1779,14 +2389,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r4a",
       "from_station_id": "cn-kaohsiung-r4",
       "to_station_id": "cn-kaohsiung-r4a",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.757,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.757
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4a-to-r4",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r4a",
+      "to_stop_id": "cn-kaohsiung-stop-r4",
+      "from_station_id": "cn-kaohsiung-r4a",
+      "to_station_id": "cn-kaohsiung-r4",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.757
     },
     {
       "id": "cn-kaohsiung-stop-r4a-to-r5",
@@ -1795,14 +2425,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r5",
       "from_station_id": "cn-kaohsiung-r4a",
       "to_station_id": "cn-kaohsiung-r5",
-      "direction": "both",
-      "travel_time_seconds": 180,
+      "direction": "forward",
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.134,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.134
+    },
+    {
+      "id": "cn-kaohsiung-stop-r5-to-r4a",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r5",
+      "to_stop_id": "cn-kaohsiung-stop-r4a",
+      "from_station_id": "cn-kaohsiung-r5",
+      "to_station_id": "cn-kaohsiung-r4a",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.134
     },
     {
       "id": "cn-kaohsiung-stop-r5-to-r6",
@@ -1811,14 +2461,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r6",
       "from_station_id": "cn-kaohsiung-r5",
       "to_station_id": "cn-kaohsiung-r6",
-      "direction": "both",
-      "travel_time_seconds": 180,
+      "direction": "forward",
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.174,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.174
+    },
+    {
+      "id": "cn-kaohsiung-stop-r6-to-r5",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r6",
+      "to_stop_id": "cn-kaohsiung-stop-r5",
+      "from_station_id": "cn-kaohsiung-r6",
+      "to_station_id": "cn-kaohsiung-r5",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.174
     },
     {
       "id": "cn-kaohsiung-stop-r6-to-r7",
@@ -1827,14 +2497,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r7",
       "from_station_id": "cn-kaohsiung-r6",
       "to_station_id": "cn-kaohsiung-r7",
-      "direction": "both",
-      "travel_time_seconds": 180,
+      "direction": "forward",
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.261,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.261
+    },
+    {
+      "id": "cn-kaohsiung-stop-r7-to-r6",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r7",
+      "to_stop_id": "cn-kaohsiung-stop-r6",
+      "from_station_id": "cn-kaohsiung-r7",
+      "to_station_id": "cn-kaohsiung-r6",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.261
     },
     {
       "id": "cn-kaohsiung-stop-r7-to-r8",
@@ -1843,14 +2533,34 @@
       "to_stop_id": "cn-kaohsiung-stop-r8",
       "from_station_id": "cn-kaohsiung-r7",
       "to_station_id": "cn-kaohsiung-r8",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.955,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.955
+    },
+    {
+      "id": "cn-kaohsiung-stop-r8-to-r7",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r8",
+      "to_stop_id": "cn-kaohsiung-stop-r7",
+      "from_station_id": "cn-kaohsiung-r8",
+      "to_station_id": "cn-kaohsiung-r7",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 0.955
     },
     {
       "id": "cn-kaohsiung-stop-r8-to-r9",
@@ -1859,14 +2569,16 @@
       "to_stop_id": "cn-kaohsiung-stop-r9",
       "from_station_id": "cn-kaohsiung-r8",
       "to_station_id": "cn-kaohsiung-r9",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 1.239,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 1.239
     },
     {
       "id": "cn-kaohsiung-stop-r9-to-r10",
@@ -1875,14 +2587,52 @@
       "to_stop_id": "cn-kaohsiung-stop-r10",
       "from_station_id": "cn-kaohsiung-r9",
       "to_station_id": "cn-kaohsiung-r10",
-      "direction": "both",
+      "direction": "forward",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "source_id": "krtc-planner",
-      "distance_km": 0.729,
       "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
         "distance_source": "haversine"
-      }
+      },
+      "distance_km": 0.729
+    },
+    {
+      "id": "cn-kaohsiung-stop-r9-to-r8",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r9",
+      "to_stop_id": "cn-kaohsiung-stop-r8",
+      "from_station_id": "cn-kaohsiung-r9",
+      "to_station_id": "cn-kaohsiung-r8",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.239
+    },
+    {
+      "id": "cn-kaohsiung-stop-rk1-to-r24",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-rk1",
+      "to_stop_id": "cn-kaohsiung-stop-r24",
+      "from_station_id": "cn-kaohsiung-rk1",
+      "to_station_id": "cn-kaohsiung-r24",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "extras": {
+        "planner_time_source": "krtc-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.346
     }
   ]
 }

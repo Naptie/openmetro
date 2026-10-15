@@ -36,7 +36,7 @@
     "default_transfer_seconds": 120,
     "max_transfer_seconds": 600
   },
-  "notes": "Automatically fetched from TMRT and Taichung open data; unique operator station codes supersede duplicated CSV codes. Directional segment running seconds exclude the separately published origin dwell time.",
+  "notes": "Automatically fetched from TMRT and Taichung open data. Segment times are derived from live terminal-to-station journey durations including intermediate dwell; all official journeys are checked within 60 seconds. Raw running/dwell CSV values are diagnostics, not routing weights.",
   "quality": {
     "topology": {
       "precision": "official",
@@ -69,12 +69,12 @@
       }
     },
     "segment_times": {
-      "precision": "official",
+      "precision": "derived",
       "coverage": 1,
-      "status": "complete",
+      "status": "derived",
       "counts": {
-        "official": 34,
-        "derived": 0,
+        "official": 0,
+        "derived": 34,
         "default": 0
       }
     },

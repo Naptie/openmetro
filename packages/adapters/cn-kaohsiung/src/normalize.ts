@@ -1,4 +1,6 @@
 import {
+  assertSimpleServiceCoverage,
+  deriveCumulativeTimes,
   deriveTransfers,
   entitySchemaUrl,
   type FareMatrixEncoded,
@@ -75,6 +77,7 @@ export function normalizeKaohsiung(input: KaohsiungSources) {
     mode: l.code === 'C' ? 'light_rail' : 'metro',
     status: 'operating',
     loop: l.code === 'C',
+    extras: { timetable_coverage: 'all_stop_directions' },
     source_ids: [{ source: 'krtc-stations', id: l.code }]
   }));
   const stops: StopEncoded[] = [];
@@ -123,19 +126,29 @@ export function normalizeKaohsiung(input: KaohsiungSources) {
       direction: both ? 'both' : 'forward',
       travel_time_seconds: seconds,
       travel_time_source: source,
-      source_id: source === 'source' ? 'krtc-lrt-travel-matrix' : 'krtc-planner'
+      source_id: source === 'source' ? 'krtc-lrt-travel-matrix' : 'krtc-planner',
+      ...(source === 'planner'
+        ? {
+            extras: {
+              planner_time_source: 'krtc-cumulative-difference',
+              journey_tolerance_seconds: 60
+            }
+          }
+        : {})
     });
   };
-  for (const line of input.lines.filter((l) => l.code !== 'C'))
-    for (let i = 0; i < line.stops.length - 1; i++) {
-      const a = line.stops[i]!;
-      const b = line.stops[i + 1]!;
-      const quote = input.quotes.find(
-        (q) => (q.from === a && q.to === b) || (q.from === b && q.to === a)
-      );
-      if (!quote) throw new Error(`No official KRTC adjacent quote ${a}/${b}`);
-      addEdge(a, b, quote.seconds, true, 'planner');
-    }
+  for (const line of input.lines.filter((l) => l.code !== 'C')) {
+    // Planner queries may name the shared station R10 or O5. Resolve its
+    // occurrence on this line without changing the physical fare identity.
+    const onLine = (code: string) => byCode.get(code)?.codes.find((c) => line.stops.includes(c));
+    const journeys = input.quotes.flatMap((q) => {
+      const from = onLine(q.from);
+      const to = onLine(q.to);
+      return from && to && from !== to ? [{ from, to, seconds: q.seconds }] : [];
+    });
+    for (const edge of deriveCumulativeTimes(line.stops, journeys, 60))
+      addEdge(edge.from, edge.to, edge.seconds, false, 'planner');
+  }
   for (const edge of input.lrtEdges) addEdge(edge.from, edge.to, edge.seconds, false, 'source');
   const lrt = input.lines.find((l) => l.code === 'C');
   if (!lrt || input.lrtEdges.length !== lrt.stops.length * 2)
@@ -179,9 +192,12 @@ export function normalizeKaohsiung(input: KaohsiungSources) {
       );
     }
   }
-  for (const stop of stops)
-    if (!timetables.some((t) => t.stop_id === stop.id))
-      throw new Error(`Missing timetable ${stop.id}`);
+  for (const line of input.lines)
+    assertSimpleServiceCoverage(
+      line.stops.map(stopId),
+      line.code === 'C',
+      timetables.filter((t) => t.line_id === lineId(line.code))
+    );
   const transfers: TransferEncoded[] = deriveTransfers(stations, stops, [], {
     crossStation: false
   }).map((t) => ({ ...t, walk_time_seconds: 120, source_id: 'krtc-routing-default' }));

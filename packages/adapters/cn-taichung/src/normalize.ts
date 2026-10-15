@@ -1,4 +1,6 @@
 import {
+  assertSimpleServiceCoverage,
+  deriveCumulativeTimes,
   entitySchemaUrl,
   type FareMatrixEncoded,
   type LineEncoded,
@@ -24,7 +26,8 @@ export interface TaichungSources {
   officialStations: OfficialStation[];
   stations: Row[];
   runtimes: Row[];
-  timetables: Row[];
+  serviceStations: (OfficialStation & Record<string, unknown>)[];
+  journeys: { StartSiteName: string; StopSiteName: string; SpendTime: number }[];
   fares: Row[];
 }
 
@@ -117,6 +120,7 @@ export function normalizeTaichung(input: TaichungSources) {
       mode: 'metro',
       status: 'operating',
       loop: false,
+      extras: { timetable_coverage: 'all_stop_directions' },
       source_ids: [{ source: 'tmrt-stations', id: 'G' }]
     }
   ];
@@ -141,6 +145,21 @@ export function normalizeTaichung(input: TaichungSources) {
       source_ids: [{ source: 'tmrt-stations', id: 'G' }]
     }
   ];
+  const journeys = input.journeys.map((q) => ({
+    from: station(q.StartSiteName).name!,
+    to: station(q.StopSiteName).name!,
+    seconds: q.SpendTime * 60
+  }));
+  if (
+    journeys.length !== stations.length * (stations.length - 1) ||
+    new Set(journeys.map((q) => JSON.stringify([q.from, q.to]))).size !== journeys.length
+  )
+    throw new Error('Incomplete/duplicate TMRT journey matrix');
+  const times = deriveCumulativeTimes(
+    stations.map((s) => s.name!),
+    journeys,
+    60
+  );
   const segments: SegmentEncoded[] = [];
   for (let i = 0; i < stations.length - 1; i++) {
     for (const [a, b] of [
@@ -158,35 +177,77 @@ export function normalizeTaichung(input: TaichungSources) {
         from_station_id: a.id,
         to_station_id: b.id,
         direction: 'forward',
-        travel_time_seconds: positive(runtime.站間行駛秒數, 'runtime'),
-        travel_time_source: 'source',
+        travel_time_seconds: times.find((t) => t.from === a.name && t.to === b.name)!.seconds,
+        travel_time_source: 'planner',
         distance_km: positive(fare.距離, 'distance'),
-        source_id: 'tmrt-runtimes',
-        extras: { origin_dwell_seconds: Number(runtime.起站停靠秒數) }
+        source_id: 'tmrt-officialStations',
+        extras: {
+          planner_time_source: 'tmrt-cumulative-difference',
+          journey_tolerance_seconds: 60,
+          published_running_seconds: positive(runtime.站間行駛秒數, 'runtime'),
+          origin_dwell_seconds: Number(runtime.起站停靠秒數),
+          runtime_updated_at: runtime.資料更新時間
+        }
       });
     }
   }
-  const timetables: TimetableEncoded[] = input.timetables.map((r) => {
-    const s = station(r.車站!);
-    const dest = station(r.行駛方向!);
-    if (!/^\d{2}:\d{2}$/.test(r.首班車!) || !/^\d{2}:\d{2}$/.test(r.末班車!))
-      throw new Error('Missing TMRT timetable');
-    return normalizeTimetableTimes({
-      id: `${s.id}-tt-${dest.id}`,
-      station_id: s.id,
-      stop_id: `${s.id}-g`,
-      line_id: lineId,
-      pattern_id: patterns[0]!.id,
-      destination_stop_id: `${dest.id}-g`,
-      direction_type: 'linear',
-      first_train: [r.首班車!],
-      last_train: [r.末班車!],
-      source_id: 'tmrt-timetables'
-    });
-  });
-  for (const s of stations)
-    if (!timetables.some((t) => t.station_id === s.id))
-      throw new Error(`No timetable for ${s.name}`);
+  const serviceById = new Map(input.serviceStations.map((s) => [s.ID, s]));
+  if (serviceById.size !== stations.length || input.serviceStations.length !== stations.length)
+    throw new Error('Incomplete/duplicate TMRT live service stations');
+  const hhmm = (value: unknown, label: string) => {
+    if (typeof value !== 'number' || !Number.isInteger(value) || value < 0 || value >= 1440)
+      throw new Error(`Invalid TMRT service ${label}`);
+    return `${String(Math.floor(value / 60)).padStart(2, '0')}:${String(value % 60).padStart(2, '0')}`;
+  };
+  const timetables: TimetableEncoded[] = [];
+  for (const [i, identity] of official.entries()) {
+    const row = serviceById.get(identity.ID);
+    if (
+      !row ||
+      row.SiteCode !== identity.SiteCode ||
+      row.SiteName.trim() !== identity.SiteName.trim()
+    )
+      throw new Error(`Missing/mismatched TMRT live service ${identity.ID}`);
+    for (const [destIndex, suffix] of [
+      [0, 'U'],
+      [stations.length - 1, '']
+    ] as const) {
+      if (i === destIndex) continue;
+      const s = stations[i]!;
+      const dest = stations[destIndex]!;
+      const week = (kind: 'First' | 'Last') =>
+        Array.from({ length: 7 }, (_, day) => {
+          const key = `${kind}${day < 5 ? 'Weekday' : 'Holiday'}Time${suffix}`;
+          const value = row[key];
+          if (kind === 'First' && value === 0)
+            throw new Error(`Missing TMRT departure direction ${s.id}`);
+          return hhmm(value, `${s.id}/${key}`);
+        });
+      timetables.push(
+        normalizeTimetableTimes({
+          id: `${s.id}-tt-${dest.id}`,
+          station_id: s.id,
+          stop_id: `${s.id}-g`,
+          line_id: lineId,
+          pattern_id: patterns[0]!.id,
+          destination_stop_id: `${dest.id}-g`,
+          direction_type: 'linear',
+          first_train: week('First'),
+          last_train: week('Last'),
+          source_id: 'tmrt-timetables',
+          extras: {
+            calendar_note:
+              'Official weekday/weekend times; public-holiday exceptions require operator notices.'
+          }
+        })
+      );
+    }
+  }
+  assertSimpleServiceCoverage(
+    stops.map((s) => s.id),
+    false,
+    timetables
+  );
   const stationIds = stations.map((s) => s.id).sort();
   const matrix: (number | null)[][] = stationIds.map((a) =>
     stationIds.map((b) => (a === b ? 0 : null))
@@ -226,7 +287,7 @@ export function normalizeTaichung(input: TaichungSources) {
     default_units: { distance: 'km', time: 's', speed: 'km/h' },
     routing: { weight: 'time', default_transfer_seconds: 120, max_transfer_seconds: 600 },
     notes:
-      'Automatically fetched from TMRT and Taichung open data; unique operator station codes supersede duplicated CSV codes. Directional segment running seconds exclude the separately published origin dwell time.'
+      'Automatically fetched from TMRT and Taichung open data. Segment times are derived from live terminal-to-station journey durations including intermediate dwell; all official journeys are checked within 60 seconds. Raw running/dwell CSV values are diagnostics, not routing weights.'
   };
   return { network, lines, stations, stops, patterns, segments, transfers: [], timetables, fares };
 }

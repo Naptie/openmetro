@@ -33,16 +33,22 @@ Sources and transformations:
   produce the wrong route.
 - Operator homepage planner `Home/GetMTRLRT` / `Home/GetLRTPriceTime`: use the
   live form's station values, not guessed names/codes. Fetch each within-system
-  station pair for full single-ticket fares. MRT adjacent travel times also
-  come from these quotes. Zero or missing results fail the sync. Quotes use a
+  station pair for full single-ticket fares. MRT edge times are differences of
+  terminal-to-station cumulative journey times, separately in each direction.
+  This avoids the 11-minute full-line inflation from summing rounded adjacent
+  queries. All fetched same-line journeys must agree within 60 seconds; these
+  inferred edge times are marked derived. Zero or missing results fail the sync. Quotes use a
   24-hour cache under ignored `tmp/cache/cn-kaohsiung/`; `sources.json` there
   records the last successfully acquired input for diagnostics. Delete the
-  scratch cache to force every planner request again.
+  scratch cache to force every planner request again, or set
+  `OPENMETRO_KAOHSIUNG_CACHE_DIR` to a new empty directory.
 - [Photon](https://photon.komoot.io/) / © OpenStreetMap contributors,
   [ODbL](https://www.openstreetmap.org/copyright): match railway POIs by exact
-  station name within Kaohsiung. Operator embedded-map centres are only search
-  hints: some are duplicated or mislabeled. WGS84 coordinates are marked as
-  derived, and geocoding failure aborts the sync.
+  station name within Kaohsiung, then verify each candidate using the OSM API:
+  official `ref`, `station=subway|light_rail`, operator/network and city bounds
+  must match. Prefixes such as 輕軌 are supported, so C18 resolves to light rail
+  rather than the adjacent TRA station. Embedded-map centres never establish
+  identity. WGS84 coordinates are marked derived; no match or ambiguity aborts.
 
 Distances are straight-line estimates. Same-station transfer time uses the
 network default; nearby metro/light-rail stops within 400 m receive estimated
@@ -55,3 +61,13 @@ than a guessed combined ticket. Topology-only syncs retain prior fares by statio
 identity and preserve their original source retrieval dates. Fares are opt-in
 in the existing CI workflow, so a newly added station's fares remain unknown
 until the next explicit fare harvest.
+
+Every stop must have exactly the expected departure directions and complete day
+types. Missing one direction, duplicated service or missing holiday cells abort
+before canonical writes. `data:verify` also enforces the lines' explicit
+`extras.timetable_coverage = all_stop_directions` contract.
+
+Run `bun run scripts/verify-taiwan-adapters.ts --fares` for a completely fresh
+temporary-cache acquisition of both cities, full fare coverage, whole-journey
+comparisons and missing-direction mutations. It prints the cache/report path
+and does not overwrite canonical data.

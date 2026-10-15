@@ -35,7 +35,9 @@ function sources(): KaohsiungSources {
     ],
     quotes: [
       { from: 'R3', to: 'R10', fare: 25, seconds: 600 },
+      { from: 'R10', to: 'R3', fare: 25, seconds: 600 },
       { from: 'O1', to: 'O5', fare: 20, seconds: 300 },
+      { from: 'O5', to: 'O1', fare: 20, seconds: 300 },
       { from: 'C1', to: 'C2', fare: 20, seconds: 120 }
     ],
     lrtEdges: [
@@ -49,6 +51,9 @@ function sources(): KaohsiungSources {
     timetables: ['R3', 'R10', 'O1', 'O5', 'C1', 'C2', 'C3'].map((code) => ({
       code,
       rows: [
+        ...(code.startsWith('C')
+          ? [{ direction: 'loop_inner' as const, first: ['06:00'], last: ['00:15'] }]
+          : []),
         {
           direction: code.startsWith('C') ? 'loop_outer' : 'linear',
           destination:
@@ -132,4 +137,43 @@ test('topology refresh rekeys old fares, keeps fresh quotes, and preserves retri
   expect(merged.fares[a]?.[b]).toBe(20);
   expect(merged.fares[a]?.[c]).toBe(40);
   expect(merged.source[0]?.retrieved_at).toBe('2026-09-01T00:00:00Z');
+});
+
+test('one missing ring direction is rejected even when other stations have both', () => {
+  const input = sources();
+  input.timetables.find((t) => t.code === 'C2')!.rows.pop();
+  expect(() => normalizeKaohsiung(input)).toThrow();
+});
+
+test('MRT edge weights difference cumulative journeys rather than sum rounded adjacent minutes', () => {
+  const input = sources();
+  input.stations.push({
+    ...input.stations[0]!,
+    key: 'R6',
+    codes: ['R6'],
+    zh: '中站',
+    en: 'Middle'
+  });
+  input.lines[0]!.stops = ['R3', 'R6', 'R10'];
+  input.quotes.push(
+    { from: 'R3', to: 'R6', fare: 20, seconds: 360 },
+    { from: 'R6', to: 'R3', fare: 20, seconds: 360 },
+    { from: 'R10', to: 'R6', fare: 20, seconds: 300 },
+    { from: 'R6', to: 'R10', fare: 20, seconds: 300 }
+  );
+  input.timetables.push({
+    code: 'R6',
+    rows: [
+      { direction: 'linear', destination: '南端', first: ['06:00'], last: ['00:15'] },
+      { direction: 'linear', destination: '交會站', first: ['06:00'], last: ['00:15'] }
+    ]
+  });
+  const result = normalizeKaohsiung(input);
+  const edge = result.segments.find(
+    (s) => s.from_stop_id.endsWith('-r6') && s.to_stop_id.endsWith('-r10')
+  );
+  expect(edge?.travel_time_seconds).toBe(240);
+  const missing = sources();
+  missing.timetables[0]!.rows.push({ ...missing.timetables[0]!.rows[0]! });
+  expect(() => normalizeKaohsiung(missing)).toThrow();
 });

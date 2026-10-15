@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-taichung",
-  "generated_at": "2026-10-15T09:25:23.671Z",
+  "generated_at": "2026-10-15T10:07:41.456Z",
   "source": [
     {
       "name": "tmrt-stations",
       "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=f9511cc5-4799-4df9-98b7-0b0f89fc2be9",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
       "license": "custom",
       "license_url": "https://data.gov.tw/license",
       "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
@@ -18,7 +18,7 @@
       "name": "tmrt-fares",
       "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=261c5b91-8f02-4c17-8a97-23c1384eced7",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
       "license": "custom",
       "license_url": "https://data.gov.tw/license",
       "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
@@ -28,7 +28,7 @@
       "name": "tmrt-runtimes",
       "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=4edec91c-05c8-4dee-9f93-7ab3cef20fc3",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
       "license": "custom",
       "license_url": "https://data.gov.tw/license",
       "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
@@ -36,22 +36,22 @@
     },
     {
       "name": "tmrt-timetables",
-      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=fabf5eb7-c161-4b77-bf7c-6c6449fe5a89",
+      "url": "https://www.tmrt.com.tw/metro-life/first-last-train",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
-      "license": "custom",
-      "license_url": "https://data.gov.tw/license",
-      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "臺中捷運股份有限公司；官方車站、現行首末班車及乘車時間。",
       "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
     },
     {
       "name": "tmrt-officialStations",
       "url": "https://www.tmrt.com.tw/metro-life/ride-time-and-fare",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
       "license": "unknown",
       "license_url": null,
-      "attribution": "臺中捷運股份有限公司；官方車站清單、站名、順序及識別碼。",
+      "attribution": "臺中捷運股份有限公司；官方車站、現行首末班車及乘車時間。",
       "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
     }
   ],
@@ -64,12 +64,16 @@
       "from_station_id": "cn-taichung-103",
       "to_station_id": "cn-taichung-103a",
       "direction": "forward",
-      "travel_time_seconds": 127,
-      "travel_time_source": "source",
+      "travel_time_seconds": 150,
+      "travel_time_source": "planner",
       "distance_km": 1.027,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 127,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -80,12 +84,16 @@
       "from_station_id": "cn-taichung-103",
       "to_station_id": "cn-taichung-104",
       "direction": "forward",
-      "travel_time_seconds": 80,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.678,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 80,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -96,12 +104,16 @@
       "from_station_id": "cn-taichung-103a",
       "to_station_id": "cn-taichung-103",
       "direction": "forward",
-      "travel_time_seconds": 124,
-      "travel_time_source": "source",
+      "travel_time_seconds": 150,
+      "travel_time_source": "planner",
       "distance_km": 1.027,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 0
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 124,
+        "origin_dwell_seconds": 0,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -112,12 +124,16 @@
       "from_station_id": "cn-taichung-104",
       "to_station_id": "cn-taichung-103",
       "direction": "forward",
-      "travel_time_seconds": 80,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.678,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 80,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -128,12 +144,16 @@
       "from_station_id": "cn-taichung-104",
       "to_station_id": "cn-taichung-105",
       "direction": "forward",
-      "travel_time_seconds": 160,
-      "travel_time_source": "source",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.652,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 160,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -144,12 +164,16 @@
       "from_station_id": "cn-taichung-105",
       "to_station_id": "cn-taichung-104",
       "direction": "forward",
-      "travel_time_seconds": 153,
-      "travel_time_source": "source",
+      "travel_time_seconds": 210,
+      "travel_time_source": "planner",
       "distance_km": 1.652,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 153,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -160,12 +184,16 @@
       "from_station_id": "cn-taichung-105",
       "to_station_id": "cn-taichung-106",
       "direction": "forward",
-      "travel_time_seconds": 82,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.863,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 82,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -176,12 +204,16 @@
       "from_station_id": "cn-taichung-106",
       "to_station_id": "cn-taichung-105",
       "direction": "forward",
-      "travel_time_seconds": 81,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.863,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 81,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -192,12 +224,16 @@
       "from_station_id": "cn-taichung-106",
       "to_station_id": "cn-taichung-107",
       "direction": "forward",
-      "travel_time_seconds": 114,
-      "travel_time_source": "source",
+      "travel_time_seconds": 150,
+      "travel_time_source": "planner",
       "distance_km": 1.472,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 114,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -208,12 +244,16 @@
       "from_station_id": "cn-taichung-107",
       "to_station_id": "cn-taichung-106",
       "direction": "forward",
-      "travel_time_seconds": 111,
-      "travel_time_source": "source",
+      "travel_time_seconds": 150,
+      "travel_time_source": "planner",
       "distance_km": 1.472,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 111,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -224,12 +264,16 @@
       "from_station_id": "cn-taichung-107",
       "to_station_id": "cn-taichung-108",
       "direction": "forward",
-      "travel_time_seconds": 92,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.063,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 92,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -240,12 +284,16 @@
       "from_station_id": "cn-taichung-108",
       "to_station_id": "cn-taichung-107",
       "direction": "forward",
-      "travel_time_seconds": 92,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.063,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 92,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -256,12 +304,16 @@
       "from_station_id": "cn-taichung-108",
       "to_station_id": "cn-taichung-109",
       "direction": "forward",
-      "travel_time_seconds": 79,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.816,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 79,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -272,12 +324,16 @@
       "from_station_id": "cn-taichung-109",
       "to_station_id": "cn-taichung-108",
       "direction": "forward",
-      "travel_time_seconds": 78,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.816,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 78,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -288,12 +344,16 @@
       "from_station_id": "cn-taichung-109",
       "to_station_id": "cn-taichung-110",
       "direction": "forward",
-      "travel_time_seconds": 78,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.804,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 78,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -304,12 +364,16 @@
       "from_station_id": "cn-taichung-110",
       "to_station_id": "cn-taichung-109",
       "direction": "forward",
-      "travel_time_seconds": 78,
-      "travel_time_source": "source",
+      "travel_time_seconds": 150,
+      "travel_time_source": "planner",
       "distance_km": 0.804,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 40
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 78,
+        "origin_dwell_seconds": 40,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -320,12 +384,16 @@
       "from_station_id": "cn-taichung-110",
       "to_station_id": "cn-taichung-111",
       "direction": "forward",
-      "travel_time_seconds": 112,
-      "travel_time_source": "source",
+      "travel_time_seconds": 150,
+      "travel_time_source": "planner",
       "distance_km": 1.02,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 40
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 112,
+        "origin_dwell_seconds": 40,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -336,12 +404,16 @@
       "from_station_id": "cn-taichung-111",
       "to_station_id": "cn-taichung-110",
       "direction": "forward",
-      "travel_time_seconds": 108,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.02,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 108,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -352,12 +424,16 @@
       "from_station_id": "cn-taichung-111",
       "to_station_id": "cn-taichung-112",
       "direction": "forward",
-      "travel_time_seconds": 81,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.856,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 81,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -368,12 +444,16 @@
       "from_station_id": "cn-taichung-112",
       "to_station_id": "cn-taichung-111",
       "direction": "forward",
-      "travel_time_seconds": 80,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.856,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 80,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -384,12 +464,16 @@
       "from_station_id": "cn-taichung-112",
       "to_station_id": "cn-taichung-113",
       "direction": "forward",
-      "travel_time_seconds": 64,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.541,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 64,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -400,12 +484,16 @@
       "from_station_id": "cn-taichung-113",
       "to_station_id": "cn-taichung-112",
       "direction": "forward",
-      "travel_time_seconds": 63,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.541,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 63,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -416,12 +504,16 @@
       "from_station_id": "cn-taichung-113",
       "to_station_id": "cn-taichung-114",
       "direction": "forward",
-      "travel_time_seconds": 83,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.878,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 83,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -432,12 +524,16 @@
       "from_station_id": "cn-taichung-114",
       "to_station_id": "cn-taichung-113",
       "direction": "forward",
-      "travel_time_seconds": 82,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.878,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 82,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -448,12 +544,16 @@
       "from_station_id": "cn-taichung-114",
       "to_station_id": "cn-taichung-115",
       "direction": "forward",
-      "travel_time_seconds": 157,
-      "travel_time_source": "source",
+      "travel_time_seconds": 210,
+      "travel_time_source": "planner",
       "distance_km": 1.607,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 157,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -464,12 +564,16 @@
       "from_station_id": "cn-taichung-115",
       "to_station_id": "cn-taichung-114",
       "direction": "forward",
-      "travel_time_seconds": 155,
-      "travel_time_source": "source",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.607,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 155,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -480,12 +584,16 @@
       "from_station_id": "cn-taichung-115",
       "to_station_id": "cn-taichung-116",
       "direction": "forward",
-      "travel_time_seconds": 86,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.921,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 30
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 86,
+        "origin_dwell_seconds": 30,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -496,12 +604,16 @@
       "from_station_id": "cn-taichung-116",
       "to_station_id": "cn-taichung-115",
       "direction": "forward",
-      "travel_time_seconds": 85,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.921,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 20
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 85,
+        "origin_dwell_seconds": 20,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -512,12 +624,16 @@
       "from_station_id": "cn-taichung-116",
       "to_station_id": "cn-taichung-117",
       "direction": "forward",
-      "travel_time_seconds": 72,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.69,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 20
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 72,
+        "origin_dwell_seconds": 20,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -528,12 +644,16 @@
       "from_station_id": "cn-taichung-117",
       "to_station_id": "cn-taichung-116",
       "direction": "forward",
-      "travel_time_seconds": 71,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 0.69,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 71,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -544,12 +664,16 @@
       "from_station_id": "cn-taichung-117",
       "to_station_id": "cn-taichung-118",
       "direction": "forward",
-      "travel_time_seconds": 91,
-      "travel_time_source": "source",
+      "travel_time_seconds": 90,
+      "travel_time_source": "planner",
       "distance_km": 1.032,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 91,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -560,12 +684,16 @@
       "from_station_id": "cn-taichung-118",
       "to_station_id": "cn-taichung-117",
       "direction": "forward",
-      "travel_time_seconds": 90,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.032,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 90,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -576,12 +704,16 @@
       "from_station_id": "cn-taichung-118",
       "to_station_id": "cn-taichung-119",
       "direction": "forward",
-      "travel_time_seconds": 117,
-      "travel_time_source": "source",
+      "travel_time_seconds": 150,
+      "travel_time_source": "planner",
       "distance_km": 1.066,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 25
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 117,
+        "origin_dwell_seconds": 25,
+        "runtime_updated_at": "20230726"
       }
     },
     {
@@ -592,12 +724,16 @@
       "from_station_id": "cn-taichung-119",
       "to_station_id": "cn-taichung-118",
       "direction": "forward",
-      "travel_time_seconds": 109,
-      "travel_time_source": "source",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.066,
-      "source_id": "tmrt-runtimes",
+      "source_id": "tmrt-officialStations",
       "extras": {
-        "origin_dwell_seconds": 0
+        "planner_time_source": "tmrt-cumulative-difference",
+        "journey_tolerance_seconds": 60,
+        "published_running_seconds": 109,
+        "origin_dwell_seconds": 0,
+        "runtime_updated_at": "20230726"
       }
     }
   ]

@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/timetables.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-taichung",
-  "generated_at": "2026-10-15T09:25:23.671Z",
+  "generated_at": "2026-10-15T10:07:41.456Z",
   "source": [
     {
       "name": "tmrt-stations",
       "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=f9511cc5-4799-4df9-98b7-0b0f89fc2be9",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
       "license": "custom",
       "license_url": "https://data.gov.tw/license",
       "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
@@ -18,7 +18,7 @@
       "name": "tmrt-fares",
       "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=261c5b91-8f02-4c17-8a97-23c1384eced7",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
       "license": "custom",
       "license_url": "https://data.gov.tw/license",
       "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
@@ -28,7 +28,7 @@
       "name": "tmrt-runtimes",
       "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=4edec91c-05c8-4dee-9f93-7ab3cef20fc3",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
       "license": "custom",
       "license_url": "https://data.gov.tw/license",
       "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
@@ -36,22 +36,22 @@
     },
     {
       "name": "tmrt-timetables",
-      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=fabf5eb7-c161-4b77-bf7c-6c6449fe5a89",
+      "url": "https://www.tmrt.com.tw/metro-life/first-last-train",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
-      "license": "custom",
-      "license_url": "https://data.gov.tw/license",
-      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "臺中捷運股份有限公司；官方車站、現行首末班車及乘車時間。",
       "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
     },
     {
       "name": "tmrt-officialStations",
       "url": "https://www.tmrt.com.tw/metro-life/ride-time-and-fare",
       "version": "live",
-      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
       "license": "unknown",
       "license_url": null,
-      "attribution": "臺中捷運股份有限公司；官方車站清單、站名、順序及識別碼。",
+      "attribution": "臺中捷運股份有限公司；官方車站、現行首末班車及乘車時間。",
       "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
     }
   ],
@@ -65,12 +65,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
         "06:04"
       ],
       "last_train": [
+        "24:47",
+        "24:47",
+        "24:47",
+        "24:47",
+        "24:47",
+        "24:47",
         "24:47"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-103-tt-cn-taichung-119",
@@ -81,12 +96,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
         "06:02"
       ],
       "last_train": [
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
         "24:02"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-103a-tt-cn-taichung-119",
@@ -97,12 +127,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
         "06:00"
       ],
       "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
         "24:00"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-104-tt-cn-taichung-103a",
@@ -113,12 +158,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
-        "06:03"
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02"
       ],
       "last_train": [
-        "24:46"
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-104-tt-cn-taichung-119",
@@ -129,12 +189,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
         "06:04"
       ],
       "last_train": [
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
         "24:04"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-105-tt-cn-taichung-103a",
@@ -145,12 +220,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
         "06:00"
       ],
       "last_train": [
-        "24:43"
+        "24:42",
+        "24:42",
+        "24:42",
+        "24:42",
+        "24:42",
+        "24:42",
+        "24:42"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-105-tt-cn-taichung-119",
@@ -161,12 +251,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
         "06:00"
       ],
       "last_train": [
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
         "24:07"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-106-tt-cn-taichung-103a",
@@ -177,12 +282,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
         "06:07"
       ],
       "last_train": [
-        "24:41"
+        "24:40",
+        "24:40",
+        "24:40",
+        "24:40",
+        "24:40",
+        "24:40",
+        "24:40"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-106-tt-cn-taichung-119",
@@ -193,12 +313,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
         "06:01"
       ],
       "last_train": [
+        "24:09",
+        "24:09",
+        "24:09",
+        "24:09",
+        "24:09",
+        "24:09",
         "24:09"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-107-tt-cn-taichung-103a",
@@ -209,12 +344,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
         "06:05"
       ],
       "last_train": [
-        "24:39"
+        "24:38",
+        "24:38",
+        "24:38",
+        "24:38",
+        "24:38",
+        "24:38",
+        "24:38"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-107-tt-cn-taichung-119",
@@ -225,12 +375,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
         "06:04"
       ],
       "last_train": [
+        "24:11",
+        "24:11",
+        "24:11",
+        "24:11",
+        "24:11",
+        "24:11",
         "24:11"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-108-tt-cn-taichung-103a",
@@ -241,12 +406,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
         "06:03"
       ],
       "last_train": [
+        "24:36",
+        "24:36",
+        "24:36",
+        "24:36",
+        "24:36",
+        "24:36",
         "24:36"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-108-tt-cn-taichung-119",
@@ -257,12 +437,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
         "06:06"
       ],
       "last_train": [
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
         "24:13"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-109-tt-cn-taichung-103a",
@@ -273,12 +468,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
         "06:01"
       ],
       "last_train": [
-        "24:35"
+        "24:34",
+        "24:34",
+        "24:34",
+        "24:34",
+        "24:34",
+        "24:34",
+        "24:34"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-109-tt-cn-taichung-119",
@@ -289,12 +499,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
         "06:07"
       ],
       "last_train": [
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
         "24:15"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-110-tt-cn-taichung-103a",
@@ -305,12 +530,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
         "06:00"
       ],
       "last_train": [
+        "24:33",
+        "24:33",
+        "24:33",
+        "24:33",
+        "24:33",
+        "24:33",
         "24:33"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-110-tt-cn-taichung-119",
@@ -321,12 +561,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
         "06:00"
       ],
       "last_train": [
+        "24:17",
+        "24:17",
+        "24:17",
+        "24:17",
+        "24:17",
+        "24:17",
         "24:17"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-111-tt-cn-taichung-103a",
@@ -337,12 +592,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
         "06:08"
       ],
       "last_train": [
-        "24:31"
+        "24:30",
+        "24:30",
+        "24:30",
+        "24:30",
+        "24:30",
+        "24:30",
+        "24:30"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-111-tt-cn-taichung-119",
@@ -353,12 +623,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
         "06:02"
       ],
       "last_train": [
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
         "24:19"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-112-tt-cn-taichung-103a",
@@ -369,12 +654,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
         "06:06"
       ],
       "last_train": [
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
         "24:29"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-112-tt-cn-taichung-119",
@@ -385,12 +685,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
         "06:04"
       ],
       "last_train": [
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
         "24:21"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-113-tt-cn-taichung-103a",
@@ -401,12 +716,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
         "06:04"
       ],
       "last_train": [
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
         "24:27"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-113-tt-cn-taichung-119",
@@ -417,12 +747,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
         "06:05"
       ],
       "last_train": [
-        "24:23"
+        "24:22",
+        "24:22",
+        "24:22",
+        "24:22",
+        "24:22",
+        "24:22",
+        "24:22"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-114-tt-cn-taichung-103a",
@@ -433,12 +778,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
         "06:03"
       ],
       "last_train": [
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
         "24:25"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-114-tt-cn-taichung-119",
@@ -449,12 +809,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
         "06:07"
       ],
       "last_train": [
-        "24:25"
+        "24:24",
+        "24:24",
+        "24:24",
+        "24:24",
+        "24:24",
+        "24:24",
+        "24:24"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-115-tt-cn-taichung-103a",
@@ -465,12 +840,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
         "06:00"
       ],
       "last_train": [
+        "24:22",
+        "24:22",
+        "24:22",
+        "24:22",
+        "24:22",
+        "24:22",
         "24:22"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-115-tt-cn-taichung-119",
@@ -481,12 +871,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
         "06:00"
       ],
       "last_train": [
-        "24:28"
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-116-tt-cn-taichung-103a",
@@ -497,12 +902,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
         "06:05"
       ],
       "last_train": [
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
         "24:20"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-116-tt-cn-taichung-119",
@@ -513,12 +933,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
         "06:01"
       ],
       "last_train": [
-        "24:30"
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-117-tt-cn-taichung-103a",
@@ -529,12 +964,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
         "06:04"
       ],
       "last_train": [
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
         "24:19"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-117-tt-cn-taichung-119",
@@ -545,12 +995,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
         "06:03"
       ],
       "last_train": [
-        "24:31"
+        "24:30",
+        "24:30",
+        "24:30",
+        "24:30",
+        "24:30",
+        "24:30",
+        "24:30"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-118-tt-cn-taichung-103a",
@@ -561,12 +1026,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
         "06:02"
       ],
       "last_train": [
+        "24:17",
+        "24:17",
+        "24:17",
+        "24:17",
+        "24:17",
+        "24:17",
         "24:17"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-118-tt-cn-taichung-119",
@@ -577,12 +1057,27 @@
       "destination_stop_id": "cn-taichung-119-g",
       "direction_type": "linear",
       "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
         "06:05"
       ],
       "last_train": [
-        "24:33"
+        "24:32",
+        "24:32",
+        "24:32",
+        "24:32",
+        "24:32",
+        "24:32",
+        "24:32"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     },
     {
       "id": "cn-taichung-119-tt-cn-taichung-103a",
@@ -593,12 +1088,27 @@
       "destination_stop_id": "cn-taichung-103a-g",
       "direction_type": "linear",
       "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
         "06:00"
       ],
       "last_train": [
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
         "24:15"
       ],
-      "source_id": "tmrt-timetables"
+      "source_id": "tmrt-timetables",
+      "extras": {
+        "calendar_note": "Official weekday/weekend times; public-holiday exceptions require operator notices."
+      }
     }
   ]
 }
