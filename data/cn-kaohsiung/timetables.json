@@ -1,0 +1,4954 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/timetables.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-kaohsiung",
+  "generated_at": "2026-10-15T09:27:06.855Z",
+  "source": [
+    {
+      "name": "krtc-stations",
+      "url": "https://www.krtc.com.tw/Guide/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-stations",
+      "url": "https://www.krtc.com.tw/KLRT/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-timetables",
+      "url": "https://www.krtc.com.tw/Guide/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-timetables",
+      "url": "https://www.krtc.com.tw/KLRT/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-travel-matrix",
+      "url": "https://www.krtc.com.tw/KLRT/time_between_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-planner",
+      "url": "https://www.krtc.com.tw",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "photon-osm",
+      "url": "https://photon.komoot.io/api/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "OSM rail POIs matched automatically by name and city; coordinates are derived."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-kaohsiung-stop-c1-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c1",
+      "stop_id": "cn-kaohsiung-stop-c1",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C1",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "22:35",
+        "22:35",
+        "22:35",
+        "22:35",
+        "22:35",
+        "22:30",
+        "22:30"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c1-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c1",
+      "stop_id": "cn-kaohsiung-stop-c1",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C1",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "22:35",
+        "22:35",
+        "22:35",
+        "22:35",
+        "22:35",
+        "22:35",
+        "22:35"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c10-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c10",
+      "stop_id": "cn-kaohsiung-stop-c10",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C10",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:42",
+        "23:42",
+        "23:42",
+        "23:42",
+        "23:42",
+        "23:37",
+        "23:37"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c10-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c10",
+      "stop_id": "cn-kaohsiung-stop-c10",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C10",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "22:56",
+        "22:56",
+        "22:56",
+        "22:56",
+        "22:56",
+        "22:56",
+        "22:56"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c11-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c11",
+      "stop_id": "cn-kaohsiung-stop-c11",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C11",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:35",
+        "23:35"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c11-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c11",
+      "stop_id": "cn-kaohsiung-stop-c11",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C11",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "22:58",
+        "22:58",
+        "22:58",
+        "22:58",
+        "22:58",
+        "22:58",
+        "22:58"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c12-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c12",
+      "stop_id": "cn-kaohsiung-stop-c12",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C12",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:33",
+        "23:33"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c12-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c12",
+      "stop_id": "cn-kaohsiung-stop-c12",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C12",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c13-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c13",
+      "stop_id": "cn-kaohsiung-stop-c13",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C13",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:36",
+        "23:36",
+        "23:36",
+        "23:36",
+        "23:36",
+        "23:31",
+        "23:31"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c13-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c13",
+      "stop_id": "cn-kaohsiung-stop-c13",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C13",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:42",
+        "06:42"
+      ],
+      "last_train": [
+        "23:02",
+        "23:02",
+        "23:02",
+        "23:02",
+        "23:02",
+        "23:02",
+        "23:02"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c14-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c14",
+      "stop_id": "cn-kaohsiung-stop-c14",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C14",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:33",
+        "23:33",
+        "23:33",
+        "23:33",
+        "23:33",
+        "23:28",
+        "23:28"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c14-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c14",
+      "stop_id": "cn-kaohsiung-stop-c14",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C14",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:05",
+        "23:05",
+        "23:05",
+        "23:05",
+        "23:05",
+        "23:05",
+        "23:05"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c15-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c15",
+      "stop_id": "cn-kaohsiung-stop-c15",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C15",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:42",
+        "06:42"
+      ],
+      "last_train": [
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:26",
+        "23:26"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c15-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c15",
+      "stop_id": "cn-kaohsiung-stop-c15",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C15",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:07",
+        "23:07",
+        "23:07",
+        "23:07",
+        "23:07",
+        "23:07",
+        "23:07"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c16-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c16",
+      "stop_id": "cn-kaohsiung-stop-c16",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C16",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:25",
+        "23:25"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c16-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c16",
+      "stop_id": "cn-kaohsiung-stop-c16",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C16",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:08",
+        "23:08",
+        "23:08",
+        "23:08",
+        "23:08",
+        "23:08",
+        "23:08"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c17-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c17",
+      "stop_id": "cn-kaohsiung-stop-c17",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C17",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:27",
+        "23:27",
+        "23:27",
+        "23:27",
+        "23:27",
+        "23:22",
+        "23:22"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c17-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c17",
+      "stop_id": "cn-kaohsiung-stop-c17",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C17",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:11",
+        "23:11",
+        "23:11",
+        "23:11",
+        "23:11",
+        "23:11",
+        "23:11"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c18-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c18",
+      "stop_id": "cn-kaohsiung-stop-c18",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C18",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:20",
+        "23:20"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c18-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c18",
+      "stop_id": "cn-kaohsiung-stop-c18",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C18",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:13",
+        "23:13",
+        "23:13",
+        "23:13",
+        "23:13",
+        "23:13",
+        "23:13"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c19-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c19",
+      "stop_id": "cn-kaohsiung-stop-c19",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C19",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:18",
+        "23:18"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c19-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c19",
+      "stop_id": "cn-kaohsiung-stop-c19",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C19",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "23:16",
+        "23:16",
+        "23:16",
+        "23:16",
+        "23:16",
+        "23:16",
+        "23:16"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c2-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c2",
+      "stop_id": "cn-kaohsiung-stop-c2",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C2",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "23:55",
+        "23:55"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c2-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c2",
+      "stop_id": "cn-kaohsiung-stop-c2",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C2",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "22:37",
+        "22:37",
+        "22:37",
+        "22:37",
+        "22:37",
+        "22:37",
+        "22:37"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c20-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c20",
+      "stop_id": "cn-kaohsiung-stop-c20",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C20",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:20",
+        "23:20",
+        "23:20",
+        "23:20",
+        "23:20",
+        "23:15",
+        "23:15"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c20-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c20",
+      "stop_id": "cn-kaohsiung-stop-c20",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C20",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:42",
+        "06:42"
+      ],
+      "last_train": [
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c21",
+      "stop_id": "cn-kaohsiung-stop-c21",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C21",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:43",
+        "06:43"
+      ],
+      "last_train": [
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:12",
+        "23:12"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c21",
+      "stop_id": "cn-kaohsiung-stop-c21",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C21",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:31",
+        "06:31"
+      ],
+      "last_train": [
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21a-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c21a",
+      "stop_id": "cn-kaohsiung-stop-c21a",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C21A",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:18",
+        "23:18",
+        "23:18",
+        "23:18",
+        "23:18",
+        "23:13",
+        "23:13"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21a-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c21a",
+      "stop_id": "cn-kaohsiung-stop-c21a",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C21A",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c22-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c22",
+      "stop_id": "cn-kaohsiung-stop-c22",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C22",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:10",
+        "23:10"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c22-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c22",
+      "stop_id": "cn-kaohsiung-stop-c22",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C22",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c23-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c23",
+      "stop_id": "cn-kaohsiung-stop-c23",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C23",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:07",
+        "23:07"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c23-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c23",
+      "stop_id": "cn-kaohsiung-stop-c23",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C23",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c24-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c24",
+      "stop_id": "cn-kaohsiung-stop-c24",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C24",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:04",
+        "23:04"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c24-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c24",
+      "stop_id": "cn-kaohsiung-stop-c24",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C24",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c25-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c25",
+      "stop_id": "cn-kaohsiung-stop-c25",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C25",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:06",
+        "23:06",
+        "23:06",
+        "23:06",
+        "23:06",
+        "23:01",
+        "23:01"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c25-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c25",
+      "stop_id": "cn-kaohsiung-stop-c25",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C25",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c26-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c26",
+      "stop_id": "cn-kaohsiung-stop-c26",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C26",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03",
+        "22:58",
+        "22:58"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c26-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c26",
+      "stop_id": "cn-kaohsiung-stop-c26",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C26",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c27-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c27",
+      "stop_id": "cn-kaohsiung-stop-c27",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C27",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:43",
+        "06:43"
+      ],
+      "last_train": [
+        "23:01",
+        "23:01",
+        "23:01",
+        "23:01",
+        "23:01",
+        "22:56",
+        "22:56"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c27-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c27",
+      "stop_id": "cn-kaohsiung-stop-c27",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C27",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31"
+      ],
+      "last_train": [
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c28-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c28",
+      "stop_id": "cn-kaohsiung-stop-c28",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C28",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "22:58",
+        "22:58",
+        "22:58",
+        "22:58",
+        "22:58",
+        "22:53",
+        "22:53"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c28-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c28",
+      "stop_id": "cn-kaohsiung-stop-c28",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C28",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c29-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c29",
+      "stop_id": "cn-kaohsiung-stop-c29",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C29",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "22:55",
+        "22:55",
+        "22:55",
+        "22:55",
+        "22:55",
+        "22:50",
+        "22:50"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c29-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c29",
+      "stop_id": "cn-kaohsiung-stop-c29",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C29",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:41",
+        "23:41",
+        "23:41",
+        "23:41",
+        "23:41",
+        "23:41",
+        "23:41"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c3-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c3",
+      "stop_id": "cn-kaohsiung-stop-c3",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C3",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:44",
+        "06:44",
+        "06:44",
+        "06:44",
+        "06:44",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:53",
+        "23:53"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c3-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c3",
+      "stop_id": "cn-kaohsiung-stop-c3",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C3",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35"
+      ],
+      "last_train": [
+        "22:40",
+        "22:40",
+        "22:40",
+        "22:40",
+        "22:40",
+        "22:40",
+        "22:40"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c30-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c30",
+      "stop_id": "cn-kaohsiung-stop-c30",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C30",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "22:52",
+        "22:52",
+        "22:52",
+        "22:52",
+        "22:52",
+        "22:47",
+        "22:47"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c30-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c30",
+      "stop_id": "cn-kaohsiung-stop-c30",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C30",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "23:44",
+        "23:44",
+        "23:44",
+        "23:44",
+        "23:44",
+        "23:44",
+        "23:44"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c31-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c31",
+      "stop_id": "cn-kaohsiung-stop-c31",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C31",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "22:50",
+        "22:50",
+        "22:50",
+        "22:50",
+        "22:50",
+        "22:45",
+        "22:45"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c31-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c31",
+      "stop_id": "cn-kaohsiung-stop-c31",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C31",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43"
+      ],
+      "last_train": [
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c32-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c32",
+      "stop_id": "cn-kaohsiung-stop-c32",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C32",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "22:48",
+        "22:48",
+        "22:48",
+        "22:48",
+        "22:48",
+        "22:43",
+        "22:43"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c32-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c32",
+      "stop_id": "cn-kaohsiung-stop-c32",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C32",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c33-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c33",
+      "stop_id": "cn-kaohsiung-stop-c33",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C33",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "22:45",
+        "22:45",
+        "22:45",
+        "22:45",
+        "22:45",
+        "22:40",
+        "22:40"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c33-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c33",
+      "stop_id": "cn-kaohsiung-stop-c33",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C33",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:48",
+        "06:48",
+        "06:48",
+        "06:48",
+        "06:48",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:52",
+        "23:52",
+        "23:52",
+        "23:52",
+        "23:52",
+        "23:52",
+        "23:52"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c34-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c34",
+      "stop_id": "cn-kaohsiung-stop-c34",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C34",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "22:43",
+        "22:43",
+        "22:43",
+        "22:43",
+        "22:43",
+        "22:38",
+        "22:38"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c34-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c34",
+      "stop_id": "cn-kaohsiung-stop-c34",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C34",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c35-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c35",
+      "stop_id": "cn-kaohsiung-stop-c35",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C35",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "22:41",
+        "22:41",
+        "22:41",
+        "22:41",
+        "22:41",
+        "22:36",
+        "22:36"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c35-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c35",
+      "stop_id": "cn-kaohsiung-stop-c35",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C35",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:56",
+        "23:56",
+        "23:56",
+        "23:56",
+        "23:56",
+        "23:56",
+        "23:56"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c36-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c36",
+      "stop_id": "cn-kaohsiung-stop-c36",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C36",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "22:39",
+        "22:39",
+        "22:39",
+        "22:39",
+        "22:39",
+        "22:34",
+        "22:34"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c36-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c36",
+      "stop_id": "cn-kaohsiung-stop-c36",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C36",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c37-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c37",
+      "stop_id": "cn-kaohsiung-stop-c37",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C37",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "22:37",
+        "22:37",
+        "22:37",
+        "22:37",
+        "22:37",
+        "22:32",
+        "22:32"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c37-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c37",
+      "stop_id": "cn-kaohsiung-stop-c37",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C37",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c4-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c4",
+      "stop_id": "cn-kaohsiung-stop-c4",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C4",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:42",
+        "06:42",
+        "06:42",
+        "06:42",
+        "06:42",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:56",
+        "23:56",
+        "23:56",
+        "23:56",
+        "23:56",
+        "23:51",
+        "23:51"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c4-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c4",
+      "stop_id": "cn-kaohsiung-stop-c4",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C4",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "22:42",
+        "22:42",
+        "22:42",
+        "22:42",
+        "22:42",
+        "22:42",
+        "22:42"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c5-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c5",
+      "stop_id": "cn-kaohsiung-stop-c5",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C5",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:35",
+        "06:35"
+      ],
+      "last_train": [
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:49",
+        "23:49"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c5-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c5",
+      "stop_id": "cn-kaohsiung-stop-c5",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C5",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "22:44",
+        "22:44",
+        "22:44",
+        "22:44",
+        "22:44",
+        "22:44",
+        "22:44"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c6-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c6",
+      "stop_id": "cn-kaohsiung-stop-c6",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C6",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:52",
+        "23:52",
+        "23:52",
+        "23:52",
+        "23:52",
+        "23:47",
+        "23:47"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c6-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c6",
+      "stop_id": "cn-kaohsiung-stop-c6",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C6",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "22:46",
+        "22:46",
+        "22:46",
+        "22:46",
+        "22:46",
+        "22:46",
+        "22:46"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c7-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c7",
+      "stop_id": "cn-kaohsiung-stop-c7",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C7",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:49",
+        "23:49",
+        "23:49",
+        "23:49",
+        "23:49",
+        "23:44",
+        "23:44"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c7-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c7",
+      "stop_id": "cn-kaohsiung-stop-c7",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C7",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "22:49",
+        "22:49",
+        "22:49",
+        "22:49",
+        "22:49",
+        "22:49",
+        "22:49"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c8-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c8",
+      "stop_id": "cn-kaohsiung-stop-c8",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C8",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:43",
+        "06:43"
+      ],
+      "last_train": [
+        "23:46",
+        "23:46",
+        "23:46",
+        "23:46",
+        "23:46",
+        "23:41",
+        "23:41"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c8-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c8",
+      "stop_id": "cn-kaohsiung-stop-c8",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C8",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "22:51",
+        "22:51",
+        "22:51",
+        "22:51",
+        "22:51",
+        "22:51",
+        "22:51"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c9-tt-loop_inner",
+      "station_id": "cn-kaohsiung-c9",
+      "stop_id": "cn-kaohsiung-stop-c9",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C9",
+      "direction_type": "loop_inner",
+      "direction_label": "逆行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "23:44",
+        "23:44",
+        "23:44",
+        "23:44",
+        "23:44",
+        "23:39",
+        "23:39"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c9-tt-loop_outer",
+      "station_id": "cn-kaohsiung-c9",
+      "stop_id": "cn-kaohsiung-stop-c9",
+      "line_id": "cn-kaohsiung-line-c",
+      "pattern_id": "cn-kaohsiung-line-c-main",
+      "station_code": "C9",
+      "direction_type": "loop_outer",
+      "direction_label": "順行",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "22:53",
+        "22:53",
+        "22:53",
+        "22:53",
+        "22:53",
+        "22:53",
+        "22:53"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o1-tt-OT1",
+      "station_id": "cn-kaohsiung-o1",
+      "stop_id": "cn-kaohsiung-stop-o1",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O1",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o10-tt-O1",
+      "station_id": "cn-kaohsiung-o10",
+      "stop_id": "cn-kaohsiung-stop-o10",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O10",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00"
+      ],
+      "last_train": [
+        "24:09",
+        "24:09",
+        "24:09",
+        "24:09",
+        "24:09",
+        "24:09",
+        "24:09"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o10-tt-OT1",
+      "station_id": "cn-kaohsiung-o10",
+      "stop_id": "cn-kaohsiung-stop-o10",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O10",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02"
+      ],
+      "last_train": [
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o11-tt-O1",
+      "station_id": "cn-kaohsiung-o11",
+      "stop_id": "cn-kaohsiung-stop-o11",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O11",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:06",
+        "06:06"
+      ],
+      "last_train": [
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o11-tt-OT1",
+      "station_id": "cn-kaohsiung-o11",
+      "stop_id": "cn-kaohsiung-stop-o11",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O11",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04"
+      ],
+      "last_train": [
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o12-tt-O1",
+      "station_id": "cn-kaohsiung-o12",
+      "stop_id": "cn-kaohsiung-stop-o12",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O12",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:05",
+        "06:05"
+      ],
+      "last_train": [
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o12-tt-OT1",
+      "station_id": "cn-kaohsiung-o12",
+      "stop_id": "cn-kaohsiung-stop-o12",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O12",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05"
+      ],
+      "last_train": [
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o13-tt-O1",
+      "station_id": "cn-kaohsiung-o13",
+      "stop_id": "cn-kaohsiung-stop-o13",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O13",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:03",
+        "06:03"
+      ],
+      "last_train": [
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o13-tt-OT1",
+      "station_id": "cn-kaohsiung-o13",
+      "stop_id": "cn-kaohsiung-stop-o13",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O13",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07"
+      ],
+      "last_train": [
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o14-tt-O1",
+      "station_id": "cn-kaohsiung-o14",
+      "stop_id": "cn-kaohsiung-stop-o14",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O14",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02"
+      ],
+      "last_train": [
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o14-tt-OT1",
+      "station_id": "cn-kaohsiung-o14",
+      "stop_id": "cn-kaohsiung-stop-o14",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O14",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:09",
+        "06:09",
+        "06:09",
+        "06:09",
+        "06:09",
+        "06:09",
+        "06:09"
+      ],
+      "last_train": [
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o2-tt-O1",
+      "station_id": "cn-kaohsiung-o2",
+      "stop_id": "cn-kaohsiung-stop-o2",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O2",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03"
+      ],
+      "last_train": [
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o2-tt-OT1",
+      "station_id": "cn-kaohsiung-o2",
+      "stop_id": "cn-kaohsiung-stop-o2",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O2",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01"
+      ],
+      "last_train": [
+        "24:01",
+        "24:01",
+        "24:01",
+        "24:01",
+        "24:01",
+        "24:01",
+        "24:01"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o4-tt-O1",
+      "station_id": "cn-kaohsiung-o4",
+      "stop_id": "cn-kaohsiung-stop-o4",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O4",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01"
+      ],
+      "last_train": [
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19",
+        "24:19"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o4-tt-OT1",
+      "station_id": "cn-kaohsiung-o4",
+      "stop_id": "cn-kaohsiung-stop-o4",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O4",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03"
+      ],
+      "last_train": [
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o5-tt-O1",
+      "station_id": "cn-kaohsiung-r10",
+      "stop_id": "cn-kaohsiung-stop-o5",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O5",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00"
+      ],
+      "last_train": [
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o5-tt-OT1",
+      "station_id": "cn-kaohsiung-r10",
+      "stop_id": "cn-kaohsiung-stop-o5",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O5",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05"
+      ],
+      "last_train": [
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o6-tt-O1",
+      "station_id": "cn-kaohsiung-o6",
+      "stop_id": "cn-kaohsiung-stop-o6",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O6",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05"
+      ],
+      "last_train": [
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15",
+        "24:15"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o6-tt-OT1",
+      "station_id": "cn-kaohsiung-o6",
+      "stop_id": "cn-kaohsiung-stop-o6",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O6",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07"
+      ],
+      "last_train": [
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o7-tt-O1",
+      "station_id": "cn-kaohsiung-o7",
+      "stop_id": "cn-kaohsiung-stop-o7",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O7",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04"
+      ],
+      "last_train": [
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o7-tt-OT1",
+      "station_id": "cn-kaohsiung-o7",
+      "stop_id": "cn-kaohsiung-stop-o7",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O7",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08"
+      ],
+      "last_train": [
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o8-tt-O1",
+      "station_id": "cn-kaohsiung-o8",
+      "stop_id": "cn-kaohsiung-stop-o8",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O8",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02"
+      ],
+      "last_train": [
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o8-tt-OT1",
+      "station_id": "cn-kaohsiung-o8",
+      "stop_id": "cn-kaohsiung-stop-o8",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O8",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00"
+      ],
+      "last_train": [
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o9-tt-O1",
+      "station_id": "cn-kaohsiung-o9",
+      "stop_id": "cn-kaohsiung-stop-o9",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O9",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01"
+      ],
+      "last_train": [
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o9-tt-OT1",
+      "station_id": "cn-kaohsiung-o9",
+      "stop_id": "cn-kaohsiung-stop-o9",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "O9",
+      "destination_stop_id": "cn-kaohsiung-stop-ot1",
+      "direction_type": "linear",
+      "direction_label": "大寮",
+      "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01"
+      ],
+      "last_train": [
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-ot1-tt-O1",
+      "station_id": "cn-kaohsiung-ot1",
+      "stop_id": "cn-kaohsiung-stop-ot1",
+      "line_id": "cn-kaohsiung-line-o",
+      "pattern_id": "cn-kaohsiung-line-o-main",
+      "station_code": "OT1",
+      "destination_stop_id": "cn-kaohsiung-stop-o1",
+      "direction_type": "linear",
+      "direction_label": "哈瑪星",
+      "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r10-tt-R3",
+      "station_id": "cn-kaohsiung-r10",
+      "stop_id": "cn-kaohsiung-stop-r10",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R10",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:12",
+        "06:12",
+        "06:12",
+        "06:12",
+        "06:12",
+        "06:12",
+        "06:12"
+      ],
+      "last_train": [
+        "24:32",
+        "24:32",
+        "24:32",
+        "24:32",
+        "24:32",
+        "24:32",
+        "24:32"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r10-tt-RK1",
+      "station_id": "cn-kaohsiung-r10",
+      "stop_id": "cn-kaohsiung-stop-r10",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R10",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "05:58",
+        "05:58",
+        "05:58",
+        "05:58",
+        "05:58",
+        "05:58",
+        "05:58"
+      ],
+      "last_train": [
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21",
+        "24:21"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r11-tt-R3",
+      "station_id": "cn-kaohsiung-r11",
+      "stop_id": "cn-kaohsiung-stop-r11",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R11",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:10",
+        "06:10",
+        "06:10",
+        "06:10",
+        "06:10",
+        "06:10",
+        "06:10"
+      ],
+      "last_train": [
+        "24:31",
+        "24:31",
+        "24:31",
+        "24:31",
+        "24:31",
+        "24:31",
+        "24:31"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r11-tt-RK1",
+      "station_id": "cn-kaohsiung-r11",
+      "stop_id": "cn-kaohsiung-stop-r11",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R11",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00"
+      ],
+      "last_train": [
+        "24:23",
+        "24:23",
+        "24:23",
+        "24:23",
+        "24:23",
+        "24:23",
+        "24:23"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r12-tt-R3",
+      "station_id": "cn-kaohsiung-r12",
+      "stop_id": "cn-kaohsiung-stop-r12",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R12",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08"
+      ],
+      "last_train": [
+        "24:28",
+        "24:28",
+        "24:28",
+        "24:28",
+        "24:28",
+        "24:28",
+        "24:28"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r12-tt-RK1",
+      "station_id": "cn-kaohsiung-r12",
+      "stop_id": "cn-kaohsiung-stop-r12",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R12",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02",
+        "06:02"
+      ],
+      "last_train": [
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r13-tt-R3",
+      "station_id": "cn-kaohsiung-r13",
+      "stop_id": "cn-kaohsiung-stop-r13",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R13",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:07",
+        "06:06"
+      ],
+      "last_train": [
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r13-tt-RK1",
+      "station_id": "cn-kaohsiung-r13",
+      "stop_id": "cn-kaohsiung-stop-r13",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R13",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04",
+        "06:04"
+      ],
+      "last_train": [
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27",
+        "24:27"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r14-tt-R3",
+      "station_id": "cn-kaohsiung-r14",
+      "stop_id": "cn-kaohsiung-stop-r14",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R14",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05"
+      ],
+      "last_train": [
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25",
+        "24:25"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r14-tt-RK1",
+      "station_id": "cn-kaohsiung-r14",
+      "stop_id": "cn-kaohsiung-stop-r14",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R14",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06",
+        "06:06"
+      ],
+      "last_train": [
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29",
+        "24:29"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r15-tt-R3",
+      "station_id": "cn-kaohsiung-r15",
+      "stop_id": "cn-kaohsiung-stop-r15",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R15",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03"
+      ],
+      "last_train": [
+        "24:23",
+        "24:23",
+        "24:23",
+        "24:23",
+        "24:23",
+        "24:23",
+        "24:23"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r15-tt-RK1",
+      "station_id": "cn-kaohsiung-r15",
+      "stop_id": "cn-kaohsiung-stop-r15",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R15",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08",
+        "06:08"
+      ],
+      "last_train": [
+        "24:31",
+        "24:31",
+        "24:31",
+        "24:31",
+        "24:31",
+        "24:31",
+        "24:31"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r16-tt-R3",
+      "station_id": "cn-kaohsiung-r16",
+      "stop_id": "cn-kaohsiung-stop-r16",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R16",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00"
+      ],
+      "last_train": [
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20",
+        "24:20"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r16-tt-RK1",
+      "station_id": "cn-kaohsiung-r16",
+      "stop_id": "cn-kaohsiung-stop-r16",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R16",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:10",
+        "06:10",
+        "06:10",
+        "06:10",
+        "06:10",
+        "06:10",
+        "06:10"
+      ],
+      "last_train": [
+        "24:33",
+        "24:33",
+        "24:33",
+        "24:33",
+        "24:33",
+        "24:33",
+        "24:33"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r17-tt-R3",
+      "station_id": "cn-kaohsiung-r17",
+      "stop_id": "cn-kaohsiung-stop-r17",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R17",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "05:58",
+        "05:58",
+        "05:58",
+        "05:58",
+        "05:58",
+        "05:58",
+        "05:58"
+      ],
+      "last_train": [
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r17-tt-RK1",
+      "station_id": "cn-kaohsiung-r17",
+      "stop_id": "cn-kaohsiung-stop-r17",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R17",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:13",
+        "06:13",
+        "06:13",
+        "06:13",
+        "06:13",
+        "06:13",
+        "06:13"
+      ],
+      "last_train": [
+        "24:35",
+        "24:35",
+        "24:35",
+        "24:35",
+        "24:35",
+        "24:35",
+        "24:35"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r18-tt-R3",
+      "station_id": "cn-kaohsiung-r18",
+      "stop_id": "cn-kaohsiung-stop-r18",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R18",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56"
+      ],
+      "last_train": [
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r18-tt-RK1",
+      "station_id": "cn-kaohsiung-r18",
+      "stop_id": "cn-kaohsiung-stop-r18",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R18",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:14",
+        "06:14",
+        "06:14",
+        "06:14",
+        "06:14",
+        "06:14",
+        "06:14"
+      ],
+      "last_train": [
+        "24:37",
+        "24:37",
+        "24:37",
+        "24:37",
+        "24:37",
+        "24:37",
+        "24:37"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r19-tt-R3",
+      "station_id": "cn-kaohsiung-r19",
+      "stop_id": "cn-kaohsiung-stop-r19",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R19",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55"
+      ],
+      "last_train": [
+        "24:14",
+        "24:14",
+        "24:14",
+        "24:14",
+        "24:14",
+        "24:14",
+        "24:14"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r19-tt-RK1",
+      "station_id": "cn-kaohsiung-r19",
+      "stop_id": "cn-kaohsiung-stop-r19",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R19",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:16",
+        "06:16",
+        "06:16",
+        "06:16",
+        "06:16",
+        "06:16",
+        "06:16"
+      ],
+      "last_train": [
+        "24:39",
+        "24:39",
+        "24:39",
+        "24:39",
+        "24:39",
+        "24:39",
+        "24:39"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r20-tt-R3",
+      "station_id": "cn-kaohsiung-r20",
+      "stop_id": "cn-kaohsiung-stop-r20",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R20",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07",
+        "06:07"
+      ],
+      "last_train": [
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12",
+        "24:12"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r20-tt-RK1",
+      "station_id": "cn-kaohsiung-r20",
+      "stop_id": "cn-kaohsiung-stop-r20",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R20",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:19",
+        "06:19",
+        "06:19",
+        "06:19",
+        "06:19",
+        "06:19",
+        "06:19"
+      ],
+      "last_train": [
+        "24:41",
+        "24:41",
+        "24:41",
+        "24:41",
+        "24:41",
+        "24:41",
+        "24:41"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r21-tt-R3",
+      "station_id": "cn-kaohsiung-r21",
+      "stop_id": "cn-kaohsiung-stop-r21",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R21",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05"
+      ],
+      "last_train": [
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r21-tt-RK1",
+      "station_id": "cn-kaohsiung-r21",
+      "stop_id": "cn-kaohsiung-stop-r21",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R21",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:20",
+        "06:20",
+        "06:20",
+        "06:20",
+        "06:20",
+        "06:20",
+        "06:20"
+      ],
+      "last_train": [
+        "24:43",
+        "24:43",
+        "24:43",
+        "24:43",
+        "24:43",
+        "24:43",
+        "24:43"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22-tt-R3",
+      "station_id": "cn-kaohsiung-r22",
+      "stop_id": "cn-kaohsiung-stop-r22",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R22",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03"
+      ],
+      "last_train": [
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22-tt-RK1",
+      "station_id": "cn-kaohsiung-r22",
+      "stop_id": "cn-kaohsiung-stop-r22",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R22",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:23",
+        "06:23",
+        "06:23",
+        "06:23",
+        "06:23",
+        "06:23",
+        "06:23"
+      ],
+      "last_train": [
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22a-tt-R3",
+      "station_id": "cn-kaohsiung-r22a",
+      "stop_id": "cn-kaohsiung-stop-r22a",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R22A",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01"
+      ],
+      "last_train": [
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22a-tt-RK1",
+      "station_id": "cn-kaohsiung-r22a",
+      "stop_id": "cn-kaohsiung-stop-r22a",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R22A",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:24",
+        "06:24",
+        "06:24",
+        "06:24",
+        "06:24",
+        "06:24",
+        "06:24"
+      ],
+      "last_train": [
+        "24:47",
+        "24:47",
+        "24:47",
+        "24:47",
+        "24:47",
+        "24:47",
+        "24:47"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r23-tt-R3",
+      "station_id": "cn-kaohsiung-r23",
+      "stop_id": "cn-kaohsiung-stop-r23",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R23",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00",
+        "06:00"
+      ],
+      "last_train": [
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r23-tt-RK1",
+      "station_id": "cn-kaohsiung-r23",
+      "stop_id": "cn-kaohsiung-stop-r23",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R23",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:26",
+        "06:26",
+        "06:26",
+        "06:26",
+        "06:26",
+        "06:26",
+        "06:26"
+      ],
+      "last_train": [
+        "24:48",
+        "24:48",
+        "24:48",
+        "24:48",
+        "24:49",
+        "24:48",
+        "24:48"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r24-tt-R3",
+      "station_id": "cn-kaohsiung-r24",
+      "stop_id": "cn-kaohsiung-stop-r24",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R24",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56"
+      ],
+      "last_train": [
+        "24:01",
+        "24:01",
+        "24:01",
+        "24:01",
+        "24:01",
+        "24:01",
+        "24:01"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r24-tt-RK1",
+      "station_id": "cn-kaohsiung-r24",
+      "stop_id": "cn-kaohsiung-stop-r24",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R24",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:29",
+        "06:29",
+        "06:29",
+        "06:29",
+        "06:29",
+        "06:29",
+        "06:29"
+      ],
+      "last_train": [
+        "24:52",
+        "24:52",
+        "24:52",
+        "24:52",
+        "24:52",
+        "24:52",
+        "24:52"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r3-tt-RK1",
+      "station_id": "cn-kaohsiung-r3",
+      "stop_id": "cn-kaohsiung-stop-r3",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R3",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4-tt-R3",
+      "station_id": "cn-kaohsiung-r4",
+      "stop_id": "cn-kaohsiung-stop-r4",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R4",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:27",
+        "06:27",
+        "06:27",
+        "06:27",
+        "06:27",
+        "06:27",
+        "06:27"
+      ],
+      "last_train": [
+        "24:48",
+        "24:48",
+        "24:48",
+        "24:48",
+        "24:48",
+        "24:48",
+        "24:48"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4-tt-RK1",
+      "station_id": "cn-kaohsiung-r4",
+      "stop_id": "cn-kaohsiung-stop-r4",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R4",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "05:57",
+        "05:57",
+        "05:57",
+        "05:57",
+        "05:57",
+        "05:57",
+        "05:57"
+      ],
+      "last_train": [
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02",
+        "24:02"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4a-tt-R3",
+      "station_id": "cn-kaohsiung-r4a",
+      "stop_id": "cn-kaohsiung-stop-r4a",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R4A",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:25",
+        "06:25",
+        "06:25",
+        "06:25",
+        "06:25",
+        "06:25",
+        "06:25"
+      ],
+      "last_train": [
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45",
+        "24:45"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4a-tt-RK1",
+      "station_id": "cn-kaohsiung-r4a",
+      "stop_id": "cn-kaohsiung-stop-r4a",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R4A",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "05:59",
+        "05:59",
+        "05:59",
+        "05:59",
+        "05:59",
+        "05:59",
+        "05:59"
+      ],
+      "last_train": [
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05",
+        "24:05"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r5-tt-R3",
+      "station_id": "cn-kaohsiung-r5",
+      "stop_id": "cn-kaohsiung-stop-r5",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R5",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:23",
+        "06:23",
+        "06:23",
+        "06:23",
+        "06:23",
+        "06:23",
+        "06:23"
+      ],
+      "last_train": [
+        "24:43",
+        "24:43",
+        "24:43",
+        "24:43",
+        "24:43",
+        "24:43",
+        "24:43"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r5-tt-RK1",
+      "station_id": "cn-kaohsiung-r5",
+      "stop_id": "cn-kaohsiung-stop-r5",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R5",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01",
+        "06:01"
+      ],
+      "last_train": [
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r6-tt-R3",
+      "station_id": "cn-kaohsiung-r6",
+      "stop_id": "cn-kaohsiung-stop-r6",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R6",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:20",
+        "06:20",
+        "06:20",
+        "06:20",
+        "06:20",
+        "06:20",
+        "06:20"
+      ],
+      "last_train": [
+        "24:41",
+        "24:41",
+        "24:41",
+        "24:41",
+        "24:41",
+        "24:41",
+        "24:41"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r6-tt-RK1",
+      "station_id": "cn-kaohsiung-r6",
+      "stop_id": "cn-kaohsiung-stop-r6",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R6",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03",
+        "06:03"
+      ],
+      "last_train": [
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10",
+        "24:10"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r7-tt-R3",
+      "station_id": "cn-kaohsiung-r7",
+      "stop_id": "cn-kaohsiung-stop-r7",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R7",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:18",
+        "06:18",
+        "06:18",
+        "06:18",
+        "06:18",
+        "06:18",
+        "06:18"
+      ],
+      "last_train": [
+        "24:38",
+        "24:38",
+        "24:38",
+        "24:38",
+        "24:38",
+        "24:38",
+        "24:38"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r7-tt-RK1",
+      "station_id": "cn-kaohsiung-r7",
+      "stop_id": "cn-kaohsiung-stop-r7",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R7",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05",
+        "06:05"
+      ],
+      "last_train": [
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13",
+        "24:13"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r8-tt-R3",
+      "station_id": "cn-kaohsiung-r8",
+      "stop_id": "cn-kaohsiung-stop-r8",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R8",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:16",
+        "06:16",
+        "06:16",
+        "06:16",
+        "06:16",
+        "06:16",
+        "06:16"
+      ],
+      "last_train": [
+        "24:36",
+        "24:36",
+        "24:36",
+        "24:36",
+        "24:36",
+        "24:36",
+        "24:36"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r8-tt-RK1",
+      "station_id": "cn-kaohsiung-r8",
+      "stop_id": "cn-kaohsiung-stop-r8",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R8",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55"
+      ],
+      "last_train": [
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16",
+        "24:16"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r9-tt-R3",
+      "station_id": "cn-kaohsiung-r9",
+      "stop_id": "cn-kaohsiung-stop-r9",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R9",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "06:14",
+        "06:14",
+        "06:14",
+        "06:14",
+        "06:14",
+        "06:14",
+        "06:14"
+      ],
+      "last_train": [
+        "24:34",
+        "24:34",
+        "24:34",
+        "24:34",
+        "24:34",
+        "24:34",
+        "24:34"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r9-tt-RK1",
+      "station_id": "cn-kaohsiung-r9",
+      "stop_id": "cn-kaohsiung-stop-r9",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "R9",
+      "destination_stop_id": "cn-kaohsiung-stop-rk1",
+      "direction_type": "linear",
+      "direction_label": "岡山車站",
+      "first_train": [
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56",
+        "05:56"
+      ],
+      "last_train": [
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18",
+        "24:18"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-rk1-tt-R3",
+      "station_id": "cn-kaohsiung-rk1",
+      "stop_id": "cn-kaohsiung-stop-rk1",
+      "line_id": "cn-kaohsiung-line-r",
+      "pattern_id": "cn-kaohsiung-line-r-main",
+      "station_code": "RK1",
+      "destination_stop_id": "cn-kaohsiung-stop-r3",
+      "direction_type": "linear",
+      "direction_label": "小港",
+      "first_train": [
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55",
+        "05:55"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00"
+      ],
+      "source_id": "krtc-timetables",
+      "extras": {
+        "calendar_note": "Weekday / pre-holiday / Saturday / Sunday mapped to a regular Monday–Sunday week; exceptional public holidays follow operator notices."
+      }
+    }
+  ]
+}

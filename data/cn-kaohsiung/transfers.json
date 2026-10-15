@@ -1,0 +1,196 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-kaohsiung",
+  "generated_at": "2026-10-15T09:27:06.855Z",
+  "source": [
+    {
+      "name": "krtc-stations",
+      "url": "https://www.krtc.com.tw/Guide/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-stations",
+      "url": "https://www.krtc.com.tw/KLRT/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-timetables",
+      "url": "https://www.krtc.com.tw/Guide/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-timetables",
+      "url": "https://www.krtc.com.tw/KLRT/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-travel-matrix",
+      "url": "https://www.krtc.com.tw/KLRT/time_between_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-planner",
+      "url": "https://www.krtc.com.tw",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "photon-osm",
+      "url": "https://photon.komoot.io/api/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "OSM rail POIs matched automatically by name and city; coordinates are derived."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-kaohsiung-stop-c14-walk-cn-kaohsiung-stop-o1",
+      "station_id": "cn-kaohsiung-c14",
+      "from_stop_id": "cn-kaohsiung-stop-c14",
+      "to_stop_id": "cn-kaohsiung-stop-o1",
+      "from_line_id": "cn-kaohsiung-line-c",
+      "to_line_id": "cn-kaohsiung-line-o",
+      "walk_time_seconds": 174,
+      "walk_distance_meters": 110,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1-krtc-proximity",
+      "extras": {
+        "distance_m": 110,
+        "rule": "metro-light-rail-within-400m"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c24-walk-cn-kaohsiung-stop-r13",
+      "station_id": "cn-kaohsiung-c24",
+      "from_stop_id": "cn-kaohsiung-stop-c24",
+      "to_stop_id": "cn-kaohsiung-stop-r13",
+      "from_line_id": "cn-kaohsiung-line-c",
+      "to_line_id": "cn-kaohsiung-line-r",
+      "walk_time_seconds": 173,
+      "walk_distance_meters": 107,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1-krtc-proximity",
+      "extras": {
+        "distance_m": 107,
+        "rule": "metro-light-rail-within-400m"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c3-walk-cn-kaohsiung-stop-r6",
+      "station_id": "cn-kaohsiung-c3",
+      "from_stop_id": "cn-kaohsiung-stop-c3",
+      "to_stop_id": "cn-kaohsiung-stop-r6",
+      "from_line_id": "cn-kaohsiung-line-c",
+      "to_line_id": "cn-kaohsiung-line-r",
+      "walk_time_seconds": 222,
+      "walk_distance_meters": 172,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1-krtc-proximity",
+      "extras": {
+        "distance_m": 172,
+        "rule": "metro-light-rail-within-400m"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o1-walk-cn-kaohsiung-stop-c14",
+      "station_id": "cn-kaohsiung-o1",
+      "from_stop_id": "cn-kaohsiung-stop-o1",
+      "to_stop_id": "cn-kaohsiung-stop-c14",
+      "from_line_id": "cn-kaohsiung-line-o",
+      "to_line_id": "cn-kaohsiung-line-c",
+      "walk_time_seconds": 174,
+      "walk_distance_meters": 110,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1-krtc-proximity",
+      "extras": {
+        "distance_m": 110,
+        "rule": "metro-light-rail-within-400m"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r13-walk-cn-kaohsiung-stop-c24",
+      "station_id": "cn-kaohsiung-r13",
+      "from_stop_id": "cn-kaohsiung-stop-r13",
+      "to_stop_id": "cn-kaohsiung-stop-c24",
+      "from_line_id": "cn-kaohsiung-line-r",
+      "to_line_id": "cn-kaohsiung-line-c",
+      "walk_time_seconds": 173,
+      "walk_distance_meters": 107,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1-krtc-proximity",
+      "extras": {
+        "distance_m": 107,
+        "rule": "metro-light-rail-within-400m"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r6-walk-cn-kaohsiung-stop-c3",
+      "station_id": "cn-kaohsiung-r6",
+      "from_stop_id": "cn-kaohsiung-stop-r6",
+      "to_stop_id": "cn-kaohsiung-stop-c3",
+      "from_line_id": "cn-kaohsiung-line-r",
+      "to_line_id": "cn-kaohsiung-line-c",
+      "walk_time_seconds": 222,
+      "walk_distance_meters": 172,
+      "is_out_of_station": true,
+      "source_id": "auto-xfer/v1-krtc-proximity",
+      "extras": {
+        "distance_m": 172,
+        "rule": "metro-light-rail-within-400m"
+      }
+    },
+    {
+      "id": "xfer-cn-kaohsiung-stop-o5-cn-kaohsiung-stop-r10",
+      "station_id": "cn-kaohsiung-r10",
+      "from_line_id": "cn-kaohsiung-line-o",
+      "to_line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-o5",
+      "to_stop_id": "cn-kaohsiung-stop-r10",
+      "walk_time_seconds": 120,
+      "source_id": "krtc-routing-default"
+    },
+    {
+      "id": "xfer-cn-kaohsiung-stop-r10-cn-kaohsiung-stop-o5",
+      "station_id": "cn-kaohsiung-r10",
+      "from_line_id": "cn-kaohsiung-line-r",
+      "to_line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-r10",
+      "to_stop_id": "cn-kaohsiung-stop-o5",
+      "walk_time_seconds": 120,
+      "source_id": "krtc-routing-default"
+    }
+  ]
+}

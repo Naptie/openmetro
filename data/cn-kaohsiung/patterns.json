@@ -1,0 +1,202 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-kaohsiung",
+  "generated_at": "2026-10-15T09:27:06.855Z",
+  "source": [
+    {
+      "name": "krtc-stations",
+      "url": "https://www.krtc.com.tw/Guide/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-stations",
+      "url": "https://www.krtc.com.tw/KLRT/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-timetables",
+      "url": "https://www.krtc.com.tw/Guide/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-timetables",
+      "url": "https://www.krtc.com.tw/KLRT/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-travel-matrix",
+      "url": "https://www.krtc.com.tw/KLRT/time_between_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-planner",
+      "url": "https://www.krtc.com.tw",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "photon-osm",
+      "url": "https://photon.komoot.io/api/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "OSM rail POIs matched automatically by name and city; coordinates are derived."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-kaohsiung-line-c-main",
+      "line_id": "cn-kaohsiung-line-c",
+      "stop_ids": [
+        "cn-kaohsiung-stop-c1",
+        "cn-kaohsiung-stop-c2",
+        "cn-kaohsiung-stop-c3",
+        "cn-kaohsiung-stop-c4",
+        "cn-kaohsiung-stop-c5",
+        "cn-kaohsiung-stop-c6",
+        "cn-kaohsiung-stop-c7",
+        "cn-kaohsiung-stop-c8",
+        "cn-kaohsiung-stop-c9",
+        "cn-kaohsiung-stop-c10",
+        "cn-kaohsiung-stop-c11",
+        "cn-kaohsiung-stop-c12",
+        "cn-kaohsiung-stop-c13",
+        "cn-kaohsiung-stop-c14",
+        "cn-kaohsiung-stop-c15",
+        "cn-kaohsiung-stop-c16",
+        "cn-kaohsiung-stop-c17",
+        "cn-kaohsiung-stop-c18",
+        "cn-kaohsiung-stop-c19",
+        "cn-kaohsiung-stop-c20",
+        "cn-kaohsiung-stop-c21a",
+        "cn-kaohsiung-stop-c21",
+        "cn-kaohsiung-stop-c22",
+        "cn-kaohsiung-stop-c23",
+        "cn-kaohsiung-stop-c24",
+        "cn-kaohsiung-stop-c25",
+        "cn-kaohsiung-stop-c26",
+        "cn-kaohsiung-stop-c27",
+        "cn-kaohsiung-stop-c28",
+        "cn-kaohsiung-stop-c29",
+        "cn-kaohsiung-stop-c30",
+        "cn-kaohsiung-stop-c31",
+        "cn-kaohsiung-stop-c32",
+        "cn-kaohsiung-stop-c33",
+        "cn-kaohsiung-stop-c34",
+        "cn-kaohsiung-stop-c35",
+        "cn-kaohsiung-stop-c36",
+        "cn-kaohsiung-stop-c37"
+      ],
+      "origin_stop_id": "cn-kaohsiung-stop-c1",
+      "terminal_stop_id": "cn-kaohsiung-stop-c37",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "C"
+        }
+      ]
+    },
+    {
+      "id": "cn-kaohsiung-line-o-main",
+      "line_id": "cn-kaohsiung-line-o",
+      "stop_ids": [
+        "cn-kaohsiung-stop-o1",
+        "cn-kaohsiung-stop-o2",
+        "cn-kaohsiung-stop-o4",
+        "cn-kaohsiung-stop-o5",
+        "cn-kaohsiung-stop-o6",
+        "cn-kaohsiung-stop-o7",
+        "cn-kaohsiung-stop-o8",
+        "cn-kaohsiung-stop-o9",
+        "cn-kaohsiung-stop-o10",
+        "cn-kaohsiung-stop-o11",
+        "cn-kaohsiung-stop-o12",
+        "cn-kaohsiung-stop-o13",
+        "cn-kaohsiung-stop-o14",
+        "cn-kaohsiung-stop-ot1"
+      ],
+      "origin_stop_id": "cn-kaohsiung-stop-o1",
+      "terminal_stop_id": "cn-kaohsiung-stop-ot1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "O"
+        }
+      ]
+    },
+    {
+      "id": "cn-kaohsiung-line-r-main",
+      "line_id": "cn-kaohsiung-line-r",
+      "stop_ids": [
+        "cn-kaohsiung-stop-r3",
+        "cn-kaohsiung-stop-r4",
+        "cn-kaohsiung-stop-r4a",
+        "cn-kaohsiung-stop-r5",
+        "cn-kaohsiung-stop-r6",
+        "cn-kaohsiung-stop-r7",
+        "cn-kaohsiung-stop-r8",
+        "cn-kaohsiung-stop-r9",
+        "cn-kaohsiung-stop-r10",
+        "cn-kaohsiung-stop-r11",
+        "cn-kaohsiung-stop-r12",
+        "cn-kaohsiung-stop-r13",
+        "cn-kaohsiung-stop-r14",
+        "cn-kaohsiung-stop-r15",
+        "cn-kaohsiung-stop-r16",
+        "cn-kaohsiung-stop-r17",
+        "cn-kaohsiung-stop-r18",
+        "cn-kaohsiung-stop-r19",
+        "cn-kaohsiung-stop-r20",
+        "cn-kaohsiung-stop-r21",
+        "cn-kaohsiung-stop-r22",
+        "cn-kaohsiung-stop-r22a",
+        "cn-kaohsiung-stop-r23",
+        "cn-kaohsiung-stop-r24",
+        "cn-kaohsiung-stop-rk1"
+      ],
+      "origin_stop_id": "cn-kaohsiung-stop-r3",
+      "terminal_stop_id": "cn-kaohsiung-stop-rk1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "R"
+        }
+      ]
+    }
+  ]
+}

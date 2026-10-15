@@ -9,6 +9,33 @@ import cnBeijingsegments from "../../../data/cn-beijing/segments.json" with { ty
 import cnBeijingtransfers from "../../../data/cn-beijing/transfers.json" with { type: "json" };
 import cnBeijingtimetables from "../../../data/cn-beijing/timetables.json" with { type: "json" };
 import cnBeijingfares from "../../../data/cn-beijing/fares.json" with { type: "json" };
+import cnChengdunetwork from "../../../data/cn-chengdu/network.json" with { type: "json" };
+import cnChengdulines from "../../../data/cn-chengdu/lines.json" with { type: "json" };
+import cnChengdustations from "../../../data/cn-chengdu/stations.json" with { type: "json" };
+import cnChengdustops from "../../../data/cn-chengdu/stops.json" with { type: "json" };
+import cnChengdupatterns from "../../../data/cn-chengdu/patterns.json" with { type: "json" };
+import cnChengdusegments from "../../../data/cn-chengdu/segments.json" with { type: "json" };
+import cnChengdutransfers from "../../../data/cn-chengdu/transfers.json" with { type: "json" };
+import cnChengdutimetables from "../../../data/cn-chengdu/timetables.json" with { type: "json" };
+import cnChengdufares from "../../../data/cn-chengdu/fares.json" with { type: "json" };
+import cnChongqingnetwork from "../../../data/cn-chongqing/network.json" with { type: "json" };
+import cnChongqinglines from "../../../data/cn-chongqing/lines.json" with { type: "json" };
+import cnChongqingstations from "../../../data/cn-chongqing/stations.json" with { type: "json" };
+import cnChongqingstops from "../../../data/cn-chongqing/stops.json" with { type: "json" };
+import cnChongqingpatterns from "../../../data/cn-chongqing/patterns.json" with { type: "json" };
+import cnChongqingsegments from "../../../data/cn-chongqing/segments.json" with { type: "json" };
+import cnChongqingtransfers from "../../../data/cn-chongqing/transfers.json" with { type: "json" };
+import cnChongqingtimetables from "../../../data/cn-chongqing/timetables.json" with { type: "json" };
+import cnChongqingfares from "../../../data/cn-chongqing/fares.json" with { type: "json" };
+import cnFuzhounetwork from "../../../data/cn-fuzhou/network.json" with { type: "json" };
+import cnFuzhoulines from "../../../data/cn-fuzhou/lines.json" with { type: "json" };
+import cnFuzhoustations from "../../../data/cn-fuzhou/stations.json" with { type: "json" };
+import cnFuzhoustops from "../../../data/cn-fuzhou/stops.json" with { type: "json" };
+import cnFuzhoupatterns from "../../../data/cn-fuzhou/patterns.json" with { type: "json" };
+import cnFuzhousegments from "../../../data/cn-fuzhou/segments.json" with { type: "json" };
+import cnFuzhoutransfers from "../../../data/cn-fuzhou/transfers.json" with { type: "json" };
+import cnFuzhoutimetables from "../../../data/cn-fuzhou/timetables.json" with { type: "json" };
+import cnFuzhoufares from "../../../data/cn-fuzhou/fares.json" with { type: "json" };
 import cnGuangzhounetwork from "../../../data/cn-guangzhou/network.json" with { type: "json" };
 import cnGuangzhoulines from "../../../data/cn-guangzhou/lines.json" with { type: "json" };
 import cnGuangzhoustations from "../../../data/cn-guangzhou/stations.json" with { type: "json" };
@@ -27,6 +54,60 @@ import cnHangzhousegments from "../../../data/cn-hangzhou/segments.json" with { 
 import cnHangzhoutransfers from "../../../data/cn-hangzhou/transfers.json" with { type: "json" };
 import cnHangzhoutimetables from "../../../data/cn-hangzhou/timetables.json" with { type: "json" };
 import cnHangzhoufares from "../../../data/cn-hangzhou/fares.json" with { type: "json" };
+import cnHongkongnetwork from "../../../data/cn-hongkong/network.json" with { type: "json" };
+import cnHongkonglines from "../../../data/cn-hongkong/lines.json" with { type: "json" };
+import cnHongkongstations from "../../../data/cn-hongkong/stations.json" with { type: "json" };
+import cnHongkongstops from "../../../data/cn-hongkong/stops.json" with { type: "json" };
+import cnHongkongpatterns from "../../../data/cn-hongkong/patterns.json" with { type: "json" };
+import cnHongkongsegments from "../../../data/cn-hongkong/segments.json" with { type: "json" };
+import cnHongkongtransfers from "../../../data/cn-hongkong/transfers.json" with { type: "json" };
+import cnHongkongtimetables from "../../../data/cn-hongkong/timetables.json" with { type: "json" };
+import cnHongkongfares from "../../../data/cn-hongkong/fares.json" with { type: "json" };
+import cnJinannetwork from "../../../data/cn-jinan/network.json" with { type: "json" };
+import cnJinanlines from "../../../data/cn-jinan/lines.json" with { type: "json" };
+import cnJinanstations from "../../../data/cn-jinan/stations.json" with { type: "json" };
+import cnJinanstops from "../../../data/cn-jinan/stops.json" with { type: "json" };
+import cnJinanpatterns from "../../../data/cn-jinan/patterns.json" with { type: "json" };
+import cnJinansegments from "../../../data/cn-jinan/segments.json" with { type: "json" };
+import cnJinantransfers from "../../../data/cn-jinan/transfers.json" with { type: "json" };
+import cnJinantimetables from "../../../data/cn-jinan/timetables.json" with { type: "json" };
+import cnJinanfares from "../../../data/cn-jinan/fares.json" with { type: "json" };
+import cnKaohsiungnetwork from "../../../data/cn-kaohsiung/network.json" with { type: "json" };
+import cnKaohsiunglines from "../../../data/cn-kaohsiung/lines.json" with { type: "json" };
+import cnKaohsiungstations from "../../../data/cn-kaohsiung/stations.json" with { type: "json" };
+import cnKaohsiungstops from "../../../data/cn-kaohsiung/stops.json" with { type: "json" };
+import cnKaohsiungpatterns from "../../../data/cn-kaohsiung/patterns.json" with { type: "json" };
+import cnKaohsiungsegments from "../../../data/cn-kaohsiung/segments.json" with { type: "json" };
+import cnKaohsiungtransfers from "../../../data/cn-kaohsiung/transfers.json" with { type: "json" };
+import cnKaohsiungtimetables from "../../../data/cn-kaohsiung/timetables.json" with { type: "json" };
+import cnKaohsiungfares from "../../../data/cn-kaohsiung/fares.json" with { type: "json" };
+import cnMacaunetwork from "../../../data/cn-macau/network.json" with { type: "json" };
+import cnMacaulines from "../../../data/cn-macau/lines.json" with { type: "json" };
+import cnMacaustations from "../../../data/cn-macau/stations.json" with { type: "json" };
+import cnMacaustops from "../../../data/cn-macau/stops.json" with { type: "json" };
+import cnMacaupatterns from "../../../data/cn-macau/patterns.json" with { type: "json" };
+import cnMacausegments from "../../../data/cn-macau/segments.json" with { type: "json" };
+import cnMacautransfers from "../../../data/cn-macau/transfers.json" with { type: "json" };
+import cnMacautimetables from "../../../data/cn-macau/timetables.json" with { type: "json" };
+import cnMacaufares from "../../../data/cn-macau/fares.json" with { type: "json" };
+import cnNanjingnetwork from "../../../data/cn-nanjing/network.json" with { type: "json" };
+import cnNanjinglines from "../../../data/cn-nanjing/lines.json" with { type: "json" };
+import cnNanjingstations from "../../../data/cn-nanjing/stations.json" with { type: "json" };
+import cnNanjingstops from "../../../data/cn-nanjing/stops.json" with { type: "json" };
+import cnNanjingpatterns from "../../../data/cn-nanjing/patterns.json" with { type: "json" };
+import cnNanjingsegments from "../../../data/cn-nanjing/segments.json" with { type: "json" };
+import cnNanjingtransfers from "../../../data/cn-nanjing/transfers.json" with { type: "json" };
+import cnNanjingtimetables from "../../../data/cn-nanjing/timetables.json" with { type: "json" };
+import cnNanjingfares from "../../../data/cn-nanjing/fares.json" with { type: "json" };
+import cnQingdaonetwork from "../../../data/cn-qingdao/network.json" with { type: "json" };
+import cnQingdaolines from "../../../data/cn-qingdao/lines.json" with { type: "json" };
+import cnQingdaostations from "../../../data/cn-qingdao/stations.json" with { type: "json" };
+import cnQingdaostops from "../../../data/cn-qingdao/stops.json" with { type: "json" };
+import cnQingdaopatterns from "../../../data/cn-qingdao/patterns.json" with { type: "json" };
+import cnQingdaosegments from "../../../data/cn-qingdao/segments.json" with { type: "json" };
+import cnQingdaotransfers from "../../../data/cn-qingdao/transfers.json" with { type: "json" };
+import cnQingdaotimetables from "../../../data/cn-qingdao/timetables.json" with { type: "json" };
+import cnQingdaofares from "../../../data/cn-qingdao/fares.json" with { type: "json" };
 import cnShanghainetwork from "../../../data/cn-shanghai/network.json" with { type: "json" };
 import cnShanghailines from "../../../data/cn-shanghai/lines.json" with { type: "json" };
 import cnShanghaistations from "../../../data/cn-shanghai/stations.json" with { type: "json" };
@@ -54,6 +135,69 @@ import cnSuzhousegments from "../../../data/cn-suzhou/segments.json" with { type
 import cnSuzhoutransfers from "../../../data/cn-suzhou/transfers.json" with { type: "json" };
 import cnSuzhoutimetables from "../../../data/cn-suzhou/timetables.json" with { type: "json" };
 import cnSuzhoufares from "../../../data/cn-suzhou/fares.json" with { type: "json" };
+import cnTaichungnetwork from "../../../data/cn-taichung/network.json" with { type: "json" };
+import cnTaichunglines from "../../../data/cn-taichung/lines.json" with { type: "json" };
+import cnTaichungstations from "../../../data/cn-taichung/stations.json" with { type: "json" };
+import cnTaichungstops from "../../../data/cn-taichung/stops.json" with { type: "json" };
+import cnTaichungpatterns from "../../../data/cn-taichung/patterns.json" with { type: "json" };
+import cnTaichungsegments from "../../../data/cn-taichung/segments.json" with { type: "json" };
+import cnTaichungtransfers from "../../../data/cn-taichung/transfers.json" with { type: "json" };
+import cnTaichungtimetables from "../../../data/cn-taichung/timetables.json" with { type: "json" };
+import cnTaichungfares from "../../../data/cn-taichung/fares.json" with { type: "json" };
+import cnTianjinnetwork from "../../../data/cn-tianjin/network.json" with { type: "json" };
+import cnTianjinlines from "../../../data/cn-tianjin/lines.json" with { type: "json" };
+import cnTianjinstations from "../../../data/cn-tianjin/stations.json" with { type: "json" };
+import cnTianjinstops from "../../../data/cn-tianjin/stops.json" with { type: "json" };
+import cnTianjinpatterns from "../../../data/cn-tianjin/patterns.json" with { type: "json" };
+import cnTianjinsegments from "../../../data/cn-tianjin/segments.json" with { type: "json" };
+import cnTianjintransfers from "../../../data/cn-tianjin/transfers.json" with { type: "json" };
+import cnTianjintimetables from "../../../data/cn-tianjin/timetables.json" with { type: "json" };
+import cnTianjinfares from "../../../data/cn-tianjin/fares.json" with { type: "json" };
+import cnUrumqinetwork from "../../../data/cn-urumqi/network.json" with { type: "json" };
+import cnUrumqilines from "../../../data/cn-urumqi/lines.json" with { type: "json" };
+import cnUrumqistations from "../../../data/cn-urumqi/stations.json" with { type: "json" };
+import cnUrumqistops from "../../../data/cn-urumqi/stops.json" with { type: "json" };
+import cnUrumqipatterns from "../../../data/cn-urumqi/patterns.json" with { type: "json" };
+import cnUrumqisegments from "../../../data/cn-urumqi/segments.json" with { type: "json" };
+import cnUrumqitransfers from "../../../data/cn-urumqi/transfers.json" with { type: "json" };
+import cnUrumqitimetables from "../../../data/cn-urumqi/timetables.json" with { type: "json" };
+import cnUrumqifares from "../../../data/cn-urumqi/fares.json" with { type: "json" };
+import cnWuhannetwork from "../../../data/cn-wuhan/network.json" with { type: "json" };
+import cnWuhanlines from "../../../data/cn-wuhan/lines.json" with { type: "json" };
+import cnWuhanstations from "../../../data/cn-wuhan/stations.json" with { type: "json" };
+import cnWuhanstops from "../../../data/cn-wuhan/stops.json" with { type: "json" };
+import cnWuhanpatterns from "../../../data/cn-wuhan/patterns.json" with { type: "json" };
+import cnWuhansegments from "../../../data/cn-wuhan/segments.json" with { type: "json" };
+import cnWuhantransfers from "../../../data/cn-wuhan/transfers.json" with { type: "json" };
+import cnWuhantimetables from "../../../data/cn-wuhan/timetables.json" with { type: "json" };
+import cnWuhanfares from "../../../data/cn-wuhan/fares.json" with { type: "json" };
+import cnXiamennetwork from "../../../data/cn-xiamen/network.json" with { type: "json" };
+import cnXiamenlines from "../../../data/cn-xiamen/lines.json" with { type: "json" };
+import cnXiamenstations from "../../../data/cn-xiamen/stations.json" with { type: "json" };
+import cnXiamenstops from "../../../data/cn-xiamen/stops.json" with { type: "json" };
+import cnXiamenpatterns from "../../../data/cn-xiamen/patterns.json" with { type: "json" };
+import cnXiamensegments from "../../../data/cn-xiamen/segments.json" with { type: "json" };
+import cnXiamentransfers from "../../../data/cn-xiamen/transfers.json" with { type: "json" };
+import cnXiamentimetables from "../../../data/cn-xiamen/timetables.json" with { type: "json" };
+import cnXiamenfares from "../../../data/cn-xiamen/fares.json" with { type: "json" };
+import cnXiannetwork from "../../../data/cn-xian/network.json" with { type: "json" };
+import cnXianlines from "../../../data/cn-xian/lines.json" with { type: "json" };
+import cnXianstations from "../../../data/cn-xian/stations.json" with { type: "json" };
+import cnXianstops from "../../../data/cn-xian/stops.json" with { type: "json" };
+import cnXianpatterns from "../../../data/cn-xian/patterns.json" with { type: "json" };
+import cnXiansegments from "../../../data/cn-xian/segments.json" with { type: "json" };
+import cnXiantransfers from "../../../data/cn-xian/transfers.json" with { type: "json" };
+import cnXiantimetables from "../../../data/cn-xian/timetables.json" with { type: "json" };
+import cnXianfares from "../../../data/cn-xian/fares.json" with { type: "json" };
+import cnZhengzhounetwork from "../../../data/cn-zhengzhou/network.json" with { type: "json" };
+import cnZhengzhoulines from "../../../data/cn-zhengzhou/lines.json" with { type: "json" };
+import cnZhengzhoustations from "../../../data/cn-zhengzhou/stations.json" with { type: "json" };
+import cnZhengzhoustops from "../../../data/cn-zhengzhou/stops.json" with { type: "json" };
+import cnZhengzhoupatterns from "../../../data/cn-zhengzhou/patterns.json" with { type: "json" };
+import cnZhengzhousegments from "../../../data/cn-zhengzhou/segments.json" with { type: "json" };
+import cnZhengzhoutransfers from "../../../data/cn-zhengzhou/transfers.json" with { type: "json" };
+import cnZhengzhoutimetables from "../../../data/cn-zhengzhou/timetables.json" with { type: "json" };
+import cnZhengzhoufares from "../../../data/cn-zhengzhou/fares.json" with { type: "json" };
 
 import type { RawNetworkFiles } from "../../core/src/data/types.js";
 
@@ -68,6 +212,39 @@ export const files: Record<string, RawNetworkFiles> = {
     transfers: cnBeijingtransfers,
     timetables: cnBeijingtimetables,
     fares: cnBeijingfares,
+  },
+  "cn-chengdu": {
+    network: cnChengdunetwork,
+    lines: cnChengdulines,
+    stations: cnChengdustations,
+    stops: cnChengdustops,
+    patterns: cnChengdupatterns,
+    segments: cnChengdusegments,
+    transfers: cnChengdutransfers,
+    timetables: cnChengdutimetables,
+    fares: cnChengdufares,
+  },
+  "cn-chongqing": {
+    network: cnChongqingnetwork,
+    lines: cnChongqinglines,
+    stations: cnChongqingstations,
+    stops: cnChongqingstops,
+    patterns: cnChongqingpatterns,
+    segments: cnChongqingsegments,
+    transfers: cnChongqingtransfers,
+    timetables: cnChongqingtimetables,
+    fares: cnChongqingfares,
+  },
+  "cn-fuzhou": {
+    network: cnFuzhounetwork,
+    lines: cnFuzhoulines,
+    stations: cnFuzhoustations,
+    stops: cnFuzhoustops,
+    patterns: cnFuzhoupatterns,
+    segments: cnFuzhousegments,
+    transfers: cnFuzhoutransfers,
+    timetables: cnFuzhoutimetables,
+    fares: cnFuzhoufares,
   },
   "cn-guangzhou": {
     network: cnGuangzhounetwork,
@@ -90,6 +267,72 @@ export const files: Record<string, RawNetworkFiles> = {
     transfers: cnHangzhoutransfers,
     timetables: cnHangzhoutimetables,
     fares: cnHangzhoufares,
+  },
+  "cn-hongkong": {
+    network: cnHongkongnetwork,
+    lines: cnHongkonglines,
+    stations: cnHongkongstations,
+    stops: cnHongkongstops,
+    patterns: cnHongkongpatterns,
+    segments: cnHongkongsegments,
+    transfers: cnHongkongtransfers,
+    timetables: cnHongkongtimetables,
+    fares: cnHongkongfares,
+  },
+  "cn-jinan": {
+    network: cnJinannetwork,
+    lines: cnJinanlines,
+    stations: cnJinanstations,
+    stops: cnJinanstops,
+    patterns: cnJinanpatterns,
+    segments: cnJinansegments,
+    transfers: cnJinantransfers,
+    timetables: cnJinantimetables,
+    fares: cnJinanfares,
+  },
+  "cn-kaohsiung": {
+    network: cnKaohsiungnetwork,
+    lines: cnKaohsiunglines,
+    stations: cnKaohsiungstations,
+    stops: cnKaohsiungstops,
+    patterns: cnKaohsiungpatterns,
+    segments: cnKaohsiungsegments,
+    transfers: cnKaohsiungtransfers,
+    timetables: cnKaohsiungtimetables,
+    fares: cnKaohsiungfares,
+  },
+  "cn-macau": {
+    network: cnMacaunetwork,
+    lines: cnMacaulines,
+    stations: cnMacaustations,
+    stops: cnMacaustops,
+    patterns: cnMacaupatterns,
+    segments: cnMacausegments,
+    transfers: cnMacautransfers,
+    timetables: cnMacautimetables,
+    fares: cnMacaufares,
+  },
+  "cn-nanjing": {
+    network: cnNanjingnetwork,
+    lines: cnNanjinglines,
+    stations: cnNanjingstations,
+    stops: cnNanjingstops,
+    patterns: cnNanjingpatterns,
+    segments: cnNanjingsegments,
+    transfers: cnNanjingtransfers,
+    timetables: cnNanjingtimetables,
+    fares: cnNanjingfares,
+  },
+  "cn-qingdao": {
+    network: cnQingdaonetwork,
+    lines: cnQingdaolines,
+    stations: cnQingdaostations,
+    stops: cnQingdaostops,
+    patterns: cnQingdaopatterns,
+    segments: cnQingdaosegments,
+    transfers: cnQingdaotransfers,
+    timetables: cnQingdaotimetables,
+    fares: cnQingdaofares,
   },
   "cn-shanghai": {
     network: cnShanghainetwork,
@@ -123,5 +366,82 @@ export const files: Record<string, RawNetworkFiles> = {
     transfers: cnSuzhoutransfers,
     timetables: cnSuzhoutimetables,
     fares: cnSuzhoufares,
+  },
+  "cn-taichung": {
+    network: cnTaichungnetwork,
+    lines: cnTaichunglines,
+    stations: cnTaichungstations,
+    stops: cnTaichungstops,
+    patterns: cnTaichungpatterns,
+    segments: cnTaichungsegments,
+    transfers: cnTaichungtransfers,
+    timetables: cnTaichungtimetables,
+    fares: cnTaichungfares,
+  },
+  "cn-tianjin": {
+    network: cnTianjinnetwork,
+    lines: cnTianjinlines,
+    stations: cnTianjinstations,
+    stops: cnTianjinstops,
+    patterns: cnTianjinpatterns,
+    segments: cnTianjinsegments,
+    transfers: cnTianjintransfers,
+    timetables: cnTianjintimetables,
+    fares: cnTianjinfares,
+  },
+  "cn-urumqi": {
+    network: cnUrumqinetwork,
+    lines: cnUrumqilines,
+    stations: cnUrumqistations,
+    stops: cnUrumqistops,
+    patterns: cnUrumqipatterns,
+    segments: cnUrumqisegments,
+    transfers: cnUrumqitransfers,
+    timetables: cnUrumqitimetables,
+    fares: cnUrumqifares,
+  },
+  "cn-wuhan": {
+    network: cnWuhannetwork,
+    lines: cnWuhanlines,
+    stations: cnWuhanstations,
+    stops: cnWuhanstops,
+    patterns: cnWuhanpatterns,
+    segments: cnWuhansegments,
+    transfers: cnWuhantransfers,
+    timetables: cnWuhantimetables,
+    fares: cnWuhanfares,
+  },
+  "cn-xiamen": {
+    network: cnXiamennetwork,
+    lines: cnXiamenlines,
+    stations: cnXiamenstations,
+    stops: cnXiamenstops,
+    patterns: cnXiamenpatterns,
+    segments: cnXiamensegments,
+    transfers: cnXiamentransfers,
+    timetables: cnXiamentimetables,
+    fares: cnXiamenfares,
+  },
+  "cn-xian": {
+    network: cnXiannetwork,
+    lines: cnXianlines,
+    stations: cnXianstations,
+    stops: cnXianstops,
+    patterns: cnXianpatterns,
+    segments: cnXiansegments,
+    transfers: cnXiantransfers,
+    timetables: cnXiantimetables,
+    fares: cnXianfares,
+  },
+  "cn-zhengzhou": {
+    network: cnZhengzhounetwork,
+    lines: cnZhengzhoulines,
+    stations: cnZhengzhoustations,
+    stops: cnZhengzhoustops,
+    patterns: cnZhengzhoupatterns,
+    segments: cnZhengzhousegments,
+    transfers: cnZhengzhoutransfers,
+    timetables: cnZhengzhoutimetables,
+    fares: cnZhengzhoufares,
   },
 };

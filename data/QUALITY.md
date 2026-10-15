@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-13T07:09:05.252Z_
+_Updated 2026-10-15T09:27:14.987Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -118,6 +118,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Schematic | ✅ Complete | official | 100% | official=155 |
 | Fares | ✅ Complete | official | 100% | official=20880 |
 
+## 高雄捷運 / Kaohsiung Metro (`cn-kaohsiung`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | 🟠 Derived | derived | 100% | derived=76 |
+| Names | ✅ Complete | official | 100% | official=76 |
+| Segment times | ✅ Complete | official | 100% | official=76, derived=37 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=113 |
+| Transfer times | 🟡 Partial | derived | 75% | derived=6, default=2 |
+| Timetables | ✅ Complete | official | 100% | official=150 |
+| Schematic | ❌ Unavailable | default | 0% | default=77 |
+| Fares | 🟡 Partial | official | 49% | official=2812, default=2888 |
+
 ## 澳門輕軌 / Macau Light Rapid Transit (`cn-macau`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -201,6 +215,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Timetables | ✅ Complete | official | 100% | official=534 |
 | Schematic | ✅ Complete | official | 100% | official=279 |
 | Fares | 🟡 Partial | official | 97% | official=54990, default=1892 |
+
+## 臺中捷運 / Taichung Metro (`cn-taichung`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=18 |
+| Names | ✅ Complete | official | 100% | official=18 |
+| Segment times | ✅ Complete | official | 100% | official=34 |
+| Segment distances | ✅ Complete | official | 100% | official=34 |
+| Transfer times | ❌ Unavailable | default | 0% | — |
+| Timetables | ✅ Complete | official | 100% | official=34 |
+| Schematic | ❌ Unavailable | default | 0% | default=18 |
+| Fares | ✅ Complete | official | 100% | official=306 |
 
 ## 天津轨道交通 / Tianjin Rail Transit (`cn-tianjin`)
 

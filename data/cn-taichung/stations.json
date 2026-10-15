@@ -1,0 +1,528 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-taichung",
+  "generated_at": "2026-10-15T09:25:23.671Z",
+  "source": [
+    {
+      "name": "tmrt-stations",
+      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=f9511cc5-4799-4df9-98b7-0b0f89fc2be9",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "license": "custom",
+      "license_url": "https://data.gov.tw/license",
+      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    },
+    {
+      "name": "tmrt-fares",
+      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=261c5b91-8f02-4c17-8a97-23c1384eced7",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "license": "custom",
+      "license_url": "https://data.gov.tw/license",
+      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    },
+    {
+      "name": "tmrt-runtimes",
+      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=4edec91c-05c8-4dee-9f93-7ab3cef20fc3",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "license": "custom",
+      "license_url": "https://data.gov.tw/license",
+      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    },
+    {
+      "name": "tmrt-timetables",
+      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=fabf5eb7-c161-4b77-bf7c-6c6449fe5a89",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "license": "custom",
+      "license_url": "https://data.gov.tw/license",
+      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    },
+    {
+      "name": "tmrt-officialStations",
+      "url": "https://www.tmrt.com.tw/metro-life/ride-time-and-fare",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:25:23.669Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "臺中捷運股份有限公司；官方車站清單、站名、順序及識別碼。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-taichung-103",
+      "name": "舊社",
+      "names": {
+        "zh": "舊社",
+        "en": "Jiushe"
+      },
+      "location": {
+        "lon": 120.707294,
+        "lat": 24.182289,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "9396045b-31bb-4135-96ad-0b5040bd4aeb"
+        }
+      ],
+      "extras": {
+        "station_code": "103",
+        "open_data_code": "G3",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-103a",
+      "name": "北屯總站",
+      "names": {
+        "zh": "北屯總站",
+        "en": "Beitun Main Station"
+      },
+      "location": {
+        "lon": 120.70864,
+        "lat": 24.189132,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "0afa3027-e0cd-43a2-902b-c3081efd3b27"
+        }
+      ],
+      "extras": {
+        "station_code": "103a",
+        "open_data_code": "G0",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-104",
+      "name": "松竹",
+      "names": {
+        "zh": "松竹",
+        "en": "Songzhu"
+      },
+      "location": {
+        "lon": 120.70145,
+        "lat": 24.180807,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "8cbc2661-c30e-417e-bfe5-69c7fd559f77"
+        }
+      ],
+      "extras": {
+        "station_code": "104",
+        "open_data_code": "G4",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-105",
+      "name": "四維國小",
+      "names": {
+        "zh": "四維國小",
+        "en": "Sihwei Elementary School"
+      },
+      "location": {
+        "lon": 120.693295,
+        "lat": 24.171243,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "95ea9819-79c6-4069-bee9-80e09f9ceb75"
+        }
+      ],
+      "extras": {
+        "station_code": "105",
+        "open_data_code": "G5",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-106",
+      "name": "文心崇德",
+      "names": {
+        "zh": "文心崇德",
+        "en": "Wenxin Chongde"
+      },
+      "location": {
+        "lon": 120.684869,
+        "lat": 24.172194,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "080ccba5-84e9-4b23-9800-84a68fa614f7"
+        }
+      ],
+      "extras": {
+        "station_code": "106",
+        "open_data_code": "G6",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-107",
+      "name": "文心中清",
+      "names": {
+        "zh": "文心中清",
+        "en": "Wenxin Zhongqing"
+      },
+      "location": {
+        "lon": 120.670599,
+        "lat": 24.173682,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "f911489b-497e-45ef-bafa-2876083b8458"
+        }
+      ],
+      "extras": {
+        "station_code": "107",
+        "open_data_code": "G7",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-108",
+      "name": "文華高中",
+      "names": {
+        "zh": "文華高中",
+        "en": "Wenhua Senior High School"
+      },
+      "location": {
+        "lon": 120.660455,
+        "lat": 24.171416,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "4f85d84b-06d9-40de-a2d3-c9c54f58119a"
+        }
+      ],
+      "extras": {
+        "station_code": "108",
+        "open_data_code": "G8",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-109",
+      "name": "文心櫻花",
+      "names": {
+        "zh": "文心櫻花",
+        "en": "Wenxin Yinghua"
+      },
+      "location": {
+        "lon": 120.653674,
+        "lat": 24.167636,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "17e62fc0-7e3f-42a8-80ce-c597136e6f99"
+        }
+      ],
+      "extras": {
+        "station_code": "109",
+        "open_data_code": "G8a",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-110",
+      "name": "市政府",
+      "names": {
+        "zh": "市政府",
+        "en": "Taichung City Hall"
+      },
+      "location": {
+        "lon": 120.649035,
+        "lat": 24.16199,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "82361949-b015-4435-aab6-75166d4b5681"
+        }
+      ],
+      "extras": {
+        "station_code": "110",
+        "open_data_code": "G9",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-111",
+      "name": "水安宮",
+      "names": {
+        "zh": "水安宮",
+        "en": "Shui-an Temple"
+      },
+      "location": {
+        "lon": 120.646687,
+        "lat": 24.153113,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "6f55e961-4add-4b24-82ba-d477d47c771a"
+        }
+      ],
+      "extras": {
+        "station_code": "111",
+        "open_data_code": "G10",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-112",
+      "name": "文心森林公園",
+      "names": {
+        "zh": "文心森林公園",
+        "en": "Wenxin Forest Park"
+      },
+      "location": {
+        "lon": 120.6466,
+        "lat": 24.1454,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "52c7f0f6-47b2-4341-bcb8-6485aeab0279"
+        }
+      ],
+      "extras": {
+        "station_code": "112",
+        "open_data_code": "G10a",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-113",
+      "name": "南屯",
+      "names": {
+        "zh": "南屯",
+        "en": "Nantun"
+      },
+      "location": {
+        "lon": 120.6466,
+        "lat": 24.1405,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "04daa9f4-d7d2-4099-8b90-a9f77ca7c201"
+        }
+      ],
+      "extras": {
+        "station_code": "113",
+        "open_data_code": "G11",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-114",
+      "name": "豐樂公園",
+      "names": {
+        "zh": "豐樂公園",
+        "en": "Feng-le Park"
+      },
+      "location": {
+        "lon": 120.64635,
+        "lat": 24.132606,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "c089d378-8398-4d04-9efa-3aeaa73ed5f2"
+        }
+      ],
+      "extras": {
+        "station_code": "114",
+        "open_data_code": "G12",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-115",
+      "name": "大慶",
+      "names": {
+        "zh": "大慶",
+        "en": "Daqing"
+      },
+      "location": {
+        "lon": 120.6476,
+        "lat": 24.1191,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "a4c466b9-9cca-4b27-8be1-5734134aa4c8"
+        }
+      ],
+      "extras": {
+        "station_code": "115",
+        "open_data_code": "G13",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-116",
+      "name": "九張犁",
+      "names": {
+        "zh": "九張犁",
+        "en": "Jiuzhangli"
+      },
+      "location": {
+        "lon": 120.6401,
+        "lat": 24.1145,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "0f61a447-86c5-4bdd-9282-aab066e1acfc"
+        }
+      ],
+      "extras": {
+        "station_code": "116",
+        "open_data_code": "G14",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-117",
+      "name": "九德",
+      "names": {
+        "zh": "九德",
+        "en": "Jiude"
+      },
+      "location": {
+        "lon": 120.634481,
+        "lat": 24.111049,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "34b7d9a2-228f-4c84-a969-72a7cfda0a82"
+        }
+      ],
+      "extras": {
+        "station_code": "117",
+        "open_data_code": "G15",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-118",
+      "name": "烏日",
+      "names": {
+        "zh": "烏日",
+        "en": "Wuri"
+      },
+      "location": {
+        "lon": 120.6249,
+        "lat": 24.1089,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "d2da6396-1db1-484e-8c4e-9eae063dcf88"
+        }
+      ],
+      "extras": {
+        "station_code": "118",
+        "open_data_code": "G17",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    },
+    {
+      "id": "cn-taichung-119",
+      "name": "高鐵臺中站",
+      "names": {
+        "zh": "高鐵臺中站",
+        "en": "HSR Taichung Station"
+      },
+      "location": {
+        "lon": 120.614053,
+        "lat": 24.110119,
+        "crs": "wgs84"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "tmrt-stations",
+          "id": "6b0c61b9-4b22-4332-8483-db4a0828cedc"
+        }
+      ],
+      "extras": {
+        "station_code": "119",
+        "open_data_code": "G17",
+        "location_source": "official",
+        "names_source": "official"
+      }
+    }
+  ]
+}

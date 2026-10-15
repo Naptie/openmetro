@@ -1,0 +1,1888 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-kaohsiung",
+  "generated_at": "2026-10-15T09:27:06.855Z",
+  "source": [
+    {
+      "name": "krtc-stations",
+      "url": "https://www.krtc.com.tw/Guide/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-stations",
+      "url": "https://www.krtc.com.tw/KLRT/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-timetables",
+      "url": "https://www.krtc.com.tw/Guide/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-timetables",
+      "url": "https://www.krtc.com.tw/KLRT/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-travel-matrix",
+      "url": "https://www.krtc.com.tw/KLRT/time_between_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-planner",
+      "url": "https://www.krtc.com.tw",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "photon-osm",
+      "url": "https://photon.komoot.io/api/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T09:27:06.851Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "OSM rail POIs matched automatically by name and city; coordinates are derived."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-kaohsiung-stop-c1-to-c2",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c1",
+      "to_stop_id": "cn-kaohsiung-stop-c2",
+      "from_station_id": "cn-kaohsiung-c1",
+      "to_station_id": "cn-kaohsiung-c2",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.744,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c1-to-c37",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c1",
+      "to_stop_id": "cn-kaohsiung-stop-c37",
+      "from_station_id": "cn-kaohsiung-c1",
+      "to_station_id": "cn-kaohsiung-c37",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.458,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c10-to-c11",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c10",
+      "to_stop_id": "cn-kaohsiung-stop-c11",
+      "from_station_id": "cn-kaohsiung-c10",
+      "to_station_id": "cn-kaohsiung-c11",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.478,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c10-to-c9",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c10",
+      "to_stop_id": "cn-kaohsiung-stop-c9",
+      "from_station_id": "cn-kaohsiung-c10",
+      "to_station_id": "cn-kaohsiung-c9",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.562,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c11-to-c10",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c11",
+      "to_stop_id": "cn-kaohsiung-stop-c10",
+      "from_station_id": "cn-kaohsiung-c11",
+      "to_station_id": "cn-kaohsiung-c10",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.478,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c11-to-c12",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c11",
+      "to_stop_id": "cn-kaohsiung-stop-c12",
+      "from_station_id": "cn-kaohsiung-c11",
+      "to_station_id": "cn-kaohsiung-c12",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.541,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c12-to-c11",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c12",
+      "to_stop_id": "cn-kaohsiung-stop-c11",
+      "from_station_id": "cn-kaohsiung-c12",
+      "to_station_id": "cn-kaohsiung-c11",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.541,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c12-to-c13",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c12",
+      "to_stop_id": "cn-kaohsiung-stop-c13",
+      "from_station_id": "cn-kaohsiung-c12",
+      "to_station_id": "cn-kaohsiung-c13",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.492,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c13-to-c12",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c13",
+      "to_stop_id": "cn-kaohsiung-stop-c12",
+      "from_station_id": "cn-kaohsiung-c13",
+      "to_station_id": "cn-kaohsiung-c12",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.492,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c13-to-c14",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c13",
+      "to_stop_id": "cn-kaohsiung-stop-c14",
+      "from_station_id": "cn-kaohsiung-c13",
+      "to_station_id": "cn-kaohsiung-c14",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.438,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c14-to-c13",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c14",
+      "to_stop_id": "cn-kaohsiung-stop-c13",
+      "from_station_id": "cn-kaohsiung-c14",
+      "to_station_id": "cn-kaohsiung-c13",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.438,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c14-to-c15",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c14",
+      "to_stop_id": "cn-kaohsiung-stop-c15",
+      "from_station_id": "cn-kaohsiung-c14",
+      "to_station_id": "cn-kaohsiung-c15",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.619,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c15-to-c14",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c15",
+      "to_stop_id": "cn-kaohsiung-stop-c14",
+      "from_station_id": "cn-kaohsiung-c15",
+      "to_station_id": "cn-kaohsiung-c14",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.619,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c15-to-c16",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c15",
+      "to_stop_id": "cn-kaohsiung-stop-c16",
+      "from_station_id": "cn-kaohsiung-c15",
+      "to_station_id": "cn-kaohsiung-c16",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.397,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c16-to-c15",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c16",
+      "to_stop_id": "cn-kaohsiung-stop-c15",
+      "from_station_id": "cn-kaohsiung-c16",
+      "to_station_id": "cn-kaohsiung-c15",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.397,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c16-to-c17",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c16",
+      "to_stop_id": "cn-kaohsiung-stop-c17",
+      "from_station_id": "cn-kaohsiung-c16",
+      "to_station_id": "cn-kaohsiung-c17",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.746,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c17-to-c16",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c17",
+      "to_stop_id": "cn-kaohsiung-stop-c16",
+      "from_station_id": "cn-kaohsiung-c17",
+      "to_station_id": "cn-kaohsiung-c16",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.746,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c17-to-c18",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c17",
+      "to_stop_id": "cn-kaohsiung-stop-c18",
+      "from_station_id": "cn-kaohsiung-c17",
+      "to_station_id": "cn-kaohsiung-c18",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.683,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c18-to-c17",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c18",
+      "to_stop_id": "cn-kaohsiung-stop-c17",
+      "from_station_id": "cn-kaohsiung-c18",
+      "to_station_id": "cn-kaohsiung-c17",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.683,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c18-to-c19",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c18",
+      "to_stop_id": "cn-kaohsiung-stop-c19",
+      "from_station_id": "cn-kaohsiung-c18",
+      "to_station_id": "cn-kaohsiung-c19",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.566,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c19-to-c18",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c19",
+      "to_stop_id": "cn-kaohsiung-stop-c18",
+      "from_station_id": "cn-kaohsiung-c19",
+      "to_station_id": "cn-kaohsiung-c18",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.566,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c19-to-c20",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c19",
+      "to_stop_id": "cn-kaohsiung-stop-c20",
+      "from_station_id": "cn-kaohsiung-c19",
+      "to_station_id": "cn-kaohsiung-c20",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.565,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c2-to-c1",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c2",
+      "to_stop_id": "cn-kaohsiung-stop-c1",
+      "from_station_id": "cn-kaohsiung-c2",
+      "to_station_id": "cn-kaohsiung-c1",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.744,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c2-to-c3",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c2",
+      "to_stop_id": "cn-kaohsiung-stop-c3",
+      "from_station_id": "cn-kaohsiung-c2",
+      "to_station_id": "cn-kaohsiung-c3",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.64,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c20-to-c19",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c20",
+      "to_stop_id": "cn-kaohsiung-stop-c19",
+      "from_station_id": "cn-kaohsiung-c20",
+      "to_station_id": "cn-kaohsiung-c19",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.565,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c20-to-c21a",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c20",
+      "to_stop_id": "cn-kaohsiung-stop-c21a",
+      "from_station_id": "cn-kaohsiung-c20",
+      "to_station_id": "cn-kaohsiung-c21a",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.337,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21-to-c21a",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c21",
+      "to_stop_id": "cn-kaohsiung-stop-c21a",
+      "from_station_id": "cn-kaohsiung-c21",
+      "to_station_id": "cn-kaohsiung-c21a",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.453,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21-to-c22",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c21",
+      "to_stop_id": "cn-kaohsiung-stop-c22",
+      "from_station_id": "cn-kaohsiung-c21",
+      "to_station_id": "cn-kaohsiung-c22",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.394,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21a-to-c20",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c21a",
+      "to_stop_id": "cn-kaohsiung-stop-c20",
+      "from_station_id": "cn-kaohsiung-c21a",
+      "to_station_id": "cn-kaohsiung-c20",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.337,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21a-to-c21",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c21a",
+      "to_stop_id": "cn-kaohsiung-stop-c21",
+      "from_station_id": "cn-kaohsiung-c21a",
+      "to_station_id": "cn-kaohsiung-c21",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.453,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c22-to-c21",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c22",
+      "to_stop_id": "cn-kaohsiung-stop-c21",
+      "from_station_id": "cn-kaohsiung-c22",
+      "to_station_id": "cn-kaohsiung-c21",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.394,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c22-to-c23",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c22",
+      "to_stop_id": "cn-kaohsiung-stop-c23",
+      "from_station_id": "cn-kaohsiung-c22",
+      "to_station_id": "cn-kaohsiung-c23",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.412,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c23-to-c22",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c23",
+      "to_stop_id": "cn-kaohsiung-stop-c22",
+      "from_station_id": "cn-kaohsiung-c23",
+      "to_station_id": "cn-kaohsiung-c22",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.412,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c23-to-c24",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c23",
+      "to_stop_id": "cn-kaohsiung-stop-c24",
+      "from_station_id": "cn-kaohsiung-c23",
+      "to_station_id": "cn-kaohsiung-c24",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.859,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c24-to-c23",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c24",
+      "to_stop_id": "cn-kaohsiung-stop-c23",
+      "from_station_id": "cn-kaohsiung-c24",
+      "to_station_id": "cn-kaohsiung-c23",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.859,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c24-to-c25",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c24",
+      "to_stop_id": "cn-kaohsiung-stop-c25",
+      "from_station_id": "cn-kaohsiung-c24",
+      "to_station_id": "cn-kaohsiung-c25",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.572,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c25-to-c24",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c25",
+      "to_stop_id": "cn-kaohsiung-stop-c24",
+      "from_station_id": "cn-kaohsiung-c25",
+      "to_station_id": "cn-kaohsiung-c24",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.572,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c25-to-c26",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c25",
+      "to_stop_id": "cn-kaohsiung-stop-c26",
+      "from_station_id": "cn-kaohsiung-c25",
+      "to_station_id": "cn-kaohsiung-c26",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.691,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c26-to-c25",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c26",
+      "to_stop_id": "cn-kaohsiung-stop-c25",
+      "from_station_id": "cn-kaohsiung-c26",
+      "to_station_id": "cn-kaohsiung-c25",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.691,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c26-to-c27",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c26",
+      "to_stop_id": "cn-kaohsiung-stop-c27",
+      "from_station_id": "cn-kaohsiung-c26",
+      "to_station_id": "cn-kaohsiung-c27",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.415,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c27-to-c26",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c27",
+      "to_stop_id": "cn-kaohsiung-stop-c26",
+      "from_station_id": "cn-kaohsiung-c27",
+      "to_station_id": "cn-kaohsiung-c26",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.415,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c27-to-c28",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c27",
+      "to_stop_id": "cn-kaohsiung-stop-c28",
+      "from_station_id": "cn-kaohsiung-c27",
+      "to_station_id": "cn-kaohsiung-c28",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.683,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c28-to-c27",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c28",
+      "to_stop_id": "cn-kaohsiung-stop-c27",
+      "from_station_id": "cn-kaohsiung-c28",
+      "to_station_id": "cn-kaohsiung-c27",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.683,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c28-to-c29",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c28",
+      "to_stop_id": "cn-kaohsiung-stop-c29",
+      "from_station_id": "cn-kaohsiung-c28",
+      "to_station_id": "cn-kaohsiung-c29",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.701,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c29-to-c28",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c29",
+      "to_stop_id": "cn-kaohsiung-stop-c28",
+      "from_station_id": "cn-kaohsiung-c29",
+      "to_station_id": "cn-kaohsiung-c28",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.701,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c29-to-c30",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c29",
+      "to_stop_id": "cn-kaohsiung-stop-c30",
+      "from_station_id": "cn-kaohsiung-c29",
+      "to_station_id": "cn-kaohsiung-c30",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.771,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c3-to-c2",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c3",
+      "to_stop_id": "cn-kaohsiung-stop-c2",
+      "from_station_id": "cn-kaohsiung-c3",
+      "to_station_id": "cn-kaohsiung-c2",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.64,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c3-to-c4",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c3",
+      "to_stop_id": "cn-kaohsiung-stop-c4",
+      "from_station_id": "cn-kaohsiung-c3",
+      "to_station_id": "cn-kaohsiung-c4",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.541,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c30-to-c29",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c30",
+      "to_stop_id": "cn-kaohsiung-stop-c29",
+      "from_station_id": "cn-kaohsiung-c30",
+      "to_station_id": "cn-kaohsiung-c29",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.771,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c30-to-c31",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c30",
+      "to_stop_id": "cn-kaohsiung-stop-c31",
+      "from_station_id": "cn-kaohsiung-c30",
+      "to_station_id": "cn-kaohsiung-c31",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.485,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c31-to-c30",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c31",
+      "to_stop_id": "cn-kaohsiung-stop-c30",
+      "from_station_id": "cn-kaohsiung-c31",
+      "to_station_id": "cn-kaohsiung-c30",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.485,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c31-to-c32",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c31",
+      "to_stop_id": "cn-kaohsiung-stop-c32",
+      "from_station_id": "cn-kaohsiung-c31",
+      "to_station_id": "cn-kaohsiung-c32",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.473,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c32-to-c31",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c32",
+      "to_stop_id": "cn-kaohsiung-stop-c31",
+      "from_station_id": "cn-kaohsiung-c32",
+      "to_station_id": "cn-kaohsiung-c31",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.473,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c32-to-c33",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c32",
+      "to_stop_id": "cn-kaohsiung-stop-c33",
+      "from_station_id": "cn-kaohsiung-c32",
+      "to_station_id": "cn-kaohsiung-c33",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.479,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c33-to-c32",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c33",
+      "to_stop_id": "cn-kaohsiung-stop-c32",
+      "from_station_id": "cn-kaohsiung-c33",
+      "to_station_id": "cn-kaohsiung-c32",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.479,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c33-to-c34",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c33",
+      "to_stop_id": "cn-kaohsiung-stop-c34",
+      "from_station_id": "cn-kaohsiung-c33",
+      "to_station_id": "cn-kaohsiung-c34",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.472,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c34-to-c33",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c34",
+      "to_stop_id": "cn-kaohsiung-stop-c33",
+      "from_station_id": "cn-kaohsiung-c34",
+      "to_station_id": "cn-kaohsiung-c33",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.472,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c34-to-c35",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c34",
+      "to_stop_id": "cn-kaohsiung-stop-c35",
+      "from_station_id": "cn-kaohsiung-c34",
+      "to_station_id": "cn-kaohsiung-c35",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.505,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c35-to-c34",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c35",
+      "to_stop_id": "cn-kaohsiung-stop-c34",
+      "from_station_id": "cn-kaohsiung-c35",
+      "to_station_id": "cn-kaohsiung-c34",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.505,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c35-to-c36",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c35",
+      "to_stop_id": "cn-kaohsiung-stop-c36",
+      "from_station_id": "cn-kaohsiung-c35",
+      "to_station_id": "cn-kaohsiung-c36",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.488,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c36-to-c35",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c36",
+      "to_stop_id": "cn-kaohsiung-stop-c35",
+      "from_station_id": "cn-kaohsiung-c36",
+      "to_station_id": "cn-kaohsiung-c35",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.488,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c36-to-c37",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c36",
+      "to_stop_id": "cn-kaohsiung-stop-c37",
+      "from_station_id": "cn-kaohsiung-c36",
+      "to_station_id": "cn-kaohsiung-c37",
+      "direction": "forward",
+      "travel_time_seconds": 60,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.463,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c37-to-c1",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c37",
+      "to_stop_id": "cn-kaohsiung-stop-c1",
+      "from_station_id": "cn-kaohsiung-c37",
+      "to_station_id": "cn-kaohsiung-c1",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.458,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c37-to-c36",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c37",
+      "to_stop_id": "cn-kaohsiung-stop-c36",
+      "from_station_id": "cn-kaohsiung-c37",
+      "to_station_id": "cn-kaohsiung-c36",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.463,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c4-to-c3",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c4",
+      "to_stop_id": "cn-kaohsiung-stop-c3",
+      "from_station_id": "cn-kaohsiung-c4",
+      "to_station_id": "cn-kaohsiung-c3",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.541,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c4-to-c5",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c4",
+      "to_stop_id": "cn-kaohsiung-stop-c5",
+      "from_station_id": "cn-kaohsiung-c4",
+      "to_station_id": "cn-kaohsiung-c5",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.597,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c5-to-c4",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c5",
+      "to_stop_id": "cn-kaohsiung-stop-c4",
+      "from_station_id": "cn-kaohsiung-c5",
+      "to_station_id": "cn-kaohsiung-c4",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.597,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c5-to-c6",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c5",
+      "to_stop_id": "cn-kaohsiung-stop-c6",
+      "from_station_id": "cn-kaohsiung-c5",
+      "to_station_id": "cn-kaohsiung-c6",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.696,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c6-to-c5",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c6",
+      "to_stop_id": "cn-kaohsiung-stop-c5",
+      "from_station_id": "cn-kaohsiung-c6",
+      "to_station_id": "cn-kaohsiung-c5",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.696,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c6-to-c7",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c6",
+      "to_stop_id": "cn-kaohsiung-stop-c7",
+      "from_station_id": "cn-kaohsiung-c6",
+      "to_station_id": "cn-kaohsiung-c7",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.565,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c7-to-c6",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c7",
+      "to_stop_id": "cn-kaohsiung-stop-c6",
+      "from_station_id": "cn-kaohsiung-c7",
+      "to_station_id": "cn-kaohsiung-c6",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.565,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c7-to-c8",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c7",
+      "to_stop_id": "cn-kaohsiung-stop-c8",
+      "from_station_id": "cn-kaohsiung-c7",
+      "to_station_id": "cn-kaohsiung-c8",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.569,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c8-to-c7",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c8",
+      "to_stop_id": "cn-kaohsiung-stop-c7",
+      "from_station_id": "cn-kaohsiung-c8",
+      "to_station_id": "cn-kaohsiung-c7",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.569,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c8-to-c9",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c8",
+      "to_stop_id": "cn-kaohsiung-stop-c9",
+      "from_station_id": "cn-kaohsiung-c8",
+      "to_station_id": "cn-kaohsiung-c9",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.508,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c9-to-c10",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c9",
+      "to_stop_id": "cn-kaohsiung-stop-c10",
+      "from_station_id": "cn-kaohsiung-c9",
+      "to_station_id": "cn-kaohsiung-c10",
+      "direction": "forward",
+      "travel_time_seconds": 120,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.562,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c9-to-c8",
+      "line_id": "cn-kaohsiung-line-c",
+      "from_stop_id": "cn-kaohsiung-stop-c9",
+      "to_stop_id": "cn-kaohsiung-stop-c8",
+      "from_station_id": "cn-kaohsiung-c9",
+      "to_station_id": "cn-kaohsiung-c8",
+      "direction": "forward",
+      "travel_time_seconds": 180,
+      "travel_time_source": "source",
+      "source_id": "krtc-lrt-travel-matrix",
+      "distance_km": 0.508,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o1-to-o2",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o1",
+      "to_stop_id": "cn-kaohsiung-stop-o2",
+      "from_station_id": "cn-kaohsiung-o1",
+      "to_station_id": "cn-kaohsiung-o2",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.001,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o10-to-o11",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o10",
+      "to_stop_id": "cn-kaohsiung-stop-o11",
+      "from_station_id": "cn-kaohsiung-o10",
+      "to_station_id": "cn-kaohsiung-o11",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.744,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o11-to-o12",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o11",
+      "to_stop_id": "cn-kaohsiung-stop-o12",
+      "from_station_id": "cn-kaohsiung-o11",
+      "to_station_id": "cn-kaohsiung-o12",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.738,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o12-to-o13",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o12",
+      "to_stop_id": "cn-kaohsiung-stop-o13",
+      "from_station_id": "cn-kaohsiung-o12",
+      "to_station_id": "cn-kaohsiung-o13",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.841,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o13-to-o14",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o13",
+      "to_stop_id": "cn-kaohsiung-stop-o14",
+      "from_station_id": "cn-kaohsiung-o13",
+      "to_station_id": "cn-kaohsiung-o14",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.871,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o14-to-ot1",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o14",
+      "to_stop_id": "cn-kaohsiung-stop-ot1",
+      "from_station_id": "cn-kaohsiung-o14",
+      "to_station_id": "cn-kaohsiung-ot1",
+      "direction": "both",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.946,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o2-to-o4",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o2",
+      "to_stop_id": "cn-kaohsiung-stop-o4",
+      "from_station_id": "cn-kaohsiung-o2",
+      "to_station_id": "cn-kaohsiung-o4",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.208,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o4-to-o5",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o4",
+      "to_stop_id": "cn-kaohsiung-stop-o5",
+      "from_station_id": "cn-kaohsiung-o4",
+      "to_station_id": "cn-kaohsiung-r10",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.79,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o5-to-o6",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o5",
+      "to_stop_id": "cn-kaohsiung-stop-o6",
+      "from_station_id": "cn-kaohsiung-r10",
+      "to_station_id": "cn-kaohsiung-o6",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.987,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o6-to-o7",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o6",
+      "to_stop_id": "cn-kaohsiung-stop-o7",
+      "from_station_id": "cn-kaohsiung-o6",
+      "to_station_id": "cn-kaohsiung-o7",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.635,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o7-to-o8",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o7",
+      "to_stop_id": "cn-kaohsiung-stop-o8",
+      "from_station_id": "cn-kaohsiung-o7",
+      "to_station_id": "cn-kaohsiung-o8",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.033,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o8-to-o9",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o8",
+      "to_stop_id": "cn-kaohsiung-stop-o9",
+      "from_station_id": "cn-kaohsiung-o8",
+      "to_station_id": "cn-kaohsiung-o9",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.759,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o9-to-o10",
+      "line_id": "cn-kaohsiung-line-o",
+      "from_stop_id": "cn-kaohsiung-stop-o9",
+      "to_stop_id": "cn-kaohsiung-stop-o10",
+      "from_station_id": "cn-kaohsiung-o9",
+      "to_station_id": "cn-kaohsiung-o10",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.673,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r10-to-r11",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r10",
+      "to_stop_id": "cn-kaohsiung-stop-r11",
+      "from_station_id": "cn-kaohsiung-r10",
+      "to_station_id": "cn-kaohsiung-r11",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.887,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r11-to-r12",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r11",
+      "to_stop_id": "cn-kaohsiung-stop-r12",
+      "from_station_id": "cn-kaohsiung-r11",
+      "to_station_id": "cn-kaohsiung-r12",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.936,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r12-to-r13",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r12",
+      "to_stop_id": "cn-kaohsiung-stop-r13",
+      "from_station_id": "cn-kaohsiung-r12",
+      "to_station_id": "cn-kaohsiung-r13",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.044,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r13-to-r14",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r13",
+      "to_stop_id": "cn-kaohsiung-stop-r14",
+      "from_station_id": "cn-kaohsiung-r13",
+      "to_station_id": "cn-kaohsiung-r14",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.945,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r14-to-r15",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r14",
+      "to_stop_id": "cn-kaohsiung-stop-r15",
+      "from_station_id": "cn-kaohsiung-r14",
+      "to_station_id": "cn-kaohsiung-r15",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.246,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r15-to-r16",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r15",
+      "to_stop_id": "cn-kaohsiung-stop-r16",
+      "from_station_id": "cn-kaohsiung-r15",
+      "to_station_id": "cn-kaohsiung-r16",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.33,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r16-to-r17",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r16",
+      "to_stop_id": "cn-kaohsiung-stop-r17",
+      "from_station_id": "cn-kaohsiung-r16",
+      "to_station_id": "cn-kaohsiung-r17",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.652,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r17-to-r18",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r17",
+      "to_stop_id": "cn-kaohsiung-stop-r18",
+      "from_station_id": "cn-kaohsiung-r17",
+      "to_station_id": "cn-kaohsiung-r18",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.779,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r18-to-r19",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r18",
+      "to_stop_id": "cn-kaohsiung-stop-r19",
+      "from_station_id": "cn-kaohsiung-r18",
+      "to_station_id": "cn-kaohsiung-r19",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.214,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r19-to-r20",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r19",
+      "to_stop_id": "cn-kaohsiung-stop-r20",
+      "from_station_id": "cn-kaohsiung-r19",
+      "to_station_id": "cn-kaohsiung-r20",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.016,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r20-to-r21",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r20",
+      "to_stop_id": "cn-kaohsiung-stop-r21",
+      "from_station_id": "cn-kaohsiung-r20",
+      "to_station_id": "cn-kaohsiung-r21",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.939,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r21-to-r22",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r21",
+      "to_stop_id": "cn-kaohsiung-stop-r22",
+      "from_station_id": "cn-kaohsiung-r21",
+      "to_station_id": "cn-kaohsiung-r22",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.678,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22-to-r22a",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r22",
+      "to_stop_id": "cn-kaohsiung-stop-r22a",
+      "from_station_id": "cn-kaohsiung-r22",
+      "to_station_id": "cn-kaohsiung-r22a",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.068,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22a-to-r23",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r22a",
+      "to_stop_id": "cn-kaohsiung-stop-r23",
+      "from_station_id": "cn-kaohsiung-r22a",
+      "to_station_id": "cn-kaohsiung-r23",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.911,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r23-to-r24",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r23",
+      "to_stop_id": "cn-kaohsiung-stop-r24",
+      "from_station_id": "cn-kaohsiung-r23",
+      "to_station_id": "cn-kaohsiung-r24",
+      "direction": "both",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 2.387,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r24-to-rk1",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r24",
+      "to_stop_id": "cn-kaohsiung-stop-rk1",
+      "from_station_id": "cn-kaohsiung-r24",
+      "to_station_id": "cn-kaohsiung-rk1",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.346,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r3-to-r4",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r3",
+      "to_stop_id": "cn-kaohsiung-stop-r4",
+      "from_station_id": "cn-kaohsiung-r3",
+      "to_station_id": "cn-kaohsiung-r4",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.403,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4-to-r4a",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r4",
+      "to_stop_id": "cn-kaohsiung-stop-r4a",
+      "from_station_id": "cn-kaohsiung-r4",
+      "to_station_id": "cn-kaohsiung-r4a",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.757,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4a-to-r5",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r4a",
+      "to_stop_id": "cn-kaohsiung-stop-r5",
+      "from_station_id": "cn-kaohsiung-r4a",
+      "to_station_id": "cn-kaohsiung-r5",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.134,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r5-to-r6",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r5",
+      "to_stop_id": "cn-kaohsiung-stop-r6",
+      "from_station_id": "cn-kaohsiung-r5",
+      "to_station_id": "cn-kaohsiung-r6",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.174,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r6-to-r7",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r6",
+      "to_stop_id": "cn-kaohsiung-stop-r7",
+      "from_station_id": "cn-kaohsiung-r6",
+      "to_station_id": "cn-kaohsiung-r7",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.261,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r7-to-r8",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r7",
+      "to_stop_id": "cn-kaohsiung-stop-r8",
+      "from_station_id": "cn-kaohsiung-r7",
+      "to_station_id": "cn-kaohsiung-r8",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.955,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r8-to-r9",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r8",
+      "to_stop_id": "cn-kaohsiung-stop-r9",
+      "from_station_id": "cn-kaohsiung-r8",
+      "to_station_id": "cn-kaohsiung-r9",
+      "direction": "both",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 1.239,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r9-to-r10",
+      "line_id": "cn-kaohsiung-line-r",
+      "from_stop_id": "cn-kaohsiung-stop-r9",
+      "to_stop_id": "cn-kaohsiung-stop-r10",
+      "from_station_id": "cn-kaohsiung-r9",
+      "to_station_id": "cn-kaohsiung-r10",
+      "direction": "both",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "source_id": "krtc-planner",
+      "distance_km": 0.729,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    }
+  ]
+}
