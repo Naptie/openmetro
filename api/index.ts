@@ -1,6 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { files } from '../packages/api-worker/src/data.generated.js';
 import { createApiApp } from '../packages/core/src/api/app.js';
+import { createHttpNetworkSource } from '../packages/core/src/data/http.js';
 import { createMemoryNetworkSource } from '../packages/core/src/data/memory.js';
 
 /**
@@ -10,7 +11,16 @@ import { createMemoryNetworkSource } from '../packages/core/src/data/memory.js';
 let app: ReturnType<typeof createApiApp> | undefined;
 
 function getApp(): ReturnType<typeof createApiApp> {
-  app ??= createApiApp(createMemoryNetworkSource(files as never));
+  if (!app) {
+    const repository =
+      process.env.VERCEL_GIT_REPO_OWNER && process.env.VERCEL_GIT_REPO_SLUG
+        ? `${process.env.VERCEL_GIT_REPO_OWNER}/${process.env.VERCEL_GIT_REPO_SLUG}`
+        : 'Naptie/openmetro';
+    const dataUrl =
+      process.env.OPENMETRO_DATA_URL ??
+      `https://raw.githubusercontent.com/${repository}/data/data/.snapshots/`;
+    app = createApiApp(createHttpNetworkSource(dataUrl, createMemoryNetworkSource(files as never)));
+  }
   return app;
 }
 

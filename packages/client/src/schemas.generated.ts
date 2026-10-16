@@ -29,13 +29,13 @@ export const apiStationListSchema = z.array(apiStationSchema);
 
 export const apiDirectionTypeSchema = z.enum(["linear", "loop_inner", "loop_outer"]);
 
-export const apiTimetableStatusSchema = z.object({ "timetable_id": z.string(), "station_id": z.string(), "line_id": z.string(), "destination_stop_id": z.string().optional(), "is_in_service": z.boolean(), "first_train": z.string(), "last_train": z.string(), "timezone": z.string(), "now": z.string() });
+export const apiTimetableStatusSchema = z.object({ "timetable_id": z.string(), "station_id": z.string(), "line_id": z.string(), "destination_stop_id": z.string().optional(), "is_in_service": z.boolean(), "first_train": z.string(), "last_train": z.string(), "timezone": z.string(), "service_date": z.string().optional(), "now": z.string() });
 
 export const apiStopSchema = z.object({ "id": z.string(), "station_id": z.string(), "line_id": z.string(), "sequence": z.number(), "is_terminal": z.boolean().optional(), "location": apiGeoPointSchema.optional(), "schematic": apiSchematicPointSchema.optional() });
 
 export const apiStopListSchema = z.array(apiStopSchema);
 
-export const apiPatternSchema = z.object({ "id": z.string(), "line_id": z.string(), "name": z.string().optional(), "names": apiNamesSchema.optional(), "stop_ids": z.array(z.string()), "origin_stop_id": z.string(), "terminal_stop_id": z.string(), "is_primary": z.boolean(), "junction_stop_id": z.string().optional(), "color": z.string().optional() });
+export const apiPatternSchema = z.object({ "id": z.string(), "line_id": z.string(), "name": z.string().optional(), "names": apiNamesSchema.optional(), "stop_ids": z.array(z.string()), "origin_stop_id": z.string(), "terminal_stop_id": z.string(), "is_primary": z.boolean(), "junction_stop_id": z.string().optional(), "geometry_reference_pattern_id": z.string().optional(), "color": z.string().optional() });
 
 export const apiPatternListSchema = z.array(apiPatternSchema);
 
@@ -51,7 +51,7 @@ export const apiTransferSchema = z.object({ "id": z.string(), "station_id": z.st
 
 export const apiTransferListSchema = z.array(apiTransferSchema);
 
-export const apiTimetableSchema = z.object({ "id": z.string(), "station_id": z.string(), "stop_id": z.string(), "line_id": z.string(), "destination_stop_id": z.string().optional(), "origin_stop_id": z.string().optional(), "pattern_id": z.string(), "direction_type": apiDirectionTypeSchema.optional(), "direction_label": z.string().optional(), "first_train": z.array(z.string()), "last_train": z.array(z.string()), "is_arrival": z.boolean().optional(), "service": z.string().optional() });
+export const apiTimetableSchema = z.object({ "id": z.string(), "station_id": z.string(), "stop_id": z.string(), "line_id": z.string(), "destination_stop_id": z.string().optional(), "origin_stop_id": z.string().optional(), "pattern_id": z.string(), "direction_type": apiDirectionTypeSchema.optional(), "direction_label": z.string().optional(), "first_train": z.array(z.string()), "last_train": z.array(z.string()), "first_train_desc": z.string().optional(), "last_train_desc": z.string().optional(), "valid_from": z.string().optional(), "valid_to": z.string().optional(), "is_arrival": z.boolean().optional(), "service": z.string().optional() });
 
 export const apiTimetableListSchema = z.array(apiTimetableSchema);
 
@@ -69,7 +69,7 @@ export const apiLayerQualitySchema = z.object({ "precision": z.enum(["official",
 
 export const apiNetworkQualitySchema = z.object({ "topology": apiLayerQualitySchema, "coordinates": apiLayerQualitySchema, "names": apiLayerQualitySchema, "segment_times": apiLayerQualitySchema, "segment_distances": apiLayerQualitySchema, "transfer_times": apiLayerQualitySchema, "timetables": apiLayerQualitySchema, "schematic": apiLayerQualitySchema, "fares": apiLayerQualitySchema.optional() });
 
-export const apiNetworkSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "city": apiCitySchema, "country_code": z.string(), "currency": z.string(), "timezone": z.string(), "coordinate_system": z.enum(["wgs84", "gcj02", "bd09", "schematic", "none"]), "default_units": z.object({ "distance": z.string(), "time": z.string(), "speed": z.string() }), "routing": apiRoutingDefaultsSchema, "quality": apiNetworkQualitySchema.optional(), "synced_at": z.string().optional() });
+export const apiNetworkSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "city": apiCitySchema, "country_code": z.string(), "currency": z.string(), "timezone": z.string(), "coordinate_system": z.enum(["wgs84", "gcj02", "bd09", "schematic", "none"]), "default_units": z.object({ "distance": z.string(), "time": z.string(), "speed": z.string() }), "routing": apiRoutingDefaultsSchema, "service_scope": z.string().optional(), "notes": z.string().optional(), "quality": apiNetworkQualitySchema.optional(), "synced_at": z.string().optional() });
 
 export const apiNetworkListSchema = z.object({ "networks": z.array(apiNetworkSchema) });
 

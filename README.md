@@ -24,6 +24,11 @@ data/
     segments.json, transfers.json, timetables.json, fares.json
 ```
 
+Taiwan includes a Taipei metropolitan metro network (Taipei, New Taipei and
+Airport MRT), plus independent Taichung, Kaohsiung, Taiwan Railway, Taiwan High
+Speed Rail and Alishan Forest Railway networks. Official sources, dated service windows and fare coverage are
+documented in [docs/taiwan-rail-sources.md](docs/taiwan-rail-sources.md).
+
 **Single source of truth:** canonical JSON under `data/<network-id>/` is the one
 source of truth. It is produced by fetching the official sources and is
 regenerated, never hand-edited.
@@ -34,6 +39,10 @@ city-agnostic. Adding a city = adding an adapter package declaring
 discover it statically — nothing else to register.
 
 ## Data model
+
+The Taipei, New Taipei and Taoyuan adapters' official feeds, automated PDF OCR,
+and coverage limits are documented in
+[Taipei region sources](docs/taipei-region-sources.md).
 
 Two-tier topology: a **Station** (physical place) and a **Stop** (a station's
 presence on a specific line). This mirrors GTFS and handles per-line station
@@ -170,7 +179,7 @@ bun run --cwd packages/adapters/cn-beijing normalize
 bun run --cwd packages/adapters/cn-shanghai normalize
 bun run --cwd packages/adapters/cn-guangzhou normalize
 
-# Validate every dataset and write a checksummed manifest
+# Validate every dataset (--out dist/data-manifest.json also writes a manifest)
 bun run data:verify
 
 # Export the OpenAPI document
@@ -180,7 +189,7 @@ bun run openapi
 bun run json-schemas
 
 # Run tests
-bun test
+bun run test
 
 # Run the API (reads data/<network-id>); OpenAPI docs at /swagger
 bun run api
@@ -193,6 +202,10 @@ bun run web:dev
 bun run i18n
 bun run i18n:fix  # sort keys alphabetically and rewrite
 ```
+
+The default test command excludes Qingdao's local-workbook suite. It can be run
+explicitly with `bun test packages/adapters/cn-qingdao/test` when its original
+`tmp/cache/cn-qingdao/official-fare-table.xlsx` cache is available.
 
 ### Frontend
 
@@ -397,7 +410,9 @@ compared against a release.
 - `sync.yml` — scheduled data sync: weekly (Mon 03:17 UTC) topology +
   timetables + enrichment and on-demand fares per network, each network an
   independent matrix job. Changed datasets are staged as artifacts and pushed
-  onto the long-lived `data` branch (merge into `main` manually). Uses secrets
+  onto the long-lived `data` branch, retaining other networks' last successful
+  snapshots. The API refreshes complete network JSON from that branch, and sync
+  completion triggers releases; no daily main merge is required. Uses secrets
   `REVERSE_PROXY` (optional CN egress proxy) and `AMAP_KEY`.
 - `release.yml` — release bundle when release inputs change and artifacts
   differ from the latest release; also force-pushes the typed client onto the
@@ -411,8 +426,10 @@ Live:
 
 Frontend (`packages/web`, SvelteKit static) and API (`api/index.ts` →
 `createApiApp`) ship in **one Vercel project**, same origin. Canonical JSON is
-generated at build time into `packages/api-worker/src/data.generated.ts` and
-bundled into the Node function (no filesystem required at runtime).
+generated at build time into `packages/api-worker/src/data.generated.ts` as a
+bundled cold-start fallback. The Node function refreshes complete network JSON
+from the `data` branch on demand with a five-minute cache. Refresh failures retain
+last-good data and its original service validity. No filesystem is needed at runtime.
 
 Vercel Git integration deploys on push to `main` using `vercel.json`
 (`installCommand` / `buildCommand` / `outputDirectory`). No GitHub Actions

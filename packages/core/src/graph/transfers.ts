@@ -233,7 +233,11 @@ function pairKey(a: string, b: string): [string, string] {
   return a < b ? [a, b] : [b, a];
 }
 
-function walkSeconds(distM: number, defaultSec: number, maxSec: number): number {
+export function estimateTransferWalkSeconds(
+  distM: number,
+  defaultSec: number,
+  maxSec: number
+): number {
   const raw = Math.round(distM / CROSS_XFER.walkSpeedMps) + CROSS_XFER.oosOverheadSec;
   return Math.max(defaultSec, Math.min(maxSec, raw));
 }
@@ -470,7 +474,7 @@ export function deriveCrossStationTransfers(input: CrossStationInput): TransferE
   for (const e of accepted.values()) {
     const primary = RULE_PRIORITY.find((r) => e.rules.has(r)) ?? CROSS_XFER_RULES.HUB_NEAR;
     const [idA, idB] = [e.a, e.b];
-    const walk = walkSeconds(e.distM, defaultWalk, maxWalk);
+    const walk = estimateTransferWalkSeconds(e.distM, defaultWalk, maxWalk);
     const linesA = [...(stopsByStation.get(idA) ?? [])].sort();
     const linesB = [...(stopsByStation.get(idB) ?? [])].sort();
     const stopsA = stopByStation.get(idA) ?? new Map();

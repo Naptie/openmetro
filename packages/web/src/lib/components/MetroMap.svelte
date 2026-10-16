@@ -4,7 +4,7 @@
   import { untrack } from 'svelte';
   import {
     type DrawnLinePath,
-    routeGeometryForStationIds,
+    routeGeometrySegmentsForStationIds,
     smoothLine,
     smoothLineWithStops
   } from '$lib';
@@ -19,6 +19,7 @@
   import { localizedName } from '$lib/format';
   import { i18n } from '$lib/i18n.svelte';
   import { patternVariantKey } from '$lib/patterns.js';
+  import { resolveSharedGeometry, type SharedLinePath } from '$lib/shared-geometry';
   import { app } from '$lib/state.svelte';
 
   let container: HTMLDivElement;
@@ -164,6 +165,15 @@
   });
 
   function setupLayers(m: maplibregl.Map): void {
+    const laneOffset: maplibregl.ExpressionSpecification = [
+      'interpolate',
+      ['linear'],
+      ['zoom'],
+      8,
+      ['*', ['coalesce', ['get', 'lane'], 0], 5],
+      12,
+      ['*', ['coalesce', ['get', 'lane'], 0], 7]
+    ];
     m.addSource('metro-lines', {
       type: 'geojson',
       data: emptyFeatureCollection()
@@ -186,6 +196,7 @@
       paint: {
         'line-color': '#ffffff',
         'line-width': ['interpolate', ['linear'], ['zoom'], 8, 6, 12, 9],
+        'line-offset': laneOffset,
         'line-opacity': 0.9
       }
     });
@@ -199,6 +210,7 @@
       paint: {
         'line-color': ['get', 'color'],
         'line-width': ['interpolate', ['linear'], ['zoom'], 8, 3.5, 12, 5.5],
+        'line-offset': laneOffset,
         'line-opacity': 0.9
       }
     });
@@ -252,6 +264,7 @@
       paint: {
         'line-color': '#ffffff',
         'line-width': 11,
+        'line-offset': laneOffset,
         'line-opacity': 0.95
       }
     });
@@ -263,7 +276,8 @@
       layout: { 'line-cap': 'round', 'line-join': 'round' },
       paint: {
         'line-color': ['get', 'color'],
-        'line-width': 7
+        'line-width': 7,
+        'line-offset': laneOffset
       }
     });
 
@@ -275,6 +289,7 @@
       paint: {
         'line-color': '#ffffff',
         'line-width': 2.5,
+        'line-offset': laneOffset,
         'line-dasharray': [0, 4, 3]
       }
     });
@@ -323,15 +338,21 @@
     if (!networks.length) return;
 
     const locale = i18n.locale;
-    const lineFeatures: Feature[] = [];
+    const lineFeatures: Feature<LineString>[] = [];
     const stationFeatures: Feature[] = [];
     const coordsAll: [number, number][] = [];
     const nextDrawnPaths = new Map<string, DrawnLinePath[]>();
+    const drawnSegments: SharedLinePath[] = [];
+    const geometryReferences = new Map<string, string>();
 
     for (const net of networks) {
       const stationMap = new Map<string, Station>(net.stations.map((s) => [s.id, s]));
       const stopMap = new Map<string, Stop>(net.stops.map((s) => [s.id, s]));
       const lineById = new Map<string, Line>(net.lines.map((l) => [l.id, l]));
+      for (const pattern of net.patterns) {
+        if (pattern.geometry_reference_pattern_id)
+          geometryReferences.set(pattern.id, pattern.geometry_reference_pattern_id);
+      }
 
       for (const station of net.stations) {
         if (!station.location) continue;
@@ -397,9 +418,7 @@
             },
             geometry: { type: 'LineString', coordinates: smoothed }
           });
-          const list = nextDrawnPaths.get(line.id) ?? [];
-          list.push({ lineId: line.id, stationIds, smoothed, stopIndices });
-          nextDrawnPaths.set(line.id, list);
+          drawnSegments.push({ patternId, lineId: line.id, stationIds, smoothed, stopIndices });
         };
 
         const trunk = seqOf(primary);
@@ -419,6 +438,12 @@
           if (pattern.id === primary.id) continue;
           const { ids, coords } = seqOf(pattern);
           if (coords.length < 2) continue;
+          // A limited-stop service still needs its declared corridor resolved,
+          // even when all its calls belong to the same line's trunk.
+          if (pattern.geometry_reference_pattern_id) {
+            pushSegment(pattern.id, ids, coords);
+            continue;
+          }
 
           // Junction: explicit junction stop, else the trunk station that has a
           // branch-only neighbour on this pattern. Through-running branch
@@ -488,6 +513,16 @@
       }
     }
 
+    for (const [index, path] of resolveSharedGeometry(
+      drawnSegments,
+      geometryReferences
+    ).entries()) {
+      lineFeatures[index]!.geometry.coordinates = path.smoothed;
+      lineFeatures[index]!.properties = { ...lineFeatures[index]!.properties, lane: path.lane };
+      const paths = nextDrawnPaths.get(path.lineId) ?? [];
+      paths.push(path);
+      nextDrawnPaths.set(path.lineId, paths);
+    }
     drawnPathsByLine = nextDrawnPaths;
     // Re-clip any active route against the fresh line geometry. Untracked so
     // this does not subscribe the sync effect to `app.route` (which would
@@ -561,15 +596,19 @@
     const net = hit.network;
     const stopById = new Map(net.stops.map((s) => [s.id, s]));
     const stationById = new Map(net.stations.map((s) => [s.id, s]));
-    const coords: [number, number][] = [];
-    for (const pattern of net.patterns) {
-      if (pattern.line_id !== lineId) continue;
-      for (const stopId of pattern.stop_ids) {
-        const stop = stopById.get(stopId);
-        const station = stop ? stationById.get(stop.station_id) : undefined;
-        if (station?.location) coords.push([station.location.lon, station.location.lat]);
+    const paths = drawnPathsByLine.get(lineId) ?? [];
+    const coords: [number, number][] = paths.some((path) => path.sharedGeometry)
+      ? paths.flatMap((path) => path.smoothed)
+      : [];
+    if (!coords.length)
+      for (const pattern of net.patterns) {
+        if (pattern.line_id !== lineId) continue;
+        for (const stopId of pattern.stop_ids) {
+          const stop = stopById.get(stopId);
+          const station = stop ? stationById.get(stop.station_id) : undefined;
+          if (station?.location) coords.push([station.location.lon, station.location.lat]);
+        }
       }
-    }
     if (coords.length < 2) return;
     const bounds = new maplibregl.LngLatBounds();
     for (const c of coords) bounds.extend(c);
@@ -644,24 +683,26 @@
       // Clip the already-drawn line geometry so the route follows the exact
       // spline used for the line, not a re-interpolation of the leg subset.
       const paths = drawnPathsByLine.get(leg.line_id) ?? [];
-      let coords = routeGeometryForStationIds(stationIds, paths);
-      if (coords.length < 2) {
-        coords = [];
+      let parts = routeGeometrySegmentsForStationIds(stationIds, paths);
+      if (!parts.length) {
+        let coords: [number, number][] = [];
         for (const stationId of stationIds) {
           const loc = app.stationLocation(stationId);
           if (loc) coords.push(loc);
         }
         if (coords.length >= 3) coords = smoothLine(coords);
+        if (coords.length >= 2) parts = [{ coordinates: coords, lane: 0 }];
       }
-      if (coords.length < 2) continue;
-      features.push({
-        type: 'Feature',
-        properties: {
-          color: app.lineColor(leg.line_id),
-          leg: `${leg.from_station_id}->${leg.to_station_id}`
-        },
-        geometry: { type: 'LineString', coordinates: coords }
-      });
+      for (const part of parts)
+        features.push({
+          type: 'Feature',
+          properties: {
+            color: app.lineColor(leg.line_id),
+            lane: part.lane,
+            leg: `${leg.from_station_id}->${leg.to_station_id}`
+          },
+          geometry: { type: 'LineString', coordinates: part.coordinates }
+        });
     }
     (m.getSource('route-line') as maplibregl.GeoJSONSource)?.setData({
       type: 'FeatureCollection',

@@ -1,0 +1,133 @@
+{
+  "id": "cn-taiwan-railway",
+  "name": "台灣鐵路",
+  "names": {
+    "zh": "台灣鐵路",
+    "en": "Taiwan Railway"
+  },
+  "city": {
+    "id": "CN-71",
+    "name": {
+      "zh": "台湾省",
+      "en": "Taiwan Province"
+    },
+    "country": "CN",
+    "population": 23140000,
+    "area": 35581,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        121,
+        23.7
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "TWD",
+  "timezone": "Asia/Taipei",
+  "coordinate_system": "wgs84",
+  "default_units": {
+    "distance": "km",
+    "time": "s",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 180,
+    "max_transfer_seconds": 900
+  },
+  "notes": "台鐵 2026-10-16 營運日的旅客列車與車站時刻，適用時間為當日 03:00 至翌日 03:00（台北時間）。午夜後班次以 24:xx–26:xx 表示；當日凌晨 00:00–03:00 的班次歸前一營運日。保留海線及各支線；未開行旅客列車的車站不納入。行程耗時為靜態估算，不含候車、班次銜接與訂位；目前未提供台鐵票價。",
+  "service_scope": "台鐵 2026-10-16 營運日的旅客列車與車站時刻，適用時間為當日 03:00 至翌日 03:00（台北時間）。午夜後班次以 24:xx–26:xx 表示；當日凌晨 00:00–03:00 的班次歸前一營運日。保留海線及各支線；未開行旅客列車的車站不納入。行程耗時為靜態估算，不含候車、班次銜接與訂位；目前未提供台鐵票價。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 240,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 240,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 242,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 242,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 28
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 484,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 254
+      }
+    },
+    "fares": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 57360
+      }
+    }
+  }
+}

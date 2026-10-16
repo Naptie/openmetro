@@ -37,7 +37,7 @@ jobs:
         run: bun run typecheck
 
       - name: Test
-        run: bun test
+        run: bun run test
 
       - name: Verify canonical data and write manifest
         run: bun run data:verify --out dist/data-manifest.json

@@ -1,0 +1,469 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-alishan-railway",
+  "generated_at": "2026-10-16T01:43:18.755Z",
+  "source": [
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/0000115",
+      "version": "sha256:72d85ef98390e9fc73ba5ea22c6caade669ed23008dfbfba85776054c742d2f0",
+      "retrieved_at": "2026-10-15T17:38:58.992Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/0000300",
+      "version": "sha256:8c6d899b1fe2196856a715568e8d7454f475d4bb822aa7d293d1f55691b52713",
+      "retrieved_at": "2026-10-15T17:38:59.050Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/0000119",
+      "version": "sha256:87e1b655329c713f5bf7963e182db34b93082b4481b5496eb6eee52647c19907",
+      "retrieved_at": "2026-10-15T17:38:59.338Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/0000120",
+      "version": "sha256:b4e7accdee9f3e0bbadea88879ead8f6401f00c84d873cd073b9a0f42fd11d93",
+      "retrieved_at": "2026-10-15T17:38:59.059Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/",
+      "version": "sha256:2e3bd5a5fdbb5a36640e4be9883785c00871f06a8daa2b2ed4c1d20edd0a3be7",
+      "retrieved_at": "2026-10-15T17:38:59.275Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "OpenStreetMap rail stations",
+      "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A35%5D%3B%28node%5B%22railway%22%3D%22station%22%5D%2821.8%2C120%2C25.4%2C122.1%29%3Bnode%5B%22railway%22%3D%22halt%22%5D%2821.8%2C120%2C25.4%2C122.1%29%3B%29%3Bout+body%3B",
+      "version": "2026-06-01T08:52:28Z",
+      "retrieved_at": "2026-10-15T17:25:20.810Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors",
+      "osm_base": "2026-06-01T08:52:28Z"
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-alishan-railway-line-al-ride-1",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "to_stop_id": "cn-alishan-railway-stop-al-beimen",
+      "from_station_id": "cn-alishan-railway-station-chiayi",
+      "to_station_id": "cn-alishan-railway-station-beimen",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 420,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 4,
+        "representative_train": "8",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 1.6
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-10",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-fenqihu",
+      "to_stop_id": "cn-alishan-railway-stop-al-duolin",
+      "from_station_id": "cn-alishan-railway-station-fenqihu",
+      "to_station_id": "cn-alishan-railway-station-duolin",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 2100,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "1",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 5.16
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-11",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-duolin",
+      "to_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "from_station_id": "cn-alishan-railway-station-duolin",
+      "to_station_id": "cn-alishan-railway-station-shizilu",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 900,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "1",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 4.32
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-12",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-beimen",
+      "to_stop_id": "cn-alishan-railway-stop-al-zhuqi",
+      "from_station_id": "cn-alishan-railway-station-beimen",
+      "to_station_id": "cn-alishan-railway-station-zhuqi",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 1890,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "5",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 12.6
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-13",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-zhuqi",
+      "to_stop_id": "cn-alishan-railway-stop-al-jiaoliping",
+      "from_station_id": "cn-alishan-railway-station-zhuqi",
+      "to_station_id": "cn-alishan-railway-station-jiaoliping",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 3810,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "8",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 20.7
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-14",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-jiaoliping",
+      "to_stop_id": "cn-alishan-railway-stop-al-fenqihu",
+      "from_station_id": "cn-alishan-railway-station-jiaoliping",
+      "to_station_id": "cn-alishan-railway-station-fenqihu",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 3990,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "8",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 10.62
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-15",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-fenqihu",
+      "to_stop_id": "cn-alishan-railway-stop-al-erwanping",
+      "from_station_id": "cn-alishan-railway-station-fenqihu",
+      "to_station_id": "cn-alishan-railway-station-erwanping",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 4710,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "5",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 21.64
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-16",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-erwanping",
+      "to_stop_id": "cn-alishan-railway-stop-al-alishan",
+      "from_station_id": "cn-alishan-railway-station-erwanping",
+      "to_station_id": "cn-alishan-railway-station-alishan",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 1110,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "5",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 4.44
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-2",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-beimen",
+      "to_stop_id": "cn-alishan-railway-stop-al-lumachan",
+      "from_station_id": "cn-alishan-railway-station-beimen",
+      "to_station_id": "cn-alishan-railway-station-lumachan",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 1410,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "1",
+        "distance_source": "haversine"
+      },
+      "distance_km": 8.07
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-3",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-lumachan",
+      "to_stop_id": "cn-alishan-railway-stop-al-zhuqi",
+      "from_station_id": "cn-alishan-railway-station-lumachan",
+      "to_station_id": "cn-alishan-railway-station-zhuqi",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 570,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "2",
+        "distance_source": "haversine"
+      },
+      "distance_km": 3.272
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-4",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-zhuqi",
+      "to_stop_id": "cn-alishan-railway-stop-al-zhangnaoliao",
+      "from_station_id": "cn-alishan-railway-station-zhuqi",
+      "to_station_id": "cn-alishan-railway-station-zhangnaoliao",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 1650,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "1",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 9.1
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-5",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-zhangnaoliao",
+      "to_stop_id": "cn-alishan-railway-stop-al-dulishan",
+      "from_station_id": "cn-alishan-railway-station-zhangnaoliao",
+      "to_station_id": "cn-alishan-railway-station-dulishan",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 780,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "1",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 4.1
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-6",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-dulishan",
+      "to_stop_id": "cn-alishan-railway-stop-al-liyuanliao",
+      "from_station_id": "cn-alishan-railway-station-dulishan",
+      "to_station_id": "cn-alishan-railway-station-liyuanliao",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 780,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "1",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 4
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-7",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-liyuanliao",
+      "to_stop_id": "cn-alishan-railway-stop-al-jiaoliping",
+      "from_station_id": "cn-alishan-railway-station-liyuanliao",
+      "to_station_id": "cn-alishan-railway-station-jiaoliping",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 720,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "1",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 3.5
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-8",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-jiaoliping",
+      "to_stop_id": "cn-alishan-railway-stop-al-shuisheliao",
+      "from_station_id": "cn-alishan-railway-station-jiaoliping",
+      "to_station_id": "cn-alishan-railway-station-shuisheliao",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 1050,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "1",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 5.6
+    },
+    {
+      "id": "cn-alishan-railway-line-al-ride-9",
+      "line_id": "cn-alishan-railway-line-al",
+      "from_stop_id": "cn-alishan-railway-stop-al-shuisheliao",
+      "to_stop_id": "cn-alishan-railway-stop-al-fenqihu",
+      "from_station_id": "cn-alishan-railway-station-shuisheliao",
+      "to_station_id": "cn-alishan-railway-station-fenqihu",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 1260,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 2,
+        "representative_train": "2",
+        "distance_source": "source",
+        "distance_method": "official_mileage_matrix"
+      },
+      "distance_km": 5.02
+    },
+    {
+      "id": "cn-alishan-railway-line-sm-segment-14",
+      "line_id": "cn-alishan-railway-line-sm",
+      "from_stop_id": "cn-alishan-railway-stop-sm-alishan",
+      "to_stop_id": "cn-alishan-railway-stop-sm-shenmu",
+      "from_station_id": "cn-alishan-railway-station-alishan",
+      "to_station_id": "cn-alishan-railway-station-shenmu",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 420,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 22,
+        "representative_train": "120",
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.038
+    },
+    {
+      "id": "cn-alishan-railway-line-zp-segment-15",
+      "line_id": "cn-alishan-railway-line-zp",
+      "from_stop_id": "cn-alishan-railway-stop-zp-alishan",
+      "to_stop_id": "cn-alishan-railway-stop-zp-zhaoping",
+      "from_station_id": "cn-alishan-railway-station-alishan",
+      "to_station_id": "cn-alishan-railway-station-zhaoping",
+      "direction": "both",
+      "source_id": "afrch",
+      "travel_time_seconds": 360,
+      "travel_time_source": "source",
+      "extras": {
+        "timing_method": "median_same_train_departures",
+        "sample_count": 24,
+        "representative_train": "53",
+        "distance_source": "haversine"
+      },
+      "distance_km": 1.096
+    },
+    {
+      "id": "cn-alishan-railway-line-zs-segment-16",
+      "line_id": "cn-alishan-railway-line-zs",
+      "from_stop_id": "cn-alishan-railway-stop-zs-alishan",
+      "to_stop_id": "cn-alishan-railway-stop-zs-duigaoyue",
+      "from_station_id": "cn-alishan-railway-station-alishan",
+      "to_station_id": "cn-alishan-railway-station-duigaoyue",
+      "direction": "both",
+      "source_id": "afrch",
+      "distance_km": 1.786,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 12.3,
+        "a_s_per_km": 197.6,
+        "b_s": 170.2
+      },
+      "travel_time_seconds": 523,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-alishan-railway-line-zs-segment-17",
+      "line_id": "cn-alishan-railway-line-zs",
+      "from_stop_id": "cn-alishan-railway-stop-zs-duigaoyue",
+      "to_stop_id": "cn-alishan-railway-stop-zs-zhushan",
+      "from_station_id": "cn-alishan-railway-station-duigaoyue",
+      "to_station_id": "cn-alishan-railway-station-zhushan",
+      "direction": "both",
+      "source_id": "afrch",
+      "distance_km": 0.833,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 9,
+        "a_s_per_km": 197.6,
+        "b_s": 170.2
+      },
+      "travel_time_seconds": 335,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    }
+  ]
+}

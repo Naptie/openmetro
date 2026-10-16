@@ -1,5 +1,6 @@
 <script lang="ts">
   import ArrowDownUpIcon from '@lucide/svelte/icons/arrow-down-up';
+  import ArrowLeftRightIcon from '@lucide/svelte/icons/arrow-left-right';
   import ArrowRightIcon from '@lucide/svelte/icons/arrow-right';
   import ChevronDownIcon from '@lucide/svelte/icons/chevron-down';
   import ClockIcon from '@lucide/svelte/icons/clock';
@@ -175,6 +176,10 @@
                 </Badge>
               </div>
 
+              <p class="mt-2 text-xs leading-relaxed text-muted-foreground">
+                {i18n.t.route_time_notice()}
+              </p>
+
               <Separator class="my-3" />
 
               <!-- Legs timeline -->
@@ -187,11 +192,40 @@
                   {@const legId = `${i}-${leg.kind}-${leg.from_station_id}`}
                   {#if leg.kind === "transfer"}
                     <li class="flex items-center gap-2 py-1.5 pl-3.5">
-                      <FootprintsIcon class="size-3.5 shrink-0 text-muted-foreground" />
+                      {#if leg.same_line_direction_change}
+                        <ArrowLeftRightIcon class="size-3.5 shrink-0 text-muted-foreground" />
+                      {:else}
+                        <FootprintsIcon class="size-3.5 shrink-0 text-muted-foreground" />
+                      {/if}
                       <span class="text-xs text-muted-foreground">
-                        {i18n.t.route_transfer_walk({
-                          minutes: Math.max(1, Math.round(leg.seconds / 60)),
-                        })}
+                        {#if leg.same_line_direction_change}
+                          {i18n.t.route_transfer_same_line()}
+                        {:else}
+                          {i18n.t.route_transfer_time({
+                            minutes: Math.max(0, Math.round(leg.seconds / 60)),
+                          })}
+                        {/if}
+                        {#if leg.from_station_id !== leg.to_station_id}
+                          <span class="ml-1">
+                            <button
+                              type="button"
+                              class="cursor-pointer hover:underline"
+                              onclick={() => app.selectStation(leg.from_station_id)}
+                            >
+                              {from
+                                ? localizedName(from.names, from.name, locale)
+                                : leg.from_station_id}
+                            </button>
+                            <ArrowRightIcon class="inline size-3" />
+                            <button
+                              type="button"
+                              class="cursor-pointer hover:underline"
+                              onclick={() => app.selectStation(leg.to_station_id)}
+                            >
+                              {to ? localizedName(to.names, to.name, locale) : leg.to_station_id}
+                            </button>
+                          </span>
+                        {/if}
                       </span>
                     </li>
                   {:else}

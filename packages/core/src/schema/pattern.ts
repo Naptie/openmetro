@@ -33,6 +33,8 @@ export const Pattern = Schema.Struct({
   /** For a branch, the stop on the primary alignment where it diverges. */
   junction_stop_id: Schema.optionalWith(Schema.String, { as: 'Option' }),
   color: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  /** Display-only reference to a linear primary corridor. stop_ids remain actual calls. */
+  geometry_reference_pattern_id: Schema.optionalWith(Schema.String, { as: 'Option' }),
   source_ids: Schema.Array(SourceIdRef),
   extras: Schema.optionalWith(Extras, { as: 'Option' })
 });

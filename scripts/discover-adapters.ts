@@ -4,6 +4,7 @@
  * A package is an adapter when its package.json has:
  *   - name starting with `@openmetro/adapter-`
  *   - `openmetro.networkId` (and optional `openmetro.entry` / `openmetro.displayName`)
+ *   - optional `openmetro.syncFrequency`: `daily` or `weekly` (default)
  *
  * Usage:
  *   bun run scripts/discover-adapters.ts
@@ -20,6 +21,7 @@ export interface DiscoveredAdapter {
   dir: string;
   entry: string;
   displayName: { zh: string; en: string };
+  syncFrequency: 'daily' | 'weekly';
 }
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -37,6 +39,7 @@ export async function discoverAdapters(): Promise<DiscoveredAdapter[]> {
         networkId?: string;
         entry?: string;
         displayName?: { zh?: string; en?: string };
+        syncFrequency?: 'daily' | 'weekly';
       };
     };
     try {
@@ -52,6 +55,7 @@ export async function discoverAdapters(): Promise<DiscoveredAdapter[]> {
       name: pkg.name,
       dir: join(ADAPTERS_DIR, e.name),
       entry: resolve(ADAPTERS_DIR, e.name, pkg.openmetro?.entry ?? './src/adapter.ts'),
+      syncFrequency: pkg.openmetro?.syncFrequency === 'daily' ? 'daily' : 'weekly',
       displayName: {
         zh: pkg.openmetro?.displayName?.zh ?? networkId,
         en: pkg.openmetro?.displayName?.en ?? networkId
@@ -71,7 +75,8 @@ async function main() {
         adapters.map((a) => ({
           networkId: a.networkId,
           name: a.name,
-          displayName: a.displayName
+          displayName: a.displayName,
+          syncFrequency: a.syncFrequency
         })),
         null,
         2

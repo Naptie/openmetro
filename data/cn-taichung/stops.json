@@ -1,0 +1,294 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stops.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-taichung",
+  "generated_at": "2026-10-15T10:07:41.456Z",
+  "source": [
+    {
+      "name": "tmrt-stations",
+      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=f9511cc5-4799-4df9-98b7-0b0f89fc2be9",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
+      "license": "custom",
+      "license_url": "https://data.gov.tw/license",
+      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    },
+    {
+      "name": "tmrt-fares",
+      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=261c5b91-8f02-4c17-8a97-23c1384eced7",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
+      "license": "custom",
+      "license_url": "https://data.gov.tw/license",
+      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    },
+    {
+      "name": "tmrt-runtimes",
+      "url": "https://newdatacenter.taichung.gov.tw/api/v1/no-auth/resource.download?rid=4edec91c-05c8-4dee-9f93-7ab3cef20fc3",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
+      "license": "custom",
+      "license_url": "https://data.gov.tw/license",
+      "attribution": "提供機關／臺中捷運股份有限公司：臺中捷運綠線車站資訊、站間票價、站間行車時間及首末班車時刻表。此開放資料依政府資料開放授權條款第1版釋出。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    },
+    {
+      "name": "tmrt-timetables",
+      "url": "https://www.tmrt.com.tw/metro-life/first-last-train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "臺中捷運股份有限公司；官方車站、現行首末班車及乘車時間。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    },
+    {
+      "name": "tmrt-officialStations",
+      "url": "https://www.tmrt.com.tw/metro-life/ride-time-and-fare",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:07:41.452Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "臺中捷運股份有限公司；官方車站、現行首末班車及乘車時間。",
+      "notes": "Operator station identity from tmrt.com.tw; open datasets published under OGDL-1.0."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-taichung-103-g",
+      "station_id": "cn-taichung-103",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 1,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.707294,
+        "lat": 24.182289,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-103a-g",
+      "station_id": "cn-taichung-103a",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 0,
+      "is_terminal": true,
+      "location": {
+        "lon": 120.70864,
+        "lat": 24.189132,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-104-g",
+      "station_id": "cn-taichung-104",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 2,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.70145,
+        "lat": 24.180807,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-105-g",
+      "station_id": "cn-taichung-105",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 3,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.693295,
+        "lat": 24.171243,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-106-g",
+      "station_id": "cn-taichung-106",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 4,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.684869,
+        "lat": 24.172194,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-107-g",
+      "station_id": "cn-taichung-107",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 5,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.670599,
+        "lat": 24.173682,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-108-g",
+      "station_id": "cn-taichung-108",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 6,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.660455,
+        "lat": 24.171416,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-109-g",
+      "station_id": "cn-taichung-109",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 7,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.653674,
+        "lat": 24.167636,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-110-g",
+      "station_id": "cn-taichung-110",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 8,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.649035,
+        "lat": 24.16199,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-111-g",
+      "station_id": "cn-taichung-111",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 9,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.646687,
+        "lat": 24.153113,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-112-g",
+      "station_id": "cn-taichung-112",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 10,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.6466,
+        "lat": 24.1454,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-113-g",
+      "station_id": "cn-taichung-113",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 11,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.6466,
+        "lat": 24.1405,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-114-g",
+      "station_id": "cn-taichung-114",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 12,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.64635,
+        "lat": 24.132606,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-115-g",
+      "station_id": "cn-taichung-115",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 13,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.6476,
+        "lat": 24.1191,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-116-g",
+      "station_id": "cn-taichung-116",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 14,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.6401,
+        "lat": 24.1145,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-117-g",
+      "station_id": "cn-taichung-117",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 15,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.634481,
+        "lat": 24.111049,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-118-g",
+      "station_id": "cn-taichung-118",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 16,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.6249,
+        "lat": 24.1089,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    },
+    {
+      "id": "cn-taichung-119-g",
+      "station_id": "cn-taichung-119",
+      "line_id": "cn-taichung-line-g",
+      "sequence": 17,
+      "is_terminal": true,
+      "location": {
+        "lon": 120.614053,
+        "lat": 24.110119,
+        "crs": "wgs84"
+      },
+      "source_id": "tmrt-stations"
+    }
+  ]
+}

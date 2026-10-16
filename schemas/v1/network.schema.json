@@ -408,6 +408,28 @@
     },
     "notes": {
       "type": "string"
+    },
+    "service_scope": {
+      "type": "string"
+    },
+    "service_calendar": {
+      "type": "object",
+      "required": ["valid_from", "valid_to", "holiday_dates"],
+      "properties": {
+        "valid_from": {
+          "type": "string"
+        },
+        "valid_to": {
+          "type": "string"
+        },
+        "holiday_dates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

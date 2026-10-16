@@ -155,7 +155,7 @@ export const app = {
     state.selectedStationId = null;
     if (lineId) {
       const hit = this.findLine(lineId);
-      if (hit) state.focusedNetworkId = hit.network.meta.id;
+      if (hit) this.focusNetwork(hit.network.meta.id);
       state.networksOpen = true;
       state.routePanelOpen = false;
     }
@@ -165,7 +165,7 @@ export const app = {
     state.selectedStationId = stationId;
     if (stationId) {
       const hit = this.stationById(stationId);
-      if (hit) state.focusedNetworkId = hit.network.meta.id;
+      if (hit) this.focusNetwork(hit.network.meta.id);
       state.networksOpen = false;
     }
   },
@@ -176,7 +176,10 @@ export const app = {
    * — they belong to the previously focused network.
    */
   focusNetwork(networkId: string): void {
-    if (state.focusedNetworkId && state.focusedNetworkId !== networkId) {
+    const previousNetworkId =
+      this.stationById(state.originId ?? state.destinationId)?.network.meta.id ??
+      state.focusedNetworkId;
+    if (previousNetworkId && previousNetworkId !== networkId) {
       state.originId = null;
       state.destinationId = null;
       state.route = null;

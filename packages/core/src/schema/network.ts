@@ -79,6 +79,14 @@ export const NetworkQuality = Schema.Struct({
 
 export type NetworkQuality = Schema.Schema.Type<typeof NetworkQuality>;
 
+/** Published ordinary holiday calendar; exceptional operator announcements remain separate. */
+export const ServiceCalendar = Schema.Struct({
+  valid_from: Schema.String,
+  valid_to: Schema.String,
+  holiday_dates: Schema.Array(Schema.String)
+});
+export type ServiceCalendar = Schema.Schema.Type<typeof ServiceCalendar>;
+
 export const Network = Schema.Struct({
   id: Schema.String,
   /** Primary (Chinese) name for consumers that skip localization. */
@@ -94,7 +102,9 @@ export const Network = Schema.Struct({
   routing: RoutingDefaults,
   /** Per-layer precision / coverage, derived from canonical records. */
   quality: Schema.optionalWith(NetworkQuality, { as: 'Option' }),
-  notes: Schema.optionalWith(Schema.String, { as: 'Option' })
+  notes: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  service_scope: Schema.optionalWith(Schema.String, { as: 'Option' }),
+  service_calendar: Schema.optionalWith(ServiceCalendar, { as: 'Option' })
 });
 
 export type Network = Schema.Schema.Type<typeof Network>;

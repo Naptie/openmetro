@@ -1,5 +1,6 @@
 export * from './decode.js';
 export * from './fs.js';
+export * from './http.js';
 export * from './loader.js';
 export * from './memory.js';
 export * from './networks.js';

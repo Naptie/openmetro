@@ -30,7 +30,8 @@ export type { App };
  * ```
  */
 export const createClient = (baseUrl: string, config?: Treaty.Config): Treaty.Create<App> =>
-  treaty<App>(baseUrl, config);
+  // Calendar dates and timestamps are strings in the public wire contract.
+  treaty<App>(baseUrl, { parseDate: false, ...config });
 
 export type Client = ReturnType<typeof createClient>;
 

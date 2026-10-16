@@ -1,0 +1,2523 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-kaohsiung",
+  "generated_at": "2026-10-15T10:13:52.158Z",
+  "source": [
+    {
+      "name": "krtc-stations",
+      "url": "https://www.krtc.com.tw/Guide/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-stations",
+      "url": "https://www.krtc.com.tw/KLRT/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-timetables",
+      "url": "https://www.krtc.com.tw/Guide/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-timetables",
+      "url": "https://www.krtc.com.tw/KLRT/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-travel-matrix",
+      "url": "https://www.krtc.com.tw/KLRT/time_between_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-planner",
+      "url": "https://www.krtc.com.tw",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "photon-osm",
+      "url": "https://photon.komoot.io/api/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "Photon candidates verified through OSM API by official ref, mode, operator/network and city bounds; coordinates are derived."
+    },
+    {
+      "name": "osm-identity",
+      "url": "https://api.openstreetmap.org/api/0.6/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "Photon candidates verified through OSM API by official ref, mode, operator/network and city bounds; coordinates are derived."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-kaohsiung-c1",
+      "name": "籬仔內",
+      "names": {
+        "zh": "籬仔內",
+        "en": "Lizihnei"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3246121,
+        "lat": 22.604578,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=d0ee5e1d5d2f42c394ec33f4a9e548ea"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4576225718"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C1"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c10",
+      "name": "光榮碼頭",
+      "names": {
+        "zh": "光榮碼頭",
+        "en": "Glory Pier"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2931506,
+        "lat": 22.6166858,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=751d5997f8b041e98c2bf3a0d96cbb3f"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4804112980"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C10"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c11",
+      "name": "真愛碼頭",
+      "names": {
+        "zh": "真愛碼頭",
+        "en": "Love Pier"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2894256,
+        "lat": 22.6192654,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=6533e051da854811b46afbc7798d8bb3"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4804112949"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C11"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c12",
+      "name": "駁二大義",
+      "names": {
+        "zh": "駁二大義",
+        "en": "Dayi Pier-2"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2842225,
+        "lat": 22.6184985,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=3ac107996b40481d9ac874d4e6809121"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4934237755"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C12"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c13",
+      "name": "駁二蓬萊",
+      "names": {
+        "zh": "駁二蓬萊",
+        "en": "Penglai Pier-2"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2799183,
+        "lat": 22.6204454,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=6763a7822fc24dd7a4fdd22e441562ca"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4934237746"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C13"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c14",
+      "name": "哈瑪星",
+      "names": {
+        "zh": "哈瑪星",
+        "en": "Hamasen"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2758388,
+        "lat": 22.6216116,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=55932552d62b433b91b02437a86f0fd5"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4934237745"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C14"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c15",
+      "name": "壽山公園(金馬賓館當代美術館)",
+      "names": {
+        "zh": "壽山公園(金馬賓館當代美術館)",
+        "en": "Shoushan Park(ALIEN Art Centre)"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.278669,
+        "lat": 22.6265296,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=66e1de14c8cf42078b84f91fa8ba84d1"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/5963969990"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C15"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c16",
+      "name": "文武聖殿",
+      "names": {
+        "zh": "文武聖殿",
+        "en": "Wenwu Temple"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2807283,
+        "lat": 22.6295474,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=f0a15e578ec84841a75a0441c1353908"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/5963969989"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C16"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c17",
+      "name": "鼓山區公所",
+      "names": {
+        "zh": "鼓山區公所",
+        "en": "Gushan District Office"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2825911,
+        "lat": 22.6360321,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=c5c3692f968a48ada37200def7391533"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/5963967382"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C17"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c18",
+      "name": "鼓山",
+      "names": {
+        "zh": "鼓山",
+        "en": "Gushan"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2810929,
+        "lat": 22.6420358,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=0218e31e84d4422483246e97344fcf5c"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987302"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C18"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c19",
+      "name": "馬卡道",
+      "names": {
+        "zh": "馬卡道",
+        "en": "Makadao"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2814409,
+        "lat": 22.6470427,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=45dec29314dc44dc98b558fd057d6058"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987301"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C19"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c2",
+      "name": "凱旋瑞田",
+      "names": {
+        "zh": "凱旋瑞田",
+        "en": "Kaisyuan Rueitian"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3197975,
+        "lat": 22.5995711,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=6e66fc3fe34c4c61bceb69edc23053f4"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4576225717"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C2"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c20",
+      "name": "臺鐵美術館",
+      "names": {
+        "zh": "臺鐵美術館",
+        "en": "TRA Museum of Fine Arts"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2817491,
+        "lat": 22.6521144,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=d1e59afcc4c34a1aa91fda543873e61c"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987300"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C20"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c21",
+      "name": "美術館",
+      "names": {
+        "zh": "美術館",
+        "en": "Kaohsiung Museum of Fine Arts"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2872544,
+        "lat": 22.6549882,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=cfa16996c14f4e3088c3a2b852b8f5d3"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/9776227777"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C21"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c21a",
+      "name": "內惟藝術中心",
+      "names": {
+        "zh": "內惟藝術中心",
+        "en": "Neiwei Arts Center"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2828409,
+        "lat": 22.6549695,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=6f4a45f8ed3d4ae9a0e25c07b534a609"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/9776227778"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C21A"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c22",
+      "name": "聯合醫院",
+      "names": {
+        "zh": "聯合醫院",
+        "en": "Kaohsiung Municipal United Hospital"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2910873,
+        "lat": 22.654805,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=fa69de87030744839307db773813b964"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/9776227776"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C22"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c23",
+      "name": "龍華國小",
+      "names": {
+        "zh": "龍華國小",
+        "en": "Longhua Elementary School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2950847,
+        "lat": 22.6544819,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=950a1b31c552440a82ff8b5fa2e29476"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/9776227775"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C23"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c24",
+      "name": "愛河之心",
+      "names": {
+        "zh": "愛河之心",
+        "en": "Heart of Love River"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.303253,
+        "lat": 22.6561709,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=abad220a344f4b909b0876420426cc5e"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/9776227774"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C24"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c25",
+      "name": "新上國小",
+      "names": {
+        "zh": "新上國小",
+        "en": "Sinshang Elementary School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3088043,
+        "lat": 22.6566418,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=a113dc4b18764322902df8193efe2ba2"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/11466218770"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C25"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c26",
+      "name": "大順民族",
+      "names": {
+        "zh": "大順民族",
+        "en": "Dashun Minzu"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3154233,
+        "lat": 22.6554849,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=a69bb29ddd8541118cc8896b2b9f4384"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/11466218769"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C26"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c27",
+      "name": "灣仔內(大順鼎山)",
+      "names": {
+        "zh": "灣仔內(大順鼎山)",
+        "en": "Wanzihnei(Dashun Dingshan)"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.31888,
+        "lat": 22.653543,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=c76f258684e34f8da2fdcb2058fbcda0"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/11466206762"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C27"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c28",
+      "name": "高雄高工",
+      "names": {
+        "zh": "高雄高工",
+        "en": "Kaohsiung Industrial High School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3241552,
+        "lat": 22.6497954,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=d5d76d3e2bd84ba6928b0525c8d8b89e"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/11466206751"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C28"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c29",
+      "name": "樹德家商",
+      "names": {
+        "zh": "樹德家商",
+        "en": "Shu-Te Home-Economics & Commercial High School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3263305,
+        "lat": 22.6438161,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=5a293203519f4f21adebeb50dd39b90b"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/11466206748"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C29"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c3",
+      "name": "前鎮之星",
+      "names": {
+        "zh": "前鎮之星",
+        "en": "Cianjhen Star"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3153928,
+        "lat": 22.5954952,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=00a0ac1d3ed6422cae32d9b67be729d8"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4576225719"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C3"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c30",
+      "name": "科工館",
+      "names": {
+        "zh": "科工館",
+        "en": "Science and Technology Museum"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3271428,
+        "lat": 22.6369232,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=2a8b8315941f40c79e938fe54b1b1544"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/11466206737"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C30"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c31",
+      "name": "聖功醫院(道明中學)",
+      "names": {
+        "zh": "聖功醫院(道明中學)",
+        "en": "St.Joseph Hospital(St. Dominic Catholic High School)"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3256124,
+        "lat": 22.6327993,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=9464564e4f33419abe7f33aa870285b1"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/11466206728"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C31"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c32",
+      "name": "凱旋公園",
+      "names": {
+        "zh": "凱旋公園",
+        "en": "Kaisyuan Park"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.322824,
+        "lat": 22.6294128,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=e5416ee4e9534d94b1aa4c110acb51bf"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987308"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C32"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c33",
+      "name": "衛生局",
+      "names": {
+        "zh": "衛生局",
+        "en": "Department of Health"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3236496,
+        "lat": 22.6251751,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=c89c67ca0c4a45b2a7dced2409499a1f"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987307"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C33"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c34",
+      "name": "五權國小",
+      "names": {
+        "zh": "五權國小",
+        "en": "Wucyuan Elementary School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.32518,
+        "lat": 22.6211709,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=93273d765be041e6b57707c7742c27d2"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987306"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C34"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c35",
+      "name": "凱旋武昌",
+      "names": {
+        "zh": "凱旋武昌",
+        "en": "Kaisyuan Wuchang"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3268268,
+        "lat": 22.6168915,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=bf2389df34b74f93a314a8f02f71a08e"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987305"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C35"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c36",
+      "name": "凱旋二聖",
+      "names": {
+        "zh": "凱旋二聖",
+        "en": "Kaisyuan Ersheng"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3271484,
+        "lat": 22.6125106,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=2377605819134baa988c70ee7dce50b8"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987304"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C36"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c37",
+      "name": "輕軌機廠",
+      "names": {
+        "zh": "輕軌機廠",
+        "en": "LRT Depot"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3260515,
+        "lat": 22.6084757,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=7aced4ef9c1c4c94ac5cc82633d122f6"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/8057987303"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C37"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c4",
+      "name": "凱旋中華",
+      "names": {
+        "zh": "凱旋中華",
+        "en": "Kaisyuan Jhonghua"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3105357,
+        "lat": 22.5936154,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=14c35fe1b69546b091d4e207e2967184"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579273015"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C4"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c5",
+      "name": "夢時代",
+      "names": {
+        "zh": "夢時代",
+        "en": "Dream Mall"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3049144,
+        "lat": 22.595005,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=9427796b1c254c7bab697a98ae316bf2"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579273018"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C5"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c6",
+      "name": "經貿園區",
+      "names": {
+        "zh": "經貿園區",
+        "en": "Commerce and Trade Park"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3026381,
+        "lat": 22.6008963,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=1f0a536e2c22481d8084c20cbe8391c3"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579273017"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C6"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c7",
+      "name": "軟體園區",
+      "names": {
+        "zh": "軟體園區",
+        "en": "Software Technology Park"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3008011,
+        "lat": 22.6056852,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=59c0c92a437d474a870c5dde2f4ee72b"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579273014"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C7"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c8",
+      "name": "高雄展覽館",
+      "names": {
+        "zh": "高雄展覽館",
+        "en": "Kaohsiung Exhibition Center"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2980082,
+        "lat": 22.6101061,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=857a214dcdaa4d25922496c19bdbe679"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579273016"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C8"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-c9",
+      "name": "旅運中心",
+      "names": {
+        "zh": "旅運中心",
+        "en": "Cruise Terminal"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2933482,
+        "lat": 22.6116371,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/KLRT/station_map?id=e4aa05eda97e422d84fd9885e78647aa"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4801892825"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "C9"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o1",
+      "name": "哈瑪星",
+      "names": {
+        "zh": "哈瑪星",
+        "en": "Hamasen"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2748048,
+        "lat": 22.621369,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=71b56722a4654c95ad24e82e35754492"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663523"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O1"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o10",
+      "name": "衛武營",
+      "names": {
+        "zh": "衛武營",
+        "en": "Weiwuying"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3407993,
+        "lat": 22.6251886,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=2b62010eea6744f4b5e9c4e4024d1f5a"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4581495519"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O10"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o11",
+      "name": "鳳山西站(高雄市議會)",
+      "names": {
+        "zh": "鳳山西站(高雄市議會)",
+        "en": "Fongshan West (Kaohsiung City Council)"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3480491,
+        "lat": 22.6253627,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=32e6c08074b14d809731da21a15a51c8"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4581502018"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O11"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o12",
+      "name": "鳳山",
+      "names": {
+        "zh": "鳳山",
+        "en": "Fongshan"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3552091,
+        "lat": 22.6259919,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=a7006d2d194f40d19ed36792dd9c6d1e"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4581503591"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O12"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o13",
+      "name": "大東",
+      "names": {
+        "zh": "大東",
+        "en": "Dadong"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3633605,
+        "lat": 22.6251921,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=d076c8bfb5ba45b7b5307ecc5221413c"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4582336214"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O13"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o14",
+      "name": "鳳山國中",
+      "names": {
+        "zh": "鳳山國中",
+        "en": "Fongshan Junior High School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3718273,
+        "lat": 22.6246291,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=98d6086a688344d596a48b3d6b2e90f5"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4582339822"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O14"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o2",
+      "name": "鹽埕埔",
+      "names": {
+        "zh": "鹽埕埔",
+        "en": "Yanchengpu"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2840775,
+        "lat": 22.6241553,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=40fd81626a554c4abde53732ed8ca40b"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663525"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O2"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o4",
+      "name": "前金",
+      "names": {
+        "zh": "前金",
+        "en": "Cianjin"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2946284,
+        "lat": 22.6289683,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=1267ed46bf4043459fbd9124912ddef5"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663528"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O4"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o6",
+      "name": "信義國小",
+      "names": {
+        "zh": "信義國小",
+        "en": "Sinyi Elementary School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3114522,
+        "lat": 22.6307269,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=20f7228eeb2249559eb7ef4875aa5318"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4581486083"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O6"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o7",
+      "name": "文化中心",
+      "names": {
+        "zh": "文化中心",
+        "en": "Cultural Center"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3176229,
+        "lat": 22.6302695,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=0f0cbc6bd0d745768c328e3be46f5e28"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4581486084"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O7"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o8",
+      "name": "五塊厝",
+      "names": {
+        "zh": "五塊厝",
+        "en": "Wukuaicuo"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3276476,
+        "lat": 22.6294745,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=c4fc047556fa4ed996baed12745aff1c"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4581491487"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O8"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-o9",
+      "name": "苓雅運動園區",
+      "names": {
+        "zh": "苓雅運動園區",
+        "en": "Lingya Sports Park"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3346396,
+        "lat": 22.6272511,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=319a015c438b41c784c046886e7dd1f0"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4581492319"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "O9"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-ot1",
+      "name": "大寮",
+      "names": {
+        "zh": "大寮",
+        "en": "Daliao"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3905893,
+        "lat": 22.6221173,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=d73f3be9c858420397d995ff2cdfc389"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/5792157308"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "OT1"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r10",
+      "name": "美麗島",
+      "names": {
+        "zh": "美麗島",
+        "en": "Formosa Boulevard"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3018602,
+        "lat": 22.6313941,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=6d709285233f48249ff3668e5851e6a0"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663526"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R10",
+          "O5"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r11",
+      "name": "高雄車站",
+      "names": {
+        "zh": "高雄車站",
+        "en": "Kaohsiung Main Station"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3026522,
+        "lat": 22.6393352,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=6da2a00af2ee48d9ac714e85cc23058b"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663532"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R11"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r12",
+      "name": "後驛",
+      "names": {
+        "zh": "後驛",
+        "en": "Houyi"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3032208,
+        "lat": 22.6477388,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=9f021d1d6fad4472b6d20b5a52bb1538"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663527"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R12"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r13",
+      "name": "凹子底",
+      "names": {
+        "zh": "凹子底",
+        "en": "Aozihdi"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3030787,
+        "lat": 22.6571226,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=e667c52c74cc4b0db9f7ad4b2ce53cdb"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663524"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R13"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r14",
+      "name": "巨蛋",
+      "names": {
+        "zh": "巨蛋",
+        "en": "Kaohsiung Arena"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3032563,
+        "lat": 22.6656214,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=bd5435a1ddc7441eb7d2e957ea074eb4"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663530"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R14"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r15",
+      "name": "生態園區",
+      "names": {
+        "zh": "生態園區",
+        "en": "Ecological District"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3063428,
+        "lat": 22.6764628,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=3cb5749c2edd4c4d9fa905fdbd56546d"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663529"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R15"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r16",
+      "name": "左營",
+      "names": {
+        "zh": "左營",
+        "en": "Zuoying"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.309019,
+        "lat": 22.6881662,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=f7552ccdbe89444c9160bf5b29c6e309"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580663531"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R16"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r17",
+      "name": "世運",
+      "names": {
+        "zh": "世運",
+        "en": "World Games"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3025096,
+        "lat": 22.7017541,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=112c15476dac4be99a1326da8ef08e65"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580827632"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R17"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r18",
+      "name": "油廠國小",
+      "names": {
+        "zh": "油廠國小",
+        "en": "Oil Refinery Elementary School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3023063,
+        "lat": 22.7087537,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=c4a5258931cd4891a8edeeae8c38977d"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580834623"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R18"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r19",
+      "name": "楠梓科技園區",
+      "names": {
+        "zh": "楠梓科技園區",
+        "en": "Nanzih Technology Industrial Park"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3071682,
+        "lat": 22.7187124,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=cdb61170eba846729336001644171244"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580837515"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R19"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r20",
+      "name": "後勁",
+      "names": {
+        "zh": "後勁",
+        "en": "Houjing"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3162548,
+        "lat": 22.7223496,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=69a54bd02755422390e55de31b6d4c35"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580845736"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R20"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r21",
+      "name": "都會公園",
+      "names": {
+        "zh": "都會公園",
+        "en": "Metropolitan Park"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3209273,
+        "lat": 22.7296101,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=303ef6fb7ac44ca6b3c46ac8c1d61f64"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580840208"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R21"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r22",
+      "name": "青埔",
+      "names": {
+        "zh": "青埔",
+        "en": "Cingpu"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3177237,
+        "lat": 22.7444067,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=1c822a2ff6fe419aa3bf354a8cca6041"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580850452"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R22"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r22a",
+      "name": "橋頭糖廠",
+      "names": {
+        "zh": "橋頭糖廠",
+        "en": "Ciaotou Sugar Refinery"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3145546,
+        "lat": 22.7535555,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=b56cc8d60d0742f38ab785cbe52fb8ce"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580876598"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R22A"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r23",
+      "name": "橋頭火車站",
+      "names": {
+        "zh": "橋頭火車站",
+        "en": "Ciaotou Station"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3106932,
+        "lat": 22.7609322,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=4cf092140c214246b715d4daf81fc594"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580928832"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R23"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r24",
+      "name": "岡山高醫",
+      "names": {
+        "zh": "岡山高醫",
+        "en": "Kaohsiung Medical University Gangshan Hospital"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3017302,
+        "lat": 22.7807473,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=44d75f45aaac476daf71b48c524becf6"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4580928833"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R24"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r3",
+      "name": "小港",
+      "names": {
+        "zh": "小港",
+        "en": "Siaogang"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3538755,
+        "lat": 22.5645135,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=a7fbaf35782945488df98e96c57c212d"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579346760"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R3"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r4",
+      "name": "高雄國際機場",
+      "names": {
+        "zh": "高雄國際機場",
+        "en": "Kaohsiung International Airport"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3416274,
+        "lat": 22.5701158,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=0a444bb0f2eb4d0a88f451bdaf585fcc"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579346758"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R4"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r4a",
+      "name": "草衙",
+      "names": {
+        "zh": "草衙",
+        "en": "Caoya"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3287686,
+        "lat": 22.5805475,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=ec7ca4177bec4b31817bcfc9101f4117"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579346759"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R4A"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r5",
+      "name": "前鎮高中",
+      "names": {
+        "zh": "前鎮高中",
+        "en": "Cianjhen Senior High School"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3217412,
+        "lat": 22.5884118,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=d5e8606d54124da6a18b8817e8556ed2"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579352785"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R5"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r6",
+      "name": "凱旋",
+      "names": {
+        "zh": "凱旋",
+        "en": "Kaisyuan"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3151134,
+        "lat": 22.5970181,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=45ac837cbc884c94b2f52e4dee72a57e"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579352784"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R6"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r7",
+      "name": "獅甲",
+      "names": {
+        "zh": "獅甲",
+        "en": "Shihjia"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3078782,
+        "lat": 22.6061802,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=e21de89ebb0149b59f63a0f0bf627e66"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579353571"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R7"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r8",
+      "name": "三多商圈",
+      "names": {
+        "zh": "三多商圈",
+        "en": "Sanduo Shopping District"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3044216,
+        "lat": 22.6141528,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=9e03f422417345a3855817a39eee448d"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579363124"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R8"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-r9",
+      "name": "中央公園",
+      "names": {
+        "zh": "中央公園",
+        "en": "Central Park"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.3011177,
+        "lat": 22.6248724,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=6c807b0d31af47e7ab41191191b0f2d3"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/4579367648"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "R9"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    },
+    {
+      "id": "cn-kaohsiung-rk1",
+      "name": "岡山車站",
+      "names": {
+        "zh": "岡山車站",
+        "en": "Gangshan Station"
+      },
+      "status": "operating",
+      "location": {
+        "lon": 120.2990592,
+        "lat": 22.7926035,
+        "crs": "wgs84"
+      },
+      "source_ids": [
+        {
+          "source": "krtc-stations",
+          "id": "https://www.krtc.com.tw/Guide/station_map?id=7b54facd2367491493caa8428f34e78a"
+        },
+        {
+          "source": "photon-osm",
+          "id": "N/5731893016"
+        }
+      ],
+      "extras": {
+        "station_codes": [
+          "RK1"
+        ],
+        "names_source": "official",
+        "location_source": "photon",
+        "coordinate_note": "Rail POI matched automatically; operator map centres are not station coordinates."
+      }
+    }
+  ]
+}

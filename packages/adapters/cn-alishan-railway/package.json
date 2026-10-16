@@ -1,0 +1,33 @@
+{
+  "name": "@openmetro/adapter-cn-alishan-railway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "openmetro": {
+    "networkId": "cn-alishan-railway",
+    "syncFrequency": "daily",
+    "entry": "./src/adapter.ts",
+    "displayName": {
+      "zh": "阿里山森林铁路",
+      "en": "Alishan Forest Railway"
+    },
+    "cityId": "CN-71"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun --external @openmetro/core",
+    "normalize": "bun run src/run.ts"
+  },
+  "dependencies": {
+    "effect": "^3.22.0",
+    "@openmetro/core": "workspace:*",
+    "@openmetro/taiwan-shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.6.0"
+  }
+}
