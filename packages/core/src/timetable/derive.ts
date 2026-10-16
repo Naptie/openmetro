@@ -83,8 +83,8 @@ function selectChain(
 /**
  * Derive per-segment travel times from last-train times of consecutive stops on
  * each route pattern. For every pattern the orientation (toward its terminal or
- * toward its origin) that covers the most stops is used, so branch patterns are
- * derived independently of the main alignment. For loop patterns, the direction
+ * toward its origin) that covers the most stops is preferred; the other fills
+ * missing intervals. Branch patterns are derived independently. For loop patterns, the direction
  * type (inner/outer) is used instead of terminal matching. Returns the derived
  * segment records (`travel_time_source = "last_train"`), deduplicated by stop pair.
  */
@@ -156,44 +156,48 @@ export function deriveSegmentTimes(
       );
     }
 
-    const best = forward.records.size >= backward.records.size ? forward : backward;
+    // Prefer the fuller chain; the other direction fills its missing terminal edge.
+    const chains =
+      forward.records.size >= backward.records.size ? [forward, backward] : [backward, forward];
 
-    for (let i = 0; i < best.order.length - 1; i++) {
-      const a = stopById.get(best.order[i]);
-      const b = stopById.get(best.order[i + 1]);
-      if (!a || !b) continue;
+    for (const best of chains) {
+      for (let i = 0; i < best.order.length - 1; i++) {
+        const a = stopById.get(best.order[i]);
+        const b = stopById.get(best.order[i + 1]);
+        if (!a || !b) continue;
 
-      // The junction aggregates the last train of every service that calls
-      // there, so a delta across a branch-junction connector is unreliable.
-      const junction = pattern.junction_stop_id;
-      if (junction && !pattern.is_primary) {
-        const primary = primaryStopsByLine.get(pattern.line_id);
-        const aBranch = primary ? !primary.has(a.id) : false;
-        const bBranch = primary ? !primary.has(b.id) : false;
-        if ((a.id === junction && bBranch) || (b.id === junction && aBranch)) continue;
+        // The junction aggregates the last train of every service that calls
+        // there, so a delta across a branch-junction connector is unreliable.
+        const junction = pattern.junction_stop_id;
+        if (junction && !pattern.is_primary) {
+          const primary = primaryStopsByLine.get(pattern.line_id);
+          const aBranch = primary ? !primary.has(a.id) : false;
+          const bBranch = primary ? !primary.has(b.id) : false;
+          if ((a.id === junction && bBranch) || (b.id === junction && aBranch)) continue;
+        }
+
+        const ta = best.records.get(a.id);
+        const tb = best.records.get(b.id);
+        if (!ta || !tb) continue;
+        const taTime = parseHHMM(ta.last_train[0] ?? '');
+        const tbTime = parseHHMM(tb.last_train[0] ?? '');
+        if (taTime == null || tbTime == null) continue;
+        const delta = tbTime - taTime;
+        if (delta < cfg.minSeconds / 60 || delta > cfg.maxSeconds / 60) continue;
+        const key = [a.id, b.id].sort().join('|');
+        if (out.has(key)) continue;
+        out.set(key, {
+          id: `seg-${a.id}-${b.id}`,
+          line_id: a.line_id,
+          from_stop_id: a.id,
+          to_stop_id: b.id,
+          from_station_id: a.station_id,
+          to_station_id: b.station_id,
+          travel_time_seconds: delta * 60,
+          travel_time_source: 'last_train',
+          travel_time_derived_from: [ta.id, tb.id]
+        });
       }
-
-      const ta = best.records.get(a.id);
-      const tb = best.records.get(b.id);
-      if (!ta || !tb) continue;
-      const taTime = parseHHMM(ta.last_train[0] ?? '');
-      const tbTime = parseHHMM(tb.last_train[0] ?? '');
-      if (taTime == null || tbTime == null) continue;
-      const delta = tbTime - taTime;
-      if (delta < cfg.minSeconds / 60 || delta > cfg.maxSeconds / 60) continue;
-      const key = `${a.id}|${b.id}`;
-      if (out.has(key)) continue;
-      out.set(key, {
-        id: `seg-${a.id}-${b.id}`,
-        line_id: a.line_id,
-        from_stop_id: a.id,
-        to_stop_id: b.id,
-        from_station_id: a.station_id,
-        to_station_id: b.station_id,
-        travel_time_seconds: delta * 60,
-        travel_time_source: 'last_train',
-        travel_time_derived_from: [ta.id, tb.id]
-      });
     }
   }
 

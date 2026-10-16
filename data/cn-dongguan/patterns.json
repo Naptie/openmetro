@@ -1,0 +1,108 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dongguan",
+  "generated_at": "2026-10-15T10:05:46.041Z",
+  "source": [
+    {
+      "name": "dggdjt-service-times",
+      "url": "https://www.dggdjt.com/info/17798.htmx",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "东莞市轨道交通有限公司"
+    },
+    {
+      "name": "amap-subway-4419",
+      "url": "https://webapi.amap.com/subway/data/4419_drw_dongguan.json",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高德地图"
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-dongguan-pattern-1-primary",
+      "line_id": "cn-dongguan-line-1",
+      "name": "东莞西站 → 梅塘站",
+      "names": {
+        "zh": "东莞西站 → 梅塘站",
+        "en": "Dongguanxi Railway Station to Meitang"
+      },
+      "stop_ids": [
+        "cn-dongguan-bv09327050-1",
+        "cn-dongguan-bv09327055-1",
+        "cn-dongguan-bv09327058-1",
+        "cn-dongguan-bv10844286-1",
+        "cn-dongguan-bv09327052-1",
+        "cn-dongguan-bv09327062-1",
+        "cn-dongguan-bv09327057-1",
+        "cn-dongguan-bv11144936-1",
+        "cn-dongguan-bv09327056-1",
+        "cn-dongguan-bv09327053-1",
+        "cn-dongguan-bv11144934-1",
+        "cn-dongguan-bv11338508-1",
+        "cn-dongguan-bv11144928-1",
+        "cn-dongguan-bv09327048-1",
+        "cn-dongguan-bv11144929-1",
+        "cn-dongguan-bv09327060-1",
+        "cn-dongguan-bv09327059-1",
+        "cn-dongguan-bv11144932-1",
+        "cn-dongguan-bv09327054-1",
+        "cn-dongguan-bv11144925-1",
+        "cn-dongguan-bv09327061-1",
+        "cn-dongguan-bv09327049-1",
+        "cn-dongguan-bv09327051-1",
+        "cn-dongguan-bv11284496-1",
+        "cn-dongguan-bv09327063-1"
+      ],
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "terminal_stop_id": "cn-dongguan-bv09327063-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "https://www.dggdjt.com/info/17798.htmx",
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "cn-dongguan-pattern-2-primary",
+      "line_id": "cn-dongguan-line-2",
+      "name": "东莞火车站 → 虎门火车站",
+      "names": {
+        "zh": "东莞火车站 → 虎门火车站",
+        "en": "Dongguan Railway Station to Humen Railway Station"
+      },
+      "stop_ids": [
+        "cn-dongguan-bv10525640-2",
+        "cn-dongguan-bv10525641-2",
+        "cn-dongguan-bv10525633-2",
+        "cn-dongguan-bv10525632-2",
+        "cn-dongguan-bv10525631-2",
+        "cn-dongguan-bv10525642-2",
+        "cn-dongguan-bv10525634-2",
+        "cn-dongguan-bv09327056-2",
+        "cn-dongguan-bv10525630-2",
+        "cn-dongguan-bv10525636-2",
+        "cn-dongguan-bv10525638-2",
+        "cn-dongguan-bv10525643-2",
+        "cn-dongguan-bv10525635-2",
+        "cn-dongguan-bv10525639-2",
+        "cn-dongguan-bv10525628-2"
+      ],
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "terminal_stop_id": "cn-dongguan-bv10525628-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "https://www.dggdjt.com/info/17798.htmx",
+          "id": "2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dongguan",
+  "generated_at": "2026-10-15T10:05:46.041Z",
+  "source": [
+    {
+      "name": "dggdjt-service-times",
+      "url": "https://www.dggdjt.com/info/17798.htmx",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "东莞市轨道交通有限公司"
+    },
+    {
+      "name": "amap-subway-4419",
+      "url": "https://webapi.amap.com/subway/data/4419_drw_dongguan.json",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高德地图"
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-dongguan-bv09327056-1-cn-dongguan-bv09327056-2",
+      "station_id": "cn-dongguan-bv09327056",
+      "from_line_id": "cn-dongguan-line-1",
+      "to_line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv09327056-1",
+      "to_stop_id": "cn-dongguan-bv09327056-2"
+    },
+    {
+      "id": "xfer-cn-dongguan-bv09327056-2-cn-dongguan-bv09327056-1",
+      "station_id": "cn-dongguan-bv09327056",
+      "from_line_id": "cn-dongguan-line-2",
+      "to_line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327056-2",
+      "to_stop_id": "cn-dongguan-bv09327056-1"
+    }
+  ]
+}

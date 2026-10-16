@@ -49,6 +49,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-dongguan": {
+      "name": "@openmetro/adapter-cn-dongguan",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-fuzhou": {
       "name": "@openmetro/adapter-cn-fuzhou",
       "version": "0.1.0",
@@ -472,6 +484,8 @@
     "@openmetro/adapter-cn-chengdu": ["@openmetro/adapter-cn-chengdu@workspace:packages/adapters/cn-chengdu"],
 
     "@openmetro/adapter-cn-chongqing": ["@openmetro/adapter-cn-chongqing@workspace:packages/adapters/cn-chongqing"],
+
+    "@openmetro/adapter-cn-dongguan": ["@openmetro/adapter-cn-dongguan@workspace:packages/adapters/cn-dongguan"],
 
     "@openmetro/adapter-cn-fuzhou": ["@openmetro/adapter-cn-fuzhou@workspace:packages/adapters/cn-fuzhou"],
 

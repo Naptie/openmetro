@@ -1,0 +1,788 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dongguan",
+  "generated_at": "2026-10-15T10:05:46.041Z",
+  "source": [
+    {
+      "name": "dggdjt-service-times",
+      "url": "https://www.dggdjt.com/info/17798.htmx",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "东莞市轨道交通有限公司"
+    },
+    {
+      "name": "amap-subway-4419",
+      "url": "https://webapi.amap.com/subway/data/4419_drw_dongguan.json",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高德地图"
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-dongguan-line-1-segment-0",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327050-1",
+      "to_stop_id": "cn-dongguan-bv09327055-1",
+      "from_station_id": "cn-dongguan-bv09327050",
+      "to_station_id": "cn-dongguan-bv09327055",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327050-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327055-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 3.492,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-1",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327055-1",
+      "to_stop_id": "cn-dongguan-bv09327058-1",
+      "from_station_id": "cn-dongguan-bv09327055",
+      "to_station_id": "cn-dongguan-bv09327058",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327055-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327058-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 2.807,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-10",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv11144934-1",
+      "to_stop_id": "cn-dongguan-bv11338508-1",
+      "from_station_id": "cn-dongguan-bv11144934",
+      "to_station_id": "cn-dongguan-bv11338508",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv11144934-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv11338508-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.783,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-11",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv11338508-1",
+      "to_stop_id": "cn-dongguan-bv11144928-1",
+      "from_station_id": "cn-dongguan-bv11338508",
+      "to_station_id": "cn-dongguan-bv11144928",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv11338508-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv11144928-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.191,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-12",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv11144928-1",
+      "to_stop_id": "cn-dongguan-bv09327048-1",
+      "from_station_id": "cn-dongguan-bv11144928",
+      "to_station_id": "cn-dongguan-bv09327048",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv11144928-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327048-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 4.641,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-13",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327048-1",
+      "to_stop_id": "cn-dongguan-bv11144929-1",
+      "from_station_id": "cn-dongguan-bv09327048",
+      "to_station_id": "cn-dongguan-bv11144929",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327048-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv11144929-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 3.26,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-14",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv11144929-1",
+      "to_stop_id": "cn-dongguan-bv09327060-1",
+      "from_station_id": "cn-dongguan-bv11144929",
+      "to_station_id": "cn-dongguan-bv09327060",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv11144929-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327060-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.965,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-15",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327060-1",
+      "to_stop_id": "cn-dongguan-bv09327059-1",
+      "from_station_id": "cn-dongguan-bv09327060",
+      "to_station_id": "cn-dongguan-bv09327059",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327060-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327059-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.903,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-16",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327059-1",
+      "to_stop_id": "cn-dongguan-bv11144932-1",
+      "from_station_id": "cn-dongguan-bv09327059",
+      "to_station_id": "cn-dongguan-bv11144932",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327059-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv11144932-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.097,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-17",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv11144932-1",
+      "to_stop_id": "cn-dongguan-bv09327054-1",
+      "from_station_id": "cn-dongguan-bv11144932",
+      "to_station_id": "cn-dongguan-bv09327054",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv11144932-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327054-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 2.854,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-18",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327054-1",
+      "to_stop_id": "cn-dongguan-bv11144925-1",
+      "from_station_id": "cn-dongguan-bv09327054",
+      "to_station_id": "cn-dongguan-bv11144925",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327054-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv11144925-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 2.671,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-19",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv11144925-1",
+      "to_stop_id": "cn-dongguan-bv09327061-1",
+      "from_station_id": "cn-dongguan-bv11144925",
+      "to_station_id": "cn-dongguan-bv09327061",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv11144925-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327061-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 2.753,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-2",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327058-1",
+      "to_stop_id": "cn-dongguan-bv10844286-1",
+      "from_station_id": "cn-dongguan-bv09327058",
+      "to_station_id": "cn-dongguan-bv10844286",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327058-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv10844286-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.563,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-20",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327061-1",
+      "to_stop_id": "cn-dongguan-bv09327049-1",
+      "from_station_id": "cn-dongguan-bv09327061",
+      "to_station_id": "cn-dongguan-bv09327049",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327061-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327049-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 2.253,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-21",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327049-1",
+      "to_stop_id": "cn-dongguan-bv09327051-1",
+      "from_station_id": "cn-dongguan-bv09327049",
+      "to_station_id": "cn-dongguan-bv09327051",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327049-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327051-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 3.261,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-22",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327051-1",
+      "to_stop_id": "cn-dongguan-bv11284496-1",
+      "from_station_id": "cn-dongguan-bv09327051",
+      "to_station_id": "cn-dongguan-bv11284496",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327051-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv11284496-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 2.339,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-23",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv11284496-1",
+      "to_stop_id": "cn-dongguan-bv09327063-1",
+      "from_station_id": "cn-dongguan-bv11284496",
+      "to_station_id": "cn-dongguan-bv09327063",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327063-1-to-cn-dongguan-bv09327050-1",
+        "cn-dongguan-bv11284496-1-to-cn-dongguan-bv09327050-1"
+      ],
+      "distance_km": 3.507,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-3",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv10844286-1",
+      "to_stop_id": "cn-dongguan-bv09327052-1",
+      "from_station_id": "cn-dongguan-bv10844286",
+      "to_station_id": "cn-dongguan-bv09327052",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10844286-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327052-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.981,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-4",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327052-1",
+      "to_stop_id": "cn-dongguan-bv09327062-1",
+      "from_station_id": "cn-dongguan-bv09327052",
+      "to_station_id": "cn-dongguan-bv09327062",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327052-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327062-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.414,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-5",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327062-1",
+      "to_stop_id": "cn-dongguan-bv09327057-1",
+      "from_station_id": "cn-dongguan-bv09327062",
+      "to_station_id": "cn-dongguan-bv09327057",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327062-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327057-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.582,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-6",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327057-1",
+      "to_stop_id": "cn-dongguan-bv11144936-1",
+      "from_station_id": "cn-dongguan-bv09327057",
+      "to_station_id": "cn-dongguan-bv11144936",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327057-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv11144936-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.285,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-7",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv11144936-1",
+      "to_stop_id": "cn-dongguan-bv09327056-1",
+      "from_station_id": "cn-dongguan-bv11144936",
+      "to_station_id": "cn-dongguan-bv09327056",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv11144936-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327056-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 0.771,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-8",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327056-1",
+      "to_stop_id": "cn-dongguan-bv09327053-1",
+      "from_station_id": "cn-dongguan-bv09327056",
+      "to_station_id": "cn-dongguan-bv09327053",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327056-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv09327053-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.582,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-1-segment-9",
+      "line_id": "cn-dongguan-line-1",
+      "from_stop_id": "cn-dongguan-bv09327053-1",
+      "to_stop_id": "cn-dongguan-bv11144934-1",
+      "from_station_id": "cn-dongguan-bv09327053",
+      "to_station_id": "cn-dongguan-bv11144934",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327053-1-to-cn-dongguan-bv09327063-1",
+        "cn-dongguan-bv11144934-1-to-cn-dongguan-bv09327063-1"
+      ],
+      "distance_km": 1.901,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-0",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525640-2",
+      "to_stop_id": "cn-dongguan-bv10525641-2",
+      "from_station_id": "cn-dongguan-bv10525640",
+      "to_station_id": "cn-dongguan-bv10525641",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525640-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525641-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 1.924,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-1",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525641-2",
+      "to_stop_id": "cn-dongguan-bv10525633-2",
+      "from_station_id": "cn-dongguan-bv10525641",
+      "to_station_id": "cn-dongguan-bv10525633",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525641-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525633-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 3.07,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-10",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525638-2",
+      "to_stop_id": "cn-dongguan-bv10525643-2",
+      "from_station_id": "cn-dongguan-bv10525638",
+      "to_station_id": "cn-dongguan-bv10525643",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525638-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525643-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 2.476,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-11",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525643-2",
+      "to_stop_id": "cn-dongguan-bv10525635-2",
+      "from_station_id": "cn-dongguan-bv10525643",
+      "to_station_id": "cn-dongguan-bv10525635",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525643-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525635-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 1.938,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-12",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525635-2",
+      "to_stop_id": "cn-dongguan-bv10525639-2",
+      "from_station_id": "cn-dongguan-bv10525635",
+      "to_station_id": "cn-dongguan-bv10525639",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525635-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525639-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 2.654,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-13",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525639-2",
+      "to_stop_id": "cn-dongguan-bv10525628-2",
+      "from_station_id": "cn-dongguan-bv10525639",
+      "to_station_id": "cn-dongguan-bv10525628",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525628-2-to-cn-dongguan-bv10525640-2",
+        "cn-dongguan-bv10525639-2-to-cn-dongguan-bv10525640-2"
+      ],
+      "distance_km": 4.901,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-2",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525633-2",
+      "to_stop_id": "cn-dongguan-bv10525632-2",
+      "from_station_id": "cn-dongguan-bv10525633",
+      "to_station_id": "cn-dongguan-bv10525632",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525633-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525632-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 3.296,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-3",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525632-2",
+      "to_stop_id": "cn-dongguan-bv10525631-2",
+      "from_station_id": "cn-dongguan-bv10525632",
+      "to_station_id": "cn-dongguan-bv10525631",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525632-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525631-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 1.954,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-4",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525631-2",
+      "to_stop_id": "cn-dongguan-bv10525642-2",
+      "from_station_id": "cn-dongguan-bv10525631",
+      "to_station_id": "cn-dongguan-bv10525642",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525631-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525642-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 1.652,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-5",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525642-2",
+      "to_stop_id": "cn-dongguan-bv10525634-2",
+      "from_station_id": "cn-dongguan-bv10525642",
+      "to_station_id": "cn-dongguan-bv10525634",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525642-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525634-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 1.632,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-6",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525634-2",
+      "to_stop_id": "cn-dongguan-bv09327056-2",
+      "from_station_id": "cn-dongguan-bv10525634",
+      "to_station_id": "cn-dongguan-bv09327056",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 120,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525634-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv09327056-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 1.401,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-7",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv09327056-2",
+      "to_stop_id": "cn-dongguan-bv10525630-2",
+      "from_station_id": "cn-dongguan-bv09327056",
+      "to_station_id": "cn-dongguan-bv10525630",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv09327056-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525630-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 2.215,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-8",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525630-2",
+      "to_stop_id": "cn-dongguan-bv10525636-2",
+      "from_station_id": "cn-dongguan-bv10525630",
+      "to_station_id": "cn-dongguan-bv10525636",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 180,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525630-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525636-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 2.546,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2-segment-9",
+      "line_id": "cn-dongguan-line-2",
+      "from_stop_id": "cn-dongguan-bv10525636-2",
+      "to_stop_id": "cn-dongguan-bv10525638-2",
+      "from_station_id": "cn-dongguan-bv10525636",
+      "to_station_id": "cn-dongguan-bv10525638",
+      "direction": "both",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "travel_time_seconds": 300,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-dongguan-bv10525636-2-to-cn-dongguan-bv10525628-2",
+        "cn-dongguan-bv10525638-2-to-cn-dongguan-bv10525628-2"
+      ],
+      "distance_km": 4.592,
+      "extras": {
+        "distance_source": "haversine"
+      }
+    }
+  ]
+}

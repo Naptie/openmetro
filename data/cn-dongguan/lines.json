@@ -1,0 +1,82 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dongguan",
+  "generated_at": "2026-10-15T10:05:46.041Z",
+  "source": [
+    {
+      "name": "dggdjt-service-times",
+      "url": "https://www.dggdjt.com/info/17798.htmx",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "东莞市轨道交通有限公司"
+    },
+    {
+      "name": "amap-subway-4419",
+      "url": "https://webapi.amap.com/subway/data/4419_drw_dongguan.json",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高德地图"
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-dongguan-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "short_name": "1",
+      "aliases": [],
+      "color": "#3080b7",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "https://www.dggdjt.com/info/17798.htmx",
+          "id": "1"
+        },
+        {
+          "source": "https://webapi.amap.com/subway/data/4419_drw_dongguan.json",
+          "id": "900000073662|900000073696"
+        }
+      ],
+      "extras": {
+        "names_source": "source"
+      }
+    },
+    {
+      "id": "cn-dongguan-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "short_name": "2",
+      "aliases": [],
+      "color": "#fc0601",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "https://www.dggdjt.com/info/17798.htmx",
+          "id": "2"
+        },
+        {
+          "source": "https://webapi.amap.com/subway/data/4419_drw_dongguan.json",
+          "id": "900000039053|900000039054"
+        }
+      ],
+      "extras": {
+        "names_source": "source"
+      }
+    }
+  ]
+}

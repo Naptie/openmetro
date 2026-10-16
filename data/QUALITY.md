@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-13T07:09:05.252Z_
+_Updated 2026-10-15T10:05:51.536Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -47,6 +47,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Timetables | ✅ Complete | official | 100% | official=626 |
 | Schematic | ❌ Unavailable | default | 0% | default=325 |
 | Fares | 🟡 Partial | official | 98% | official=71544, default=1626 |
+
+## 东莞轨道交通 / Dongguan Rail Transit (`cn-dongguan`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=39 |
+| Names | ✅ Complete | official | 100% | official=39 |
+| Segment times | 🟠 Derived | derived | 100% | derived=38 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=38 |
+| Transfer times | ❌ Unavailable | default | 0% | default=2 |
+| Timetables | ✅ Complete | official | 100% | official=76 |
+| Schematic | ✅ Complete | official | 100% | official=40 |
+| Fares | 🟡 Partial | official | 14% | official=210, default=1272 |
 
 ## 福州地铁 / Fuzhou Metro (`cn-fuzhou`)
 

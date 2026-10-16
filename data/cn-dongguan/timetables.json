@@ -1,0 +1,2612 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/timetables.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dongguan",
+  "generated_at": "2026-10-15T10:05:46.041Z",
+  "source": [
+    {
+      "name": "dggdjt-service-times",
+      "url": "https://www.dggdjt.com/info/17798.htmx",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "东莞市轨道交通有限公司"
+    },
+    {
+      "name": "amap-subway-4419",
+      "url": "https://webapi.amap.com/subway/data/4419_drw_dongguan.json",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:05:46.046Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高德地图"
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-dongguan-bv09327048-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327048",
+      "stop_id": "cn-dongguan-bv09327048-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327048-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327048",
+      "stop_id": "cn-dongguan-bv09327048-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:35",
+        "06:35"
+      ],
+      "last_train": [
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327049-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327049",
+      "stop_id": "cn-dongguan-bv09327049-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "23:10",
+        "23:10",
+        "23:10",
+        "23:10",
+        "23:10",
+        "23:10",
+        "23:10"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327049-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327049",
+      "stop_id": "cn-dongguan-bv09327049-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327050-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327050",
+      "stop_id": "cn-dongguan-bv09327050-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327051-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327051",
+      "stop_id": "cn-dongguan-bv09327051-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:06",
+        "23:06",
+        "23:06",
+        "23:06",
+        "23:06",
+        "23:06",
+        "23:06"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327051-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327051",
+      "stop_id": "cn-dongguan-bv09327051-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04",
+        "24:04"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327052-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327052",
+      "stop_id": "cn-dongguan-bv09327052-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:57",
+        "23:57",
+        "23:57",
+        "23:57",
+        "23:57",
+        "23:57",
+        "23:57"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327052-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327052",
+      "stop_id": "cn-dongguan-bv09327052-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31"
+      ],
+      "last_train": [
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327053-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327053",
+      "stop_id": "cn-dongguan-bv09327053-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:46",
+        "23:46",
+        "23:46",
+        "23:46",
+        "23:46",
+        "23:46",
+        "23:46"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327053-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327053",
+      "stop_id": "cn-dongguan-bv09327053-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:24",
+        "23:24",
+        "23:24",
+        "23:24",
+        "23:24",
+        "23:24",
+        "23:24"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327054-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327054",
+      "stop_id": "cn-dongguan-bv09327054-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:20",
+        "23:20",
+        "23:20",
+        "23:20",
+        "23:20",
+        "23:20",
+        "23:20"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327054-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327054",
+      "stop_id": "cn-dongguan-bv09327054-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327055-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327055",
+      "stop_id": "cn-dongguan-bv09327055-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06",
+        "24:06"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327055-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327055",
+      "stop_id": "cn-dongguan-bv09327055-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327056-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327056",
+      "stop_id": "cn-dongguan-bv09327056-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:48",
+        "23:48",
+        "23:48",
+        "23:48",
+        "23:48",
+        "23:48",
+        "23:48"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327056-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327056",
+      "stop_id": "cn-dongguan-bv09327056-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21",
+        "23:21"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327056-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv09327056",
+      "stop_id": "cn-dongguan-bv09327056-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327056-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv09327056",
+      "stop_id": "cn-dongguan-bv09327056-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:53",
+        "23:53",
+        "23:53",
+        "23:53",
+        "23:53",
+        "23:53",
+        "23:53"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327057-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327057",
+      "stop_id": "cn-dongguan-bv09327057-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:53",
+        "23:53",
+        "23:53",
+        "23:53",
+        "23:53",
+        "23:53",
+        "23:53"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327057-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327057",
+      "stop_id": "cn-dongguan-bv09327057-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327058-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327058",
+      "stop_id": "cn-dongguan-bv09327058-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327058-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327058",
+      "stop_id": "cn-dongguan-bv09327058-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:07",
+        "23:07",
+        "23:07",
+        "23:07",
+        "23:07",
+        "23:07",
+        "23:07"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327059-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327059",
+      "stop_id": "cn-dongguan-bv09327059-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35"
+      ],
+      "last_train": [
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327059-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327059",
+      "stop_id": "cn-dongguan-bv09327059-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31"
+      ],
+      "last_train": [
+        "23:45",
+        "23:45",
+        "23:45",
+        "23:45",
+        "23:45",
+        "23:45",
+        "23:45"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327060-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327060",
+      "stop_id": "cn-dongguan-bv09327060-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:28",
+        "23:28",
+        "23:28",
+        "23:28",
+        "23:28",
+        "23:28",
+        "23:28"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327060-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327060",
+      "stop_id": "cn-dongguan-bv09327060-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:41",
+        "06:41"
+      ],
+      "last_train": [
+        "23:42",
+        "23:42",
+        "23:42",
+        "23:42",
+        "23:42",
+        "23:42",
+        "23:42"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327061-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327061",
+      "stop_id": "cn-dongguan-bv09327061-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:13",
+        "23:13",
+        "23:13",
+        "23:13",
+        "23:13",
+        "23:13",
+        "23:13"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327061-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327061",
+      "stop_id": "cn-dongguan-bv09327061-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43"
+      ],
+      "last_train": [
+        "23:57",
+        "23:57",
+        "23:57",
+        "23:57",
+        "23:57",
+        "23:57",
+        "23:57"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327062-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327062",
+      "stop_id": "cn-dongguan-bv09327062-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:55",
+        "23:55",
+        "23:55",
+        "23:55",
+        "23:55",
+        "23:55",
+        "23:55"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327062-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv09327062",
+      "stop_id": "cn-dongguan-bv09327062-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15",
+        "23:15"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv09327063-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv09327063",
+      "stop_id": "cn-dongguan-bv09327063-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525628-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525628",
+      "stop_id": "cn-dongguan-bv10525628-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525630-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525630",
+      "stop_id": "cn-dongguan-bv10525630-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:31",
+        "06:31"
+      ],
+      "last_train": [
+        "23:22",
+        "23:22",
+        "23:22",
+        "23:22",
+        "23:22",
+        "23:22",
+        "23:22"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525630-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525630",
+      "stop_id": "cn-dongguan-bv10525630-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525631-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525631",
+      "stop_id": "cn-dongguan-bv10525631-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:42",
+        "06:42"
+      ],
+      "last_train": [
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12",
+        "23:12"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525631-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525631",
+      "stop_id": "cn-dongguan-bv10525631-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:43",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525632-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525632",
+      "stop_id": "cn-dongguan-bv10525632-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525632-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525632",
+      "stop_id": "cn-dongguan-bv10525632-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:46",
+        "06:43",
+        "06:43"
+      ],
+      "last_train": [
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03",
+        "24:03"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525633-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525633",
+      "stop_id": "cn-dongguan-bv10525633-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35"
+      ],
+      "last_train": [
+        "23:05",
+        "23:05",
+        "23:05",
+        "23:05",
+        "23:05",
+        "23:05",
+        "23:05"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525633-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525633",
+      "stop_id": "cn-dongguan-bv10525633-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:49",
+        "06:49",
+        "06:49",
+        "06:49",
+        "06:49",
+        "06:46",
+        "06:46"
+      ],
+      "last_train": [
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07",
+        "24:07"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525634-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525634",
+      "stop_id": "cn-dongguan-bv10525634-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525634-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525634",
+      "stop_id": "cn-dongguan-bv10525634-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:35",
+        "06:35"
+      ],
+      "last_train": [
+        "23:55",
+        "23:55",
+        "23:55",
+        "23:55",
+        "23:55",
+        "23:55",
+        "23:55"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525635-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525635",
+      "stop_id": "cn-dongguan-bv10525635-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35",
+        "23:35"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525635-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525635",
+      "stop_id": "cn-dongguan-bv10525635-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:37",
+        "23:37",
+        "23:37",
+        "23:37",
+        "23:37",
+        "23:37",
+        "23:37"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525636-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525636",
+      "stop_id": "cn-dongguan-bv10525636-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25",
+        "23:25"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525636-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525636",
+      "stop_id": "cn-dongguan-bv10525636-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525638-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525638",
+      "stop_id": "cn-dongguan-bv10525638-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30",
+        "23:30"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525638-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525638",
+      "stop_id": "cn-dongguan-bv10525638-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:43",
+        "23:43",
+        "23:43",
+        "23:43",
+        "23:43",
+        "23:43",
+        "23:43"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525639-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525639",
+      "stop_id": "cn-dongguan-bv10525639-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525639-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525639",
+      "stop_id": "cn-dongguan-bv10525639-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34",
+        "23:34"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525640-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525640",
+      "stop_id": "cn-dongguan-bv10525640-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30"
+      ],
+      "last_train": [
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00",
+        "23:00"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525641-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525641",
+      "stop_id": "cn-dongguan-bv10525641-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:02",
+        "23:02",
+        "23:02",
+        "23:02",
+        "23:02",
+        "23:02",
+        "23:02"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525641-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525641",
+      "stop_id": "cn-dongguan-bv10525641-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:36",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "24:11",
+        "24:11",
+        "24:11",
+        "24:11",
+        "24:11",
+        "24:11",
+        "24:11"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525642-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525642",
+      "stop_id": "cn-dongguan-bv10525642-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:14",
+        "23:14",
+        "23:14",
+        "23:14",
+        "23:14",
+        "23:14",
+        "23:14"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525642-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525642",
+      "stop_id": "cn-dongguan-bv10525642-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58",
+        "23:58"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525643-2-to-cn-dongguan-bv10525628-2",
+      "station_id": "cn-dongguan-bv10525643",
+      "stop_id": "cn-dongguan-bv10525643-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525628-2",
+      "origin_stop_id": "cn-dongguan-bv10525640-2",
+      "direction_type": "linear",
+      "direction_label": "往虎门火车站",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:33",
+        "23:33",
+        "23:33",
+        "23:33",
+        "23:33",
+        "23:33",
+        "23:33"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10525643-2-to-cn-dongguan-bv10525640-2",
+      "station_id": "cn-dongguan-bv10525643",
+      "stop_id": "cn-dongguan-bv10525643-2",
+      "line_id": "cn-dongguan-line-2",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-2-primary",
+      "destination_stop_id": "cn-dongguan-bv10525640-2",
+      "origin_stop_id": "cn-dongguan-bv10525628-2",
+      "direction_type": "linear",
+      "direction_label": "往东莞火车站",
+      "first_train": [
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10844286-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv10844286",
+      "stop_id": "cn-dongguan-bv10844286-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31"
+      ],
+      "last_train": [
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00",
+        "24:00"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv10844286-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv10844286",
+      "stop_id": "cn-dongguan-bv10844286-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09",
+        "23:09"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144925-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv11144925",
+      "stop_id": "cn-dongguan-bv11144925-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:36",
+        "06:36"
+      ],
+      "last_train": [
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17",
+        "23:17"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144925-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv11144925",
+      "stop_id": "cn-dongguan-bv11144925-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54",
+        "23:54"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144928-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv11144928",
+      "stop_id": "cn-dongguan-bv11144928-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38",
+        "23:38"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144928-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv11144928",
+      "stop_id": "cn-dongguan-bv11144928-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39",
+        "06:39"
+      ],
+      "last_train": [
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144929-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv11144929",
+      "stop_id": "cn-dongguan-bv11144929-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:30",
+        "06:31",
+        "06:31"
+      ],
+      "last_train": [
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31",
+        "23:31"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144929-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv11144929",
+      "stop_id": "cn-dongguan-bv11144929-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:39",
+        "23:39",
+        "23:39",
+        "23:39",
+        "23:39",
+        "23:39",
+        "23:39"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144932-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv11144932",
+      "stop_id": "cn-dongguan-bv11144932-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23",
+        "23:23"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144932-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv11144932",
+      "stop_id": "cn-dongguan-bv11144932-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47",
+        "23:47"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144934-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv11144934",
+      "stop_id": "cn-dongguan-bv11144934-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34",
+        "06:34"
+      ],
+      "last_train": [
+        "23:43",
+        "23:43",
+        "23:43",
+        "23:43",
+        "23:43",
+        "23:43",
+        "23:43"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144934-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv11144934",
+      "stop_id": "cn-dongguan-bv11144934-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35",
+        "06:35"
+      ],
+      "last_train": [
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26",
+        "23:26"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144936-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv11144936",
+      "stop_id": "cn-dongguan-bv11144936-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32",
+        "06:32"
+      ],
+      "last_train": [
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50",
+        "23:50"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11144936-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv11144936",
+      "stop_id": "cn-dongguan-bv11144936-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38",
+        "06:38"
+      ],
+      "last_train": [
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19",
+        "23:19"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11284496-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv11284496",
+      "stop_id": "cn-dongguan-bv11284496-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33",
+        "06:33"
+      ],
+      "last_train": [
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03",
+        "23:03"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11284496-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv11284496",
+      "stop_id": "cn-dongguan-bv11284496-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40",
+        "06:40"
+      ],
+      "last_train": [
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08",
+        "24:08"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11338508-1-to-cn-dongguan-bv09327050-1",
+      "station_id": "cn-dongguan-bv11338508",
+      "stop_id": "cn-dongguan-bv11338508-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327050-1",
+      "origin_stop_id": "cn-dongguan-bv09327063-1",
+      "direction_type": "linear",
+      "direction_label": "往东莞西站",
+      "first_train": [
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31",
+        "06:31"
+      ],
+      "last_train": [
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40",
+        "23:40"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    },
+    {
+      "id": "cn-dongguan-bv11338508-1-to-cn-dongguan-bv09327063-1",
+      "station_id": "cn-dongguan-bv11338508",
+      "stop_id": "cn-dongguan-bv11338508-1",
+      "line_id": "cn-dongguan-line-1",
+      "source_id": "https://www.dggdjt.com/info/17798.htmx",
+      "pattern_id": "cn-dongguan-pattern-1-primary",
+      "destination_stop_id": "cn-dongguan-bv09327063-1",
+      "origin_stop_id": "cn-dongguan-bv09327050-1",
+      "direction_type": "linear",
+      "direction_label": "往梅塘站",
+      "first_train": [
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37",
+        "06:37"
+      ],
+      "last_train": [
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29",
+        "23:29"
+      ],
+      "extras": {
+        "calendar": "weekday_weekend",
+        "calendar_note": "Mon–Fri workday / Sat–Sun non-workday baseline; statutory holidays and compensating workdays follow operator notices."
+      }
+    }
+  ]
+}

@@ -262,6 +262,7 @@ export const ApiFareMatrix = t.Object(
   {
     currency: t.String(),
     unit: t.String(),
+    basis: t.Optional(t.Literal('base')),
     station_ids: t.Array(t.String()),
     fares: t.Array(t.Array(t.Union([t.Number(), t.Null()])))
   },
@@ -274,6 +275,7 @@ export const ApiFareRow = t.Object(
     from_station_id: t.String(),
     currency: t.String(),
     unit: t.String(),
+    basis: t.Optional(t.Literal('base')),
     fares: t.Record(t.String(), t.Union([t.Number(), t.Null()]))
   },
   { $id: 'ApiFareRow' }
@@ -456,6 +458,7 @@ export const ApiRoutePlan = t.Object(
     transfers: t.Number(),
     legs: t.Array(t.Ref(ApiRouteLeg)),
     fare: t.Union([t.Number(), t.Null()]),
+    fare_basis: t.Optional(t.Literal('base')),
     currency: t.Union([t.String(), t.Null()])
   },
   { $id: 'ApiRoutePlan' }

@@ -21,6 +21,8 @@ export const FareMatrix = Schema.Struct({
   source: Schema.Array(Source),
   currency: Schema.String,
   unit: Schema.String,
+  /** Base fare before promotions and passenger concessions. */
+  basis: Schema.optionalWith(Schema.Literal('base'), { as: 'Option' }),
   /** Station ids in matrix index order. */
   station_ids: Schema.Array(Schema.String),
   /** Symmetric `station_ids.length` x `station_ids.length` matrix. */

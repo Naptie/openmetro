@@ -84,6 +84,17 @@ test('deriveSegmentTimes computes deltas along a pattern', () => {
   assert.equal(derived[0].travel_time_source, 'last_train');
 });
 
+test('uses the reverse last-train chain for a missing terminal interval', () => {
+  const derived = deriveSegmentTimes([mainPattern], stops, [
+    tt('s-a', 's-c', '23:00'),
+    tt('s-b', 's-c', '23:02'),
+    tt('s-c', 's-a', '23:30'),
+    tt('s-b', 's-a', '23:34')
+  ]);
+  const intervals = derived.map((s) => s.travel_time_seconds).sort((a, b) => a - b);
+  assert.deepEqual(intervals, [120, 240]);
+});
+
 test('deriveSegmentTimes derives branch segments independently', () => {
   const tts = [
     tt('s-a', 's-c', '22:00'),

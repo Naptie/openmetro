@@ -57,9 +57,9 @@ export const apiTimetableListSchema = z.array(apiTimetableSchema);
 
 export const apiStationDetailSchema = z.object({ "id": z.string(), "name": z.string(), "names": apiNamesSchema, "location": apiGeoPointSchema.optional(), "schematic": apiSchematicPointSchema.optional(), "status": z.array(apiTimetableStatusSchema), "lines": z.array(z.string()), "is_interchange": z.boolean(), "transfers": z.array(apiTransferSchema), "timetables": z.array(apiTimetableSchema) });
 
-export const apiFareMatrixSchema = z.object({ "currency": z.string(), "unit": z.string(), "station_ids": z.array(z.string()), "fares": z.array(z.array(z.union([z.number(), z.null()]))) });
+export const apiFareMatrixSchema = z.object({ "currency": z.string(), "unit": z.string(), "basis": z.literal("base").optional(), "station_ids": z.array(z.string()), "fares": z.array(z.array(z.union([z.number(), z.null()]))) });
 
-export const apiFareRowSchema = z.object({ "from_station_id": z.string(), "currency": z.string(), "unit": z.string(), "fares": z.record(z.string(), z.union([z.number(), z.null()])) });
+export const apiFareRowSchema = z.object({ "from_station_id": z.string(), "currency": z.string(), "unit": z.string(), "basis": z.literal("base").optional(), "fares": z.record(z.string(), z.union([z.number(), z.null()])) });
 
 export const apiCitySchema = z.object({ "id": z.string(), "name": apiNamesSchema, "country": z.string(), "population": z.union([z.number(), z.null()]), "area": z.union([z.number(), z.null()]), "location": z.union([z.object({ "type": z.literal("Point"), "coordinates": z.tuple([z.number(), z.number()]) }), z.null()]) });
 
@@ -85,7 +85,7 @@ export const apiTransferLegSchema = z.object({ "kind": z.literal("transfer"), "l
 
 export const apiRouteLegSchema = z.discriminatedUnion("kind", [apiRideLegSchema, apiTransferLegSchema]);
 
-export const apiRoutePlanSchema = z.object({ "from_station_id": z.string(), "to_station_id": z.string(), "total_seconds": z.number(), "transfers": z.number(), "legs": z.array(apiRouteLegSchema), "fare": z.union([z.number(), z.null()]), "currency": z.union([z.string(), z.null()]) });
+export const apiRoutePlanSchema = z.object({ "from_station_id": z.string(), "to_station_id": z.string(), "total_seconds": z.number(), "transfers": z.number(), "legs": z.array(apiRouteLegSchema), "fare": z.union([z.number(), z.null()]), "fare_basis": z.literal("base").optional(), "currency": z.union([z.string(), z.null()]) });
 
 export const apiTravelTimeEntrySchema = z.object({ "station_id": z.string(), "seconds": z.number() });
 

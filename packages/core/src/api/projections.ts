@@ -168,6 +168,7 @@ export function projectFareMatrix(f: FareMatrixEncoded): Static<typeof ApiFareMa
   return {
     currency: f.currency,
     unit: f.unit,
+    ...(f.basis ? { basis: f.basis } : {}),
     station_ids: [...f.station_ids],
     fares: f.fares.map((row) => [...row])
   };
