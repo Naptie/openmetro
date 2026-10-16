@@ -292,7 +292,7 @@ export function normalizeMacau(sources: MlmSources): MacauCanonical {
     name: '澳門輕軌',
     names: { zh: '澳門輕軌', en: 'Macau Light Rapid Transit' },
     city: placeholderCity('CN-82'),
-    country_code: 'MO',
+    country_code: 'CN',
     currency: 'MOP',
     timezone: 'Asia/Macau',
     coordinate_system: 'gcj02',
