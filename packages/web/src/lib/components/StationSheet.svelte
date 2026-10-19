@@ -18,6 +18,7 @@
   import { createSheetSizer } from '$lib/hooks/use-sheet-resize.svelte';
   import { i18n } from '$lib/i18n.svelte';
   import { app } from '$lib/state.svelte';
+  import { timetableTimes } from '$lib/timetable-display';
 
   const t = $derived(i18n.t);
   const locale = $derived(i18n.locale);
@@ -71,12 +72,13 @@
   // each row is rendered as an explicit "from line → to line" hop.
   const transferRows = $derived.by(() => {
     if (!detail || !network) return [];
+    const defaultSeconds = network.meta.routing.default_transfer_seconds;
     return detail.transfers
       .map((transfer) => ({
         id: transfer.id,
         from: lineName(transfer.from_line_id),
         to: lineName(transfer.to_line_id),
-        seconds: transfer.walk_time_seconds ?? 0
+        seconds: transfer.walk_time_seconds ?? defaultSeconds
       }))
       .sort(
         (a, b) =>
@@ -138,9 +140,13 @@
           isLoop: line?.loop ?? false,
           destination,
           direction: localizeDirection(tt.direction_label),
-          first: tt.first_train[tt.first_train.length - 1] ?? tt.first_train[0],
-          last: tt.last_train[tt.last_train.length - 1] ?? tt.last_train[0],
-          inService: status?.is_in_service ?? false
+          ...timetableTimes(tt, status),
+          firstDescription: tt.first_train_desc,
+          lastDescription: tt.last_train_desc,
+          validFrom: tt.valid_from,
+          validTo: tt.valid_to,
+          timezone: status?.timezone ?? network.meta.timezone,
+          inService: status?.first_train && status?.last_train ? status.is_in_service : null
         };
       })
       .filter((row) => row.line)
@@ -299,6 +305,11 @@
           <h3 class="mb-2 text-xs font-semibold tracking-wider text-muted-foreground uppercase">
             {t.station_timetable()}
           </h3>
+          {#if network.meta.service_scope}
+            <p class="mb-3 text-xs leading-relaxed text-muted-foreground">
+              {network.meta.service_scope}
+            </p>
+          {/if}
           {#if detailLoading}
             <div class="flex flex-col gap-2">
               {#each Array(3) as _, i (i)}
@@ -312,48 +323,79 @@
           {:else}
             <div class="flex flex-col gap-1.5">
               {#each timetableRows as row (row.id)}
-                <div class="flex items-center gap-2.5 rounded-lg border px-2.5 py-1.5 text-xs">
-                  <span
-                    class="size-2.5 shrink-0 rounded-full"
-                    style="background: {row.line?.color ?? '#94a3b8'}"
-                  ></span>
-                  <div class="min-w-0 flex-1">
-                    <p class="truncate font-medium">
-                      <button
-                        type="button"
-                        class="cursor-pointer hover:underline"
-                        onclick={() => app.selectLine(row.line!.id)}
-                      >
-                        {localizedName(row.line!.names, row.line!.name, locale)}
-                      </button>
-                      {#if row.isLoop && row.direction}
-                        <span class="font-normal text-muted-foreground">
-                          ·
-                          {row.direction.main}{row.direction.qualifier}
-                        </span>
-                      {:else if row.destination}
-                        <span class="font-normal text-muted-foreground">→ {row.destination}</span>
-                      {/if}
-                    </p>
-                  </div>
-                  <div class="shrink-0 text-right tabular-nums">
-                    <p>
-                      <span class="text-muted-foreground">{t.station_first_train()}</span>
-                      {row.first}
-                    </p>
-                    <p>
-                      <span class="text-muted-foreground">{t.station_last_train()}</span>
-                      {row.last}
-                    </p>
-                  </div>
-                  <span
-                    class="shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-medium {row.inService
+                {@const serviceLabel = row.inService === null
+                  ? t.station_timetable_unavailable()
+                  : row.inService ? t.station_in_service() : t.station_out_of_service()}
+                <div class="rounded-lg border px-2.5 py-2 text-xs">
+                  <div class="flex items-center gap-2.5">
+                    <span
+                      class="size-2.5 shrink-0 rounded-full"
+                      style="background: {row.line?.color ?? '#94a3b8'}"
+                    ></span>
+                    <div class="min-w-0 flex-1">
+                      <p class="truncate font-medium">
+                        <button
+                          type="button"
+                          class="cursor-pointer hover:underline"
+                          onclick={() => app.selectLine(row.line!.id)}
+                        >
+                          {localizedName(row.line!.names, row.line!.name, locale)}
+                        </button>
+                        {#if row.isLoop && row.direction}
+                          <span class="font-normal text-muted-foreground">
+                            ·
+                            {row.direction.main}{row.direction.qualifier}
+                          </span>
+                        {:else if row.destination}
+                          <span class="font-normal text-muted-foreground">→ {row.destination}</span>
+                        {/if}
+                      </p>
+                    </div>
+                    <div class="shrink-0 text-right tabular-nums">
+                      <p>
+                        <span class="text-muted-foreground">{t.station_first_train()}</span>
+                        {row.first}
+                      </p>
+                      <p>
+                        <span class="text-muted-foreground">{t.station_last_train()}</span>
+                        {row.last}
+                      </p>
+                    </div>
+                    <span
+                      class="shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-medium {row.inService
                       ? 'bg-emerald-500/15 text-emerald-700'
                       : 'bg-zinc-500/15 text-zinc-500'}"
-                    title={row.inService ? t.station_in_service() : t.station_out_of_service()}
-                  >
-                    {row.inService ? t.station_in_service() : t.station_out_of_service()}
-                  </span>
+                      title={serviceLabel}
+                    >
+                      {serviceLabel}
+                    </span>
+                  </div>
+                  {#if row.serviceDate}
+                    <p class="mt-1.5 text-[11px] text-muted-foreground">
+                      {t.station_service_date({ date: row.serviceDate, timezone: row.timezone })}
+                    </p>
+                  {/if}
+                  {#if row.firstDescription}
+                    <p class="mt-1.5 leading-relaxed text-muted-foreground">
+                      {row.firstDescription}
+                    </p>
+                  {/if}
+                  {#if row.lastDescription && row.lastDescription !== row.firstDescription}
+                    <p class="mt-1 leading-relaxed text-muted-foreground">{row.lastDescription}</p>
+                  {/if}
+                  {#if row.validFrom || row.validTo}
+                    <p class="mt-1 text-[11px] text-muted-foreground">
+                      {#if row.validFrom}
+                        {t.station_valid_from({ date: row.validFrom })}
+                      {/if}
+                      {#if row.validFrom && row.validTo}
+                        ·
+                      {/if}
+                      {#if row.validTo}
+                        {t.station_valid_to({ date: row.validTo })}
+                      {/if}
+                    </p>
+                  {/if}
                 </div>
               {/each}
             </div>
@@ -404,7 +446,7 @@
                     </span>
                   {/if}
                   <span class="ml-auto shrink-0 tabular-nums text-muted-foreground">
-                    {formatDuration(transfer.seconds, locale)}
+                    ≈{formatDuration(transfer.seconds, locale)}
                   </span>
                 </div>
               {/each}

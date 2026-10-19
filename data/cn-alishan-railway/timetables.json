@@ -1,0 +1,907 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/timetables.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-alishan-railway",
+  "generated_at": "2026-10-16T01:43:18.755Z",
+  "source": [
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/0000115",
+      "version": "sha256:72d85ef98390e9fc73ba5ea22c6caade669ed23008dfbfba85776054c742d2f0",
+      "retrieved_at": "2026-10-15T17:38:58.992Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/0000300",
+      "version": "sha256:8c6d899b1fe2196856a715568e8d7454f475d4bb822aa7d293d1f55691b52713",
+      "retrieved_at": "2026-10-15T17:38:59.050Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/0000119",
+      "version": "sha256:87e1b655329c713f5bf7963e182db34b93082b4481b5496eb6eee52647c19907",
+      "retrieved_at": "2026-10-15T17:38:59.338Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/0000120",
+      "version": "sha256:b4e7accdee9f3e0bbadea88879ead8f6401f00c84d873cd073b9a0f42fd11d93",
+      "retrieved_at": "2026-10-15T17:38:59.059Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "afrch.forest.gov.tw",
+      "url": "https://afrch.forest.gov.tw/",
+      "version": "sha256:2e3bd5a5fdbb5a36640e4be9883785c00871f06a8daa2b2ed4c1d20edd0a3be7",
+      "retrieved_at": "2026-10-15T17:38:59.275Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "afrch.forest.gov.tw"
+    },
+    {
+      "name": "OpenStreetMap rail stations",
+      "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A35%5D%3B%28node%5B%22railway%22%3D%22station%22%5D%2821.8%2C120%2C25.4%2C122.1%29%3Bnode%5B%22railway%22%3D%22halt%22%5D%2821.8%2C120%2C25.4%2C122.1%29%3B%29%3Bout+body%3B",
+      "version": "2026-06-01T08:52:28Z",
+      "retrieved_at": "2026-10-15T17:25:20.810Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors",
+      "osm_base": "2026-06-01T08:52:28Z"
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-alishan-railway-stop-al-alishan-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-alishan",
+      "stop_id": "cn-alishan-railway-stop-al-alishan",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "alishan",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "11:50"
+      ],
+      "last_train": [
+        "11:50"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-beimen-to-cn-alishan-railway-stop-al-alishan-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-beimen",
+      "stop_id": "cn-alishan-railway-stop-al-beimen",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "beimen",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-alishan",
+      "direction_type": "linear",
+      "first_train": [
+        "10:08"
+      ],
+      "last_train": [
+        "10:08"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-beimen-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-beimen",
+      "stop_id": "cn-alishan-railway-stop-al-beimen",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "beimen",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "16:45"
+      ],
+      "last_train": [
+        "16:45"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-beimen-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-beimen",
+      "stop_id": "cn-alishan-railway-stop-al-beimen",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "beimen",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "15:39"
+      ],
+      "last_train": [
+        "15:39"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-beimen-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-beimen",
+      "stop_id": "cn-alishan-railway-stop-al-beimen",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "beimen",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "09:10"
+      ],
+      "last_train": [
+        "09:10"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-chiayi-to-cn-alishan-railway-stop-al-alishan-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-chiayi",
+      "stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "chiayi",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-alishan",
+      "direction_type": "linear",
+      "first_train": [
+        "10:00"
+      ],
+      "last_train": [
+        "10:00"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-chiayi-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-chiayi",
+      "stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "chiayi",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "09:00"
+      ],
+      "last_train": [
+        "09:00"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-dulishan-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-dulishan",
+      "stop_id": "cn-alishan-railway-stop-al-dulishan",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "dulishan",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "15:31"
+      ],
+      "last_train": [
+        "15:31"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-dulishan-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-dulishan",
+      "stop_id": "cn-alishan-railway-stop-al-dulishan",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "dulishan",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "10:23"
+      ],
+      "last_train": [
+        "10:23"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-duolin-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-duolin",
+      "stop_id": "cn-alishan-railway-stop-al-duolin",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "duolin",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "13:36"
+      ],
+      "last_train": [
+        "13:36"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-duolin-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-duolin",
+      "stop_id": "cn-alishan-railway-stop-al-duolin",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "duolin",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "11:45"
+      ],
+      "last_train": [
+        "11:45"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-erwanping-to-cn-alishan-railway-stop-al-alishan-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-erwanping",
+      "stop_id": "cn-alishan-railway-stop-al-erwanping",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "erwanping",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-alishan",
+      "direction_type": "linear",
+      "first_train": [
+        "14:38"
+      ],
+      "last_train": [
+        "14:38"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-erwanping-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-erwanping",
+      "stop_id": "cn-alishan-railway-stop-al-erwanping",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "erwanping",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "12:09"
+      ],
+      "last_train": [
+        "12:09"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-fenqihu-to-cn-alishan-railway-stop-al-alishan-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-fenqihu",
+      "stop_id": "cn-alishan-railway-stop-al-fenqihu",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "fenqihu",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-alishan",
+      "direction_type": "linear",
+      "first_train": [
+        "13:21"
+      ],
+      "last_train": [
+        "13:21"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-fenqihu-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-fenqihu",
+      "stop_id": "cn-alishan-railway-stop-al-fenqihu",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "fenqihu",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "14:31"
+      ],
+      "last_train": [
+        "14:31"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-fenqihu-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-fenqihu",
+      "stop_id": "cn-alishan-railway-stop-al-fenqihu",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "fenqihu",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "13:29"
+      ],
+      "last_train": [
+        "13:29"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-fenqihu-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-fenqihu",
+      "stop_id": "cn-alishan-railway-stop-al-fenqihu",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "fenqihu",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "11:30"
+      ],
+      "last_train": [
+        "11:30"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-jiaoliping-to-cn-alishan-railway-stop-al-alishan-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-jiaoliping",
+      "stop_id": "cn-alishan-railway-stop-al-jiaoliping",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "jiaoliping",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-alishan",
+      "direction_type": "linear",
+      "first_train": [
+        "11:43"
+      ],
+      "last_train": [
+        "11:43"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-jiaoliping-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-jiaoliping",
+      "stop_id": "cn-alishan-railway-stop-al-jiaoliping",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "jiaoliping",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "15:06"
+      ],
+      "last_train": [
+        "15:06"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-jiaoliping-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-jiaoliping",
+      "stop_id": "cn-alishan-railway-stop-al-jiaoliping",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "jiaoliping",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "14:04"
+      ],
+      "last_train": [
+        "14:04"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-jiaoliping-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-jiaoliping",
+      "stop_id": "cn-alishan-railway-stop-al-jiaoliping",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "jiaoliping",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "10:48"
+      ],
+      "last_train": [
+        "10:48"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-liyuanliao-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-liyuanliao",
+      "stop_id": "cn-alishan-railway-stop-al-liyuanliao",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "liyuanliao",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "15:18"
+      ],
+      "last_train": [
+        "15:18"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-liyuanliao-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-liyuanliao",
+      "stop_id": "cn-alishan-railway-stop-al-liyuanliao",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "liyuanliao",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "10:36"
+      ],
+      "last_train": [
+        "10:36"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-lumachan-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-lumachan",
+      "stop_id": "cn-alishan-railway-stop-al-lumachan",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "lumachan",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "16:21"
+      ],
+      "last_train": [
+        "16:21"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-lumachan-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-lumachan",
+      "stop_id": "cn-alishan-railway-stop-al-lumachan",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "lumachan",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "09:33"
+      ],
+      "last_train": [
+        "09:33"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-shizilu-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-shizilu",
+      "stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "shizilu",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "13:21"
+      ],
+      "last_train": [
+        "13:21"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-shuisheliao-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-shuisheliao",
+      "stop_id": "cn-alishan-railway-stop-al-shuisheliao",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "shuisheliao",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "14:48"
+      ],
+      "last_train": [
+        "14:48"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-shuisheliao-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-shuisheliao",
+      "stop_id": "cn-alishan-railway-stop-al-shuisheliao",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "shuisheliao",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "11:05"
+      ],
+      "last_train": [
+        "11:05"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-zhangnaoliao-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-zhangnaoliao",
+      "stop_id": "cn-alishan-railway-stop-al-zhangnaoliao",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "zhangnaoliao",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "15:44"
+      ],
+      "last_train": [
+        "15:44"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-zhangnaoliao-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-zhangnaoliao",
+      "stop_id": "cn-alishan-railway-stop-al-zhangnaoliao",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "zhangnaoliao",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "10:10"
+      ],
+      "last_train": [
+        "10:10"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-zhuqi-to-cn-alishan-railway-stop-al-alishan-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-zhuqi",
+      "stop_id": "cn-alishan-railway-stop-al-zhuqi",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "zhuqi",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-alishan",
+      "direction_type": "linear",
+      "first_train": [
+        "10:39"
+      ],
+      "last_train": [
+        "10:39"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-zhuqi-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-zhuqi",
+      "stop_id": "cn-alishan-railway-stop-al-zhuqi",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "zhuqi",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "16:12"
+      ],
+      "last_train": [
+        "16:12"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-zhuqi-to-cn-alishan-railway-stop-al-chiayi-cn-alishan-railway-pattern-al-service-5",
+      "station_id": "cn-alishan-railway-station-zhuqi",
+      "stop_id": "cn-alishan-railway-stop-al-zhuqi",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "zhuqi",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-5",
+      "destination_stop_id": "cn-alishan-railway-stop-al-chiayi",
+      "direction_type": "linear",
+      "first_train": [
+        "15:07"
+      ],
+      "last_train": [
+        "15:07"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-al-zhuqi-to-cn-alishan-railway-stop-al-shizilu-cn-alishan-railway-pattern-al-service-1",
+      "station_id": "cn-alishan-railway-station-zhuqi",
+      "stop_id": "cn-alishan-railway-stop-al-zhuqi",
+      "line_id": "cn-alishan-railway-line-al",
+      "station_code": "zhuqi",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-al-service-1",
+      "destination_stop_id": "cn-alishan-railway-stop-al-shizilu",
+      "direction_type": "linear",
+      "first_train": [
+        "09:43"
+      ],
+      "last_train": [
+        "09:43"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-sm-alishan-to-cn-alishan-railway-stop-sm-shenmu",
+      "station_id": "cn-alishan-railway-station-alishan",
+      "stop_id": "cn-alishan-railway-stop-sm-alishan",
+      "line_id": "cn-alishan-railway-line-sm",
+      "station_code": "alishan",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-sm",
+      "destination_stop_id": "cn-alishan-railway-stop-sm-shenmu",
+      "direction_type": "linear",
+      "first_train": [
+        "09:40"
+      ],
+      "last_train": [
+        "15:50"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-sm-shenmu-to-cn-alishan-railway-stop-sm-alishan",
+      "station_id": "cn-alishan-railway-station-shenmu",
+      "stop_id": "cn-alishan-railway-stop-sm-shenmu",
+      "line_id": "cn-alishan-railway-line-sm",
+      "station_code": "shenmu",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-sm",
+      "destination_stop_id": "cn-alishan-railway-stop-sm-alishan",
+      "direction_type": "linear",
+      "first_train": [
+        "10:00"
+      ],
+      "last_train": [
+        "16:10"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-zp-alishan-to-cn-alishan-railway-stop-zp-zhaoping",
+      "station_id": "cn-alishan-railway-station-alishan",
+      "stop_id": "cn-alishan-railway-stop-zp-alishan",
+      "line_id": "cn-alishan-railway-line-zp",
+      "station_code": "alishan",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-zp",
+      "destination_stop_id": "cn-alishan-railway-stop-zp-zhaoping",
+      "direction_type": "linear",
+      "first_train": [
+        "09:00"
+      ],
+      "last_train": [
+        "15:40"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-zp-zhaoping-to-cn-alishan-railway-stop-zp-alishan",
+      "station_id": "cn-alishan-railway-station-zhaoping",
+      "stop_id": "cn-alishan-railway-stop-zp-zhaoping",
+      "line_id": "cn-alishan-railway-line-zp",
+      "station_code": "zhaoping",
+      "source_id": "afrch",
+      "pattern_id": "cn-alishan-railway-pattern-zp",
+      "destination_stop_id": "cn-alishan-railway-stop-zp-alishan",
+      "direction_type": "linear",
+      "first_train": [
+        "09:20"
+      ],
+      "last_train": [
+        "16:00"
+      ],
+      "service": "定期旅客列車",
+      "extras": {
+        "timetable_scope": "published_regular_service"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-zs-alishan-sunrise-2026-10-16",
+      "station_id": "cn-alishan-railway-station-alishan",
+      "stop_id": "cn-alishan-railway-stop-zs-alishan",
+      "line_id": "cn-alishan-railway-line-zs",
+      "pattern_id": "cn-alishan-railway-pattern-zs",
+      "destination_stop_id": "cn-alishan-railway-stop-zs-zhushan",
+      "direction_type": "linear",
+      "source_id": "afrch",
+      "first_train": [
+        "05:20"
+      ],
+      "last_train": [
+        ""
+      ],
+      "valid_from": "2026-10-16",
+      "valid_to": "2026-10-16",
+      "service": "當日觀日列車公告；其他班次時間未公布",
+      "extras": {
+        "timetable_scope": "dated_announcement"
+      }
+    },
+    {
+      "id": "cn-alishan-railway-stop-zs-zhushan-sunrise-2026-10-16",
+      "station_id": "cn-alishan-railway-station-zhushan",
+      "stop_id": "cn-alishan-railway-stop-zs-zhushan",
+      "line_id": "cn-alishan-railway-line-zs",
+      "pattern_id": "cn-alishan-railway-pattern-zs",
+      "destination_stop_id": "cn-alishan-railway-stop-zs-alishan",
+      "direction_type": "linear",
+      "source_id": "afrch",
+      "first_train": [
+        ""
+      ],
+      "last_train": [
+        "07:00"
+      ],
+      "valid_from": "2026-10-16",
+      "valid_to": "2026-10-16",
+      "service": "當日觀日列車公告；其他班次時間未公布",
+      "extras": {
+        "timetable_scope": "dated_announcement"
+      }
+    }
+  ]
+}

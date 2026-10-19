@@ -1,0 +1,1322 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stops.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-kaohsiung",
+  "generated_at": "2026-10-15T10:13:52.159Z",
+  "source": [
+    {
+      "name": "krtc-stations",
+      "url": "https://www.krtc.com.tw/Guide/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-stations",
+      "url": "https://www.krtc.com.tw/KLRT/station_guide",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-timetables",
+      "url": "https://www.krtc.com.tw/Guide/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-timetables",
+      "url": "https://www.krtc.com.tw/KLRT/first_and_last_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-lrt-travel-matrix",
+      "url": "https://www.krtc.com.tw/KLRT/time_between_train",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "krtc-planner",
+      "url": "https://www.krtc.com.tw",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "unknown",
+      "license_url": null,
+      "attribution": "高雄捷運股份有限公司；官方車站導覽、首末班車、站間行駛時間及單程票票價查詢。",
+      "notes": "Planner results use a 24-hour scratch cache. Cross-system fares are unavailable."
+    },
+    {
+      "name": "photon-osm",
+      "url": "https://photon.komoot.io/api/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "Photon candidates verified through OSM API by official ref, mode, operator/network and city bounds; coordinates are derived."
+    },
+    {
+      "name": "osm-identity",
+      "url": "https://api.openstreetmap.org/api/0.6/",
+      "version": "live",
+      "retrieved_at": "2026-10-15T10:13:52.153Z",
+      "license": "odbl",
+      "license_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors; geocoding by Photon / komoot.",
+      "notes": "Photon candidates verified through OSM API by official ref, mode, operator/network and city bounds; coordinates are derived."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-kaohsiung-stop-c1",
+      "station_id": "cn-kaohsiung-c1",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 0,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3246121,
+        "lat": 22.604578,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C1"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c10",
+      "station_id": "cn-kaohsiung-c10",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 9,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2931506,
+        "lat": 22.6166858,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C10"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c11",
+      "station_id": "cn-kaohsiung-c11",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 10,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2894256,
+        "lat": 22.6192654,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C11"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c12",
+      "station_id": "cn-kaohsiung-c12",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 11,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2842225,
+        "lat": 22.6184985,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C12"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c13",
+      "station_id": "cn-kaohsiung-c13",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 12,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2799183,
+        "lat": 22.6204454,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C13"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c14",
+      "station_id": "cn-kaohsiung-c14",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 13,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2758388,
+        "lat": 22.6216116,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C14"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c15",
+      "station_id": "cn-kaohsiung-c15",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 14,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.278669,
+        "lat": 22.6265296,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C15"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c16",
+      "station_id": "cn-kaohsiung-c16",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 15,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2807283,
+        "lat": 22.6295474,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C16"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c17",
+      "station_id": "cn-kaohsiung-c17",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 16,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2825911,
+        "lat": 22.6360321,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C17"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c18",
+      "station_id": "cn-kaohsiung-c18",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 17,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2810929,
+        "lat": 22.6420358,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C18"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c19",
+      "station_id": "cn-kaohsiung-c19",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 18,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2814409,
+        "lat": 22.6470427,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C19"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c2",
+      "station_id": "cn-kaohsiung-c2",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 1,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3197975,
+        "lat": 22.5995711,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C2"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c20",
+      "station_id": "cn-kaohsiung-c20",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 19,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2817491,
+        "lat": 22.6521144,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C20"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21",
+      "station_id": "cn-kaohsiung-c21",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 21,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2872544,
+        "lat": 22.6549882,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C21"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c21a",
+      "station_id": "cn-kaohsiung-c21a",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 20,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2828409,
+        "lat": 22.6549695,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C21A"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c22",
+      "station_id": "cn-kaohsiung-c22",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 22,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2910873,
+        "lat": 22.654805,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C22"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c23",
+      "station_id": "cn-kaohsiung-c23",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 23,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2950847,
+        "lat": 22.6544819,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C23"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c24",
+      "station_id": "cn-kaohsiung-c24",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 24,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.303253,
+        "lat": 22.6561709,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C24"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c25",
+      "station_id": "cn-kaohsiung-c25",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 25,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3088043,
+        "lat": 22.6566418,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C25"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c26",
+      "station_id": "cn-kaohsiung-c26",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 26,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3154233,
+        "lat": 22.6554849,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C26"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c27",
+      "station_id": "cn-kaohsiung-c27",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 27,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.31888,
+        "lat": 22.653543,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C27"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c28",
+      "station_id": "cn-kaohsiung-c28",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 28,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3241552,
+        "lat": 22.6497954,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C28"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c29",
+      "station_id": "cn-kaohsiung-c29",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 29,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3263305,
+        "lat": 22.6438161,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C29"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c3",
+      "station_id": "cn-kaohsiung-c3",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 2,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3153928,
+        "lat": 22.5954952,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C3"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c30",
+      "station_id": "cn-kaohsiung-c30",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 30,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3271428,
+        "lat": 22.6369232,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C30"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c31",
+      "station_id": "cn-kaohsiung-c31",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 31,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3256124,
+        "lat": 22.6327993,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C31"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c32",
+      "station_id": "cn-kaohsiung-c32",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 32,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.322824,
+        "lat": 22.6294128,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C32"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c33",
+      "station_id": "cn-kaohsiung-c33",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 33,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3236496,
+        "lat": 22.6251751,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C33"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c34",
+      "station_id": "cn-kaohsiung-c34",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 34,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.32518,
+        "lat": 22.6211709,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C34"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c35",
+      "station_id": "cn-kaohsiung-c35",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 35,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3268268,
+        "lat": 22.6168915,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C35"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c36",
+      "station_id": "cn-kaohsiung-c36",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 36,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3271484,
+        "lat": 22.6125106,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C36"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c37",
+      "station_id": "cn-kaohsiung-c37",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 37,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3260515,
+        "lat": 22.6084757,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C37"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c4",
+      "station_id": "cn-kaohsiung-c4",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 3,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3105357,
+        "lat": 22.5936154,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C4"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c5",
+      "station_id": "cn-kaohsiung-c5",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 4,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3049144,
+        "lat": 22.595005,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C5"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c6",
+      "station_id": "cn-kaohsiung-c6",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 5,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3026381,
+        "lat": 22.6008963,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C6"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c7",
+      "station_id": "cn-kaohsiung-c7",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 6,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3008011,
+        "lat": 22.6056852,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C7"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c8",
+      "station_id": "cn-kaohsiung-c8",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 7,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2980082,
+        "lat": 22.6101061,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C8"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-c9",
+      "station_id": "cn-kaohsiung-c9",
+      "line_id": "cn-kaohsiung-line-c",
+      "sequence": 8,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2933482,
+        "lat": 22.6116371,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "C9"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o1",
+      "station_id": "cn-kaohsiung-o1",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 0,
+      "is_terminal": true,
+      "location": {
+        "lon": 120.2748048,
+        "lat": 22.621369,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O1"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o10",
+      "station_id": "cn-kaohsiung-o10",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 8,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3407993,
+        "lat": 22.6251886,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O10"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o11",
+      "station_id": "cn-kaohsiung-o11",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 9,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3480491,
+        "lat": 22.6253627,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O11"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o12",
+      "station_id": "cn-kaohsiung-o12",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 10,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3552091,
+        "lat": 22.6259919,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O12"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o13",
+      "station_id": "cn-kaohsiung-o13",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 11,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3633605,
+        "lat": 22.6251921,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O13"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o14",
+      "station_id": "cn-kaohsiung-o14",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 12,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3718273,
+        "lat": 22.6246291,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O14"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o2",
+      "station_id": "cn-kaohsiung-o2",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 1,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2840775,
+        "lat": 22.6241553,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O2"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o4",
+      "station_id": "cn-kaohsiung-o4",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 2,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.2946284,
+        "lat": 22.6289683,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O4"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o5",
+      "station_id": "cn-kaohsiung-r10",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 3,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3018602,
+        "lat": 22.6313941,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O5"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o6",
+      "station_id": "cn-kaohsiung-o6",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 4,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3114522,
+        "lat": 22.6307269,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O6"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o7",
+      "station_id": "cn-kaohsiung-o7",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 5,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3176229,
+        "lat": 22.6302695,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O7"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o8",
+      "station_id": "cn-kaohsiung-o8",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 6,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3276476,
+        "lat": 22.6294745,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O8"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-o9",
+      "station_id": "cn-kaohsiung-o9",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 7,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3346396,
+        "lat": 22.6272511,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "O9"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-ot1",
+      "station_id": "cn-kaohsiung-ot1",
+      "line_id": "cn-kaohsiung-line-o",
+      "sequence": 13,
+      "is_terminal": true,
+      "location": {
+        "lon": 120.3905893,
+        "lat": 22.6221173,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "OT1"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r10",
+      "station_id": "cn-kaohsiung-r10",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 8,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3018602,
+        "lat": 22.6313941,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R10"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r11",
+      "station_id": "cn-kaohsiung-r11",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 9,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3026522,
+        "lat": 22.6393352,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R11"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r12",
+      "station_id": "cn-kaohsiung-r12",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 10,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3032208,
+        "lat": 22.6477388,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R12"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r13",
+      "station_id": "cn-kaohsiung-r13",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 11,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3030787,
+        "lat": 22.6571226,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R13"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r14",
+      "station_id": "cn-kaohsiung-r14",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 12,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3032563,
+        "lat": 22.6656214,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R14"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r15",
+      "station_id": "cn-kaohsiung-r15",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 13,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3063428,
+        "lat": 22.6764628,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R15"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r16",
+      "station_id": "cn-kaohsiung-r16",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 14,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.309019,
+        "lat": 22.6881662,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R16"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r17",
+      "station_id": "cn-kaohsiung-r17",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 15,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3025096,
+        "lat": 22.7017541,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R17"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r18",
+      "station_id": "cn-kaohsiung-r18",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 16,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3023063,
+        "lat": 22.7087537,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R18"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r19",
+      "station_id": "cn-kaohsiung-r19",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 17,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3071682,
+        "lat": 22.7187124,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R19"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r20",
+      "station_id": "cn-kaohsiung-r20",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 18,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3162548,
+        "lat": 22.7223496,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R20"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r21",
+      "station_id": "cn-kaohsiung-r21",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 19,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3209273,
+        "lat": 22.7296101,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R21"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22",
+      "station_id": "cn-kaohsiung-r22",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 20,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3177237,
+        "lat": 22.7444067,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R22"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r22a",
+      "station_id": "cn-kaohsiung-r22a",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 21,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3145546,
+        "lat": 22.7535555,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R22A"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r23",
+      "station_id": "cn-kaohsiung-r23",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 22,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3106932,
+        "lat": 22.7609322,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R23"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r24",
+      "station_id": "cn-kaohsiung-r24",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 23,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3017302,
+        "lat": 22.7807473,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R24"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r3",
+      "station_id": "cn-kaohsiung-r3",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 0,
+      "is_terminal": true,
+      "location": {
+        "lon": 120.3538755,
+        "lat": 22.5645135,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R3"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4",
+      "station_id": "cn-kaohsiung-r4",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 1,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3416274,
+        "lat": 22.5701158,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R4"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r4a",
+      "station_id": "cn-kaohsiung-r4a",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 2,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3287686,
+        "lat": 22.5805475,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R4A"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r5",
+      "station_id": "cn-kaohsiung-r5",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 3,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3217412,
+        "lat": 22.5884118,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R5"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r6",
+      "station_id": "cn-kaohsiung-r6",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 4,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3151134,
+        "lat": 22.5970181,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R6"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r7",
+      "station_id": "cn-kaohsiung-r7",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 5,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3078782,
+        "lat": 22.6061802,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R7"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r8",
+      "station_id": "cn-kaohsiung-r8",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 6,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3044216,
+        "lat": 22.6141528,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R8"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-r9",
+      "station_id": "cn-kaohsiung-r9",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 7,
+      "is_terminal": false,
+      "location": {
+        "lon": 120.3011177,
+        "lat": 22.6248724,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "R9"
+      }
+    },
+    {
+      "id": "cn-kaohsiung-stop-rk1",
+      "station_id": "cn-kaohsiung-rk1",
+      "line_id": "cn-kaohsiung-line-r",
+      "sequence": 24,
+      "is_terminal": true,
+      "location": {
+        "lon": 120.2990592,
+        "lat": 22.7926035,
+        "crs": "wgs84"
+      },
+      "source_id": "krtc-stations",
+      "extras": {
+        "station_code": "RK1"
+      }
+    }
+  ]
+}

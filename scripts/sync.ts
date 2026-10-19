@@ -27,6 +27,7 @@ import {
   type AdapterManifest,
   applyCityMetadata,
   computeNetworkQuality,
+  loadWorldwideRegions,
   runGapfill,
   SYNC_LAYERS,
   type SyncCtx,
@@ -184,6 +185,8 @@ async function main() {
     );
   }
 
+  // Fetch this shared dependency before any adapter writes, and only once.
+  const regions = await loadWorldwideRegions();
   for (const a of adapters) {
     const manifest = await loadManifest(a);
     const dataDir = join(ROOT, 'data', manifest.networkId);
@@ -211,9 +214,9 @@ async function main() {
         if (adapterLayers.some((l) => l === 'topology')) {
           await reconcileFares(manifest.networkId);
         }
-        // Fares-only sync writes fares.json but does not touch network.json;
-        // recompute quality so the report reflects the new matrix.
-        if (adapterLayers.some((l) => l === 'fares')) {
+        // Fare reconciliation and fares-only sync can change the matrix after
+        // the adapter writes network.json. Refresh only this network's quality.
+        if (adapterLayers.some((l) => l === 'topology' || l === 'fares')) {
           await refreshNetworkQuality(manifest.networkId);
         }
       }
@@ -238,7 +241,9 @@ async function main() {
   try {
     const cities = await applyCityMetadata({
       root: ROOT,
-      networks: adapters.map((a) => a.networkId)
+      networks: adapters.map((a) => a.networkId),
+      regions: regions.index,
+      regionsTag: regions.tag
     });
     console.log(`city metadata from worldwide-regions ${cities.tag}`);
     for (const u of cities.updated) {

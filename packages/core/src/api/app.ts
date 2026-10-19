@@ -62,9 +62,10 @@ function stationLines(data: NetworkData): Map<string, string[]> {
 
 function projectStations(data: NetworkData) {
   const lines = stationLines(data);
+  const linked = new Set(data.transfers.map((transfer) => transfer.station_id));
   return data.stations.map((s) => {
     const stationLineIds = lines.get(s.id) ?? [];
-    return projectStation(s, stationLineIds, stationLineIds.length > 1);
+    return projectStation(s, stationLineIds, stationLineIds.length > 1 || linked.has(s.id));
   });
 }
 
@@ -152,18 +153,18 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
   // Eagerly decoding every network on app creation burned hundreds of ms of
   // CPU on the first request of each Workers isolate — including for cheap
   // routes like `/api/health` and `/api/networks/:id/lines`.
-  const spatialIndices = new Map<string, SpatialIndex<StationEncoded>>();
+  const spatialIndices = new WeakMap<NetworkData, SpatialIndex<StationEncoded>>();
 
   async function getSpatialIndex(id: string): Promise<SpatialIndex<StationEncoded> | undefined> {
-    const cached = spatialIndices.get(id);
-    if (cached) return cached;
     const result = await runEffect(source.load(id).pipe(Effect.either));
     if (Either.isLeft(result)) return undefined;
+    const cached = spatialIndices.get(result.right);
+    if (cached) return cached;
     const withLocation = result.right.stations.filter(
       (s): s is StationEncoded & { location: { lon: number; lat: number } } => s.location != null
     );
     const index = buildSpatialIndex(withLocation, (s) => s.location);
-    spatialIndices.set(id, index);
+    spatialIndices.set(result.right, index);
     return index;
   }
 
@@ -286,12 +287,19 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
               const stationTimetables = d.timetables.filter((t) => t.station_id === station.id);
               const now = new Date();
               return {
-                ...projectStation(station, lineIds, lineIds.length > 1),
+                ...projectStation(
+                  station,
+                  lineIds,
+                  lineIds.length > 1 ||
+                    d.transfers.some((transfer) => transfer.station_id === station.id)
+                ),
                 transfers: d.transfers
                   .filter((t) => t.station_id === station.id)
                   .map(projectTransfer),
                 timetables: stationTimetables.map(projectTimetable),
-                status: stationTimetables.map((t) => statusForRecord(t, now, d.network.timezone))
+                status: stationTimetables.map((t) =>
+                  statusForRecord(t, now, d.network.timezone, d.network.service_calendar)
+                )
               };
             },
             set
@@ -504,7 +512,14 @@ export function createApiApp(source: NetworkSource, options: ApiAppOptions = {})
               const enriched = enrichRoutePlan(d, plan);
               return {
                 ...enriched,
-                fare: d.fares ? lookupFare(d.fares, from, to) : null,
+                // A known OD fare cannot price a route through an unpriced fare system.
+                fare:
+                  d.fares &&
+                  enriched.legs.every(
+                    (leg) => lookupFare(d.fares!, leg.from_station_id, leg.to_station_id) !== null
+                  )
+                    ? lookupFare(d.fares, from, to)
+                    : null,
                 currency: d.fares?.currency ?? null
               };
             },

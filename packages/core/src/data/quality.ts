@@ -1,7 +1,8 @@
 /**
  * Per-layer data quality: precision of published values + coverage of the
- * network. Computed from canonical records at write time so it cannot drift
- * from the data.
+ * network. Coverage describes the structure and provenance of the snapshot,
+ * not whether dated service is current. Timetable valid_from/valid_to and the
+ * network timezone determine live availability separately.
  *
  * Precision ladder (best → worst for a single value):
  * - `official` — operator publishes this exact metric (beijing.xml `@_ut`,
@@ -20,6 +21,7 @@
  * - `unavailable` — no source values at all
  */
 import type { FareMatrixEncoded } from '../schema/index.js';
+import { computeTimetableDirectionCoverage } from '../timetable/coverage.js';
 
 /** Encoded (JSON) shape of `schema/network.ts` `LayerQuality`. */
 export interface LayerQualityJson {
@@ -147,7 +149,12 @@ function precisionFromCoordSource(src: string | undefined, hasLocation: boolean)
 function finalize(counts: Record<Precision, number>): LayerQualityJson {
   const total = counts.official + counts.derived + counts.default;
   const nonDefault = total - counts.default;
-  const coverage = total === 0 ? 0 : Math.round((nonDefault / total) * 100) / 100;
+  const roundedCoverage = total === 0 ? 0 : Math.round((nonDefault / total) * 100) / 100;
+  // Rounding must never turn a partially populated layer into 0% or 100%.
+  const coverage =
+    nonDefault > 0 && nonDefault < total
+      ? Math.max(0.01, Math.min(0.99, roundedCoverage))
+      : roundedCoverage;
 
   let precision: Precision = 'default';
   if (nonDefault > 0) {
@@ -171,14 +178,20 @@ function hasNonEmptyArray(v: unknown): boolean {
 }
 
 export interface QualityInput {
-  lines?: { id: string }[];
+  lines?: { id: string; loop?: boolean; status?: string }[];
   stations: {
+    id?: string;
+    status?: string;
     location?: unknown;
     names?: { zh?: string; en?: string } | undefined;
     extras?: Record<string, unknown> | undefined;
   }[];
-  stops?: { schematic?: unknown }[];
+  stops?: { id?: string; station_id?: string; line_id?: string; schematic?: unknown }[];
   segments: {
+    line_id?: string;
+    from_stop_id?: string;
+    to_stop_id?: string;
+    direction?: string;
     travel_time_source?: string;
     distance_km?: number | undefined;
     extras?: Record<string, unknown> | undefined;
@@ -187,7 +200,16 @@ export interface QualityInput {
     walk_time_seconds?: number | null;
     source_id?: string | undefined;
   }[];
-  timetables?: { first_train?: unknown; last_train?: unknown }[];
+  timetables?: {
+    id?: string;
+    stop_id?: string;
+    line_id?: string;
+    destination_stop_id?: string;
+    direction_type?: string;
+    is_arrival?: boolean;
+    first_train?: unknown;
+    last_train?: unknown;
+  }[];
   fares?: Pick<FareMatrixEncoded, 'fares'>;
 }
 
@@ -206,8 +228,10 @@ export function computeNetworkQuality(input: QualityInput): NetworkQualityJson {
     const zh = s.names?.zh;
     const en = s.names?.en;
     const enRomanised = typeof en === 'string' && /[A-Za-z]/.test(en) && !/[一-鿿]/.test(en);
-    if (zh && enRomanised) nameCounts.official++;
-    else if (zh || en) nameCounts.derived++;
+    if (zh && enRomanised) {
+      const source = s.extras?.english_name_source ?? s.extras?.name_en_source;
+      nameCounts[source === 'osm' || source === 'openstreetmap' ? 'derived' : 'official']++;
+    } else if (zh || en) nameCounts.derived++;
     else nameCounts.default++;
   }
 
@@ -231,14 +255,53 @@ export function computeNetworkQuality(input: QualityInput): NetworkQualityJson {
   }
 
   const ttCounts = emptyCounts();
-  for (const t of input.timetables ?? []) {
+  const timetablePrecision = (t: { first_train?: unknown; last_train?: unknown }): Precision => {
     const hasFirst = hasNonEmptyArray(t.first_train);
     const hasLast = hasNonEmptyArray(t.last_train);
-    if (hasFirst && hasLast) ttCounts.official++;
-    else if (hasFirst || hasLast) ttCounts.derived++;
-    else ttCounts.default++;
+    return hasFirst && hasLast ? 'official' : hasFirst || hasLast ? 'derived' : 'default';
+  };
+  const keyedStops = (input.stops ?? []).filter((s) => s.id);
+  const directionCoverage = computeTimetableDirectionCoverage(input);
+  if (directionCoverage.graph_available) {
+    for (const direction of directionCoverage.directions) {
+      if (direction.unknown && !direction.complete) continue;
+      const precision = direction.complete
+        ? 'official'
+        : direction.has_first || direction.has_last
+          ? 'derived'
+          : 'default';
+      ttCounts[precision]++;
+    }
+  } else if (keyedStops.length) {
+    // A complete published row must not hide stops that have no timetable at all.
+    const best = new Map<string, Precision>();
+    for (const t of input.timetables ?? []) {
+      if (!t.stop_id) continue;
+      const precision = timetablePrecision(t);
+      if (RANK[precision] > RANK[best.get(t.stop_id) ?? 'default']) best.set(t.stop_id, precision);
+    }
+    for (const s of keyedStops) ttCounts[best.get(s.id!) ?? 'default']++;
+  } else {
+    for (const t of input.timetables ?? []) ttCounts[timetablePrecision(t)]++;
+    if ((input.timetables?.length ?? 0) === 0) ttCounts.default = 1;
   }
-  if ((input.timetables?.length ?? 0) === 0) ttCounts.default = 1;
+  const timetableQuality = finalize(ttCounts);
+  if (
+    directionCoverage.graph_available &&
+    (directionCoverage.missing.length || directionCoverage.unknown.length)
+  ) {
+    timetableQuality.coverage = finalize({
+      official: directionCoverage.covered,
+      derived: 0,
+      default: directionCoverage.missing.length + directionCoverage.unknown.length
+    }).coverage;
+    timetableQuality.status =
+      ttCounts.official + ttCounts.derived > 0 || directionCoverage.unknown.length
+        ? 'partial'
+        : 'unavailable';
+    if (directionCoverage.unknown.length)
+      timetableQuality.counts.unknown_directions = directionCoverage.unknown.length;
+  }
 
   const schCounts = emptyCounts();
   for (const s of input.stops ?? []) {
@@ -253,7 +316,7 @@ export function computeNetworkQuality(input: QualityInput): NetworkQualityJson {
     segment_times: finalize(segTimeCounts),
     segment_distances: finalize(segDistCounts),
     transfer_times: finalize(xferCounts),
-    timetables: finalize(ttCounts),
+    timetables: timetableQuality,
     schematic: finalize(schCounts)
   };
 

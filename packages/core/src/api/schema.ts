@@ -124,6 +124,9 @@ export const ApiTimetableStatus = t.Object(
     first_train: t.String(),
     last_train: t.String(),
     timezone: t.String(),
+    service_date: t.Optional(
+      t.String({ description: 'Local service date (YYYY-MM-DD) for these first/last train times.' })
+    ),
     now: t.String()
   },
   { $id: 'ApiTimetableStatus' }
@@ -157,6 +160,7 @@ export const ApiPattern = t.Object(
     terminal_stop_id: t.String(),
     is_primary: t.Boolean(),
     junction_stop_id: t.Optional(t.String()),
+    geometry_reference_pattern_id: t.Optional(t.String()),
     color: t.Optional(t.String())
   },
   { $id: 'ApiPattern' }
@@ -227,6 +231,10 @@ export const ApiTimetable = t.Object(
     direction_label: t.Optional(t.String()),
     first_train: t.Array(t.String()),
     last_train: t.Array(t.String()),
+    first_train_desc: t.Optional(t.String()),
+    last_train_desc: t.Optional(t.String()),
+    valid_from: t.Optional(t.String()),
+    valid_to: t.Optional(t.String()),
     is_arrival: t.Optional(t.Boolean()),
     service: t.Optional(t.String())
   },
@@ -363,6 +371,12 @@ export const ApiNetwork = t.Object(
       { $id: 'ApiDefaultUnits' }
     ),
     routing: t.Ref(ApiRoutingDefaults),
+    service_scope: t.Optional(
+      t.String({ description: 'Passenger-facing service coverage and applicability.' })
+    ),
+    notes: t.Optional(
+      t.String({ description: 'Supplementary network notes and data provenance.' })
+    ),
     /** Per-layer data quality; present when the canonical network carries it. */
     quality: t.Optional(t.Ref(ApiNetworkQuality)),
     /** Last sync time (max file `generated_at`); detail route only. */

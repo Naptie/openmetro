@@ -1,5 +1,5 @@
 /**
- * Validate every canonical network and emit a deterministic manifest.
+ * Validate every canonical network; --out also emits a deterministic manifest.
  *
  * Layers of checks:
  *   1. Schema decode (`loadNetwork`) — types, required fields, enums.
@@ -11,9 +11,9 @@
  *        - every segment has a positive travel time
  *        - linear timetables name a destination; loops use direction_type
  *        - fares cover every operating station; matrix is square
- *        - every operating station has valid first/last trains on every
- *          operating line it serves (tram/other/suburban_rail exempt)
+ *        - published timetable values have valid formats and references
  *        - every line carries a non-empty `short_name` unless waived per network
+ *   4. Directional first/last coverage diagnostics.
  *
  * The manifest is content-addressed: `aggregate` is the sha256 of the sorted
  * `<network>/<file>:<sha256>` lines.
@@ -25,12 +25,18 @@ import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { Effect } from 'effect';
 import {
+  assertPatternGeometryReferences,
   evaluateStationSpeed,
   hasValidTimes,
   haversineKm,
   loadNetwork,
-  type NetworkData
+  type NetworkData,
+  parseHHMM
 } from '../packages/core/src/index.js';
+import {
+  computeTimetableDirectionCoverage,
+  type TimetableDirectionCoverage
+} from '../packages/core/src/timetable/coverage.js';
 
 const DATA_ROOT = resolve(process.env.OPENMETRO_DATA_ROOT ?? 'data');
 
@@ -59,12 +65,6 @@ const CANONICAL_FILES = [
  */
 const SHORT_NAME_WAIVERS: Partial<Record<string, ReadonlySet<string>>> = {};
 
-/**
- * Operating `station|line` pairs that still lack published first/last trains.
- * Pre-existing source/adapter gaps (baseline for burn-down). New pairs fail.
- */
-const TIMETABLE_COVERAGE_WAIVERS: ReadonlySet<string> = new Set([]);
-
 function sha256(data: string | Uint8Array): string {
   return createHash('sha256').update(data).digest('hex');
 }
@@ -90,6 +90,8 @@ function isPlausibleLocation(lon: number, lat: number): boolean {
 }
 
 function verifyReferences(network: string, d: NetworkData): void {
+  for (const kind of ['lines', 'stations', 'stops', 'segments'] as const)
+    assert(d[kind].length > 0, network, `empty ${kind}`);
   const lineIds = new Set(d.lines.map((l) => l.id));
   const stationIds = new Set(d.stations.map((s) => s.id));
   const stopById = new Map(d.stops.map((s) => [s.id, s]));
@@ -188,6 +190,7 @@ function verifyReferences(network: string, d: NetworkData): void {
   }
 
   // ── Patterns ──────────────────────────────────────────────────
+  assertPatternGeometryReferences(d.patterns, d.stops, d.lines);
   const stopsInPatterns = new Set<string>();
   for (const pattern of d.patterns) {
     assert(lineIds.has(pattern.line_id), network, `pattern ${pattern.id} -> unknown line`);
@@ -292,8 +295,12 @@ function verifyReferences(network: string, d: NetworkData): void {
     return (toDeg(Math.atan2(y, x)) + 360) % 360;
   };
   for (const pattern of d.patterns) {
-    const mode = lineById.get(pattern.line_id)?.mode ?? 'other';
-    const maxGap = MAX_GAP_KM[mode] ?? MAX_GAP_KM.other!;
+    const line = lineById.get(pattern.line_id);
+    const mode = line?.mode ?? 'other';
+    // Long-distance high-speed corridors opt in explicitly; other networks
+    // retain their existing topology ceilings.
+    const maxGap =
+      line?.extras?.rail_service === 'high_speed' ? 150 : (MAX_GAP_KM[mode] ?? MAX_GAP_KM.other!);
     for (let i = 0; i < pattern.stop_ids.length - 1; i++) {
       const a = stopById.get(pattern.stop_ids[i]!);
       const b = stopById.get(pattern.stop_ids[i + 1]!);
@@ -405,9 +412,6 @@ function verifyReferences(network: string, d: NetworkData): void {
   }
 
   // ── Timetables ────────────────────────────────────────────────
-  const ttStops = new Set<string>();
-  const ttByLine = new Map<string, Set<string>>();
-  const loopDirsByLine = new Map<string, Set<string>>();
   const patternById = new Map(d.patterns.map((p) => [p.id, p]));
   // Same station + line + direction must not repeat; same dest+label neither.
   const ttDirKeys = new Set<string>();
@@ -458,7 +462,7 @@ function verifyReferences(network: string, d: NetworkData): void {
       // Same station+line+direction+pattern is only illegal for identical time
       // payloads. Operators publish calendar variants (weekday vs weekend
       // last-train arrays) under one public direction name.
-      const timeSig = `${timetable.first_train.join(',')}|${timetable.last_train.join(',')}`;
+      const timeSig = `${timetable.valid_from ?? ''}|${timetable.valid_to ?? ''}|${timetable.first_train.join(',')}|${timetable.last_train.join(',')}`;
       const dirKey = `${timetable.station_id}|${timetable.line_id}|${timetable.direction_label}|${timetable.pattern_id}|${timeSig}`;
       assert(
         !ttDirKeys.has(dirKey),
@@ -470,7 +474,7 @@ function verifyReferences(network: string, d: NetworkData): void {
     {
       // Calendar variants (weekday vs weekend last-train arrays) are legal
       // under the same dest+label; only identical time payloads are duplicates.
-      const timeSig = `${timetable.first_train.join(',')}|${timetable.last_train.join(',')}`;
+      const timeSig = `${timetable.valid_from ?? ''}|${timetable.valid_to ?? ''}|${timetable.first_train.join(',')}|${timetable.last_train.join(',')}`;
       const destKey = `${timetable.station_id}|${timetable.line_id}|${timetable.destination_stop_id ?? ''}|${timetable.direction_label ?? ''}|${timeSig}`;
       assert(
         !ttDestKeys.has(destKey),
@@ -481,14 +485,7 @@ function verifyReferences(network: string, d: NetworkData): void {
     }
     const isLoopDir =
       timetable.direction_type === 'loop_inner' || timetable.direction_type === 'loop_outer';
-    const line = lineById.get(timetable.line_id);
-    if (isLoopDir) {
-      assert(
-        line?.loop || isLoopDir,
-        network,
-        `timetable ${timetable.id} loop direction on non-loop line`
-      );
-    } else {
+    if (!isLoopDir) {
       assert(
         timetable.destination_stop_id != null,
         network,
@@ -505,36 +502,17 @@ function verifyReferences(network: string, d: NetworkData): void {
       network,
       `timetable ${timetable.id} last_train length`
     );
-    ttStops.add(timetable.stop_id);
-    const set = ttByLine.get(timetable.line_id) ?? new Set();
-    set.add(timetable.stop_id);
-    ttByLine.set(timetable.line_id, set);
-    const dirs = loopDirsByLine.get(timetable.line_id) ?? new Set<string>();
-    if (timetable.direction_type === 'loop_inner' || timetable.direction_type === 'loop_outer') {
-      dirs.add(timetable.direction_type);
-    }
-    loopDirsByLine.set(timetable.line_id, dirs);
+    for (const field of ['first_train', 'last_train'] as const)
+      for (const time of timetable[field])
+        assert(
+          time === '' || parseHHMM(time.replace('：', ':')) != null,
+          network,
+          `timetable ${timetable.id} invalid ${field} time: ${time}`
+        );
   }
 
-  // Loop lines must publish both ring directions (内环 + 外环). A single
-  // direction is a parse/id collision, not a real one-way service.
-  for (const line of d.lines) {
-    if (!line.loop) continue;
-    const dirs = loopDirsByLine.get(line.id);
-    if (!dirs || dirs.size === 0) continue;
-    assert(
-      dirs.has('loop_inner') && dirs.has('loop_outer'),
-      network,
-      `loop line ${line.id} timetables must cover loop_inner and loop_outer (has ${[...dirs].join(',') || 'none'})`
-    );
-  }
-
-  // Pattern model (Guangzhou-style stubs, not Shanghai-style shared trunks):
-  //  - One pattern per unique alignment. A pure reverse is the same alignment
-  //    and must not exist as a second pattern.
-  //  - Only the junction stop may appear on multiple patterns of a line.
-  //    Through-running "branches" that re-list the trunk are rejected — model
-  //    them as a spur from the junction instead.
+  // A pure reverse is the same alignment, not a second pattern. Different
+  // calling patterns can legitimately share stops and track.
   {
     const byLine = new Map<string, typeof d.patterns>();
     for (const p of d.patterns) {
@@ -554,52 +532,6 @@ function verifyReferences(network: string, d: NetworkData): void {
           `pattern ${p.id} on ${lineId} duplicates an alignment (or its reverse)`
         );
         seen.add(s);
-      }
-
-      // (b) Multi-pattern stops must be a junction of one of those patterns.
-      const patternsByStop = new Map<string, string[]>();
-      for (const p of linePatterns) {
-        for (const stopId of p.stop_ids) {
-          const list = patternsByStop.get(stopId) ?? [];
-          list.push(p.id);
-          patternsByStop.set(stopId, list);
-        }
-      }
-      for (const [stopId, patternIds] of patternsByStop) {
-        if (patternIds.length < 2) continue;
-        const holders = linePatterns.filter((p) => patternIds.includes(p.id));
-        const isJunctionOfSome = holders.some((p) => p.junction_stop_id === stopId);
-        if (isJunctionOfSome) continue;
-        fail(
-          network,
-          `stop ${stopId} on ${lineId} appears in ${patternIds.length} patterns but is not a junction (${patternIds.join(', ')})`
-        );
-      }
-
-      // (c) Non-primary patterns that share the junction must expose it.
-      for (const p of linePatterns) {
-        if (p.is_primary) continue;
-        const primary = linePatterns.find((x) => x.is_primary);
-        if (!primary) continue;
-        const trunk = new Set(primary.stop_ids);
-        const shared = p.stop_ids.filter((id) => trunk.has(id));
-        if (shared.length === 0) continue; // disjoint second alignment
-        assert(
-          p.junction_stop_id && stopById.has(p.junction_stop_id),
-          network,
-          `pattern ${p.id} shares stops with primary but has no junction_stop_id`
-        );
-        assert(
-          p.junction_stop_id && trunk.has(p.junction_stop_id),
-          network,
-          `pattern ${p.id} junction_stop_id is not on the primary alignment`
-        );
-        // Spur form: the only shared stop is the junction.
-        assert(
-          shared.length === 1 && shared[0] === p.junction_stop_id,
-          network,
-          `pattern ${p.id} shares ${shared.length} stops with primary (want only the junction) — stub-ify the spur`
-        );
       }
     }
   }
@@ -668,6 +600,25 @@ function verifyReferences(network: string, d: NetworkData): void {
     );
   }
 
+  for (const line of d.lines) {
+    if (!line.loop) continue;
+    const dirs = new Set(
+      d.timetables
+        .filter(
+          (t) =>
+            t.line_id === line.id &&
+            (t.direction_type === 'loop_inner' || t.direction_type === 'loop_outer')
+        )
+        .map((t) => t.direction_type)
+    );
+    if (!dirs.size) continue;
+    assert(
+      dirs.has('loop_inner') && dirs.has('loop_outer'),
+      network,
+      `loop line ${line.id} timetables must cover loop_inner and loop_outer (has ${[...dirs].join(',')})`
+    );
+  }
+
   // Reverse-direction coverage: when a linear primary publishes any timetable
   // and stations sit away from both termini, at least two distinct destination
   // stations must appear — otherwise every row collapsed onto one direction.
@@ -723,7 +674,6 @@ function verifyReferences(network: string, d: NetworkData): void {
       const station = stationById.get(stop.station_id);
       if (station?.status !== 'operating') continue;
       if (validTtByStationLine.has(`${station.id}|${line.id}`)) continue;
-      if (TIMETABLE_COVERAGE_WAIVERS.has(`${station.id}|${line.id}`)) continue;
       fail(
         network,
         `operating station ${station.id} (${station.name ?? ''}) lacks first/last trains on line ${line.id}`
@@ -778,7 +728,7 @@ interface NetworkManifest {
   integrity: 'ok';
 }
 
-function statsOf(d: NetworkData): Record<string, number> {
+function statsOf(d: NetworkData, coverage: TimetableDirectionCoverage): Record<string, number> {
   return {
     lines: d.lines.length,
     stations: d.stations.length,
@@ -794,30 +744,48 @@ function statsOf(d: NetworkData): Record<string, number> {
     official_transfer_times: d.transfers.filter((t) => t.walk_time_seconds != null).length,
     stations_with_coords: d.stations.filter((s) => s.location != null).length,
     stations_out_of_service: d.stations.filter((s) => s.status === 'out_of_service').length,
-    stops_with_timetables: new Set(d.timetables.map((t) => t.stop_id)).size
+    stops_with_timetables: new Set(d.timetables.map((t) => t.stop_id)).size,
+    timetable_directions_required: coverage.required,
+    timetable_directions_covered: coverage.covered,
+    timetable_directions_missing: coverage.missing.length,
+    timetable_directions_unknown: coverage.unknown.length,
+    timetable_directions_unresolved_rows: coverage.unresolved_timetables.length
   };
 }
 
-async function verifyNetwork(id: string): Promise<NetworkManifest> {
+async function verifyNetwork(id: string, manifest: boolean): Promise<NetworkManifest> {
   const dir = join(DATA_ROOT, id);
   const data = await Effect.runPromise(loadNetwork(DATA_ROOT, id));
   verifyReferences(id, data);
+  const coverage = computeTimetableDirectionCoverage(data);
+  if (!coverage.graph_available) {
+    warn(id, 'timetable direction coverage unavailable: incomplete stop/segment graph');
+  } else if (coverage.missing.length) {
+    const sample = coverage.missing
+      .slice(0, 5)
+      .map((direction) => `${direction.stop_id} -> ${direction.direction}`)
+      .join(', ');
+    warn(
+      id,
+      `timetable directions missing valid first/last departures: ${coverage.missing.length}/${coverage.required} (${sample})`
+    );
+  }
+  if (coverage.unknown.length)
+    warn(id, `timetable directions unknown: ${coverage.unknown.length}/${coverage.required}`);
 
   const files: Record<string, string> = {};
-  for (const file of CANONICAL_FILES) {
+  for (const file of manifest ? CANONICAL_FILES : []) {
     const raw = await readFile(join(dir, file)).catch(() => null);
     if (!raw) fail(id, `missing required file ${file}`);
     files[file] = `sha256:${sha256(raw)}`;
   }
 
-  return { files, stats: statsOf(data), integrity: 'ok' };
+  return { files, stats: statsOf(data, coverage), integrity: 'ok' };
 }
 
-function parseOut(): string {
+function parseOut(): string | undefined {
   const i = process.argv.indexOf('--out');
-  return resolve(
-    i >= 0 ? (process.argv[i + 1] ?? 'dist/data-manifest.json') : 'dist/data-manifest.json'
-  );
+  return i >= 0 ? resolve(process.argv[i + 1] ?? 'dist/data-manifest.json') : undefined;
 }
 
 /** Optional `--network <id>` limits verification to one network (CI matrix). */
@@ -828,6 +796,7 @@ function parseNetworkFilter(): string | undefined {
 
 async function main(): Promise<void> {
   const filter = parseNetworkFilter();
+  const out = parseOut();
   const ids = (await readdir(DATA_ROOT, { withFileTypes: true }))
     .filter((e) => e.isDirectory() && !e.name.startsWith('.'))
     .map((e) => e.name)
@@ -839,7 +808,11 @@ async function main(): Promise<void> {
   }
 
   const networks: Record<string, NetworkManifest> = {};
-  for (const id of ids) networks[id] = await verifyNetwork(id);
+  for (const id of ids) {
+    networks[id] = await verifyNetwork(id, out !== undefined);
+    console.log(`${id}: ok ${JSON.stringify(networks[id].stats)}`);
+  }
+  if (!out) return;
 
   const lines: string[] = [];
   for (const id of Object.keys(networks)) {
@@ -850,13 +823,9 @@ async function main(): Promise<void> {
   const aggregate = `sha256:${sha256(lines.join('\n'))}`;
 
   const manifest = { schema_version: '1.0', networks, aggregate };
-  const out = parseOut();
   await mkdir(dirname(out), { recursive: true });
   await writeFile(out, `${JSON.stringify(manifest, null, 2)}\n`, 'utf-8');
 
-  for (const [id, entry] of Object.entries(networks)) {
-    console.log(`${id}: ok ${JSON.stringify(entry.stats)}`);
-  }
   console.log(`aggregate: ${aggregate}`);
   console.log(`manifest:  ${out}`);
 }

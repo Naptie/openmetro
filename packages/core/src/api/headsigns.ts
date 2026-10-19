@@ -1,5 +1,6 @@
 import type { NetworkData } from '../data/types.js';
 import type { RouteLeg, RoutePlan } from '../graph/route.js';
+import { isStationRoutable } from '../schema/station.js';
 
 /**
  * Service-aware enrichment for `/route` response legs: headsigns and
@@ -10,8 +11,8 @@ import type { RouteLeg, RoutePlan } from '../graph/route.js';
  * toward. It is **published data**, not topology: the operator decides whether
  * a train terminates at a junction or continues onto a branch, and the
  * canonical timetables record exactly that per boarding station
- * (`destination_stop_id` + `direction_label`). Patterns only supply geometry —
- * which routings exist and how the stops are ordered. Shearing each ride leg
+ * (`destination_stop_id` + `direction_label`). Patterns supply ordered calls;
+ * `geometry_only` patterns are display alignments. Shearing each ride leg
  * against the published destinations is what makes its headsign truthful, so
  * `pattern_id` is an auxiliary (and, on shared trunks, possibly ambiguous),
  * never the source of truth.
@@ -56,8 +57,11 @@ interface NetworkIndex {
   patternIndex: Map<string, number>;
   /** lineId -> pattern ids, primary first. */
   patternsByLine: Map<string, string[]>;
-  /** `${lineId}|${stationId}` -> published destination station ids, unique. */
-  services: Map<string, string[]>;
+  /** `${lineId}|${stationId}` -> published boarding services. */
+  services: Map<string, { destination: string; pattern_id?: string }[]>;
+  /** Lines with separate display geometry and actual calling patterns. */
+  throughServiceLines: Set<string>;
+  operatingStops: Set<string>;
   loopLines: Set<string>;
   /** `${lineId}|${fromStop}|${toStop}` -> travel seconds (both orientations). */
   segmentSeconds: Map<string, number>;
@@ -70,6 +74,9 @@ const KEY_SEGMENT = (line: string, a: string, b: string) => `${line}|${a}|${b}`;
 function buildIndex(data: NetworkData): NetworkIndex {
   const stationOfStop = new Map<string, string>();
   const stopByLineStation = new Map<string, Map<string, string>>();
+  const operatingStations = new Set(
+    data.stations.filter((s) => isStationRoutable(s.status)).map((s) => s.id)
+  );
   for (const s of data.stops) {
     stationOfStop.set(s.id, s.station_id);
     let byLine = stopByLineStation.get(s.line_id);
@@ -85,6 +92,7 @@ function buildIndex(data: NetworkData): NetworkIndex {
   const patternsByLine = new Map<string, string[]>();
   const byLine = new Map<string, typeof data.patterns>();
   for (const p of data.patterns) {
+    if (p.extras?.geometry_only === true) continue;
     const list = byLine.get(p.line_id) ?? [];
     list.push(p);
     byLine.set(p.line_id, list);
@@ -103,14 +111,15 @@ function buildIndex(data: NetworkData): NetworkIndex {
     }
   }
 
-  const services = new Map<string, string[]>();
+  const services: NetworkIndex['services'] = new Map();
   for (const t of data.timetables) {
     if (!t.destination_stop_id) continue;
     const destinationStation = stationOfStop.get(t.destination_stop_id);
     if (!destinationStation) continue;
     const key = KEY_SERVICE(t.line_id, t.station_id);
     const list = services.get(key) ?? [];
-    if (!list.includes(destinationStation)) list.push(destinationStation);
+    if (!list.some((s) => s.destination === destinationStation && s.pattern_id === t.pattern_id))
+      list.push({ destination: destinationStation, pattern_id: t.pattern_id });
     services.set(key, list);
   }
 
@@ -139,6 +148,12 @@ function buildIndex(data: NetworkData): NetworkIndex {
     patternIndex,
     patternsByLine,
     services,
+    throughServiceLines: new Set(
+      data.patterns.filter((p) => p.extras?.geometry_only === true).map((p) => p.line_id)
+    ),
+    operatingStops: new Set(
+      data.stops.filter((s) => operatingStations.has(s.station_id)).map((s) => s.id)
+    ),
     loopLines: new Set(data.lines.filter((l) => l.loop).map((l) => l.id)),
     segmentSeconds
   };
@@ -158,95 +173,91 @@ function stationOf(idx: NetworkIndex, stopId: string): string | undefined {
   return idx.stationOfStop.get(stopId);
 }
 
-interface HopResolution {
+interface ServiceResolution {
   /** Destination station the boarding service travels toward. */
   headsign_station_id?: string;
   /** Pattern that pinned the direction/headsign. */
   pattern_id?: string;
+  /** Last stop in the ride sequence this boarding service can reach. */
+  end: number;
 }
 
 /**
- * Resolve the service destination a passenger boards at `fromStop` when
- * traveling toward `toStop` on `lineId`.
- *
- * Published-first: the destination must be one of the operator's published
- * destinations at the boarding station AND lie ahead of the boarding stop in
- * the leg's direction (decided by pattern stop order). When several published
- * destinations qualify (shared trunks, e.g. Line 11 toward the two northern
- * branches), the one whose pattern also serves `toStop` wins, then primary
- * pattern preference. If published data is missing, falls back to the
- * geometric pattern endpoint.
+ * Pick the published boarding service that covers the longest continuous
+ * prefix of the remaining ride. Short turns must not displace a through train,
+ * and intermediate stations need not repeat that train's destination row.
  */
-function resolveHop(
+function resolveService(
   idx: NetworkIndex,
   lineId: string,
-  fromStop: string,
-  toStop: string
-): HopResolution {
+  stops: string[],
+  start: number
+): ServiceResolution {
+  const fromStop = stops[start]!;
   const fromStation = stationOf(idx, fromStop);
-  if (!fromStation) return {};
-  const published = (idx.services.get(KEY_SERVICE(lineId, fromStation)) ?? []).filter((d) =>
-    idx.stationNames.has(d)
-  );
   const patterns = idx.patternsByLine.get(lineId) ?? [];
   const hosting = patterns.filter((p) => hosts(idx, p, fromStop));
-
-  // Direction the leg leaves the boarding stop, relative to each pattern.
-  // A pattern that does not host `toStop` cannot pin direction (junction
-  // crossing) and is skipped.
-  const directionOf = (p: string): 1 | -1 | 0 => {
-    if (!hosts(idx, p, toStop)) return 0;
-    const iF = indexOf(idx, p, fromStop);
-    const iT = indexOf(idx, p, toStop);
-    return iT > iF ? 1 : iT < iF ? -1 : 0;
+  const published = fromStation ? (idx.services.get(KEY_SERVICE(lineId, fromStation)) ?? []) : [];
+  let best: ServiceResolution = { end: start };
+  const pathBetween = (pattern: string, from: string, to: string) => {
+    const order = idx.patternStops.get(pattern)!;
+    const a = indexOf(idx, pattern, from),
+      b = indexOf(idx, pattern, to);
+    return a <= b ? order.slice(a, b + 1) : order.slice(b, a + 1).reverse();
   };
-
-  const aheadPublished = published.filter((d) => {
-    const dStop = lineStopOf(idx, lineId, d);
-    if (!dStop) return false;
-    return hosting.some((p) => {
-      const dir = directionOf(p);
-      if (dir === 0) return false;
-      const iD = indexOf(idx, p, dStop);
-      const iF = indexOf(idx, p, fromStop);
-      return dir === 1 ? iD > iF : iD < iF;
-    });
-  });
-
-  if (aheadPublished.length > 0) {
-    // Prefer a destination whose pattern also serves the leg's destination stop.
-    const covering = aheadPublished.filter((d) => {
-      const dStop = lineStopOf(idx, lineId, d);
-      return (
-        dStop != null &&
-        hosting.some((p) => directionOf(p) !== 0 && hosts(idx, p, dStop) && hosts(idx, p, toStop))
-      );
-    });
-    const chosen = covering[0] ?? aheadPublished[0];
-    const chosenStop = lineStopOf(idx, lineId, chosen);
-    const pattern = hosting.find((p) => {
-      if (!chosenStop) return false;
-      const dir = directionOf(p);
-      const iC = indexOf(idx, p, chosenStop);
-      const iF = indexOf(idx, p, fromStop);
-      return dir === 1 ? iC > iF : dir === -1 ? iC < iF : false;
-    });
-    return { headsign_station_id: chosen, pattern_id: pattern };
+  const consider = (pattern: string, destination: string) => {
+    const destStop = lineStopOf(idx, lineId, destination);
+    if (!destStop) return;
+    // Metro branch geometry may end at the junction while the published train
+    // continues down the trunk. Join there without changing its headsign.
+    const paths = hosts(idx, pattern, destStop)
+      ? [pathBetween(pattern, fromStop, destStop)]
+      : patterns
+          .filter((p) => hosts(idx, p, destStop))
+          .flatMap((p) =>
+            idx.patternStops
+              .get(pattern)!
+              .filter((s) => hosts(idx, p, s))
+              .map((junction) => [
+                ...pathBetween(pattern, fromStop, junction),
+                ...pathBetween(p, junction, destStop).slice(1)
+              ])
+          );
+    for (const path of paths) {
+      if (new Set(path).size !== path.length) continue;
+      let end = start;
+      while (end + 1 < stops.length && path[end + 1 - start] === stops[end + 1]) end++;
+      if (end > best.end) best = { end, headsign_station_id: destination, pattern_id: pattern };
+    }
+  };
+  for (const pattern of hosting) {
+    for (const service of published) {
+      const destStop = lineStopOf(idx, lineId, service.destination);
+      // Older metro patterns can describe only a branch. A full service
+      // pattern, when present, pins the train's actual calling sequence.
+      const servicePattern = service.pattern_id;
+      if (
+        servicePattern &&
+        destStop &&
+        hosts(idx, servicePattern, fromStop) &&
+        hosts(idx, servicePattern, destStop) &&
+        servicePattern !== pattern
+      )
+        continue;
+      consider(pattern, service.destination);
+    }
   }
-
-  // Fallback: geometric endpoint of the best-fitting pattern (no published data).
-  const withTo = hosting
-    .map((p) => ({ p, gap: Math.abs(indexOf(idx, p, toStop) - indexOf(idx, p, fromStop)) }))
-    .filter((x) => hosts(idx, x.p, toStop))
-    .sort((a, b) => b.gap - a.gap);
-  const pattern = withTo[0]?.p ?? hosting[0];
-  if (!pattern) return {};
-  const stops = idx.patternStops.get(pattern) ?? [];
-  const iF = indexOf(idx, pattern, fromStop);
-  const forward = hosts(idx, pattern, toStop) ? indexOf(idx, pattern, toStop) > iF : true;
-  const endpointStop = forward ? stops[stops.length - 1] : stops[0];
-  const headsign = endpointStop != null ? stationOf(idx, endpointStop) : undefined;
-  return { headsign_station_id: headsign, pattern_id: pattern };
+  if (best.end > start) return best;
+  // No matching published service: retain the geometric fallback for networks
+  // whose timetables do not name destinations or full branch routings.
+  for (const pattern of hosting) {
+    const order = idx.patternStops.get(pattern)!;
+    const next = indexOf(idx, pattern, stops[start + 1]!);
+    const forward = next > indexOf(idx, pattern, fromStop);
+    const endpoint = stationOf(idx, forward ? order.at(-1)! : order[0]!);
+    if (endpoint) consider(pattern, endpoint);
+  }
+  return best.end > start ? best : { end: stops.length - 1 };
 }
 
 /** Reconstruct the ordered stop sequence of a ride leg (from/to + interiors). */
@@ -294,25 +305,6 @@ function interiorPattern(idx: NetworkIndex, lineId: string, leg: RouteLeg): stri
   return patterns.find((p) => hosts(idx, p, leg.from_stop_id));
 }
 
-/** Geometric endpoint station (direction-aware) of a pattern. */
-function patternEndpoint(
-  idx: NetworkIndex,
-  lineId: string,
-  leg: RouteLeg,
-  preferred?: string
-): string | undefined {
-  const pattern =
-    preferred ?? interiorPattern(idx, lineId, leg) ?? idx.patternsByLine.get(lineId)?.[0];
-  if (!pattern) return undefined;
-  const stops = idx.patternStops.get(pattern) ?? [];
-  const iF = indexOf(idx, pattern, leg.from_stop_id);
-  if (iF < 0 || stops.length === 0) return undefined;
-  const forward = hosts(idx, pattern, leg.to_stop_id)
-    ? indexOf(idx, pattern, leg.to_stop_id) > iF
-    : true;
-  return stationOf(idx, forward ? stops[stops.length - 1] : stops[0]);
-}
-
 function annotateRide(
   idx: NetworkIndex,
   leg: RouteLeg,
@@ -350,6 +342,42 @@ function annotateRide(
   return enriched;
 }
 
+/** Prefer a known through train over zero-wait mixtures of sparse rail services. */
+function preferThroughService(idx: NetworkIndex, leg: RouteLeg): RouteLeg {
+  const lineId = leg.line_id;
+  if (!lineId || !idx.throughServiceLines.has(lineId)) return leg;
+  const published = idx.services.get(KEY_SERVICE(lineId, leg.from_station_id)) ?? [];
+  let chosen: RouteLeg | undefined;
+  for (const pattern of idx.patternsByLine.get(lineId) ?? []) {
+    const from = indexOf(idx, pattern, leg.from_stop_id);
+    const to = indexOf(idx, pattern, leg.to_stop_id);
+    if (from < 0 || to < 0 || from === to) continue;
+    const direction = Math.sign(to - from);
+    if (
+      !published.some((service) => {
+        if (service.pattern_id !== pattern) return false;
+        const destination = lineStopOf(idx, lineId, service.destination);
+        if (!destination) return false;
+        const headsign = indexOf(idx, pattern, destination);
+        return headsign >= 0 && (headsign - to) * direction >= 0;
+      })
+    )
+      continue;
+    const order = idx.patternStops.get(pattern)!;
+    const path = direction > 0 ? order.slice(from, to + 1) : order.slice(to, from + 1).reverse();
+    if (path.some((stop) => !idx.operatingStops.has(stop))) continue;
+    const weights = path
+      .slice(1)
+      .map((stop, i) => idx.segmentSeconds.get(KEY_SEGMENT(lineId, path[i]!, stop)));
+    if (weights.some((seconds) => seconds == null || !Number.isFinite(seconds) || seconds <= 0))
+      continue;
+    const seconds = weights.reduce<number>((total, value) => total + value!, 0);
+    if (chosen && chosen.seconds <= seconds) continue;
+    chosen = { ...leg, seconds, station_ids: path.map((stop) => stationOf(idx, stop)!) };
+  }
+  return chosen ?? leg;
+}
+
 /** Split one ride leg where its boarding service cannot carry it, then annotate. */
 function processRideLeg(idx: NetworkIndex, leg: RouteLeg): EnrichedLeg[] {
   const lineId = leg.line_id;
@@ -359,25 +387,15 @@ function processRideLeg(idx: NetworkIndex, leg: RouteLeg): EnrichedLeg[] {
 
   const stops = stopSequence(idx, leg);
   if (stops.length < 2) {
-    const resolved = resolveHop(idx, lineId, leg.from_stop_id, leg.to_stop_id);
-    const headsign =
-      resolved.headsign_station_id ?? patternEndpoint(idx, lineId, leg, resolved.pattern_id);
-    return [annotateRide(idx, leg, resolved.pattern_id, headsign)];
+    return [annotateRide(idx, leg, interiorPattern(idx, lineId, leg), undefined)];
   }
 
   const out: EnrichedLeg[] = [];
   let start = 0;
   while (start < stops.length - 1) {
-    let end = start + 1;
-    const first = resolveHop(idx, lineId, stops[start], stops[end]);
+    const first = resolveService(idx, lineId, stops, start);
+    const end = first.end;
     const currentHeadsign = first.headsign_station_id;
-
-    while (end < stops.length - 1) {
-      const next = end + 1;
-      const here = resolveHop(idx, lineId, stops[end], stops[next]);
-      if (currentHeadsign == null || here.headsign_station_id !== currentHeadsign) break;
-      end = next;
-    }
 
     out.push(annotateRide(idx, leg, first.pattern_id, currentHeadsign, stops, start, end));
     if (end < stops.length - 1) {
@@ -404,14 +422,17 @@ function processRideLeg(idx: NetworkIndex, leg: RouteLeg): EnrichedLeg[] {
 export function enrichRoutePlan(data: NetworkData, plan: RoutePlan): EnrichedRoutePlan {
   const idx = buildIndex(data);
   const legs: EnrichedLeg[] = [];
+  let totalSeconds = plan.total_seconds;
   for (const leg of plan.legs) {
     if (leg.kind === 'ride') {
-      legs.push(...processRideLeg(idx, leg));
+      const ride = preferThroughService(idx, leg);
+      totalSeconds += ride.seconds - leg.seconds;
+      legs.push(...processRideLeg(idx, ride));
     } else {
       legs.push(leg);
     }
   }
   // Re-count: junction direction changes add same-station transfer legs.
   const transfers = legs.reduce((n, leg) => n + (leg.kind === 'transfer' ? 1 : 0), 0);
-  return { ...plan, legs, transfers };
+  return { ...plan, total_seconds: totalSeconds, legs, transfers };
 }

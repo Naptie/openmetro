@@ -1,5 +1,5 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import { cp, mkdir, mkdtemp, readFile, rename, rm, writeFile } from 'node:fs/promises';
+import { basename, dirname, join, resolve } from 'node:path';
 import { entitySchemaUrl } from '../schema/file.js';
 import type { FareMatrixEncoded } from '../schema/index.js';
 import { computeNetworkQuality, type QualityInput } from './quality.js';
@@ -74,14 +74,17 @@ export async function writeCanonical<
     timetables?: Tm[];
     /** A complete `FareMatrix` document (see `schema/fare.ts`). */
     fares?: F;
-  }
+  },
+  sources: readonly unknown[] = []
 ): Promise<void> {
-  await mkdir(outDir, { recursive: true });
+  if (!data.lines.length || !data.stations.length || !data.stops.length || !data.segments.length)
+    throw new Error(`Refusing to replace ${networkId} with an empty network`);
+  outDir = resolve(outDir);
+  const documents = new Map<string, string>();
   const w = <A>(documentType: string, records: A[]) =>
-    writeFile(
-      join(outDir, `${documentType}.json`),
-      JSON.stringify(wrap(networkId, documentType, records), null, 2),
-      'utf-8'
+    documents.set(
+      `${documentType}.json`,
+      JSON.stringify({ ...wrap(networkId, documentType, records), source: [...sources] }, null, 2)
     );
 
   const faresDoc =
@@ -97,17 +100,42 @@ export async function writeCanonical<
   });
   const networkDoc = { ...data.network, quality };
 
-  await writeFile(join(outDir, 'network.json'), JSON.stringify(networkDoc, null, 2), 'utf-8');
-  await Promise.all([
-    w('lines', sorted(data.lines)),
-    w('stations', sorted(data.stations)),
-    w('stops', sorted(data.stops)),
-    data.patterns ? w('patterns', sorted(data.patterns)) : Promise.resolve(),
-    w('segments', sorted(data.segments)),
-    w('transfers', sorted(data.transfers)),
-    data.timetables ? w('timetables', sorted(data.timetables)) : Promise.resolve()
-  ]);
-  if (data.fares) {
-    await writeFile(join(outDir, 'fares.json'), JSON.stringify(data.fares, null, 2), 'utf-8');
+  // Serialize everything before touching the last successful snapshot.
+  documents.set('network.json', JSON.stringify(networkDoc, null, 2));
+  w('lines', sorted(data.lines));
+  w('stations', sorted(data.stations));
+  w('stops', sorted(data.stops));
+  if (data.patterns) w('patterns', sorted(data.patterns));
+  w('segments', sorted(data.segments));
+  w('transfers', sorted(data.transfers));
+  if (data.timetables) w('timetables', sorted(data.timetables));
+  if (data.fares) documents.set('fares.json', JSON.stringify(data.fares, null, 2));
+
+  await mkdir(dirname(outDir), { recursive: true });
+  const staging = await mkdtemp(join(dirname(outDir), `.${basename(outDir)}-`));
+  const backup = `${staging}-previous`;
+  let previous = false;
+  try {
+    try {
+      await cp(outDir, staging, { recursive: true });
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+    }
+    for (const [name, text] of documents) await writeFile(join(staging, name), text, 'utf8');
+    try {
+      await rename(outDir, backup);
+      previous = true;
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+    }
+    try {
+      await rename(staging, outDir);
+    } catch (error) {
+      if (previous) await rename(backup, outDir);
+      throw error;
+    }
+    if (previous) await rm(backup, { recursive: true, force: true });
+  } finally {
+    await rm(staging, { recursive: true, force: true });
   }
 }

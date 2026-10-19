@@ -1,5 +1,5 @@
-import type { TimetableEncoded } from '../schema/index.js';
-import { effectiveTime, weekdayToMonBased } from './time.js';
+import type { ServiceCalendar, TimetableEncoded } from '../schema/index.js';
+import { effectiveTime, parseHHMM, weekdayToMonBased } from './time.js';
 
 export interface InServiceStatus {
   timetable_id: string;
@@ -13,6 +13,8 @@ export interface InServiceStatus {
   timezone: string;
   /** Current local time in `timezone`, as `HH:MM`. */
   now: string; // HH:MM used for the check
+  /** Local calendar date on which this service started, including overnight trains. */
+  service_date: string;
 }
 
 const JS_DAY_BY_WEEKDAY: Record<string, number> = {
@@ -32,6 +34,7 @@ interface LocalTime {
   weekdayIndex: number;
   /** Local time as `HH:MM`. */
   hhmm: string;
+  date: string;
 }
 
 function partsFor(date: Date, timeZone: string): Intl.DateTimeFormatPart[] {
@@ -40,6 +43,9 @@ function partsFor(date: Date, timeZone: string): Intl.DateTimeFormatPart[] {
     hour: '2-digit',
     minute: '2-digit',
     weekday: 'short',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
     hourCycle: 'h23'
   }).formatToParts(date);
 }
@@ -65,7 +71,8 @@ export function localTimeParts(now: Date, timeZone: string): LocalTime {
   return {
     minutes: hour * 60 + minute,
     weekdayIndex: weekdayToMonBased(jsDay),
-    hhmm: `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`
+    hhmm: `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`,
+    date: `${get('year')}-${get('month')}-${get('day')}`
   };
 }
 
@@ -100,12 +107,45 @@ export function isInService(
 export function statusForRecord(
   record: TimetableEncoded,
   now: Date = new Date(),
-  timeZone = 'UTC'
+  timeZone = 'UTC',
+  calendar?: ServiceCalendar
 ): InServiceStatus {
-  const { minutes, weekdayIndex, hhmm } = localTimeParts(now, timeZone);
-  const isIn = isInService(record, minutes, weekdayIndex);
-  const first = effectiveTime(record.first_train, weekdayIndex);
-  const last = effectiveTime(record.last_train, weekdayIndex);
+  const { minutes, weekdayIndex, hhmm, date } = localTimeParts(now, timeZone);
+  const previousWeekday = (weekdayIndex + 6) % 7;
+  const previousDate = new Date(Date.parse(`${date}T12:00:00Z`) - 86400_000)
+    .toISOString()
+    .slice(0, 10);
+  const pair = (day: string, weekday: number) => {
+    if (
+      (record.valid_from && day < record.valid_from) ||
+      (record.valid_to && day > record.valid_to)
+    )
+      return { first: null, last: null };
+    const overrides = record.extras?.date_overrides as Record<string, unknown> | undefined;
+    if (overrides && Object.hasOwn(overrides, day)) {
+      const value = overrides[day] as { first_train?: unknown; last_train?: unknown } | null;
+      return {
+        first: typeof value?.first_train === 'string' ? parseHHMM(value.first_train) : null,
+        last: typeof value?.last_train === 'string' ? parseHHMM(value.last_train) : null
+      };
+    }
+    if (record.extras?.holiday_schedule === 'weekend') {
+      if (!calendar || day < calendar.valid_from || day > calendar.valid_to)
+        return { first: null, last: null };
+      if (calendar.holiday_dates.includes(day)) weekday = 6;
+    }
+    return {
+      first: effectiveTime(record.first_train, weekday),
+      last: effectiveTime(record.last_train, weekday)
+    };
+  };
+  const today = pair(date, weekdayIndex),
+    yesterday = pair(previousDate, previousWeekday);
+  const contains = (window: typeof today, time: number) =>
+    window.first != null && window.last != null && time >= window.first && time <= window.last;
+  const current = contains(today, minutes);
+  const previous = !current && contains(yesterday, minutes + 1440);
+  const { first, last } = previous ? yesterday : today;
   const fmt = (m: number | null) => {
     if (m == null) return '';
     const h = Math.floor(m / 60);
@@ -117,10 +157,11 @@ export function statusForRecord(
     station_id: record.station_id,
     line_id: record.line_id,
     destination_stop_id: record.destination_stop_id,
-    is_in_service: isIn,
+    is_in_service: current || previous,
     first_train: fmt(first),
     last_train: fmt(last),
     timezone: timeZone,
-    now: hhmm
+    now: hhmm,
+    service_date: previous ? previousDate : date
   };
 }

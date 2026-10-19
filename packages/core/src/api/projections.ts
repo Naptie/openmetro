@@ -54,6 +54,8 @@ export function projectNetwork(n: NetworkEncoded, generatedAt?: string): Static<
     coordinate_system: n.coordinate_system,
     default_units: n.default_units,
     routing: n.routing,
+    service_scope: n.service_scope,
+    notes: n.notes,
     ...(n.quality ? { quality: n.quality } : {}),
     ...(generatedAt ? { synced_at: generatedAt } : {})
   };
@@ -113,6 +115,7 @@ export function projectPattern(p: PatternEncoded): Static<typeof ApiPattern> {
     terminal_stop_id: p.terminal_stop_id,
     is_primary: p.is_primary,
     junction_stop_id: p.junction_stop_id,
+    geometry_reference_pattern_id: p.geometry_reference_pattern_id,
     color: p.color
   };
 }
@@ -159,6 +162,10 @@ export function projectTimetable(t: TimetableEncoded): Static<typeof ApiTimetabl
     direction_label: t.direction_label,
     first_train: [...t.first_train],
     last_train: [...t.last_train],
+    first_train_desc: t.first_train_desc,
+    last_train_desc: t.last_train_desc,
+    valid_from: t.valid_from,
+    valid_to: t.valid_to,
     is_arrival: t.is_arrival,
     service: t.service
   };

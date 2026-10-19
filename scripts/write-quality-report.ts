@@ -4,15 +4,13 @@
  * - `data/QUALITY.md` — full per-network markdown detail
  *
  * Does not touch README.md (no generated markers / timestamps there).
- * Recomputes each `network.json.quality` from on-disk canonical records
- * (including fares.json) before rendering, so the summary cannot drift from
- * the published data.
+ * Reads each existing `network.json.quality` without rewriting canonical data.
+ * Adapters and the sync orchestrator update quality only for the networks they sync.
  *
  *   bun run scripts/write-quality-report.ts
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { computeNetworkQuality } from '../packages/core/src/data/quality.js';
 
 interface LayerQuality {
   precision: string;
@@ -75,42 +73,6 @@ function escapeXml(s: string): string {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
-}
-
-async function loadRecords(dir: string, name: string): Promise<unknown[]> {
-  try {
-    const doc = JSON.parse(await readFile(join(dir, name), 'utf-8')) as { records?: unknown[] };
-    return doc.records ?? [];
-  } catch {
-    return [];
-  }
-}
-
-/** Recompute `network.json.quality` from on-disk canonical records + fares. */
-async function refreshNetworkQuality(dir: string): Promise<void> {
-  const netPath = join(dir, 'network.json');
-  let net: Record<string, unknown>;
-  try {
-    net = JSON.parse(await readFile(netPath, 'utf-8')) as Record<string, unknown>;
-  } catch {
-    return;
-  }
-  let fares: unknown;
-  try {
-    fares = JSON.parse(await readFile(join(dir, 'fares.json'), 'utf-8'));
-  } catch {
-    fares = undefined;
-  }
-  const quality = computeNetworkQuality({
-    lines: (await loadRecords(dir, 'lines.json')) as { id: string }[],
-    stations: (await loadRecords(dir, 'stations.json')) as never,
-    stops: (await loadRecords(dir, 'stops.json')) as never,
-    segments: (await loadRecords(dir, 'segments.json')) as never,
-    transfers: (await loadRecords(dir, 'transfers.json')) as never,
-    timetables: (await loadRecords(dir, 'timetables.json')) as never,
-    fares: fares as never
-  });
-  await writeFile(netPath, `${JSON.stringify({ ...net, quality }, null, 2)}\n`, 'utf-8');
 }
 
 async function listNetworkIds(root: string): Promise<string[]> {
@@ -305,9 +267,6 @@ function detailSections(networks: NetworkDoc[]): string[] {
 }
 
 export async function writeQualityReport(root: string): Promise<string[]> {
-  for (const id of await listNetworkIds(root)) {
-    await refreshNetworkQuality(join(root, 'data', id));
-  }
   const networks = await loadNetworks(root);
   const generatedAt = new Date().toISOString();
   const svgBody = `${buildQualitySvg(networks, generatedAt)}\n`;
@@ -320,7 +279,7 @@ export async function writeQualityReport(root: string): Promise<string[]> {
     '',
     '![Data quality](./quality.svg)',
     '',
-    'Generated from each network’s canonical records and fares matrix after data sync. ' +
+    'Generated from each network’s stored quality metadata after data sync. ' +
       'Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).',
     '',
     `_Updated ${generatedAt}_`,
@@ -331,7 +290,7 @@ export async function writeQualityReport(root: string): Promise<string[]> {
     '| Status | Meaning |',
     '| --- | --- |',
     '| ✅ complete | Full coverage, official values |',
-    '| 🟡 partial | Some entities still use network defaults |',
+    '| 🟡 partial | Some values are missing, unresolved, or use defaults |',
     '| 🟠 derived | Full coverage but only derived values |',
     '| ❌ unavailable | No source values |',
     ''

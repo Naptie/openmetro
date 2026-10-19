@@ -2,9 +2,23 @@
 
 ![Data quality](./quality.svg)
 
-Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
+Generated from each network’s stored quality metadata after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-13T07:09:05.252Z_
+_Updated 2026-10-16T08:01:24.762Z_
+
+## 阿里山森林鐵路 / Alishan Forest Railway (`cn-alishan-railway`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | 🟠 Derived | derived | 100% | derived=18 |
+| Names | 🟠 Derived | derived | 100% | derived=18 |
+| Segment times | ✅ Complete | official | 100% | official=18, derived=2 |
+| Segment distances | ✅ Complete | official | 100% | official=14, derived=6 |
+| Transfer times | ❌ Unavailable | default | 0% | default=12 |
+| Timetables | 🟡 Partial | official | 35% | official=14, derived=2, default=2, unknown_directions=22 |
+| Schematic | ❌ Unavailable | default | 0% | default=21 |
+| Fares | 🟡 Partial | official | 61% | official=188, default=118 |
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -118,6 +132,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Schematic | ✅ Complete | official | 100% | official=155 |
 | Fares | ✅ Complete | official | 100% | official=20880 |
 
+## 高雄捷運 / Kaohsiung Metro (`cn-kaohsiung`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | 🟠 Derived | derived | 100% | derived=76 |
+| Names | ✅ Complete | official | 100% | official=76 |
+| Segment times | ✅ Complete | official | 100% | official=76, derived=74 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=150 |
+| Transfer times | 🟡 Partial | derived | 75% | derived=6, default=2 |
+| Timetables | ✅ Complete | official | 100% | official=150 |
+| Schematic | ❌ Unavailable | default | 0% | default=77 |
+| Fares | 🟡 Partial | official | 49% | official=2812, default=2888 |
+
 ## 澳門輕軌 / Macau Light Rapid Transit (`cn-macau`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -201,6 +229,62 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Timetables | ✅ Complete | official | 100% | official=534 |
 | Schematic | ✅ Complete | official | 100% | official=279 |
 | Fares | 🟡 Partial | official | 97% | official=54990, default=1892 |
+
+## 臺中捷運 / Taichung Metro (`cn-taichung`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=18 |
+| Names | ✅ Complete | official | 100% | official=18 |
+| Segment times | 🟠 Derived | derived | 100% | derived=34 |
+| Segment distances | ✅ Complete | official | 100% | official=34 |
+| Transfer times | ❌ Unavailable | default | 0% | — |
+| Timetables | ✅ Complete | official | 100% | official=34 |
+| Schematic | ❌ Unavailable | default | 0% | default=18 |
+| Fares | ✅ Complete | official | 100% | official=306 |
+
+## 臺北都會區捷運 / Taipei Metropolitan MRT (`cn-taipei`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=109, derived=66 |
+| Names | ✅ Complete | official | 100% | official=131, derived=44 |
+| Segment times | 🟠 Derived | derived | 100% | official=45, derived=171 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=216 |
+| Transfer times | 🟡 Partial | official | 78% | official=32, derived=26, default=16 |
+| Timetables | ✅ Complete | official | 100% | official=378 |
+| Schematic | ❌ Unavailable | default | 0% | default=200 |
+| Fares | 🟡 Partial | official | 42% | official=12796, default=17654 |
+
+## 台灣高鐵 / Taiwan High Speed Rail (`cn-taiwan-hsr`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | 🟠 Derived | derived | 100% | derived=12 |
+| Names | 🟠 Derived | derived | 100% | derived=12 |
+| Segment times | ✅ Complete | official | 100% | official=11 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=11 |
+| Transfer times | ❌ Unavailable | default | 0% | — |
+| Timetables | ✅ Complete | official | 100% | official=22 |
+| Schematic | ❌ Unavailable | default | 0% | default=12 |
+| Fares | ✅ Complete | official | 100% | official=132 |
+
+## 台灣鐵路 / Taiwan Railway (`cn-taiwan-railway`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=240 |
+| Names | ✅ Complete | official | 100% | official=240 |
+| Segment times | ✅ Complete | official | 100% | official=242 |
+| Segment distances | 🟠 Derived | derived | 100% | derived=242 |
+| Transfer times | ❌ Unavailable | default | 0% | default=28 |
+| Timetables | ✅ Complete | official | 100% | official=484 |
+| Schematic | ❌ Unavailable | default | 0% | default=254 |
+| Fares | ❌ Unavailable | default | 0% | default=57360 |
 
 ## 天津轨道交通 / Tianjin Rail Transit (`cn-tianjin`)
 
@@ -291,7 +375,7 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Status | Meaning |
 | --- | --- |
 | ✅ complete | Full coverage, official values |
-| 🟡 partial | Some entities still use network defaults |
+| 🟡 partial | Some values are missing, unresolved, or use defaults |
 | 🟠 derived | Full coverage but only derived values |
 | ❌ unavailable | No source values |
 

@@ -87,6 +87,10 @@ export interface DrawnLinePath {
   smoothed: [number, number][];
   /** `stopIndices[i]` is the index in `smoothed` of `stationIds[i]`. */
   stopIndices: number[];
+  /** Screen-space lane relative to this path's direction; 0 is the centerline. */
+  lane?: number;
+  /** Explicit opt-in for shared-corridor clipping and framing. */
+  sharedGeometry?: boolean;
 }
 
 function occurrences(ids: string[], stationId: string): number[] {
@@ -127,12 +131,12 @@ function longestMatchFrom(
   path: DrawnLinePath,
   leg: string[],
   start: number
-): { end: number; coords: [number, number][] } | null {
+): { end: number; coords: [number, number][]; lane: number } | null {
   const fromStation = leg[start];
   const next = leg[start + 1];
   if (!next) return null;
 
-  let best: { end: number; coords: [number, number][] } | null = null;
+  let best: { end: number; coords: [number, number][]; lane: number } | null = null;
 
   for (const fromIdx of occurrences(path.stationIds, fromStation)) {
     let dir: 1 | -1 | null = null;
@@ -161,7 +165,7 @@ function longestMatchFrom(
     const hi = fromIdx < k ? k : fromIdx;
     let coords = path.smoothed.slice(path.stopIndices[lo], path.stopIndices[hi] + 1);
     if (dir === -1) coords = coords.slice().reverse();
-    if (!best || j > best.end) best = { end: j, coords };
+    if (!best || j > best.end) best = { end: j, coords, lane: dir * (path.lane ?? 0) || 0 };
   }
 
   return best;
@@ -177,20 +181,46 @@ export function routeGeometryForStationIds(
   stationIds: string[],
   paths: DrawnLinePath[]
 ): [number, number][] {
+  const parts = clipRouteParts(stationIds, paths);
+  return parts.flatMap((part, i) => (i === 0 ? part.coordinates : part.coordinates.slice(1)));
+}
+
+export interface DrawnRouteSegment {
+  coordinates: [number, number][];
+  lane: number;
+}
+
+/** Split at display-lane changes; reversing a ride must reverse its offset too. */
+export function routeGeometrySegmentsForStationIds(
+  stationIds: string[],
+  paths: DrawnLinePath[]
+): DrawnRouteSegment[] {
+  if (!paths.some((path) => path.sharedGeometry)) {
+    // Preserve the pre-corridor single-feature stitching and fallback behavior
+    // for ordinary lines, including imprecise junctions and missing coordinates.
+    const coordinates = routeGeometryForStationIds(stationIds, paths);
+    return coordinates.length >= 2 ? [{ coordinates, lane: 0 }] : [];
+  }
+  return clipRouteParts(stationIds, paths);
+}
+
+function clipRouteParts(stationIds: string[], paths: DrawnLinePath[]): DrawnRouteSegment[] {
   if (stationIds.length < 2) return [];
 
-  const out: [number, number][] = [];
+  const out: DrawnRouteSegment[] = [];
   let i = 0;
 
   while (i < stationIds.length - 1) {
     let bestEnd = i;
     let bestSlice: [number, number][] | null = null;
+    let lane = 0;
 
     for (const path of paths) {
       const match = longestMatchFrom(path, stationIds, i);
       if (match && match.end > bestEnd) {
         bestEnd = match.end;
         bestSlice = match.coords;
+        lane = match.lane;
       }
     }
 
@@ -199,8 +229,11 @@ export function routeGeometryForStationIds(
       continue;
     }
 
-    if (out.length === 0) out.push(...bestSlice);
-    else out.push(...bestSlice.slice(1));
+    const previous = out.at(-1),
+      end = previous?.coordinates.at(-1);
+    if (previous?.lane === lane && end?.[0] === bestSlice[0]![0] && end?.[1] === bestSlice[0]![1])
+      previous.coordinates.push(...bestSlice.slice(1));
+    else out.push({ coordinates: [...bestSlice], lane });
     i = bestEnd;
   }
 

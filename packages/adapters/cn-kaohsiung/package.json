@@ -1,0 +1,32 @@
+{
+  "name": "@openmetro/adapter-cn-kaohsiung",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "openmetro": {
+    "networkId": "cn-kaohsiung",
+    "entry": "./src/adapter.ts",
+    "displayName": {
+      "zh": "高雄",
+      "en": "Kaohsiung"
+    },
+    "cityId": "CN-7106"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun --external @openmetro/core",
+    "normalize": "bun run ../../../scripts/sync.ts --network cn-kaohsiung"
+  },
+  "dependencies": {
+    "effect": "^3.22.0",
+    "@openmetro/core": "workspace:*",
+    "@openmetro/taiwan-shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.6.0"
+  }
+}

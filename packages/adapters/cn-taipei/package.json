@@ -1,0 +1,35 @@
+{
+  "name": "@openmetro/adapter-cn-taipei",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "openmetro": {
+    "networkId": "cn-taipei",
+    "entry": "./src/adapter.ts",
+    "displayName": {
+      "zh": "台北都会区",
+      "en": "Taipei Metropolitan MRT"
+    },
+    "cityId": "CN-7101"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun --external @openmetro/core --external pdfjs-dist --external @napi-rs/canvas --external tesseract.js",
+    "normalize": "bun run src/run.ts"
+  },
+  "dependencies": {
+    "effect": "^3.22.0",
+    "@openmetro/core": "workspace:*",
+    "@napi-rs/canvas": "^1.0.11",
+    "pdfjs-dist": "^6.4.299",
+    "tesseract.js": "6.0.1",
+    "@openmetro/taiwan-shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.6.0"
+  }
+}

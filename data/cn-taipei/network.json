@@ -1,0 +1,155 @@
+{
+  "id": "cn-taipei",
+  "name": "臺北都會區捷運",
+  "names": {
+    "zh": "臺北都會區捷運",
+    "en": "Taipei Metropolitan MRT"
+  },
+  "city": {
+    "id": "CN-7101",
+    "name": {
+      "zh": "台北市",
+      "en": "Taipei"
+    },
+    "country": "CN",
+    "population": 2429429,
+    "area": 271.7997,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        121.5625,
+        25.0375
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "TWD",
+  "timezone": "Asia/Taipei",
+  "coordinate_system": "wgs84",
+  "default_units": {
+    "distance": "km",
+    "time": "s",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 180,
+    "max_transfer_seconds": 900
+  },
+  "notes": "涵蓋台北、新北與桃園捷運，依官方資料整合同站及站外轉乘；高鐵、台鐵、阿里山及其他城市各自成網。耗時為靜態估算，不含候車與班次銜接；跨票制聯程票價未提供，僅保留官方已知票價。",
+  "service_scope": "涵蓋台北、新北與桃園捷運，依官方資料整合同站及站外轉乘；高鐵、台鐵、阿里山及其他城市各自成網。耗時為靜態估算，不含候車與班次銜接；跨票制聯程票價未提供，僅保留官方已知票價。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 109,
+        "derived": 66,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 131,
+        "derived": 44,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 45,
+        "derived": 171,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "derived",
+      "coverage": 1,
+      "status": "derived",
+      "counts": {
+        "official": 0,
+        "derived": 216,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 0.78,
+      "status": "partial",
+      "counts": {
+        "official": 32,
+        "derived": 26,
+        "default": 16
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 378,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "default",
+      "coverage": 0,
+      "status": "unavailable",
+      "counts": {
+        "official": 0,
+        "derived": 0,
+        "default": 200
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 0.42,
+      "status": "partial",
+      "counts": {
+        "official": 12796,
+        "derived": 0,
+        "default": 17654
+      }
+    }
+  },
+  "service_calendar": {
+    "valid_from": "2026-01-01",
+    "valid_to": "2026-12-31",
+    "holiday_dates": [
+      "2026-01-01",
+      "2026-02-16",
+      "2026-02-17",
+      "2026-02-18",
+      "2026-02-19",
+      "2026-02-20",
+      "2026-02-27",
+      "2026-04-03",
+      "2026-04-06",
+      "2026-05-01",
+      "2026-06-19",
+      "2026-09-25",
+      "2026-09-28",
+      "2026-10-09",
+      "2026-10-26",
+      "2026-12-25"
+    ]
+  }
+}

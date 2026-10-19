@@ -1,3 +1,4 @@
+export * from './coverage.js';
 export * from './derive.js';
 export * from './estimate.js';
 export * from './service-status.js';
