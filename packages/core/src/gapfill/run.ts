@@ -130,22 +130,40 @@ async function loadDoc<T>(path: string): Promise<CanonicalDoc<T>> {
   return JSON.parse(await readFile(path, 'utf-8')) as CanonicalDoc<T>;
 }
 
-async function saveDoc<T>(path: string, doc: CanonicalDoc<T>): Promise<void> {
+/**
+ * Label the planner that actually produced the values.
+ *
+ * The default endpoint is Baidu **Direction v2** (`direction/v2/transit`); an
+ * operator reverse proxy may point `OPENMETRO_BAIDU_BASE` at the older
+ * Direction Lite, so the name follows the URL instead of being hardcoded.
+ */
+function plannerLabel(url: string): { name: string; version: string } {
+  if (url.includes('direction/v2')) return { name: 'Baidu Direction v2 transit', version: '2' };
+  if (url.includes('directionlite')) return { name: 'Baidu Direction Lite transit', version: '1' };
+  return { name: 'Baidu transit planner', version: '1' };
+}
+
+async function saveDoc<T>(path: string, doc: CanonicalDoc<T>, plannerUrl: string): Promise<void> {
   doc.generated_at = new Date().toISOString();
-  const hasSource = doc.source.some((s) => JSON.stringify(s).includes('baidu'));
-  if (!hasSource) {
-    doc.source.push({
-      name: 'Baidu Direction Lite transit',
-      url: 'https://api.map.baidu.com/directionlite/v1/transit',
-      version: '1',
-      retrieved_at: new Date().toISOString(),
-      license: 'custom',
-      license_url: null,
-      attribution: 'Baidu Maps',
-      notes:
-        'Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten.'
-    });
-  }
+  const label = plannerLabel(plannerUrl);
+  // Replace a stale planner entry rather than keeping a mislabelled one.
+  const stale = doc.source.findIndex((s) => {
+    const url = String((s as { url?: string }).url ?? '');
+    return url.includes('directionlite') || url.includes('direction/v2');
+  });
+  const entry = {
+    name: label.name,
+    url: plannerUrl,
+    version: label.version,
+    retrieved_at: new Date().toISOString(),
+    license: 'custom',
+    license_url: null,
+    attribution: 'Baidu Maps',
+    notes:
+      'Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten.'
+  };
+  if (stale >= 0) doc.source[stale] = entry;
+  else doc.source.push(entry);
   await writeFile(path, `${JSON.stringify(doc, null, 2)}\n`, 'utf-8');
 }
 
@@ -425,7 +443,7 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
       }
     }
     if (coordsFilled > 0) {
-      await saveDoc(join(dataDir, 'stations.json'), stationsDoc);
+      await saveDoc(join(dataDir, 'stations.json'), stationsDoc, loaded.baseUrl);
     }
   }
 
@@ -720,11 +738,11 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
   }
 
   if (segTimeFilled + segDistFilled > 0) {
-    await saveDoc(join(dataDir, 'segments.json'), segmentsDoc);
+    await saveDoc(join(dataDir, 'segments.json'), segmentsDoc, loaded.baseUrl);
   }
-  if (walkFilled > 0) {
-    await saveDoc(join(dataDir, 'transfers.json'), transfersDoc);
-  }
+  // Always rewrite transfers.json so the planner provenance entry stays
+  // truthful even when no walk had to be filled this run.
+  await saveDoc(join(dataDir, 'transfers.json'), transfersDoc, loaded.baseUrl);
 
   console.log(
     `  gapfill: +${coordsFilled} coordinates, +${segTimeFilled} segment times, ` +
