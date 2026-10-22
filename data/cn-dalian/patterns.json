@@ -1,0 +1,296 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dalian",
+  "generated_at": "2026-10-22T14:18:10.312Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-dalian-pattern-1-primary",
+      "line_id": "cn-dalian-line-1",
+      "name": "姚家 → 河口",
+      "names": {
+        "zh": "姚家→河口",
+        "en": "姚家 to 河口"
+      },
+      "stop_ids": [
+        "cn-dalian-yaojia-1",
+        "cn-dalian-dalian-north-railway-station-1",
+        "cn-dalian-huabei-road-1",
+        "cn-dalian-huanan-north-1",
+        "cn-dalian-huanan-square-1",
+        "cn-dalian-qianshan-road-1",
+        "cn-dalian-songjiang-road-1",
+        "cn-dalian-dongwei-road-1",
+        "cn-dalian-chunliu-1",
+        "cn-dalian-xianggong-street-1",
+        "cn-dalian-zhongchang-street-1",
+        "cn-dalian-xinggong-street-1",
+        "cn-dalian-xian-road-1",
+        "cn-dalian-fuguo-street-1",
+        "cn-dalian-convention-and-exhibition-center-1",
+        "cn-dalian-xinghai-square-1",
+        "cn-dalian-2nd-hospital-of-dalian-medical-university-1",
+        "cn-dalian-heishijiao-1",
+        "cn-dalian-xueyuan-square-1",
+        "cn-dalian-dalian-maritime-university-1",
+        "cn-dalian-qixianling-1",
+        "cn-dalian-hekou-1"
+      ],
+      "origin_stop_id": "cn-dalian-yaojia-1",
+      "terminal_stop_id": "cn-dalian-hekou-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-2102",
+          "id": "1号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1",
+        "alignment": "main",
+        "note": "姚家—河口，6B 编组，设桧柏路车辆段与蔡大岭停车场。"
+      }
+    },
+    {
+      "id": "cn-dalian-pattern-12-primary",
+      "line_id": "cn-dalian-line-12",
+      "name": "河口 → 旅顺新港",
+      "names": {
+        "zh": "河口→旅顺新港",
+        "en": "河口 to 旅顺新港"
+      },
+      "stop_ids": [
+        "cn-dalian-hekou-12",
+        "cn-dalian-caidaling-12",
+        "cn-dalian-huangnichuan-12",
+        "cn-dalian-longwangtang-12",
+        "cn-dalian-tahewan-12",
+        "cn-dalian-lushun-12",
+        "cn-dalian-tieshan-12",
+        "cn-dalian-lushun-new-port-12"
+      ],
+      "origin_stop_id": "cn-dalian-hekou-12",
+      "terminal_stop_id": "cn-dalian-lushun-new-port-12",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-2102",
+          "id": "12号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "12",
+        "alignment": "main",
+        "note": "河口—旅顺新港，4B 编组，由原 202 路电车延伸线改建，设铁山车辆段。"
+      }
+    },
+    {
+      "id": "cn-dalian-pattern-13-primary",
+      "line_id": "cn-dalian-line-13",
+      "name": "普兰店振兴街 → 九里",
+      "names": {
+        "zh": "普兰店振兴街→九里",
+        "en": "普兰店振兴街 to 九里"
+      },
+      "stop_ids": [
+        "cn-dalian-pulandian-zhenxing-street-13",
+        "cn-dalian-pulandian-development-zone-13",
+        "cn-dalian-haiwan-high-school-13",
+        "cn-dalian-the-third-hospital-of-dalian-medical-university-13",
+        "cn-dalian-changdianpu-13",
+        "cn-dalian-shihe-beihai-13",
+        "cn-dalian-puwan-stadium-13",
+        "cn-dalian-shihe-huangqi-13",
+        "cn-dalian-sanshilipu-13",
+        "cn-dalian-ershilipu-13",
+        "cn-dalian-shisanli-13",
+        "cn-dalian-jiuli-13"
+      ],
+      "origin_stop_id": "cn-dalian-pulandian-zhenxing-street-13",
+      "terminal_stop_id": "cn-dalian-jiuli-13",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-2102",
+          "id": "13号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "13",
+        "alignment": "main",
+        "note": "工程名金普城际铁路，市域快轨制式，4B 编组，最高运行速度 120km/h。采用大小交路：大交路 普兰店振兴街↔开发区（间隔 30 分钟），小交路 九里↔开发区；与3号线九里支线贯通运营。"
+      }
+    },
+    {
+      "id": "cn-dalian-pattern-2-primary",
+      "line_id": "cn-dalian-line-2",
+      "name": "大连北站 → 海之韵",
+      "names": {
+        "zh": "大连北站→海之韵",
+        "en": "大连北站 to 海之韵"
+      },
+      "stop_ids": [
+        "cn-dalian-dalian-north-railway-station-2",
+        "cn-dalian-nanguanling-2",
+        "cn-dalian-sports-center-2",
+        "cn-dalian-health-center-2",
+        "cn-dalian-houge-2",
+        "cn-dalian-gezhenpu-2",
+        "cn-dalian-zhongge-2",
+        "cn-dalian-qian-ge-2",
+        "cn-dalian-xinzhaizi-2",
+        "cn-dalian-airport-2",
+        "cn-dalian-honggang-road-2",
+        "cn-dalian-hongjin-road-2",
+        "cn-dalian-hongqi-west-road-2",
+        "cn-dalian-wanjia-2",
+        "cn-dalian-malan-square-2",
+        "cn-dalian-liaoning-normal-university-2",
+        "cn-dalian-dalian-jiaotong-university-2",
+        "cn-dalian-xian-road-2",
+        "cn-dalian-lianhe-road-2",
+        "cn-dalian-renmin-square-2",
+        "cn-dalian-yierjiu-street-2",
+        "cn-dalian-qingniwaqiao-2",
+        "cn-dalian-youhao-square-2",
+        "cn-dalian-zhongshan-square-2",
+        "cn-dalian-gangwan-square-2",
+        "cn-dalian-conference-center-2",
+        "cn-dalian-donggang-2",
+        "cn-dalian-donghai-2",
+        "cn-dalian-haizhiyun-2"
+      ],
+      "origin_stop_id": "cn-dalian-dalian-north-railway-station-2",
+      "terminal_stop_id": "cn-dalian-haizhiyun-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-2102",
+          "id": "2号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2",
+        "alignment": "main",
+        "note": "大连北站—海之韵，6B 编组，设虹锦路车辆段（与1号线共用控制中心）。"
+      }
+    },
+    {
+      "id": "cn-dalian-pattern-3-jiuli",
+      "line_id": "cn-dalian-line-3",
+      "name": "开发区 → 九里",
+      "names": {
+        "zh": "开发区→九里",
+        "en": "开发区 to 九里"
+      },
+      "stop_ids": [
+        "cn-dalian-dalian-development-area-3",
+        "cn-dalian-tostem-3",
+        "cn-dalian-phoenix-peak-3",
+        "cn-dalian-dongshan-road-3",
+        "cn-dalian-heping-road-3",
+        "cn-dalian-yongan-siji-3",
+        "cn-dalian-jiuli-3"
+      ],
+      "origin_stop_id": "cn-dalian-dalian-development-area-3",
+      "terminal_stop_id": "cn-dalian-jiuli-3",
+      "is_primary": false,
+      "junction_stop_id": "cn-dalian-dalian-development-area-3",
+      "source_ids": [
+        {
+          "source": "amap-subway-2102",
+          "id": "地铁3号线支线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "3",
+        "alignment": "branch",
+        "branch_key": "jiuli",
+        "amap_name": "地铁3号线支线",
+        "junction_station": "开发区",
+        "note": "九里支线（快轨九里支线），自开发区站分岔；与13号线一期贯通运营，乘客可在开发区站换乘主线。"
+      }
+    },
+    {
+      "id": "cn-dalian-pattern-3-primary",
+      "line_id": "cn-dalian-line-3",
+      "name": "大连站 → 金石滩",
+      "names": {
+        "zh": "大连站→金石滩",
+        "en": "大连站 to 金石滩"
+      },
+      "stop_ids": [
+        "cn-dalian-dalian-railway-station-3",
+        "cn-dalian-xianglujiao-3",
+        "cn-dalian-jinjia-street-3",
+        "cn-dalian-quanshui-3",
+        "cn-dalian-houyan-3",
+        "cn-dalian-dalianwan-3",
+        "cn-dalian-jinma-road-3",
+        "cn-dalian-dalian-development-area-3",
+        "cn-dalian-free-trade-zone-3",
+        "cn-dalian-dd-port-3",
+        "cn-dalian-xiaoyaowan-3",
+        "cn-dalian-golden-pebble-beach-3"
+      ],
+      "origin_stop_id": "cn-dalian-dalian-railway-station-3",
+      "terminal_stop_id": "cn-dalian-golden-pebble-beach-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-2102",
+          "id": "3号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "3",
+        "alignment": "main",
+        "note": "主线 大连站—金石滩（4B 编组，点式 ATP）。保税区小交路 大连站⇌保税区 与主线并存；九里支线（快轨九里支线，2B 编组）自开发区站分岔，2021-12-28 起与13号线一期贯通运营至普兰店振兴街。"
+      }
+    },
+    {
+      "id": "cn-dalian-pattern-5-primary",
+      "line_id": "cn-dalian-line-5",
+      "name": "后关 → 虎滩新区",
+      "names": {
+        "zh": "后关→虎滩新区",
+        "en": "后关 to 虎滩新区"
+      },
+      "stop_ids": [
+        "cn-dalian-houguan-5",
+        "cn-dalian-houyan-5",
+        "cn-dalian-longhua-road-5",
+        "cn-dalian-quanshui-east-5",
+        "cn-dalian-zhonghua-east-road-5",
+        "cn-dalian-ganbei-road-5",
+        "cn-dalian-ganjingzi-street-5",
+        "cn-dalian-suoyuwan-5",
+        "cn-dalian-suoyuwan-south-5",
+        "cn-dalian-dalian-railway-station-5",
+        "cn-dalian-qingniwaqiao-5",
+        "cn-dalian-labor-park-5",
+        "cn-dalian-shikui-road-5",
+        "cn-dalian-qingyun-street-5",
+        "cn-dalian-taoyuan-5",
+        "cn-dalian-xiuyue-street-5",
+        "cn-dalian-tigerbeach-park-5",
+        "cn-dalian-hutan-xinqu-5"
+      ],
+      "origin_stop_id": "cn-dalian-houguan-5",
+      "terminal_stop_id": "cn-dalian-hutan-xinqu-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-2102",
+          "id": "5号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "5",
+        "alignment": "main",
+        "note": "后关—虎滩新区，6B 编组，中国东北地区首条跨海地铁线路。"
+      }
+    }
+  ]
+}

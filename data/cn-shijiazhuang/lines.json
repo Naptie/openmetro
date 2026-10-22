@@ -1,0 +1,96 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-shijiazhuang",
+  "generated_at": "2026-10-22T16:23:12.003Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-shijiazhuang-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "aliases": [],
+      "color": "#cf6e6b",
+      "short_name": "1",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "sjzmetro-api",
+          "id": "1"
+        },
+        {
+          "source": "amap-subway-1301",
+          "id": "900000044039|900000044057"
+        }
+      ],
+      "extras": {
+        "official_line_id": 1,
+        "amap_color": "CC0000",
+        "baidu_name_hint": "地铁1号线"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "aliases": [],
+      "color": "#e4ce5b",
+      "short_name": "2",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "sjzmetro-api",
+          "id": "2"
+        },
+        {
+          "source": "amap-subway-1301",
+          "id": "900000069998|900000070060"
+        }
+      ],
+      "extras": {
+        "official_line_id": 2,
+        "amap_color": "FCD600",
+        "baidu_name_hint": "地铁2号线"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "aliases": [],
+      "color": "#81bcd9",
+      "short_name": "3",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "sjzmetro-api",
+          "id": "3"
+        },
+        {
+          "source": "amap-subway-1301",
+          "id": "900000045645|900000045646"
+        }
+      ],
+      "extras": {
+        "official_line_id": 3,
+        "amap_color": "52A8C9",
+        "baidu_name_hint": "地铁3号线"
+      }
+    }
+  ]
+}

@@ -1,0 +1,734 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-hohhot",
+  "generated_at": "2026-10-22T15:38:08.336Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-22T15:38:08.336Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-affiliated-hospital-1-cn-hohhot-xinhua-square-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-affiliated-hospital-1",
+      "to_stop_id": "cn-hohhot-xinhua-square-1",
+      "from_station_id": "cn-hohhot-affiliated-hospital",
+      "to_station_id": "cn-hohhot-xinhua-square",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.047,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-arts-college-1-cn-hohhot-dongyinglu-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-arts-college-1",
+      "to_stop_id": "cn-hohhot-dongyinglu-1",
+      "from_station_id": "cn-hohhot-arts-college",
+      "to_station_id": "cn-hohhot-dongyinglu",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.835,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-baihe-road-2-cn-hohhot-beishan-park-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-baihe-road-2",
+      "to_stop_id": "cn-hohhot-beishan-park-2",
+      "from_station_id": "cn-hohhot-baihe-road",
+      "to_station_id": "cn-hohhot-beishan-park",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.013,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-baita-west-1-cn-hohhot-bayan-airport-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-baita-west-1",
+      "to_stop_id": "cn-hohhot-bayan-airport-1",
+      "from_station_id": "cn-hohhot-baita-west",
+      "to_station_id": "cn-hohhot-bayan-airport",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.132,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-beishan-park-2-cn-hohhot-sichou-zhilu-avenue-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-beishan-park-2",
+      "to_stop_id": "cn-hohhot-sichou-zhilu-avenue-2",
+      "from_station_id": "cn-hohhot-beishan-park",
+      "to_station_id": "cn-hohhot-sichou-zhilu-avenue",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.289,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-city-government-1-cn-hohhot-hohhot-east-railway-station-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-city-government-1",
+      "to_stop_id": "cn-hohhot-hohhot-east-railway-station-1",
+      "from_station_id": "cn-hohhot-city-government",
+      "to_station_id": "cn-hohhot-hohhot-east-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.107,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-daxue-west-street-2-cn-hohhot-nuohe-mule-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-daxue-west-street-2",
+      "to_stop_id": "cn-hohhot-nuohe-mule-2",
+      "from_station_id": "cn-hohhot-daxue-west-street",
+      "to_station_id": "cn-hohhot-nuohe-mule",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.965,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-dongyinglu-1-cn-hohhot-inner-mongolia-exhibition-hall-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-dongyinglu-1",
+      "to_stop_id": "cn-hohhot-inner-mongolia-exhibition-hall-1",
+      "from_station_id": "cn-hohhot-dongyinglu",
+      "to_station_id": "cn-hohhot-inner-mongolia-exhibition-hall",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.989,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-genghis-khan-park-2-cn-hohhot-haoqinying-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-genghis-khan-park-2",
+      "to_stop_id": "cn-hohhot-haoqinying-2",
+      "from_station_id": "cn-hohhot-genghis-khan-park",
+      "to_station_id": "cn-hohhot-haoqinying",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.215,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-genghis-khan-square-2-cn-hohhot-nei-mongol-gymnasium-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-genghis-khan-square-2",
+      "to_stop_id": "cn-hohhot-nei-mongol-gymnasium-2",
+      "from_station_id": "cn-hohhot-genghis-khan-square",
+      "to_station_id": "cn-hohhot-nei-mongol-gymnasium",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.042,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-gongzhufu-2-cn-hohhot-hohhot-railway-station-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-gongzhufu-2",
+      "to_stop_id": "cn-hohhot-hohhot-railway-station-2",
+      "from_station_id": "cn-hohhot-gongzhufu",
+      "to_station_id": "cn-hohhot-hohhot-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.818,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-haoqinying-2-cn-hohhot-genghis-khan-square-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-haoqinying-2",
+      "to_stop_id": "cn-hohhot-genghis-khan-square-2",
+      "from_station_id": "cn-hohhot-haoqinying",
+      "to_station_id": "cn-hohhot-genghis-khan-square",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.214,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-hohhot-east-railway-station-1-cn-hohhot-houbutaqi-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-hohhot-east-railway-station-1",
+      "to_stop_id": "cn-hohhot-houbutaqi-1",
+      "from_station_id": "cn-hohhot-hohhot-east-railway-station",
+      "to_station_id": "cn-hohhot-houbutaqi",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.474,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-hohhot-railway-station-2-cn-hohhot-xinhua-square-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-hohhot-railway-station-2",
+      "to_stop_id": "cn-hohhot-xinhua-square-2",
+      "from_station_id": "cn-hohhot-hohhot-railway-station",
+      "to_station_id": "cn-hohhot-xinhua-square",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.953,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-hohhot-stadium-2-cn-hohhot-gongzhufu-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-hohhot-stadium-2",
+      "to_stop_id": "cn-hohhot-gongzhufu-2",
+      "from_station_id": "cn-hohhot-hohhot-stadium",
+      "to_station_id": "cn-hohhot-gongzhufu",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.692,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-houbutaqi-1-cn-hohhot-shilandai-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-houbutaqi-1",
+      "to_stop_id": "cn-hohhot-shilandai-1",
+      "from_station_id": "cn-hohhot-houbutaqi",
+      "to_station_id": "cn-hohhot-shilandai",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.73,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-hugang-south-road-1-cn-hohhot-xilongwangmiao-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-hugang-south-road-1",
+      "to_stop_id": "cn-hohhot-xilongwangmiao-1",
+      "from_station_id": "cn-hohhot-hugang-south-road",
+      "to_station_id": "cn-hohhot-xilongwangmiao",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.434,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-inner-mongolia-exhibition-hall-1-cn-hohhot-inner-mongolia-museum-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-inner-mongolia-exhibition-hall-1",
+      "to_stop_id": "cn-hohhot-inner-mongolia-museum-1",
+      "from_station_id": "cn-hohhot-inner-mongolia-exhibition-hall",
+      "to_station_id": "cn-hohhot-inner-mongolia-museum",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.018,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-inner-mongolia-museum-1-cn-hohhot-city-government-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-inner-mongolia-museum-1",
+      "to_stop_id": "cn-hohhot-city-government-1",
+      "from_station_id": "cn-hohhot-inner-mongolia-museum",
+      "to_station_id": "cn-hohhot-city-government",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.345,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-jiangjunyashu-1-cn-hohhot-arts-college-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-jiangjunyashu-1",
+      "to_stop_id": "cn-hohhot-arts-college-1",
+      "from_station_id": "cn-hohhot-jiangjunyashu",
+      "to_station_id": "cn-hohhot-arts-college",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.858,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-kongjiaying-1-cn-hohhot-hugang-south-road-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-kongjiaying-1",
+      "to_stop_id": "cn-hohhot-hugang-south-road-1",
+      "from_station_id": "cn-hohhot-kongjiaying",
+      "to_station_id": "cn-hohhot-hugang-south-road",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.151,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-lamaying-2-cn-hohhot-aershan-road-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-lamaying-2",
+      "to_stop_id": "cn-hohhot-aershan-road-2",
+      "from_station_id": "cn-hohhot-lamaying",
+      "to_station_id": "cn-hohhot-aershan-road",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.448,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-nei-mongol-gymnasium-2-cn-hohhot-hohhot-stadium-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-nei-mongol-gymnasium-2",
+      "to_stop_id": "cn-hohhot-hohhot-stadium-2",
+      "from_station_id": "cn-hohhot-nei-mongol-gymnasium",
+      "to_station_id": "cn-hohhot-hohhot-stadium",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.21,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-neidanan-campus-2-cn-hohhot-shuaijiaying-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-neidanan-campus-2",
+      "to_stop_id": "cn-hohhot-shuaijiaying-2",
+      "from_station_id": "cn-hohhot-neidanan-campus",
+      "to_station_id": "cn-hohhot-shuaijiaying",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.619,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-nuohe-mule-2-cn-hohhot-water-park-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-nuohe-mule-2",
+      "to_stop_id": "cn-hohhot-water-park-2",
+      "from_station_id": "cn-hohhot-nuohe-mule",
+      "to_station_id": "cn-hohhot-water-park",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.311,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-peoples-hall-1-cn-hohhot-jiangjunyashu-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-peoples-hall-1",
+      "to_stop_id": "cn-hohhot-jiangjunyashu-1",
+      "from_station_id": "cn-hohhot-peoples-hall",
+      "to_station_id": "cn-hohhot-jiangjunyashu",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.194,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-shilandai-1-cn-hohhot-baita-west-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-shilandai-1",
+      "to_stop_id": "cn-hohhot-baita-west-1",
+      "from_station_id": "cn-hohhot-shilandai",
+      "to_station_id": "cn-hohhot-baita-west",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.965,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-shuaijiaying-2-cn-hohhot-lamaying-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-shuaijiaying-2",
+      "to_stop_id": "cn-hohhot-lamaying-2",
+      "from_station_id": "cn-hohhot-shuaijiaying",
+      "to_station_id": "cn-hohhot-lamaying",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.106,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-sichou-zhilu-avenue-2-cn-hohhot-yijiacun-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-sichou-zhilu-avenue-2",
+      "to_stop_id": "cn-hohhot-yijiacun-2",
+      "from_station_id": "cn-hohhot-sichou-zhilu-avenue",
+      "to_station_id": "cn-hohhot-yijiacun",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.203,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-tali-east-road-2-cn-hohhot-xindian-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-tali-east-road-2",
+      "to_stop_id": "cn-hohhot-xindian-2",
+      "from_station_id": "cn-hohhot-tali-east-road",
+      "to_station_id": "cn-hohhot-xindian",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.983,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-water-park-2-cn-hohhot-wuliying-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-water-park-2",
+      "to_stop_id": "cn-hohhot-wuliying-2",
+      "from_station_id": "cn-hohhot-water-park",
+      "to_station_id": "cn-hohhot-wuliying",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.035,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-wulanfu-memorial-hall-1-cn-hohhot-affiliated-hospital-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-wulanfu-memorial-hall-1",
+      "to_stop_id": "cn-hohhot-affiliated-hospital-1",
+      "from_station_id": "cn-hohhot-wulanfu-memorial-hall",
+      "to_station_id": "cn-hohhot-affiliated-hospital",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.224,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-wuliying-2-cn-hohhot-xilin-park-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-wuliying-2",
+      "to_stop_id": "cn-hohhot-xilin-park-2",
+      "from_station_id": "cn-hohhot-wuliying",
+      "to_station_id": "cn-hohhot-xilin-park",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.742,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-xierhuanlu-1-cn-hohhot-kongjiaying-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-xierhuanlu-1",
+      "to_stop_id": "cn-hohhot-kongjiaying-1",
+      "from_station_id": "cn-hohhot-xierhuanlu",
+      "to_station_id": "cn-hohhot-kongjiaying",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.187,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-xilin-park-2-cn-hohhot-neidanan-campus-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-xilin-park-2",
+      "to_stop_id": "cn-hohhot-neidanan-campus-2",
+      "from_station_id": "cn-hohhot-xilin-park",
+      "to_station_id": "cn-hohhot-neidanan-campus",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.392,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-xilongwangmiao-1-cn-hohhot-wulanfu-memorial-hall-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-xilongwangmiao-1",
+      "to_stop_id": "cn-hohhot-wulanfu-memorial-hall-1",
+      "from_station_id": "cn-hohhot-xilongwangmiao",
+      "to_station_id": "cn-hohhot-wulanfu-memorial-hall",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.974,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-xindian-2-cn-hohhot-baihe-road-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-xindian-2",
+      "to_stop_id": "cn-hohhot-baihe-road-2",
+      "from_station_id": "cn-hohhot-xindian",
+      "to_station_id": "cn-hohhot-baihe-road",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.651,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-xinhua-square-1-cn-hohhot-peoples-hall-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-xinhua-square-1",
+      "to_stop_id": "cn-hohhot-peoples-hall-1",
+      "from_station_id": "cn-hohhot-xinhua-square",
+      "to_station_id": "cn-hohhot-peoples-hall",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.769,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-xinhua-square-2-cn-hohhot-zhongshanlu-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-xinhua-square-2",
+      "to_stop_id": "cn-hohhot-zhongshanlu-2",
+      "from_station_id": "cn-hohhot-xinhua-square",
+      "to_station_id": "cn-hohhot-zhongshanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.659,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-yijiacun-2-cn-hohhot-genghis-khan-park-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-yijiacun-2",
+      "to_stop_id": "cn-hohhot-genghis-khan-park-2",
+      "from_station_id": "cn-hohhot-yijiacun",
+      "to_station_id": "cn-hohhot-genghis-khan-park",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.18,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-yili-health-valley-1-cn-hohhot-xierhuanlu-1",
+      "line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-yili-health-valley-1",
+      "to_stop_id": "cn-hohhot-xierhuanlu-1",
+      "from_station_id": "cn-hohhot-yili-health-valley",
+      "to_station_id": "cn-hohhot-xierhuanlu",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 1.884,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-hohhot-seg-cn-hohhot-zhongshanlu-2-cn-hohhot-daxue-west-street-2",
+      "line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-zhongshanlu-2",
+      "to_stop_id": "cn-hohhot-daxue-west-street-2",
+      "from_station_id": "cn-hohhot-zhongshanlu",
+      "to_station_id": "cn-hohhot-daxue-west-street",
+      "direction": "both",
+      "source_id": "amap-subway-1501",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.085,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    }
+  ]
+}

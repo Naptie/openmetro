@@ -1,0 +1,99 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-hohhot",
+  "generated_at": "2026-10-22T14:54:59.646Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-hohhot-pattern-1-primary",
+      "line_id": "cn-hohhot-line-1",
+      "name": "伊利健康谷 → 坝堰(机场)(国内航站楼)",
+      "names": {
+        "zh": "伊利健康谷→坝堰(机场)(国内航站楼)",
+        "en": "伊利健康谷 to 坝堰(机场)(国内航站楼)"
+      },
+      "stop_ids": [
+        "cn-hohhot-yili-health-valley-1",
+        "cn-hohhot-xierhuanlu-1",
+        "cn-hohhot-kongjiaying-1",
+        "cn-hohhot-hugang-south-road-1",
+        "cn-hohhot-xilongwangmiao-1",
+        "cn-hohhot-wulanfu-memorial-hall-1",
+        "cn-hohhot-affiliated-hospital-1",
+        "cn-hohhot-xinhua-square-1",
+        "cn-hohhot-peoples-hall-1",
+        "cn-hohhot-jiangjunyashu-1",
+        "cn-hohhot-arts-college-1",
+        "cn-hohhot-dongyinglu-1",
+        "cn-hohhot-inner-mongolia-exhibition-hall-1",
+        "cn-hohhot-inner-mongolia-museum-1",
+        "cn-hohhot-city-government-1",
+        "cn-hohhot-hohhot-east-railway-station-1",
+        "cn-hohhot-houbutaqi-1",
+        "cn-hohhot-shilandai-1",
+        "cn-hohhot-baita-west-1",
+        "cn-hohhot-bayan-airport-1"
+      ],
+      "origin_stop_id": "cn-hohhot-yili-health-valley-1",
+      "terminal_stop_id": "cn-hohhot-bayan-airport-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-1501",
+          "id": "1号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1"
+      }
+    },
+    {
+      "id": "cn-hohhot-pattern-2-primary",
+      "line_id": "cn-hohhot-line-2",
+      "name": "塔利东路 → 阿尔山路",
+      "names": {
+        "zh": "塔利东路→阿尔山路",
+        "en": "塔利东路 to 阿尔山路"
+      },
+      "stop_ids": [
+        "cn-hohhot-tali-east-road-2",
+        "cn-hohhot-xindian-2",
+        "cn-hohhot-baihe-road-2",
+        "cn-hohhot-beishan-park-2",
+        "cn-hohhot-sichou-zhilu-avenue-2",
+        "cn-hohhot-yijiacun-2",
+        "cn-hohhot-genghis-khan-park-2",
+        "cn-hohhot-haoqinying-2",
+        "cn-hohhot-genghis-khan-square-2",
+        "cn-hohhot-nei-mongol-gymnasium-2",
+        "cn-hohhot-hohhot-stadium-2",
+        "cn-hohhot-gongzhufu-2",
+        "cn-hohhot-hohhot-railway-station-2",
+        "cn-hohhot-xinhua-square-2",
+        "cn-hohhot-zhongshanlu-2",
+        "cn-hohhot-daxue-west-street-2",
+        "cn-hohhot-nuohe-mule-2",
+        "cn-hohhot-water-park-2",
+        "cn-hohhot-wuliying-2",
+        "cn-hohhot-xilin-park-2",
+        "cn-hohhot-neidanan-campus-2",
+        "cn-hohhot-shuaijiaying-2",
+        "cn-hohhot-lamaying-2",
+        "cn-hohhot-aershan-road-2"
+      ],
+      "origin_stop_id": "cn-hohhot-tali-east-road-2",
+      "terminal_stop_id": "cn-hohhot-aershan-road-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-1501",
+          "id": "2号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2"
+      }
+    }
+  ]
+}

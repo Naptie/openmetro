@@ -1,0 +1,126 @@
+{
+  "id": "cn-shenyang",
+  "name": "沈阳地铁",
+  "names": {
+    "zh": "沈阳地铁",
+    "en": "Shenyang Metro"
+  },
+  "city": {
+    "id": "CN-2101",
+    "name": {
+      "zh": "CN-2101",
+      "en": "CN-2101"
+    },
+    "country": "",
+    "population": null,
+    "area": null,
+    "location": null
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 180,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑（线路、站序、官方线内站码）、线色、里程、开通日期、站名与官方拼音、首末班时刻表与票制均来自沈阳地铁官网 www.symtc.com 的 cocc-website 接口（getLineList / getStationList / getHomePageInitData，后者须用 POST 调用，GET 会返回早于 3 号线东延线开通的旧快照）。官网本身不提供经纬度与换乘步行时间：坐标取自 AMap Subway 2101（GCJ-02，与官方站名逐站一一对应），换乘步行取自百度路径规划 direction/v2/transit 的站厅换乘步行段。3 号线东延线（方家栏↔甘官，2024-12-30 开通）是官方单独发布的一条折返交路（tag_dir=03），其车站与 3 号线主线重合，因此按\"同一走廊上的第三个方向\"发布——时刻表挂在 3 号线主交路上，终点记为甘官，而不是另建一条交路。首末班时刻表按官方发布的是单一变体，官网对外的时刻表页面为内网 iframe，无法区分工作日与双休日。官方表中个别站点的首/末班存在跳变（延伸段边界），区间时间以末班链派生并做单调性与时长窗口校验，越界值回落到规划器实测值。在建的 6 号线一期、9 号线二期、10 号线二期未建模。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 144,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 144,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 153,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 153,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 30,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 323,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 159,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 20592,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

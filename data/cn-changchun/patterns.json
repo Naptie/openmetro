@@ -1,0 +1,377 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-changchun",
+  "generated_at": "2026-10-22T21:27:21.085Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-changchun-pattern-1-primary",
+      "line_id": "cn-changchun-line-1",
+      "name": "北环城路 → 红嘴子",
+      "names": {
+        "zh": "北环城路→红嘴子",
+        "en": "北环城路 to 红嘴子"
+      },
+      "stop_ids": [
+        "cn-changchun-north-ring-rd-1",
+        "cn-changchun-qingfeng-rd-1",
+        "cn-changchun-yikuang-street-1",
+        "cn-changchun-changchun-railway-station-north-1",
+        "cn-changchun-changchun-railway-station-1",
+        "cn-changchun-shengli-park-1",
+        "cn-changchun-renmin-square-1",
+        "cn-changchun-jiefang-ave-1",
+        "cn-changchun-northeast-normal-university-1",
+        "cn-changchun-gongnong-square-1",
+        "cn-changchun-fanrong-road-1",
+        "cn-changchun-weixing-square-1",
+        "cn-changchun-municipal-government-1",
+        "cn-changchun-huaqing-lu-1",
+        "cn-changchun-hongzuizi-1"
+      ],
+      "origin_stop_id": "cn-changchun-north-ring-rd-1",
+      "terminal_stop_id": "cn-changchun-hongzuizi-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "ccqg-getLines",
+          "id": "01"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1",
+        "origin_name": "北环城路",
+        "terminal_name": "红嘴子"
+      }
+    },
+    {
+      "id": "cn-changchun-pattern-2-primary",
+      "line_id": "cn-changchun-line-2",
+      "name": "汽车公园 → 雾开河大街",
+      "names": {
+        "zh": "汽车公园→雾开河大街",
+        "en": "汽车公园 to 雾开河大街"
+      },
+      "stop_ids": [
+        "cn-changchun-qiche-gongyuan-2",
+        "cn-changchun-jieda-dalu-2",
+        "cn-changchun-west-lake-2",
+        "cn-changchun-shuangfeng-2",
+        "cn-changchun-changchunxi-zhan-2",
+        "cn-changchun-xinglongpu-2",
+        "cn-changchun-west-ring-rd-2",
+        "cn-changchun-heping-st-2",
+        "cn-changchun-wanfu-st-2",
+        "cn-changchun-jingyang-square-2",
+        "cn-changchun-jiefang-overpass-2",
+        "cn-changchun-jianshe-square-2",
+        "cn-changchun-wenhua-square-2",
+        "cn-changchun-jiefang-ave-2",
+        "cn-changchun-pingyang-st-2",
+        "cn-changchun-nanguan-2",
+        "cn-changchun-jilin-ave-2",
+        "cn-changchun-dongsheng-st-2",
+        "cn-changchun-east-ring-rd-2",
+        "cn-changchun-changqing-2",
+        "cn-changchun-dongfang-square-2",
+        "cn-changchun-ha-erbin-dajie-2",
+        "cn-changchun-doujiagou-2",
+        "cn-changchun-yingjun-dajie-2",
+        "cn-changchun-yingkai-dajie-2",
+        "cn-changchun-linxi-dajie-2",
+        "cn-changchun-wukaihe-dajie-2"
+      ],
+      "origin_stop_id": "cn-changchun-qiche-gongyuan-2",
+      "terminal_stop_id": "cn-changchun-wukaihe-dajie-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "ccqg-getLines",
+          "id": "02"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2",
+        "origin_name": "汽车公园",
+        "terminal_name": "雾开河大街"
+      }
+    },
+    {
+      "id": "cn-changchun-pattern-3-primary",
+      "line_id": "cn-changchun-line-3",
+      "name": "伪满皇宫 → 长影世纪城",
+      "names": {
+        "zh": "伪满皇宫→长影世纪城",
+        "en": "伪满皇宫 to 长影世纪城"
+      },
+      "stop_ids": [
+        "cn-changchun-puppet-regime-palace-museum-3",
+        "cn-changchun-dongguangchang-3",
+        "cn-changchun-changchun-railway-station-3",
+        "cn-changchun-furong-bridge-3",
+        "cn-changchun-xian-bridge-3",
+        "cn-changchun-nanchang-rd-3",
+        "cn-changchun-chaoyang-bridge-3",
+        "cn-changchun-jiefang-overpass-3",
+        "cn-changchun-huxi-bridge-3",
+        "cn-changchun-kuanping-bridge-3",
+        "cn-changchun-fusong-rd-3",
+        "cn-changchun-mengjiatun-3",
+        "cn-changchun-huguang-rd-3",
+        "cn-changchun-diantai-st-3",
+        "cn-changchun-qianjinxi-3",
+        "cn-changchun-qianjin-st-3",
+        "cn-changchun-weiming-st-3",
+        "cn-changchun-weiguang-st-3",
+        "cn-changchun-weixing-square-3",
+        "cn-changchun-yatai-overpass-3",
+        "cn-changchun-yitong-river-3",
+        "cn-changchun-occupation-technology-university-3",
+        "cn-changchun-jilin-tv-and-radio-center-3",
+        "cn-changchun-conference-and-exhibition-center-3",
+        "cn-changchun-shiji-square-3",
+        "cn-changchun-jinxin-st-3",
+        "cn-changchun-boshuo-rd-3",
+        "cn-changchun-jinhe-st-3",
+        "cn-changchun-agricultural-expo-garden-3",
+        "cn-changchun-jingyuetan-national-park-3",
+        "cn-changchun-zishan-rd-3",
+        "cn-changchun-baoxiang-st-3",
+        "cn-changchun-ski-resort-3",
+        "cn-changchun-changying-shijicheng-3"
+      ],
+      "origin_stop_id": "cn-changchun-puppet-regime-palace-museum-3",
+      "terminal_stop_id": "cn-changchun-changying-shijicheng-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "ccqg-getLines",
+          "id": "03"
+        }
+      ],
+      "extras": {
+        "line_short_name": "3",
+        "origin_name": "伪满皇宫",
+        "terminal_name": "长影世纪城"
+      }
+    },
+    {
+      "id": "cn-changchun-pattern-4-primary",
+      "line_id": "cn-changchun-line-4",
+      "name": "长春站北 → 天新路",
+      "names": {
+        "zh": "长春站北→天新路",
+        "en": "长春站北 to 天新路"
+      },
+      "stop_ids": [
+        "cn-changchun-changchun-railway-station-north-4",
+        "cn-changchun-beiyatai-st-4",
+        "cn-changchun-puppet-regime-palace-museum-4",
+        "cn-changchun-dongdaqiao-bridge-4",
+        "cn-changchun-dongxin-lu-4",
+        "cn-changchun-jilin-ave-4",
+        "cn-changchun-gongping-rd-4",
+        "cn-changchun-haikou-rd-4",
+        "cn-changchun-pudong-rd-4",
+        "cn-changchun-weihai-rd-4",
+        "cn-changchun-beihai-rd-4",
+        "cn-changchun-occupation-technology-university-4",
+        "cn-changchun-shirong-rd-4",
+        "cn-changchun-south-ring-rd-4",
+        "cn-changchun-yisheng-st-4",
+        "cn-changchun-tiangong-rd-4",
+        "cn-changchun-fuzhi-dalu-4",
+        "cn-changchun-tianqing-lu-4",
+        "cn-changchun-tianpu-lu-4",
+        "cn-changchun-qian-shilipu-4",
+        "cn-changchun-tianxin-lu-4"
+      ],
+      "origin_stop_id": "cn-changchun-changchun-railway-station-north-4",
+      "terminal_stop_id": "cn-changchun-tianxin-lu-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "ccqg-getLines",
+          "id": "04"
+        }
+      ],
+      "extras": {
+        "line_short_name": "4",
+        "origin_name": "长春站北",
+        "terminal_name": "天新路"
+      }
+    },
+    {
+      "id": "cn-changchun-pattern-5-primary",
+      "line_id": "cn-changchun-line-5",
+      "name": "卓越大街 → 东大桥",
+      "names": {
+        "zh": "卓越大街→东大桥",
+        "en": "卓越大街 to 东大桥"
+      },
+      "stop_ids": [
+        "cn-changchun-zhuoyue-street-5",
+        "cn-changchun-party-school-of-cpc-5",
+        "cn-changchun-shunda-road-5",
+        "cn-changchun-yueda-road-5",
+        "cn-changchun-anxin-road-5",
+        "cn-changchun-weishan-road-5",
+        "cn-changchun-guigu-guangchang-5",
+        "cn-changchun-diantai-st-5",
+        "cn-changchun-provincial-committee-party-school-5",
+        "cn-changchun-nanhu-square-jida-nanhu-campus-5",
+        "cn-changchun-former-site-museum-of-cfs-5",
+        "cn-changchun-hongqi-street-5",
+        "cn-changchun-wenhua-square-5",
+        "cn-changchun-tongzhi-street-5",
+        "cn-changchun-renmin-square-5",
+        "cn-changchun-dajing-road-5",
+        "cn-changchun-shengfuer-center-5",
+        "cn-changchun-dongdaqiao-bridge-5"
+      ],
+      "origin_stop_id": "cn-changchun-zhuoyue-street-5",
+      "terminal_stop_id": "cn-changchun-dongdaqiao-bridge-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "ccqg-getLines",
+          "id": "05"
+        }
+      ],
+      "extras": {
+        "line_short_name": "5",
+        "origin_name": "卓越大街",
+        "terminal_name": "东大桥"
+      }
+    },
+    {
+      "id": "cn-changchun-pattern-6-primary",
+      "line_id": "cn-changchun-line-6",
+      "name": "双丰 → 长影世纪城",
+      "names": {
+        "zh": "双丰→长影世纪城",
+        "en": "双丰 to 长影世纪城"
+      },
+      "stop_ids": [
+        "cn-changchun-shuangfeng-6",
+        "cn-changchun-changchunxi-zhan-6",
+        "cn-changchun-tengyue-jie-6",
+        "cn-changchun-zhinong-dajie-6",
+        "cn-changchun-feiyue-guangchang-6",
+        "cn-changchun-ouya-maichang-6",
+        "cn-changchun-guanggu-dajie-6",
+        "cn-changchun-guigu-guangchang-6",
+        "cn-changchun-baihuayuan-6",
+        "cn-changchun-shifayuan-6",
+        "cn-changchun-lanraohu-gongyuan-6",
+        "cn-changchun-guidao-jituan-6",
+        "cn-changchun-xinming-jie-6",
+        "cn-changchun-huaqing-lu-6",
+        "cn-changchun-nanxi-shidi-gongyuan-6",
+        "cn-changchun-fuzhi-dalu-6",
+        "cn-changchun-wujiadian-6",
+        "cn-changchun-yatai-zuqiu-jidi-6",
+        "cn-changchun-yinghua-jie-6",
+        "cn-changchun-juye-dajie-6",
+        "cn-changchun-shengbowuyuan-6",
+        "cn-changchun-changying-shijicheng-6"
+      ],
+      "origin_stop_id": "cn-changchun-shuangfeng-6",
+      "terminal_stop_id": "cn-changchun-changying-shijicheng-6",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "ccqg-getLines",
+          "id": "06"
+        }
+      ],
+      "extras": {
+        "line_short_name": "6",
+        "origin_name": "双丰",
+        "terminal_name": "长影世纪城"
+      }
+    },
+    {
+      "id": "cn-changchun-pattern-7-primary",
+      "line_id": "cn-changchun-line-7",
+      "name": "汽车公园 → 东环城路",
+      "names": {
+        "zh": "汽车公园→东环城路",
+        "en": "汽车公园 to 东环城路"
+      },
+      "stop_ids": [
+        "cn-changchun-qiche-gongyuan-7",
+        "cn-changchun-xihu-road-7",
+        "cn-changchun-xingan-road-7",
+        "cn-changchun-xingshun-road-7",
+        "cn-changchun-feiyue-guangchang-7",
+        "cn-changchun-faw-7",
+        "cn-changchun-mengjiatun-7",
+        "cn-changchun-huinan-street-7",
+        "cn-changchun-nanhu-square-jida-nanhu-campus-7",
+        "cn-changchun-nanhu-park-7",
+        "cn-changchun-gongnong-square-7",
+        "cn-changchun-province-tax-bureau-7",
+        "cn-changchun-dongling-south-street-7",
+        "cn-changchun-weihai-rd-7",
+        "cn-changchun-saide-square-7",
+        "cn-changchun-huizhan-street-7",
+        "cn-changchun-zhongdong-great-market-7",
+        "cn-changchun-lingdong-road-7",
+        "cn-changchun-east-ring-rd-7"
+      ],
+      "origin_stop_id": "cn-changchun-qiche-gongyuan-7",
+      "terminal_stop_id": "cn-changchun-east-ring-rd-7",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "ccqg-getLines",
+          "id": "07"
+        }
+      ],
+      "extras": {
+        "line_short_name": "7",
+        "origin_name": "汽车公园",
+        "terminal_name": "东环城路"
+      }
+    },
+    {
+      "id": "cn-changchun-pattern-8-primary",
+      "line_id": "cn-changchun-line-8",
+      "name": "北环城路 → 广通路",
+      "names": {
+        "zh": "北环城路→广通路",
+        "en": "北环城路 to 广通路"
+      },
+      "stop_ids": [
+        "cn-changchun-north-ring-rd-8",
+        "cn-changchun-no-123-middle-school-8",
+        "cn-changchun-xiaonan-8",
+        "cn-changchun-xiaochengzi-st-8",
+        "cn-changchun-north-lake-bridge-8",
+        "cn-changchun-north-lake-park-8",
+        "cn-changchun-hean-st-8",
+        "cn-changchun-guangji-rd-8",
+        "cn-changchun-daxuecheng-rd-8",
+        "cn-changchun-institute-of-geography-8",
+        "cn-changchun-olympic-park-8",
+        "cn-changchun-guangtong-rd-8"
+      ],
+      "origin_stop_id": "cn-changchun-north-ring-rd-8",
+      "terminal_stop_id": "cn-changchun-guangtong-rd-8",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "ccqg-getLines",
+          "id": "08"
+        }
+      ],
+      "extras": {
+        "line_short_name": "8",
+        "origin_name": "北环城路",
+        "terminal_name": "广通路"
+      }
+    }
+  ]
+}

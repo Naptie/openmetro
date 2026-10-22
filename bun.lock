@@ -25,6 +25,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-changchun": {
+      "name": "@openmetro/adapter-cn-changchun",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-chengdu": {
       "name": "@openmetro/adapter-cn-chengdu",
       "version": "0.1.0",
@@ -39,6 +51,18 @@
     },
     "packages/adapters/cn-chongqing": {
       "name": "@openmetro/adapter-cn-chongqing",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
+    "packages/adapters/cn-dalian": {
+      "name": "@openmetro/adapter-cn-dalian",
       "version": "0.1.0",
       "dependencies": {
         "@openmetro/core": "workspace:*",
@@ -85,6 +109,30 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-harbin": {
+      "name": "@openmetro/adapter-cn-harbin",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
+    "packages/adapters/cn-hohhot": {
+      "name": "@openmetro/adapter-cn-hohhot",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-hongkong": {
       "name": "@openmetro/adapter-cn-hongkong",
       "version": "0.1.0",
@@ -99,6 +147,18 @@
     },
     "packages/adapters/cn-jinan": {
       "name": "@openmetro/adapter-cn-jinan",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
+    "packages/adapters/cn-lanzhou": {
+      "name": "@openmetro/adapter-cn-lanzhou",
       "version": "0.1.0",
       "dependencies": {
         "@openmetro/core": "workspace:*",
@@ -157,6 +217,18 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-shenyang": {
+      "name": "@openmetro/adapter-cn-shenyang",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-shenzhen": {
       "name": "@openmetro/adapter-cn-shenzhen",
       "version": "0.1.0",
@@ -169,8 +241,32 @@
         "typescript": "^5.6.0",
       },
     },
+    "packages/adapters/cn-shijiazhuang": {
+      "name": "@openmetro/adapter-cn-shijiazhuang",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
     "packages/adapters/cn-suzhou": {
       "name": "@openmetro/adapter-cn-suzhou",
+      "version": "0.1.0",
+      "dependencies": {
+        "@openmetro/core": "workspace:*",
+        "effect": "^3.22.0",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.0",
+        "typescript": "^5.6.0",
+      },
+    },
+    "packages/adapters/cn-taiyuan": {
+      "name": "@openmetro/adapter-cn-taiyuan",
       "version": "0.1.0",
       "dependencies": {
         "@openmetro/core": "workspace:*",
@@ -469,9 +565,13 @@
 
     "@openmetro/adapter-cn-beijing": ["@openmetro/adapter-cn-beijing@workspace:packages/adapters/cn-beijing"],
 
+    "@openmetro/adapter-cn-changchun": ["@openmetro/adapter-cn-changchun@workspace:packages/adapters/cn-changchun"],
+
     "@openmetro/adapter-cn-chengdu": ["@openmetro/adapter-cn-chengdu@workspace:packages/adapters/cn-chengdu"],
 
     "@openmetro/adapter-cn-chongqing": ["@openmetro/adapter-cn-chongqing@workspace:packages/adapters/cn-chongqing"],
+
+    "@openmetro/adapter-cn-dalian": ["@openmetro/adapter-cn-dalian@workspace:packages/adapters/cn-dalian"],
 
     "@openmetro/adapter-cn-fuzhou": ["@openmetro/adapter-cn-fuzhou@workspace:packages/adapters/cn-fuzhou"],
 
@@ -479,9 +579,15 @@
 
     "@openmetro/adapter-cn-hangzhou": ["@openmetro/adapter-cn-hangzhou@workspace:packages/adapters/cn-hangzhou"],
 
+    "@openmetro/adapter-cn-harbin": ["@openmetro/adapter-cn-harbin@workspace:packages/adapters/cn-harbin"],
+
+    "@openmetro/adapter-cn-hohhot": ["@openmetro/adapter-cn-hohhot@workspace:packages/adapters/cn-hohhot"],
+
     "@openmetro/adapter-cn-hongkong": ["@openmetro/adapter-cn-hongkong@workspace:packages/adapters/cn-hongkong"],
 
     "@openmetro/adapter-cn-jinan": ["@openmetro/adapter-cn-jinan@workspace:packages/adapters/cn-jinan"],
+
+    "@openmetro/adapter-cn-lanzhou": ["@openmetro/adapter-cn-lanzhou@workspace:packages/adapters/cn-lanzhou"],
 
     "@openmetro/adapter-cn-macau": ["@openmetro/adapter-cn-macau@workspace:packages/adapters/cn-macau"],
 
@@ -491,9 +597,15 @@
 
     "@openmetro/adapter-cn-shanghai": ["@openmetro/adapter-cn-shanghai@workspace:packages/adapters/cn-shanghai"],
 
+    "@openmetro/adapter-cn-shenyang": ["@openmetro/adapter-cn-shenyang@workspace:packages/adapters/cn-shenyang"],
+
     "@openmetro/adapter-cn-shenzhen": ["@openmetro/adapter-cn-shenzhen@workspace:packages/adapters/cn-shenzhen"],
 
+    "@openmetro/adapter-cn-shijiazhuang": ["@openmetro/adapter-cn-shijiazhuang@workspace:packages/adapters/cn-shijiazhuang"],
+
     "@openmetro/adapter-cn-suzhou": ["@openmetro/adapter-cn-suzhou@workspace:packages/adapters/cn-suzhou"],
+
+    "@openmetro/adapter-cn-taiyuan": ["@openmetro/adapter-cn-taiyuan@workspace:packages/adapters/cn-taiyuan"],
 
     "@openmetro/adapter-cn-tianjin": ["@openmetro/adapter-cn-tianjin@workspace:packages/adapters/cn-tianjin"],
 

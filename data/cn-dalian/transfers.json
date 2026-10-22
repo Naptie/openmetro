@@ -1,0 +1,216 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dalian",
+  "generated_at": "2026-10-22T21:11:51.804Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-22T21:11:51.804Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-dalian-dalian-north-railway-station-1-cn-dalian-dalian-north-railway-station-2",
+      "station_id": "cn-dalian-dalian-north-railway-station",
+      "from_line_id": "cn-dalian-line-1",
+      "to_line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-dalian-north-railway-station-1",
+      "to_stop_id": "cn-dalian-dalian-north-railway-station-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-dalian-north-railway-station-2-cn-dalian-dalian-north-railway-station-1",
+      "station_id": "cn-dalian-dalian-north-railway-station",
+      "from_line_id": "cn-dalian-line-2",
+      "to_line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-dalian-north-railway-station-2",
+      "to_stop_id": "cn-dalian-dalian-north-railway-station-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-dalian-railway-station-3-cn-dalian-dalian-railway-station-5",
+      "station_id": "cn-dalian-dalian-railway-station",
+      "from_line_id": "cn-dalian-line-3",
+      "to_line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-dalian-railway-station-3",
+      "to_stop_id": "cn-dalian-dalian-railway-station-5",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-dalian-railway-station-5-cn-dalian-dalian-railway-station-3",
+      "station_id": "cn-dalian-dalian-railway-station",
+      "from_line_id": "cn-dalian-line-5",
+      "to_line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-dalian-railway-station-5",
+      "to_stop_id": "cn-dalian-dalian-railway-station-3",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-hekou-1-cn-dalian-hekou-12",
+      "station_id": "cn-dalian-hekou",
+      "from_line_id": "cn-dalian-line-1",
+      "to_line_id": "cn-dalian-line-12",
+      "from_stop_id": "cn-dalian-hekou-1",
+      "to_stop_id": "cn-dalian-hekou-12",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-hekou-12-cn-dalian-hekou-1",
+      "station_id": "cn-dalian-hekou",
+      "from_line_id": "cn-dalian-line-12",
+      "to_line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-hekou-12",
+      "to_stop_id": "cn-dalian-hekou-1",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-houyan-3-cn-dalian-houyan-5",
+      "station_id": "cn-dalian-houyan",
+      "from_line_id": "cn-dalian-line-3",
+      "to_line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-houyan-3",
+      "to_stop_id": "cn-dalian-houyan-5",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-houyan-5-cn-dalian-houyan-3",
+      "station_id": "cn-dalian-houyan",
+      "from_line_id": "cn-dalian-line-5",
+      "to_line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-houyan-5",
+      "to_stop_id": "cn-dalian-houyan-3",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-jiuli-13-cn-dalian-jiuli-3",
+      "station_id": "cn-dalian-jiuli",
+      "from_line_id": "cn-dalian-line-13",
+      "to_line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-jiuli-13",
+      "to_stop_id": "cn-dalian-jiuli-3",
+      "walk_time_seconds": 60,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 72,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-jiuli-3-cn-dalian-jiuli-13",
+      "station_id": "cn-dalian-jiuli",
+      "from_line_id": "cn-dalian-line-3",
+      "to_line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-jiuli-3",
+      "to_stop_id": "cn-dalian-jiuli-13",
+      "walk_time_seconds": 60,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 72,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-qingniwaqiao-2-cn-dalian-qingniwaqiao-5",
+      "station_id": "cn-dalian-qingniwaqiao",
+      "from_line_id": "cn-dalian-line-2",
+      "to_line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-qingniwaqiao-2",
+      "to_stop_id": "cn-dalian-qingniwaqiao-5",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-qingniwaqiao-5-cn-dalian-qingniwaqiao-2",
+      "station_id": "cn-dalian-qingniwaqiao",
+      "from_line_id": "cn-dalian-line-5",
+      "to_line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-qingniwaqiao-5",
+      "to_stop_id": "cn-dalian-qingniwaqiao-2",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-xian-road-1-cn-dalian-xian-road-2",
+      "station_id": "cn-dalian-xian-road",
+      "from_line_id": "cn-dalian-line-1",
+      "to_line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-xian-road-1",
+      "to_stop_id": "cn-dalian-xian-road-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-dalian-xian-road-2-cn-dalian-xian-road-1",
+      "station_id": "cn-dalian-xian-road",
+      "from_line_id": "cn-dalian-line-2",
+      "to_line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-xian-road-2",
+      "to_stop_id": "cn-dalian-xian-road-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

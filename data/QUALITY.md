@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-13T07:09:05.252Z_
+_Updated 2026-10-22T21:28:18.648Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -19,6 +19,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Timetables | ✅ Complete | official | 100% | official=1004 |
 | Schematic | ✅ Complete | official | 100% | official=543 |
 | Fares | 🟡 Partial | official | 99% | official=179352, default=1698 |
+
+## 长春轨道交通 / Changchun Rail Transit (`cn-changchun`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=142 |
+| Names | ✅ Complete | official | 100% | official=142 |
+| Segment times | ✅ Complete | official | 100% | official=160 |
+| Segment distances | ✅ Complete | official | 100% | official=160 |
+| Transfer times | ✅ Complete | official | 100% | official=52 |
+| Timetables | ✅ Complete | official | 100% | official=336 |
+| Schematic | ✅ Complete | official | 100% | official=168 |
+| Fares | ✅ Complete | official | 100% | official=20022 |
 
 ## 成都轨道交通 / Chengdu Rail Transit (`cn-chengdu`)
 
@@ -47,6 +61,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Timetables | ✅ Complete | official | 100% | official=626 |
 | Schematic | ❌ Unavailable | default | 0% | default=325 |
 | Fares | 🟡 Partial | official | 98% | official=71544, default=1626 |
+
+## 大连地铁 / Dalian Metro (`cn-dalian`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=100 |
+| Names | ✅ Complete | official | 100% | official=100 |
+| Segment times | ✅ Complete | official | 100% | official=101 |
+| Segment distances | ✅ Complete | official | 100% | official=101 |
+| Transfer times | ✅ Complete | official | 100% | official=14 |
+| Timetables | ✅ Complete | official | 100% | official=201 |
+| Schematic | ✅ Complete | official | 100% | official=107 |
+| Fares | ✅ Complete | official | 100% | official=9900 |
 
 ## 福州地铁 / Fuzhou Metro (`cn-fuzhou`)
 
@@ -90,6 +118,34 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Schematic | ✅ Complete | official | 100% | official=308, default=1 |
 | Fares | ✅ Complete | official | 100% | official=67860 |
 
+## 哈尔滨地铁 / Harbin Metro (`cn-harbin`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=73 |
+| Names | ✅ Complete | official | 100% | official=73 |
+| Segment times | ✅ Complete | official | 100% | official=75, derived=1 |
+| Segment distances | ✅ Complete | official | 100% | official=76 |
+| Transfer times | ✅ Complete | official | 100% | official=10 |
+| Timetables | ✅ Complete | official | 100% | official=152 |
+| Schematic | ✅ Complete | official | 100% | official=78 |
+| Fares | ✅ Complete | official | 100% | official=5256 |
+
+## 呼和浩特地铁 / Hohhot Metro (`cn-hohhot`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=43 |
+| Names | ✅ Complete | official | 100% | official=43 |
+| Segment times | ✅ Complete | official | 100% | official=42 |
+| Segment distances | ✅ Complete | official | 100% | official=42 |
+| Transfer times | ✅ Complete | official | 100% | official=2 |
+| Timetables | ✅ Complete | official | 100% | official=84 |
+| Schematic | ✅ Complete | official | 100% | official=44 |
+| Fares | ✅ Complete | official | 100% | official=1806 |
+
 ## 港鐵 / Mass Transit Railway (`cn-hongkong`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -117,6 +173,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Timetables | ✅ Complete | official | 100% | official=296 |
 | Schematic | ✅ Complete | official | 100% | official=155 |
 | Fares | ✅ Complete | official | 100% | official=20880 |
+
+## 兰州轨道交通 / Lanzhou Rail Transit (`cn-lanzhou`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=27 |
+| Names | ✅ Complete | official | 100% | official=27 |
+| Segment times | ✅ Complete | official | 100% | official=27 |
+| Segment distances | ✅ Complete | official | 100% | official=27 |
+| Transfer times | ✅ Complete | official | 100% | official=4 |
+| Timetables | ✅ Complete | official | 100% | official=54 |
+| Schematic | ✅ Complete | official | 100% | official=29 |
+| Fares | ✅ Complete | official | 100% | official=702 |
 
 ## 澳門輕軌 / Macau Light Rapid Transit (`cn-macau`)
 
@@ -174,6 +244,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Schematic | ❌ Unavailable | default | 0% | default=530 |
 | Fares | 🟡 Partial | official | 99% | official=171212, default=2260 |
 
+## 沈阳地铁 / Shenyang Metro (`cn-shenyang`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=144 |
+| Names | ✅ Complete | official | 100% | official=144 |
+| Segment times | ✅ Complete | official | 100% | official=153 |
+| Segment distances | ✅ Complete | official | 100% | official=153 |
+| Transfer times | ✅ Complete | official | 100% | official=30 |
+| Timetables | ✅ Complete | official | 100% | official=323 |
+| Schematic | ✅ Complete | official | 100% | official=159 |
+| Fares | ✅ Complete | official | 100% | official=20592 |
+
 ## 深圳地铁 / Shenzhen Metro (`cn-shenzhen`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -188,6 +272,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Schematic | ✅ Complete | official | 100% | official=433 |
 | Fares | 🟡 Partial | official | 99% | official=122150, default=700 |
 
+## 石家庄地铁 / Shijiazhuang Metro (`cn-shijiazhuang`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=60 |
+| Names | ✅ Complete | official | 100% | official=60 |
+| Segment times | ✅ Complete | official | 100% | official=60 |
+| Segment distances | ✅ Complete | official | 100% | official=60 |
+| Transfer times | ✅ Complete | official | 100% | official=6 |
+| Timetables | ✅ Complete | official | 100% | official=120 |
+| Schematic | ✅ Complete | official | 100% | official=63 |
+| Fares | ✅ Complete | official | 100% | official=3540 |
+
 ## 苏州轨道交通 / Suzhou Rail Transit (`cn-suzhou`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -201,6 +299,20 @@ _Updated 2026-10-13T07:09:05.252Z_
 | Timetables | ✅ Complete | official | 100% | official=534 |
 | Schematic | ✅ Complete | official | 100% | official=279 |
 | Fares | 🟡 Partial | official | 97% | official=54990, default=1892 |
+
+## 太原地铁 / Taiyuan Metro (`cn-taiyuan`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=46 |
+| Names | ✅ Complete | official | 100% | official=46 |
+| Segment times | ✅ Complete | official | 100% | official=45 |
+| Segment distances | ✅ Complete | official | 100% | official=45 |
+| Transfer times | ✅ Complete | official | 100% | official=2 |
+| Timetables | ✅ Complete | official | 100% | official=90 |
+| Schematic | ✅ Complete | official | 100% | official=47 |
+| Fares | ✅ Complete | official | 100% | official=2070 |
 
 ## 天津轨道交通 / Tianjin Rail Transit (`cn-tianjin`)
 

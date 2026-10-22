@@ -21,6 +21,14 @@ export const CITY_BBOX: Record<
     lon: [112.4, 114.8],
     lat: [22.5, 24.2],
     center: { lon: 113.26, lat: 23.13 }
+  },
+  // The two-line network (1号线 伊利健康谷—坝堰(机场), 2号线 阿尔山路—塔利东路)
+  // spans lon 111.57…111.83 / lat 40.75…40.87; the box leaves margin for the
+  // metro area's satellite districts.
+  呼和浩特: {
+    lon: [111.45, 111.95],
+    lat: [40.68, 40.95],
+    center: { lon: 111.663, lat: 40.815 }
   }
 };
 

@@ -1,0 +1,132 @@
+{
+  "id": "cn-lanzhou",
+  "name": "兰州轨道交通",
+  "names": {
+    "zh": "兰州轨道交通",
+    "en": "Lanzhou Rail Transit"
+  },
+  "city": {
+    "id": "CN-6201",
+    "name": {
+      "zh": "兰州市",
+      "en": "Lanzhou"
+    },
+    "country": "CN",
+    "population": 4359446,
+    "area": 13192.31,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        103.83177,
+        36.06171
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑与站序来自官网 www.lzgdjt.com 生产环境静态资产 /lzgd/template/js/serve.js 的 const lines 字面量：1 号线 20 站（陈官营→东岗）、2 号线 9 站（东方红广场→雁白大桥），共 29 条 line-stop 记录、27 座物理车站、2 座换乘站（东方红广场同台换乘、五里铺节点换乘，换乘判定与官网 fareUtil.js 的客户端路由逻辑一致）。OD 票价来自官网静态资产 /lzgd/template/js/fareData.js 的 window.fareData 矩阵：27 起点 × 26 终点 = 702 个单元，对称、无缺值，取值 2–7 元；官网线上「票价查询」由 fareUtil.js 覆写 webPost.getRoute 后完全在客户端读取同一份矩阵，故该矩阵即运营方现行票价源，与官网公布的里程分段计价（起步 2 元/4 公里，晋级里程 4、4、6、6、8、8，40 公里以上每加 1 元多乘 8 公里）逐带吻合。官网后端不可用且不予依赖：/user-service/web/getLineStation 与 getStationInfo 超时，/tb/* 全部返回 502「网站正在维护中」页。坐标、示意图像素、线内站码、拼音与线色来自 AMap Subway 6201（GCJ-02 原生；AMap 2 号线站序与官网相反，故站序以官网为准；AMap 将 兰州城市学院 记作 兰州城市学院(省科技馆)，括注为别称）。站名英文名由 AMap 拼音罗马化得出：官网与 AMap 均无英文站名，Wikidata 对 22/27 站仅返回通用标签 Station、且 奥体中心 命中同名重庆站点，故不以 Wikidata 为主源。逐站逐方向首末班来自百度路径规划 direction/v2/transit（tactics_incity=5 地铁优先）：该接口给出上车站自身的首班/末班发车时刻，与官网首末班车时刻表逐格一致（官网仅以图片发布该表，未做 OCR）；较早的 directionlite/v1/transit 不支持该偏好参数，对部分起点会返回「步行至邻站再上车」的路线而无轨道段，故不以它为主源。百度会为换乘站返回含换乘的多条线路，必须按上车站匹配并优先取方向标签指向该方向终点的区间，否则 2 号线东方红广场会取到换乘方案的 23:14 而非官网的 23:03。官网时刻表在两端终点站另给出对向到达时刻，canonical 模型不表达到达类条目。工作日/双休日的逐站差异不存在于任何机读源，故时刻表层只发布单一变体。在建的 3/4/5/6/7 号线无结构化站表，未建模。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 27,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 27,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 27,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 27,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 4,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 54,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 29,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 702,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

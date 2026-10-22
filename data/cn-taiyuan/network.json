@@ -1,0 +1,132 @@
+{
+  "id": "cn-taiyuan",
+  "name": "太原地铁",
+  "names": {
+    "zh": "太原地铁",
+    "en": "Taiyuan Metro"
+  },
+  "city": {
+    "id": "CN-1401",
+    "name": {
+      "zh": "太原市",
+      "en": "Taiyuan"
+    },
+    "country": "CN",
+    "population": 5304061,
+    "area": 6909.01,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        112.54245,
+        37.87326
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑与首末班来自太原地铁官网 API（www.tymetro.ltd/api/lines，秒级精度、双向逐站发布）；坐标/英文名/线色/示意图来自 AMap 地铁数据集 1401（官网线网图同源）；分段时间、里程与区间几何来自官网「路线查询」所调用的同一规划器接口；OD 票价取自同一规划器，与官方里程分段计价票制逐对一致；大南门站内换乘步行时间由核心 gapfill 层（百度规划器）实测，官网规划器仅发布换乘路径长度。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 46,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 46,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 45,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 45,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 2,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 90,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 47,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 2070,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

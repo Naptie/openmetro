@@ -1,0 +1,132 @@
+{
+  "id": "cn-hohhot",
+  "name": "呼和浩特地铁",
+  "names": {
+    "zh": "呼和浩特地铁",
+    "en": "Hohhot Metro"
+  },
+  "city": {
+    "id": "CN-1501",
+    "name": {
+      "zh": "呼和浩特市",
+      "en": "Hohhot"
+    },
+    "country": "CN",
+    "population": 3446100,
+    "area": 17186.12,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        111.66293,
+        40.81507
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "线网：2条线、43座车站、约49.03公里，唯一换乘站为新华广场（十字换乘，无需出闸）。3/4/5/6号线仍处规划审批阶段，尚未开工。拓扑/坐标/英文名/线色取自 AMap Subway（1501_drw_huhehaote.json）——官网的线网图、首末班车时刻表与票价表均以图片发布，无结构化接口，未做 OCR。首末班车实时查询百度路径规划 direction/v2/transit（detail.first_time/last_time 为本站首/末班车的发车时刻，非到达时刻），并与官网《首末站首末班车时间一览表》逐条核对一致（伊利健康谷 22:09、坝堰(机场) 22:01、阿尔山路 22:04、塔利东路 22:00）。区间运行时间由官网公布的末班车发车时刻逐站相减推得（travel_time_source=last_train）；区间里程取百度路径规划的地铁区间实测量。站点更名（2023-11-01）：呼钢东路→呼钢南路、新城图书馆→北山公园、东二环路→丝绸之路大道；另 坝堰(机场)→坝堰(机场)(国内航站楼)、白塔西→白塔西(国际航站楼)。本站名采用运营方现名。票制票价：里程分段计价票制：0-5公里（含）2元，5-10公里（含）3元，10-15公里（含）4元，15-21公里（含）5元，21-28公里（含）6元，28公里以上每增加1元可继续乘坐10公里；普通储值卡9.5折，学生卡/老年卡/爱心卡5折，70周岁以上老年人、现役军人、残疾人、盲人及1名陪护人员、离休干部、消防人员凭有效证件免费乘车，身高1.3米（含）以下儿童须成人陪同免费。OD 票价优先取百度路径规划报价——仅采纳在起点站上车、终点站下车且全程无公交的地铁行程；规划器对部分跨线 OD 以公交替代站内换乘、给不出地铁行程，这些 OD 改用上述里程分段计价票制乘以线路实测里程推算，并与规划器报价逐对比对。节假日及跨年夜运营方会临时延长运营时间并加密发车间隔（以官方微信公众号公告为准）；期间规划器仍返回常规运行图，末班车数据早于实际约1小时。唯一换乘站：新华广场。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 43,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 43,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 42,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 42,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 2,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 84,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 44,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1806,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

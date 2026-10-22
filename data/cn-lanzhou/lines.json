@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-lanzhou",
+  "generated_at": "2026-10-22T21:01:07.383Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-lanzhou-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "aliases": [],
+      "color": "#0065b3",
+      "short_name": "1",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "lzgdjt-serve-js",
+          "id": "1"
+        },
+        {
+          "source": "amap-subway-6201",
+          "id": "900000028566|900000028567"
+        }
+      ],
+      "extras": {
+        "official_line_id": "1",
+        "official_stop_count": 20,
+        "amap_color": "0065B3",
+        "baidu_name_hint": "轨道交通1号线"
+      }
+    },
+    {
+      "id": "cn-lanzhou-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "aliases": [],
+      "color": "#df5914",
+      "short_name": "2",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "lzgdjt-serve-js",
+          "id": "2"
+        },
+        {
+          "source": "amap-subway-6201",
+          "id": "900000077514|900000077515"
+        }
+      ],
+      "extras": {
+        "official_line_id": "2",
+        "official_stop_count": 9,
+        "amap_color": "DF5914",
+        "baidu_name_hint": "轨道交通2号线"
+      }
+    }
+  ]
+}

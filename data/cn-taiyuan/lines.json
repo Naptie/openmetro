@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-taiyuan",
+  "generated_at": "2026-10-22T14:05:06.664Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-taiyuan-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "aliases": [
+        "轨道交通1号线"
+      ],
+      "color": "#0065b3",
+      "short_name": "1",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "tymetro-api",
+          "id": "2"
+        },
+        {
+          "source": "amap-subway-1401",
+          "id": "900000151669"
+        },
+        {
+          "source": "amap-subway-1401",
+          "id": "900000151670"
+        }
+      ],
+      "extras": {
+        "names_source": "source",
+        "length_km": 28.737,
+        "station_count": 24,
+        "opened": "2025-02-22",
+        "color_source": "amap-subway-1401",
+        "amap_color": "0065B3",
+        "amap_name": "1号线",
+        "official_id": 2,
+        "official_description": "1号线一期工程：西起西山矿务局，终至武宿机场，沿西矿街、迎泽大街、东中环、马练营路布设，全场28.737km，共设置车站24座，其中换乘站7座。",
+        "line_map_image": "https://static.tymetro.ltd/tymetro/QqhIwnK9uzUMCI3jzYc839GKxhjoBy.jpg"
+      }
+    },
+    {
+      "id": "cn-taiyuan-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "aliases": [
+        "轨道交通2号线"
+      ],
+      "color": "#cc0000",
+      "short_name": "2",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "tymetro-api",
+          "id": "1"
+        },
+        {
+          "source": "amap-subway-1401",
+          "id": "900000056411"
+        },
+        {
+          "source": "amap-subway-1401",
+          "id": "900000056412"
+        }
+      ],
+      "extras": {
+        "names_source": "source",
+        "length_km": 23.647,
+        "station_count": 23,
+        "opened": "2020-12-26",
+        "color_source": "amap-subway-1401",
+        "amap_color": "CC0000",
+        "amap_name": "2号线",
+        "official_id": 1,
+        "official_description": "2号线一期工程：南起人民南路站，北至西涧河站，沿人民路、长治路、解放路地下敷设，全长23.647公里，共设车站23座，其中换乘站7座、车辆段1座。",
+        "line_map_image": "https://static.tymetro.ltd/tymetro/zd4QDhaTm7XmfNDlxgQBZ1vt8ak0i2.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "cn-dalian",
+  "name": "大连地铁",
+  "names": {
+    "zh": "大连地铁",
+    "en": "Dalian Metro"
+  },
+  "city": {
+    "id": "CN-2102",
+    "name": {
+      "zh": "大连市",
+      "en": "Dalian"
+    },
+    "country": "CN",
+    "population": 7450785,
+    "area": 13630.44,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        121.6,
+        38.9
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 180,
+    "max_transfer_seconds": 900
+  },
+  "notes": "拓扑/坐标/英文名/示意图像素/配色全部来自 AMap Subway（2102_drw_dalian），大连无任何官方机读源：原官网 www.dlmetro.com 域名已注销，运营主体重组为大连交通集团后官网 www.dltransgrp.com 仅有企业新闻与公交公告，无时刻表/票价/线路图；乘客侧首末班仅经「大连地铁」APP 与微信小程序以图片分发，故首末班来自百度路径规划（directionlite transit）实时查询，不做 OCR。AMap 把 3号线九里支线单列为「地铁3号线支线」，本数据按分支 pattern（junction 开发区）折回 3号线；开发区站为一岛两侧式三站台，故主 alignment 与支线 alignment 各建一个 stop。票价为里程分段计价（0–6km 2 元，晋级里程 6,6,8,8,10,10,15,15… 公里，54 公里以上每 15 公里加 1 元，全线网单程最高 14 元），由 segments.distance_km 上的最短轨道里程确定性计算，需在段里程采集之后生成。3号线保税区小交路（大连站⇌保税区）与13号线大小交路（普兰店振兴街↔开发区 / 九里↔开发区）为同 alignment 上的服务变体，本模型不含列车等级，仅记录于 notes。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 100,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 100,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 101,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 101,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 14,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 201,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 107,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 9900,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

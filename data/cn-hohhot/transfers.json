@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-hohhot",
+  "generated_at": "2026-10-22T15:38:08.337Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-22T15:38:08.337Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-hohhot-xinhua-square-1-cn-hohhot-xinhua-square-2",
+      "station_id": "cn-hohhot-xinhua-square",
+      "from_line_id": "cn-hohhot-line-1",
+      "to_line_id": "cn-hohhot-line-2",
+      "from_stop_id": "cn-hohhot-xinhua-square-1",
+      "to_stop_id": "cn-hohhot-xinhua-square-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hohhot-xinhua-square-2-cn-hohhot-xinhua-square-1",
+      "station_id": "cn-hohhot-xinhua-square",
+      "from_line_id": "cn-hohhot-line-2",
+      "to_line_id": "cn-hohhot-line-1",
+      "from_stop_id": "cn-hohhot-xinhua-square-2",
+      "to_stop_id": "cn-hohhot-xinhua-square-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "cn-changchun",
+  "name": "长春轨道交通",
+  "names": {
+    "zh": "长春轨道交通",
+    "en": "Changchun Rail Transit"
+  },
+  "city": {
+    "id": "CN-2201",
+    "name": {
+      "zh": "CN-2201",
+      "en": "CN-2201"
+    },
+    "country": "",
+    "population": null,
+    "area": null,
+    "location": null
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 180,
+    "max_transfer_seconds": 900
+  },
+  "notes": "拓扑/站序/官方线内站码/换乘关系来自官网 www.ccqg.com 的 POST /api/v1/getLines（官网乘车查询页自身调用的接口）：168 条 line-stop 记录、142 个唯一车站、26 座换乘站，换乘码由官方 transferinfo 给出且完全互指（唯独东大桥 4/5 号线双向为空，故换乘集合按「一个车站被 ≥2 条线服务」的拓扑推导，官方码仅作佐证）。8 条线（1–8）全部在运营，5 号线 2026-09-28 开通、6 号线 2026-03-28 开通。官网接口的行级字段陈旧不可用（2/3/4 号线的 standnumber 与实际站数不符，4 号线 endstand 仍写作已废弃的「车场站」，行级首末班窗口在 7/8 号线上完全相同，linecolour 只是序号而非色值），adapter 只采信 standList；5 号线全部坐标带一个全角右单引号，需剥离后解析。坐标与英文名来自 AMap Subway 2201（142 站名与官网完全一致），官方逐线站台坐标落在 stop.location 上。逐站逐方向首末班来自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（该方向上车站自身的发车时刻），与官网逐线时刻表图片逐项吻合；官网仅以图片发布时刻表，未做 OCR。官网接口自身给出的逐站首末班与百度在 2–8 号线上一致、在 1 号线上陈旧（下行首班早 10 分钟、上行末班晚 12–14 分钟），因此以百度为准、官网仅作兜底并记录差异。冬季（11 月 1 日–次年 4 月 30 日）与工作日/双休日的逐站差异只存在于官网图片中，机器可读源无法区分，故时刻表层只发布单一变体。区间时间与车厢内里程均取自百度规划器（逐相邻站对采集，160/160 命中），换乘步行按「离枢纽最近的站厅步行段」测得全部 26 座换乘站；其中 10 座站用的是规划器的同一组建模值（站厅换乘 231 米 / 193 秒），并非逐站实测。OD 票价按官网公布的里程分段计价（7 公里以内 2 元，其后每 6、6、8、8 公里加 1 元，35 公里以上每增加 10 公里加 1 元，按起点至终点最短路径核算）由 segments.distance_km 上的最短轨道里程确定性计算——官网票价接口 /api/v1/getTicketFee 对任何参数形式都返回空结果，故不采用。计费里程比规划器实测的车厢内里程多 103–312 m（运营方按停靠点间距计费，规划器按站点参考点测距），矩阵取中值 200 m 补偿。矩阵按运营方公布的「最短路径」口径取全网最短轨道里程，因此个别 OD 与规划器报价不同：汽车公园→雾开河大街的 2 号线直达为 34.94 km（规划器报价 7 元），而全网最短路径是 7 号线→3 号线→2 号线的 33.51 km，按公布规则为 6 元。在建的 1 号线南延、3 号线南延、9 号线一期（共 15 站，站名仅以征求意见稿图片发布）无结构化站表，未建模。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 142,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 142,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 160,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 160,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 52,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 336,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 168,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 20022,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

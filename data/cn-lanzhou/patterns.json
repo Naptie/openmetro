@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-lanzhou",
+  "generated_at": "2026-10-22T21:01:07.383Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-lanzhou-line-1-pattern-main",
+      "line_id": "cn-lanzhou-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-lanzhou-chenguanying-1",
+        "cn-lanzhou-aoti-zhongxin-1",
+        "cn-lanzhou-lanzhou-chengshi-xueyuan-1",
+        "cn-lanzhou-lanzhou-haiguan-1",
+        "cn-lanzhou-matan-1",
+        "cn-lanzhou-tumendun-1",
+        "cn-lanzhou-lanzhou-xizhan-bei-guangchang-1",
+        "cn-lanzhou-xizhan-shizi-1",
+        "cn-lanzhou-qilihe-1",
+        "cn-lanzhou-xiaoxihu-1",
+        "cn-lanzhou-wenhuagong-1",
+        "cn-lanzhou-xiguan-1",
+        "cn-lanzhou-shengzhengfu-1",
+        "cn-lanzhou-dongfanghong-guangchang-1",
+        "cn-lanzhou-lanzhou-daxue-1",
+        "cn-lanzhou-wuli-pu-1",
+        "cn-lanzhou-sheng-qixiangju-1",
+        "cn-lanzhou-gongxingdun-1",
+        "cn-lanzhou-jiaojiawan-1",
+        "cn-lanzhou-donggang-1"
+      ],
+      "origin_stop_id": "cn-lanzhou-chenguanying-1",
+      "terminal_stop_id": "cn-lanzhou-donggang-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "lzgdjt-serve-js",
+          "id": "1"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1",
+        "origin_name": "陈官营",
+        "terminal_name": "东岗"
+      }
+    },
+    {
+      "id": "cn-lanzhou-line-2-pattern-main",
+      "line_id": "cn-lanzhou-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-lanzhou-dongfanghong-guangchang-2",
+        "cn-lanzhou-youdian-dalou-2",
+        "cn-lanzhou-lanzhou-huochezhan-2",
+        "cn-lanzhou-hongxing-xiang-2",
+        "cn-lanzhou-tuanjie-xincun-2",
+        "cn-lanzhou-wuli-pu-2",
+        "cn-lanzhou-zhangsutan-2",
+        "cn-lanzhou-junjiatan-2",
+        "cn-lanzhou-yanbai-daqiao-2"
+      ],
+      "origin_stop_id": "cn-lanzhou-dongfanghong-guangchang-2",
+      "terminal_stop_id": "cn-lanzhou-yanbai-daqiao-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "lzgdjt-serve-js",
+          "id": "2"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2",
+        "origin_name": "东方红广场",
+        "terminal_name": "雁白大桥"
+      }
+    }
+  ]
+}

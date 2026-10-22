@@ -1,0 +1,104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-taiyuan",
+  "generated_at": "2026-10-22T14:05:06.665Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-taiyuan-pattern-1-primary",
+      "line_id": "cn-taiyuan-line-1",
+      "name": "1号线全线",
+      "names": {
+        "zh": "1号线全线",
+        "en": "Line 1 full line"
+      },
+      "stop_ids": [
+        "cn-taiyuan-he-longwan-1",
+        "cn-taiyuan-ximing-lu-1",
+        "cn-taiyuan-xike-zhan-1",
+        "cn-taiyuan-jinyang-lu-1",
+        "cn-taiyuan-yanjiagou-xiaojingyu-lu-1",
+        "cn-taiyuan-xiayuan-1",
+        "cn-taiyuan-taiyuan-ligong-daxue-1",
+        "cn-taiyuan-taoyuan-lu-1",
+        "cn-taiyuan-dananmen-1",
+        "cn-taiyuan-liunan-1",
+        "cn-taiyuan-wuyi-guangchang-1",
+        "cn-taiyuan-taiyuan-zhanxi-guangchang-1",
+        "cn-taiyuan-taiyuan-zhandong-guangchang-1",
+        "cn-taiyuan-haojiagou-1",
+        "cn-taiyuan-chaoyang-jie-1",
+        "cn-taiyuan-shuangta-1",
+        "cn-taiyuan-nanshifang-jie-1",
+        "cn-taiyuan-changfeng-dongjie-1",
+        "cn-taiyuan-xuefu-dongjie-1",
+        "cn-taiyuan-xutan-dongjie-1",
+        "cn-taiyuan-taiyuan-nanzhan-1",
+        "cn-taiyuan-beiying-1",
+        "cn-taiyuan-huangling-1",
+        "cn-taiyuan-wusu-1-hao-2-hao-hangzhanlou-1"
+      ],
+      "origin_stop_id": "cn-taiyuan-he-longwan-1",
+      "terminal_stop_id": "cn-taiyuan-wusu-1-hao-2-hao-hangzhanlou-1",
+      "is_primary": true,
+      "color": "#0065b3",
+      "source_ids": [
+        {
+          "source": "tymetro-api",
+          "id": "2"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1"
+      }
+    },
+    {
+      "id": "cn-taiyuan-pattern-2-primary",
+      "line_id": "cn-taiyuan-line-2",
+      "name": "2号线全线",
+      "names": {
+        "zh": "2号线全线",
+        "en": "Line 2 full line"
+      },
+      "stop_ids": [
+        "cn-taiyuan-xiqiao-2",
+        "cn-taiyuan-huazhang-xijie-2",
+        "cn-taiyuan-tongda-jie-2",
+        "cn-taiyuan-kangning-jie-2",
+        "cn-taiyuan-dianzi-xijie-2",
+        "cn-taiyuan-jiajie-2",
+        "cn-taiyuan-longcheng-gongyuan-2",
+        "cn-taiyuan-longxing-jie-2",
+        "cn-taiyuan-jinyang-jie-2",
+        "cn-taiyuan-nanzhonghuan-2",
+        "cn-taiyuan-xuefu-jie-2",
+        "cn-taiyuan-changfeng-jie-2",
+        "cn-taiyuan-wangcun-nanjie-2",
+        "cn-taiyuan-nanneihuan-2",
+        "cn-taiyuan-tiyuguan-2",
+        "cn-taiyuan-dananmen-2",
+        "cn-taiyuan-kaihuasi-jie-2",
+        "cn-taiyuan-fuxi-jie-2",
+        "cn-taiyuan-jihuying-2",
+        "cn-taiyuan-dabeimen-2",
+        "cn-taiyuan-shenglijie-2",
+        "cn-taiyuan-jianhe-2",
+        "cn-taiyuan-jiancaoping-2"
+      ],
+      "origin_stop_id": "cn-taiyuan-xiqiao-2",
+      "terminal_stop_id": "cn-taiyuan-jiancaoping-2",
+      "is_primary": true,
+      "color": "#cc0000",
+      "source_ids": [
+        {
+          "source": "tymetro-api",
+          "id": "1"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2"
+      }
+    }
+  ]
+}

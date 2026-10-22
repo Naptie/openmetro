@@ -1,0 +1,1765 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-dalian",
+  "generated_at": "2026-10-22T21:11:51.804Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-22T21:11:51.804Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-dalian-seg-cn-dalian-2nd-hospital-of-dalian-medical-university-1-cn-dalian-heishijiao-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-2nd-hospital-of-dalian-medical-university-1",
+      "to_stop_id": "cn-dalian-heishijiao-1",
+      "from_station_id": "cn-dalian-2nd-hospital-of-dalian-medical-university",
+      "to_station_id": "cn-dalian-heishijiao",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.399,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-airport-2-cn-dalian-honggang-road-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-airport-2",
+      "to_stop_id": "cn-dalian-honggang-road-2",
+      "from_station_id": "cn-dalian-airport",
+      "to_station_id": "cn-dalian-honggang-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.867,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-caidaling-12-cn-dalian-huangnichuan-12",
+      "line_id": "cn-dalian-line-12",
+      "from_stop_id": "cn-dalian-caidaling-12",
+      "to_stop_id": "cn-dalian-huangnichuan-12",
+      "from_station_id": "cn-dalian-caidaling",
+      "to_station_id": "cn-dalian-huangnichuan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.205,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-changdianpu-13-cn-dalian-shihe-beihai-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-changdianpu-13",
+      "to_stop_id": "cn-dalian-shihe-beihai-13",
+      "from_station_id": "cn-dalian-changdianpu",
+      "to_station_id": "cn-dalian-shihe-beihai",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.909,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-chunliu-1-cn-dalian-xianggong-street-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-chunliu-1",
+      "to_stop_id": "cn-dalian-xianggong-street-1",
+      "from_station_id": "cn-dalian-chunliu",
+      "to_station_id": "cn-dalian-xianggong-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.741,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-conference-center-2-cn-dalian-donggang-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-conference-center-2",
+      "to_stop_id": "cn-dalian-donggang-2",
+      "from_station_id": "cn-dalian-conference-center",
+      "to_station_id": "cn-dalian-donggang",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.354,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-convention-and-exhibition-center-1-cn-dalian-xinghai-square-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-convention-and-exhibition-center-1",
+      "to_stop_id": "cn-dalian-xinghai-square-1",
+      "from_station_id": "cn-dalian-convention-and-exhibition-center",
+      "to_station_id": "cn-dalian-xinghai-square",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.856,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalian-development-area-3-cn-dalian-free-trade-zone-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-dalian-development-area-3",
+      "to_stop_id": "cn-dalian-free-trade-zone-3",
+      "from_station_id": "cn-dalian-dalian-development-area",
+      "to_station_id": "cn-dalian-free-trade-zone",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.622,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalian-development-area-3-cn-dalian-tostem-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-dalian-development-area-3",
+      "to_stop_id": "cn-dalian-tostem-3",
+      "from_station_id": "cn-dalian-dalian-development-area",
+      "to_station_id": "cn-dalian-tostem",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "distance_km": 2.234,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.8,
+        "a_s_per_km": 75.1,
+        "b_s": 265.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalian-jiaotong-university-2-cn-dalian-xian-road-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-dalian-jiaotong-university-2",
+      "to_stop_id": "cn-dalian-xian-road-2",
+      "from_station_id": "cn-dalian-dalian-jiaotong-university",
+      "to_station_id": "cn-dalian-xian-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.062,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalian-maritime-university-1-cn-dalian-qixianling-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-dalian-maritime-university-1",
+      "to_stop_id": "cn-dalian-qixianling-1",
+      "from_station_id": "cn-dalian-dalian-maritime-university",
+      "to_station_id": "cn-dalian-qixianling",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.184,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalian-north-railway-station-1-cn-dalian-huabei-road-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-dalian-north-railway-station-1",
+      "to_stop_id": "cn-dalian-huabei-road-1",
+      "from_station_id": "cn-dalian-dalian-north-railway-station",
+      "to_station_id": "cn-dalian-huabei-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.374,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalian-north-railway-station-2-cn-dalian-nanguanling-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-dalian-north-railway-station-2",
+      "to_stop_id": "cn-dalian-nanguanling-2",
+      "from_station_id": "cn-dalian-dalian-north-railway-station",
+      "to_station_id": "cn-dalian-nanguanling",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.812,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalian-railway-station-3-cn-dalian-xianglujiao-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-dalian-railway-station-3",
+      "to_stop_id": "cn-dalian-xianglujiao-3",
+      "from_station_id": "cn-dalian-dalian-railway-station",
+      "to_station_id": "cn-dalian-xianglujiao",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.488,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalian-railway-station-5-cn-dalian-qingniwaqiao-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-dalian-railway-station-5",
+      "to_stop_id": "cn-dalian-qingniwaqiao-5",
+      "from_station_id": "cn-dalian-dalian-railway-station",
+      "to_station_id": "cn-dalian-qingniwaqiao",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.981,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dalianwan-3-cn-dalian-jinma-road-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-dalianwan-3",
+      "to_stop_id": "cn-dalian-jinma-road-3",
+      "from_station_id": "cn-dalian-dalianwan",
+      "to_station_id": "cn-dalian-jinma-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.574,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dd-port-3-cn-dalian-xiaoyaowan-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-dd-port-3",
+      "to_stop_id": "cn-dalian-xiaoyaowan-3",
+      "from_station_id": "cn-dalian-dd-port",
+      "to_station_id": "cn-dalian-xiaoyaowan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.772,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-donggang-2-cn-dalian-donghai-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-donggang-2",
+      "to_stop_id": "cn-dalian-donghai-2",
+      "from_station_id": "cn-dalian-donggang",
+      "to_station_id": "cn-dalian-donghai",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.277,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-donghai-2-cn-dalian-haizhiyun-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-donghai-2",
+      "to_stop_id": "cn-dalian-haizhiyun-2",
+      "from_station_id": "cn-dalian-donghai",
+      "to_station_id": "cn-dalian-haizhiyun",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "distance_km": 1.216,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 15.1,
+        "a_s_per_km": 109,
+        "b_s": 152.9,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dongshan-road-3-cn-dalian-heping-road-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-dongshan-road-3",
+      "to_stop_id": "cn-dalian-heping-road-3",
+      "from_station_id": "cn-dalian-dongshan-road",
+      "to_station_id": "cn-dalian-heping-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.132,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-dongwei-road-1-cn-dalian-chunliu-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-dongwei-road-1",
+      "to_stop_id": "cn-dalian-chunliu-1",
+      "from_station_id": "cn-dalian-dongwei-road",
+      "to_station_id": "cn-dalian-chunliu",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.652,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-ershilipu-13-cn-dalian-shisanli-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-ershilipu-13",
+      "to_stop_id": "cn-dalian-shisanli-13",
+      "from_station_id": "cn-dalian-ershilipu",
+      "to_station_id": "cn-dalian-shisanli",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.771,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-free-trade-zone-3-cn-dalian-dd-port-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-free-trade-zone-3",
+      "to_stop_id": "cn-dalian-dd-port-3",
+      "from_station_id": "cn-dalian-free-trade-zone",
+      "to_station_id": "cn-dalian-dd-port",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 6.09,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-fuguo-street-1-cn-dalian-convention-and-exhibition-center-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-fuguo-street-1",
+      "to_stop_id": "cn-dalian-convention-and-exhibition-center-1",
+      "from_station_id": "cn-dalian-fuguo-street",
+      "to_station_id": "cn-dalian-convention-and-exhibition-center",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.805,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-ganbei-road-5-cn-dalian-ganjingzi-street-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-ganbei-road-5",
+      "to_stop_id": "cn-dalian-ganjingzi-street-5",
+      "from_station_id": "cn-dalian-ganbei-road",
+      "to_station_id": "cn-dalian-ganjingzi-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.825,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-gangwan-square-2-cn-dalian-conference-center-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-gangwan-square-2",
+      "to_stop_id": "cn-dalian-conference-center-2",
+      "from_station_id": "cn-dalian-gangwan-square",
+      "to_station_id": "cn-dalian-conference-center",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.396,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-ganjingzi-street-5-cn-dalian-suoyuwan-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-ganjingzi-street-5",
+      "to_stop_id": "cn-dalian-suoyuwan-5",
+      "from_station_id": "cn-dalian-ganjingzi-street",
+      "to_station_id": "cn-dalian-suoyuwan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.368,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-gezhenpu-2-cn-dalian-zhongge-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-gezhenpu-2",
+      "to_stop_id": "cn-dalian-zhongge-2",
+      "from_station_id": "cn-dalian-gezhenpu",
+      "to_station_id": "cn-dalian-zhongge",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.296,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-haiwan-high-school-13-cn-dalian-the-third-hospital-of-dalian-medical-university-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-haiwan-high-school-13",
+      "to_stop_id": "cn-dalian-the-third-hospital-of-dalian-medical-university-13",
+      "from_station_id": "cn-dalian-haiwan-high-school",
+      "to_station_id": "cn-dalian-the-third-hospital-of-dalian-medical-university",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.715,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-health-center-2-cn-dalian-houge-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-health-center-2",
+      "to_stop_id": "cn-dalian-houge-2",
+      "from_station_id": "cn-dalian-health-center",
+      "to_station_id": "cn-dalian-houge",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.249,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-heishijiao-1-cn-dalian-xueyuan-square-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-heishijiao-1",
+      "to_stop_id": "cn-dalian-xueyuan-square-1",
+      "from_station_id": "cn-dalian-heishijiao",
+      "to_station_id": "cn-dalian-xueyuan-square",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.195,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-hekou-12-cn-dalian-caidaling-12",
+      "line_id": "cn-dalian-line-12",
+      "from_stop_id": "cn-dalian-hekou-12",
+      "to_stop_id": "cn-dalian-caidaling-12",
+      "from_station_id": "cn-dalian-hekou",
+      "to_station_id": "cn-dalian-caidaling",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.113,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-heping-road-3-cn-dalian-yongan-siji-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-heping-road-3",
+      "to_stop_id": "cn-dalian-yongan-siji-3",
+      "from_station_id": "cn-dalian-heping-road",
+      "to_station_id": "cn-dalian-yongan-siji",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.544,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-honggang-road-2-cn-dalian-hongjin-road-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-honggang-road-2",
+      "to_stop_id": "cn-dalian-hongjin-road-2",
+      "from_station_id": "cn-dalian-honggang-road",
+      "to_station_id": "cn-dalian-hongjin-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.948,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-hongjin-road-2-cn-dalian-hongqi-west-road-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-hongjin-road-2",
+      "to_stop_id": "cn-dalian-hongqi-west-road-2",
+      "from_station_id": "cn-dalian-hongjin-road",
+      "to_station_id": "cn-dalian-hongqi-west-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.327,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-hongqi-west-road-2-cn-dalian-wanjia-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-hongqi-west-road-2",
+      "to_stop_id": "cn-dalian-wanjia-2",
+      "from_station_id": "cn-dalian-hongqi-west-road",
+      "to_station_id": "cn-dalian-wanjia",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.801,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-houge-2-cn-dalian-gezhenpu-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-houge-2",
+      "to_stop_id": "cn-dalian-gezhenpu-2",
+      "from_station_id": "cn-dalian-houge",
+      "to_station_id": "cn-dalian-gezhenpu",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.425,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-houguan-5-cn-dalian-houyan-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-houguan-5",
+      "to_stop_id": "cn-dalian-houyan-5",
+      "from_station_id": "cn-dalian-houguan",
+      "to_station_id": "cn-dalian-houyan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.423,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-houyan-3-cn-dalian-dalianwan-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-houyan-3",
+      "to_stop_id": "cn-dalian-dalianwan-3",
+      "from_station_id": "cn-dalian-houyan",
+      "to_station_id": "cn-dalian-dalianwan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 6.566,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-houyan-5-cn-dalian-longhua-road-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-houyan-5",
+      "to_stop_id": "cn-dalian-longhua-road-5",
+      "from_station_id": "cn-dalian-houyan",
+      "to_station_id": "cn-dalian-longhua-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.964,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-huabei-road-1-cn-dalian-huanan-north-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-huabei-road-1",
+      "to_stop_id": "cn-dalian-huanan-north-1",
+      "from_station_id": "cn-dalian-huabei-road",
+      "to_station_id": "cn-dalian-huanan-north",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.223,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-huanan-north-1-cn-dalian-huanan-square-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-huanan-north-1",
+      "to_stop_id": "cn-dalian-huanan-square-1",
+      "from_station_id": "cn-dalian-huanan-north",
+      "to_station_id": "cn-dalian-huanan-square",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.205,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-huanan-square-1-cn-dalian-qianshan-road-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-huanan-square-1",
+      "to_stop_id": "cn-dalian-qianshan-road-1",
+      "from_station_id": "cn-dalian-huanan-square",
+      "to_station_id": "cn-dalian-qianshan-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.253,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-huangnichuan-12-cn-dalian-longwangtang-12",
+      "line_id": "cn-dalian-line-12",
+      "from_stop_id": "cn-dalian-huangnichuan-12",
+      "to_stop_id": "cn-dalian-longwangtang-12",
+      "from_station_id": "cn-dalian-huangnichuan",
+      "to_station_id": "cn-dalian-longwangtang",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner",
+      "distance_km": 5.49,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-jinjia-street-3-cn-dalian-quanshui-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-jinjia-street-3",
+      "to_stop_id": "cn-dalian-quanshui-3",
+      "from_station_id": "cn-dalian-jinjia-street",
+      "to_station_id": "cn-dalian-quanshui",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.225,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-jinma-road-3-cn-dalian-dalian-development-area-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-jinma-road-3",
+      "to_stop_id": "cn-dalian-dalian-development-area-3",
+      "from_station_id": "cn-dalian-jinma-road",
+      "to_station_id": "cn-dalian-dalian-development-area",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.761,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-labor-park-5-cn-dalian-shikui-road-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-labor-park-5",
+      "to_stop_id": "cn-dalian-shikui-road-5",
+      "from_station_id": "cn-dalian-labor-park",
+      "to_station_id": "cn-dalian-shikui-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.161,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-lianhe-road-2-cn-dalian-renmin-square-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-lianhe-road-2",
+      "to_stop_id": "cn-dalian-renmin-square-2",
+      "from_station_id": "cn-dalian-lianhe-road",
+      "to_station_id": "cn-dalian-renmin-square",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.315,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-liaoning-normal-university-2-cn-dalian-dalian-jiaotong-university-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-liaoning-normal-university-2",
+      "to_stop_id": "cn-dalian-dalian-jiaotong-university-2",
+      "from_station_id": "cn-dalian-liaoning-normal-university",
+      "to_station_id": "cn-dalian-dalian-jiaotong-university",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.784,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-longhua-road-5-cn-dalian-quanshui-east-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-longhua-road-5",
+      "to_stop_id": "cn-dalian-quanshui-east-5",
+      "from_station_id": "cn-dalian-longhua-road",
+      "to_station_id": "cn-dalian-quanshui-east",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.956,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-longwangtang-12-cn-dalian-tahewan-12",
+      "line_id": "cn-dalian-line-12",
+      "from_stop_id": "cn-dalian-longwangtang-12",
+      "to_stop_id": "cn-dalian-tahewan-12",
+      "from_station_id": "cn-dalian-longwangtang",
+      "to_station_id": "cn-dalian-tahewan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 480,
+      "travel_time_source": "planner",
+      "distance_km": 7.171,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-lushun-12-cn-dalian-tieshan-12",
+      "line_id": "cn-dalian-line-12",
+      "from_stop_id": "cn-dalian-lushun-12",
+      "to_stop_id": "cn-dalian-tieshan-12",
+      "from_station_id": "cn-dalian-lushun",
+      "to_station_id": "cn-dalian-tieshan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 540,
+      "travel_time_source": "planner",
+      "distance_km": 8.903,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-malan-square-2-cn-dalian-liaoning-normal-university-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-malan-square-2",
+      "to_stop_id": "cn-dalian-liaoning-normal-university-2",
+      "from_station_id": "cn-dalian-malan-square",
+      "to_station_id": "cn-dalian-liaoning-normal-university",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.918,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-nanguanling-2-cn-dalian-sports-center-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-nanguanling-2",
+      "to_stop_id": "cn-dalian-sports-center-2",
+      "from_station_id": "cn-dalian-nanguanling",
+      "to_station_id": "cn-dalian-sports-center",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.597,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-phoenix-peak-3-cn-dalian-dongshan-road-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-phoenix-peak-3",
+      "to_stop_id": "cn-dalian-dongshan-road-3",
+      "from_station_id": "cn-dalian-phoenix-peak",
+      "to_station_id": "cn-dalian-dongshan-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.681,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-pulandian-development-zone-13-cn-dalian-haiwan-high-school-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-pulandian-development-zone-13",
+      "to_stop_id": "cn-dalian-haiwan-high-school-13",
+      "from_station_id": "cn-dalian-pulandian-development-zone",
+      "to_station_id": "cn-dalian-haiwan-high-school",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.552,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-pulandian-zhenxing-street-13-cn-dalian-pulandian-development-zone-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-pulandian-zhenxing-street-13",
+      "to_stop_id": "cn-dalian-pulandian-development-zone-13",
+      "from_station_id": "cn-dalian-pulandian-zhenxing-street",
+      "to_station_id": "cn-dalian-pulandian-development-zone",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.488,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-puwan-stadium-13-cn-dalian-shihe-huangqi-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-puwan-stadium-13",
+      "to_stop_id": "cn-dalian-shihe-huangqi-13",
+      "from_station_id": "cn-dalian-puwan-stadium",
+      "to_station_id": "cn-dalian-shihe-huangqi",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 4.502,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-qian-ge-2-cn-dalian-xinzhaizi-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-qian-ge-2",
+      "to_stop_id": "cn-dalian-xinzhaizi-2",
+      "from_station_id": "cn-dalian-qian-ge",
+      "to_station_id": "cn-dalian-xinzhaizi",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.362,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-qianshan-road-1-cn-dalian-songjiang-road-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-qianshan-road-1",
+      "to_stop_id": "cn-dalian-songjiang-road-1",
+      "from_station_id": "cn-dalian-qianshan-road",
+      "to_station_id": "cn-dalian-songjiang-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.142,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-qingniwaqiao-2-cn-dalian-youhao-square-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-qingniwaqiao-2",
+      "to_stop_id": "cn-dalian-youhao-square-2",
+      "from_station_id": "cn-dalian-qingniwaqiao",
+      "to_station_id": "cn-dalian-youhao-square",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.63,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-qingniwaqiao-5-cn-dalian-labor-park-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-qingniwaqiao-5",
+      "to_stop_id": "cn-dalian-labor-park-5",
+      "from_station_id": "cn-dalian-qingniwaqiao",
+      "to_station_id": "cn-dalian-labor-park",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.843,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-qingyun-street-5-cn-dalian-taoyuan-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-qingyun-street-5",
+      "to_stop_id": "cn-dalian-taoyuan-5",
+      "from_station_id": "cn-dalian-qingyun-street",
+      "to_station_id": "cn-dalian-taoyuan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.796,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-qixianling-1-cn-dalian-hekou-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-qixianling-1",
+      "to_stop_id": "cn-dalian-hekou-1",
+      "from_station_id": "cn-dalian-qixianling",
+      "to_station_id": "cn-dalian-hekou",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "distance_km": 1.965,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 17.9,
+        "a_s_per_km": 138.6,
+        "b_s": 120.3,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-quanshui-3-cn-dalian-houyan-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-quanshui-3",
+      "to_stop_id": "cn-dalian-houyan-3",
+      "from_station_id": "cn-dalian-quanshui",
+      "to_station_id": "cn-dalian-houyan",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.429,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-quanshui-east-5-cn-dalian-zhonghua-east-road-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-quanshui-east-5",
+      "to_stop_id": "cn-dalian-zhonghua-east-road-5",
+      "from_station_id": "cn-dalian-quanshui-east",
+      "to_station_id": "cn-dalian-zhonghua-east-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.239,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-renmin-square-2-cn-dalian-yierjiu-street-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-renmin-square-2",
+      "to_stop_id": "cn-dalian-yierjiu-street-2",
+      "from_station_id": "cn-dalian-renmin-square",
+      "to_station_id": "cn-dalian-yierjiu-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.087,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-sanshilipu-13-cn-dalian-ershilipu-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-sanshilipu-13",
+      "to_stop_id": "cn-dalian-ershilipu-13",
+      "from_station_id": "cn-dalian-sanshilipu",
+      "to_station_id": "cn-dalian-ershilipu",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 8.311,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-shihe-beihai-13-cn-dalian-puwan-stadium-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-shihe-beihai-13",
+      "to_stop_id": "cn-dalian-puwan-stadium-13",
+      "from_station_id": "cn-dalian-shihe-beihai",
+      "to_station_id": "cn-dalian-puwan-stadium",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.116,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-shihe-huangqi-13-cn-dalian-sanshilipu-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-shihe-huangqi-13",
+      "to_stop_id": "cn-dalian-sanshilipu-13",
+      "from_station_id": "cn-dalian-shihe-huangqi",
+      "to_station_id": "cn-dalian-sanshilipu",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 8.196,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-shikui-road-5-cn-dalian-qingyun-street-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-shikui-road-5",
+      "to_stop_id": "cn-dalian-qingyun-street-5",
+      "from_station_id": "cn-dalian-shikui-road",
+      "to_station_id": "cn-dalian-qingyun-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.802,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-shisanli-13-cn-dalian-jiuli-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-shisanli-13",
+      "to_stop_id": "cn-dalian-jiuli-13",
+      "from_station_id": "cn-dalian-shisanli",
+      "to_station_id": "cn-dalian-jiuli",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "distance_km": 3.145,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.2,
+        "a_s_per_km": 87.5,
+        "b_s": 153.5,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-songjiang-road-1-cn-dalian-dongwei-road-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-songjiang-road-1",
+      "to_stop_id": "cn-dalian-dongwei-road-1",
+      "from_station_id": "cn-dalian-songjiang-road",
+      "to_station_id": "cn-dalian-dongwei-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.456,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-sports-center-2-cn-dalian-health-center-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-sports-center-2",
+      "to_stop_id": "cn-dalian-health-center-2",
+      "from_station_id": "cn-dalian-sports-center",
+      "to_station_id": "cn-dalian-health-center",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.283,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-suoyuwan-5-cn-dalian-suoyuwan-south-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-suoyuwan-5",
+      "to_stop_id": "cn-dalian-suoyuwan-south-5",
+      "from_station_id": "cn-dalian-suoyuwan",
+      "to_station_id": "cn-dalian-suoyuwan-south",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.26,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-suoyuwan-south-5-cn-dalian-dalian-railway-station-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-suoyuwan-south-5",
+      "to_stop_id": "cn-dalian-dalian-railway-station-5",
+      "from_station_id": "cn-dalian-suoyuwan-south",
+      "to_station_id": "cn-dalian-dalian-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.496,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-tahewan-12-cn-dalian-lushun-12",
+      "line_id": "cn-dalian-line-12",
+      "from_stop_id": "cn-dalian-tahewan-12",
+      "to_stop_id": "cn-dalian-lushun-12",
+      "from_station_id": "cn-dalian-tahewan",
+      "to_station_id": "cn-dalian-lushun",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 540,
+      "travel_time_source": "planner",
+      "distance_km": 8.661,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-taoyuan-5-cn-dalian-xiuyue-street-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-taoyuan-5",
+      "to_stop_id": "cn-dalian-xiuyue-street-5",
+      "from_station_id": "cn-dalian-taoyuan",
+      "to_station_id": "cn-dalian-xiuyue-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.882,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-the-third-hospital-of-dalian-medical-university-13-cn-dalian-changdianpu-13",
+      "line_id": "cn-dalian-line-13",
+      "from_stop_id": "cn-dalian-the-third-hospital-of-dalian-medical-university-13",
+      "to_stop_id": "cn-dalian-changdianpu-13",
+      "from_station_id": "cn-dalian-the-third-hospital-of-dalian-medical-university",
+      "to_station_id": "cn-dalian-changdianpu",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.536,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-tieshan-12-cn-dalian-lushun-new-port-12",
+      "line_id": "cn-dalian-line-12",
+      "from_stop_id": "cn-dalian-tieshan-12",
+      "to_stop_id": "cn-dalian-lushun-new-port-12",
+      "from_station_id": "cn-dalian-tieshan",
+      "to_station_id": "cn-dalian-lushun-new-port",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "distance_km": 2.899,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 18.2,
+        "a_s_per_km": 102.7,
+        "b_s": 273.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-tigerbeach-park-5-cn-dalian-hutan-xinqu-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-tigerbeach-park-5",
+      "to_stop_id": "cn-dalian-hutan-xinqu-5",
+      "from_station_id": "cn-dalian-tigerbeach-park",
+      "to_station_id": "cn-dalian-hutan-xinqu",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "distance_km": 1.118,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 13.2,
+        "a_s_per_km": 80.5,
+        "b_s": 205.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-tostem-3-cn-dalian-phoenix-peak-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-tostem-3",
+      "to_stop_id": "cn-dalian-phoenix-peak-3",
+      "from_station_id": "cn-dalian-tostem",
+      "to_station_id": "cn-dalian-phoenix-peak",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.062,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-wanjia-2-cn-dalian-malan-square-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-wanjia-2",
+      "to_stop_id": "cn-dalian-malan-square-2",
+      "from_station_id": "cn-dalian-wanjia",
+      "to_station_id": "cn-dalian-malan-square",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.233,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xian-road-1-cn-dalian-fuguo-street-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-xian-road-1",
+      "to_stop_id": "cn-dalian-fuguo-street-1",
+      "from_station_id": "cn-dalian-xian-road",
+      "to_station_id": "cn-dalian-fuguo-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.257,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xian-road-2-cn-dalian-lianhe-road-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-xian-road-2",
+      "to_stop_id": "cn-dalian-lianhe-road-2",
+      "from_station_id": "cn-dalian-xian-road",
+      "to_station_id": "cn-dalian-lianhe-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.181,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xianggong-street-1-cn-dalian-zhongchang-street-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-xianggong-street-1",
+      "to_stop_id": "cn-dalian-zhongchang-street-1",
+      "from_station_id": "cn-dalian-xianggong-street",
+      "to_station_id": "cn-dalian-zhongchang-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.927,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xianglujiao-3-cn-dalian-jinjia-street-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-xianglujiao-3",
+      "to_stop_id": "cn-dalian-jinjia-street-3",
+      "from_station_id": "cn-dalian-xianglujiao",
+      "to_station_id": "cn-dalian-jinjia-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.425,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xiaoyaowan-3-cn-dalian-golden-pebble-beach-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-xiaoyaowan-3",
+      "to_stop_id": "cn-dalian-golden-pebble-beach-3",
+      "from_station_id": "cn-dalian-xiaoyaowan",
+      "to_station_id": "cn-dalian-golden-pebble-beach",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "distance_km": 9.772,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34.8,
+        "a_s_per_km": 75.1,
+        "b_s": 265.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 540,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xinggong-street-1-cn-dalian-xian-road-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-xinggong-street-1",
+      "to_stop_id": "cn-dalian-xian-road-1",
+      "from_station_id": "cn-dalian-xinggong-street",
+      "to_station_id": "cn-dalian-xian-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.851,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xinghai-square-1-cn-dalian-2nd-hospital-of-dalian-medical-university-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-xinghai-square-1",
+      "to_stop_id": "cn-dalian-2nd-hospital-of-dalian-medical-university-1",
+      "from_station_id": "cn-dalian-xinghai-square",
+      "to_station_id": "cn-dalian-2nd-hospital-of-dalian-medical-university",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.082,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xinzhaizi-2-cn-dalian-airport-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-xinzhaizi-2",
+      "to_stop_id": "cn-dalian-airport-2",
+      "from_station_id": "cn-dalian-xinzhaizi",
+      "to_station_id": "cn-dalian-airport",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.752,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xiuyue-street-5-cn-dalian-tigerbeach-park-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-xiuyue-street-5",
+      "to_stop_id": "cn-dalian-tigerbeach-park-5",
+      "from_station_id": "cn-dalian-xiuyue-street",
+      "to_station_id": "cn-dalian-tigerbeach-park",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.357,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-xueyuan-square-1-cn-dalian-dalian-maritime-university-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-xueyuan-square-1",
+      "to_stop_id": "cn-dalian-dalian-maritime-university-1",
+      "from_station_id": "cn-dalian-xueyuan-square",
+      "to_station_id": "cn-dalian-dalian-maritime-university",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.41,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-yaojia-1-cn-dalian-dalian-north-railway-station-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-yaojia-1",
+      "to_stop_id": "cn-dalian-dalian-north-railway-station-1",
+      "from_station_id": "cn-dalian-yaojia",
+      "to_station_id": "cn-dalian-dalian-north-railway-station",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.564,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-yierjiu-street-2-cn-dalian-qingniwaqiao-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-yierjiu-street-2",
+      "to_stop_id": "cn-dalian-qingniwaqiao-2",
+      "from_station_id": "cn-dalian-yierjiu-street",
+      "to_station_id": "cn-dalian-qingniwaqiao",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.058,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-yongan-siji-3-cn-dalian-jiuli-3",
+      "line_id": "cn-dalian-line-3",
+      "from_stop_id": "cn-dalian-yongan-siji-3",
+      "to_stop_id": "cn-dalian-jiuli-3",
+      "from_station_id": "cn-dalian-yongan-siji",
+      "to_station_id": "cn-dalian-jiuli",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.38,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-youhao-square-2-cn-dalian-zhongshan-square-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-youhao-square-2",
+      "to_stop_id": "cn-dalian-zhongshan-square-2",
+      "from_station_id": "cn-dalian-youhao-square",
+      "to_station_id": "cn-dalian-zhongshan-square",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.578,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-zhongchang-street-1-cn-dalian-xinggong-street-1",
+      "line_id": "cn-dalian-line-1",
+      "from_stop_id": "cn-dalian-zhongchang-street-1",
+      "to_stop_id": "cn-dalian-xinggong-street-1",
+      "from_station_id": "cn-dalian-zhongchang-street",
+      "to_station_id": "cn-dalian-xinggong-street",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.89,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-zhongge-2-cn-dalian-qian-ge-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-zhongge-2",
+      "to_stop_id": "cn-dalian-qian-ge-2",
+      "from_station_id": "cn-dalian-zhongge",
+      "to_station_id": "cn-dalian-qian-ge",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.804,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-zhonghua-east-road-5-cn-dalian-ganbei-road-5",
+      "line_id": "cn-dalian-line-5",
+      "from_stop_id": "cn-dalian-zhonghua-east-road-5",
+      "to_stop_id": "cn-dalian-ganbei-road-5",
+      "from_station_id": "cn-dalian-zhonghua-east-road",
+      "to_station_id": "cn-dalian-ganbei-road",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.033,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-dalian-seg-cn-dalian-zhongshan-square-2-cn-dalian-gangwan-square-2",
+      "line_id": "cn-dalian-line-2",
+      "from_stop_id": "cn-dalian-zhongshan-square-2",
+      "to_stop_id": "cn-dalian-gangwan-square-2",
+      "from_station_id": "cn-dalian-zhongshan-square",
+      "to_station_id": "cn-dalian-gangwan-square",
+      "direction": "both",
+      "source_id": "amap-subway-2102",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.53,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      }
+    }
+  ]
+}

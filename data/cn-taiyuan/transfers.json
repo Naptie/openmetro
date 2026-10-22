@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-taiyuan",
+  "generated_at": "2026-10-22T14:05:22.559Z",
+  "source": [
+    {
+      "name": "Baidu Direction Lite transit",
+      "url": "https://api.map.baidu.com/directionlite/v1/transit",
+      "version": "1",
+      "retrieved_at": "2026-10-22T14:05:22.559Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-taiyuan-dananmen-1-cn-taiyuan-dananmen-2",
+      "station_id": "cn-taiyuan-dananmen",
+      "from_line_id": "cn-taiyuan-line-1",
+      "to_line_id": "cn-taiyuan-line-2",
+      "from_stop_id": "cn-taiyuan-dananmen-1",
+      "to_stop_id": "cn-taiyuan-dananmen-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_planner_walk": {
+          "walk_length_m": 99,
+          "walk_path_length_m": 86,
+          "planner_foot_time_s": 264,
+          "note": "官网规划器发布的站内换乘路径长度；foottime 含候车，未作为步行时间使用"
+        },
+        "walk_source": "baidu-transit"
+      },
+      "walk_distance_meters": 270
+    },
+    {
+      "id": "xfer-cn-taiyuan-dananmen-2-cn-taiyuan-dananmen-1",
+      "station_id": "cn-taiyuan-dananmen",
+      "from_line_id": "cn-taiyuan-line-2",
+      "to_line_id": "cn-taiyuan-line-1",
+      "from_stop_id": "cn-taiyuan-dananmen-2",
+      "to_stop_id": "cn-taiyuan-dananmen-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_planner_walk": {
+          "walk_length_m": 110,
+          "walk_path_length_m": 86,
+          "planner_foot_time_s": 274,
+          "note": "官网规划器发布的站内换乘路径长度；foottime 含候车，未作为步行时间使用"
+        },
+        "walk_source": "baidu-transit"
+      },
+      "walk_distance_meters": 270
+    }
+  ]
+}

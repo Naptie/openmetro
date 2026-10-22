@@ -1,0 +1,2889 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/timetables.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-shijiazhuang",
+  "generated_at": "2026-10-22T16:23:12.004Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-baifo-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-baifo",
+      "stop_id": "cn-shijiazhuang-baifo-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "15",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:37"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-baifo-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-baifo",
+      "stop_id": "cn-shijiazhuang-baifo-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "15",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:33"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-beiguo-shangcheng-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-beiguo-shangcheng",
+      "stop_id": "cn-shijiazhuang-beiguo-shangcheng-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "9",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:23"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-beiguo-shangcheng-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-beiguo-shangcheng",
+      "stop_id": "cn-shijiazhuang-beiguo-shangcheng-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "9",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:47"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-beiguo-shangcheng-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-beiguo-shangcheng",
+      "stop_id": "cn-shijiazhuang-beiguo-shangcheng-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "9",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:10"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-beiguo-shangcheng-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-beiguo-shangcheng",
+      "stop_id": "cn-shijiazhuang-beiguo-shangcheng-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "9",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:19"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-beisong-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-beisong",
+      "stop_id": "cn-shijiazhuang-beisong-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "12",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:30"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-beisong-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-beisong",
+      "stop_id": "cn-shijiazhuang-beisong-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "12",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:33"
+      ],
+      "last_train": [
+        "22:40"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-bolinzhuang-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-bolinzhuang",
+      "stop_id": "cn-shijiazhuang-bolinzhuang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "43",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:35"
+      ],
+      "last_train": [
+        "22:05"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-bolinzhuang-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-bolinzhuang",
+      "stop_id": "cn-shijiazhuang-bolinzhuang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "43",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:46"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-bowuyuan-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-bowuyuan",
+      "stop_id": "cn-shijiazhuang-bowuyuan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "10",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:36"
+      ],
+      "last_train": [
+        "22:25"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-bowuyuan-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-bowuyuan",
+      "stop_id": "cn-shijiazhuang-bowuyuan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "10",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:45"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-cangfeng-lu-liucun-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-cangfeng-lu-liucun",
+      "stop_id": "cn-shijiazhuang-cangfeng-lu-liucun-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "29",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:40"
+      ],
+      "last_train": [
+        "22:26"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-cangfeng-lu-liucun-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-cangfeng-lu-liucun",
+      "stop_id": "cn-shijiazhuang-cangfeng-lu-liucun-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "29",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:04"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-changan-gongyuan-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-changan-gongyuan",
+      "stop_id": "cn-shijiazhuang-changan-gongyuan-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "36",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:09"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-changan-gongyuan-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-changan-gongyuan",
+      "stop_id": "cn-shijiazhuang-changan-gongyuan-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "36",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:20"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-changcheng-qiao-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-changcheng-qiao",
+      "stop_id": "cn-shijiazhuang-changcheng-qiao-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "3",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:10"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-changcheng-qiao-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-changcheng-qiao",
+      "stop_id": "cn-shijiazhuang-changcheng-qiao-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "3",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "23:00"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-dongerhuan-nanlu-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-dongerhuan-nanlu",
+      "stop_id": "cn-shijiazhuang-dongerhuan-nanlu-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "55",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:49"
+      ],
+      "last_train": [
+        "22:35"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-dongerhuan-nanlu-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-dongerhuan-nanlu",
+      "stop_id": "cn-shijiazhuang-dongerhuan-nanlu-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "55",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:14"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-dongli-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-dongli",
+      "stop_id": "cn-shijiazhuang-dongli-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "46",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:35"
+      ],
+      "last_train": [
+        "22:13"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-dongli-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-dongli",
+      "stop_id": "cn-shijiazhuang-dongli-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "46",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:37"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-dongwang-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-dongwang",
+      "stop_id": "cn-shijiazhuang-dongwang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "52",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:42"
+      ],
+      "last_train": [
+        "22:28"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-dongwang-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-dongwang",
+      "stop_id": "cn-shijiazhuang-dongwang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "52",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:21"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-dongzhuang-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-dongzhuang",
+      "stop_id": "cn-shijiazhuang-dongzhuang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "22",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:33"
+      ],
+      "last_train": [
+        "22:54"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-dongzhuang-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-dongzhuang",
+      "stop_id": "cn-shijiazhuang-dongzhuang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "22",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:38"
+      ],
+      "last_train": [
+        "22:16"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-fuze-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-fuze",
+      "stop_id": "cn-shijiazhuang-fuze-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "26",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:35"
+      ],
+      "last_train": [
+        "22:05"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-gaozhu-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-gaozhu",
+      "stop_id": "cn-shijiazhuang-gaozhu-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "42",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:02"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-gaozhu-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-gaozhu",
+      "stop_id": "cn-shijiazhuang-gaozhu-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "42",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:35"
+      ],
+      "last_train": [
+        "22:48"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-heping-yiyuan-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-heping-yiyuan",
+      "stop_id": "cn-shijiazhuang-heping-yiyuan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "4",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:12"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-heping-yiyuan-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-heping-yiyuan",
+      "stop_id": "cn-shijiazhuang-heping-yiyuan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "4",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:58"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huaian-qiao-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-huaian-qiao",
+      "stop_id": "cn-shijiazhuang-huaian-qiao-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "47",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:37"
+      ],
+      "last_train": [
+        "22:15"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huaian-qiao-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-huaian-qiao",
+      "stop_id": "cn-shijiazhuang-huaian-qiao-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "47",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:35"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huaizhonglu-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-huaizhonglu",
+      "stop_id": "cn-shijiazhuang-huaizhonglu-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "34",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:36"
+      ],
+      "last_train": [
+        "22:14"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huaizhonglu-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-huaizhonglu",
+      "stop_id": "cn-shijiazhuang-huaizhonglu-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "34",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:36"
+      ],
+      "last_train": [
+        "22:15"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huitong-lu-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-huitong-lu",
+      "stop_id": "cn-shijiazhuang-huitong-lu-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "49",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:36"
+      ],
+      "last_train": [
+        "22:22"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huitong-lu-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-huitong-lu",
+      "stop_id": "cn-shijiazhuang-huitong-lu-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "49",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:27"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huizhan-zhongxin-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-huizhan-zhongxin",
+      "stop_id": "cn-shijiazhuang-huizhan-zhongxin-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "23",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:58"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huizhan-zhongxin-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-huizhan-zhongxin",
+      "stop_id": "cn-shijiazhuang-huizhan-zhongxin-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "23",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:33"
+      ],
+      "last_train": [
+        "22:11"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huoju-guangchang-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-huoju-guangchang",
+      "stop_id": "cn-shijiazhuang-huoju-guangchang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "17",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:42"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-huoju-guangchang-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-huoju-guangchang",
+      "stop_id": "cn-shijiazhuang-huoju-guangchang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "17",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:27"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-jiahua-lu",
+      "stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "27",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:00"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-jianhe-qiao-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-jianhe-qiao",
+      "stop_id": "cn-shijiazhuang-jianhe-qiao-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "37",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:37"
+      ],
+      "last_train": [
+        "22:07"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-jianhe-qiao-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-jianhe-qiao",
+      "stop_id": "cn-shijiazhuang-jianhe-qiao-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "37",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:36"
+      ],
+      "last_train": [
+        "22:22"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-jiefang-guangchang-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-jiefang-guangchang",
+      "stop_id": "cn-shijiazhuang-jiefang-guangchang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "7",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:19"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-jiefang-guangchang-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-jiefang-guangchang",
+      "stop_id": "cn-shijiazhuang-jiefang-guangchang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "7",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:51"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-lexiang-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-lexiang",
+      "stop_id": "cn-shijiazhuang-lexiang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "60",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:03"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-lieshi-lingyuan-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-lieshi-lingyuan",
+      "stop_id": "cn-shijiazhuang-lieshi-lingyuan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "5",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:14"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-lieshi-lingyuan-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-lieshi-lingyuan",
+      "stop_id": "cn-shijiazhuang-lieshi-lingyuan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "5",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:55"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-liu-xinzhuang-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-liu-xinzhuang",
+      "stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "40",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:00"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-liucun-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-liucun",
+      "stop_id": "cn-shijiazhuang-liucun-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "16",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:35"
+      ],
+      "last_train": [
+        "22:40"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-liucun-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-liucun",
+      "stop_id": "cn-shijiazhuang-liucun-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "16",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:33"
+      ],
+      "last_train": [
+        "22:30"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-nancun-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-nancun",
+      "stop_id": "cn-shijiazhuang-nancun-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "19",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:47"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-nancun-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-nancun",
+      "stop_id": "cn-shijiazhuang-nancun-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "19",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:23"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-nandou-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-nandou",
+      "stop_id": "cn-shijiazhuang-nandou-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "58",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:56"
+      ],
+      "last_train": [
+        "22:42"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-nandou-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-nandou",
+      "stop_id": "cn-shijiazhuang-nandou-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "58",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:35"
+      ],
+      "last_train": [
+        "22:08"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-nanwang-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-nanwang",
+      "stop_id": "cn-shijiazhuang-nanwang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "53",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:44"
+      ],
+      "last_train": [
+        "22:30"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-nanwang-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-nanwang",
+      "stop_id": "cn-shijiazhuang-nanwang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "53",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:19"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-nanwei-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-nanwei",
+      "stop_id": "cn-shijiazhuang-nanwei-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "28",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:42"
+      ],
+      "last_train": [
+        "22:28"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-nanwei-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-nanwei",
+      "stop_id": "cn-shijiazhuang-nanwei-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "28",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:01"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-ouyun-gongyuan-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-ouyun-gongyuan",
+      "stop_id": "cn-shijiazhuang-ouyun-gongyuan-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "33",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:16"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-ouyun-gongyuan-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-ouyun-gongyuan",
+      "stop_id": "cn-shijiazhuang-ouyun-gongyuan-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "33",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:13"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-pingan-dajie-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-pingan-dajie",
+      "stop_id": "cn-shijiazhuang-pingan-dajie-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "8",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:21"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-pingan-dajie-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-pingan-dajie",
+      "stop_id": "cn-shijiazhuang-pingan-dajie-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "8",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:49"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shangwu-zhongxin-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-shangwu-zhongxin",
+      "stop_id": "cn-shijiazhuang-shangwu-zhongxin-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "24",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "23:01"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shangwu-zhongxin-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-shangwu-zhongxin",
+      "stop_id": "cn-shijiazhuang-shangwu-zhongxin-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "24",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:09"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shi-erzhong-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-shi-erzhong",
+      "stop_id": "cn-shijiazhuang-shi-erzhong-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "45",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:09"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shi-erzhong-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-shi-erzhong",
+      "stop_id": "cn-shijiazhuang-shi-erzhong-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "45",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:41"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shiguang-jie-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-shiguang-jie",
+      "stop_id": "cn-shijiazhuang-shiguang-jie-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "2",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:08"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shiguang-jie-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-shiguang-jie",
+      "stop_id": "cn-shijiazhuang-shiguang-jie-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "2",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "23:02"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shijiazhuang-dongzhan-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-shijiazhuang-dongzhan",
+      "stop_id": "cn-shijiazhuang-shijiazhuang-dongzhan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "63",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:45"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shijiazhuang-dongzhan-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-shijiazhuang-dongzhan",
+      "stop_id": "cn-shijiazhuang-shijiazhuang-dongzhan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "63",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:25"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shijiazhuang-zhan-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-shijiazhuang-zhan",
+      "stop_id": "cn-shijiazhuang-shijiazhuang-zhan-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "65",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:35"
+      ],
+      "last_train": [
+        "22:21"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shijiazhuang-zhan-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-shijiazhuang-zhan",
+      "stop_id": "cn-shijiazhuang-shijiazhuang-zhan-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "65",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:08"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shijiazhuang-zhan-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-shijiazhuang-zhan",
+      "stop_id": "cn-shijiazhuang-shijiazhuang-zhan-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "65",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:20"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shijiazhuang-zhan-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-shijiazhuang-zhan",
+      "stop_id": "cn-shijiazhuang-shijiazhuang-zhan-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "65",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:30"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shizhuang-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-shizhuang",
+      "stop_id": "cn-shijiazhuang-shizhuang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "44",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:37"
+      ],
+      "last_train": [
+        "22:07"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-shizhuang-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-shizhuang",
+      "stop_id": "cn-shijiazhuang-shizhuang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "44",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:43"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-suncun-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-suncun",
+      "stop_id": "cn-shijiazhuang-suncun-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "50",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:38"
+      ],
+      "last_train": [
+        "22:24"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-suncun-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-suncun",
+      "stop_id": "cn-shijiazhuang-suncun-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "50",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:25"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-taihang-nandajie-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-taihang-nandajie",
+      "stop_id": "cn-shijiazhuang-taihang-nandajie-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "59",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:58"
+      ],
+      "last_train": [
+        "22:44"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-taihang-nandajie-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-taihang-nandajie",
+      "stop_id": "cn-shijiazhuang-taihang-nandajie-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "59",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:05"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-tangu-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-tangu",
+      "stop_id": "cn-shijiazhuang-tangu-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "13",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:35"
+      ],
+      "last_train": [
+        "22:32"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-tangu-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-tangu",
+      "stop_id": "cn-shijiazhuang-tangu-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "13",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:38"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-tatan-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-tatan",
+      "stop_id": "cn-shijiazhuang-tatan-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "30",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:38"
+      ],
+      "last_train": [
+        "22:24"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-tatan-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-tatan",
+      "stop_id": "cn-shijiazhuang-tatan-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "30",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:36"
+      ],
+      "last_train": [
+        "22:06"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-tazhong-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-tazhong",
+      "stop_id": "cn-shijiazhuang-tazhong-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "51",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:40"
+      ],
+      "last_train": [
+        "22:26"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-tazhong-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-tazhong",
+      "stop_id": "cn-shijiazhuang-tazhong-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "51",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:23"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-tiyuchang-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-tiyuchang",
+      "stop_id": "cn-shijiazhuang-tiyuchang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "11",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:27"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-tiyuchang-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-tiyuchang",
+      "stop_id": "cn-shijiazhuang-tiyuchang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "11",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:43"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-weitong-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-weitong",
+      "stop_id": "cn-shijiazhuang-weitong-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "54",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:47"
+      ],
+      "last_train": [
+        "22:33"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-weitong-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-weitong",
+      "stop_id": "cn-shijiazhuang-weitong-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "54",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:37"
+      ],
+      "last_train": [
+        "22:17"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xiaohe-dadao-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-xiaohe-dadao",
+      "stop_id": "cn-shijiazhuang-xiaohe-dadao-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "20",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:37"
+      ],
+      "last_train": [
+        "22:50"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xiaohe-dadao-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-xiaohe-dadao",
+      "stop_id": "cn-shijiazhuang-xiaohe-dadao-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "20",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:20"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xinbai-guangchang-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-xinbai-guangchang",
+      "stop_id": "cn-shijiazhuang-xinbai-guangchang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "6",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:17"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xinbai-guangchang-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-xinbai-guangchang",
+      "stop_id": "cn-shijiazhuang-xinbai-guangchang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "6",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:53"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xinbai-guangchang-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-xinbai-guangchang",
+      "stop_id": "cn-shijiazhuang-xinbai-guangchang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "6",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:33"
+      ],
+      "last_train": [
+        "22:11"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xinbai-guangchang-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-xinbai-guangchang",
+      "stop_id": "cn-shijiazhuang-xinbai-guangchang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "6",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:39"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xisanjiao-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-xisanjiao",
+      "stop_id": "cn-shijiazhuang-xisanjiao-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "48",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:17"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xisanjiao-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-xisanjiao",
+      "stop_id": "cn-shijiazhuang-xisanjiao-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "48",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:32"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-xisanzhuang",
+      "stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "41",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:00"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-xiwang",
+      "stop_id": "cn-shijiazhuang-xiwang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "1",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:05"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xiyangling-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-xiyangling",
+      "stop_id": "cn-shijiazhuang-xiyangling-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "56",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:51"
+      ],
+      "last_train": [
+        "22:37"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xiyangling-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-xiyangling",
+      "stop_id": "cn-shijiazhuang-xiyangling-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "56",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:12"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xizhuang-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-xizhuang",
+      "stop_id": "cn-shijiazhuang-xizhuang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "21",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:52"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-xizhuang-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-xizhuang",
+      "stop_id": "cn-shijiazhuang-xizhuang-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "21",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:40"
+      ],
+      "last_train": [
+        "22:18"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-yitang-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-yitang",
+      "stop_id": "cn-shijiazhuang-yitang-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "38",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:04"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-yitang-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-yitang",
+      "stop_id": "cn-shijiazhuang-yitang-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "38",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:39"
+      ],
+      "last_train": [
+        "22:25"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-yuanboyuan-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-yuanboyuan",
+      "stop_id": "cn-shijiazhuang-yuanboyuan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "25",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "23:03"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-yuanboyuan-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-yuanboyuan",
+      "stop_id": "cn-shijiazhuang-yuanboyuan-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "25",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:37"
+      ],
+      "last_train": [
+        "22:07"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-yuancun-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-yuancun",
+      "stop_id": "cn-shijiazhuang-yuancun-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "32",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:33"
+      ],
+      "last_train": [
+        "22:19"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-yuancun-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-yuancun",
+      "stop_id": "cn-shijiazhuang-yuancun-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "32",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "22:11"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-yuhua-lu-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-yuhua-lu",
+      "stop_id": "cn-shijiazhuang-yuhua-lu-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "35",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "22:12"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-yuhua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-yuhua-lu",
+      "stop_id": "cn-shijiazhuang-yuhua-lu-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "35",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:38"
+      ],
+      "last_train": [
+        "22:17"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-zhaohui-qiao-1-to-cn-shijiazhuang-fuze-primary",
+      "station_id": "cn-shijiazhuang-zhaohui-qiao",
+      "stop_id": "cn-shijiazhuang-zhaohui-qiao-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "14",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-fuze-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "福泽方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "22:35"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "福泽方向",
+        "destination_name": "福泽",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-zhaohui-qiao-1-to-cn-shijiazhuang-xiwang-primary",
+      "station_id": "cn-shijiazhuang-zhaohui-qiao",
+      "stop_id": "cn-shijiazhuang-zhaohui-qiao-1",
+      "line_id": "cn-shijiazhuang-line-1",
+      "station_code": "14",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xiwang-1",
+      "pattern_id": "cn-shijiazhuang-line-1-pattern-cn-shijiazhuang-xiwang-1-to-cn-shijiazhuang-fuze-1",
+      "direction_type": "linear",
+      "direction_label": "西王方向",
+      "first_train": [
+        "06:33"
+      ],
+      "last_train": [
+        "22:35"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西王方向",
+        "destination_name": "西王",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-zhongyangling-3-to-cn-shijiazhuang-lexiang-primary",
+      "station_id": "cn-shijiazhuang-zhongyangling",
+      "stop_id": "cn-shijiazhuang-zhongyangling-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "57",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-lexiang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "乐乡方向",
+      "first_train": [
+        "06:54"
+      ],
+      "last_train": [
+        "22:40"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "乐乡方向",
+        "destination_name": "乐乡",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-zhongyangling-3-to-cn-shijiazhuang-xisanzhuang-primary",
+      "station_id": "cn-shijiazhuang-zhongyangling",
+      "stop_id": "cn-shijiazhuang-zhongyangling-3",
+      "line_id": "cn-shijiazhuang-line-3",
+      "station_code": "57",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-xisanzhuang-3",
+      "pattern_id": "cn-shijiazhuang-line-3-pattern-cn-shijiazhuang-xisanzhuang-3-to-cn-shijiazhuang-lexiang-3",
+      "direction_type": "linear",
+      "direction_label": "西三庄方向",
+      "first_train": [
+        "06:37"
+      ],
+      "last_train": [
+        "22:10"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "西三庄方向",
+        "destination_name": "西三庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-zhuangke-tiedao-daxue-2-to-cn-shijiazhuang-jiahua-lu-primary",
+      "station_id": "cn-shijiazhuang-zhuangke-tiedao-daxue",
+      "stop_id": "cn-shijiazhuang-zhuangke-tiedao-daxue-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "39",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-jiahua-lu-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "嘉华路方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "22:01"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "嘉华路方向",
+        "destination_name": "嘉华路",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    },
+    {
+      "id": "cn-shijiazhuang-cn-shijiazhuang-zhuangke-tiedao-daxue-2-to-cn-shijiazhuang-liu-xinzhuang-primary",
+      "station_id": "cn-shijiazhuang-zhuangke-tiedao-daxue",
+      "stop_id": "cn-shijiazhuang-zhuangke-tiedao-daxue-2",
+      "line_id": "cn-shijiazhuang-line-2",
+      "station_code": "39",
+      "source_id": "baidu-transit-direction",
+      "destination_stop_id": "cn-shijiazhuang-liu-xinzhuang-2",
+      "pattern_id": "cn-shijiazhuang-line-2-pattern-cn-shijiazhuang-jiahua-lu-2-to-cn-shijiazhuang-liu-xinzhuang-2",
+      "direction_type": "linear",
+      "direction_label": "柳辛庄方向",
+      "first_train": [
+        "06:41"
+      ],
+      "last_train": [
+        "22:28"
+      ],
+      "extras": {
+        "service": "primary",
+        "direction": "柳辛庄方向",
+        "destination_name": "柳辛庄",
+        "source_note": "逐站首末班取自百度路径规划 direction/v2/transit 的 detail.first_time/last_time（起站发车时刻），与官网公布的首末班车时刻表逐项一致；官网仅以图片发布该表，未做 OCR。"
+      }
+    }
+  ]
+}

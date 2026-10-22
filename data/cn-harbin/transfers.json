@@ -1,0 +1,160 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-harbin",
+  "generated_at": "2026-10-22T14:40:11.505Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-22T14:40:11.505Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-harbin-museum-of-heilongjiang-province-1-cn-harbin-museum-of-heilongjiang-province-2",
+      "station_id": "cn-harbin-museum-of-heilongjiang-province",
+      "from_line_id": "cn-harbin-line-1",
+      "to_line_id": "cn-harbin-line-2",
+      "from_stop_id": "cn-harbin-museum-of-heilongjiang-province-1",
+      "to_stop_id": "cn-harbin-museum-of-heilongjiang-province-2",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-museum-of-heilongjiang-province-2-cn-harbin-museum-of-heilongjiang-province-1",
+      "station_id": "cn-harbin-museum-of-heilongjiang-province",
+      "from_line_id": "cn-harbin-line-2",
+      "to_line_id": "cn-harbin-line-1",
+      "from_stop_id": "cn-harbin-museum-of-heilongjiang-province-2",
+      "to_stop_id": "cn-harbin-museum-of-heilongjiang-province-1",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-peoples-square-2-cn-harbin-peoples-square-3",
+      "station_id": "cn-harbin-peoples-square",
+      "from_line_id": "cn-harbin-line-2",
+      "to_line_id": "cn-harbin-line-3",
+      "from_stop_id": "cn-harbin-peoples-square-2",
+      "to_stop_id": "cn-harbin-peoples-square-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-peoples-square-3-cn-harbin-peoples-square-2",
+      "station_id": "cn-harbin-peoples-square",
+      "from_line_id": "cn-harbin-line-3",
+      "to_line_id": "cn-harbin-line-2",
+      "from_stop_id": "cn-harbin-peoples-square-3",
+      "to_stop_id": "cn-harbin-peoples-square-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-taipingqiao-1-cn-harbin-taipingqiao-3",
+      "station_id": "cn-harbin-taipingqiao",
+      "from_line_id": "cn-harbin-line-1",
+      "to_line_id": "cn-harbin-line-3",
+      "from_stop_id": "cn-harbin-taipingqiao-1",
+      "to_stop_id": "cn-harbin-taipingqiao-3",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-taipingqiao-3-cn-harbin-taipingqiao-1",
+      "station_id": "cn-harbin-taipingqiao",
+      "from_line_id": "cn-harbin-line-3",
+      "to_line_id": "cn-harbin-line-1",
+      "from_stop_id": "cn-harbin-taipingqiao-3",
+      "to_stop_id": "cn-harbin-taipingqiao-1",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university-1-cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university-3",
+      "station_id": "cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university",
+      "from_line_id": "cn-harbin-line-1",
+      "to_line_id": "cn-harbin-line-3",
+      "from_stop_id": "cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university-1",
+      "to_stop_id": "cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university-3",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university-3-cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university-1",
+      "station_id": "cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university",
+      "from_line_id": "cn-harbin-line-3",
+      "to_line_id": "cn-harbin-line-1",
+      "from_stop_id": "cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university-3",
+      "to_stop_id": "cn-harbin-the-second-affiliated-hospital-of-harbin-medical-university-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-zhujiang-road-2-cn-harbin-zhujiang-road-3",
+      "station_id": "cn-harbin-zhujiang-road",
+      "from_line_id": "cn-harbin-line-2",
+      "to_line_id": "cn-harbin-line-3",
+      "from_stop_id": "cn-harbin-zhujiang-road-2",
+      "to_stop_id": "cn-harbin-zhujiang-road-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-harbin-zhujiang-road-3-cn-harbin-zhujiang-road-2",
+      "station_id": "cn-harbin-zhujiang-road",
+      "from_line_id": "cn-harbin-line-3",
+      "to_line_id": "cn-harbin-line-2",
+      "from_stop_id": "cn-harbin-zhujiang-road-3",
+      "to_stop_id": "cn-harbin-zhujiang-road-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

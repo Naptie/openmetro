@@ -1,0 +1,132 @@
+{
+  "id": "cn-harbin",
+  "name": "哈尔滨地铁",
+  "names": {
+    "zh": "哈尔滨地铁",
+    "en": "Harbin Metro"
+  },
+  "city": {
+    "id": "CN-2301",
+    "name": {
+      "zh": "哈尔滨市",
+      "en": "Harbin"
+    },
+    "country": "CN",
+    "population": 10009854,
+    "area": 53076.48,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        126.633333333,
+        45.75
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "线网拓扑/坐标/英文名/示意图来自 AMap Subway（2301_drw_haerbin.json，GCJ-02 原生）；运营方官网 www.harbin-metro.com 目前全站停机维护（任意路径均返回同一 30 字节占位页），且历史版本只发布散文与图片（票价及优惠政策/车站指南/运营时刻），无任何结构化接口，故未做 OCR；首末班车与区间在车里程/时长实时查询百度路径规划 direction/v2/transit，与运营方通过微信公众号「冰城出行」发布的 2025-05 首末车发车时刻表逐格比对一致（36/36）；OD 票价按官网《地铁票价及优惠政策》的里程分段计价票制，在车轨道里程最短路计算（同站进出官方收最低票价 2 元，本数据集沿用全网统一的对角线记 0 约定）；换乘步行时间官方未公布，gapfill 图层以百度路径规划的换乘步行段实测补齐。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 73,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 73,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 75,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 76,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 10,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 152,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 78,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 5256,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

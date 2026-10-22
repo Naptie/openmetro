@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-lanzhou",
+  "generated_at": "2026-10-22T21:02:50.889Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-22T21:02:50.889Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-lanzhou-dongfanghong-guangchang-1-cn-lanzhou-dongfanghong-guangchang-2",
+      "station_id": "cn-lanzhou-dongfanghong-guangchang",
+      "from_line_id": "cn-lanzhou-line-1",
+      "to_line_id": "cn-lanzhou-line-2",
+      "from_stop_id": "cn-lanzhou-dongfanghong-guangchang-1",
+      "to_stop_id": "cn-lanzhou-dongfanghong-guangchang-2",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-lanzhou-dongfanghong-guangchang-2-cn-lanzhou-dongfanghong-guangchang-1",
+      "station_id": "cn-lanzhou-dongfanghong-guangchang",
+      "from_line_id": "cn-lanzhou-line-2",
+      "to_line_id": "cn-lanzhou-line-1",
+      "from_stop_id": "cn-lanzhou-dongfanghong-guangchang-2",
+      "to_stop_id": "cn-lanzhou-dongfanghong-guangchang-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-lanzhou-wuli-pu-1-cn-lanzhou-wuli-pu-2",
+      "station_id": "cn-lanzhou-wuli-pu",
+      "from_line_id": "cn-lanzhou-line-1",
+      "to_line_id": "cn-lanzhou-line-2",
+      "from_stop_id": "cn-lanzhou-wuli-pu-1",
+      "to_stop_id": "cn-lanzhou-wuli-pu-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-lanzhou-wuli-pu-2-cn-lanzhou-wuli-pu-1",
+      "station_id": "cn-lanzhou-wuli-pu",
+      "from_line_id": "cn-lanzhou-line-2",
+      "to_line_id": "cn-lanzhou-line-1",
+      "from_stop_id": "cn-lanzhou-wuli-pu-2",
+      "to_stop_id": "cn-lanzhou-wuli-pu-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

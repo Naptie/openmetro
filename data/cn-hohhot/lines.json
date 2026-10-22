@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-hohhot",
+  "generated_at": "2026-10-22T14:54:59.646Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-hohhot-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "aliases": [
+        "地铁1号线"
+      ],
+      "color": "#cc0000",
+      "short_name": "1",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "amap-subway-1501",
+          "id": "1号线"
+        },
+        {
+          "source": "amap-subway-1501",
+          "id": "900000077532"
+        },
+        {
+          "source": "amap-subway-1501",
+          "id": "900000077535"
+        }
+      ],
+      "extras": {
+        "names_source": "source",
+        "amap_color": "CC0000",
+        "amap_name": "1号线",
+        "baidu_vehicle_name": "地铁1号线",
+        "length_km": 21.719,
+        "station_count": 20,
+        "opened": "2019-12-29",
+        "fare_policy": "mileage"
+      }
+    },
+    {
+      "id": "cn-hohhot-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "aliases": [
+        "轨道交通2号线"
+      ],
+      "color": "#2249a3",
+      "short_name": "2",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "amap-subway-1501",
+          "id": "2号线"
+        },
+        {
+          "source": "amap-subway-1501",
+          "id": "900000077536"
+        },
+        {
+          "source": "amap-subway-1501",
+          "id": "900000077537"
+        }
+      ],
+      "extras": {
+        "names_source": "source",
+        "amap_color": "2249A3",
+        "amap_name": "2号线",
+        "baidu_vehicle_name": "地铁2号线",
+        "length_km": 27.32,
+        "station_count": 24,
+        "opened": "2020-10-01",
+        "fare_policy": "mileage"
+      }
+    }
+  ]
+}
