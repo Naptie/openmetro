@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-23T13:47:43.618Z_
+_Updated 2026-10-23T16:13:36.551Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
