@@ -76,7 +76,7 @@ export function matrixFromWorkbook(
   }
   if (missing.length > 0) {
     throw new Error(
-      `fare workbook is missing published fares for: ${missing.join(', ')} — the workbook is stale, refresh tmp/cache/cn-qingdao/official-fare-table.xlsx`
+      `fare workbook is missing published fares for: ${missing.join(', ')} — the workbook is stale, re-run the fares sync to refresh it`
     );
   }
 

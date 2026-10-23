@@ -5,6 +5,7 @@
  * resolution — those are workspace conventions, not city logic.
  */
 import { existsSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -51,4 +52,21 @@ export function networkDataDir(networkId: string, root?: string): string {
  */
 export function adapterCacheDir(networkId: string, root?: string): string {
   return join(root ?? findRepoRoot(), 'tmp', 'cache', networkId);
+}
+
+/**
+ * Machine-local scratch cache outside the repository.
+ *
+ * Use this for external files that are cheap to re-fetch but must never be
+ * mistaken for repository inputs — the operator-published fare workbook the
+ * Qingdao adapter downloads on every run is the canonical example. Keeping
+ * them under the OS temp dir instead of the repo's `tmp/` makes it impossible
+ * to read a cached copy as if it were a committed artifact, and the OS temp
+ * dir is machine-local scratch by definition.
+ *
+ * A cache is an optimisation, never an input: a test that needs the file
+ * must fetch it, not read this directory.
+ */
+export function adapterOsCacheDir(networkId: string): string {
+  return join(tmpdir(), 'openmetro-cache', networkId);
 }

@@ -10,15 +10,16 @@
  *   own station ids and interchange flags; `act=pjSearch` quotes the fare for
  *   one OD pair by exact display name.
  * - The published OD fare matrix (`青岛地铁票价信息表.xlsx`, linked from the
- *   official 信息公开 page) — the full 195×195 network matrix in one file;
- *   cached under `tmp/cache/cn-qingdao/` so later syncs can reuse the bytes
- *   without polluting the canonical data dir.
+ *   official 信息公开 page) — the full 195×195 network matrix in one file.
+ *   Downloaded fresh on every run and parsed in memory; a machine-local copy
+ *   under the OS temp dir is kept only as an offline fallback, so nothing
+ *   about this file is ever part of the repository.
  */
 import { spawn } from 'node:child_process';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { inflateRawSync } from 'node:zlib';
-import { adapterCacheDir, officialFetchHeaders, proxyUrl } from '@openmetro/core';
+import { adapterOsCacheDir, officialFetchHeaders, proxyUrl } from '@openmetro/core';
 
 const AMAP_SUBWAY = 'https://webapi.amap.com/subway/data/3702_drw_qingdao.json';
 const AMAP_REFERER = 'https://www.qd-metro.com/';
@@ -394,22 +395,55 @@ function rowCellsCount(cells: Map<string, SheetCell>, row: number): number {
 }
 
 /**
- * Download and parse the official fare workbook. Every sync fetches the live
- * workbook (one 141 KB request) and refreshes the byte cache; the cache only
- * serves as an offline fallback and for tests, under `tmp/cache/cn-qingdao/`.
+ * Download the operator's published fare workbook into memory.
+ *
+ * Pure acquisition: the bytes never touch the repository. The sync pipeline
+ * and the test both call this, so the workbook is fetched fresh on every run
+ * — the same treatment every other official JSON payload gets. Nothing about
+ * this file is ever committed.
+ *
+ * The zip magic check matters: a reverse proxy that cannot reach the
+ * operator often answers 200 with an HTML error page, and that must be
+ * reported as an unreachable source rather than as a broken workbook.
+ */
+export async function downloadFareWorkbookBytes(): Promise<Buffer> {
+  const buf = await fetchBuffer(FARE_XLSX_URL, `${QD_SITE}/`);
+  if (buf.length < 4 || buf.subarray(0, 4).toString('hex') !== '504b0304') {
+    throw new Error(
+      `fare workbook: expected a zip archive, got ${buf.length} bytes — the proxy may have answered with an error page`
+    );
+  }
+  return buf;
+}
+
+/**
+ * Download and parse the official fare workbook.
+ *
+ * The bytes are fetched fresh on every sync (one 141 KB request) and parsed
+ * in memory. A machine-local copy under the OS temp dir is kept purely as an
+ * offline fallback: when the operator site is unreachable, the previous copy
+ * lets the sync finish, and `matrixFromWorkbook` still fails loudly if that
+ * copy is stale relative to the freshly synced topology.
  */
 export async function fetchFareWorkbook(): Promise<FareWorkbook> {
-  const cachePath = join(adapterCacheDir('cn-qingdao'), FARE_XLSX_CACHE);
-  let buf: Buffer | null = null;
-  try {
-    buf = await fetchBuffer(FARE_XLSX_URL, `${QD_SITE}/`);
-    await mkdir(adapterCacheDir('cn-qingdao'), { recursive: true });
-    await writeFile(cachePath, buf);
-  } catch (err) {
-    console.log(`  fare workbook download failed (${err}) — falling back to cache`);
-    buf = await readFile(cachePath);
-  }
-  console.log('  fare workbook downloaded');
+  const cacheDir = adapterOsCacheDir('cn-qingdao');
+  const cachePath = join(cacheDir, FARE_XLSX_CACHE);
+  let fromLocalCopy = false;
+  const buf = await downloadFareWorkbookBytes().catch(async (err: unknown) => {
+    fromLocalCopy = true;
+    console.log(`  fare workbook download failed (${err}) — falling back to the local copy`);
+    try {
+      return await readFile(cachePath);
+    } catch {
+      throw new Error(`fare workbook unavailable (${err}) and no local copy at ${cachePath}`);
+    }
+  });
+  // Caching is an optimisation, never a requirement: failing to persist the
+  // copy must not fail the sync.
+  await mkdir(cacheDir, { recursive: true })
+    .then(() => writeFile(cachePath, buf))
+    .catch((err: unknown) => console.log(`  fare workbook cache write failed (${err})`));
+  console.log(fromLocalCopy ? '  fare workbook ready (local copy)' : '  fare workbook downloaded');
   return parseFareWorkbook(buf);
 }
 

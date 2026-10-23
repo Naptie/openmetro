@@ -37,6 +37,11 @@ jobs:
         run: bun run typecheck
 
       - name: Test
+        env:
+          # Adapter tests fetch official sources the same way the sync
+          # workflow does (e.g. the Qingdao fare workbook), so they need the
+          # same reverse proxy to reach non-CN hosts from the runner.
+          OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}
         run: bun test
 
       - name: Verify canonical data and write manifest
