@@ -1,7 +1,11 @@
 # Periodic sync of canonical metro data.
 #
 # Schedules:
-#   - Weekly (Mon 03:17 UTC): topology + timetables + enrichment per city
+#   - Weekly (Mon 03:17 UTC): topology + timetables + enrichment + gapfill per
+#     city. gapfill is part of the scheduled run on purpose: it is the layer
+#     that measures the segment times and transfer walks that the operator
+#     does not publish, so a scheduled sync without it would rewrite those
+#     layers back as defaults.
 #   - Monthly (1st 04:41 UTC): fares per city (OD matrix via operator planners)
 #
 # Note on network egress:
@@ -102,7 +106,16 @@ jobs:
         run: |
           echo "proxy=${OPENMETRO_REVERSE_PROXY:-none}"
           LAYERS="topology,timetables,enrichment"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && echo "${{ inputs.layers }}" | grep -q gapfill; then
+          # The scheduled run always includes gapfill. It is the layer that
+          # upgrades weak segment times to planner-measured values and replaces
+          # baked transfer-walk defaults with real measurements — without it a
+          # scheduled sync rewrites those layers back as defaults. Measured on
+          # 2026-10-23: with gapfill all 8 recently added networks kept
+          # 9/9 official/100%, without it 5 of them dropped to
+          # `transfer_times: default / coverage 0`.
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            LAYERS="${LAYERS},gapfill"
+          elif echo "${{ inputs.layers }}" | grep -q gapfill; then
             LAYERS="${LAYERS},gapfill"
           fi
           bun run data:sync --network "${{ matrix.network }}" --layer "${LAYERS}"
