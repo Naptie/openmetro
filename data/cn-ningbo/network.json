@@ -1,0 +1,132 @@
+{
+  "id": "cn-ningbo",
+  "name": "宁波轨道交通",
+  "names": {
+    "zh": "宁波轨道交通",
+    "en": "Ningbo Rail Transit"
+  },
+  "city": {
+    "id": "CN-3302",
+    "name": {
+      "zh": "宁波市",
+      "en": "Ningbo"
+    },
+    "country": "CN",
+    "population": 9404283,
+    "area": 9365.58,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        121.549166666,
+        29.875
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑、逐方向逐站首末班与换乘站结构来自宁波轨道交通官网 station.php?stat（9 线、210 个线站记录、179 座车站、30 座换乘站）；官方 OD 票价来自 station.php?gostationTest。坐标、线网示意图、线色与部分英文名来自官网线网图所使用的 AMap Subway 数据。官网仅使用 HTTP（HTTPS 证书已过期）。8 号线下应南站官网标注「暂不开通」，记为在建车站。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 179,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 180,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 200,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 200,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 62,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 400,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 209,
+        "derived": 0,
+        "default": 1
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 0.99,
+      "status": "partial",
+      "counts": {
+        "official": 31862,
+        "derived": 0,
+        "default": 358
+      }
+    }
+  }
+}

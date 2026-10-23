@@ -1,0 +1,260 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-wuxi",
+  "generated_at": "2026-10-23T21:34:54.678Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-wuxi-line-1-pattern-primary",
+      "line_id": "cn-wuxi-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-wuxi-yanqiao-1",
+        "cn-wuxi-xibei-canal-1",
+        "cn-wuxi-xizhang-1",
+        "cn-wuxi-tianyi-1",
+        "cn-wuxi-liutan-1",
+        "cn-wuxi-zhuangqian-1",
+        "cn-wuxi-minfeng-1",
+        "cn-wuxi-wuxi-railway-station-1",
+        "cn-wuxi-shenglimen-1",
+        "cn-wuxi-sanyang-plaza-1",
+        "cn-wuxi-nanchan-temple-1",
+        "cn-wuxi-tanduqiao-1",
+        "cn-wuxi-taihu-square-1",
+        "cn-wuxi-qingmingqiao-1",
+        "cn-wuxi-peoples-hospital-1",
+        "cn-wuxi-huaqingdaqiao-1",
+        "cn-wuxi-yangming-1",
+        "cn-wuxi-nanhujiayuan-1",
+        "cn-wuxi-tangtieqiao-1",
+        "cn-wuxi-jingui-park-1",
+        "cn-wuxi-civic-center-1",
+        "cn-wuxi-cultural-palace-1",
+        "cn-wuxi-jiangnan-university-1",
+        "cn-wuxi-changguangxi-1",
+        "cn-wuxi-xuelang-1",
+        "cn-wuxi-gedaiqiao-1",
+        "cn-wuxi-nanfangquan-1"
+      ],
+      "origin_stop_id": "cn-wuxi-yanqiao-1",
+      "terminal_stop_id": "cn-wuxi-nanfangquan-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "1号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1",
+        "origin_name": "堰桥",
+        "terminal_name": "南方泉"
+      }
+    },
+    {
+      "id": "cn-wuxi-line-2-pattern-primary",
+      "line_id": "cn-wuxi-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-wuxi-wuxi-east-railway-station-2",
+        "cn-wuxi-yingbin-square-2",
+        "cn-wuxi-yingyuehu-park-2",
+        "cn-wuxi-zhaqiao-2",
+        "cn-wuxi-jiulihe-park-2",
+        "cn-wuxi-yunlin-2",
+        "cn-wuxi-zhuangqiao-2",
+        "cn-wuxi-dongting-2",
+        "cn-wuxi-baizhuang-2",
+        "cn-wuxi-guangyi-2",
+        "cn-wuxi-jinghai-2",
+        "cn-wuxi-shangmadun-2",
+        "cn-wuxi-donglin-plaza-2",
+        "cn-wuxi-sanyang-plaza-2",
+        "cn-wuxi-wuai-plaza-2",
+        "cn-wuxi-liangxidaqiao-2",
+        "cn-wuxi-dawangji-2",
+        "cn-wuxi-heliekou-2",
+        "cn-wuxi-xiaotaoyuan-2",
+        "cn-wuxi-rongxiang-2",
+        "cn-wuxi-meiyuan-kaiyuan-temple-2"
+      ],
+      "origin_stop_id": "cn-wuxi-wuxi-east-railway-station-2",
+      "terminal_stop_id": "cn-wuxi-meiyuan-kaiyuan-temple-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "2号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2",
+        "origin_name": "无锡东站",
+        "terminal_name": "梅园开原寺"
+      }
+    },
+    {
+      "id": "cn-wuxi-line-2-pattern-spur-gdzy",
+      "line_id": "cn-wuxi-line-2",
+      "name": "2号线（安镇支线）",
+      "names": {
+        "zh": "2号线（安镇支线）",
+        "en": "2号线 (安镇 spur)"
+      },
+      "stop_ids": [
+        "cn-wuxi-wuxi-east-railway-station-2",
+        "cn-wuxi-anzhen-2"
+      ],
+      "origin_stop_id": "cn-wuxi-wuxi-east-railway-station-2",
+      "terminal_stop_id": "cn-wuxi-anzhen-2",
+      "is_primary": false,
+      "junction_stop_id": "cn-wuxi-wuxi-east-railway-station-2",
+      "source_ids": [
+        {
+          "source": "wxmetro-network-map",
+          "id": "安镇"
+        }
+      ],
+      "extras": {
+        "pattern_status": "under_construction",
+        "parent_line_id": "cn-wuxi-line-2",
+        "connector_station_id": "cn-wuxi-wuxi-east-railway-station",
+        "official_note": "官网线路导览图标为「暂缓开通」：站体上盖综合体停工，尚未进入运营，AMap 地铁数据集亦未收录。"
+      }
+    },
+    {
+      "id": "cn-wuxi-line-3-pattern-primary",
+      "line_id": "cn-wuxi-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "stop_ids": [
+        "cn-wuxi-sumiao-3",
+        "cn-wuxi-qianqiao-3",
+        "cn-wuxi-longshanshao-3",
+        "cn-wuxi-shimen-road-3",
+        "cn-wuxi-shengan-3",
+        "cn-wuxi-wuqiao-3",
+        "cn-wuxi-beizhakou-3",
+        "cn-wuxi-wuxi-railway-station-3",
+        "cn-wuxi-guangrui-3",
+        "cn-wuxi-jinghai-3",
+        "cn-wuxi-dongfeng-3",
+        "cn-wuxi-xufeng-3",
+        "cn-wuxi-taihu-garden-3",
+        "cn-wuxi-xinguang-road-3",
+        "cn-wuxi-wangzhuang-road-3",
+        "cn-wuxi-huangshan-road-3",
+        "cn-wuxi-gaolang-east-road-3",
+        "cn-wuxi-zhoujing-alley-3",
+        "cn-wuxi-wuxi-new-district-railway-station-3",
+        "cn-wuxi-south-changjiang-road-3",
+        "cn-wuxi-shuofang-airport-3"
+      ],
+      "origin_stop_id": "cn-wuxi-sumiao-3",
+      "terminal_stop_id": "cn-wuxi-shuofang-airport-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "3号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "3",
+        "origin_name": "苏庙",
+        "terminal_name": "硕放机场"
+      }
+    },
+    {
+      "id": "cn-wuxi-line-4-pattern-primary",
+      "line_id": "cn-wuxi-line-4",
+      "name": "4号线",
+      "names": {
+        "zh": "4号线",
+        "en": "Line 4"
+      },
+      "stop_ids": [
+        "cn-wuxi-liutan-4",
+        "cn-wuxi-guangshi-road-4",
+        "cn-wuxi-huangxiang-4",
+        "cn-wuxi-shengan-4",
+        "cn-wuxi-huishan-ancient-town-4",
+        "cn-wuxi-qingshanwan-rongjun-hospital-4",
+        "cn-wuxi-heliekou-4",
+        "cn-wuxi-xiyuanlong-4",
+        "cn-wuxi-wuxi-sports-center-4",
+        "cn-wuxi-xiajiabian-4",
+        "cn-wuxi-lihudaqiao-4",
+        "cn-wuxi-wuxi-grand-theatre-4",
+        "cn-wuxi-wuhu-avenue-4",
+        "cn-wuxi-zhouxinyuan-4",
+        "cn-wuxi-civic-center-4",
+        "cn-wuxi-wudu-road-4",
+        "cn-wuxi-fengrun-road-4",
+        "cn-wuxi-wuxi-taihu-international-expo-center-4"
+      ],
+      "origin_stop_id": "cn-wuxi-liutan-4",
+      "terminal_stop_id": "cn-wuxi-wuxi-taihu-international-expo-center-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "4号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "4",
+        "origin_name": "刘潭",
+        "terminal_name": "博览中心"
+      }
+    },
+    {
+      "id": "cn-wuxi-line-s1-pattern-primary",
+      "line_id": "cn-wuxi-line-s1",
+      "name": "S1线",
+      "names": {
+        "zh": "S1线",
+        "en": "S1/Xicheng Line"
+      },
+      "stop_ids": [
+        "cn-wuxi-yanqiao-S1",
+        "cn-wuxi-mazhen-S1",
+        "cn-wuxi-qingyang-S1",
+        "cn-wuxi-qiaoqi-S1",
+        "cn-wuxi-nanzha-S1",
+        "cn-wuxi-jiangyin-railway-station-S1",
+        "cn-wuxi-jiangyin-tcm-hospital-S1",
+        "cn-wuxi-nanmen-S1",
+        "cn-wuxi-zhongshan-park-S1",
+        "cn-wuxi-jiangyin-bund-S1"
+      ],
+      "origin_stop_id": "cn-wuxi-yanqiao-S1",
+      "terminal_stop_id": "cn-wuxi-jiangyin-bund-S1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "S1线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "S1",
+        "origin_name": "堰桥",
+        "terminal_name": "江阴外滩"
+      }
+    }
+  ]
+}

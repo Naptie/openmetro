@@ -1,0 +1,1628 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-wuxi",
+  "generated_at": "2026-10-23T21:35:48.668Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T21:35:48.668Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-baizhuang-2-cn-wuxi-guangyi-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-baizhuang-2",
+      "to_stop_id": "cn-wuxi-guangyi-2",
+      "from_station_id": "cn-wuxi-baizhuang",
+      "to_station_id": "cn-wuxi-guangyi",
+      "direction": "both",
+      "distance_km": 0.923,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-beizhakou-3-cn-wuxi-wuxi-railway-station-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-beizhakou-3",
+      "to_stop_id": "cn-wuxi-wuxi-railway-station-3",
+      "from_station_id": "cn-wuxi-beizhakou",
+      "to_station_id": "cn-wuxi-wuxi-railway-station",
+      "direction": "both",
+      "distance_km": 0.936,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-changguangxi-1-cn-wuxi-xuelang-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-changguangxi-1",
+      "to_stop_id": "cn-wuxi-xuelang-1",
+      "from_station_id": "cn-wuxi-changguangxi",
+      "to_station_id": "cn-wuxi-xuelang",
+      "direction": "both",
+      "distance_km": 1.554,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-civic-center-1-cn-wuxi-cultural-palace-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-civic-center-1",
+      "to_stop_id": "cn-wuxi-cultural-palace-1",
+      "from_station_id": "cn-wuxi-civic-center",
+      "to_station_id": "cn-wuxi-cultural-palace",
+      "direction": "both",
+      "distance_km": 1.386,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-civic-center-4-cn-wuxi-wudu-road-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-civic-center-4",
+      "to_stop_id": "cn-wuxi-wudu-road-4",
+      "from_station_id": "cn-wuxi-civic-center",
+      "to_station_id": "cn-wuxi-wudu-road",
+      "direction": "both",
+      "distance_km": 1.099,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-cultural-palace-1-cn-wuxi-jiangnan-university-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-cultural-palace-1",
+      "to_stop_id": "cn-wuxi-jiangnan-university-1",
+      "from_station_id": "cn-wuxi-cultural-palace",
+      "to_station_id": "cn-wuxi-jiangnan-university",
+      "direction": "both",
+      "distance_km": 1.718,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-dawangji-2-cn-wuxi-heliekou-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-dawangji-2",
+      "to_stop_id": "cn-wuxi-heliekou-2",
+      "from_station_id": "cn-wuxi-dawangji",
+      "to_station_id": "cn-wuxi-heliekou",
+      "direction": "both",
+      "distance_km": 1.426,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-dongfeng-3-cn-wuxi-xufeng-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-dongfeng-3",
+      "to_stop_id": "cn-wuxi-xufeng-3",
+      "from_station_id": "cn-wuxi-dongfeng",
+      "to_station_id": "cn-wuxi-xufeng",
+      "direction": "both",
+      "distance_km": 0.956,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-donglin-plaza-2-cn-wuxi-sanyang-plaza-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-donglin-plaza-2",
+      "to_stop_id": "cn-wuxi-sanyang-plaza-2",
+      "from_station_id": "cn-wuxi-donglin-plaza",
+      "to_station_id": "cn-wuxi-sanyang-plaza",
+      "direction": "both",
+      "distance_km": 0.769,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-dongting-2-cn-wuxi-baizhuang-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-dongting-2",
+      "to_stop_id": "cn-wuxi-baizhuang-2",
+      "from_station_id": "cn-wuxi-dongting",
+      "to_station_id": "cn-wuxi-baizhuang",
+      "direction": "both",
+      "distance_km": 1.27,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-fengrun-road-4-cn-wuxi-wuxi-taihu-international-expo-center-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-fengrun-road-4",
+      "to_stop_id": "cn-wuxi-wuxi-taihu-international-expo-center-4",
+      "from_station_id": "cn-wuxi-fengrun-road",
+      "to_station_id": "cn-wuxi-wuxi-taihu-international-expo-center",
+      "direction": "both",
+      "distance_km": 1.036,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 29.8,
+        "a_s_per_km": 55.6,
+        "b_s": 67.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-gaolang-east-road-3-cn-wuxi-zhoujing-alley-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-gaolang-east-road-3",
+      "to_stop_id": "cn-wuxi-zhoujing-alley-3",
+      "from_station_id": "cn-wuxi-gaolang-east-road",
+      "to_station_id": "cn-wuxi-zhoujing-alley",
+      "direction": "both",
+      "distance_km": 1.416,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-gedaiqiao-1-cn-wuxi-nanfangquan-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-gedaiqiao-1",
+      "to_stop_id": "cn-wuxi-nanfangquan-1",
+      "from_station_id": "cn-wuxi-gedaiqiao",
+      "to_station_id": "cn-wuxi-nanfangquan",
+      "direction": "both",
+      "distance_km": 1.653,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 38.9,
+        "a_s_per_km": 51.5,
+        "b_s": 67.8,
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-guangrui-3-cn-wuxi-jinghai-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-guangrui-3",
+      "to_stop_id": "cn-wuxi-jinghai-3",
+      "from_station_id": "cn-wuxi-guangrui",
+      "to_station_id": "cn-wuxi-jinghai",
+      "direction": "both",
+      "distance_km": 1.507,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-guangshi-road-4-cn-wuxi-huangxiang-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-guangshi-road-4",
+      "to_stop_id": "cn-wuxi-huangxiang-4",
+      "from_station_id": "cn-wuxi-guangshi-road",
+      "to_station_id": "cn-wuxi-huangxiang",
+      "direction": "both",
+      "distance_km": 2.373,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-guangyi-2-cn-wuxi-jinghai-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-guangyi-2",
+      "to_stop_id": "cn-wuxi-jinghai-2",
+      "from_station_id": "cn-wuxi-guangyi",
+      "to_station_id": "cn-wuxi-jinghai",
+      "direction": "both",
+      "distance_km": 1.219,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-heliekou-2-cn-wuxi-xiaotaoyuan-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-heliekou-2",
+      "to_stop_id": "cn-wuxi-xiaotaoyuan-2",
+      "from_station_id": "cn-wuxi-heliekou",
+      "to_station_id": "cn-wuxi-xiaotaoyuan",
+      "direction": "both",
+      "distance_km": 1.119,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-heliekou-4-cn-wuxi-xiyuanlong-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-heliekou-4",
+      "to_stop_id": "cn-wuxi-xiyuanlong-4",
+      "from_station_id": "cn-wuxi-heliekou",
+      "to_station_id": "cn-wuxi-xiyuanlong",
+      "direction": "both",
+      "distance_km": 1.468,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-huangshan-road-3-cn-wuxi-gaolang-east-road-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-huangshan-road-3",
+      "to_stop_id": "cn-wuxi-gaolang-east-road-3",
+      "from_station_id": "cn-wuxi-huangshan-road",
+      "to_station_id": "cn-wuxi-gaolang-east-road",
+      "direction": "both",
+      "distance_km": 0.931,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-huangxiang-4-cn-wuxi-shengan-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-huangxiang-4",
+      "to_stop_id": "cn-wuxi-shengan-4",
+      "from_station_id": "cn-wuxi-huangxiang",
+      "to_station_id": "cn-wuxi-shengan",
+      "direction": "both",
+      "distance_km": 1.071,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-huaqingdaqiao-1-cn-wuxi-yangming-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-huaqingdaqiao-1",
+      "to_stop_id": "cn-wuxi-yangming-1",
+      "from_station_id": "cn-wuxi-huaqingdaqiao",
+      "to_station_id": "cn-wuxi-yangming",
+      "direction": "both",
+      "distance_km": 1.612,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-huishan-ancient-town-4-cn-wuxi-qingshanwan-rongjun-hospital-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-huishan-ancient-town-4",
+      "to_stop_id": "cn-wuxi-qingshanwan-rongjun-hospital-4",
+      "from_station_id": "cn-wuxi-huishan-ancient-town",
+      "to_station_id": "cn-wuxi-qingshanwan-rongjun-hospital",
+      "direction": "both",
+      "distance_km": 1.757,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-jiangnan-university-1-cn-wuxi-changguangxi-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-jiangnan-university-1",
+      "to_stop_id": "cn-wuxi-changguangxi-1",
+      "from_station_id": "cn-wuxi-jiangnan-university",
+      "to_station_id": "cn-wuxi-changguangxi",
+      "direction": "both",
+      "distance_km": 1.191,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-jiangyin-railway-station-S1-cn-wuxi-jiangyin-tcm-hospital-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-jiangyin-railway-station-S1",
+      "to_stop_id": "cn-wuxi-jiangyin-tcm-hospital-S1",
+      "from_station_id": "cn-wuxi-jiangyin-railway-station",
+      "to_station_id": "cn-wuxi-jiangyin-tcm-hospital",
+      "direction": "both",
+      "distance_km": 1.75,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-jiangyin-tcm-hospital-S1-cn-wuxi-nanmen-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-jiangyin-tcm-hospital-S1",
+      "to_stop_id": "cn-wuxi-nanmen-S1",
+      "from_station_id": "cn-wuxi-jiangyin-tcm-hospital",
+      "to_station_id": "cn-wuxi-nanmen",
+      "direction": "both",
+      "distance_km": 1.696,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-jinghai-2-cn-wuxi-shangmadun-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-jinghai-2",
+      "to_stop_id": "cn-wuxi-shangmadun-2",
+      "from_station_id": "cn-wuxi-jinghai",
+      "to_station_id": "cn-wuxi-shangmadun",
+      "direction": "both",
+      "distance_km": 0.846,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-jinghai-3-cn-wuxi-dongfeng-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-jinghai-3",
+      "to_stop_id": "cn-wuxi-dongfeng-3",
+      "from_station_id": "cn-wuxi-jinghai",
+      "to_station_id": "cn-wuxi-dongfeng",
+      "direction": "both",
+      "distance_km": 1.102,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-jingui-park-1-cn-wuxi-civic-center-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-jingui-park-1",
+      "to_stop_id": "cn-wuxi-civic-center-1",
+      "from_station_id": "cn-wuxi-jingui-park",
+      "to_station_id": "cn-wuxi-civic-center",
+      "direction": "both",
+      "distance_km": 1.443,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-jiulihe-park-2-cn-wuxi-yunlin-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-jiulihe-park-2",
+      "to_stop_id": "cn-wuxi-yunlin-2",
+      "from_station_id": "cn-wuxi-jiulihe-park",
+      "to_station_id": "cn-wuxi-yunlin",
+      "direction": "both",
+      "distance_km": 1.323,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-liangxidaqiao-2-cn-wuxi-dawangji-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-liangxidaqiao-2",
+      "to_stop_id": "cn-wuxi-dawangji-2",
+      "from_station_id": "cn-wuxi-liangxidaqiao",
+      "to_station_id": "cn-wuxi-dawangji",
+      "direction": "both",
+      "distance_km": 1.054,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-lihudaqiao-4-cn-wuxi-wuxi-grand-theatre-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-lihudaqiao-4",
+      "to_stop_id": "cn-wuxi-wuxi-grand-theatre-4",
+      "from_station_id": "cn-wuxi-lihudaqiao",
+      "to_station_id": "cn-wuxi-wuxi-grand-theatre",
+      "direction": "both",
+      "distance_km": 2.075,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-liutan-1-cn-wuxi-zhuangqian-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-liutan-1",
+      "to_stop_id": "cn-wuxi-zhuangqian-1",
+      "from_station_id": "cn-wuxi-liutan",
+      "to_station_id": "cn-wuxi-zhuangqian",
+      "direction": "both",
+      "distance_km": 1.907,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-liutan-4-cn-wuxi-guangshi-road-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-liutan-4",
+      "to_stop_id": "cn-wuxi-guangshi-road-4",
+      "from_station_id": "cn-wuxi-liutan",
+      "to_station_id": "cn-wuxi-guangshi-road",
+      "direction": "both",
+      "distance_km": 1.579,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-longshanshao-3-cn-wuxi-shimen-road-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-longshanshao-3",
+      "to_stop_id": "cn-wuxi-shimen-road-3",
+      "from_station_id": "cn-wuxi-longshanshao",
+      "to_station_id": "cn-wuxi-shimen-road",
+      "direction": "both",
+      "distance_km": 1.579,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-mazhen-S1-cn-wuxi-qingyang-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-mazhen-S1",
+      "to_stop_id": "cn-wuxi-qingyang-S1",
+      "from_station_id": "cn-wuxi-mazhen",
+      "to_station_id": "cn-wuxi-qingyang",
+      "direction": "both",
+      "distance_km": 7.108,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 360,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-minfeng-1-cn-wuxi-wuxi-railway-station-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-minfeng-1",
+      "to_stop_id": "cn-wuxi-wuxi-railway-station-1",
+      "from_station_id": "cn-wuxi-minfeng",
+      "to_station_id": "cn-wuxi-wuxi-railway-station",
+      "direction": "both",
+      "distance_km": 1.525,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-nanchan-temple-1-cn-wuxi-tanduqiao-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-nanchan-temple-1",
+      "to_stop_id": "cn-wuxi-tanduqiao-1",
+      "from_station_id": "cn-wuxi-nanchan-temple",
+      "to_station_id": "cn-wuxi-tanduqiao",
+      "direction": "both",
+      "distance_km": 0.715,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-nanhujiayuan-1-cn-wuxi-tangtieqiao-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-nanhujiayuan-1",
+      "to_stop_id": "cn-wuxi-tangtieqiao-1",
+      "from_station_id": "cn-wuxi-nanhujiayuan",
+      "to_station_id": "cn-wuxi-tangtieqiao",
+      "direction": "both",
+      "distance_km": 1.016,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-nanmen-S1-cn-wuxi-zhongshan-park-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-nanmen-S1",
+      "to_stop_id": "cn-wuxi-zhongshan-park-S1",
+      "from_station_id": "cn-wuxi-nanmen",
+      "to_station_id": "cn-wuxi-zhongshan-park",
+      "direction": "both",
+      "distance_km": 1.691,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-nanzha-S1-cn-wuxi-jiangyin-railway-station-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-nanzha-S1",
+      "to_stop_id": "cn-wuxi-jiangyin-railway-station-S1",
+      "from_station_id": "cn-wuxi-nanzha",
+      "to_station_id": "cn-wuxi-jiangyin-railway-station",
+      "direction": "both",
+      "distance_km": 3.007,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-peoples-hospital-1-cn-wuxi-huaqingdaqiao-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-peoples-hospital-1",
+      "to_stop_id": "cn-wuxi-huaqingdaqiao-1",
+      "from_station_id": "cn-wuxi-peoples-hospital",
+      "to_station_id": "cn-wuxi-huaqingdaqiao",
+      "direction": "both",
+      "distance_km": 1.192,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-qianqiao-3-cn-wuxi-longshanshao-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-qianqiao-3",
+      "to_stop_id": "cn-wuxi-longshanshao-3",
+      "from_station_id": "cn-wuxi-qianqiao",
+      "to_station_id": "cn-wuxi-longshanshao",
+      "direction": "both",
+      "distance_km": 1.464,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-qiaoqi-S1-cn-wuxi-nanzha-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-qiaoqi-S1",
+      "to_stop_id": "cn-wuxi-nanzha-S1",
+      "from_station_id": "cn-wuxi-qiaoqi",
+      "to_station_id": "cn-wuxi-nanzha",
+      "direction": "both",
+      "distance_km": 2.864,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-qingmingqiao-1-cn-wuxi-peoples-hospital-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-qingmingqiao-1",
+      "to_stop_id": "cn-wuxi-peoples-hospital-1",
+      "from_station_id": "cn-wuxi-qingmingqiao",
+      "to_station_id": "cn-wuxi-peoples-hospital",
+      "direction": "both",
+      "distance_km": 1.078,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-qingshanwan-rongjun-hospital-4-cn-wuxi-heliekou-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-qingshanwan-rongjun-hospital-4",
+      "to_stop_id": "cn-wuxi-heliekou-4",
+      "from_station_id": "cn-wuxi-qingshanwan-rongjun-hospital",
+      "to_station_id": "cn-wuxi-heliekou",
+      "direction": "both",
+      "distance_km": 1.176,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-qingyang-S1-cn-wuxi-qiaoqi-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-qingyang-S1",
+      "to_stop_id": "cn-wuxi-qiaoqi-S1",
+      "from_station_id": "cn-wuxi-qingyang",
+      "to_station_id": "cn-wuxi-qiaoqi",
+      "direction": "both",
+      "distance_km": 5.604,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-rongxiang-2-cn-wuxi-meiyuan-kaiyuan-temple-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-rongxiang-2",
+      "to_stop_id": "cn-wuxi-meiyuan-kaiyuan-temple-2",
+      "from_station_id": "cn-wuxi-rongxiang",
+      "to_station_id": "cn-wuxi-meiyuan-kaiyuan-temple",
+      "direction": "both",
+      "distance_km": 1.825,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 39.8,
+        "a_s_per_km": 63.4,
+        "b_s": 49.1,
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-sanyang-plaza-1-cn-wuxi-nanchan-temple-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-sanyang-plaza-1",
+      "to_stop_id": "cn-wuxi-nanchan-temple-1",
+      "from_station_id": "cn-wuxi-sanyang-plaza",
+      "to_station_id": "cn-wuxi-nanchan-temple",
+      "direction": "both",
+      "distance_km": 1.157,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-sanyang-plaza-2-cn-wuxi-wuai-plaza-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-sanyang-plaza-2",
+      "to_stop_id": "cn-wuxi-wuai-plaza-2",
+      "from_station_id": "cn-wuxi-sanyang-plaza",
+      "to_station_id": "cn-wuxi-wuai-plaza",
+      "direction": "both",
+      "distance_km": 1.088,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-shangmadun-2-cn-wuxi-donglin-plaza-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-shangmadun-2",
+      "to_stop_id": "cn-wuxi-donglin-plaza-2",
+      "from_station_id": "cn-wuxi-shangmadun",
+      "to_station_id": "cn-wuxi-donglin-plaza",
+      "direction": "both",
+      "distance_km": 1.312,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-shengan-3-cn-wuxi-wuqiao-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-shengan-3",
+      "to_stop_id": "cn-wuxi-wuqiao-3",
+      "from_station_id": "cn-wuxi-shengan",
+      "to_station_id": "cn-wuxi-wuqiao",
+      "direction": "both",
+      "distance_km": 1.729,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-shengan-4-cn-wuxi-huishan-ancient-town-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-shengan-4",
+      "to_stop_id": "cn-wuxi-huishan-ancient-town-4",
+      "from_station_id": "cn-wuxi-shengan",
+      "to_station_id": "cn-wuxi-huishan-ancient-town",
+      "direction": "both",
+      "distance_km": 1.783,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-shenglimen-1-cn-wuxi-sanyang-plaza-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-shenglimen-1",
+      "to_stop_id": "cn-wuxi-sanyang-plaza-1",
+      "from_station_id": "cn-wuxi-shenglimen",
+      "to_station_id": "cn-wuxi-sanyang-plaza",
+      "direction": "both",
+      "distance_km": 0.682,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-shimen-road-3-cn-wuxi-shengan-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-shimen-road-3",
+      "to_stop_id": "cn-wuxi-shengan-3",
+      "from_station_id": "cn-wuxi-shimen-road",
+      "to_station_id": "cn-wuxi-shengan",
+      "direction": "both",
+      "distance_km": 1.248,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-south-changjiang-road-3-cn-wuxi-shuofang-airport-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-south-changjiang-road-3",
+      "to_stop_id": "cn-wuxi-shuofang-airport-3",
+      "from_station_id": "cn-wuxi-south-changjiang-road",
+      "to_station_id": "cn-wuxi-shuofang-airport",
+      "direction": "both",
+      "distance_km": 3.334,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 47.3,
+        "a_s_per_km": 55.5,
+        "b_s": 68.9,
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-sumiao-3-cn-wuxi-qianqiao-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-sumiao-3",
+      "to_stop_id": "cn-wuxi-qianqiao-3",
+      "from_station_id": "cn-wuxi-sumiao",
+      "to_station_id": "cn-wuxi-qianqiao",
+      "direction": "both",
+      "distance_km": 1.293,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-taihu-garden-3-cn-wuxi-xinguang-road-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-taihu-garden-3",
+      "to_stop_id": "cn-wuxi-xinguang-road-3",
+      "from_station_id": "cn-wuxi-taihu-garden",
+      "to_station_id": "cn-wuxi-xinguang-road",
+      "direction": "both",
+      "distance_km": 1.348,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-taihu-square-1-cn-wuxi-qingmingqiao-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-taihu-square-1",
+      "to_stop_id": "cn-wuxi-qingmingqiao-1",
+      "from_station_id": "cn-wuxi-taihu-square",
+      "to_station_id": "cn-wuxi-qingmingqiao",
+      "direction": "both",
+      "distance_km": 0.893,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-tanduqiao-1-cn-wuxi-taihu-square-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-tanduqiao-1",
+      "to_stop_id": "cn-wuxi-taihu-square-1",
+      "from_station_id": "cn-wuxi-tanduqiao",
+      "to_station_id": "cn-wuxi-taihu-square",
+      "direction": "both",
+      "distance_km": 0.816,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-tangtieqiao-1-cn-wuxi-jingui-park-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-tangtieqiao-1",
+      "to_stop_id": "cn-wuxi-jingui-park-1",
+      "from_station_id": "cn-wuxi-tangtieqiao",
+      "to_station_id": "cn-wuxi-jingui-park",
+      "direction": "both",
+      "distance_km": 1.181,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-tianyi-1-cn-wuxi-liutan-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-tianyi-1",
+      "to_stop_id": "cn-wuxi-liutan-1",
+      "from_station_id": "cn-wuxi-tianyi",
+      "to_station_id": "cn-wuxi-liutan",
+      "direction": "both",
+      "distance_km": 1.22,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wangzhuang-road-3-cn-wuxi-huangshan-road-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-wangzhuang-road-3",
+      "to_stop_id": "cn-wuxi-huangshan-road-3",
+      "from_station_id": "cn-wuxi-wangzhuang-road",
+      "to_station_id": "cn-wuxi-huangshan-road",
+      "direction": "both",
+      "distance_km": 1.689,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuai-plaza-2-cn-wuxi-liangxidaqiao-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-wuai-plaza-2",
+      "to_stop_id": "cn-wuxi-liangxidaqiao-2",
+      "from_station_id": "cn-wuxi-wuai-plaza",
+      "to_station_id": "cn-wuxi-liangxidaqiao",
+      "direction": "both",
+      "distance_km": 0.818,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wudu-road-4-cn-wuxi-fengrun-road-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-wudu-road-4",
+      "to_stop_id": "cn-wuxi-fengrun-road-4",
+      "from_station_id": "cn-wuxi-wudu-road",
+      "to_station_id": "cn-wuxi-fengrun-road",
+      "direction": "both",
+      "distance_km": 1.376,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuhu-avenue-4-cn-wuxi-zhouxinyuan-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-wuhu-avenue-4",
+      "to_stop_id": "cn-wuxi-zhouxinyuan-4",
+      "from_station_id": "cn-wuxi-wuhu-avenue",
+      "to_station_id": "cn-wuxi-zhouxinyuan",
+      "direction": "both",
+      "distance_km": 1.683,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuqiao-3-cn-wuxi-beizhakou-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-wuqiao-3",
+      "to_stop_id": "cn-wuxi-beizhakou-3",
+      "from_station_id": "cn-wuxi-wuqiao",
+      "to_station_id": "cn-wuxi-beizhakou",
+      "direction": "both",
+      "distance_km": 1.213,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuxi-east-railway-station-2-cn-wuxi-anzhen-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-wuxi-east-railway-station-2",
+      "to_stop_id": "cn-wuxi-anzhen-2",
+      "from_station_id": "cn-wuxi-wuxi-east-railway-station",
+      "to_station_id": "cn-wuxi-anzhen",
+      "direction": "both",
+      "source_id": "wxmetro-network-map",
+      "distance_km": 1.566,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 38.1,
+        "a_s_per_km": 63.4,
+        "b_s": 49.1
+      },
+      "travel_time_seconds": 148,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuxi-east-railway-station-2-cn-wuxi-yingbin-square-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-wuxi-east-railway-station-2",
+      "to_stop_id": "cn-wuxi-yingbin-square-2",
+      "from_station_id": "cn-wuxi-wuxi-east-railway-station",
+      "to_station_id": "cn-wuxi-yingbin-square",
+      "direction": "both",
+      "distance_km": 0.8,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuxi-grand-theatre-4-cn-wuxi-wuhu-avenue-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-wuxi-grand-theatre-4",
+      "to_stop_id": "cn-wuxi-wuhu-avenue-4",
+      "from_station_id": "cn-wuxi-wuxi-grand-theatre",
+      "to_station_id": "cn-wuxi-wuhu-avenue",
+      "direction": "both",
+      "distance_km": 1.186,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuxi-new-district-railway-station-3-cn-wuxi-south-changjiang-road-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-wuxi-new-district-railway-station-3",
+      "to_stop_id": "cn-wuxi-south-changjiang-road-3",
+      "from_station_id": "cn-wuxi-wuxi-new-district-railway-station",
+      "to_station_id": "cn-wuxi-south-changjiang-road",
+      "direction": "both",
+      "distance_km": 1.526,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuxi-railway-station-1-cn-wuxi-shenglimen-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-wuxi-railway-station-1",
+      "to_stop_id": "cn-wuxi-shenglimen-1",
+      "from_station_id": "cn-wuxi-wuxi-railway-station",
+      "to_station_id": "cn-wuxi-shenglimen",
+      "direction": "both",
+      "distance_km": 1.045,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuxi-railway-station-3-cn-wuxi-guangrui-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-wuxi-railway-station-3",
+      "to_stop_id": "cn-wuxi-guangrui-3",
+      "from_station_id": "cn-wuxi-wuxi-railway-station",
+      "to_station_id": "cn-wuxi-guangrui",
+      "direction": "both",
+      "distance_km": 1.176,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-wuxi-sports-center-4-cn-wuxi-xiajiabian-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-wuxi-sports-center-4",
+      "to_stop_id": "cn-wuxi-xiajiabian-4",
+      "from_station_id": "cn-wuxi-wuxi-sports-center",
+      "to_station_id": "cn-wuxi-xiajiabian",
+      "direction": "both",
+      "distance_km": 0.944,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-xiajiabian-4-cn-wuxi-lihudaqiao-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-xiajiabian-4",
+      "to_stop_id": "cn-wuxi-lihudaqiao-4",
+      "from_station_id": "cn-wuxi-xiajiabian",
+      "to_station_id": "cn-wuxi-lihudaqiao",
+      "direction": "both",
+      "distance_km": 1.642,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-xiaotaoyuan-2-cn-wuxi-rongxiang-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-xiaotaoyuan-2",
+      "to_stop_id": "cn-wuxi-rongxiang-2",
+      "from_station_id": "cn-wuxi-xiaotaoyuan",
+      "to_station_id": "cn-wuxi-rongxiang",
+      "direction": "both",
+      "distance_km": 1.269,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-xibei-canal-1-cn-wuxi-xizhang-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-xibei-canal-1",
+      "to_stop_id": "cn-wuxi-xizhang-1",
+      "from_station_id": "cn-wuxi-xibei-canal",
+      "to_station_id": "cn-wuxi-xizhang",
+      "direction": "both",
+      "distance_km": 2.34,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-xinguang-road-3-cn-wuxi-wangzhuang-road-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-xinguang-road-3",
+      "to_stop_id": "cn-wuxi-wangzhuang-road-3",
+      "from_station_id": "cn-wuxi-xinguang-road",
+      "to_station_id": "cn-wuxi-wangzhuang-road",
+      "direction": "both",
+      "distance_km": 1.069,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-xiyuanlong-4-cn-wuxi-wuxi-sports-center-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-xiyuanlong-4",
+      "to_stop_id": "cn-wuxi-wuxi-sports-center-4",
+      "from_station_id": "cn-wuxi-xiyuanlong",
+      "to_station_id": "cn-wuxi-wuxi-sports-center",
+      "direction": "both",
+      "distance_km": 0.871,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-xizhang-1-cn-wuxi-tianyi-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-xizhang-1",
+      "to_stop_id": "cn-wuxi-tianyi-1",
+      "from_station_id": "cn-wuxi-xizhang",
+      "to_station_id": "cn-wuxi-tianyi",
+      "direction": "both",
+      "distance_km": 0.897,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-xuelang-1-cn-wuxi-gedaiqiao-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-xuelang-1",
+      "to_stop_id": "cn-wuxi-gedaiqiao-1",
+      "from_station_id": "cn-wuxi-xuelang",
+      "to_station_id": "cn-wuxi-gedaiqiao",
+      "direction": "both",
+      "distance_km": 1.642,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-xufeng-3-cn-wuxi-taihu-garden-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-xufeng-3",
+      "to_stop_id": "cn-wuxi-taihu-garden-3",
+      "from_station_id": "cn-wuxi-xufeng",
+      "to_station_id": "cn-wuxi-taihu-garden",
+      "direction": "both",
+      "distance_km": 1.063,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-yangming-1-cn-wuxi-nanhujiayuan-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-yangming-1",
+      "to_stop_id": "cn-wuxi-nanhujiayuan-1",
+      "from_station_id": "cn-wuxi-yangming",
+      "to_station_id": "cn-wuxi-nanhujiayuan",
+      "direction": "both",
+      "distance_km": 1.607,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-yanqiao-1-cn-wuxi-xibei-canal-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-yanqiao-1",
+      "to_stop_id": "cn-wuxi-xibei-canal-1",
+      "from_station_id": "cn-wuxi-yanqiao",
+      "to_station_id": "cn-wuxi-xibei-canal",
+      "direction": "both",
+      "distance_km": 1.463,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-yanqiao-S1-cn-wuxi-mazhen-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-yanqiao-S1",
+      "to_stop_id": "cn-wuxi-mazhen-S1",
+      "from_station_id": "cn-wuxi-yanqiao",
+      "to_station_id": "cn-wuxi-mazhen",
+      "direction": "both",
+      "distance_km": 3.666,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-yingbin-square-2-cn-wuxi-yingyuehu-park-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-yingbin-square-2",
+      "to_stop_id": "cn-wuxi-yingyuehu-park-2",
+      "from_station_id": "cn-wuxi-yingbin-square",
+      "to_station_id": "cn-wuxi-yingyuehu-park",
+      "direction": "both",
+      "distance_km": 0.672,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-yingyuehu-park-2-cn-wuxi-zhaqiao-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-yingyuehu-park-2",
+      "to_stop_id": "cn-wuxi-zhaqiao-2",
+      "from_station_id": "cn-wuxi-yingyuehu-park",
+      "to_station_id": "cn-wuxi-zhaqiao",
+      "direction": "both",
+      "distance_km": 2.035,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-yunlin-2-cn-wuxi-zhuangqiao-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-yunlin-2",
+      "to_stop_id": "cn-wuxi-zhuangqiao-2",
+      "from_station_id": "cn-wuxi-yunlin",
+      "to_station_id": "cn-wuxi-zhuangqiao",
+      "direction": "both",
+      "distance_km": 1.522,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-zhaqiao-2-cn-wuxi-jiulihe-park-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-zhaqiao-2",
+      "to_stop_id": "cn-wuxi-jiulihe-park-2",
+      "from_station_id": "cn-wuxi-zhaqiao",
+      "to_station_id": "cn-wuxi-jiulihe-park",
+      "direction": "both",
+      "distance_km": 2.132,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-zhongshan-park-S1-cn-wuxi-jiangyin-bund-S1",
+      "line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-zhongshan-park-S1",
+      "to_stop_id": "cn-wuxi-jiangyin-bund-S1",
+      "from_station_id": "cn-wuxi-zhongshan-park",
+      "to_station_id": "cn-wuxi-jiangyin-bund",
+      "direction": "both",
+      "distance_km": 3.17,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 59.1,
+        "a_s_per_km": 39.5,
+        "b_s": 67.4,
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-zhoujing-alley-3-cn-wuxi-wuxi-new-district-railway-station-3",
+      "line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-zhoujing-alley-3",
+      "to_stop_id": "cn-wuxi-wuxi-new-district-railway-station-3",
+      "from_station_id": "cn-wuxi-zhoujing-alley",
+      "to_station_id": "cn-wuxi-wuxi-new-district-railway-station",
+      "direction": "both",
+      "distance_km": 1.838,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-zhouxinyuan-4-cn-wuxi-civic-center-4",
+      "line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-zhouxinyuan-4",
+      "to_stop_id": "cn-wuxi-civic-center-4",
+      "from_station_id": "cn-wuxi-zhouxinyuan",
+      "to_station_id": "cn-wuxi-civic-center",
+      "direction": "both",
+      "distance_km": 1.568,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-zhuangqian-1-cn-wuxi-minfeng-1",
+      "line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-zhuangqian-1",
+      "to_stop_id": "cn-wuxi-minfeng-1",
+      "from_station_id": "cn-wuxi-zhuangqian",
+      "to_station_id": "cn-wuxi-minfeng",
+      "direction": "both",
+      "distance_km": 1.011,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-wuxi-seg-cn-wuxi-zhuangqiao-2-cn-wuxi-dongting-2",
+      "line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-zhuangqiao-2",
+      "to_stop_id": "cn-wuxi-dongting-2",
+      "from_station_id": "cn-wuxi-zhuangqiao",
+      "to_station_id": "cn-wuxi-dongting",
+      "direction": "both",
+      "distance_km": 1.549,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "planner_time_source": "baidu-transit"
+      },
+      "source_id": "amap-subway-3202",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    }
+  ]
+}

@@ -1,0 +1,2981 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-wuxi",
+  "generated_at": "2026-10-23T21:34:54.677Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-wuxi-anzhen",
+      "name": "安镇",
+      "names": {
+        "zh": "安镇",
+        "en": "Anzhen"
+      },
+      "location": {
+        "lon": 120.471124,
+        "lat": 31.607489,
+        "crs": "gcj02"
+      },
+      "status": "under_construction",
+      "source_ids": [
+        {
+          "source": "wxmetro-network-map",
+          "id": "安镇"
+        }
+      ],
+      "extras": {
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "status_note": "官网线路导览图标为「暂缓开通」：站体上盖综合体停工，尚未进入运营，AMap 地铁数据集亦未收录。",
+        "location_source": "baidu-place"
+      }
+    },
+    {
+      "id": "cn-wuxi-baizhuang",
+      "name": "柏庄",
+      "names": {
+        "zh": "柏庄",
+        "en": "Baizhuang"
+      },
+      "location": {
+        "lon": 120.351078,
+        "lat": 31.585997,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1251,
+        "y": 1023,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "柏庄"
+        }
+      ],
+      "extras": {
+        "pinyin": "BaiZhuang",
+        "amap_poiid": "BV10417346",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-beizhakou",
+      "name": "北栅口",
+      "names": {
+        "zh": "北栅口",
+        "en": "Beizhakou"
+      },
+      "location": {
+        "lon": 120.297117,
+        "lat": 31.59104,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 866,
+        "y": 993,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "北栅口"
+        }
+      ],
+      "extras": {
+        "pinyin": "BeiCeKou",
+        "amap_poiid": "BV10124730",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-changguangxi",
+      "name": "长广溪",
+      "names": {
+        "zh": "长广溪",
+        "en": "Changguangxi"
+      },
+      "location": {
+        "lon": 120.277388,
+        "lat": 31.473366,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 849,
+        "y": 1691,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "长广溪"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChangGuangXi",
+        "amap_poiid": "BV10128136",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-civic-center",
+      "name": "市民中心",
+      "names": {
+        "zh": "市民中心",
+        "en": "Civic Center"
+      },
+      "location": {
+        "lon": 120.30675,
+        "lat": 31.491559,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 968,
+        "y": 1610,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "市民中心"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiMin ZhongXin",
+        "amap_poiid": "BV10128137",
+        "line_ids": [
+          "cn-wuxi-line-1",
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-cultural-palace",
+      "name": "文化宫",
+      "names": {
+        "zh": "文化宫",
+        "en": "Cultural Palace"
+      },
+      "location": {
+        "lon": 120.291179,
+        "lat": 31.490014,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 899,
+        "y": 1610,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "文化宫"
+        }
+      ],
+      "extras": {
+        "pinyin": "WenHuaGong",
+        "amap_poiid": "BV10124415",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-dawangji",
+      "name": "大王基",
+      "names": {
+        "zh": "大王基",
+        "en": "Dawangji"
+      },
+      "location": {
+        "lon": 120.275666,
+        "lat": 31.564803,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 833,
+        "y": 1188,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "大王基"
+        }
+      ],
+      "extras": {
+        "pinyin": "DaWangJi",
+        "amap_poiid": "BV10417341",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-dongfeng",
+      "name": "东风",
+      "names": {
+        "zh": "东风",
+        "en": "Dongfeng"
+      },
+      "location": {
+        "lon": 120.332308,
+        "lat": 31.573515,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1129,
+        "y": 1137,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "东风"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongFeng",
+        "amap_poiid": "BV10128128",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-donglin-plaza",
+      "name": "东林广场",
+      "names": {
+        "zh": "东林广场",
+        "en": "Donglin Plaza"
+      },
+      "location": {
+        "lon": 120.308394,
+        "lat": 31.578479,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1021,
+        "y": 1104,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "东林广场"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongLin GuangChang",
+        "amap_poiid": "BV10417345",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-dongting",
+      "name": "东亭",
+      "names": {
+        "zh": "东亭",
+        "en": "Dongting"
+      },
+      "location": {
+        "lon": 120.363665,
+        "lat": 31.582134,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1315,
+        "y": 1077,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "东亭"
+        }
+      ],
+      "extras": {
+        "pinyin": "DongTing",
+        "amap_poiid": "BV10417336",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-fengrun-road",
+      "name": "丰润道",
+      "names": {
+        "zh": "丰润道",
+        "en": "Fengrun Road"
+      },
+      "location": {
+        "lon": 120.315356,
+        "lat": 31.474179,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1037,
+        "y": 1745,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "丰润道"
+        }
+      ],
+      "extras": {
+        "pinyin": "FengRun Dao",
+        "amap_poiid": "BV10743385",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-gaolang-east-road",
+      "name": "高浪东路",
+      "names": {
+        "zh": "高浪东路",
+        "en": "Gaolang East Road"
+      },
+      "location": {
+        "lon": 120.376048,
+        "lat": 31.523336,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1605,
+        "y": 1466,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "高浪东路"
+        }
+      ],
+      "extras": {
+        "pinyin": "GaoLang DongLu",
+        "amap_poiid": "BV10709558",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-gedaiqiao",
+      "name": "葛埭桥",
+      "names": {
+        "zh": "葛埭桥",
+        "en": "Gedaiqiao"
+      },
+      "location": {
+        "lon": 120.274227,
+        "lat": 31.44777,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 849,
+        "y": 1787,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "葛埭桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "GeDai Qiao",
+        "amap_poiid": "BV10886628",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-guangrui",
+      "name": "广瑞",
+      "names": {
+        "zh": "广瑞",
+        "en": "Guangrui"
+      },
+      "location": {
+        "lon": 120.319391,
+        "lat": 31.588852,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1115,
+        "y": 993,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "广瑞"
+        }
+      ],
+      "extras": {
+        "pinyin": "GuangRui",
+        "amap_poiid": "BV10128127",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-guangshi-road",
+      "name": "广石路",
+      "names": {
+        "zh": "广石路",
+        "en": "Guangshi Road"
+      },
+      "location": {
+        "lon": 120.290063,
+        "lat": 31.617803,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 839,
+        "y": 828,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "广石路"
+        }
+      ],
+      "extras": {
+        "pinyin": "GuangShi Lu",
+        "amap_poiid": "BV10743382",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-guangyi",
+      "name": "广益",
+      "names": {
+        "zh": "广益",
+        "en": "Guangyi"
+      },
+      "location": {
+        "lon": 120.341347,
+        "lat": 31.586566,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1209,
+        "y": 1023,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "广益"
+        }
+      ],
+      "extras": {
+        "pinyin": "GuangYi",
+        "amap_poiid": "BV10417337",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-heliekou",
+      "name": "河埒口",
+      "names": {
+        "zh": "河埒口",
+        "en": "Heliekou"
+      },
+      "location": {
+        "lon": 120.260863,
+        "lat": 31.562011,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 594,
+        "y": 1190,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "河埒口"
+        }
+      ],
+      "extras": {
+        "pinyin": "HeLie Kou",
+        "amap_poiid": "BV10417342",
+        "line_ids": [
+          "cn-wuxi-line-2",
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-huangshan-road",
+      "name": "黄山路",
+      "names": {
+        "zh": "黄山路",
+        "en": "Huangshan Road"
+      },
+      "location": {
+        "lon": 120.369864,
+        "lat": 31.529726,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1520,
+        "y": 1408,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "黄山路"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuangShan Lu",
+        "amap_poiid": "BV10709559",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-huangxiang",
+      "name": "黄巷",
+      "names": {
+        "zh": "黄巷",
+        "en": "Huangxiang"
+      },
+      "location": {
+        "lon": 120.280027,
+        "lat": 31.59936,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 747,
+        "y": 887,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "黄巷"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuangXiang",
+        "amap_poiid": "BV10743393",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-huaqingdaqiao",
+      "name": "华清大桥",
+      "names": {
+        "zh": "华清大桥",
+        "en": "Huaqingdaqiao"
+      },
+      "location": {
+        "lon": 120.327989,
+        "lat": 31.533799,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1106,
+        "y": 1346,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "华清大桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuaQing DaQiao",
+        "amap_poiid": "BV10127903",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-huishan-ancient-town",
+      "name": "惠山古镇",
+      "names": {
+        "zh": "惠山古镇",
+        "en": "Huishan Ancient Town"
+      },
+      "location": {
+        "lon": 120.277689,
+        "lat": 31.581157,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 642,
+        "y": 1051,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "惠山古镇"
+        }
+      ],
+      "extras": {
+        "pinyin": "HuiShan GuZhen",
+        "amap_poiid": "BV10743383",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-jiangnan-university",
+      "name": "江南大学",
+      "names": {
+        "zh": "江南大学",
+        "en": "Jiangnan University"
+      },
+      "location": {
+        "lon": 120.278763,
+        "lat": 31.483933,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 849,
+        "y": 1640,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "江南大学"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiangNan DaXue",
+        "amap_poiid": "BV10125530",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-jiangyin-bund",
+      "name": "江阴外滩",
+      "names": {
+        "zh": "江阴外滩",
+        "en": "Jiangyin Bund"
+      },
+      "location": {
+        "lon": 120.258424,
+        "lat": 31.923216,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1039,
+        "y": 0,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "江阴外滩"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiangYin WaiTan",
+        "amap_poiid": "BV11300079",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-jiangyin-railway-station",
+      "name": "江阴高铁站",
+      "names": {
+        "zh": "江阴高铁站",
+        "en": "Jiangyin Railway Station"
+      },
+      "location": {
+        "lon": 120.278611,
+        "lat": 31.862554,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1037,
+        "y": 197,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "江阴高铁站"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiangYin GaoTie Zhan",
+        "amap_poiid": "BV11300080",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-jiangyin-tcm-hospital",
+      "name": "江阴中医院",
+      "names": {
+        "zh": "江阴中医院",
+        "en": "Jiangyin TCM Hospital"
+      },
+      "location": {
+        "lon": 120.272246,
+        "lat": 31.876033,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1037,
+        "y": 150,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "江阴中医院"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiangYin ZhongYiYuan",
+        "amap_poiid": "BV09111943",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-jinghai",
+      "name": "靖海",
+      "names": {
+        "zh": "靖海",
+        "en": "Jinghai"
+      },
+      "location": {
+        "lon": 120.330414,
+        "lat": 31.583353,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1129,
+        "y": 1063,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "靖海"
+        }
+      ],
+      "extras": {
+        "pinyin": "JingHai",
+        "amap_poiid": "BV10417328",
+        "line_ids": [
+          "cn-wuxi-line-2",
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-jingui-park",
+      "name": "金匮公园",
+      "names": {
+        "zh": "金匮公园",
+        "en": "Jingui Park"
+      },
+      "location": {
+        "lon": 120.320208,
+        "lat": 31.493467,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1034,
+        "y": 1610,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "金匮公园"
+        }
+      ],
+      "extras": {
+        "pinyin": "JinKui GongYuan",
+        "amap_poiid": "BV10125038",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-jiulihe-park",
+      "name": "九里河公园",
+      "names": {
+        "zh": "九里河公园",
+        "en": "Jiulihe Park"
+      },
+      "location": {
+        "lon": 120.408619,
+        "lat": 31.580374,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1522,
+        "y": 1073,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "九里河公园"
+        }
+      ],
+      "extras": {
+        "pinyin": "JiuLiHe GongYuan",
+        "amap_poiid": "BV10417332",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-liangxidaqiao",
+      "name": "梁溪大桥",
+      "names": {
+        "zh": "梁溪大桥",
+        "en": "Liangxidaqiao"
+      },
+      "location": {
+        "lon": 120.28637,
+        "lat": 31.567255,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 882,
+        "y": 1146,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "梁溪大桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiangXi DaQiao",
+        "amap_poiid": "BV10417335",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-lihudaqiao",
+      "name": "蠡湖大桥",
+      "names": {
+        "zh": "蠡湖大桥",
+        "en": "Lihudaqiao"
+      },
+      "location": {
+        "lon": 120.266252,
+        "lat": 31.522083,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 594,
+        "y": 1446,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "蠡湖大桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiHu DaQiao",
+        "amap_poiid": "BV10743387",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-liutan",
+      "name": "刘潭",
+      "names": {
+        "zh": "刘潭",
+        "en": "Liutan"
+      },
+      "location": {
+        "lon": 120.304405,
+        "lat": 31.626619,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 974,
+        "y": 789,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "刘潭"
+        }
+      ],
+      "extras": {
+        "pinyin": "LiuTan",
+        "amap_poiid": "BV10128146",
+        "line_ids": [
+          "cn-wuxi-line-1",
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-longshanshao",
+      "name": "龙山梢",
+      "names": {
+        "zh": "龙山梢",
+        "en": "Longshanshao"
+      },
+      "location": {
+        "lon": 120.244015,
+        "lat": 31.600118,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 489,
+        "y": 879,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "龙山梢"
+        }
+      ],
+      "extras": {
+        "pinyin": "LongShan Shao",
+        "amap_poiid": "BV10124689",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-mazhen",
+      "name": "马镇",
+      "names": {
+        "zh": "马镇",
+        "en": "Mazhen"
+      },
+      "location": {
+        "lon": 120.311106,
+        "lat": 31.708978,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1034,
+        "y": 425,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "马镇"
+        }
+      ],
+      "extras": {
+        "pinyin": "MaZhen",
+        "amap_poiid": "BV09111945",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-meiyuan-kaiyuan-temple",
+      "name": "梅园开原寺",
+      "names": {
+        "zh": "梅园开原寺",
+        "en": "Meiyuan Kaiyuan Temple"
+      },
+      "location": {
+        "lon": 120.219585,
+        "lat": 31.550948,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 76,
+        "y": 1375,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "梅园开原寺"
+        }
+      ],
+      "extras": {
+        "pinyin": "MeiYuan KaiYuan Si",
+        "amap_poiid": "BV10417333",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-minfeng",
+      "name": "民丰",
+      "names": {
+        "zh": "民丰",
+        "en": "Minfeng"
+      },
+      "location": {
+        "lon": 120.303539,
+        "lat": 31.600949,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 973,
+        "y": 922,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "民丰"
+        }
+      ],
+      "extras": {
+        "pinyin": "MinFeng",
+        "amap_poiid": "BV10128144",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-nanchan-temple",
+      "name": "南禅寺",
+      "names": {
+        "zh": "南禅寺",
+        "en": "Nanchan Temple"
+      },
+      "location": {
+        "lon": 120.306161,
+        "lat": 31.567481,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 991,
+        "y": 1141,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "南禅寺"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanChanSi",
+        "amap_poiid": "BV10124807",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-nanfangquan",
+      "name": "南方泉",
+      "names": {
+        "zh": "南方泉",
+        "en": "Nanfangquan"
+      },
+      "location": {
+        "lon": 120.270275,
+        "lat": 31.436882,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 849,
+        "y": 1836,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "南方泉"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanFang Quan",
+        "amap_poiid": "BV10886626",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-nanhujiayuan",
+      "name": "南湖家园",
+      "names": {
+        "zh": "南湖家园",
+        "en": "Nanhujiayuan"
+      },
+      "location": {
+        "lon": 120.324167,
+        "lat": 31.509787,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1078,
+        "y": 1492,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "南湖家园"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanHu JiaYuan",
+        "amap_poiid": "BV10128139",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-nanmen",
+      "name": "南门",
+      "names": {
+        "zh": "南门",
+        "en": "Nanmen"
+      },
+      "location": {
+        "lon": 120.271763,
+        "lat": 31.891176,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1038,
+        "y": 102,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "南门"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanMen",
+        "amap_poiid": "BV11300075",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-nanzha",
+      "name": "南闸",
+      "names": {
+        "zh": "南闸",
+        "en": "Nanzha"
+      },
+      "location": {
+        "lon": 120.267225,
+        "lat": 31.841583,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1036,
+        "y": 243,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "南闸"
+        }
+      ],
+      "extras": {
+        "pinyin": "NanZha",
+        "amap_poiid": "BV09111636",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-peoples-hospital",
+      "name": "人民医院",
+      "names": {
+        "zh": "人民医院",
+        "en": "People's Hospital"
+      },
+      "location": {
+        "lon": 120.3193,
+        "lat": 31.541931,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1063,
+        "y": 1305,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "人民医院"
+        }
+      ],
+      "extras": {
+        "pinyin": "RenMin YiYuan",
+        "amap_poiid": "BV10124642",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-qianqiao",
+      "name": "钱桥",
+      "names": {
+        "zh": "钱桥",
+        "en": "Qianqiao"
+      },
+      "location": {
+        "lon": 120.229675,
+        "lat": 31.596498,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 213,
+        "y": 935,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "钱桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "QianQiao",
+        "amap_poiid": "BV10124578",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-qiaoqi",
+      "name": "峭岐",
+      "names": {
+        "zh": "峭岐",
+        "en": "Qiaoqi"
+      },
+      "location": {
+        "lon": 120.272225,
+        "lat": 31.816402,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1035,
+        "y": 292,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "峭岐"
+        }
+      ],
+      "extras": {
+        "pinyin": "QiaoQi",
+        "amap_poiid": "BV09111944",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-qingmingqiao",
+      "name": "清名桥",
+      "names": {
+        "zh": "清名桥",
+        "en": "Qingmingqiao"
+      },
+      "location": {
+        "lon": 120.311299,
+        "lat": 31.549239,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1022,
+        "y": 1265,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "清名桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "QingMingQiao",
+        "amap_poiid": "BV10128141",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-qingshanwan-rongjun-hospital",
+      "name": "青山湾荣院",
+      "names": {
+        "zh": "青山湾荣院",
+        "en": "Qingshanwan Rongjun Hospital"
+      },
+      "location": {
+        "lon": 120.26975,
+        "lat": 31.568685,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 617,
+        "y": 1135,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "青山湾荣院"
+        }
+      ],
+      "extras": {
+        "pinyin": "QingShan WanRongYuan",
+        "amap_poiid": "BV10743386",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-qingyang",
+      "name": "青阳",
+      "names": {
+        "zh": "青阳",
+        "en": "Qingyang"
+      },
+      "location": {
+        "lon": 120.294259,
+        "lat": 31.770561,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1035,
+        "y": 336,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "青阳"
+        }
+      ],
+      "extras": {
+        "pinyin": "QingYang",
+        "amap_poiid": "BV09111637",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-rongxiang",
+      "name": "荣巷",
+      "names": {
+        "zh": "荣巷",
+        "en": "Rongxiang"
+      },
+      "location": {
+        "lon": 120.236493,
+        "lat": 31.556647,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 251,
+        "y": 1346,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "荣巷"
+        }
+      ],
+      "extras": {
+        "pinyin": "RongXiang",
+        "amap_poiid": "BV10417329",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-sanyang-plaza",
+      "name": "三阳广场",
+      "names": {
+        "zh": "三阳广场",
+        "en": "Sanyang Plaza"
+      },
+      "location": {
+        "lon": 120.299815,
+        "lat": 31.575787,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 962,
+        "y": 1105,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "三阳广场"
+        }
+      ],
+      "extras": {
+        "pinyin": "SanYang GuangChang",
+        "amap_poiid": "BV10128109",
+        "line_ids": [
+          "cn-wuxi-line-1",
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-shangmadun",
+      "name": "上马墩",
+      "names": {
+        "zh": "上马墩",
+        "en": "Shangmadun"
+      },
+      "location": {
+        "lon": 120.320767,
+        "lat": 31.582366,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1060,
+        "y": 1104,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "上马墩"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShangMaDun",
+        "amap_poiid": "BV10417339",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-shengan",
+      "name": "盛岸",
+      "names": {
+        "zh": "盛岸",
+        "en": "Sheng'an"
+      },
+      "location": {
+        "lon": 120.269806,
+        "lat": 31.592325,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 642,
+        "y": 956,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "盛岸"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShengAn",
+        "amap_poiid": "BV10128125",
+        "line_ids": [
+          "cn-wuxi-line-3",
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-shenglimen",
+      "name": "胜利门",
+      "names": {
+        "zh": "胜利门",
+        "en": "Shenglimen"
+      },
+      "location": {
+        "lon": 120.299901,
+        "lat": 31.581945,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 974,
+        "y": 1038,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "胜利门"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShengLiMen",
+        "amap_poiid": "BV10124809",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-shimen-road",
+      "name": "石门路",
+      "names": {
+        "zh": "石门路",
+        "en": "Shimen Road"
+      },
+      "location": {
+        "lon": 120.259095,
+        "lat": 31.597377,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 600,
+        "y": 924,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "石门路"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShiMen Lu",
+        "amap_poiid": "BV10128124",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-shuofang-airport",
+      "name": "硕放机场",
+      "names": {
+        "zh": "硕放机场",
+        "en": "Shuofang Airport"
+      },
+      "location": {
+        "lon": 120.430807,
+        "lat": 31.502584,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 2000,
+        "y": 1741,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "硕放机场"
+        }
+      ],
+      "extras": {
+        "pinyin": "ShuoFang JiChang",
+        "amap_poiid": "BV10128134",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-south-changjiang-road",
+      "name": "长江南路",
+      "names": {
+        "zh": "长江南路",
+        "en": "South Changjiang Road"
+      },
+      "location": {
+        "lon": 120.403221,
+        "lat": 31.49739,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1905,
+        "y": 1675,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "长江南路"
+        }
+      ],
+      "extras": {
+        "pinyin": "ChangJiang NanLu",
+        "amap_poiid": "BV10128132",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-sumiao",
+      "name": "苏庙",
+      "names": {
+        "zh": "苏庙",
+        "en": "Sumiao"
+      },
+      "location": {
+        "lon": 120.21606,
+        "lat": 31.596784,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 73,
+        "y": 935,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "苏庙"
+        }
+      ],
+      "extras": {
+        "pinyin": "SuMiao",
+        "amap_poiid": "BV10124575",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-taihu-garden",
+      "name": "太湖花园",
+      "names": {
+        "zh": "太湖花园",
+        "en": "Taihu Garden"
+      },
+      "location": {
+        "lon": 120.343983,
+        "lat": 31.559049,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1271,
+        "y": 1235,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "太湖花园"
+        }
+      ],
+      "extras": {
+        "pinyin": "TaiHu HuaYuan",
+        "amap_poiid": "BV10124675",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-taihu-square",
+      "name": "太湖广场",
+      "names": {
+        "zh": "太湖广场",
+        "en": "Taihu Square"
+      },
+      "location": {
+        "lon": 120.305212,
+        "lat": 31.555193,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 990,
+        "y": 1231,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "太湖广场"
+        }
+      ],
+      "extras": {
+        "pinyin": "TaiHu GuangChang",
+        "amap_poiid": "BV10128142",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-tanduqiao",
+      "name": "谈渡桥",
+      "names": {
+        "zh": "谈渡桥",
+        "en": "Tanduqiao"
+      },
+      "location": {
+        "lon": 120.305131,
+        "lat": 31.562049,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 990,
+        "y": 1188,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "谈渡桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "TanDu Qiao",
+        "amap_poiid": "BV10128143",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-tangtieqiao",
+      "name": "塘铁桥",
+      "names": {
+        "zh": "塘铁桥",
+        "en": "Tangtieqiao"
+      },
+      "location": {
+        "lon": 120.325888,
+        "lat": 31.500782,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1078,
+        "y": 1556,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "塘铁桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "TangTieQiao",
+        "amap_poiid": "BV10128138",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-tianyi",
+      "name": "天一",
+      "names": {
+        "zh": "天一",
+        "en": "Tianyi"
+      },
+      "location": {
+        "lon": 120.304345,
+        "lat": 31.637838,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 975,
+        "y": 715,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "天一"
+        }
+      ],
+      "extras": {
+        "pinyin": "TianYi",
+        "amap_poiid": "BV10128147",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wangzhuang-road",
+      "name": "旺庄路",
+      "names": {
+        "zh": "旺庄路",
+        "en": "Wangzhuang Road"
+      },
+      "location": {
+        "lon": 120.357816,
+        "lat": 31.542129,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1426,
+        "y": 1343,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "旺庄路"
+        }
+      ],
+      "extras": {
+        "pinyin": "WangZhuang Lu",
+        "amap_poiid": "BV10128129",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuai-plaza",
+      "name": "五爱广场",
+      "names": {
+        "zh": "五爱广场",
+        "en": "Wu'ai Plaza"
+      },
+      "location": {
+        "lon": 120.290551,
+        "lat": 31.573626,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 927,
+        "y": 1108,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "五爱广场"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuAi GuangChang",
+        "amap_poiid": "BV10417344",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wudu-road",
+      "name": "吴都路",
+      "names": {
+        "zh": "吴都路",
+        "en": "Wudu Road"
+      },
+      "location": {
+        "lon": 120.308423,
+        "lat": 31.483444,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 968,
+        "y": 1700,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "吴都路"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuDu Lu",
+        "amap_poiid": "BV10743389",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuhu-avenue",
+      "name": "五湖大道",
+      "names": {
+        "zh": "五湖大道",
+        "en": "Wuhu Avenue"
+      },
+      "location": {
+        "lon": 120.287553,
+        "lat": 31.505974,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 881,
+        "y": 1517,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "五湖大道"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuHu DaDao",
+        "amap_poiid": "BV10743395",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuqiao",
+      "name": "吴桥",
+      "names": {
+        "zh": "吴桥",
+        "en": "Wuqiao"
+      },
+      "location": {
+        "lon": 120.285481,
+        "lat": 31.593777,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 776,
+        "y": 993,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "吴桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuQiao",
+        "amap_poiid": "BV10124447",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuxi-east-railway-station",
+      "name": "无锡东站",
+      "names": {
+        "zh": "无锡东站",
+        "en": "Wuxi East Railway Station"
+      },
+      "location": {
+        "lon": 120.460118,
+        "lat": 31.596981,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1755,
+        "y": 975,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "无锡东站"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuXi DongZhan",
+        "amap_poiid": "BV10124723",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuxi-grand-theatre",
+      "name": "大剧院",
+      "names": {
+        "zh": "大剧院",
+        "en": "Wuxi Grand Theatre"
+      },
+      "location": {
+        "lon": 120.281866,
+        "lat": 31.510463,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 663,
+        "y": 1483,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "大剧院"
+        }
+      ],
+      "extras": {
+        "pinyin": "DaJuYuan",
+        "amap_poiid": "BV10743388",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuxi-new-district-railway-station",
+      "name": "无锡新区站",
+      "names": {
+        "zh": "无锡新区站",
+        "en": "Wuxi New District Railway Station"
+      },
+      "location": {
+        "lon": 120.392141,
+        "lat": 31.499378,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1798,
+        "y": 1600,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "无锡新区站"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuXi XinQu Zhan",
+        "amap_poiid": "BV11446277",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuxi-railway-station",
+      "name": "无锡火车站",
+      "names": {
+        "zh": "无锡火车站",
+        "en": "Wuxi Railway Station"
+      },
+      "location": {
+        "lon": 120.306767,
+        "lat": 31.589407,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1001,
+        "y": 993,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "无锡火车站"
+        }
+      ],
+      "extras": {
+        "pinyin": "WuXi HuoCheZhan",
+        "amap_poiid": "BV10128126",
+        "line_ids": [
+          "cn-wuxi-line-1",
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuxi-sports-center",
+      "name": "体育中心",
+      "names": {
+        "zh": "体育中心",
+        "en": "Wuxi Sports Center"
+      },
+      "location": {
+        "lon": 120.262804,
+        "lat": 31.541,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 594,
+        "y": 1318,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "体育中心"
+        }
+      ],
+      "extras": {
+        "pinyin": "TiYuZhongXin",
+        "amap_poiid": "BV10743394",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-wuxi-taihu-international-expo-center",
+      "name": "博览中心",
+      "names": {
+        "zh": "博览中心",
+        "en": "Wuxi Taihu International Expo Center"
+      },
+      "location": {
+        "lon": 120.325809,
+        "lat": 31.476978,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1130,
+        "y": 1745,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "博览中心"
+        }
+      ],
+      "extras": {
+        "pinyin": "BoLan ZhongXin",
+        "amap_poiid": "BV10743392",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-xiajiabian",
+      "name": "夏家边",
+      "names": {
+        "zh": "夏家边",
+        "en": "Xiajiabian"
+      },
+      "location": {
+        "lon": 120.263396,
+        "lat": 31.532481,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 594,
+        "y": 1384,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "夏家边"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiaJia Bian",
+        "amap_poiid": "BV10977046",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-xiaotaoyuan",
+      "name": "小桃源",
+      "names": {
+        "zh": "小桃源",
+        "en": "Xiaotaoyuan"
+      },
+      "location": {
+        "lon": 120.24947,
+        "lat": 31.5592,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 500,
+        "y": 1191,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "小桃源"
+        }
+      ],
+      "extras": {
+        "pinyin": "Xiao TaoYuan",
+        "amap_poiid": "BV10417330",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-xibei-canal",
+      "name": "锡北运河",
+      "names": {
+        "zh": "锡北运河",
+        "en": "Xibei Canal"
+      },
+      "location": {
+        "lon": 120.314878,
+        "lat": 31.662275,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1032,
+        "y": 550,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "锡北运河"
+        }
+      ],
+      "extras": {
+        "pinyin": "Xi BeiYunHe",
+        "amap_poiid": "BV10128149",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-xinguang-road",
+      "name": "新光路",
+      "names": {
+        "zh": "新光路",
+        "en": "Xinguang Road"
+      },
+      "location": {
+        "lon": 120.352475,
+        "lat": 31.549408,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1346,
+        "y": 1288,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "新光路"
+        }
+      ],
+      "extras": {
+        "pinyin": "XinGuang Lu",
+        "amap_poiid": "BV10124685",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-xiyuanlong",
+      "name": "西园弄",
+      "names": {
+        "zh": "西园弄",
+        "en": "Xiyuanlong"
+      },
+      "location": {
+        "lon": 120.262141,
+        "lat": 31.548637,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 594,
+        "y": 1251,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "西园弄"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiYuan Long",
+        "amap_poiid": "BV10743390",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-xizhang",
+      "name": "西漳",
+      "names": {
+        "zh": "西漳",
+        "en": "Xizhang"
+      },
+      "location": {
+        "lon": 120.303648,
+        "lat": 31.645835,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 975,
+        "y": 642,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "西漳"
+        }
+      ],
+      "extras": {
+        "pinyin": "XiZhang",
+        "amap_poiid": "BV10128148",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-xuelang",
+      "name": "雪浪",
+      "names": {
+        "zh": "雪浪",
+        "en": "Xuelang"
+      },
+      "location": {
+        "lon": 120.279623,
+        "lat": 31.459934,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 849,
+        "y": 1740,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "雪浪"
+        }
+      ],
+      "extras": {
+        "pinyin": "XueLang",
+        "amap_poiid": "BV10886627",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-xufeng",
+      "name": "叙丰",
+      "names": {
+        "zh": "叙丰",
+        "en": "Xufeng"
+      },
+      "location": {
+        "lon": 120.337155,
+        "lat": 31.566238,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1199,
+        "y": 1185,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "叙丰"
+        }
+      ],
+      "extras": {
+        "pinyin": "XuFeng",
+        "amap_poiid": "BV10124863",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-yangming",
+      "name": "扬名",
+      "names": {
+        "zh": "扬名",
+        "en": "Yangming"
+      },
+      "location": {
+        "lon": 120.3245,
+        "lat": 31.521122,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1079,
+        "y": 1427,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "扬名"
+        }
+      ],
+      "extras": {
+        "pinyin": "YangMing",
+        "amap_poiid": "BV10128140",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-yanqiao",
+      "name": "堰桥",
+      "names": {
+        "zh": "堰桥",
+        "en": "Yanqiao"
+      },
+      "location": {
+        "lon": 120.31491,
+        "lat": 31.675557,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1033,
+        "y": 466,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "堰桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "YanQiao",
+        "amap_poiid": "BV10125108",
+        "line_ids": [
+          "cn-wuxi-line-s1",
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-yingbin-square",
+      "name": "迎宾广场",
+      "names": {
+        "zh": "迎宾广场",
+        "en": "Yingbin Square"
+      },
+      "location": {
+        "lon": 120.454474,
+        "lat": 31.591617,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1710,
+        "y": 1022,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "迎宾广场"
+        }
+      ],
+      "extras": {
+        "pinyin": "YingBin GuangChang",
+        "amap_poiid": "BV10417343",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-yingyuehu-park",
+      "name": "映月湖公园",
+      "names": {
+        "zh": "映月湖公园",
+        "en": "Yingyuehu Park"
+      },
+      "location": {
+        "lon": 120.449698,
+        "lat": 31.587221,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1664,
+        "y": 1069,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "映月湖公园"
+        }
+      ],
+      "extras": {
+        "pinyin": "YingYueHu GongYuan",
+        "amap_poiid": "BV10417338",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-yunlin",
+      "name": "云林",
+      "names": {
+        "zh": "云林",
+        "en": "Yunlin"
+      },
+      "location": {
+        "lon": 120.39503,
+        "lat": 31.579536,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1454,
+        "y": 1075,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "云林"
+        }
+      ],
+      "extras": {
+        "pinyin": "YunLin",
+        "amap_poiid": "BV10417340",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-zhaqiao",
+      "name": "查桥",
+      "names": {
+        "zh": "查桥",
+        "en": "Zhaqiao"
+      },
+      "location": {
+        "lon": 120.431377,
+        "lat": 31.58112,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1595,
+        "y": 1072,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "查桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhaQiao",
+        "amap_poiid": "BV10417334",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-zhongshan-park",
+      "name": "中山公园",
+      "names": {
+        "zh": "中山公园",
+        "en": "Zhongshan Park"
+      },
+      "location": {
+        "lon": 120.271088,
+        "lat": 31.906519,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1038,
+        "y": 51,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "中山公园"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhongShan GongYuan",
+        "amap_poiid": "BV11300072",
+        "line_ids": [
+          "cn-wuxi-line-s1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-zhoujing-alley",
+      "name": "周泾巷",
+      "names": {
+        "zh": "周泾巷",
+        "en": "Zhoujing Alley"
+      },
+      "location": {
+        "lon": 120.385582,
+        "lat": 31.513717,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1696,
+        "y": 1529,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "周泾巷"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhouJing Xiang",
+        "amap_poiid": "BV10128130",
+        "line_ids": [
+          "cn-wuxi-line-3"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-zhouxinyuan",
+      "name": "周新苑",
+      "names": {
+        "zh": "周新苑",
+        "en": "Zhouxinyuan"
+      },
+      "location": {
+        "lon": 120.301325,
+        "lat": 31.504297,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 968,
+        "y": 1556,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "周新苑"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhouXinYuan",
+        "amap_poiid": "BV10743391",
+        "line_ids": [
+          "cn-wuxi-line-4"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-zhuangqian",
+      "name": "庄前",
+      "names": {
+        "zh": "庄前",
+        "en": "Zhuangqian"
+      },
+      "location": {
+        "lon": 120.304897,
+        "lat": 31.609833,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 974,
+        "y": 858,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "庄前"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhuangQian",
+        "amap_poiid": "BV10128145",
+        "line_ids": [
+          "cn-wuxi-line-1"
+        ],
+        "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-wuxi-zhuangqiao",
+      "name": "庄桥",
+      "names": {
+        "zh": "庄桥",
+        "en": "Zhuangqiao"
+      },
+      "location": {
+        "lon": 120.379073,
+        "lat": 31.578105,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 1382,
+        "y": 1076,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "amap-subway-3202",
+          "id": "庄桥"
+        }
+      ],
+      "extras": {
+        "pinyin": "ZhuangQiao",
+        "amap_poiid": "BV10417331",
+        "line_ids": [
+          "cn-wuxi-line-2"
+        ],
+        "location_source": "subway"
+      }
+    }
+  ]
+}

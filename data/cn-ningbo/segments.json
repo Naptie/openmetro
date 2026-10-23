@@ -1,0 +1,3680 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-ningbo",
+  "generated_at": "2026-10-23T21:19:43.638Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T21:19:43.638Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ailiu-4-cn-ningbo-panhuo-rd-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-ailiu-4",
+      "to_stop_id": "cn-ningbo-panhuo-rd-4",
+      "from_station_id": "cn-ningbo-ailiu",
+      "to_station_id": "cn-ningbo-panhuo-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.645,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1645,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-angmenggang-5-cn-ningbo-sanguantang-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-angmenggang-5",
+      "to_stop_id": "cn-ningbo-sanguantang-5",
+      "from_station_id": "cn-ningbo-angmenggang",
+      "to_station_id": "cn-ningbo-sanguantang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.889,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1889,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-anshi-lu-7-cn-ningbo-xiaoyangjiang-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-anshi-lu-7",
+      "to_stop_id": "cn-ningbo-xiaoyangjiang-7",
+      "from_station_id": "cn-ningbo-anshi-lu",
+      "to_station_id": "cn-ningbo-xiaoyangjiang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.14,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2140,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-baihe-4-cn-ningbo-childrens-park-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-baihe-4",
+      "to_stop_id": "cn-ningbo-childrens-park-4",
+      "from_station_id": "cn-ningbo-baihe",
+      "to_station_id": "cn-ningbo-childrens-park",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.109,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1109,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-baozhuang-1-cn-ningbo-wuga-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-baozhuang-1",
+      "to_stop_id": "cn-ningbo-wuga-1",
+      "from_station_id": "cn-ningbo-baozhuang",
+      "to_station_id": "cn-ningbo-wuga",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 6.269,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 6269,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-beimingcheng-lu-7-cn-ningbo-shengmo-lu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-beimingcheng-lu-7",
+      "to_stop_id": "cn-ningbo-shengmo-lu-7",
+      "from_station_id": "cn-ningbo-beimingcheng-lu",
+      "to_station_id": "cn-ningbo-shengmo-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.612,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1612,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-binhai-dadao-12-cn-ningbo-damuwan-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-binhai-dadao-12",
+      "to_stop_id": "cn-ningbo-damuwan-12",
+      "from_station_id": "cn-ningbo-binhai-dadao",
+      "to_station_id": "cn-ningbo-damuwan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 3.114,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 61.1,
+        "a_s_per_km": 27.4,
+        "b_s": 94.1,
+        "distance_meters": 3114,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-buzheng-5-cn-ningbo-zhangjiatan-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-buzheng-5",
+      "to_stop_id": "cn-ningbo-zhangjiatan-5",
+      "from_station_id": "cn-ningbo-buzheng",
+      "to_station_id": "cn-ningbo-zhangjiatan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.496,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1496,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-canghai-beilu-6-cn-ningbo-mingzhu-lu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-canghai-beilu-6",
+      "to_stop_id": "cn-ningbo-mingzhu-lu-6",
+      "from_station_id": "cn-ningbo-canghai-beilu",
+      "to_station_id": "cn-ningbo-mingzhu-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.743,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 743,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-caoga-5-cn-ningbo-liuga-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-caoga-5",
+      "to_stop_id": "cn-ningbo-liuga-5",
+      "from_station_id": "cn-ningbo-caoga",
+      "to_station_id": "cn-ningbo-liuga",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.378,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1378,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-changjiang-rd-1-cn-ningbo-xiapu-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-changjiang-rd-1",
+      "to_stop_id": "cn-ningbo-xiapu-1",
+      "from_station_id": "cn-ningbo-changjiang-rd",
+      "to_station_id": "cn-ningbo-xiapu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 1.355,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 36,
+        "a_s_per_km": 57.5,
+        "b_s": 53.2,
+        "distance_meters": 1355,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-changxing-rd-4-cn-ningbo-jinshan-rd-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-changxing-rd-4",
+      "to_stop_id": "cn-ningbo-jinshan-rd-4",
+      "from_station_id": "cn-ningbo-changxing-rd",
+      "to_station_id": "cn-ningbo-jinshan-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.295,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1295,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-chaoyang-3-cn-ningbo-fangqiao-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-chaoyang-3",
+      "to_stop_id": "cn-ningbo-fangqiao-3",
+      "from_station_id": "cn-ningbo-chaoyang",
+      "to_station_id": "cn-ningbo-fangqiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.551,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 4551,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-chenghuangmiao-2-cn-ningbo-gulou-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-chenghuangmiao-2",
+      "to_stop_id": "cn-ningbo-gulou-2",
+      "from_station_id": "cn-ningbo-chenghuangmiao",
+      "to_station_id": "cn-ningbo-gulou",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.752,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 752,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-childrens-park-3-cn-ningbo-qiubi-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-childrens-park-3",
+      "to_stop_id": "cn-ningbo-qiubi-3",
+      "from_station_id": "cn-ningbo-childrens-park",
+      "to_station_id": "cn-ningbo-qiubi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.893,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 893,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-childrens-park-4-cn-ningbo-ailiu-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-childrens-park-4",
+      "to_stop_id": "cn-ningbo-ailiu-4",
+      "from_station_id": "cn-ningbo-childrens-park",
+      "to_station_id": "cn-ningbo-ailiu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.907,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 907,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ci-chengxi-4-cn-ningbo-cicheng-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-ci-chengxi-4",
+      "to_stop_id": "cn-ningbo-cicheng-4",
+      "from_station_id": "cn-ningbo-ci-chengxi",
+      "to_station_id": "cn-ningbo-cicheng",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.794,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1794,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-cicheng-4-cn-ningbo-guanshanhe-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-cicheng-4",
+      "to_stop_id": "cn-ningbo-guanshanhe-4",
+      "from_station_id": "cn-ningbo-cicheng",
+      "to_station_id": "cn-ningbo-guanshanhe",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.417,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2417,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-coach-terminal-2-cn-ningbo-liyuan-nanlu-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-coach-terminal-2",
+      "to_stop_id": "cn-ningbo-liyuan-nanlu-2",
+      "from_station_id": "cn-ningbo-coach-terminal",
+      "to_station_id": "cn-ningbo-liyuan-nanlu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.181,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1181,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-congyuan-rd-2-cn-ningbo-zhaobaoshan-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-congyuan-rd-2",
+      "to_stop_id": "cn-ningbo-zhaobaoshan-2",
+      "from_station_id": "cn-ningbo-congyuan-rd",
+      "to_station_id": "cn-ningbo-zhaobaoshan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.059,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1059,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-cuibaili-4-cn-ningbo-daqing-bridge-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-cuibaili-4",
+      "to_stop_id": "cn-ningbo-daqing-bridge-4",
+      "from_station_id": "cn-ningbo-cuibaili",
+      "to_station_id": "cn-ningbo-daqing-bridge",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.266,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1266,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-cuibaili-6-cn-ningbo-wangchun-qiao-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-cuibaili-6",
+      "to_stop_id": "cn-ningbo-wangchun-qiao-6",
+      "from_station_id": "cn-ningbo-cuibaili",
+      "to_station_id": "cn-ningbo-wangchun-qiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.747,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2747,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-dacheng-east-rd-3-cn-ningbo-jinhai-rd-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-dacheng-east-rd-3",
+      "to_stop_id": "cn-ningbo-jinhai-rd-3",
+      "from_station_id": "cn-ningbo-dacheng-east-rd",
+      "to_station_id": "cn-ningbo-jinhai-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 2.28,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 43.7,
+        "a_s_per_km": 60.2,
+        "b_s": 52.1,
+        "distance_meters": 2280,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-dancheng-12-cn-ningbo-binhai-dadao-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-dancheng-12",
+      "to_stop_id": "cn-ningbo-binhai-dadao-12",
+      "from_station_id": "cn-ningbo-dancheng",
+      "to_station_id": "cn-ningbo-binhai-dadao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.912,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 3912,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-daqi-1-cn-ningbo-songhuajiang-rd-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-daqi-1",
+      "to_stop_id": "cn-ningbo-songhuajiang-rd-1",
+      "from_station_id": "cn-ningbo-daqi",
+      "to_station_id": "cn-ningbo-songhuajiang-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.158,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2158,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-daqing-bridge-1-cn-ningbo-ximenkou-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-daqing-bridge-1",
+      "to_stop_id": "cn-ningbo-ximenkou-1",
+      "from_station_id": "cn-ningbo-daqing-bridge",
+      "to_station_id": "cn-ningbo-ximenkou",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.728,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 728,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-daqing-bridge-4-cn-ningbo-liuxi-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-daqing-bridge-4",
+      "to_stop_id": "cn-ningbo-liuxi-4",
+      "from_station_id": "cn-ningbo-daqing-bridge",
+      "to_station_id": "cn-ningbo-liuxi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.731,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 731,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-datong-bridge-2-cn-ningbo-kongpu-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-datong-bridge-2",
+      "to_stop_id": "cn-ningbo-kongpu-2",
+      "from_station_id": "cn-ningbo-datong-bridge",
+      "to_station_id": "cn-ningbo-kongpu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.013,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1013,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-datong-bridge-3-cn-ningbo-zhongxing-bridge-south-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-datong-bridge-3",
+      "to_stop_id": "cn-ningbo-zhongxing-bridge-south-3",
+      "from_station_id": "cn-ningbo-datong-bridge",
+      "to_station_id": "cn-ningbo-zhongxing-bridge-south",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.752,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1752,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-daxu-12-cn-ningbo-dancheng-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-daxu-12",
+      "to_stop_id": "cn-ningbo-dancheng-12",
+      "from_station_id": "cn-ningbo-daxu",
+      "to_station_id": "cn-ningbo-dancheng",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 7.099,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 7099,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-dayangjiang-5-cn-ningbo-sigang-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-dayangjiang-5",
+      "to_stop_id": "cn-ningbo-sigang-5",
+      "from_station_id": "cn-ningbo-dayangjiang",
+      "to_station_id": "cn-ningbo-sigang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.029,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1029,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-donghuan-south-rd-1-cn-ningbo-qiuga-east-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-donghuan-south-rd-1",
+      "to_stop_id": "cn-ningbo-qiuga-east-1",
+      "from_station_id": "cn-ningbo-donghuan-south-rd",
+      "to_station_id": "cn-ningbo-qiuga-east",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.305,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1305,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-dongmenkou-1-cn-ningbo-jiangxia-bridge-east-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-dongmenkou-1",
+      "to_stop_id": "cn-ningbo-jiangxia-bridge-east-1",
+      "from_station_id": "cn-ningbo-dongmenkou",
+      "to_station_id": "cn-ningbo-jiangxia-bridge-east",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.893,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 893,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-dongqian-lake-4-cn-ningbo-guoji-huiyi-zhongxin-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-dongqian-lake-4",
+      "to_stop_id": "cn-ningbo-guoji-huiyi-zhongxin-4",
+      "from_station_id": "cn-ningbo-dongqian-lake",
+      "to_station_id": "cn-ningbo-guoji-huiyi-zhongxin",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 2.347,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 41.4,
+        "a_s_per_km": 56.6,
+        "b_s": 66.9,
+        "distance_meters": 2347,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-duan-tang-8-cn-ningbo-jinshan-xilu-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-duan-tang-8",
+      "to_stop_id": "cn-ningbo-jinshan-xilu-8",
+      "from_station_id": "cn-ningbo-duan-tang",
+      "to_station_id": "cn-ningbo-jinshan-xilu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 3.972,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 3972,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-fangqiao-3-cn-ningbo-jinlin-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-fangqiao-3",
+      "to_stop_id": "cn-ningbo-jinlin-3",
+      "from_station_id": "cn-ningbo-fangqiao",
+      "to_station_id": "cn-ningbo-jinlin",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.639,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2639,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-fengyuan-2-cn-ningbo-congyuan-rd-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-fengyuan-2",
+      "to_stop_id": "cn-ningbo-congyuan-rd-2",
+      "from_station_id": "cn-ningbo-fengyuan",
+      "to_station_id": "cn-ningbo-congyuan-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.236,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1236,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-fumin-gongyuan-7-cn-ningbo-xintian-lu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-fumin-gongyuan-7",
+      "to_stop_id": "cn-ningbo-xintian-lu-7",
+      "from_station_id": "cn-ningbo-fumin-gongyuan",
+      "to_station_id": "cn-ningbo-xintian-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.891,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 891,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-fuming-rd-1-cn-ningbo-shiji-ave-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-fuming-rd-1",
+      "to_stop_id": "cn-ningbo-shiji-ave-1",
+      "from_station_id": "cn-ningbo-fuming-rd",
+      "to_station_id": "cn-ningbo-shiji-ave",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.891,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 891,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-fuqing-north-rd-1-cn-ningbo-shengmo-lu-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-fuqing-north-rd-1",
+      "to_stop_id": "cn-ningbo-shengmo-lu-1",
+      "from_station_id": "cn-ningbo-fuqing-north-rd",
+      "to_station_id": "cn-ningbo-shengmo-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.192,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1192,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-gaoqiao-1-cn-ningbo-liangzhu-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-gaoqiao-1",
+      "to_stop_id": "cn-ningbo-liangzhu-1",
+      "from_station_id": "cn-ningbo-gaoqiao",
+      "to_station_id": "cn-ningbo-liangzhu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.455,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1455,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-gaoqiao-west-1-cn-ningbo-gaoqiao-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-gaoqiao-west-1",
+      "to_stop_id": "cn-ningbo-gaoqiao-1",
+      "from_station_id": "cn-ningbo-gaoqiao-west",
+      "to_station_id": "cn-ningbo-gaoqiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.519,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1519,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-gaotang-bridge-3-cn-ningbo-jiangshan-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-gaotang-bridge-3",
+      "to_stop_id": "cn-ningbo-jiangshan-3",
+      "from_station_id": "cn-ningbo-gaotang-bridge",
+      "to_station_id": "cn-ningbo-jiangshan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.109,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2109,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-gouzhang-rd-3-cn-ningbo-gaotang-bridge-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-gouzhang-rd-3",
+      "to_stop_id": "cn-ningbo-gaotang-bridge-3",
+      "from_station_id": "cn-ningbo-gouzhang-rd",
+      "to_station_id": "cn-ningbo-gaotang-bridge",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.823,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 823,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-guanshanhe-4-cn-ningbo-changxing-rd-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-guanshanhe-4",
+      "to_stop_id": "cn-ningbo-changxing-rd-4",
+      "from_station_id": "cn-ningbo-guanshanhe",
+      "to_station_id": "cn-ningbo-changxing-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.542,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1542,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-guisi-7-cn-ningbo-zhenhai-shimin-guangchang-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-guisi-7",
+      "to_stop_id": "cn-ningbo-zhenhai-shimin-guangchang-7",
+      "from_station_id": "cn-ningbo-guisi",
+      "to_station_id": "cn-ningbo-zhenhai-shimin-guangchang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.443,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1443,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-gulou-1-cn-ningbo-dongmenkou-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-gulou-1",
+      "to_stop_id": "cn-ningbo-dongmenkou-1",
+      "from_station_id": "cn-ningbo-gulou",
+      "to_station_id": "cn-ningbo-dongmenkou",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.65,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 650,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-gulou-2-cn-ningbo-waitan-daqiao-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-gulou-2",
+      "to_stop_id": "cn-ningbo-waitan-daqiao-2",
+      "from_station_id": "cn-ningbo-gulou",
+      "to_station_id": "cn-ningbo-waitan-daqiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.429,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1429,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-haiyan-north-rd-1-cn-ningbo-fuqing-north-rd-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-haiyan-north-rd-1",
+      "to_stop_id": "cn-ningbo-fuqing-north-rd-1",
+      "from_station_id": "cn-ningbo-haiyan-north-rd",
+      "to_station_id": "cn-ningbo-fuqing-north-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.975,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 975,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-haiyan-north-rd-5-cn-ningbo-minan-donglu-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-haiyan-north-rd-5",
+      "to_stop_id": "cn-ningbo-minan-donglu-5",
+      "from_station_id": "cn-ningbo-haiyan-north-rd",
+      "to_station_id": "cn-ningbo-minan-donglu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.932,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 932,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-hansong-lu-8-cn-ningbo-xiayingnan-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-hansong-lu-8",
+      "to_stop_id": "cn-ningbo-xiayingnan-8",
+      "from_station_id": "cn-ningbo-hansong-lu",
+      "to_station_id": "cn-ningbo-xiayingnan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 1.253,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 32.5,
+        "a_s_per_km": 76.2,
+        "b_s": 44
+      },
+      "travel_time_seconds": 139,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-hengxi-12-cn-ningbo-tangxi-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-hengxi-12",
+      "to_stop_id": "cn-ningbo-tangxi-12",
+      "from_station_id": "cn-ningbo-hengxi",
+      "to_station_id": "cn-ningbo-tangxi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 480,
+      "travel_time_source": "planner",
+      "distance_km": 14.338,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 14338,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-hongda-lu-4-cn-ningbo-zhuangqiao-railway-station-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-hongda-lu-4",
+      "to_stop_id": "cn-ningbo-zhuangqiao-railway-station-4",
+      "from_station_id": "cn-ningbo-hongda-lu",
+      "to_station_id": "cn-ningbo-zhuangqiao-railway-station",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.236,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1236,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-hongda-lu-8-cn-ningbo-xiejia-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-hongda-lu-8",
+      "to_stop_id": "cn-ningbo-xiejia-8",
+      "from_station_id": "cn-ningbo-hongda-lu",
+      "to_station_id": "cn-ningbo-xiejia",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.743,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 743,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-honglian-6-cn-ningbo-yaqian-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-honglian-6",
+      "to_stop_id": "cn-ningbo-yaqian-6",
+      "from_station_id": "cn-ningbo-honglian",
+      "to_station_id": "cn-ningbo-yaqian",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.719,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1719,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-hongsheng-lu-8-cn-ningbo-hongda-lu-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-hongsheng-lu-8",
+      "to_stop_id": "cn-ningbo-hongda-lu-8",
+      "from_station_id": "cn-ningbo-hongsheng-lu",
+      "to_station_id": "cn-ningbo-hongda-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.282,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1282,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-hongtang-8-cn-ningbo-hongsheng-lu-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-hongtang-8",
+      "to_stop_id": "cn-ningbo-hongsheng-lu-8",
+      "from_station_id": "cn-ningbo-hongtang",
+      "to_station_id": "cn-ningbo-hongsheng-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.319,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1319,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-hongtang-middle-rd-4-cn-ningbo-hongda-lu-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-hongtang-middle-rd-4",
+      "to_stop_id": "cn-ningbo-hongda-lu-4",
+      "from_station_id": "cn-ningbo-hongtang-middle-rd",
+      "to_station_id": "cn-ningbo-hongda-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.079,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2079,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-huilong-7-cn-ningbo-anshi-lu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-huilong-7",
+      "to_stop_id": "cn-ningbo-anshi-lu-7",
+      "from_station_id": "cn-ningbo-huilong",
+      "to_station_id": "cn-ningbo-anshi-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.507,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2507,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-huishi-lu-6-cn-ningbo-jishigang-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-huishi-lu-6",
+      "to_stop_id": "cn-ningbo-jishigang-6",
+      "from_station_id": "cn-ningbo-huishi-lu",
+      "to_station_id": "cn-ningbo-jishigang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.314,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2314,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-internationl-convention-and-exhibition-center-5-cn-ningbo-yuanshi-lu-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-internationl-convention-and-exhibition-center-5",
+      "to_stop_id": "cn-ningbo-yuanshi-lu-5",
+      "from_station_id": "cn-ningbo-internationl-convention-and-exhibition-center",
+      "to_station_id": "cn-ningbo-yuanshi-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.532,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1532,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-jiangshan-3-cn-ningbo-shishan-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-jiangshan-3",
+      "to_stop_id": "cn-ningbo-shishan-3",
+      "from_station_id": "cn-ningbo-jiangshan",
+      "to_station_id": "cn-ningbo-shishan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.328,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1328,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-jiangxia-bridge-east-1-cn-ningbo-zhoumeng-north-rd-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-jiangxia-bridge-east-1",
+      "to_stop_id": "cn-ningbo-zhoumeng-north-rd-1",
+      "from_station_id": "cn-ningbo-jiangxia-bridge-east",
+      "to_station_id": "cn-ningbo-zhoumeng-north-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.875,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 875,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-jinda-south-rd-4-cn-ningbo-xiaoyangjiang-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-jinda-south-rd-4",
+      "to_stop_id": "cn-ningbo-xiaoyangjiang-4",
+      "from_station_id": "cn-ningbo-jinda-south-rd",
+      "to_station_id": "cn-ningbo-xiaoyangjiang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.225,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2225,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-jinlin-3-cn-ningbo-nandu-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-jinlin-3",
+      "to_stop_id": "cn-ningbo-nandu-3",
+      "from_station_id": "cn-ningbo-jinlin",
+      "to_station_id": "cn-ningbo-nandu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.498,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1498,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-jinshan-rd-4-cn-ningbo-olympic-sports-center-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-jinshan-rd-4",
+      "to_stop_id": "cn-ningbo-olympic-sports-center-4",
+      "from_station_id": "cn-ningbo-jinshan-rd",
+      "to_station_id": "cn-ningbo-olympic-sports-center",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.103,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2103,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-jinshan-xilu-8-cn-ningbo-miaoyan-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-jinshan-xilu-8",
+      "to_stop_id": "cn-ningbo-miaoyan-8",
+      "from_station_id": "cn-ningbo-jinshan-xilu",
+      "to_station_id": "cn-ningbo-miaoyan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.162,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1162,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-jinyu-rd-3-cn-ningbo-siming-middle-rd-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-jinyu-rd-3",
+      "to_stop_id": "cn-ningbo-siming-middle-rd-3",
+      "from_station_id": "cn-ningbo-jinyu-rd",
+      "to_station_id": "cn-ningbo-siming-middle-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.92,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 920,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-jishigang-6-cn-ningbo-yunlin-xilu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-jishigang-6",
+      "to_stop_id": "cn-ningbo-yunlin-xilu-6",
+      "from_station_id": "cn-ningbo-jishigang",
+      "to_station_id": "cn-ningbo-yunlin-xilu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.291,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1291,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-juxian-lu-6-cn-ningbo-yuanshi-lu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-juxian-lu-6",
+      "to_stop_id": "cn-ningbo-yuanshi-lu-6",
+      "from_station_id": "cn-ningbo-juxian-lu",
+      "to_station_id": "cn-ningbo-yuanshi-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.25,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1250,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-kaiyuan-lu-8-cn-ningbo-hongtang-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-kaiyuan-lu-8",
+      "to_stop_id": "cn-ningbo-hongtang-8",
+      "from_station_id": "cn-ningbo-kaiyuan-lu",
+      "to_station_id": "cn-ningbo-hongtang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.117,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1117,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-kongpu-2-cn-ningbo-lulin-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-kongpu-2",
+      "to_stop_id": "cn-ningbo-lulin-2",
+      "from_station_id": "cn-ningbo-kongpu",
+      "to_station_id": "cn-ningbo-lulin",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.094,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2094,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-lianfeng-8-cn-ningbo-liyuan-nanlu-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-lianfeng-8",
+      "to_stop_id": "cn-ningbo-liyuan-nanlu-8",
+      "from_station_id": "cn-ningbo-lianfeng",
+      "to_station_id": "cn-ningbo-liyuan-nanlu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.242,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1242,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-liangzhu-1-cn-ningbo-lugang-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-liangzhu-1",
+      "to_stop_id": "cn-ningbo-lugang-1",
+      "from_station_id": "cn-ningbo-liangzhu",
+      "to_station_id": "cn-ningbo-lugang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.162,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1162,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-lijiang-rd-4-cn-ningbo-shuangdong-rd-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-lijiang-rd-4",
+      "to_stop_id": "cn-ningbo-shuangdong-rd-4",
+      "from_station_id": "cn-ningbo-lijiang-rd",
+      "to_station_id": "cn-ningbo-shuangdong-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.713,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1713,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-lishe-2-cn-ningbo-yinzhou-ave-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-lishe-2",
+      "to_stop_id": "cn-ningbo-yinzhou-ave-2",
+      "from_station_id": "cn-ningbo-lishe",
+      "to_station_id": "cn-ningbo-yinzhou-ave",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.681,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1681,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-lishe-international-airport-2-cn-ningbo-lishe-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-lishe-international-airport-2",
+      "to_stop_id": "cn-ningbo-lishe-2",
+      "from_station_id": "cn-ningbo-lishe-international-airport",
+      "to_station_id": "cn-ningbo-lishe",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.518,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2518,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-liuga-5-cn-ningbo-haiyan-north-rd-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-liuga-5",
+      "to_stop_id": "cn-ningbo-haiyan-north-rd-5",
+      "from_station_id": "cn-ningbo-liuga",
+      "to_station_id": "cn-ningbo-haiyan-north-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.928,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 928,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-liuxi-4-cn-ningbo-ningbo-railway-station-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-liuxi-4",
+      "to_stop_id": "cn-ningbo-ningbo-railway-station-4",
+      "from_station_id": "cn-ningbo-liuxi",
+      "to_station_id": "cn-ningbo-ningbo-railway-station",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.225,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1225,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-liyuan-nanlu-2-cn-ningbo-yunxia-rd-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-liyuan-nanlu-2",
+      "to_stop_id": "cn-ningbo-yunxia-rd-2",
+      "from_station_id": "cn-ningbo-liyuan-nanlu",
+      "to_station_id": "cn-ningbo-yunxia-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.822,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 822,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-liyuan-nanlu-8-cn-ningbo-nanyuan-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-liyuan-nanlu-8",
+      "to_stop_id": "cn-ningbo-nanyuan-8",
+      "from_station_id": "cn-ningbo-liyuan-nanlu",
+      "to_station_id": "cn-ningbo-nanyuan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.419,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1419,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-lugang-1-cn-ningbo-xujiacao-changle-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-lugang-1",
+      "to_stop_id": "cn-ningbo-xujiacao-changle-1",
+      "from_station_id": "cn-ningbo-lugang",
+      "to_station_id": "cn-ningbo-xujiacao-changle",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.97,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 970,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-lulin-2-cn-ningbo-sanguantang-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-lulin-2",
+      "to_stop_id": "cn-ningbo-sanguantang-2",
+      "from_station_id": "cn-ningbo-lulin",
+      "to_station_id": "cn-ningbo-sanguantang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.864,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 864,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-luoxing-7-cn-ningbo-yingjia-lu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-luoxing-7",
+      "to_stop_id": "cn-ningbo-yingjia-lu-7",
+      "from_station_id": "cn-ningbo-luoxing",
+      "to_station_id": "cn-ningbo-yingjia-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.256,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2256,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-maimian-qiao-6-cn-ningbo-huishi-lu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-maimian-qiao-6",
+      "to_stop_id": "cn-ningbo-huishi-lu-6",
+      "from_station_id": "cn-ningbo-maimian-qiao",
+      "to_station_id": "cn-ningbo-huishi-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.598,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2598,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-meixu-6-cn-ningbo-juxian-lu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-meixu-6",
+      "to_stop_id": "cn-ningbo-juxian-lu-6",
+      "from_station_id": "cn-ningbo-meixu",
+      "to_station_id": "cn-ningbo-juxian-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.155,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2155,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-meiyan-5-cn-ningbo-yongmao-lu-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-meiyan-5",
+      "to_stop_id": "cn-ningbo-yongmao-lu-5",
+      "from_station_id": "cn-ningbo-meiyan",
+      "to_station_id": "cn-ningbo-yongmao-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 3.506,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 3506,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-miaoyan-5-cn-ningbo-zhonggongmiao-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-miaoyan-5",
+      "to_stop_id": "cn-ningbo-zhonggongmiao-5",
+      "from_station_id": "cn-ningbo-miaoyan",
+      "to_station_id": "cn-ningbo-zhonggongmiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.224,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1224,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-miaoyan-8-cn-ningbo-yinzhou-gongyuannan-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-miaoyan-8",
+      "to_stop_id": "cn-ningbo-yinzhou-gongyuannan-8",
+      "from_station_id": "cn-ningbo-miaoyan",
+      "to_station_id": "cn-ningbo-yinzhou-gongyuannan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.084,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2084,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-minan-donglu-5-cn-ningbo-internationl-convention-and-exhibition-center-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-minan-donglu-5",
+      "to_stop_id": "cn-ningbo-internationl-convention-and-exhibition-center-5",
+      "from_station_id": "cn-ningbo-minan-donglu",
+      "to_station_id": "cn-ningbo-internationl-convention-and-exhibition-center",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.665,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 665,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-minan-donglu-7-cn-ningbo-beimingcheng-lu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-minan-donglu-7",
+      "to_stop_id": "cn-ningbo-beimingcheng-lu-7",
+      "from_station_id": "cn-ningbo-minan-donglu",
+      "to_station_id": "cn-ningbo-beimingcheng-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.043,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1043,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-minghai-beilu-7-cn-ningbo-guisi-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-minghai-beilu-7",
+      "to_stop_id": "cn-ningbo-guisi-7",
+      "from_station_id": "cn-ningbo-minghai-beilu",
+      "to_station_id": "cn-ningbo-guisi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.109,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1109,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-minghui-rd-3-cn-ningbo-chaoyang-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-minghui-rd-3",
+      "to_stop_id": "cn-ningbo-chaoyang-3",
+      "from_station_id": "cn-ningbo-minghui-rd",
+      "to_station_id": "cn-ningbo-chaoyang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.697,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1697,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-minglou-3-cn-ningbo-tiyuguan-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-minglou-3",
+      "to_stop_id": "cn-ningbo-tiyuguan-3",
+      "from_station_id": "cn-ningbo-minglou",
+      "to_station_id": "cn-ningbo-tiyuguan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.994,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 994,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-minglou-6-cn-ningbo-qingfeng-qiaodong-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-minglou-6",
+      "to_stop_id": "cn-ningbo-qingfeng-qiaodong-6",
+      "from_station_id": "cn-ningbo-minglou",
+      "to_station_id": "cn-ningbo-qingfeng-qiaodong",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.43,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1430,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-mingzhu-lu-6-cn-ningbo-minglou-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-mingzhu-lu-6",
+      "to_stop_id": "cn-ningbo-minglou-6",
+      "from_station_id": "cn-ningbo-mingzhu-lu",
+      "to_station_id": "cn-ningbo-minglou",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.115,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1115,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-nanbu-shangwu-qu-3-cn-ningbo-yinzhou-coach-terminal-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-nanbu-shangwu-qu-3",
+      "to_stop_id": "cn-ningbo-yinzhou-coach-terminal-3",
+      "from_station_id": "cn-ningbo-nanbu-shangwu-qu",
+      "to_station_id": "cn-ningbo-yinzhou-coach-terminal",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.162,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1162,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-nanbu-shangwu-qu-8-cn-ningbo-xuefu-lu-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-nanbu-shangwu-qu-8",
+      "to_stop_id": "cn-ningbo-xuefu-lu-8",
+      "from_station_id": "cn-ningbo-nanbu-shangwu-qu",
+      "to_station_id": "cn-ningbo-xuefu-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.143,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1143,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-nandu-3-cn-ningbo-dacheng-east-rd-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-nandu-3",
+      "to_stop_id": "cn-ningbo-dacheng-east-rd-3",
+      "from_station_id": "cn-ningbo-nandu",
+      "to_station_id": "cn-ningbo-dacheng-east-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.122,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 4122,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-nanyuan-8-cn-ningbo-duan-tang-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-nanyuan-8",
+      "to_stop_id": "cn-ningbo-duan-tang-8",
+      "from_station_id": "cn-ningbo-nanyuan",
+      "to_station_id": "cn-ningbo-duan-tang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.032,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1032,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-nijiayan-2-cn-ningbo-yasaiyan-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-nijiayan-2",
+      "to_stop_id": "cn-ningbo-yasaiyan-2",
+      "from_station_id": "cn-ningbo-nijiayan",
+      "to_station_id": "cn-ningbo-yasaiyan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.211,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1211,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ningbo-dajuyuan-6-cn-ningbo-xinzhi-lu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-ningbo-dajuyuan-6",
+      "to_stop_id": "cn-ningbo-xinzhi-lu-6",
+      "from_station_id": "cn-ningbo-ningbo-dajuyuan",
+      "to_station_id": "cn-ningbo-xinzhi-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.084,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1084,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ningbo-dajuyuan-7-cn-ningbo-waitan-daqiao-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-ningbo-dajuyuan-7",
+      "to_stop_id": "cn-ningbo-waitan-daqiao-7",
+      "from_station_id": "cn-ningbo-ningbo-dajuyuan",
+      "to_station_id": "cn-ningbo-waitan-daqiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.116,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1116,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ningbo-railway-station-2-cn-ningbo-chenghuangmiao-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-ningbo-railway-station-2",
+      "to_stop_id": "cn-ningbo-chenghuangmiao-2",
+      "from_station_id": "cn-ningbo-ningbo-railway-station",
+      "to_station_id": "cn-ningbo-chenghuangmiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.507,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1507,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ningbo-railway-station-4-cn-ningbo-xingning-bridge-west-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-ningbo-railway-station-4",
+      "to_stop_id": "cn-ningbo-xingning-bridge-west-4",
+      "from_station_id": "cn-ningbo-ningbo-railway-station",
+      "to_station_id": "cn-ningbo-xingning-bridge-west",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.147,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1147,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ningbo-university-2-cn-ningbo-qingshuipu-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-ningbo-university-2",
+      "to_stop_id": "cn-ningbo-qingshuipu-2",
+      "from_station_id": "cn-ningbo-ningbo-university",
+      "to_station_id": "cn-ningbo-qingshuipu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.808,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2808,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ningci-donglu-7-cn-ningbo-yunfei-lu-kangqiao-nan-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-ningci-donglu-7",
+      "to_stop_id": "cn-ningbo-yunfei-lu-kangqiao-nan-7",
+      "from_station_id": "cn-ningbo-ningci-donglu",
+      "to_station_id": "cn-ningbo-yunfei-lu-kangqiao-nan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.638,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1638,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-olympic-sports-center-4-cn-ningbo-hongtang-middle-rd-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-olympic-sports-center-4",
+      "to_stop_id": "cn-ningbo-hongtang-middle-rd-4",
+      "from_station_id": "cn-ningbo-olympic-sports-center",
+      "to_station_id": "cn-ningbo-hongtang-middle-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.323,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1323,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ouchi-2-cn-ningbo-coach-terminal-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-ouchi-2",
+      "to_stop_id": "cn-ningbo-coach-terminal-2",
+      "from_station_id": "cn-ningbo-ouchi",
+      "to_station_id": "cn-ningbo-coach-terminal",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.224,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1224,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-panhuo-rd-4-cn-ningbo-songjiang-east-rd-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-panhuo-rd-4",
+      "to_stop_id": "cn-ningbo-songjiang-east-rd-4",
+      "from_station_id": "cn-ningbo-panhuo-rd",
+      "to_station_id": "cn-ningbo-songjiang-east-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.757,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1757,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qianhu-north-rd-3-cn-ningbo-jinyu-rd-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-qianhu-north-rd-3",
+      "to_stop_id": "cn-ningbo-jinyu-rd-3",
+      "from_station_id": "cn-ningbo-qianhu-north-rd",
+      "to_station_id": "cn-ningbo-jinyu-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.036,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1036,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qianhu-south-rd-5-cn-ningbo-south-higher-education-park-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-qianhu-south-rd-5",
+      "to_stop_id": "cn-ningbo-south-higher-education-park-5",
+      "from_station_id": "cn-ningbo-qianhu-south-rd",
+      "to_station_id": "cn-ningbo-south-higher-education-park",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.175,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1175,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qingfangcheng-2-cn-ningbo-ouchi-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-qingfangcheng-2",
+      "to_stop_id": "cn-ningbo-ouchi-2",
+      "from_station_id": "cn-ningbo-qingfangcheng",
+      "to_station_id": "cn-ningbo-ouchi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.527,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1527,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qingfeng-qiaodong-6-cn-ningbo-zhengda-lu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-qingfeng-qiaodong-6",
+      "to_stop_id": "cn-ningbo-zhengda-lu-6",
+      "from_station_id": "cn-ningbo-qingfeng-qiaodong",
+      "to_station_id": "cn-ningbo-zhengda-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.803,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1803,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qinglinwan-8-cn-ningbo-shi-zhongyiyuan-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-qinglinwan-8",
+      "to_stop_id": "cn-ningbo-shi-zhongyiyuan-8",
+      "from_station_id": "cn-ningbo-qinglinwan",
+      "to_station_id": "cn-ningbo-shi-zhongyiyuan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.262,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1262,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qingshuipu-2-cn-ningbo-wulipai-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-qingshuipu-2",
+      "to_stop_id": "cn-ningbo-wulipai-2",
+      "from_station_id": "cn-ningbo-qingshuipu",
+      "to_station_id": "cn-ningbo-wulipai",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.591,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2591,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qiuai-7-cn-ningbo-shangde-lu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-qiuai-7",
+      "to_stop_id": "cn-ningbo-shangde-lu-7",
+      "from_station_id": "cn-ningbo-qiuai",
+      "to_station_id": "cn-ningbo-shangde-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.974,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1974,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qiubi-3-cn-ningbo-qianhu-north-rd-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-qiubi-3",
+      "to_stop_id": "cn-ningbo-qianhu-north-rd-3",
+      "from_station_id": "cn-ningbo-qiubi",
+      "to_station_id": "cn-ningbo-qianhu-north-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.421,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1421,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-qiuga-east-1-cn-ningbo-wuxiang-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-qiuga-east-1",
+      "to_stop_id": "cn-ningbo-wuxiang-1",
+      "from_station_id": "cn-ningbo-qiuga-east",
+      "to_station_id": "cn-ningbo-wuxiang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.205,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 3205,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-sakura-park-1-cn-ningbo-fuming-rd-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-sakura-park-1",
+      "to_stop_id": "cn-ningbo-fuming-rd-1",
+      "from_station_id": "cn-ningbo-sakura-park",
+      "to_station_id": "cn-ningbo-fuming-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.204,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1204,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-sakura-park-3-cn-ningbo-childrens-park-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-sakura-park-3",
+      "to_stop_id": "cn-ningbo-childrens-park-3",
+      "from_station_id": "cn-ningbo-sakura-park",
+      "to_station_id": "cn-ningbo-childrens-park",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.232,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1232,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-sanguantang-2-cn-ningbo-ningbo-university-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-sanguantang-2",
+      "to_stop_id": "cn-ningbo-ningbo-university-2",
+      "from_station_id": "cn-ningbo-sanguantang",
+      "to_station_id": "cn-ningbo-ningbo-university",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.348,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1348,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-sanguantang-5-cn-ningbo-xingzhuang-rd-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-sanguantang-5",
+      "to_stop_id": "cn-ningbo-xingzhuang-rd-5",
+      "from_station_id": "cn-ningbo-sanguantang",
+      "to_station_id": "cn-ningbo-xingzhuang-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.057,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1057,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shangde-lu-7-cn-ningbo-huilong-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-shangde-lu-7",
+      "to_stop_id": "cn-ningbo-huilong-7",
+      "from_station_id": "cn-ningbo-shangde-lu",
+      "to_station_id": "cn-ningbo-huilong",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.409,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1409,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shengmo-lu-1-cn-ningbo-donghuan-south-rd-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-shengmo-lu-1",
+      "to_stop_id": "cn-ningbo-donghuan-south-rd-1",
+      "from_station_id": "cn-ningbo-shengmo-lu",
+      "to_station_id": "cn-ningbo-donghuan-south-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.417,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1417,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shengmo-lu-7-cn-ningbo-qiuai-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-shengmo-lu-7",
+      "to_stop_id": "cn-ningbo-qiuai-7",
+      "from_station_id": "cn-ningbo-shengmo-lu",
+      "to_station_id": "cn-ningbo-qiuai",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 3.526,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 3526,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shi-zhongyiyuan-8-cn-ningbo-zemin-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-shi-zhongyiyuan-8",
+      "to_stop_id": "cn-ningbo-zemin-8",
+      "from_station_id": "cn-ningbo-shi-zhongyiyuan",
+      "to_station_id": "cn-ningbo-zemin",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.012,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1012,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shiji-ave-1-cn-ningbo-haiyan-north-rd-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-shiji-ave-1",
+      "to_stop_id": "cn-ningbo-haiyan-north-rd-1",
+      "from_station_id": "cn-ningbo-shiji-ave",
+      "to_station_id": "cn-ningbo-haiyan-north-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.308,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1308,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shiqi-2-cn-ningbo-qingfangcheng-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-shiqi-2",
+      "to_stop_id": "cn-ningbo-qingfangcheng-2",
+      "from_station_id": "cn-ningbo-shiqi",
+      "to_station_id": "cn-ningbo-qingfangcheng",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.24,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1240,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shiqi-5-cn-ningbo-yadu-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-shiqi-5",
+      "to_stop_id": "cn-ningbo-yadu-5",
+      "from_station_id": "cn-ningbo-shiqi",
+      "to_station_id": "cn-ningbo-yadu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.843,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 843,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shishan-3-cn-ningbo-minghui-rd-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-shishan-3",
+      "to_stop_id": "cn-ningbo-minghui-rd-3",
+      "from_station_id": "cn-ningbo-shishan",
+      "to_station_id": "cn-ningbo-minghui-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.331,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1331,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shuangdong-rd-4-cn-ningbo-cuibaili-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-shuangdong-rd-4",
+      "to_stop_id": "cn-ningbo-cuibaili-4",
+      "from_station_id": "cn-ningbo-shuangdong-rd",
+      "to_station_id": "cn-ningbo-cuibaili",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.012,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1012,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-shuguang-7-cn-ningbo-tiyuguan-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-shuguang-7",
+      "to_stop_id": "cn-ningbo-tiyuguan-7",
+      "from_station_id": "cn-ningbo-shuguang",
+      "to_station_id": "cn-ningbo-tiyuguan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.177,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1177,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-sigang-5-cn-ningbo-caoga-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-sigang-5",
+      "to_stop_id": "cn-ningbo-caoga-5",
+      "from_station_id": "cn-ningbo-sigang",
+      "to_station_id": "cn-ningbo-caoga",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.7,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1700,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-siming-middle-rd-3-cn-ningbo-yinzhou-government-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-siming-middle-rd-3",
+      "to_stop_id": "cn-ningbo-yinzhou-government-3",
+      "from_station_id": "cn-ningbo-siming-middle-rd",
+      "to_station_id": "cn-ningbo-yinzhou-government",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.055,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1055,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-songhuajiang-rd-1-cn-ningbo-zhonghe-rd-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-songhuajiang-rd-1",
+      "to_stop_id": "cn-ningbo-zhonghe-rd-1",
+      "from_station_id": "cn-ningbo-songhuajiang-rd",
+      "to_station_id": "cn-ningbo-zhonghe-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.387,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2387,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-songjiacao-6-cn-ningbo-maimian-qiao-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-songjiacao-6",
+      "to_stop_id": "cn-ningbo-maimian-qiao-6",
+      "from_station_id": "cn-ningbo-songjiacao",
+      "to_station_id": "cn-ningbo-maimian-qiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.639,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1639,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-songjiang-east-rd-4-cn-ningbo-south-higher-education-park-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-songjiang-east-rd-4",
+      "to_stop_id": "cn-ningbo-south-higher-education-park-4",
+      "from_station_id": "cn-ningbo-songjiang-east-rd",
+      "to_station_id": "cn-ningbo-south-higher-education-park",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.069,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1069,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-south-higher-education-park-4-cn-ningbo-jinda-south-rd-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-south-higher-education-park-4",
+      "to_stop_id": "cn-ningbo-jinda-south-rd-4",
+      "from_station_id": "cn-ningbo-south-higher-education-park",
+      "to_station_id": "cn-ningbo-jinda-south-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.248,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2248,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-south-higher-education-park-5-cn-ningbo-xiaying-rd-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-south-higher-education-park-5",
+      "to_stop_id": "cn-ningbo-xiaying-rd-5",
+      "from_station_id": "cn-ningbo-south-higher-education-park",
+      "to_station_id": "cn-ningbo-xiaying-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.46,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1460,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-tangxi-12-cn-ningbo-yinzhou-xianxiang-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-tangxi-12",
+      "to_stop_id": "cn-ningbo-yinzhou-xianxiang-12",
+      "from_station_id": "cn-ningbo-tangxi",
+      "to_station_id": "cn-ningbo-yinzhou-xianxiang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 5.74,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 5740,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-tiyuguan-3-cn-ningbo-sakura-park-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-tiyuguan-3",
+      "to_stop_id": "cn-ningbo-sakura-park-3",
+      "from_station_id": "cn-ningbo-tiyuguan",
+      "to_station_id": "cn-ningbo-sakura-park",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.95,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 950,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-tiyuguan-7-cn-ningbo-fumin-gongyuan-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-tiyuguan-7",
+      "to_stop_id": "cn-ningbo-fumin-gongyuan-7",
+      "from_station_id": "cn-ningbo-tiyuguan",
+      "to_station_id": "cn-ningbo-fumin-gongyuan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.348,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1348,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-tongde-rd-5-cn-ningbo-shiqi-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-tongde-rd-5",
+      "to_stop_id": "cn-ningbo-shiqi-5",
+      "from_station_id": "cn-ningbo-tongde-rd",
+      "to_station_id": "cn-ningbo-shiqi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.343,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1343,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-waitan-daqiao-2-cn-ningbo-zhengda-lu-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-waitan-daqiao-2",
+      "to_stop_id": "cn-ningbo-zhengda-lu-2",
+      "from_station_id": "cn-ningbo-waitan-daqiao",
+      "to_station_id": "cn-ningbo-zhengda-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.825,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 825,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-waitan-daqiao-7-cn-ningbo-shuguang-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-waitan-daqiao-7",
+      "to_stop_id": "cn-ningbo-shuguang-7",
+      "from_station_id": "cn-ningbo-waitan-daqiao",
+      "to_station_id": "cn-ningbo-shuguang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.642,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1642,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-wangchun-qiao-1-cn-ningbo-zemin-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-wangchun-qiao-1",
+      "to_stop_id": "cn-ningbo-zemin-1",
+      "from_station_id": "cn-ningbo-wangchun-qiao",
+      "to_station_id": "cn-ningbo-zemin",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.286,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1286,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-wangchun-qiao-6-cn-ningbo-songjiacao-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-wangchun-qiao-6",
+      "to_stop_id": "cn-ningbo-songjiacao-6",
+      "from_station_id": "cn-ningbo-wangchun-qiao",
+      "to_station_id": "cn-ningbo-songjiacao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.664,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1664,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-wantou-7-cn-ningbo-ningbo-dajuyuan-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-wantou-7",
+      "to_stop_id": "cn-ningbo-ningbo-dajuyuan-7",
+      "from_station_id": "cn-ningbo-wantou",
+      "to_station_id": "cn-ningbo-ningbo-dajuyuan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.989,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 989,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-wuga-1-cn-ningbo-daqi-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-wuga-1",
+      "to_stop_id": "cn-ningbo-daqi-1",
+      "from_station_id": "cn-ningbo-wuga",
+      "to_station_id": "cn-ningbo-daqi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.445,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2445,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-wulipai-2-cn-ningbo-fengyuan-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-wulipai-2",
+      "to_stop_id": "cn-ningbo-fengyuan-2",
+      "from_station_id": "cn-ningbo-wulipai",
+      "to_station_id": "cn-ningbo-fengyuan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.964,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1964,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-wuxiang-1-cn-ningbo-baozhuang-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-wuxiang-1",
+      "to_stop_id": "cn-ningbo-baozhuang-1",
+      "from_station_id": "cn-ningbo-wuxiang",
+      "to_station_id": "cn-ningbo-baozhuang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 4.254,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 4254,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xiangshan-xianxiang-12-cn-ningbo-daxu-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-xiangshan-xianxiang-12",
+      "to_stop_id": "cn-ningbo-daxu-12",
+      "from_station_id": "cn-ningbo-xiangshan-xianxiang",
+      "to_station_id": "cn-ningbo-daxu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "distance_km": 7.169,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 7169,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xiaogang-xi-6-cn-ningbo-xieshu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-xiaogang-xi-6",
+      "to_stop_id": "cn-ningbo-xieshu-6",
+      "from_station_id": "cn-ningbo-xiaogang-xi",
+      "to_station_id": "cn-ningbo-xieshu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.16,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2160,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xiaoyangjiang-12-cn-ningbo-yunlong-huochezhan-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-12",
+      "to_stop_id": "cn-ningbo-yunlong-huochezhan-12",
+      "from_station_id": "cn-ningbo-xiaoyangjiang",
+      "to_station_id": "cn-ningbo-yunlong-huochezhan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.516,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2516,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xiaoyangjiang-4-cn-ningbo-dongqian-lake-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-4",
+      "to_stop_id": "cn-ningbo-dongqian-lake-4",
+      "from_station_id": "cn-ningbo-xiaoyangjiang",
+      "to_station_id": "cn-ningbo-dongqian-lake",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.139,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2139,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xiaoyangjiang-7-cn-ningbo-yunlong-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-7",
+      "to_stop_id": "cn-ningbo-yunlong-7",
+      "from_station_id": "cn-ningbo-xiaoyangjiang",
+      "to_station_id": "cn-ningbo-yunlong",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 1.305,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31,
+        "a_s_per_km": 40.7,
+        "b_s": 92.3,
+        "distance_meters": 1305,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xiaying-rd-5-cn-ningbo-dayangjiang-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-xiaying-rd-5",
+      "to_stop_id": "cn-ningbo-dayangjiang-5",
+      "from_station_id": "cn-ningbo-xiaying-rd",
+      "to_station_id": "cn-ningbo-dayangjiang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.251,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1251,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xiejia-8-cn-ningbo-qinglinwan-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-xiejia-8",
+      "to_stop_id": "cn-ningbo-qinglinwan-8",
+      "from_station_id": "cn-ningbo-xiejia",
+      "to_station_id": "cn-ningbo-qinglinwan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.508,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1508,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xieshu-6-cn-ningbo-meixu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-xieshu-6",
+      "to_stop_id": "cn-ningbo-meixu-6",
+      "from_station_id": "cn-ningbo-xieshu",
+      "to_station_id": "cn-ningbo-meixu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 3.288,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 3288,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-ximenkou-1-cn-ningbo-gulou-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-ximenkou-1",
+      "to_stop_id": "cn-ningbo-gulou-1",
+      "from_station_id": "cn-ningbo-ximenkou",
+      "to_station_id": "cn-ningbo-gulou",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.996,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 996,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xinghai-nanlu-5-cn-ningbo-meiyan-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-xinghai-nanlu-5",
+      "to_stop_id": "cn-ningbo-meiyan-5",
+      "from_station_id": "cn-ningbo-xinghai-nanlu",
+      "to_station_id": "cn-ningbo-meiyan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.809,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 809,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xingning-bridge-east-4-cn-ningbo-baihe-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-xingning-bridge-east-4",
+      "to_stop_id": "cn-ningbo-baihe-4",
+      "from_station_id": "cn-ningbo-xingning-bridge-east",
+      "to_station_id": "cn-ningbo-baihe",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.06,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1060,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xingning-bridge-west-4-cn-ningbo-xingning-bridge-east-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-xingning-bridge-west-4",
+      "to_stop_id": "cn-ningbo-xingning-bridge-east-4",
+      "from_station_id": "cn-ningbo-xingning-bridge-west",
+      "to_station_id": "cn-ningbo-xingning-bridge-east",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.892,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 892,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xingzhuang-rd-5-cn-ningbo-xinghai-nanlu-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-xingzhuang-rd-5",
+      "to_stop_id": "cn-ningbo-xinghai-nanlu-5",
+      "from_station_id": "cn-ningbo-xingzhuang-rd",
+      "to_station_id": "cn-ningbo-xinghai-nanlu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.948,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 948,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xintian-lu-7-cn-ningbo-minan-donglu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-xintian-lu-7",
+      "to_stop_id": "cn-ningbo-minan-donglu-7",
+      "from_station_id": "cn-ningbo-xintian-lu",
+      "to_station_id": "cn-ningbo-minan-donglu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.088,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1088,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xinzhi-lu-6-cn-ningbo-cuibaili-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-xinzhi-lu-6",
+      "to_stop_id": "cn-ningbo-cuibaili-6",
+      "from_station_id": "cn-ningbo-xinzhi-lu",
+      "to_station_id": "cn-ningbo-cuibaili",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.618,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 618,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xuefu-lu-8-cn-ningbo-hansong-lu-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-xuefu-lu-8",
+      "to_stop_id": "cn-ningbo-hansong-lu-8",
+      "from_station_id": "cn-ningbo-xuefu-lu",
+      "to_station_id": "cn-ningbo-hansong-lu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 2.124,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 37,
+        "a_s_per_km": 76.2,
+        "b_s": 44,
+        "distance_meters": 2124,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-xujiacao-changle-1-cn-ningbo-wangchun-qiao-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-xujiacao-changle-1",
+      "to_stop_id": "cn-ningbo-wangchun-qiao-1",
+      "from_station_id": "cn-ningbo-xujiacao-changle",
+      "to_station_id": "cn-ningbo-wangchun-qiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.243,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1243,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yadu-5-cn-ningbo-miaoyan-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-yadu-5",
+      "to_stop_id": "cn-ningbo-miaoyan-5",
+      "from_station_id": "cn-ningbo-yadu",
+      "to_station_id": "cn-ningbo-miaoyan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.671,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1671,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yaqian-6-cn-ningbo-xiaogang-xi-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-yaqian-6",
+      "to_stop_id": "cn-ningbo-xiaogang-xi-6",
+      "from_station_id": "cn-ningbo-yaqian",
+      "to_station_id": "cn-ningbo-xiaogang-xi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.21,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1210,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yasaiyan-2-cn-ningbo-datong-bridge-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-yasaiyan-2",
+      "to_stop_id": "cn-ningbo-datong-bridge-2",
+      "from_station_id": "cn-ningbo-yasaiyan",
+      "to_station_id": "cn-ningbo-datong-bridge",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.594,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 594,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yingjia-lu-7-cn-ningbo-ningci-donglu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-yingjia-lu-7",
+      "to_stop_id": "cn-ningbo-ningci-donglu-7",
+      "from_station_id": "cn-ningbo-yingjia-lu",
+      "to_station_id": "cn-ningbo-ningci-donglu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.957,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2957,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yinzhou-ave-2-cn-ningbo-shiqi-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-yinzhou-ave-2",
+      "to_stop_id": "cn-ningbo-shiqi-2",
+      "from_station_id": "cn-ningbo-yinzhou-ave",
+      "to_station_id": "cn-ningbo-shiqi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.092,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1092,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yinzhou-coach-terminal-3-cn-ningbo-gouzhang-rd-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-yinzhou-coach-terminal-3",
+      "to_stop_id": "cn-ningbo-gouzhang-rd-3",
+      "from_station_id": "cn-ningbo-yinzhou-coach-terminal",
+      "to_station_id": "cn-ningbo-gouzhang-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.346,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1346,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yinzhou-gongyuannan-8-cn-ningbo-nanbu-shangwu-qu-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-yinzhou-gongyuannan-8",
+      "to_stop_id": "cn-ningbo-nanbu-shangwu-qu-8",
+      "from_station_id": "cn-ningbo-yinzhou-gongyuannan",
+      "to_station_id": "cn-ningbo-nanbu-shangwu-qu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.735,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 735,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yinzhou-government-3-cn-ningbo-nanbu-shangwu-qu-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-yinzhou-government-3",
+      "to_stop_id": "cn-ningbo-nanbu-shangwu-qu-3",
+      "from_station_id": "cn-ningbo-yinzhou-government",
+      "to_station_id": "cn-ningbo-nanbu-shangwu-qu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.31,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1310,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yinzhou-government-5-cn-ningbo-qianhu-south-rd-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-yinzhou-government-5",
+      "to_stop_id": "cn-ningbo-qianhu-south-rd-5",
+      "from_station_id": "cn-ningbo-yinzhou-government",
+      "to_station_id": "cn-ningbo-qianhu-south-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.793,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1793,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yinzhou-xianxiang-12-cn-ningbo-xiangshan-xianxiang-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-yinzhou-xianxiang-12",
+      "to_stop_id": "cn-ningbo-xiangshan-xianxiang-12",
+      "from_station_id": "cn-ningbo-yinzhou-xianxiang",
+      "to_station_id": "cn-ningbo-xiangshan-xianxiang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 420,
+      "travel_time_source": "planner",
+      "distance_km": 12.683,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 12683,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yongmao-lu-5-cn-ningbo-zhenhai-dadao-cihai-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-yongmao-lu-5",
+      "to_stop_id": "cn-ningbo-zhenhai-dadao-cihai-5",
+      "from_station_id": "cn-ningbo-yongmao-lu",
+      "to_station_id": "cn-ningbo-zhenhai-dadao-cihai",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.074,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2074,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yuanshi-lu-5-cn-ningbo-angmenggang-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-yuanshi-lu-5",
+      "to_stop_id": "cn-ningbo-angmenggang-5",
+      "from_station_id": "cn-ningbo-yuanshi-lu",
+      "to_station_id": "cn-ningbo-angmenggang",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.983,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 983,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yuanshi-lu-6-cn-ningbo-canghai-beilu-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-yuanshi-lu-6",
+      "to_stop_id": "cn-ningbo-canghai-beilu-6",
+      "from_station_id": "cn-ningbo-yuanshi-lu",
+      "to_station_id": "cn-ningbo-canghai-beilu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.805,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1805,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yufan-7-cn-ningbo-minghai-beilu-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-yufan-7",
+      "to_stop_id": "cn-ningbo-minghai-beilu-7",
+      "from_station_id": "cn-ningbo-yufan",
+      "to_station_id": "cn-ningbo-minghai-beilu",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 3.727,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 3727,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yunfei-lu-kangqiao-nan-7-cn-ningbo-wantou-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-yunfei-lu-kangqiao-nan-7",
+      "to_stop_id": "cn-ningbo-wantou-7",
+      "from_station_id": "cn-ningbo-yunfei-lu-kangqiao-nan",
+      "to_station_id": "cn-ningbo-wantou",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 2.107,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2107,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yunlin-xilu-6-cn-ningbo-gulin-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-yunlin-xilu-6",
+      "to_stop_id": "cn-ningbo-gulin-6",
+      "from_station_id": "cn-ningbo-yunlin-xilu",
+      "to_station_id": "cn-ningbo-gulin",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 1.652,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 36.5,
+        "a_s_per_km": 49.7,
+        "b_s": 79.5,
+        "distance_meters": 1652,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yunlong-huochezhan-12-cn-ningbo-hengxi-12",
+      "line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-yunlong-huochezhan-12",
+      "to_stop_id": "cn-ningbo-hengxi-12",
+      "from_station_id": "cn-ningbo-yunlong-huochezhan",
+      "to_station_id": "cn-ningbo-hengxi",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 4.321,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 4321,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-yunxia-rd-2-cn-ningbo-ningbo-railway-station-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-yunxia-rd-2",
+      "to_stop_id": "cn-ningbo-ningbo-railway-station-2",
+      "from_station_id": "cn-ningbo-yunxia-rd",
+      "to_station_id": "cn-ningbo-ningbo-railway-station",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.164,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1164,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zemin-1-cn-ningbo-daqing-bridge-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-zemin-1",
+      "to_stop_id": "cn-ningbo-daqing-bridge-1",
+      "from_station_id": "cn-ningbo-zemin",
+      "to_station_id": "cn-ningbo-daqing-bridge",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.093,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1093,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zemin-8-cn-ningbo-lianfeng-8",
+      "line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-zemin-8",
+      "to_stop_id": "cn-ningbo-lianfeng-8",
+      "from_station_id": "cn-ningbo-zemin",
+      "to_station_id": "cn-ningbo-lianfeng",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.215,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1215,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhangjiatan-5-cn-ningbo-tongde-rd-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-zhangjiatan-5",
+      "to_stop_id": "cn-ningbo-tongde-rd-5",
+      "from_station_id": "cn-ningbo-zhangjiatan",
+      "to_station_id": "cn-ningbo-tongde-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 2.088,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 2088,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhaobaoshan-2-cn-ningbo-honglian-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-zhaobaoshan-2",
+      "to_stop_id": "cn-ningbo-honglian-2",
+      "from_station_id": "cn-ningbo-zhaobaoshan",
+      "to_station_id": "cn-ningbo-honglian",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 1.55,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34.8,
+        "a_s_per_km": 50.2,
+        "b_s": 73.2,
+        "distance_meters": 1550,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhengda-lu-2-cn-ningbo-nijiayan-2",
+      "line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-zhengda-lu-2",
+      "to_stop_id": "cn-ningbo-nijiayan-2",
+      "from_station_id": "cn-ningbo-zhengda-lu",
+      "to_station_id": "cn-ningbo-nijiayan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.103,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1103,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhengda-lu-6-cn-ningbo-ningbo-dajuyuan-6",
+      "line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-zhengda-lu-6",
+      "to_stop_id": "cn-ningbo-ningbo-dajuyuan-6",
+      "from_station_id": "cn-ningbo-zhengda-lu",
+      "to_station_id": "cn-ningbo-ningbo-dajuyuan",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.981,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 981,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhenhai-dadao-cihai-5-cn-ningbo-luotuo-qiao-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-zhenhai-dadao-cihai-5",
+      "to_stop_id": "cn-ningbo-luotuo-qiao-5",
+      "from_station_id": "cn-ningbo-zhenhai-dadao-cihai",
+      "to_station_id": "cn-ningbo-luotuo-qiao",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "distance_km": 1.683,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 35,
+        "a_s_per_km": 71.1,
+        "b_s": 54.9,
+        "distance_meters": 1683,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhenhai-dadao-cihai-7-cn-ningbo-luoxing-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-zhenhai-dadao-cihai-7",
+      "to_stop_id": "cn-ningbo-luoxing-7",
+      "from_station_id": "cn-ningbo-zhenhai-dadao-cihai",
+      "to_station_id": "cn-ningbo-luoxing",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.854,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1854,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhenhai-shimin-guangchang-7-cn-ningbo-zhenhai-dadao-cihai-7",
+      "line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-zhenhai-shimin-guangchang-7",
+      "to_stop_id": "cn-ningbo-zhenhai-dadao-cihai-7",
+      "from_station_id": "cn-ningbo-zhenhai-shimin-guangchang",
+      "to_station_id": "cn-ningbo-zhenhai-dadao-cihai",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.345,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1345,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhonggongmiao-5-cn-ningbo-yinzhou-government-5",
+      "line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-zhonggongmiao-5",
+      "to_stop_id": "cn-ningbo-yinzhou-government-5",
+      "from_station_id": "cn-ningbo-zhonggongmiao",
+      "to_station_id": "cn-ningbo-yinzhou-government",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 0.972,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 972,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhonghe-rd-1-cn-ningbo-changjiang-rd-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-zhonghe-rd-1",
+      "to_stop_id": "cn-ningbo-changjiang-rd-1",
+      "from_station_id": "cn-ningbo-zhonghe-rd",
+      "to_station_id": "cn-ningbo-changjiang-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.419,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1419,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhongxing-bridge-south-3-cn-ningbo-minglou-3",
+      "line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-zhongxing-bridge-south-3",
+      "to_stop_id": "cn-ningbo-minglou-3",
+      "from_station_id": "cn-ningbo-zhongxing-bridge-south",
+      "to_station_id": "cn-ningbo-minglou",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.226,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1226,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhoumeng-north-rd-1-cn-ningbo-sakura-park-1",
+      "line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-zhoumeng-north-rd-1",
+      "to_stop_id": "cn-ningbo-sakura-park-1",
+      "from_station_id": "cn-ningbo-zhoumeng-north-rd",
+      "to_station_id": "cn-ningbo-sakura-park",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.81,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 810,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-ningbo-seg-cn-ningbo-zhuangqiao-railway-station-4-cn-ningbo-lijiang-rd-4",
+      "line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-zhuangqiao-railway-station-4",
+      "to_stop_id": "cn-ningbo-lijiang-rd-4",
+      "from_station_id": "cn-ningbo-zhuangqiao-railway-station",
+      "to_station_id": "cn-ningbo-lijiang-rd",
+      "direction": "both",
+      "source_id": "nbmetro-station-stat",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.587,
+      "extras": {
+        "distance_source": "baidu-transit-distance",
+        "distance_meters": 1587,
+        "planner_time_source": "baidu-transit"
+      }
+    }
+  ]
+}

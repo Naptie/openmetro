@@ -1,0 +1,464 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-ningbo",
+  "generated_at": "2026-10-23T21:15:48.890Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-ningbo-line-1-pattern-gaoqiao-west-to-xiapu",
+      "line_id": "cn-ningbo-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "stop_ids": [
+        "cn-ningbo-gaoqiao-west-1",
+        "cn-ningbo-gaoqiao-1",
+        "cn-ningbo-liangzhu-1",
+        "cn-ningbo-lugang-1",
+        "cn-ningbo-xujiacao-changle-1",
+        "cn-ningbo-wangchun-qiao-1",
+        "cn-ningbo-zemin-1",
+        "cn-ningbo-daqing-bridge-1",
+        "cn-ningbo-ximenkou-1",
+        "cn-ningbo-gulou-1",
+        "cn-ningbo-dongmenkou-1",
+        "cn-ningbo-jiangxia-bridge-east-1",
+        "cn-ningbo-zhoumeng-north-rd-1",
+        "cn-ningbo-sakura-park-1",
+        "cn-ningbo-fuming-rd-1",
+        "cn-ningbo-shiji-ave-1",
+        "cn-ningbo-haiyan-north-rd-1",
+        "cn-ningbo-fuqing-north-rd-1",
+        "cn-ningbo-shengmo-lu-1",
+        "cn-ningbo-donghuan-south-rd-1",
+        "cn-ningbo-qiuga-east-1",
+        "cn-ningbo-wuxiang-1",
+        "cn-ningbo-baozhuang-1",
+        "cn-ningbo-wuga-1",
+        "cn-ningbo-daqi-1",
+        "cn-ningbo-songhuajiang-rd-1",
+        "cn-ningbo-zhonghe-rd-1",
+        "cn-ningbo-changjiang-rd-1",
+        "cn-ningbo-xiapu-1"
+      ],
+      "origin_stop_id": "cn-ningbo-gaoqiao-west-1",
+      "terminal_stop_id": "cn-ningbo-xiapu-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "1"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1",
+        "official_line_number": "1"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-12-pattern-xiaoyangjiang-to-damuwan",
+      "line_id": "cn-ningbo-line-12",
+      "name": "12号线",
+      "names": {
+        "zh": "12号线",
+        "en": "Line 12"
+      },
+      "stop_ids": [
+        "cn-ningbo-xiaoyangjiang-12",
+        "cn-ningbo-yunlong-huochezhan-12",
+        "cn-ningbo-hengxi-12",
+        "cn-ningbo-tangxi-12",
+        "cn-ningbo-yinzhou-xianxiang-12",
+        "cn-ningbo-xiangshan-xianxiang-12",
+        "cn-ningbo-daxu-12",
+        "cn-ningbo-dancheng-12",
+        "cn-ningbo-binhai-dadao-12",
+        "cn-ningbo-damuwan-12"
+      ],
+      "origin_stop_id": "cn-ningbo-xiaoyangjiang-12",
+      "terminal_stop_id": "cn-ningbo-damuwan-12",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "12"
+        }
+      ],
+      "extras": {
+        "line_short_name": "12",
+        "official_line_number": "12"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-2-pattern-lishe-international-airport-to-honglian",
+      "line_id": "cn-ningbo-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "stop_ids": [
+        "cn-ningbo-lishe-international-airport-2",
+        "cn-ningbo-lishe-2",
+        "cn-ningbo-yinzhou-ave-2",
+        "cn-ningbo-shiqi-2",
+        "cn-ningbo-qingfangcheng-2",
+        "cn-ningbo-ouchi-2",
+        "cn-ningbo-coach-terminal-2",
+        "cn-ningbo-liyuan-nanlu-2",
+        "cn-ningbo-yunxia-rd-2",
+        "cn-ningbo-ningbo-railway-station-2",
+        "cn-ningbo-chenghuangmiao-2",
+        "cn-ningbo-gulou-2",
+        "cn-ningbo-waitan-daqiao-2",
+        "cn-ningbo-zhengda-lu-2",
+        "cn-ningbo-nijiayan-2",
+        "cn-ningbo-yasaiyan-2",
+        "cn-ningbo-datong-bridge-2",
+        "cn-ningbo-kongpu-2",
+        "cn-ningbo-lulin-2",
+        "cn-ningbo-sanguantang-2",
+        "cn-ningbo-ningbo-university-2",
+        "cn-ningbo-qingshuipu-2",
+        "cn-ningbo-wulipai-2",
+        "cn-ningbo-fengyuan-2",
+        "cn-ningbo-congyuan-rd-2",
+        "cn-ningbo-zhaobaoshan-2",
+        "cn-ningbo-honglian-2"
+      ],
+      "origin_stop_id": "cn-ningbo-lishe-international-airport-2",
+      "terminal_stop_id": "cn-ningbo-honglian-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "2"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2",
+        "official_line_number": "2"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-3-pattern-datong-bridge-to-jinhai-rd",
+      "line_id": "cn-ningbo-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "stop_ids": [
+        "cn-ningbo-datong-bridge-3",
+        "cn-ningbo-zhongxing-bridge-south-3",
+        "cn-ningbo-minglou-3",
+        "cn-ningbo-tiyuguan-3",
+        "cn-ningbo-sakura-park-3",
+        "cn-ningbo-childrens-park-3",
+        "cn-ningbo-qiubi-3",
+        "cn-ningbo-qianhu-north-rd-3",
+        "cn-ningbo-jinyu-rd-3",
+        "cn-ningbo-siming-middle-rd-3",
+        "cn-ningbo-yinzhou-government-3",
+        "cn-ningbo-nanbu-shangwu-qu-3",
+        "cn-ningbo-yinzhou-coach-terminal-3",
+        "cn-ningbo-gouzhang-rd-3",
+        "cn-ningbo-gaotang-bridge-3",
+        "cn-ningbo-jiangshan-3",
+        "cn-ningbo-shishan-3",
+        "cn-ningbo-minghui-rd-3",
+        "cn-ningbo-chaoyang-3",
+        "cn-ningbo-fangqiao-3",
+        "cn-ningbo-jinlin-3",
+        "cn-ningbo-nandu-3",
+        "cn-ningbo-dacheng-east-rd-3",
+        "cn-ningbo-jinhai-rd-3"
+      ],
+      "origin_stop_id": "cn-ningbo-datong-bridge-3",
+      "terminal_stop_id": "cn-ningbo-jinhai-rd-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "3"
+        }
+      ],
+      "extras": {
+        "line_short_name": "3",
+        "official_line_number": "3"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-4-pattern-ci-chengxi-to-guoji-huiyi-zhongxin",
+      "line_id": "cn-ningbo-line-4",
+      "name": "4号线",
+      "names": {
+        "zh": "4号线",
+        "en": "Line 4"
+      },
+      "stop_ids": [
+        "cn-ningbo-ci-chengxi-4",
+        "cn-ningbo-cicheng-4",
+        "cn-ningbo-guanshanhe-4",
+        "cn-ningbo-changxing-rd-4",
+        "cn-ningbo-jinshan-rd-4",
+        "cn-ningbo-olympic-sports-center-4",
+        "cn-ningbo-hongtang-middle-rd-4",
+        "cn-ningbo-hongda-lu-4",
+        "cn-ningbo-zhuangqiao-railway-station-4",
+        "cn-ningbo-lijiang-rd-4",
+        "cn-ningbo-shuangdong-rd-4",
+        "cn-ningbo-cuibaili-4",
+        "cn-ningbo-daqing-bridge-4",
+        "cn-ningbo-liuxi-4",
+        "cn-ningbo-ningbo-railway-station-4",
+        "cn-ningbo-xingning-bridge-west-4",
+        "cn-ningbo-xingning-bridge-east-4",
+        "cn-ningbo-baihe-4",
+        "cn-ningbo-childrens-park-4",
+        "cn-ningbo-ailiu-4",
+        "cn-ningbo-panhuo-rd-4",
+        "cn-ningbo-songjiang-east-rd-4",
+        "cn-ningbo-south-higher-education-park-4",
+        "cn-ningbo-jinda-south-rd-4",
+        "cn-ningbo-xiaoyangjiang-4",
+        "cn-ningbo-dongqian-lake-4",
+        "cn-ningbo-guoji-huiyi-zhongxin-4"
+      ],
+      "origin_stop_id": "cn-ningbo-ci-chengxi-4",
+      "terminal_stop_id": "cn-ningbo-guoji-huiyi-zhongxin-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "4"
+        }
+      ],
+      "extras": {
+        "line_short_name": "4",
+        "official_line_number": "4"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-5-pattern-buzheng-to-luotuo-qiao",
+      "line_id": "cn-ningbo-line-5",
+      "name": "5号线",
+      "names": {
+        "zh": "5号线",
+        "en": "Line 5"
+      },
+      "stop_ids": [
+        "cn-ningbo-buzheng-5",
+        "cn-ningbo-zhangjiatan-5",
+        "cn-ningbo-tongde-rd-5",
+        "cn-ningbo-shiqi-5",
+        "cn-ningbo-yadu-5",
+        "cn-ningbo-miaoyan-5",
+        "cn-ningbo-zhonggongmiao-5",
+        "cn-ningbo-yinzhou-government-5",
+        "cn-ningbo-qianhu-south-rd-5",
+        "cn-ningbo-south-higher-education-park-5",
+        "cn-ningbo-xiaying-rd-5",
+        "cn-ningbo-dayangjiang-5",
+        "cn-ningbo-sigang-5",
+        "cn-ningbo-caoga-5",
+        "cn-ningbo-liuga-5",
+        "cn-ningbo-haiyan-north-rd-5",
+        "cn-ningbo-minan-donglu-5",
+        "cn-ningbo-internationl-convention-and-exhibition-center-5",
+        "cn-ningbo-yuanshi-lu-5",
+        "cn-ningbo-angmenggang-5",
+        "cn-ningbo-sanguantang-5",
+        "cn-ningbo-xingzhuang-rd-5",
+        "cn-ningbo-xinghai-nanlu-5",
+        "cn-ningbo-meiyan-5",
+        "cn-ningbo-yongmao-lu-5",
+        "cn-ningbo-zhenhai-dadao-cihai-5",
+        "cn-ningbo-luotuo-qiao-5"
+      ],
+      "origin_stop_id": "cn-ningbo-buzheng-5",
+      "terminal_stop_id": "cn-ningbo-luotuo-qiao-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "5"
+        }
+      ],
+      "extras": {
+        "line_short_name": "5",
+        "official_line_number": "5"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-6-pattern-honglian-to-gulin",
+      "line_id": "cn-ningbo-line-6",
+      "name": "6号线",
+      "names": {
+        "zh": "6号线",
+        "en": "Line 6"
+      },
+      "stop_ids": [
+        "cn-ningbo-honglian-6",
+        "cn-ningbo-yaqian-6",
+        "cn-ningbo-xiaogang-xi-6",
+        "cn-ningbo-xieshu-6",
+        "cn-ningbo-meixu-6",
+        "cn-ningbo-juxian-lu-6",
+        "cn-ningbo-yuanshi-lu-6",
+        "cn-ningbo-canghai-beilu-6",
+        "cn-ningbo-mingzhu-lu-6",
+        "cn-ningbo-minglou-6",
+        "cn-ningbo-qingfeng-qiaodong-6",
+        "cn-ningbo-zhengda-lu-6",
+        "cn-ningbo-ningbo-dajuyuan-6",
+        "cn-ningbo-xinzhi-lu-6",
+        "cn-ningbo-cuibaili-6",
+        "cn-ningbo-wangchun-qiao-6",
+        "cn-ningbo-songjiacao-6",
+        "cn-ningbo-maimian-qiao-6",
+        "cn-ningbo-huishi-lu-6",
+        "cn-ningbo-jishigang-6",
+        "cn-ningbo-yunlin-xilu-6",
+        "cn-ningbo-gulin-6"
+      ],
+      "origin_stop_id": "cn-ningbo-honglian-6",
+      "terminal_stop_id": "cn-ningbo-gulin-6",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "6"
+        }
+      ],
+      "extras": {
+        "line_short_name": "6",
+        "official_line_number": "6"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-7-pattern-yufan-to-yunlong",
+      "line_id": "cn-ningbo-line-7",
+      "name": "7号线",
+      "names": {
+        "zh": "7号线",
+        "en": "Line 7"
+      },
+      "stop_ids": [
+        "cn-ningbo-yufan-7",
+        "cn-ningbo-minghai-beilu-7",
+        "cn-ningbo-guisi-7",
+        "cn-ningbo-zhenhai-shimin-guangchang-7",
+        "cn-ningbo-zhenhai-dadao-cihai-7",
+        "cn-ningbo-luoxing-7",
+        "cn-ningbo-yingjia-lu-7",
+        "cn-ningbo-ningci-donglu-7",
+        "cn-ningbo-yunfei-lu-kangqiao-nan-7",
+        "cn-ningbo-wantou-7",
+        "cn-ningbo-ningbo-dajuyuan-7",
+        "cn-ningbo-waitan-daqiao-7",
+        "cn-ningbo-shuguang-7",
+        "cn-ningbo-tiyuguan-7",
+        "cn-ningbo-fumin-gongyuan-7",
+        "cn-ningbo-xintian-lu-7",
+        "cn-ningbo-minan-donglu-7",
+        "cn-ningbo-beimingcheng-lu-7",
+        "cn-ningbo-shengmo-lu-7",
+        "cn-ningbo-qiuai-7",
+        "cn-ningbo-shangde-lu-7",
+        "cn-ningbo-huilong-7",
+        "cn-ningbo-anshi-lu-7",
+        "cn-ningbo-xiaoyangjiang-7",
+        "cn-ningbo-yunlong-7"
+      ],
+      "origin_stop_id": "cn-ningbo-yufan-7",
+      "terminal_stop_id": "cn-ningbo-yunlong-7",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "7"
+        }
+      ],
+      "extras": {
+        "line_short_name": "7",
+        "official_line_number": "7"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-8-pattern-ext-xiayingnan",
+      "line_id": "cn-ningbo-line-8",
+      "name": "8号线延线",
+      "names": {
+        "zh": "8号线延线",
+        "en": "Line 8 Extension"
+      },
+      "stop_ids": [
+        "cn-ningbo-hansong-lu-8",
+        "cn-ningbo-xiayingnan-8"
+      ],
+      "origin_stop_id": "cn-ningbo-hansong-lu-8",
+      "terminal_stop_id": "cn-ningbo-xiayingnan-8",
+      "is_primary": false,
+      "junction_stop_id": "cn-ningbo-hansong-lu-8",
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "下应南"
+        }
+      ],
+      "extras": {
+        "pattern_status": "under_construction",
+        "parent_line_id": "cn-ningbo-line-8",
+        "connector_station_id": "cn-ningbo-hansong-lu",
+        "official_extension": true,
+        "line_short_name": "8"
+      }
+    },
+    {
+      "id": "cn-ningbo-line-8-pattern-kaiyuan-lu-to-hansong-lu",
+      "line_id": "cn-ningbo-line-8",
+      "name": "8号线",
+      "names": {
+        "zh": "8号线",
+        "en": "Line 8"
+      },
+      "stop_ids": [
+        "cn-ningbo-kaiyuan-lu-8",
+        "cn-ningbo-hongtang-8",
+        "cn-ningbo-hongsheng-lu-8",
+        "cn-ningbo-hongda-lu-8",
+        "cn-ningbo-xiejia-8",
+        "cn-ningbo-qinglinwan-8",
+        "cn-ningbo-shi-zhongyiyuan-8",
+        "cn-ningbo-zemin-8",
+        "cn-ningbo-lianfeng-8",
+        "cn-ningbo-liyuan-nanlu-8",
+        "cn-ningbo-nanyuan-8",
+        "cn-ningbo-duan-tang-8",
+        "cn-ningbo-jinshan-xilu-8",
+        "cn-ningbo-miaoyan-8",
+        "cn-ningbo-yinzhou-gongyuannan-8",
+        "cn-ningbo-nanbu-shangwu-qu-8",
+        "cn-ningbo-xuefu-lu-8",
+        "cn-ningbo-hansong-lu-8"
+      ],
+      "origin_stop_id": "cn-ningbo-kaiyuan-lu-8",
+      "terminal_stop_id": "cn-ningbo-hansong-lu-8",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "nbmetro-station-stat",
+          "id": "8"
+        }
+      ],
+      "extras": {
+        "line_short_name": "8",
+        "official_line_number": "8"
+      }
+    }
+  ]
+}

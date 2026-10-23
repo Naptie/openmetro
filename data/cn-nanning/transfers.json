@@ -1,0 +1,328 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-nanning",
+  "generated_at": "2026-10-23T21:28:16.602Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T21:28:16.602Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-nanning-advanced-business-park-3-cn-nanning-advanced-business-park-4",
+      "station_id": "cn-nanning-advanced-business-park",
+      "from_line_id": "cn-nanning-line-3",
+      "to_line_id": "cn-nanning-line-4",
+      "from_stop_id": "cn-nanning-advanced-business-park-3",
+      "to_stop_id": "cn-nanning-advanced-business-park-4",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-advanced-business-park-4-cn-nanning-advanced-business-park-3",
+      "station_id": "cn-nanning-advanced-business-park",
+      "from_line_id": "cn-nanning-line-4",
+      "to_line_id": "cn-nanning-line-3",
+      "from_stop_id": "cn-nanning-advanced-business-park-4",
+      "to_stop_id": "cn-nanning-advanced-business-park-3",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-anji-coach-station-2-cn-nanning-anji-coach-station-3",
+      "station_id": "cn-nanning-anji-coach-station",
+      "from_line_id": "cn-nanning-line-2",
+      "to_line_id": "cn-nanning-line-3",
+      "from_stop_id": "cn-nanning-anji-coach-station-2",
+      "to_stop_id": "cn-nanning-anji-coach-station-3",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-anji-coach-station-3-cn-nanning-anji-coach-station-2",
+      "station_id": "cn-nanning-anji-coach-station",
+      "from_line_id": "cn-nanning-line-3",
+      "to_line_id": "cn-nanning-line-2",
+      "from_stop_id": "cn-nanning-anji-coach-station-3",
+      "to_stop_id": "cn-nanning-anji-coach-station-2",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-chaoyang-square-1-cn-nanning-chaoyang-square-2",
+      "station_id": "cn-nanning-chaoyang-square",
+      "from_line_id": "cn-nanning-line-1",
+      "to_line_id": "cn-nanning-line-2",
+      "from_stop_id": "cn-nanning-chaoyang-square-1",
+      "to_stop_id": "cn-nanning-chaoyang-square-2",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-chaoyang-square-2-cn-nanning-chaoyang-square-1",
+      "station_id": "cn-nanning-chaoyang-square",
+      "from_line_id": "cn-nanning-line-2",
+      "to_line_id": "cn-nanning-line-1",
+      "from_stop_id": "cn-nanning-chaoyang-square-2",
+      "to_stop_id": "cn-nanning-chaoyang-square-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-dashatian-2-cn-nanning-dashatian-4",
+      "station_id": "cn-nanning-dashatian",
+      "from_line_id": "cn-nanning-line-2",
+      "to_line_id": "cn-nanning-line-4",
+      "from_stop_id": "cn-nanning-dashatian-2",
+      "to_stop_id": "cn-nanning-dashatian-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-dashatian-4-cn-nanning-dashatian-2",
+      "station_id": "cn-nanning-dashatian",
+      "from_line_id": "cn-nanning-line-4",
+      "to_line_id": "cn-nanning-line-2",
+      "from_stop_id": "cn-nanning-dashatian-4",
+      "to_stop_id": "cn-nanning-dashatian-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-guangxi-university-1-cn-nanning-guangxi-university-5",
+      "station_id": "cn-nanning-guangxi-university",
+      "from_line_id": "cn-nanning-line-1",
+      "to_line_id": "cn-nanning-line-5",
+      "from_stop_id": "cn-nanning-guangxi-university-1",
+      "to_stop_id": "cn-nanning-guangxi-university-5",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-guangxi-university-5-cn-nanning-guangxi-university-1",
+      "station_id": "cn-nanning-guangxi-university",
+      "from_line_id": "cn-nanning-line-5",
+      "to_line_id": "cn-nanning-line-1",
+      "from_stop_id": "cn-nanning-guangxi-university-5",
+      "to_stop_id": "cn-nanning-guangxi-university-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-jinhu-square-1-cn-nanning-jinhu-square-3",
+      "station_id": "cn-nanning-jinhu-square",
+      "from_line_id": "cn-nanning-line-1",
+      "to_line_id": "cn-nanning-line-3",
+      "from_stop_id": "cn-nanning-jinhu-square-1",
+      "to_stop_id": "cn-nanning-jinhu-square-3",
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-jinhu-square-3-cn-nanning-jinhu-square-1",
+      "station_id": "cn-nanning-jinhu-square",
+      "from_line_id": "cn-nanning-line-3",
+      "to_line_id": "cn-nanning-line-1",
+      "from_stop_id": "cn-nanning-jinhu-square-3",
+      "to_stop_id": "cn-nanning-jinhu-square-1",
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-mingxiu-lu-2-cn-nanning-mingxiu-lu-5",
+      "station_id": "cn-nanning-mingxiu-lu",
+      "from_line_id": "cn-nanning-line-2",
+      "to_line_id": "cn-nanning-line-5",
+      "from_stop_id": "cn-nanning-mingxiu-lu-2",
+      "to_stop_id": "cn-nanning-mingxiu-lu-5",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-mingxiu-lu-5-cn-nanning-mingxiu-lu-2",
+      "station_id": "cn-nanning-mingxiu-lu",
+      "from_line_id": "cn-nanning-line-5",
+      "to_line_id": "cn-nanning-line-2",
+      "from_stop_id": "cn-nanning-mingxiu-lu-5",
+      "to_stop_id": "cn-nanning-mingxiu-lu-2",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-nahong-overpass-4-cn-nanning-nahong-overpass-5",
+      "station_id": "cn-nanning-nahong-overpass",
+      "from_line_id": "cn-nanning-line-4",
+      "to_line_id": "cn-nanning-line-5",
+      "from_stop_id": "cn-nanning-nahong-overpass-4",
+      "to_stop_id": "cn-nanning-nahong-overpass-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-nahong-overpass-5-cn-nanning-nahong-overpass-4",
+      "station_id": "cn-nanning-nahong-overpass",
+      "from_line_id": "cn-nanning-line-5",
+      "to_line_id": "cn-nanning-line-4",
+      "from_stop_id": "cn-nanning-nahong-overpass-5",
+      "to_stop_id": "cn-nanning-nahong-overpass-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-nanning-railway-station-1-cn-nanning-nanning-railway-station-2",
+      "station_id": "cn-nanning-nanning-railway-station",
+      "from_line_id": "cn-nanning-line-1",
+      "to_line_id": "cn-nanning-line-2",
+      "from_stop_id": "cn-nanning-nanning-railway-station-1",
+      "to_stop_id": "cn-nanning-nanning-railway-station-2",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-nanning-railway-station-2-cn-nanning-nanning-railway-station-1",
+      "station_id": "cn-nanning-nanning-railway-station",
+      "from_line_id": "cn-nanning-line-2",
+      "to_line_id": "cn-nanning-line-1",
+      "from_stop_id": "cn-nanning-nanning-railway-station-2",
+      "to_stop_id": "cn-nanning-nanning-railway-station-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-pingliang-interchange-2-cn-nanning-pingliang-interchange-3",
+      "station_id": "cn-nanning-pingliang-interchange",
+      "from_line_id": "cn-nanning-line-2",
+      "to_line_id": "cn-nanning-line-3",
+      "from_stop_id": "cn-nanning-pingliang-interchange-2",
+      "to_stop_id": "cn-nanning-pingliang-interchange-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-pingliang-interchange-3-cn-nanning-pingliang-interchange-2",
+      "station_id": "cn-nanning-pingliang-interchange",
+      "from_line_id": "cn-nanning-line-3",
+      "to_line_id": "cn-nanning-line-2",
+      "from_stop_id": "cn-nanning-pingliang-interchange-3",
+      "to_stop_id": "cn-nanning-pingliang-interchange-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-xiaojicun-3-cn-nanning-xiaojicun-5",
+      "station_id": "cn-nanning-xiaojicun",
+      "from_line_id": "cn-nanning-line-3",
+      "to_line_id": "cn-nanning-line-5",
+      "from_stop_id": "cn-nanning-xiaojicun-3",
+      "to_stop_id": "cn-nanning-xiaojicun-5",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanning-xiaojicun-5-cn-nanning-xiaojicun-3",
+      "station_id": "cn-nanning-xiaojicun",
+      "from_line_id": "cn-nanning-line-5",
+      "to_line_id": "cn-nanning-line-3",
+      "from_stop_id": "cn-nanning-xiaojicun-5",
+      "to_stop_id": "cn-nanning-xiaojicun-3",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

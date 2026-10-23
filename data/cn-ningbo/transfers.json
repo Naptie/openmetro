@@ -1,0 +1,888 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-ningbo",
+  "generated_at": "2026-10-23T21:19:43.639Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T21:19:43.639Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-ningbo-childrens-park-3-cn-ningbo-childrens-park-4",
+      "station_id": "cn-ningbo-childrens-park",
+      "from_line_id": "cn-ningbo-line-3",
+      "to_line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-childrens-park-3",
+      "to_stop_id": "cn-ningbo-childrens-park-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-childrens-park-4-cn-ningbo-childrens-park-3",
+      "station_id": "cn-ningbo-childrens-park",
+      "from_line_id": "cn-ningbo-line-4",
+      "to_line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-childrens-park-4",
+      "to_stop_id": "cn-ningbo-childrens-park-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-cuibaili-4-cn-ningbo-cuibaili-6",
+      "station_id": "cn-ningbo-cuibaili",
+      "from_line_id": "cn-ningbo-line-4",
+      "to_line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-cuibaili-4",
+      "to_stop_id": "cn-ningbo-cuibaili-6",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-cuibaili-6-cn-ningbo-cuibaili-4",
+      "station_id": "cn-ningbo-cuibaili",
+      "from_line_id": "cn-ningbo-line-6",
+      "to_line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-cuibaili-6",
+      "to_stop_id": "cn-ningbo-cuibaili-4",
+      "walk_time_seconds": 462,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 554,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-daqing-bridge-1-cn-ningbo-daqing-bridge-4",
+      "station_id": "cn-ningbo-daqing-bridge",
+      "from_line_id": "cn-ningbo-line-1",
+      "to_line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-daqing-bridge-1",
+      "to_stop_id": "cn-ningbo-daqing-bridge-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-daqing-bridge-4-cn-ningbo-daqing-bridge-1",
+      "station_id": "cn-ningbo-daqing-bridge",
+      "from_line_id": "cn-ningbo-line-4",
+      "to_line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-daqing-bridge-4",
+      "to_stop_id": "cn-ningbo-daqing-bridge-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-datong-bridge-2-cn-ningbo-datong-bridge-3",
+      "station_id": "cn-ningbo-datong-bridge",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-datong-bridge-2",
+      "to_stop_id": "cn-ningbo-datong-bridge-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-datong-bridge-3-cn-ningbo-datong-bridge-2",
+      "station_id": "cn-ningbo-datong-bridge",
+      "from_line_id": "cn-ningbo-line-3",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-datong-bridge-3",
+      "to_stop_id": "cn-ningbo-datong-bridge-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-gulou-1-cn-ningbo-gulou-2",
+      "station_id": "cn-ningbo-gulou",
+      "from_line_id": "cn-ningbo-line-1",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-gulou-1",
+      "to_stop_id": "cn-ningbo-gulou-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-gulou-2-cn-ningbo-gulou-1",
+      "station_id": "cn-ningbo-gulou",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-gulou-2",
+      "to_stop_id": "cn-ningbo-gulou-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-haiyan-north-rd-1-cn-ningbo-haiyan-north-rd-5",
+      "station_id": "cn-ningbo-haiyan-north-rd",
+      "from_line_id": "cn-ningbo-line-1",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-haiyan-north-rd-1",
+      "to_stop_id": "cn-ningbo-haiyan-north-rd-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-haiyan-north-rd-5-cn-ningbo-haiyan-north-rd-1",
+      "station_id": "cn-ningbo-haiyan-north-rd",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-haiyan-north-rd-5",
+      "to_stop_id": "cn-ningbo-haiyan-north-rd-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-hongda-lu-4-cn-ningbo-hongda-lu-8",
+      "station_id": "cn-ningbo-hongda-lu",
+      "from_line_id": "cn-ningbo-line-4",
+      "to_line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-hongda-lu-4",
+      "to_stop_id": "cn-ningbo-hongda-lu-8",
+      "walk_time_seconds": 340,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 408,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-hongda-lu-8-cn-ningbo-hongda-lu-4",
+      "station_id": "cn-ningbo-hongda-lu",
+      "from_line_id": "cn-ningbo-line-8",
+      "to_line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-hongda-lu-8",
+      "to_stop_id": "cn-ningbo-hongda-lu-4",
+      "walk_time_seconds": 340,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 408,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-honglian-2-cn-ningbo-honglian-6",
+      "station_id": "cn-ningbo-honglian",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-honglian-2",
+      "to_stop_id": "cn-ningbo-honglian-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-honglian-6-cn-ningbo-honglian-2",
+      "station_id": "cn-ningbo-honglian",
+      "from_line_id": "cn-ningbo-line-6",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-honglian-6",
+      "to_stop_id": "cn-ningbo-honglian-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-liyuan-nanlu-2-cn-ningbo-liyuan-nanlu-8",
+      "station_id": "cn-ningbo-liyuan-nanlu",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-liyuan-nanlu-2",
+      "to_stop_id": "cn-ningbo-liyuan-nanlu-8",
+      "walk_time_seconds": 203,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 243,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-liyuan-nanlu-8-cn-ningbo-liyuan-nanlu-2",
+      "station_id": "cn-ningbo-liyuan-nanlu",
+      "from_line_id": "cn-ningbo-line-8",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-liyuan-nanlu-8",
+      "to_stop_id": "cn-ningbo-liyuan-nanlu-2",
+      "walk_time_seconds": 203,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 243,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-miaoyan-5-cn-ningbo-miaoyan-8",
+      "station_id": "cn-ningbo-miaoyan",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-miaoyan-5",
+      "to_stop_id": "cn-ningbo-miaoyan-8",
+      "walk_time_seconds": 470,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 564,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-miaoyan-8-cn-ningbo-miaoyan-5",
+      "station_id": "cn-ningbo-miaoyan",
+      "from_line_id": "cn-ningbo-line-8",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-miaoyan-8",
+      "to_stop_id": "cn-ningbo-miaoyan-5",
+      "walk_time_seconds": 470,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 564,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-minan-donglu-5-cn-ningbo-minan-donglu-7",
+      "station_id": "cn-ningbo-minan-donglu",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-minan-donglu-5",
+      "to_stop_id": "cn-ningbo-minan-donglu-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-minan-donglu-7-cn-ningbo-minan-donglu-5",
+      "station_id": "cn-ningbo-minan-donglu",
+      "from_line_id": "cn-ningbo-line-7",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-minan-donglu-7",
+      "to_stop_id": "cn-ningbo-minan-donglu-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-minglou-3-cn-ningbo-minglou-6",
+      "station_id": "cn-ningbo-minglou",
+      "from_line_id": "cn-ningbo-line-3",
+      "to_line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-minglou-3",
+      "to_stop_id": "cn-ningbo-minglou-6",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-minglou-6-cn-ningbo-minglou-3",
+      "station_id": "cn-ningbo-minglou",
+      "from_line_id": "cn-ningbo-line-6",
+      "to_line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-minglou-6",
+      "to_stop_id": "cn-ningbo-minglou-3",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-nanbu-shangwu-qu-3-cn-ningbo-nanbu-shangwu-qu-8",
+      "station_id": "cn-ningbo-nanbu-shangwu-qu",
+      "from_line_id": "cn-ningbo-line-3",
+      "to_line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-nanbu-shangwu-qu-3",
+      "to_stop_id": "cn-ningbo-nanbu-shangwu-qu-8",
+      "walk_time_seconds": 217,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 260,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-nanbu-shangwu-qu-8-cn-ningbo-nanbu-shangwu-qu-3",
+      "station_id": "cn-ningbo-nanbu-shangwu-qu",
+      "from_line_id": "cn-ningbo-line-8",
+      "to_line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-nanbu-shangwu-qu-8",
+      "to_stop_id": "cn-ningbo-nanbu-shangwu-qu-3",
+      "walk_time_seconds": 217,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 260,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-ningbo-dajuyuan-6-cn-ningbo-ningbo-dajuyuan-7",
+      "station_id": "cn-ningbo-ningbo-dajuyuan",
+      "from_line_id": "cn-ningbo-line-6",
+      "to_line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-ningbo-dajuyuan-6",
+      "to_stop_id": "cn-ningbo-ningbo-dajuyuan-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-ningbo-dajuyuan-7-cn-ningbo-ningbo-dajuyuan-6",
+      "station_id": "cn-ningbo-ningbo-dajuyuan",
+      "from_line_id": "cn-ningbo-line-7",
+      "to_line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-ningbo-dajuyuan-7",
+      "to_stop_id": "cn-ningbo-ningbo-dajuyuan-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-ningbo-railway-station-2-cn-ningbo-ningbo-railway-station-4",
+      "station_id": "cn-ningbo-ningbo-railway-station",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-ningbo-railway-station-2",
+      "to_stop_id": "cn-ningbo-ningbo-railway-station-4",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-ningbo-railway-station-4-cn-ningbo-ningbo-railway-station-2",
+      "station_id": "cn-ningbo-ningbo-railway-station",
+      "from_line_id": "cn-ningbo-line-4",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-ningbo-railway-station-4",
+      "to_stop_id": "cn-ningbo-ningbo-railway-station-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-sakura-park-1-cn-ningbo-sakura-park-3",
+      "station_id": "cn-ningbo-sakura-park",
+      "from_line_id": "cn-ningbo-line-1",
+      "to_line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-sakura-park-1",
+      "to_stop_id": "cn-ningbo-sakura-park-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-sakura-park-3-cn-ningbo-sakura-park-1",
+      "station_id": "cn-ningbo-sakura-park",
+      "from_line_id": "cn-ningbo-line-3",
+      "to_line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-sakura-park-3",
+      "to_stop_id": "cn-ningbo-sakura-park-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-sanguantang-2-cn-ningbo-sanguantang-5",
+      "station_id": "cn-ningbo-sanguantang",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-sanguantang-2",
+      "to_stop_id": "cn-ningbo-sanguantang-5",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-sanguantang-5-cn-ningbo-sanguantang-2",
+      "station_id": "cn-ningbo-sanguantang",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-sanguantang-5",
+      "to_stop_id": "cn-ningbo-sanguantang-2",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-shengmo-lu-1-cn-ningbo-shengmo-lu-7",
+      "station_id": "cn-ningbo-shengmo-lu",
+      "from_line_id": "cn-ningbo-line-1",
+      "to_line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-shengmo-lu-1",
+      "to_stop_id": "cn-ningbo-shengmo-lu-7",
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-shengmo-lu-7-cn-ningbo-shengmo-lu-1",
+      "station_id": "cn-ningbo-shengmo-lu",
+      "from_line_id": "cn-ningbo-line-7",
+      "to_line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-shengmo-lu-7",
+      "to_stop_id": "cn-ningbo-shengmo-lu-1",
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-shiqi-2-cn-ningbo-shiqi-5",
+      "station_id": "cn-ningbo-shiqi",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-shiqi-2",
+      "to_stop_id": "cn-ningbo-shiqi-5",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-shiqi-5-cn-ningbo-shiqi-2",
+      "station_id": "cn-ningbo-shiqi",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-shiqi-5",
+      "to_stop_id": "cn-ningbo-shiqi-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-south-higher-education-park-4-cn-ningbo-south-higher-education-park-5",
+      "station_id": "cn-ningbo-south-higher-education-park",
+      "from_line_id": "cn-ningbo-line-4",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-south-higher-education-park-4",
+      "to_stop_id": "cn-ningbo-south-higher-education-park-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-south-higher-education-park-5-cn-ningbo-south-higher-education-park-4",
+      "station_id": "cn-ningbo-south-higher-education-park",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-south-higher-education-park-5",
+      "to_stop_id": "cn-ningbo-south-higher-education-park-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-tiyuguan-3-cn-ningbo-tiyuguan-7",
+      "station_id": "cn-ningbo-tiyuguan",
+      "from_line_id": "cn-ningbo-line-3",
+      "to_line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-tiyuguan-3",
+      "to_stop_id": "cn-ningbo-tiyuguan-7",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-tiyuguan-7-cn-ningbo-tiyuguan-3",
+      "station_id": "cn-ningbo-tiyuguan",
+      "from_line_id": "cn-ningbo-line-7",
+      "to_line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-tiyuguan-7",
+      "to_stop_id": "cn-ningbo-tiyuguan-3",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-waitan-daqiao-2-cn-ningbo-waitan-daqiao-7",
+      "station_id": "cn-ningbo-waitan-daqiao",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-waitan-daqiao-2",
+      "to_stop_id": "cn-ningbo-waitan-daqiao-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-waitan-daqiao-7-cn-ningbo-waitan-daqiao-2",
+      "station_id": "cn-ningbo-waitan-daqiao",
+      "from_line_id": "cn-ningbo-line-7",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-waitan-daqiao-7",
+      "to_stop_id": "cn-ningbo-waitan-daqiao-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-wangchun-qiao-1-cn-ningbo-wangchun-qiao-6",
+      "station_id": "cn-ningbo-wangchun-qiao",
+      "from_line_id": "cn-ningbo-line-1",
+      "to_line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-wangchun-qiao-1",
+      "to_stop_id": "cn-ningbo-wangchun-qiao-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 232,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-wangchun-qiao-6-cn-ningbo-wangchun-qiao-1",
+      "station_id": "cn-ningbo-wangchun-qiao",
+      "from_line_id": "cn-ningbo-line-6",
+      "to_line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-wangchun-qiao-6",
+      "to_stop_id": "cn-ningbo-wangchun-qiao-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 232,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-xiaoyangjiang-12-cn-ningbo-xiaoyangjiang-4",
+      "station_id": "cn-ningbo-xiaoyangjiang",
+      "from_line_id": "cn-ningbo-line-12",
+      "to_line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-12",
+      "to_stop_id": "cn-ningbo-xiaoyangjiang-4",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-xiaoyangjiang-12-cn-ningbo-xiaoyangjiang-7",
+      "station_id": "cn-ningbo-xiaoyangjiang",
+      "from_line_id": "cn-ningbo-line-12",
+      "to_line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-12",
+      "to_stop_id": "cn-ningbo-xiaoyangjiang-7",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-xiaoyangjiang-4-cn-ningbo-xiaoyangjiang-12",
+      "station_id": "cn-ningbo-xiaoyangjiang",
+      "from_line_id": "cn-ningbo-line-4",
+      "to_line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-4",
+      "to_stop_id": "cn-ningbo-xiaoyangjiang-12",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-xiaoyangjiang-4-cn-ningbo-xiaoyangjiang-7",
+      "station_id": "cn-ningbo-xiaoyangjiang",
+      "from_line_id": "cn-ningbo-line-4",
+      "to_line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-4",
+      "to_stop_id": "cn-ningbo-xiaoyangjiang-7",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-xiaoyangjiang-7-cn-ningbo-xiaoyangjiang-12",
+      "station_id": "cn-ningbo-xiaoyangjiang",
+      "from_line_id": "cn-ningbo-line-7",
+      "to_line_id": "cn-ningbo-line-12",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-7",
+      "to_stop_id": "cn-ningbo-xiaoyangjiang-12",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-xiaoyangjiang-7-cn-ningbo-xiaoyangjiang-4",
+      "station_id": "cn-ningbo-xiaoyangjiang",
+      "from_line_id": "cn-ningbo-line-7",
+      "to_line_id": "cn-ningbo-line-4",
+      "from_stop_id": "cn-ningbo-xiaoyangjiang-7",
+      "to_stop_id": "cn-ningbo-xiaoyangjiang-4",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-yinzhou-government-3-cn-ningbo-yinzhou-government-5",
+      "station_id": "cn-ningbo-yinzhou-government",
+      "from_line_id": "cn-ningbo-line-3",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-yinzhou-government-3",
+      "to_stop_id": "cn-ningbo-yinzhou-government-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-yinzhou-government-5-cn-ningbo-yinzhou-government-3",
+      "station_id": "cn-ningbo-yinzhou-government",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-3",
+      "from_stop_id": "cn-ningbo-yinzhou-government-5",
+      "to_stop_id": "cn-ningbo-yinzhou-government-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-yuanshi-lu-5-cn-ningbo-yuanshi-lu-6",
+      "station_id": "cn-ningbo-yuanshi-lu",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-yuanshi-lu-5",
+      "to_stop_id": "cn-ningbo-yuanshi-lu-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-yuanshi-lu-6-cn-ningbo-yuanshi-lu-5",
+      "station_id": "cn-ningbo-yuanshi-lu",
+      "from_line_id": "cn-ningbo-line-6",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-yuanshi-lu-6",
+      "to_stop_id": "cn-ningbo-yuanshi-lu-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-zemin-1-cn-ningbo-zemin-8",
+      "station_id": "cn-ningbo-zemin",
+      "from_line_id": "cn-ningbo-line-1",
+      "to_line_id": "cn-ningbo-line-8",
+      "from_stop_id": "cn-ningbo-zemin-1",
+      "to_stop_id": "cn-ningbo-zemin-8",
+      "walk_time_seconds": 500,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 600,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-zemin-8-cn-ningbo-zemin-1",
+      "station_id": "cn-ningbo-zemin",
+      "from_line_id": "cn-ningbo-line-8",
+      "to_line_id": "cn-ningbo-line-1",
+      "from_stop_id": "cn-ningbo-zemin-8",
+      "to_stop_id": "cn-ningbo-zemin-1",
+      "walk_time_seconds": 500,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 600,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-zhengda-lu-2-cn-ningbo-zhengda-lu-6",
+      "station_id": "cn-ningbo-zhengda-lu",
+      "from_line_id": "cn-ningbo-line-2",
+      "to_line_id": "cn-ningbo-line-6",
+      "from_stop_id": "cn-ningbo-zhengda-lu-2",
+      "to_stop_id": "cn-ningbo-zhengda-lu-6",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-zhengda-lu-6-cn-ningbo-zhengda-lu-2",
+      "station_id": "cn-ningbo-zhengda-lu",
+      "from_line_id": "cn-ningbo-line-6",
+      "to_line_id": "cn-ningbo-line-2",
+      "from_stop_id": "cn-ningbo-zhengda-lu-6",
+      "to_stop_id": "cn-ningbo-zhengda-lu-2",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-zhenhai-dadao-cihai-5-cn-ningbo-zhenhai-dadao-cihai-7",
+      "station_id": "cn-ningbo-zhenhai-dadao-cihai",
+      "from_line_id": "cn-ningbo-line-5",
+      "to_line_id": "cn-ningbo-line-7",
+      "from_stop_id": "cn-ningbo-zhenhai-dadao-cihai-5",
+      "to_stop_id": "cn-ningbo-zhenhai-dadao-cihai-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-ningbo-zhenhai-dadao-cihai-7-cn-ningbo-zhenhai-dadao-cihai-5",
+      "station_id": "cn-ningbo-zhenhai-dadao-cihai",
+      "from_line_id": "cn-ningbo-line-7",
+      "to_line_id": "cn-ningbo-line-5",
+      "from_stop_id": "cn-ningbo-zhenhai-dadao-cihai-7",
+      "to_stop_id": "cn-ningbo-zhenhai-dadao-cihai-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

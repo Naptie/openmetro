@@ -1,0 +1,608 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-hefei",
+  "generated_at": "2026-10-23T21:25:00.541Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T21:25:00.541Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-hefei-bei-yanhu-4-cn-hefei-bei-yanhu-6",
+      "station_id": "cn-hefei-bei-yanhu",
+      "from_line_id": "cn-hefei-line-4",
+      "to_line_id": "cn-hefei-line-6",
+      "from_stop_id": "cn-hefei-bei-yanhu-4",
+      "to_stop_id": "cn-hefei-bei-yanhu-6",
+      "walk_time_seconds": 126,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 151,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-bei-yanhu-6-cn-hefei-bei-yanhu-4",
+      "station_id": "cn-hefei-bei-yanhu",
+      "from_line_id": "cn-hefei-line-6",
+      "to_line_id": "cn-hefei-line-4",
+      "from_stop_id": "cn-hefei-bei-yanhu-6",
+      "to_stop_id": "cn-hefei-bei-yanhu-4",
+      "walk_time_seconds": 126,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 151,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-dadongmen-1-cn-hefei-dadongmen-2",
+      "station_id": "cn-hefei-dadongmen",
+      "from_line_id": "cn-hefei-line-1",
+      "to_line_id": "cn-hefei-line-2",
+      "from_stop_id": "cn-hefei-dadongmen-1",
+      "to_stop_id": "cn-hefei-dadongmen-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-dadongmen-2-cn-hefei-dadongmen-1",
+      "station_id": "cn-hefei-dadongmen",
+      "from_line_id": "cn-hefei-line-2",
+      "to_line_id": "cn-hefei-line-1",
+      "from_stop_id": "cn-hefei-dadongmen-2",
+      "to_stop_id": "cn-hefei-dadongmen-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-dongqili-2-cn-hefei-dongqili-4",
+      "station_id": "cn-hefei-dongqili",
+      "from_line_id": "cn-hefei-line-2",
+      "to_line_id": "cn-hefei-line-4",
+      "from_stop_id": "cn-hefei-dongqili-2",
+      "to_stop_id": "cn-hefei-dongqili-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-dongqili-4-cn-hefei-dongqili-2",
+      "station_id": "cn-hefei-dongqili",
+      "from_line_id": "cn-hefei-line-4",
+      "to_line_id": "cn-hefei-line-2",
+      "from_stop_id": "cn-hefei-dongqili-4",
+      "to_stop_id": "cn-hefei-dongqili-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-fangmiao-3-cn-hefei-fangmiao-4",
+      "station_id": "cn-hefei-fangmiao",
+      "from_line_id": "cn-hefei-line-3",
+      "to_line_id": "cn-hefei-line-4",
+      "from_stop_id": "cn-hefei-fangmiao-3",
+      "to_stop_id": "cn-hefei-fangmiao-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-fangmiao-4-cn-hefei-fangmiao-3",
+      "station_id": "cn-hefei-fangmiao",
+      "from_line_id": "cn-hefei-line-4",
+      "to_line_id": "cn-hefei-line-3",
+      "from_stop_id": "cn-hefei-fangmiao-4",
+      "to_stop_id": "cn-hefei-fangmiao-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-fanhua-dadao-3-cn-hefei-fanhua-dadao-7",
+      "station_id": "cn-hefei-fanhua-dadao",
+      "from_line_id": "cn-hefei-line-3",
+      "to_line_id": "cn-hefei-line-7",
+      "from_stop_id": "cn-hefei-fanhua-dadao-3",
+      "to_stop_id": "cn-hefei-fanhua-dadao-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-fanhua-dadao-7-cn-hefei-fanhua-dadao-3",
+      "station_id": "cn-hefei-fanhua-dadao",
+      "from_line_id": "cn-hefei-line-7",
+      "to_line_id": "cn-hefei-line-3",
+      "from_stop_id": "cn-hefei-fanhua-dadao-7",
+      "to_stop_id": "cn-hefei-fanhua-dadao-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-haitang-3-cn-hefei-haitang-5",
+      "station_id": "cn-hefei-haitang",
+      "from_line_id": "cn-hefei-line-3",
+      "to_line_id": "cn-hefei-line-5",
+      "from_stop_id": "cn-hefei-haitang-3",
+      "to_stop_id": "cn-hefei-haitang-5",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-haitang-5-cn-hefei-haitang-3",
+      "station_id": "cn-hefei-haitang",
+      "from_line_id": "cn-hefei-line-5",
+      "to_line_id": "cn-hefei-line-3",
+      "from_stop_id": "cn-hefei-haitang-5",
+      "to_stop_id": "cn-hefei-haitang-3",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-central-library-3-cn-hefei-hefei-central-library-4",
+      "station_id": "cn-hefei-hefei-central-library",
+      "from_line_id": "cn-hefei-line-3",
+      "to_line_id": "cn-hefei-line-4",
+      "from_stop_id": "cn-hefei-hefei-central-library-3",
+      "to_stop_id": "cn-hefei-hefei-central-library-4",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-central-library-4-cn-hefei-hefei-central-library-3",
+      "station_id": "cn-hefei-hefei-central-library",
+      "from_line_id": "cn-hefei-line-4",
+      "to_line_id": "cn-hefei-line-3",
+      "from_stop_id": "cn-hefei-hefei-central-library-4",
+      "to_stop_id": "cn-hefei-hefei-central-library-3",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-railway-station-1-cn-hefei-hefei-railway-station-3",
+      "station_id": "cn-hefei-hefei-railway-station",
+      "from_line_id": "cn-hefei-line-1",
+      "to_line_id": "cn-hefei-line-3",
+      "from_stop_id": "cn-hefei-hefei-railway-station-1",
+      "to_stop_id": "cn-hefei-hefei-railway-station-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-railway-station-3-cn-hefei-hefei-railway-station-1",
+      "station_id": "cn-hefei-hefei-railway-station",
+      "from_line_id": "cn-hefei-line-3",
+      "to_line_id": "cn-hefei-line-1",
+      "from_stop_id": "cn-hefei-hefei-railway-station-3",
+      "to_stop_id": "cn-hefei-hefei-railway-station-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-south-railway-station-1-cn-hefei-hefei-south-railway-station-4",
+      "station_id": "cn-hefei-hefei-south-railway-station",
+      "from_line_id": "cn-hefei-line-1",
+      "to_line_id": "cn-hefei-line-4",
+      "from_stop_id": "cn-hefei-hefei-south-railway-station-1",
+      "to_stop_id": "cn-hefei-hefei-south-railway-station-4",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-south-railway-station-1-cn-hefei-hefei-south-railway-station-5",
+      "station_id": "cn-hefei-hefei-south-railway-station",
+      "from_line_id": "cn-hefei-line-1",
+      "to_line_id": "cn-hefei-line-5",
+      "from_stop_id": "cn-hefei-hefei-south-railway-station-1",
+      "to_stop_id": "cn-hefei-hefei-south-railway-station-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-south-railway-station-4-cn-hefei-hefei-south-railway-station-1",
+      "station_id": "cn-hefei-hefei-south-railway-station",
+      "from_line_id": "cn-hefei-line-4",
+      "to_line_id": "cn-hefei-line-1",
+      "from_stop_id": "cn-hefei-hefei-south-railway-station-4",
+      "to_stop_id": "cn-hefei-hefei-south-railway-station-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-south-railway-station-4-cn-hefei-hefei-south-railway-station-5",
+      "station_id": "cn-hefei-hefei-south-railway-station",
+      "from_line_id": "cn-hefei-line-4",
+      "to_line_id": "cn-hefei-line-5",
+      "from_stop_id": "cn-hefei-hefei-south-railway-station-4",
+      "to_stop_id": "cn-hefei-hefei-south-railway-station-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-south-railway-station-5-cn-hefei-hefei-south-railway-station-1",
+      "station_id": "cn-hefei-hefei-south-railway-station",
+      "from_line_id": "cn-hefei-line-5",
+      "to_line_id": "cn-hefei-line-1",
+      "from_stop_id": "cn-hefei-hefei-south-railway-station-5",
+      "to_stop_id": "cn-hefei-hefei-south-railway-station-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-hefei-south-railway-station-5-cn-hefei-hefei-south-railway-station-4",
+      "station_id": "cn-hefei-hefei-south-railway-station",
+      "from_line_id": "cn-hefei-line-5",
+      "to_line_id": "cn-hefei-line-4",
+      "from_stop_id": "cn-hefei-hefei-south-railway-station-5",
+      "to_stop_id": "cn-hefei-hefei-south-railway-station-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-honggang-3-cn-hefei-honggang-6",
+      "station_id": "cn-hefei-honggang",
+      "from_line_id": "cn-hefei-line-3",
+      "to_line_id": "cn-hefei-line-6",
+      "from_stop_id": "cn-hefei-honggang-3",
+      "to_stop_id": "cn-hefei-honggang-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-honggang-6-cn-hefei-honggang-3",
+      "station_id": "cn-hefei-honggang",
+      "from_line_id": "cn-hefei-line-6",
+      "to_line_id": "cn-hefei-line-3",
+      "from_stop_id": "cn-hefei-honggang-6",
+      "to_stop_id": "cn-hefei-honggang-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-liuzhong-linghu-xiaoqu-5-cn-hefei-liuzhong-linghu-xiaoqu-8",
+      "station_id": "cn-hefei-liuzhong-linghu-xiaoqu",
+      "from_line_id": "cn-hefei-line-5",
+      "to_line_id": "cn-hefei-line-8",
+      "from_stop_id": "cn-hefei-liuzhong-linghu-xiaoqu-5",
+      "to_stop_id": "cn-hefei-liuzhong-linghu-xiaoqu-8",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-liuzhong-linghu-xiaoqu-8-cn-hefei-liuzhong-linghu-xiaoqu-5",
+      "station_id": "cn-hefei-liuzhong-linghu-xiaoqu",
+      "from_line_id": "cn-hefei-line-8",
+      "to_line_id": "cn-hefei-line-5",
+      "from_stop_id": "cn-hefei-liuzhong-linghu-xiaoqu-8",
+      "to_stop_id": "cn-hefei-liuzhong-linghu-xiaoqu-5",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-sanxiaokou-2-cn-hefei-sanxiaokou-5",
+      "station_id": "cn-hefei-sanxiaokou",
+      "from_line_id": "cn-hefei-line-2",
+      "to_line_id": "cn-hefei-line-5",
+      "from_stop_id": "cn-hefei-sanxiaokou-2",
+      "to_stop_id": "cn-hefei-sanxiaokou-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-sanxiaokou-5-cn-hefei-sanxiaokou-2",
+      "station_id": "cn-hefei-sanxiaokou",
+      "from_line_id": "cn-hefei-line-5",
+      "to_line_id": "cn-hefei-line-2",
+      "from_stop_id": "cn-hefei-sanxiaokou-5",
+      "to_stop_id": "cn-hefei-sanxiaokou-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-shi-di-3-yiyuan-5-cn-hefei-shi-di-3-yiyuan-6",
+      "station_id": "cn-hefei-shi-di-3-yiyuan",
+      "from_line_id": "cn-hefei-line-5",
+      "to_line_id": "cn-hefei-line-6",
+      "from_stop_id": "cn-hefei-shi-di-3-yiyuan-5",
+      "to_stop_id": "cn-hefei-shi-di-3-yiyuan-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-shi-di-3-yiyuan-6-cn-hefei-shi-di-3-yiyuan-5",
+      "station_id": "cn-hefei-shi-di-3-yiyuan",
+      "from_line_id": "cn-hefei-line-6",
+      "to_line_id": "cn-hefei-line-5",
+      "from_stop_id": "cn-hefei-shi-di-3-yiyuan-6",
+      "to_stop_id": "cn-hefei-shi-di-3-yiyuan-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-xi-qilitang-2-cn-hefei-xi-qilitang-3",
+      "station_id": "cn-hefei-xi-qilitang",
+      "from_line_id": "cn-hefei-line-2",
+      "to_line_id": "cn-hefei-line-3",
+      "from_stop_id": "cn-hefei-xi-qilitang-2",
+      "to_stop_id": "cn-hefei-xi-qilitang-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-xi-qilitang-3-cn-hefei-xi-qilitang-2",
+      "station_id": "cn-hefei-xi-qilitang",
+      "from_line_id": "cn-hefei-line-3",
+      "to_line_id": "cn-hefei-line-2",
+      "from_stop_id": "cn-hefei-xi-qilitang-3",
+      "to_stop_id": "cn-hefei-xi-qilitang-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-yaoduhe-lu-4-cn-hefei-yaoduhe-lu-6",
+      "station_id": "cn-hefei-yaoduhe-lu",
+      "from_line_id": "cn-hefei-line-4",
+      "to_line_id": "cn-hefei-line-6",
+      "from_stop_id": "cn-hefei-yaoduhe-lu-4",
+      "to_stop_id": "cn-hefei-yaoduhe-lu-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-yaoduhe-lu-6-cn-hefei-yaoduhe-lu-4",
+      "station_id": "cn-hefei-yaoduhe-lu",
+      "from_line_id": "cn-hefei-line-6",
+      "to_line_id": "cn-hefei-line-4",
+      "from_stop_id": "cn-hefei-yaoduhe-lu-6",
+      "to_stop_id": "cn-hefei-yaoduhe-lu-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-yilijing-3-cn-hefei-yilijing-8",
+      "station_id": "cn-hefei-yilijing",
+      "from_line_id": "cn-hefei-line-3",
+      "to_line_id": "cn-hefei-line-8",
+      "from_stop_id": "cn-hefei-yilijing-3",
+      "to_stop_id": "cn-hefei-yilijing-8",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-yilijing-8-cn-hefei-yilijing-3",
+      "station_id": "cn-hefei-yilijing",
+      "from_line_id": "cn-hefei-line-8",
+      "to_line_id": "cn-hefei-line-3",
+      "from_stop_id": "cn-hefei-yilijing-8",
+      "to_stop_id": "cn-hefei-yilijing-3",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-yungu-lu-1-cn-hefei-yungu-lu-5",
+      "station_id": "cn-hefei-yungu-lu",
+      "from_line_id": "cn-hefei-line-1",
+      "to_line_id": "cn-hefei-line-5",
+      "from_stop_id": "cn-hefei-yungu-lu-1",
+      "to_stop_id": "cn-hefei-yungu-lu-5",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-yungu-lu-5-cn-hefei-yungu-lu-1",
+      "station_id": "cn-hefei-yungu-lu",
+      "from_line_id": "cn-hefei-line-5",
+      "to_line_id": "cn-hefei-line-1",
+      "from_stop_id": "cn-hefei-yungu-lu-5",
+      "to_stop_id": "cn-hefei-yungu-lu-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-zhugang-1-cn-hefei-zhugang-6",
+      "station_id": "cn-hefei-zhugang",
+      "from_line_id": "cn-hefei-line-1",
+      "to_line_id": "cn-hefei-line-6",
+      "from_stop_id": "cn-hefei-zhugang-1",
+      "to_stop_id": "cn-hefei-zhugang-6",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-zhugang-6-cn-hefei-zhugang-1",
+      "station_id": "cn-hefei-zhugang",
+      "from_line_id": "cn-hefei-line-6",
+      "to_line_id": "cn-hefei-line-1",
+      "from_stop_id": "cn-hefei-zhugang-6",
+      "to_stop_id": "cn-hefei-zhugang-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-zilu-1-cn-hefei-zilu-7",
+      "station_id": "cn-hefei-zilu",
+      "from_line_id": "cn-hefei-line-1",
+      "to_line_id": "cn-hefei-line-7",
+      "from_stop_id": "cn-hefei-zilu-1",
+      "to_stop_id": "cn-hefei-zilu-7",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-hefei-zilu-7-cn-hefei-zilu-1",
+      "station_id": "cn-hefei-zilu",
+      "from_line_id": "cn-hefei-line-7",
+      "to_line_id": "cn-hefei-line-1",
+      "from_stop_id": "cn-hefei-zilu-7",
+      "to_stop_id": "cn-hefei-zilu-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "cn-xuzhou",
+  "name": "徐州地铁",
+  "names": {
+    "zh": "徐州地铁",
+    "en": "Xuzhou Metro"
+  },
+  "city": {
+    "id": "CN-3203",
+    "name": {
+      "zh": "徐州市",
+      "en": "Xuzhou"
+    },
+    "country": "CN",
+    "population": 9083790,
+    "area": 11764.88,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        117.18587,
+        34.26104
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑/站序/换乘关系/出入口来自官网 xzdtjt.com 首页内嵌的 dropBox 树（全局站点 ID 1–76，按线连续分配；换乘站按线各有一个 ID）。逐站首末班来自官网 /1/54/timetable 的官方时刻表 HTML 表格（非图片，未做 OCR）；官网仅发布单一日制，未区分工作日与双休日。OD 票价直接来自官网 /1/53/lineSearch 的站到站票价查询（运营方按最短路径里程计价：起步 2 元/6 km，6–18 km 每 1 元 6 km，18–34 km 每 1 元 8 km，34–44 km 每 1 元 10 km，44–59 km 每 1 元 15 km，59 km 以上每 1 元 20 km），另有市民卡 9.5 折、60–69 岁老人与学生 5 折、70 岁以上与身高 1.3 m 以下儿童免费、轨道换公交 60 分钟内优惠 1 元。坐标/英文名/线色/示意网格来自 AMap Subway 3203（multilang.n.en 提供 76/76 真实英文名）。区间时间距离与换乘步行来自百度路径规划 direction/v2/transit；换乘步行按「离枢纽最近的站厅步行段」测得全部 12 座换乘站，其中 8 座共用规划器的同一组建模值（站厅换乘 231 米 / 193 秒），其余 4 座为更长的步行（309 米 / 258 秒、554 米 / 462 秒）；三档均按规划器 1.2 m/s 的步速换算，并非逐站实测耗时。官网前置创宇盾 WAF，无公开 JSON API，全部数据由服务端渲染 HTML 解析而来。在建的 4 号线一期、5 号线一期无结构化站表，未建模。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 70,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 70,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 72,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 72,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 12,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 146,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 76,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 4830,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

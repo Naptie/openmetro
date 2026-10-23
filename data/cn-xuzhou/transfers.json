@@ -1,0 +1,200 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-xuzhou",
+  "generated_at": "2026-10-23T21:30:23.601Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T21:30:23.601Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-xuzhou-huaita-2-cn-xuzhou-huaita-3",
+      "station_id": "cn-xuzhou-huaita",
+      "from_line_id": "cn-xuzhou-line-2",
+      "to_line_id": "cn-xuzhou-line-3",
+      "from_stop_id": "cn-xuzhou-huaita-2",
+      "to_stop_id": "cn-xuzhou-huaita-3",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-huaita-3-cn-xuzhou-huaita-2",
+      "station_id": "cn-xuzhou-huaita",
+      "from_line_id": "cn-xuzhou-line-3",
+      "to_line_id": "cn-xuzhou-line-2",
+      "from_stop_id": "cn-xuzhou-huaita-3",
+      "to_stop_id": "cn-xuzhou-huaita-2",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-municipal-administrative-center-2-cn-xuzhou-municipal-administrative-center-6",
+      "station_id": "cn-xuzhou-municipal-administrative-center",
+      "from_line_id": "cn-xuzhou-line-2",
+      "to_line_id": "cn-xuzhou-line-6",
+      "from_stop_id": "cn-xuzhou-municipal-administrative-center-2",
+      "to_stop_id": "cn-xuzhou-municipal-administrative-center-6",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-municipal-administrative-center-6-cn-xuzhou-municipal-administrative-center-2",
+      "station_id": "cn-xuzhou-municipal-administrative-center",
+      "from_line_id": "cn-xuzhou-line-6",
+      "to_line_id": "cn-xuzhou-line-2",
+      "from_stop_id": "cn-xuzhou-municipal-administrative-center-6",
+      "to_stop_id": "cn-xuzhou-municipal-administrative-center-2",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-pengchengguangchang-1-cn-xuzhou-pengchengguangchang-2",
+      "station_id": "cn-xuzhou-pengchengguangchang",
+      "from_line_id": "cn-xuzhou-line-1",
+      "to_line_id": "cn-xuzhou-line-2",
+      "from_stop_id": "cn-xuzhou-pengchengguangchang-1",
+      "to_stop_id": "cn-xuzhou-pengchengguangchang-2",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-pengchengguangchang-2-cn-xuzhou-pengchengguangchang-1",
+      "station_id": "cn-xuzhou-pengchengguangchang",
+      "from_line_id": "cn-xuzhou-line-2",
+      "to_line_id": "cn-xuzhou-line-1",
+      "from_stop_id": "cn-xuzhou-pengchengguangchang-2",
+      "to_stop_id": "cn-xuzhou-pengchengguangchang-1",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-xuzhou-railway-station-1-cn-xuzhou-xuzhou-railway-station-3",
+      "station_id": "cn-xuzhou-xuzhou-railway-station",
+      "from_line_id": "cn-xuzhou-line-1",
+      "to_line_id": "cn-xuzhou-line-3",
+      "from_stop_id": "cn-xuzhou-xuzhou-railway-station-1",
+      "to_stop_id": "cn-xuzhou-xuzhou-railway-station-3",
+      "walk_time_seconds": 258,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-xuzhou-railway-station-3-cn-xuzhou-xuzhou-railway-station-1",
+      "station_id": "cn-xuzhou-xuzhou-railway-station",
+      "from_line_id": "cn-xuzhou-line-3",
+      "to_line_id": "cn-xuzhou-line-1",
+      "from_stop_id": "cn-xuzhou-xuzhou-railway-station-3",
+      "to_stop_id": "cn-xuzhou-xuzhou-railway-station-1",
+      "walk_time_seconds": 258,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-xuzhoudong-railway-station-1-cn-xuzhou-xuzhoudong-railway-station-6",
+      "station_id": "cn-xuzhou-xuzhoudong-railway-station",
+      "from_line_id": "cn-xuzhou-line-1",
+      "to_line_id": "cn-xuzhou-line-6",
+      "from_stop_id": "cn-xuzhou-xuzhoudong-railway-station-1",
+      "to_stop_id": "cn-xuzhou-xuzhoudong-railway-station-6",
+      "walk_time_seconds": 462,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 554,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-xuzhoudong-railway-station-6-cn-xuzhou-xuzhoudong-railway-station-1",
+      "station_id": "cn-xuzhou-xuzhoudong-railway-station",
+      "from_line_id": "cn-xuzhou-line-6",
+      "to_line_id": "cn-xuzhou-line-1",
+      "from_stop_id": "cn-xuzhou-xuzhoudong-railway-station-6",
+      "to_stop_id": "cn-xuzhou-xuzhoudong-railway-station-1",
+      "walk_time_seconds": 462,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 554,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-yuquanhe-3-cn-xuzhou-yuquanhe-6",
+      "station_id": "cn-xuzhou-yuquanhe",
+      "from_line_id": "cn-xuzhou-line-3",
+      "to_line_id": "cn-xuzhou-line-6",
+      "from_stop_id": "cn-xuzhou-yuquanhe-3",
+      "to_stop_id": "cn-xuzhou-yuquanhe-6",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-xuzhou-yuquanhe-6-cn-xuzhou-yuquanhe-3",
+      "station_id": "cn-xuzhou-yuquanhe",
+      "from_line_id": "cn-xuzhou-line-6",
+      "to_line_id": "cn-xuzhou-line-3",
+      "from_stop_id": "cn-xuzhou-yuquanhe-6",
+      "to_stop_id": "cn-xuzhou-yuquanhe-3",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-wuxi",
+  "generated_at": "2026-10-23T21:35:48.669Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T21:35:48.669Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-wuxi-civic-center-1-cn-wuxi-civic-center-4",
+      "station_id": "cn-wuxi-civic-center",
+      "from_line_id": "cn-wuxi-line-1",
+      "to_line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-civic-center-1",
+      "to_stop_id": "cn-wuxi-civic-center-4",
+      "walk_time_seconds": 262,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 312,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-civic-center-4-cn-wuxi-civic-center-1",
+      "station_id": "cn-wuxi-civic-center",
+      "from_line_id": "cn-wuxi-line-4",
+      "to_line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-civic-center-4",
+      "to_stop_id": "cn-wuxi-civic-center-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-heliekou-2-cn-wuxi-heliekou-4",
+      "station_id": "cn-wuxi-heliekou",
+      "from_line_id": "cn-wuxi-line-2",
+      "to_line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-heliekou-2",
+      "to_stop_id": "cn-wuxi-heliekou-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-heliekou-4-cn-wuxi-heliekou-2",
+      "station_id": "cn-wuxi-heliekou",
+      "from_line_id": "cn-wuxi-line-4",
+      "to_line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-heliekou-4",
+      "to_stop_id": "cn-wuxi-heliekou-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-jinghai-2-cn-wuxi-jinghai-3",
+      "station_id": "cn-wuxi-jinghai",
+      "from_line_id": "cn-wuxi-line-2",
+      "to_line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-jinghai-2",
+      "to_stop_id": "cn-wuxi-jinghai-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-jinghai-3-cn-wuxi-jinghai-2",
+      "station_id": "cn-wuxi-jinghai",
+      "from_line_id": "cn-wuxi-line-3",
+      "to_line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-jinghai-3",
+      "to_stop_id": "cn-wuxi-jinghai-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-liutan-1-cn-wuxi-liutan-4",
+      "station_id": "cn-wuxi-liutan",
+      "from_line_id": "cn-wuxi-line-1",
+      "to_line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-liutan-1",
+      "to_stop_id": "cn-wuxi-liutan-4",
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-liutan-4-cn-wuxi-liutan-1",
+      "station_id": "cn-wuxi-liutan",
+      "from_line_id": "cn-wuxi-line-4",
+      "to_line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-liutan-4",
+      "to_stop_id": "cn-wuxi-liutan-1",
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-sanyang-plaza-1-cn-wuxi-sanyang-plaza-2",
+      "station_id": "cn-wuxi-sanyang-plaza",
+      "from_line_id": "cn-wuxi-line-1",
+      "to_line_id": "cn-wuxi-line-2",
+      "from_stop_id": "cn-wuxi-sanyang-plaza-1",
+      "to_stop_id": "cn-wuxi-sanyang-plaza-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-sanyang-plaza-2-cn-wuxi-sanyang-plaza-1",
+      "station_id": "cn-wuxi-sanyang-plaza",
+      "from_line_id": "cn-wuxi-line-2",
+      "to_line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-sanyang-plaza-2",
+      "to_stop_id": "cn-wuxi-sanyang-plaza-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-shengan-3-cn-wuxi-shengan-4",
+      "station_id": "cn-wuxi-shengan",
+      "from_line_id": "cn-wuxi-line-3",
+      "to_line_id": "cn-wuxi-line-4",
+      "from_stop_id": "cn-wuxi-shengan-3",
+      "to_stop_id": "cn-wuxi-shengan-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-shengan-4-cn-wuxi-shengan-3",
+      "station_id": "cn-wuxi-shengan",
+      "from_line_id": "cn-wuxi-line-4",
+      "to_line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-shengan-4",
+      "to_stop_id": "cn-wuxi-shengan-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-wuxi-railway-station-1-cn-wuxi-wuxi-railway-station-3",
+      "station_id": "cn-wuxi-wuxi-railway-station",
+      "from_line_id": "cn-wuxi-line-1",
+      "to_line_id": "cn-wuxi-line-3",
+      "from_stop_id": "cn-wuxi-wuxi-railway-station-1",
+      "to_stop_id": "cn-wuxi-wuxi-railway-station-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-wuxi-railway-station-3-cn-wuxi-wuxi-railway-station-1",
+      "station_id": "cn-wuxi-wuxi-railway-station",
+      "from_line_id": "cn-wuxi-line-3",
+      "to_line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-wuxi-railway-station-3",
+      "to_stop_id": "cn-wuxi-wuxi-railway-station-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-wuxi-yanqiao-1-cn-wuxi-yanqiao-S1",
+      "station_id": "cn-wuxi-yanqiao",
+      "from_line_id": "cn-wuxi-line-1",
+      "to_line_id": "cn-wuxi-line-s1",
+      "from_stop_id": "cn-wuxi-yanqiao-1",
+      "to_stop_id": "cn-wuxi-yanqiao-S1",
+      "walk_time_seconds": 0,
+      "is_out_of_station": false,
+      "source_id": "wxmetro-interchange-through-run-1-s1"
+    },
+    {
+      "id": "xfer-cn-wuxi-yanqiao-S1-cn-wuxi-yanqiao-1",
+      "station_id": "cn-wuxi-yanqiao",
+      "from_line_id": "cn-wuxi-line-s1",
+      "to_line_id": "cn-wuxi-line-1",
+      "from_stop_id": "cn-wuxi-yanqiao-S1",
+      "to_stop_id": "cn-wuxi-yanqiao-1",
+      "walk_time_seconds": 0,
+      "is_out_of_station": false,
+      "source_id": "wxmetro-interchange-through-run-s1-1"
+    }
+  ]
+}

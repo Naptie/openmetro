@@ -1,0 +1,132 @@
+{
+  "id": "cn-wuxi",
+  "name": "无锡地铁",
+  "names": {
+    "zh": "无锡地铁",
+    "en": "Wuxi Metro"
+  },
+  "city": {
+    "id": "CN-3202",
+    "name": {
+      "zh": "无锡市",
+      "en": "Wuxi"
+    },
+    "country": "CN",
+    "population": 7462135,
+    "area": 4627.46,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        120.283333,
+        31.566667
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "运营线网（1/2/3/4 号线 + S1 市域线）的线路、站序、坐标、英文名与线色取自 AMap Subway 3202_drw_wuxi.json（GCJ-02 原生，97 条线-站行 / 89 座车站全部带坐标、真实英文名 multilang.n.en 与示意图像素）；站序已与官网时刻表逐站核对。无锡地铁官网 www.wxmetro.net 是企业 CMS，全部公开接口只有七个 /api/metrows/* 栏目接口（DES-ECB 加密），均不含交通数据；乘车服务栏目仅有线路导览图（2025-06）、五张时刻表图片（2026-05 三张 + 2026-09 一张）与《无锡地铁票务规则》文字。因此逐站首末班由百度路径规划 direction/v2/transit 实测采集（运营方只发图片时刻表，本适配器不做 OCR），在官网 4 号线时刻表 66 个可比格上逐格复核：66/66 相差不超过 2 分钟、33 格完全一致；规划器按线路过滤后取腿，避免同城换乘站取到短交路列车的窗口。OD 票价按官方里程分段计价票制计算（起步 2 元 5 公里；5–15 公里每 5 公里加 1 元；15–29 公里每 7 公里加 1 元；29 公里以上每 9 公里加 1 元，《票务规则》第二条，2026-01-01 起施行，明确适用于含 S1 线在内的全部运营线路），计价里程取百度规划器逐区间乘车里程的最短路。1 号线与 S1 线在堰桥贯通运营，按仓库既有做法记为零秒换乘边。官网线路导览图标为「暂缓开通」的 2 号线安镇站按支线交路模型记为 under_construction。区间里程共 93 段，其中 92 段取自百度规划器逐区间实测；余下 1 段（无锡东站→安镇）保留直线距离估算——安镇站为暂缓开通车站，规划器不给出该 OD 的任何路线。在建线路 4 号线二期、5 号线、6 号线的官方标准站名见官网 2026-03-02 通告，但三条线尚无任何机器可读的拓扑、坐标或时刻数据，故不建模，仅在此备注。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 89,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 90,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 92,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 92,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 16,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 184,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 0.99,
+      "status": "partial",
+      "counts": {
+        "official": 97,
+        "derived": 0,
+        "default": 1
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 0.98,
+      "status": "partial",
+      "counts": {
+        "official": 7832,
+        "derived": 0,
+        "default": 178
+      }
+    }
+  }
+}

@@ -29,6 +29,13 @@ export const CITY_BBOX: Record<
     lon: [111.45, 111.95],
     lat: [40.68, 40.95],
     center: { lon: 111.663, lat: 40.815 }
+  },
+  // Ningbo's Line 12 (象山线) runs far south of the core network, down to
+  // 大目湾 in Xiangshan; the box covers the whole operating network.
+  宁波: {
+    lon: [121.2, 122.1],
+    lat: [29.3, 30.1],
+    center: { lon: 121.55, lat: 29.87 }
   }
 };
 
