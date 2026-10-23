@@ -117,8 +117,11 @@ jobs:
         run: |
           echo "proxy=${OPENMETRO_REVERSE_PROXY:-none}"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            # A manual dispatch runs exactly the layers that were asked for.
-            LAYERS="${{ inputs.layers }}"
+            # Honour the requested layers, minus `fares`: that layer has its own
+            # job with a 360-minute budget, and an adapter's topology path
+            # recomputes the fare matrix whenever `fares` is present — which
+            # does not fit this job's 30-minute budget.
+            LAYERS=$(printf '%s' "${{ inputs.layers }}" | tr ',' '\n' | grep -vx 'fares' | grep -v '^$' | paste -sd, -)
           else
             # The scheduled run always includes gapfill. It is the layer that
             # upgrades weak segment times to planner-measured values and
