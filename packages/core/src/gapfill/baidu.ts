@@ -184,6 +184,18 @@ export class BaiduPlannerClient {
 }
 
 /**
+ * A payload string that carries a real value.
+ *
+ * The v2 payload spells a missing field as the literal string `"undefined"`,
+ * so a plain `?? undefined` on the raw field is not enough.
+ */
+function text(v: unknown): string | undefined {
+  if (typeof v !== 'string') return undefined;
+  const t = v.trim();
+  return t.length > 0 && t !== 'undefined' ? t : undefined;
+}
+
+/**
  * Direction v2 step shape differs from DirectionLite:
  *   - no top-level `type`; mode lives in `vehicle_info.type` (5 walk, 3 transit)
  *   - transit legs carry `vehicle_info.detail` (type 1 = 地铁/轻轨)
@@ -205,14 +217,19 @@ function normalizeV2Response(body: BaiduTransitResponse): void {
       }
       if (!s.vehicle) {
         const detail = (vi.detail ?? {}) as Record<string, unknown>;
+        // The v2 payload carries the boarding/alighting stop under
+        // `on_station` / `off_station`; `start_name` / `end_name` are the
+        // literal string "undefined" there. Map whichever is present so the
+        // harvest helpers can match a leg against the pair's two stations.
         s.vehicle = {
           type: (vi.type as number) ?? undefined,
           name: (vi.name as string) ?? (detail.name as string) ?? undefined,
-          start_name: (detail.start_name as string) ?? undefined,
-          end_name: (detail.end_name as string) ?? undefined,
-          start_time: (detail.start_time as string) ?? undefined,
-          end_time: (detail.end_time as string) ?? undefined,
-          stop_num: (detail.stop_num as number) ?? undefined
+          start_name: text(detail.on_station) ?? text(detail.start_name),
+          end_name: text(detail.off_station) ?? text(detail.end_name),
+          start_time: text(detail.first_time) ?? text(detail.start_time),
+          end_time: text(detail.last_time) ?? text(detail.end_time),
+          stop_num: (detail.stop_num as number) ?? undefined,
+          stop_info: (detail.stop_info as { stop_name?: string }[] | undefined) ?? undefined
         };
         const busType = detail.type;
         if (typeof busType === 'number') {

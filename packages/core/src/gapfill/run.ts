@@ -225,11 +225,10 @@ function nearestRideHop(
     if (!hasA || !hasB) continue;
     return { duration: s.duration, distance: s.distance, path: s.path };
   }
-  const rides = steps.filter((s) => s.type === 3);
-  if (rides.length === 1) {
-    const s = rides[0];
-    return { duration: s.duration, distance: s.distance, path: s.path };
-  }
+  // No leg names the pair's two stations: the caller decides whether the
+  // single-ride case is good enough. Returning it from here would let a
+  // detour route (a different segment) win over a later route that does
+  // name the stations.
   return undefined;
 }
 
@@ -667,6 +666,15 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
         const resp = await client.transit(o, d);
         let dur: number | undefined;
         let meters: number | undefined;
+        // The planner often offers a detour route first (e.g. 铜山中医院 →
+        // 玉泉河 on Line 6) before the direct hop (无名山公园 → 玉泉河 on
+        // Line 3). A route whose ride legs do not name the pair's two
+        // stations is a *different* segment, so it must not win over a later
+        // route that does name them. The single-ride case is kept as a
+        // last resort — for planners whose station names never match the
+        // canonical ones — but only after every route has been scanned.
+        let fallbackDur: number | undefined;
+        let fallbackMeters: number | undefined;
         for (const route of resp?.result?.routes ?? []) {
           const st = pureMetroSteps(route.steps);
           if (st.length === 0) continue;
@@ -676,6 +684,15 @@ export async function runGapfill(ctx: SyncCtx): Promise<GapfillResult> {
             meters = hit.distance ?? pathMeters(hit.path);
             break;
           }
+          const rides = st.filter((s) => s.type === 3);
+          if (rides.length === 1 && fallbackDur == null) {
+            fallbackDur = rides[0]!.duration;
+            fallbackMeters = rides[0]!.distance ?? pathMeters(rides[0]!.path);
+          }
+        }
+        if (dur == null && fallbackDur != null && fallbackDur > 0) {
+          dur = fallbackDur;
+          meters = fallbackMeters;
         }
         for (const seg of job.segs) {
           const key = pairKey(seg.from_stop_id, seg.to_stop_id);
