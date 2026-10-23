@@ -1,0 +1,296 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-kunming",
+  "generated_at": "2026-10-23T13:08:14.412Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-kunming-pattern-1-branch",
+      "line_id": "cn-kunming-line-1",
+      "name": "春融街 → 昆明南火车站",
+      "names": {
+        "zh": "春融街→昆明南火车站",
+        "en": "春融街 to 昆明南火车站"
+      },
+      "stop_ids": [
+        "cn-kunming-chunrong-st-1",
+        "cn-kunming-municipal-administration-center-1",
+        "cn-kunming-yihe-rd-1",
+        "cn-kunming-bailongtan-1",
+        "cn-kunming-kunming-south-railway-station-1"
+      ],
+      "origin_stop_id": "cn-kunming-chunrong-st-1",
+      "terminal_stop_id": "cn-kunming-kunming-south-railway-station-1",
+      "is_primary": false,
+      "junction_stop_id": "cn-kunming-chunrong-st-1",
+      "source_ids": [
+        {
+          "source": "amap-subway-5301",
+          "id": "1号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1",
+        "pattern_role": "branch",
+        "junction_station": "春融街"
+      }
+    },
+    {
+      "id": "cn-kunming-pattern-1-primary",
+      "line_id": "cn-kunming-line-1",
+      "name": "环城南路(北部汽车站) → 大学城南·云南开放大学",
+      "names": {
+        "zh": "环城南路(北部汽车站)→大学城南·云南开放大学",
+        "en": "环城南路(北部汽车站) to 大学城南·云南开放大学"
+      },
+      "stop_ids": [
+        "cn-kunming-huancheng-south-road-1",
+        "cn-kunming-kunming-railway-station-1",
+        "cn-kunming-fude-1",
+        "cn-kunming-rixin-rd-1",
+        "cn-kunming-wujiaba-1",
+        "cn-kunming-changhong-west-rd-1",
+        "cn-kunming-xiaodongcun-1",
+        "cn-kunming-erji-rd-1",
+        "cn-kunming-xingyao-rd-1",
+        "cn-kunming-new-asia-athletics-park-1",
+        "cn-kunming-south-coach-station-1",
+        "cn-kunming-dounan-1",
+        "cn-kunming-chunrong-st-1",
+        "cn-kunming-tuofeng-st-1",
+        "cn-kunming-lianda-st-1",
+        "cn-kunming-yikang-south-rd-1",
+        "cn-kunming-university-town-1",
+        "cn-kunming-university-town-south-1"
+      ],
+      "origin_stop_id": "cn-kunming-huancheng-south-road-1",
+      "terminal_stop_id": "cn-kunming-university-town-south-1",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-5301",
+          "id": "1号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "1",
+        "pattern_role": "primary",
+        "junction_station": "春融街"
+      }
+    },
+    {
+      "id": "cn-kunming-pattern-2-primary",
+      "line_id": "cn-kunming-line-2",
+      "name": "环城南路(昆明南火车站/大学城南·云南开放大学) → 北部汽车站",
+      "names": {
+        "zh": "环城南路(昆明南火车站/大学城南·云南开放大学)→北部汽车站",
+        "en": "环城南路(昆明南火车站/大学城南·云南开放大学) to 北部汽车站"
+      },
+      "stop_ids": [
+        "cn-kunming-huancheng-south-road-2",
+        "cn-kunming-tangzixiang-2",
+        "cn-kunming-dongfeng-square-2",
+        "cn-kunming-jiaosanqiao-2",
+        "cn-kunming-chuanxingulou-2",
+        "cn-kunming-north-railway-station-2",
+        "cn-kunming-baiyun-rd-2",
+        "cn-kunming-jinxing-2",
+        "cn-kunming-beichen-2",
+        "cn-kunming-linyuqiao-2",
+        "cn-kunming-yangchangcun-2",
+        "cn-kunming-sijiaying-2",
+        "cn-kunming-longtou-st-2",
+        "cn-kunming-north-coach-station-2"
+      ],
+      "origin_stop_id": "cn-kunming-huancheng-south-road-2",
+      "terminal_stop_id": "cn-kunming-north-coach-station-2",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-5301",
+          "id": "2号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "2",
+        "pattern_role": "primary"
+      }
+    },
+    {
+      "id": "cn-kunming-pattern-3-primary",
+      "line_id": "cn-kunming-line-3",
+      "name": "西山公园 → 东部汽车站",
+      "names": {
+        "zh": "西山公园→东部汽车站",
+        "en": "西山公园 to 东部汽车站"
+      },
+      "stop_ids": [
+        "cn-kunming-western-hills-park-3",
+        "cn-kunming-chejiabi-3",
+        "cn-kunming-pupingcun-3",
+        "cn-kunming-shizui-3",
+        "cn-kunming-dayu-rd-3",
+        "cn-kunming-west-coach-station-3",
+        "cn-kunming-minshan-3",
+        "cn-kunming-changyuan-central-rd-3",
+        "cn-kunming-xiyuan-3",
+        "cn-kunming-liangjiahe-3",
+        "cn-kunming-municipal-gymnasium-3",
+        "cn-kunming-panjiawan-3",
+        "cn-kunming-wuyi-rd-3",
+        "cn-kunming-dongfeng-square-3",
+        "cn-kunming-tuodong-stadium-3",
+        "cn-kunming-dashuying-3",
+        "cn-kunming-jinmasi-3",
+        "cn-kunming-taipingcun-3",
+        "cn-kunming-hongqiao-3",
+        "cn-kunming-east-coach-station-3"
+      ],
+      "origin_stop_id": "cn-kunming-western-hills-park-3",
+      "terminal_stop_id": "cn-kunming-east-coach-station-3",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-5301",
+          "id": "3号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "3",
+        "pattern_role": "primary"
+      }
+    },
+    {
+      "id": "cn-kunming-pattern-4-primary",
+      "line_id": "cn-kunming-line-4",
+      "name": "金川路 → 昆明南火车站",
+      "names": {
+        "zh": "金川路→昆明南火车站",
+        "en": "金川路 to 昆明南火车站"
+      },
+      "stop_ids": [
+        "cn-kunming-jinchuan-rd-4",
+        "cn-kunming-dahegeng-4",
+        "cn-kunming-haitun-rd-4",
+        "cn-kunming-xiaotun-4",
+        "cn-kunming-jindingshan-north-rd-4",
+        "cn-kunming-sujiatang-4",
+        "cn-kunming-xiaocaiyuan-4",
+        "cn-kunming-north-railway-station-4",
+        "cn-kunming-bailong-rd-4",
+        "cn-kunming-dashuying-4",
+        "cn-kunming-juhuacun-4",
+        "cn-kunming-juhua-4",
+        "cn-kunming-hedianying-4",
+        "cn-kunming-niujiezhuang-4",
+        "cn-kunming-zhujiacun-4",
+        "cn-kunming-yangfutou-4",
+        "cn-kunming-yuyuan-rd-4",
+        "cn-kunming-guangwei-4",
+        "cn-kunming-tami-4",
+        "cn-kunming-dounan-4",
+        "cn-kunming-jingui-street-4",
+        "cn-kunming-meizicun-4",
+        "cn-kunming-ancient-city-4",
+        "cn-kunming-kelecun-4",
+        "cn-kunming-xiangfeng-st-4",
+        "cn-kunming-niutoushan-4",
+        "cn-kunming-lianda-st-4",
+        "cn-kunming-wujiaying-4",
+        "cn-kunming-kunming-south-railway-station-4"
+      ],
+      "origin_stop_id": "cn-kunming-jinchuan-rd-4",
+      "terminal_stop_id": "cn-kunming-kunming-south-railway-station-4",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-5301",
+          "id": "4号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "4",
+        "pattern_role": "primary"
+      }
+    },
+    {
+      "id": "cn-kunming-pattern-5-primary",
+      "line_id": "cn-kunming-line-5",
+      "name": "世博园 → 宝丰",
+      "names": {
+        "zh": "世博园→宝丰",
+        "en": "世博园 to 宝丰"
+      },
+      "stop_ids": [
+        "cn-kunming-world-horti-expo-garden-5",
+        "cn-kunming-bailongsi-5",
+        "cn-kunming-shizha-5",
+        "cn-kunming-chuanjin-rd-5",
+        "cn-kunming-north-railway-station-5",
+        "cn-kunming-yuantong-hill-5",
+        "cn-kunming-huashan-west-rd-5",
+        "cn-kunming-wuyi-rd-5",
+        "cn-kunming-milesi-5",
+        "cn-kunming-yanjiadi-5",
+        "cn-kunming-jinlan-rd-5",
+        "cn-kunming-fuhai-5",
+        "cn-kunming-guangfulu-xikou-5",
+        "cn-kunming-daba-5",
+        "cn-kunming-yinghai-rd-5",
+        "cn-kunming-yuhu-cun-5",
+        "cn-kunming-xingti-rd-5",
+        "cn-kunming-zhuangjiatang-5",
+        "cn-kunming-jinjia-river-5",
+        "cn-kunming-fubao-5",
+        "cn-kunming-dianchi-international-convention-and-exhibition-center-5",
+        "cn-kunming-baofeng-5"
+      ],
+      "origin_stop_id": "cn-kunming-world-horti-expo-garden-5",
+      "terminal_stop_id": "cn-kunming-baofeng-5",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-5301",
+          "id": "5号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "5",
+        "pattern_role": "primary"
+      }
+    },
+    {
+      "id": "cn-kunming-pattern-6-primary",
+      "line_id": "cn-kunming-line-6",
+      "name": "机场中心 → 塘子巷",
+      "names": {
+        "zh": "机场中心→塘子巷",
+        "en": "机场中心 to 塘子巷"
+      },
+      "stop_ids": [
+        "cn-kunming-kunming-airport-6",
+        "cn-kunming-airport-front-6",
+        "cn-kunming-dabanqiao-6",
+        "cn-kunming-east-coach-station-6",
+        "cn-kunming-juhua-6",
+        "cn-kunming-dongjiao-rd-6",
+        "cn-kunming-chajie-6",
+        "cn-kunming-tangzixiang-6"
+      ],
+      "origin_stop_id": "cn-kunming-kunming-airport-6",
+      "terminal_stop_id": "cn-kunming-tangzixiang-6",
+      "is_primary": true,
+      "source_ids": [
+        {
+          "source": "amap-subway-5301",
+          "id": "6号线"
+        }
+      ],
+      "extras": {
+        "line_short_name": "6",
+        "pattern_role": "primary"
+      }
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-nanchang",
+  "generated_at": "2026-10-23T12:38:20.842Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T12:38:20.842Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-nanchang-bayi-memorial-1-cn-nanchang-bayi-memorial-3",
+      "station_id": "cn-nanchang-bayi-memorial",
+      "from_line_id": "cn-nanchang-line-1",
+      "to_line_id": "cn-nanchang-line-3",
+      "from_stop_id": "cn-nanchang-bayi-memorial-1",
+      "to_stop_id": "cn-nanchang-bayi-memorial-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-bayi-memorial-3-cn-nanchang-bayi-memorial-1",
+      "station_id": "cn-nanchang-bayi-memorial",
+      "from_line_id": "cn-nanchang-line-3",
+      "to_line_id": "cn-nanchang-line-1",
+      "from_stop_id": "cn-nanchang-bayi-memorial-3",
+      "to_stop_id": "cn-nanchang-bayi-memorial-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-bayi-square-1-cn-nanchang-bayi-square-2",
+      "station_id": "cn-nanchang-bayi-square",
+      "from_line_id": "cn-nanchang-line-1",
+      "to_line_id": "cn-nanchang-line-2",
+      "from_stop_id": "cn-nanchang-bayi-square-1",
+      "to_stop_id": "cn-nanchang-bayi-square-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-bayi-square-2-cn-nanchang-bayi-square-1",
+      "station_id": "cn-nanchang-bayi-square",
+      "from_line_id": "cn-nanchang-line-2",
+      "to_line_id": "cn-nanchang-line-1",
+      "from_stop_id": "cn-nanchang-bayi-square-2",
+      "to_stop_id": "cn-nanchang-bayi-square-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-dinggong-road-north-1-cn-nanchang-dinggong-road-north-4",
+      "station_id": "cn-nanchang-dinggong-road-north",
+      "from_line_id": "cn-nanchang-line-1",
+      "to_line_id": "cn-nanchang-line-4",
+      "from_stop_id": "cn-nanchang-dinggong-road-north-1",
+      "to_stop_id": "cn-nanchang-dinggong-road-north-4",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-dinggong-road-north-4-cn-nanchang-dinggong-road-north-1",
+      "station_id": "cn-nanchang-dinggong-road-north",
+      "from_line_id": "cn-nanchang-line-4",
+      "to_line_id": "cn-nanchang-line-1",
+      "from_stop_id": "cn-nanchang-dinggong-road-north-4",
+      "to_stop_id": "cn-nanchang-dinggong-road-north-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-dinggong-road-south-2-cn-nanchang-dinggong-road-south-4",
+      "station_id": "cn-nanchang-dinggong-road-south",
+      "from_line_id": "cn-nanchang-line-2",
+      "to_line_id": "cn-nanchang-line-4",
+      "from_stop_id": "cn-nanchang-dinggong-road-south-2",
+      "to_stop_id": "cn-nanchang-dinggong-road-south-4",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-dinggong-road-south-4-cn-nanchang-dinggong-road-south-2",
+      "station_id": "cn-nanchang-dinggong-road-south",
+      "from_line_id": "cn-nanchang-line-4",
+      "to_line_id": "cn-nanchang-line-2",
+      "from_stop_id": "cn-nanchang-dinggong-road-south-4",
+      "to_stop_id": "cn-nanchang-dinggong-road-south-2",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-metro-central-1-cn-nanchang-metro-central-2",
+      "station_id": "cn-nanchang-metro-central",
+      "from_line_id": "cn-nanchang-line-1",
+      "to_line_id": "cn-nanchang-line-2",
+      "from_stop_id": "cn-nanchang-metro-central-1",
+      "to_stop_id": "cn-nanchang-metro-central-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-metro-central-2-cn-nanchang-metro-central-1",
+      "station_id": "cn-nanchang-metro-central",
+      "from_line_id": "cn-nanchang-line-2",
+      "to_line_id": "cn-nanchang-line-1",
+      "from_stop_id": "cn-nanchang-metro-central-2",
+      "to_stop_id": "cn-nanchang-metro-central-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-qingshan-road-2-cn-nanchang-qingshan-road-3",
+      "station_id": "cn-nanchang-qingshan-road",
+      "from_line_id": "cn-nanchang-line-2",
+      "to_line_id": "cn-nanchang-line-3",
+      "from_stop_id": "cn-nanchang-qingshan-road-2",
+      "to_stop_id": "cn-nanchang-qingshan-road-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-qingshan-road-3-cn-nanchang-qingshan-road-2",
+      "station_id": "cn-nanchang-qingshan-road",
+      "from_line_id": "cn-nanchang-line-3",
+      "to_line_id": "cn-nanchang-line-2",
+      "from_stop_id": "cn-nanchang-qingshan-road-3",
+      "to_stop_id": "cn-nanchang-qingshan-road-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-shangshagou-3-cn-nanchang-shangshagou-4",
+      "station_id": "cn-nanchang-shangshagou",
+      "from_line_id": "cn-nanchang-line-3",
+      "to_line_id": "cn-nanchang-line-4",
+      "from_stop_id": "cn-nanchang-shangshagou-3",
+      "to_stop_id": "cn-nanchang-shangshagou-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-shangshagou-4-cn-nanchang-shangshagou-3",
+      "station_id": "cn-nanchang-shangshagou",
+      "from_line_id": "cn-nanchang-line-4",
+      "to_line_id": "cn-nanchang-line-3",
+      "from_stop_id": "cn-nanchang-shangshagou-4",
+      "to_stop_id": "cn-nanchang-shangshagou-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-shengjin-pagoda-3-cn-nanchang-shengjin-pagoda-4",
+      "station_id": "cn-nanchang-shengjin-pagoda",
+      "from_line_id": "cn-nanchang-line-3",
+      "to_line_id": "cn-nanchang-line-4",
+      "from_stop_id": "cn-nanchang-shengjin-pagoda-3",
+      "to_stop_id": "cn-nanchang-shengjin-pagoda-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-shengjin-pagoda-4-cn-nanchang-shengjin-pagoda-3",
+      "station_id": "cn-nanchang-shengjin-pagoda",
+      "from_line_id": "cn-nanchang-line-4",
+      "to_line_id": "cn-nanchang-line-3",
+      "from_stop_id": "cn-nanchang-shengjin-pagoda-4",
+      "to_stop_id": "cn-nanchang-shengjin-pagoda-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-south-square-of-west-railway-station-2-cn-nanchang-south-square-of-west-railway-station-4",
+      "station_id": "cn-nanchang-south-square-of-west-railway-station",
+      "from_line_id": "cn-nanchang-line-2",
+      "to_line_id": "cn-nanchang-line-4",
+      "from_stop_id": "cn-nanchang-south-square-of-west-railway-station-2",
+      "to_stop_id": "cn-nanchang-south-square-of-west-railway-station-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-nanchang-south-square-of-west-railway-station-4-cn-nanchang-south-square-of-west-railway-station-2",
+      "station_id": "cn-nanchang-south-square-of-west-railway-station",
+      "from_line_id": "cn-nanchang-line-4",
+      "to_line_id": "cn-nanchang-line-2",
+      "from_stop_id": "cn-nanchang-south-square-of-west-railway-station-4",
+      "to_stop_id": "cn-nanchang-south-square-of-west-railway-station-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

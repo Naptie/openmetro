@@ -1,0 +1,132 @@
+{
+  "id": "cn-nanchang",
+  "name": "南昌轨道交通",
+  "names": {
+    "zh": "南昌轨道交通",
+    "en": "Nanchang Rail Transit"
+  },
+  "city": {
+    "id": "CN-3601",
+    "name": {
+      "zh": "南昌市",
+      "en": "Nanchang"
+    },
+    "country": "CN",
+    "population": 6255007,
+    "area": 7194.61,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        115.887222,
+        28.684167
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑与站序来自运营方官方接口 GET https://custproj00042-2.ceydz.com/guidao/apiNcdtFrontEnd/AllLine：1 号线 34 站（昌北机场→麻丘）、2 号线 37 站（南路→南昌东站）、3 号线 22 站（银三角北→京东大道）、4 号线 29 站（白马山→鱼尾洲），共 122 条 line-stop 记录、113 座物理车站、9 座换乘站（八一广场、地铁大厦、八一馆、丁公路北、青山路口、西站南广场、丁公路南、绳金塔、上沙沟），与 AMap 的 t=1 换乘标记完全一致。4 条线均为单链无分支，每线 1 个 primary pattern。官方接口 POST /newselectByTowSiteName 同时给出官方 OD 票价（Price）、分线路径（routesToList）与每段行程分钟数（gegeshijiantime）：线路号必须属于该站所属线，否则后端返回 HTTP 500，采集时按站→线组合展开重试；gegeshijiantime 对同线连续区段只给整段耗时，故逐区间官方耗时以「相邻站查询」按需采集（每线 N-1 次），写入 travel_time_source=source。OD 票价矩阵由同一接口逐 OD 采集（113 站 × 112 = 6328 对），与官网公布的里程分段计价（起步 2 元/6 公里，6-12 公里每增 1 元多乘 6 公里，12-28 公里每增 1 元多乘 8 公里，28 公里以上每增 1 元多乘 10 公里）一致。坐标、示意图像素、线内站码、拼音、英文名与线色来自 AMap Subway 3601（GCJ-02 原生；AMap 3 号线站序与官网相反，故站序以官网为准；AMap 的站名后缀 站 与官网不完全一致，两侧各去一个尾缀后逐站一一对应）。逐站逐方向首末班来自百度路径规划 direction/v2/transit（tactics_incity=5 地铁优先）：该接口给出上车站自身的首班/末班发车时刻，与官网首末班车时刻表逐格一致（官网仅以图片发布该表，未做 OCR）。换乘步行时间官方只给次数，依赖 core 的 gapfill 层由百度规划器补齐。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 113,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 113,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 118,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 118,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 18,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 236,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 122,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 12656,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "id": "cn-changsha",
+  "name": "长沙地铁",
+  "names": {
+    "zh": "长沙地铁",
+    "en": "Changsha Metro"
+  },
+  "city": {
+    "id": "CN-4301",
+    "name": {
+      "zh": "长沙市",
+      "en": "Changsha"
+    },
+    "country": "CN",
+    "population": 10047914,
+    "area": 11815.96,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        112.97087,
+        28.19874
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 180,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑（线路、站序、官方线内站码）、逐站逐方向首末班、换乘标记、车站出入口与逐出口公交接驳均来自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口（findAllDtLineData.page / findDtStationData.page / getDtStationInfoById.page）。官网本身不提供经纬度与英文名：坐标、线色、英文名与示意图像素取自 AMap Subway 4301（GCJ-02，与官方站序逐线一致）。英文名以 AMap 发布的译名优先（Wuyi Square、Beichen Delta），Wikidata 补缺——Wikidata 对长沙各站的英文标签只是未翻译的拼音（Wu Yi Guang Chang），质量不如 AMap，故顺序与 cn-hongkong 一致。区间运行时间、区间里程与换乘步行取自百度路径规划 direction/v2/transit（官方均不公布）。票价按《长沙市轨道交通集团票务规则》第四条的里程分段计价公式计算（起步 2 元 6 公里，递远递减 5/7/9 公里一档），计价里程取百度逐相邻站对乘车里程的 Dijkstra 最短路；磁浮快线不在该规则适用范围内（《票务规则》第二条明写\"不含长沙磁浮快线\"），相关 OD 对在 fares.json 中为 null。3 号线同时发布广生、红桥、湘潭北三个终点，红桥为同一走廊上的折返交路，按仓库的交路模型发布为主交路上的第三个终点而非另建交路。磁浮快线另发布工作日与双休日两套时刻，落盘为 7 元素星期数组。在建的 4 号线北延段、6 号线东延段、7 号线一期、S2 东延线与 Y1 大王山云巴未建模。官方 CMS 的 huancheng 标记不可靠（把 3 号线烈士公园东、6 号线中塘标为换乘站，却漏标了长沙火车站与侯家塘），换乘关系一律以官方线-站表推导，并与 AMap 的换乘标记逐站一致（19 座换乘站）。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 143,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 143,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 153,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 153,
+        "derived": 1,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 42,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 334,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 161,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 0.96,
+      "status": "partial",
+      "counts": {
+        "official": 19460,
+        "derived": 0,
+        "default": 846
+      }
+    }
+  }
+}

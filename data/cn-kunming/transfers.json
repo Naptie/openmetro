@@ -1,0 +1,386 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-kunming",
+  "generated_at": "2026-10-23T13:08:50.245Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T13:08:50.245Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-kunming-dashuying-3-cn-kunming-dashuying-4",
+      "station_id": "cn-kunming-dashuying",
+      "from_line_id": "cn-kunming-line-3",
+      "to_line_id": "cn-kunming-line-4",
+      "from_stop_id": "cn-kunming-dashuying-3",
+      "to_stop_id": "cn-kunming-dashuying-4",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-dashuying-4-cn-kunming-dashuying-3",
+      "station_id": "cn-kunming-dashuying",
+      "from_line_id": "cn-kunming-line-4",
+      "to_line_id": "cn-kunming-line-3",
+      "from_stop_id": "cn-kunming-dashuying-4",
+      "to_stop_id": "cn-kunming-dashuying-3",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-dongfeng-square-2-cn-kunming-dongfeng-square-3",
+      "station_id": "cn-kunming-dongfeng-square",
+      "from_line_id": "cn-kunming-line-2",
+      "to_line_id": "cn-kunming-line-3",
+      "from_stop_id": "cn-kunming-dongfeng-square-2",
+      "to_stop_id": "cn-kunming-dongfeng-square-3",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-dongfeng-square-3-cn-kunming-dongfeng-square-2",
+      "station_id": "cn-kunming-dongfeng-square",
+      "from_line_id": "cn-kunming-line-3",
+      "to_line_id": "cn-kunming-line-2",
+      "from_stop_id": "cn-kunming-dongfeng-square-3",
+      "to_stop_id": "cn-kunming-dongfeng-square-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-dounan-1-cn-kunming-dounan-4",
+      "station_id": "cn-kunming-dounan",
+      "from_line_id": "cn-kunming-line-1",
+      "to_line_id": "cn-kunming-line-4",
+      "from_stop_id": "cn-kunming-dounan-1",
+      "to_stop_id": "cn-kunming-dounan-4",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-dounan-4-cn-kunming-dounan-1",
+      "station_id": "cn-kunming-dounan",
+      "from_line_id": "cn-kunming-line-4",
+      "to_line_id": "cn-kunming-line-1",
+      "from_stop_id": "cn-kunming-dounan-4",
+      "to_stop_id": "cn-kunming-dounan-1",
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-east-coach-station-3-cn-kunming-east-coach-station-6",
+      "station_id": "cn-kunming-east-coach-station",
+      "from_line_id": "cn-kunming-line-3",
+      "to_line_id": "cn-kunming-line-6",
+      "from_stop_id": "cn-kunming-east-coach-station-3",
+      "to_stop_id": "cn-kunming-east-coach-station-6",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-east-coach-station-6-cn-kunming-east-coach-station-3",
+      "station_id": "cn-kunming-east-coach-station",
+      "from_line_id": "cn-kunming-line-6",
+      "to_line_id": "cn-kunming-line-3",
+      "from_stop_id": "cn-kunming-east-coach-station-6",
+      "to_stop_id": "cn-kunming-east-coach-station-3",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-huancheng-south-road-1-cn-kunming-huancheng-south-road-2",
+      "station_id": "cn-kunming-huancheng-south-road",
+      "from_line_id": "cn-kunming-line-1",
+      "to_line_id": "cn-kunming-line-2",
+      "from_stop_id": "cn-kunming-huancheng-south-road-1",
+      "to_stop_id": "cn-kunming-huancheng-south-road-2",
+      "walk_time_seconds": 60,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 72,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-huancheng-south-road-2-cn-kunming-huancheng-south-road-1",
+      "station_id": "cn-kunming-huancheng-south-road",
+      "from_line_id": "cn-kunming-line-2",
+      "to_line_id": "cn-kunming-line-1",
+      "from_stop_id": "cn-kunming-huancheng-south-road-2",
+      "to_stop_id": "cn-kunming-huancheng-south-road-1",
+      "walk_time_seconds": 60,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 72,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-juhua-4-cn-kunming-juhua-6",
+      "station_id": "cn-kunming-juhua",
+      "from_line_id": "cn-kunming-line-4",
+      "to_line_id": "cn-kunming-line-6",
+      "from_stop_id": "cn-kunming-juhua-4",
+      "to_stop_id": "cn-kunming-juhua-6",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-juhua-6-cn-kunming-juhua-4",
+      "station_id": "cn-kunming-juhua",
+      "from_line_id": "cn-kunming-line-6",
+      "to_line_id": "cn-kunming-line-4",
+      "from_stop_id": "cn-kunming-juhua-6",
+      "to_stop_id": "cn-kunming-juhua-4",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-kunming-south-railway-station-1-cn-kunming-kunming-south-railway-station-4",
+      "station_id": "cn-kunming-kunming-south-railway-station",
+      "from_line_id": "cn-kunming-line-1",
+      "to_line_id": "cn-kunming-line-4",
+      "from_stop_id": "cn-kunming-kunming-south-railway-station-1",
+      "to_stop_id": "cn-kunming-kunming-south-railway-station-4",
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-kunming-south-railway-station-4-cn-kunming-kunming-south-railway-station-1",
+      "station_id": "cn-kunming-kunming-south-railway-station",
+      "from_line_id": "cn-kunming-line-4",
+      "to_line_id": "cn-kunming-line-1",
+      "from_stop_id": "cn-kunming-kunming-south-railway-station-4",
+      "to_stop_id": "cn-kunming-kunming-south-railway-station-1",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-lianda-st-1-cn-kunming-lianda-st-4",
+      "station_id": "cn-kunming-lianda-st",
+      "from_line_id": "cn-kunming-line-1",
+      "to_line_id": "cn-kunming-line-4",
+      "from_stop_id": "cn-kunming-lianda-st-1",
+      "to_stop_id": "cn-kunming-lianda-st-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-lianda-st-4-cn-kunming-lianda-st-1",
+      "station_id": "cn-kunming-lianda-st",
+      "from_line_id": "cn-kunming-line-4",
+      "to_line_id": "cn-kunming-line-1",
+      "from_stop_id": "cn-kunming-lianda-st-4",
+      "to_stop_id": "cn-kunming-lianda-st-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-north-railway-station-2-cn-kunming-north-railway-station-4",
+      "station_id": "cn-kunming-north-railway-station",
+      "from_line_id": "cn-kunming-line-2",
+      "to_line_id": "cn-kunming-line-4",
+      "from_stop_id": "cn-kunming-north-railway-station-2",
+      "to_stop_id": "cn-kunming-north-railway-station-4",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-north-railway-station-2-cn-kunming-north-railway-station-5",
+      "station_id": "cn-kunming-north-railway-station",
+      "from_line_id": "cn-kunming-line-2",
+      "to_line_id": "cn-kunming-line-5",
+      "from_stop_id": "cn-kunming-north-railway-station-2",
+      "to_stop_id": "cn-kunming-north-railway-station-5",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-north-railway-station-4-cn-kunming-north-railway-station-2",
+      "station_id": "cn-kunming-north-railway-station",
+      "from_line_id": "cn-kunming-line-4",
+      "to_line_id": "cn-kunming-line-2",
+      "from_stop_id": "cn-kunming-north-railway-station-4",
+      "to_stop_id": "cn-kunming-north-railway-station-2",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-north-railway-station-4-cn-kunming-north-railway-station-5",
+      "station_id": "cn-kunming-north-railway-station",
+      "from_line_id": "cn-kunming-line-4",
+      "to_line_id": "cn-kunming-line-5",
+      "from_stop_id": "cn-kunming-north-railway-station-4",
+      "to_stop_id": "cn-kunming-north-railway-station-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-north-railway-station-5-cn-kunming-north-railway-station-2",
+      "station_id": "cn-kunming-north-railway-station",
+      "from_line_id": "cn-kunming-line-5",
+      "to_line_id": "cn-kunming-line-2",
+      "from_stop_id": "cn-kunming-north-railway-station-5",
+      "to_stop_id": "cn-kunming-north-railway-station-2",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-north-railway-station-5-cn-kunming-north-railway-station-4",
+      "station_id": "cn-kunming-north-railway-station",
+      "from_line_id": "cn-kunming-line-5",
+      "to_line_id": "cn-kunming-line-4",
+      "from_stop_id": "cn-kunming-north-railway-station-5",
+      "to_stop_id": "cn-kunming-north-railway-station-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-tangzixiang-2-cn-kunming-tangzixiang-6",
+      "station_id": "cn-kunming-tangzixiang",
+      "from_line_id": "cn-kunming-line-2",
+      "to_line_id": "cn-kunming-line-6",
+      "from_stop_id": "cn-kunming-tangzixiang-2",
+      "to_stop_id": "cn-kunming-tangzixiang-6",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-tangzixiang-6-cn-kunming-tangzixiang-2",
+      "station_id": "cn-kunming-tangzixiang",
+      "from_line_id": "cn-kunming-line-6",
+      "to_line_id": "cn-kunming-line-2",
+      "from_stop_id": "cn-kunming-tangzixiang-6",
+      "to_stop_id": "cn-kunming-tangzixiang-2",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-wuyi-rd-3-cn-kunming-wuyi-rd-5",
+      "station_id": "cn-kunming-wuyi-rd",
+      "from_line_id": "cn-kunming-line-3",
+      "to_line_id": "cn-kunming-line-5",
+      "from_stop_id": "cn-kunming-wuyi-rd-3",
+      "to_stop_id": "cn-kunming-wuyi-rd-5",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-kunming-wuyi-rd-5-cn-kunming-wuyi-rd-3",
+      "station_id": "cn-kunming-wuyi-rd",
+      "from_line_id": "cn-kunming-line-5",
+      "to_line_id": "cn-kunming-line-3",
+      "from_stop_id": "cn-kunming-wuyi-rd-5",
+      "to_stop_id": "cn-kunming-wuyi-rd-3",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
+    }
+  ]
+}

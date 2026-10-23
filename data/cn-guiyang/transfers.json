@@ -1,0 +1,224 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-guiyang",
+  "generated_at": "2026-10-23T12:52:55.391Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T12:52:55.391Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-guiyang-beijing-road-1-cn-guiyang-beijing-road-3",
+      "station_id": "cn-guiyang-beijing-road",
+      "from_line_id": "cn-guiyang-line-1",
+      "to_line_id": "cn-guiyang-line-3",
+      "from_stop_id": "cn-guiyang-beijing-road-1",
+      "to_stop_id": "cn-guiyang-beijing-road-3",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 72,
+        "official_walk_instruction": "站厅换乘 步行72米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 231
+    },
+    {
+      "id": "xfer-cn-guiyang-beijing-road-3-cn-guiyang-beijing-road-1",
+      "station_id": "cn-guiyang-beijing-road",
+      "from_line_id": "cn-guiyang-line-3",
+      "to_line_id": "cn-guiyang-line-1",
+      "from_stop_id": "cn-guiyang-beijing-road-3",
+      "to_stop_id": "cn-guiyang-beijing-road-1",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 72,
+        "official_walk_instruction": "站厅换乘 步行72米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 231
+    },
+    {
+      "id": "xfer-cn-guiyang-penshuichi-1-cn-guiyang-penshuichi-2",
+      "station_id": "cn-guiyang-penshuichi",
+      "from_line_id": "cn-guiyang-line-1",
+      "to_line_id": "cn-guiyang-line-2",
+      "from_stop_id": "cn-guiyang-penshuichi-1",
+      "to_stop_id": "cn-guiyang-penshuichi-2",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 188,
+        "official_walk_instruction": "站内通道换乘 步行188米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 293,
+      "walk_distance_meters": 351
+    },
+    {
+      "id": "xfer-cn-guiyang-penshuichi-2-cn-guiyang-penshuichi-1",
+      "station_id": "cn-guiyang-penshuichi",
+      "from_line_id": "cn-guiyang-line-2",
+      "to_line_id": "cn-guiyang-line-1",
+      "from_stop_id": "cn-guiyang-penshuichi-2",
+      "to_stop_id": "cn-guiyang-penshuichi-1",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 188,
+        "official_walk_instruction": "站内通道换乘 步行188米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 293,
+      "walk_distance_meters": 351
+    },
+    {
+      "id": "xfer-cn-guiyang-wangchengpo-1-cn-guiyang-wangchengpo-S1",
+      "station_id": "cn-guiyang-wangchengpo",
+      "from_line_id": "cn-guiyang-line-1",
+      "to_line_id": "cn-guiyang-line-s1",
+      "from_stop_id": "cn-guiyang-wangchengpo-1",
+      "to_stop_id": "cn-guiyang-wangchengpo-S1",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 204,
+        "official_walk_instruction": "步行204米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 258,
+      "walk_distance_meters": 309
+    },
+    {
+      "id": "xfer-cn-guiyang-wangchengpo-S1-cn-guiyang-wangchengpo-1",
+      "station_id": "cn-guiyang-wangchengpo",
+      "from_line_id": "cn-guiyang-line-s1",
+      "to_line_id": "cn-guiyang-line-1",
+      "from_stop_id": "cn-guiyang-wangchengpo-S1",
+      "to_stop_id": "cn-guiyang-wangchengpo-1",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 399,
+        "official_walk_instruction": "步行399米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 258,
+      "walk_distance_meters": 309
+    },
+    {
+      "id": "xfer-cn-guiyang-west-lincheng-road-1-cn-guiyang-west-lincheng-road-2",
+      "station_id": "cn-guiyang-west-lincheng-road",
+      "from_line_id": "cn-guiyang-line-1",
+      "to_line_id": "cn-guiyang-line-2",
+      "from_stop_id": "cn-guiyang-west-lincheng-road-1",
+      "to_stop_id": "cn-guiyang-west-lincheng-road-2",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 15,
+        "official_walk_instruction": "站厅换乘",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 231
+    },
+    {
+      "id": "xfer-cn-guiyang-west-lincheng-road-2-cn-guiyang-west-lincheng-road-1",
+      "station_id": "cn-guiyang-west-lincheng-road",
+      "from_line_id": "cn-guiyang-line-2",
+      "to_line_id": "cn-guiyang-line-1",
+      "from_stop_id": "cn-guiyang-west-lincheng-road-2",
+      "to_stop_id": "cn-guiyang-west-lincheng-road-1",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 15,
+        "official_walk_instruction": "站厅换乘",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 231
+    },
+    {
+      "id": "xfer-cn-guiyang-west-yan-an-road-2-cn-guiyang-west-yan-an-road-3",
+      "station_id": "cn-guiyang-west-yan-an-road",
+      "from_line_id": "cn-guiyang-line-2",
+      "to_line_id": "cn-guiyang-line-3",
+      "from_stop_id": "cn-guiyang-west-yan-an-road-2",
+      "to_stop_id": "cn-guiyang-west-yan-an-road-3",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 65,
+        "official_walk_instruction": "站厅换乘 步行65米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 231
+    },
+    {
+      "id": "xfer-cn-guiyang-west-yan-an-road-3-cn-guiyang-west-yan-an-road-2",
+      "station_id": "cn-guiyang-west-yan-an-road",
+      "from_line_id": "cn-guiyang-line-3",
+      "to_line_id": "cn-guiyang-line-2",
+      "from_stop_id": "cn-guiyang-west-yan-an-road-3",
+      "to_stop_id": "cn-guiyang-west-yan-an-road-2",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 65,
+        "official_walk_instruction": "站厅换乘 步行65米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 231
+    },
+    {
+      "id": "xfer-cn-guiyang-zhongcaosi-3-cn-guiyang-zhongcaosi-S1",
+      "station_id": "cn-guiyang-zhongcaosi",
+      "from_line_id": "cn-guiyang-line-3",
+      "to_line_id": "cn-guiyang-line-s1",
+      "from_stop_id": "cn-guiyang-zhongcaosi-3",
+      "to_stop_id": "cn-guiyang-zhongcaosi-S1",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 93,
+        "official_walk_instruction": "步行93米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 231
+    },
+    {
+      "id": "xfer-cn-guiyang-zhongcaosi-S1-cn-guiyang-zhongcaosi-3",
+      "station_id": "cn-guiyang-zhongcaosi",
+      "from_line_id": "cn-guiyang-line-s1",
+      "to_line_id": "cn-guiyang-line-3",
+      "from_stop_id": "cn-guiyang-zhongcaosi-S1",
+      "to_stop_id": "cn-guiyang-zhongcaosi-3",
+      "source_id": "baidu-transit",
+      "extras": {
+        "official_walk_distance_meters": 53,
+        "official_walk_instruction": "站厅换乘 步行53米",
+        "walk_distance_source": "gyurt-planner",
+        "walk_source": "baidu-transit"
+      },
+      "walk_time_seconds": 193,
+      "walk_distance_meters": 231
+    }
+  ]
+}

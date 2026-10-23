@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-23T13:05:16.728Z_
+_Updated 2026-10-23T13:47:43.618Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -33,6 +33,20 @@ _Updated 2026-10-23T13:05:16.728Z_
 | Timetables | ✅ Complete | official | 100% | official=336 |
 | Schematic | ✅ Complete | official | 100% | official=168 |
 | Fares | ✅ Complete | official | 100% | official=20022 |
+
+## 长沙地铁 / Changsha Metro (`cn-changsha`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=143 |
+| Names | ✅ Complete | official | 100% | official=143 |
+| Segment times | ✅ Complete | official | 100% | official=153, derived=1 |
+| Segment distances | ✅ Complete | official | 100% | official=153, derived=1 |
+| Transfer times | ✅ Complete | official | 100% | official=42 |
+| Timetables | ✅ Complete | official | 100% | official=334 |
+| Schematic | ✅ Complete | official | 100% | official=161 |
+| Fares | 🟡 Partial | official | 96% | official=19460, default=846 |
 
 ## 成都轨道交通 / Chengdu Rail Transit (`cn-chengdu`)
 
@@ -104,6 +118,20 @@ _Updated 2026-10-23T13:05:16.728Z_
 | Schematic | ❌ Unavailable | default | 0% | default=599 |
 | Fares | 🟡 Partial | official | 94% | official=236520, default=15986 |
 
+## 贵阳轨道交通 / Guiyang Rail Transit (`cn-guiyang`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=93 |
+| Names | ✅ Complete | official | 100% | official=93 |
+| Segment times | ✅ Complete | official | 100% | official=95 |
+| Segment distances | ✅ Complete | official | 100% | official=95 |
+| Transfer times | ✅ Complete | official | 100% | official=12 |
+| Timetables | ✅ Complete | official | 100% | official=190 |
+| Schematic | ✅ Complete | official | 100% | official=99 |
+| Fares | 🟡 Partial | official | 99% | official=8480, default=76 |
+
 ## 杭州地铁 / Hangzhou Metro (`cn-hangzhou`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -174,6 +202,20 @@ _Updated 2026-10-23T13:05:16.728Z_
 | Schematic | ✅ Complete | official | 100% | official=155 |
 | Fares | ✅ Complete | official | 100% | official=20880 |
 
+## 昆明轨道交通 / Kunming Rail Transit (`cn-kunming`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=103 |
+| Names | ✅ Complete | official | 100% | official=103 |
+| Segment times | ✅ Complete | official | 100% | official=109 |
+| Segment distances | ✅ Complete | official | 100% | official=109 |
+| Transfer times | ✅ Complete | official | 100% | official=26 |
+| Timetables | ✅ Complete | official | 100% | official=218 |
+| Schematic | ✅ Complete | official | 100% | official=115 |
+| Fares | ✅ Complete | official | 100% | official=10506 |
+
 ## 兰州轨道交通 / Lanzhou Rail Transit (`cn-lanzhou`)
 
 | Layer | Status | Precision | Coverage | Counts |
@@ -201,6 +243,20 @@ _Updated 2026-10-23T13:05:16.728Z_
 | Timetables | ✅ Complete | official | 100% | official=28 |
 | Schematic | ❌ Unavailable | default | 0% | default=17 |
 | Fares | ✅ Complete | official | 100% | official=210 |
+
+## 南昌轨道交通 / Nanchang Rail Transit (`cn-nanchang`)
+
+| Layer | Status | Precision | Coverage | Counts |
+| --- | --- | --- | --- | --- |
+| Topology | ✅ Complete | official | 100% | official=1 |
+| Coordinates | ✅ Complete | official | 100% | official=113 |
+| Names | ✅ Complete | official | 100% | official=113 |
+| Segment times | ✅ Complete | official | 100% | official=118 |
+| Segment distances | ✅ Complete | official | 100% | official=118 |
+| Transfer times | ✅ Complete | official | 100% | official=18 |
+| Timetables | ✅ Complete | official | 100% | official=236 |
+| Schematic | ✅ Complete | official | 100% | official=122 |
+| Fares | ✅ Complete | official | 100% | official=12656 |
 
 ## 南京地铁 / Nanjing Metro (`cn-nanjing`)
 

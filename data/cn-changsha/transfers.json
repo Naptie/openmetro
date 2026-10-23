@@ -1,0 +1,688 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-changsha",
+  "generated_at": "2026-10-23T13:01:44.613Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T13:01:44.613Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
+  "records": [
+    {
+      "id": "xfer-cn-changsha-chang-sha-huo-che-nan-zhan-2-cn-changsha-chang-sha-huo-che-nan-zhan-4",
+      "station_id": "cn-changsha-chang-sha-huo-che-nan-zhan",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-2",
+      "to_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-4",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-chang-sha-huo-che-nan-zhan-2-cn-changsha-ci-fu-gao-tie-zhan-S2",
+      "station_id": "cn-changsha-chang-sha-huo-che-nan-zhan",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-s2",
+      "from_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-2",
+      "to_stop_id": "cn-changsha-ci-fu-gao-tie-zhan-S2",
+      "walk_time_seconds": 302,
+      "walk_distance_meters": 362,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 306,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-chang-sha-huo-che-nan-zhan-4-cn-changsha-chang-sha-huo-che-nan-zhan-2",
+      "station_id": "cn-changsha-chang-sha-huo-che-nan-zhan",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-4",
+      "to_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-2",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-chang-sha-huo-che-nan-zhan-4-cn-changsha-ci-fu-gao-tie-zhan-S2",
+      "station_id": "cn-changsha-chang-sha-huo-che-nan-zhan",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-s2",
+      "from_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-4",
+      "to_stop_id": "cn-changsha-ci-fu-gao-tie-zhan-S2",
+      "walk_time_seconds": 302,
+      "walk_distance_meters": 362,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 306,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-chang-sha-huo-che-zhan-2-cn-changsha-chang-sha-huo-che-zhan-3",
+      "station_id": "cn-changsha-chang-sha-huo-che-zhan",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-3",
+      "from_stop_id": "cn-changsha-chang-sha-huo-che-zhan-2",
+      "to_stop_id": "cn-changsha-chang-sha-huo-che-zhan-3",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-chang-sha-huo-che-zhan-3-cn-changsha-chang-sha-huo-che-zhan-2",
+      "station_id": "cn-changsha-chang-sha-huo-che-zhan",
+      "from_line_id": "cn-changsha-line-3",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-chang-sha-huo-che-zhan-3",
+      "to_stop_id": "cn-changsha-chang-sha-huo-che-zhan-2",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-chao-yang-cun-3-cn-changsha-chao-yang-cun-6",
+      "station_id": "cn-changsha-chao-yang-cun",
+      "from_line_id": "cn-changsha-line-3",
+      "to_line_id": "cn-changsha-line-6",
+      "from_stop_id": "cn-changsha-chao-yang-cun-3",
+      "to_stop_id": "cn-changsha-chao-yang-cun-6",
+      "walk_time_seconds": 293,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-chao-yang-cun-6-cn-changsha-chao-yang-cun-3",
+      "station_id": "cn-changsha-chao-yang-cun",
+      "from_line_id": "cn-changsha-line-6",
+      "to_line_id": "cn-changsha-line-3",
+      "from_stop_id": "cn-changsha-chao-yang-cun-6",
+      "to_stop_id": "cn-changsha-chao-yang-cun-3",
+      "walk_time_seconds": 293,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ci-fu-gao-tie-zhan-S2-cn-changsha-chang-sha-huo-che-nan-zhan-2",
+      "station_id": "cn-changsha-ci-fu-gao-tie-zhan",
+      "from_line_id": "cn-changsha-line-s2",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-ci-fu-gao-tie-zhan-S2",
+      "to_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-2",
+      "walk_time_seconds": 302,
+      "walk_distance_meters": 362,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 306,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ci-fu-gao-tie-zhan-S2-cn-changsha-chang-sha-huo-che-nan-zhan-4",
+      "station_id": "cn-changsha-ci-fu-gao-tie-zhan",
+      "from_line_id": "cn-changsha-line-s2",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-ci-fu-gao-tie-zhan-S2",
+      "to_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-4",
+      "walk_time_seconds": 299,
+      "walk_distance_meters": 358,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "HUB_NEAR",
+        "rules_fired": [
+          "HUB_NEAR"
+        ],
+        "dist_m": 306,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ci-fu-ji-chang-zhan-S2-cn-changsha-huang-hua-ji-chang-t1-t2-6",
+      "station_id": "cn-changsha-ci-fu-ji-chang-zhan",
+      "from_line_id": "cn-changsha-line-s2",
+      "to_line_id": "cn-changsha-line-6",
+      "from_stop_id": "cn-changsha-ci-fu-ji-chang-zhan-S2",
+      "to_stop_id": "cn-changsha-huang-hua-ji-chang-t1-t2-6",
+      "walk_time_seconds": 454,
+      "walk_distance_meters": 544,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_TOKEN",
+        "rules_fired": [
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 143,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-fu-bu-he-3-cn-changsha-fu-bu-he-4",
+      "station_id": "cn-changsha-fu-bu-he",
+      "from_line_id": "cn-changsha-line-3",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-fu-bu-he-3",
+      "to_stop_id": "cn-changsha-fu-bu-he-4",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-fu-bu-he-4-cn-changsha-fu-bu-he-3",
+      "station_id": "cn-changsha-fu-bu-he",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-3",
+      "from_stop_id": "cn-changsha-fu-bu-he-4",
+      "to_stop_id": "cn-changsha-fu-bu-he-3",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-fu-rong-qu-zheng-fu-5-cn-changsha-fu-rong-qu-zheng-fu-6",
+      "station_id": "cn-changsha-fu-rong-qu-zheng-fu",
+      "from_line_id": "cn-changsha-line-5",
+      "to_line_id": "cn-changsha-line-6",
+      "from_stop_id": "cn-changsha-fu-rong-qu-zheng-fu-5",
+      "to_stop_id": "cn-changsha-fu-rong-qu-zheng-fu-6",
+      "walk_time_seconds": 337,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-fu-rong-qu-zheng-fu-6-cn-changsha-fu-rong-qu-zheng-fu-5",
+      "station_id": "cn-changsha-fu-rong-qu-zheng-fu",
+      "from_line_id": "cn-changsha-line-6",
+      "to_line_id": "cn-changsha-line-5",
+      "from_stop_id": "cn-changsha-fu-rong-qu-zheng-fu-6",
+      "to_stop_id": "cn-changsha-fu-rong-qu-zheng-fu-5",
+      "walk_time_seconds": 337,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-guang-da-2-cn-changsha-guang-da-4",
+      "station_id": "cn-changsha-guang-da",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-guang-da-2",
+      "to_stop_id": "cn-changsha-guang-da-4",
+      "walk_time_seconds": 225,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-guang-da-4-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-guang-da",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-guang-da-4",
+      "to_stop_id": "cn-changsha-guang-da-2",
+      "walk_time_seconds": 225,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-gui-tang-4-cn-changsha-gui-tang-5",
+      "station_id": "cn-changsha-gui-tang",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-5",
+      "from_stop_id": "cn-changsha-gui-tang-4",
+      "to_stop_id": "cn-changsha-gui-tang-5",
+      "walk_time_seconds": 381,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-gui-tang-5-cn-changsha-gui-tang-4",
+      "station_id": "cn-changsha-gui-tang",
+      "from_line_id": "cn-changsha-line-5",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-gui-tang-5",
+      "to_stop_id": "cn-changsha-gui-tang-4",
+      "walk_time_seconds": 381,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-hou-jia-tang-1-cn-changsha-hou-jia-tang-3",
+      "station_id": "cn-changsha-hou-jia-tang",
+      "from_line_id": "cn-changsha-line-1",
+      "to_line_id": "cn-changsha-line-3",
+      "from_stop_id": "cn-changsha-hou-jia-tang-1",
+      "to_stop_id": "cn-changsha-hou-jia-tang-3",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-hou-jia-tang-3-cn-changsha-hou-jia-tang-1",
+      "station_id": "cn-changsha-hou-jia-tang",
+      "from_line_id": "cn-changsha-line-3",
+      "to_line_id": "cn-changsha-line-1",
+      "from_stop_id": "cn-changsha-hou-jia-tang-3",
+      "to_stop_id": "cn-changsha-hou-jia-tang-1",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-huang-hua-ji-chang-t1-t2-6-cn-changsha-ci-fu-ji-chang-zhan-S2",
+      "station_id": "cn-changsha-huang-hua-ji-chang-t1-t2",
+      "from_line_id": "cn-changsha-line-6",
+      "to_line_id": "cn-changsha-line-s2",
+      "from_stop_id": "cn-changsha-huang-hua-ji-chang-t1-t2-6",
+      "to_stop_id": "cn-changsha-ci-fu-ji-chang-zhan-S2",
+      "walk_time_seconds": 454,
+      "walk_distance_meters": 544,
+      "is_out_of_station": true,
+      "source_id": "baidu-transit",
+      "extras": {
+        "rule": "NAME_TOKEN",
+        "rules_fired": [
+          "NAME_TOKEN",
+          "HUB_NEAR"
+        ],
+        "dist_m": 143,
+        "walk_model": "auto-v1",
+        "walk_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-huang-tu-ling-1-cn-changsha-huang-tu-ling-4",
+      "station_id": "cn-changsha-huang-tu-ling",
+      "from_line_id": "cn-changsha-line-1",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-huang-tu-ling-1",
+      "to_stop_id": "cn-changsha-huang-tu-ling-4",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-huang-tu-ling-4-cn-changsha-huang-tu-ling-1",
+      "station_id": "cn-changsha-huang-tu-ling",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-1",
+      "from_stop_id": "cn-changsha-huang-tu-ling-4",
+      "to_stop_id": "cn-changsha-huang-tu-ling-1",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-liu-gou-long-4-cn-changsha-liu-gou-long-6",
+      "station_id": "cn-changsha-liu-gou-long",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-6",
+      "from_stop_id": "cn-changsha-liu-gou-long-4",
+      "to_stop_id": "cn-changsha-liu-gou-long-6",
+      "walk_time_seconds": 225,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-liu-gou-long-6-cn-changsha-liu-gou-long-4",
+      "station_id": "cn-changsha-liu-gou-long",
+      "from_line_id": "cn-changsha-line-6",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-liu-gou-long-6",
+      "to_stop_id": "cn-changsha-liu-gou-long-4",
+      "walk_time_seconds": 225,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ren-min-dong-lu-2-cn-changsha-ren-min-dong-lu-6",
+      "station_id": "cn-changsha-ren-min-dong-lu",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-6",
+      "from_stop_id": "cn-changsha-ren-min-dong-lu-2",
+      "to_stop_id": "cn-changsha-ren-min-dong-lu-6",
+      "walk_time_seconds": 258,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ren-min-dong-lu-6-cn-changsha-ren-min-dong-lu-2",
+      "station_id": "cn-changsha-ren-min-dong-lu",
+      "from_line_id": "cn-changsha-line-6",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-ren-min-dong-lu-6",
+      "to_stop_id": "cn-changsha-ren-min-dong-lu-2",
+      "walk_time_seconds": 258,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-sha-wan-gong-yuan-2-cn-changsha-sha-wan-gong-yuan-4",
+      "station_id": "cn-changsha-sha-wan-gong-yuan",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-sha-wan-gong-yuan-2",
+      "to_stop_id": "cn-changsha-sha-wan-gong-yuan-4",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-sha-wan-gong-yuan-4-cn-changsha-sha-wan-gong-yuan-2",
+      "station_id": "cn-changsha-sha-wan-gong-yuan",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-sha-wan-gong-yuan-4",
+      "to_stop_id": "cn-changsha-sha-wan-gong-yuan-2",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-wan-jia-li-guang-chang-2-cn-changsha-wan-jia-li-guang-chang-5",
+      "station_id": "cn-changsha-wan-jia-li-guang-chang",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-5",
+      "from_stop_id": "cn-changsha-wan-jia-li-guang-chang-2",
+      "to_stop_id": "cn-changsha-wan-jia-li-guang-chang-5",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-wan-jia-li-guang-chang-5-cn-changsha-wan-jia-li-guang-chang-2",
+      "station_id": "cn-changsha-wan-jia-li-guang-chang",
+      "from_line_id": "cn-changsha-line-5",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-wan-jia-li-guang-chang-5",
+      "to_stop_id": "cn-changsha-wan-jia-li-guang-chang-2",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-wen-chang-ge-1-cn-changsha-wen-chang-ge-6",
+      "station_id": "cn-changsha-wen-chang-ge",
+      "from_line_id": "cn-changsha-line-1",
+      "to_line_id": "cn-changsha-line-6",
+      "from_stop_id": "cn-changsha-wen-chang-ge-1",
+      "to_stop_id": "cn-changsha-wen-chang-ge-6",
+      "walk_time_seconds": 290,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-wen-chang-ge-6-cn-changsha-wen-chang-ge-1",
+      "station_id": "cn-changsha-wen-chang-ge",
+      "from_line_id": "cn-changsha-line-6",
+      "to_line_id": "cn-changsha-line-1",
+      "from_stop_id": "cn-changsha-wen-chang-ge-6",
+      "to_stop_id": "cn-changsha-wen-chang-ge-1",
+      "walk_time_seconds": 290,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-wu-yi-guang-chang-1-cn-changsha-wu-yi-guang-chang-2",
+      "station_id": "cn-changsha-wu-yi-guang-chang",
+      "from_line_id": "cn-changsha-line-1",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-wu-yi-guang-chang-1",
+      "to_stop_id": "cn-changsha-wu-yi-guang-chang-2",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-wu-yi-guang-chang-2-cn-changsha-wu-yi-guang-chang-1",
+      "station_id": "cn-changsha-wu-yi-guang-chang",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-1",
+      "from_stop_id": "cn-changsha-wu-yi-guang-chang-2",
+      "to_stop_id": "cn-changsha-wu-yi-guang-chang-1",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ying-bin-lu-kou-2-cn-changsha-ying-bin-lu-kou-6",
+      "station_id": "cn-changsha-ying-bin-lu-kou",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-6",
+      "from_stop_id": "cn-changsha-ying-bin-lu-kou-2",
+      "to_stop_id": "cn-changsha-ying-bin-lu-kou-6",
+      "walk_time_seconds": 225,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ying-bin-lu-kou-6-cn-changsha-ying-bin-lu-kou-2",
+      "station_id": "cn-changsha-ying-bin-lu-kou",
+      "from_line_id": "cn-changsha-line-6",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-ying-bin-lu-kou-6",
+      "to_stop_id": "cn-changsha-ying-bin-lu-kou-2",
+      "walk_time_seconds": 225,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ying-wan-zhen-2-cn-changsha-ying-wan-zhen-4",
+      "station_id": "cn-changsha-ying-wan-zhen",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-4",
+      "from_stop_id": "cn-changsha-ying-wan-zhen-2",
+      "to_stop_id": "cn-changsha-ying-wan-zhen-4",
+      "walk_time_seconds": 290,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-ying-wan-zhen-4-cn-changsha-ying-wan-zhen-2",
+      "station_id": "cn-changsha-ying-wan-zhen",
+      "from_line_id": "cn-changsha-line-4",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-ying-wan-zhen-4",
+      "to_stop_id": "cn-changsha-ying-wan-zhen-2",
+      "walk_time_seconds": 290,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-yue-hu-gong-yuan-bei-3-cn-changsha-yue-hu-gong-yuan-bei-5",
+      "station_id": "cn-changsha-yue-hu-gong-yuan-bei",
+      "from_line_id": "cn-changsha-line-3",
+      "to_line_id": "cn-changsha-line-5",
+      "from_stop_id": "cn-changsha-yue-hu-gong-yuan-bei-3",
+      "to_stop_id": "cn-changsha-yue-hu-gong-yuan-bei-5",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-yue-hu-gong-yuan-bei-5-cn-changsha-yue-hu-gong-yuan-bei-3",
+      "station_id": "cn-changsha-yue-hu-gong-yuan-bei",
+      "from_line_id": "cn-changsha-line-5",
+      "to_line_id": "cn-changsha-line-3",
+      "from_stop_id": "cn-changsha-yue-hu-gong-yuan-bei-5",
+      "to_stop_id": "cn-changsha-yue-hu-gong-yuan-bei-3",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    }
+  ]
+}

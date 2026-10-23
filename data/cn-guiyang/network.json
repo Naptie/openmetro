@@ -1,0 +1,132 @@
+{
+  "id": "cn-guiyang",
+  "name": "贵阳轨道交通",
+  "names": {
+    "zh": "贵阳轨道交通",
+    "en": "Guiyang Rail Transit"
+  },
+  "city": {
+    "id": "CN-5201",
+    "name": {
+      "zh": "贵阳市",
+      "en": "Guiyang"
+    },
+    "country": "CN",
+    "population": 5987018,
+    "area": 8043.37,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        106.707777777,
+        26.579444444
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "拓扑与站序来自运营方自有的「线路，票价查询」页面 www.gyurt.com/subwayInquiry.html 的站点下拉列表：每个 li 带 index_number（线路号）与 index_origin（该站坐标字符串），1 号线 25 站（窦官→小孟工业园）、2 号线 32 站（白云北路→中兴路）、3 号线 29 站（洛湾→桐木岭(省委党校)）、S1 线 13 站（皂角坝→望城坡），共 99 条 line-stop 记录、93 座物理车站、6 座换乘站（林城西路、北京路、喷水池、望城坡、延安西路、中曹司），与官网线网图及公开资料逐站一致。首末班、区间运行时分与里程、换乘步行距离、OD 票价全部取自运营方自有的路径规划接口 cms.gyurt.com/external/interface/getSubwayLines：该接口在上车站方向上给出该站首末班发车时刻（与官网首末班车时刻表逐格一致，官网仅以图片发布该表，未做 OCR），逐站相邻一次查询即得该区间官方运行时长与里程，换乘段以「站厅换乘 步行 N 米」形式公布步行距离。官方站点坐标系既非 GCJ-02 亦非 WGS-84，实测为相对 GCJ-02 的恒定平移（北 663 m、东 649 m，合计约 983 m，扣除平移后残差中位约 32 m），故 canonical 坐标统一取自 AMap Subway 5201（GCJ-02 原生），官方坐标字符串仅用作规划器接口的站点键。运营方规划器库将 2 号线小碧站误记为「多彩贵州城站」（实为站旁商业综合体），以官网线网图、运营方 2025-08-29《关于开通贵阳地铁2号线小碧站A出入口的公告》及百度地图为准更正为「小碧」。线色取自 AMap（1 号线 86B81C 绿、2 号线 2249A3 深蓝、3 号线 FC0601 红、S1 线 A61D7F 紫），与官网线网图一致；站名英文名取自 AMap 的 multilang 字段（即官网线网图所用英文名），其中 8 站以官网线网图措辞更正。OD 票价按运营方里程分段计价（筑发改收费〔2017〕768 号：起步 2 元/4 公里，晋级里程 4、4、6、6、8、8，40 公里以上每加 1 元多乘 8 公里，全网最高 11 元）结算，多路径时按最短路径计价，换乘不额外计费。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 93,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 93,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 95,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 95,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 12,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 190,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 99,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 0.99,
+      "status": "partial",
+      "counts": {
+        "official": 8480,
+        "derived": 0,
+        "default": 76
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-nanchang",
+  "generated_at": "2026-10-23T12:35:48.341Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-nanchang-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "aliases": [],
+      "color": "#e3002a",
+      "short_name": "1",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "ncmtr-allline",
+          "id": "1"
+        },
+        {
+          "source": "amap-subway-3601",
+          "id": "360100020431|360100020432"
+        }
+      ],
+      "extras": {
+        "official_line_id": "1",
+        "official_stop_count": 34,
+        "amap_color": "E3002A",
+        "baidu_name_hint": "地铁1号线"
+      }
+    },
+    {
+      "id": "cn-nanchang-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "aliases": [],
+      "color": "#ffa500",
+      "short_name": "2",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "ncmtr-allline",
+          "id": "2"
+        },
+        {
+          "source": "amap-subway-3601",
+          "id": "360100020563|360100020564"
+        }
+      ],
+      "extras": {
+        "official_line_id": "2",
+        "official_stop_count": 37,
+        "amap_color": "FFA500",
+        "baidu_name_hint": "地铁2号线"
+      }
+    },
+    {
+      "id": "cn-nanchang-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "aliases": [],
+      "color": "#0065b3",
+      "short_name": "3",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "ncmtr-allline",
+          "id": "3"
+        },
+        {
+          "source": "amap-subway-3601",
+          "id": "900000057035|900000057037"
+        }
+      ],
+      "extras": {
+        "official_line_id": "3",
+        "official_stop_count": 22,
+        "amap_color": "0065B3",
+        "baidu_name_hint": "地铁3号线"
+      }
+    },
+    {
+      "id": "cn-nanchang-line-4",
+      "name": "4号线",
+      "names": {
+        "zh": "4号线",
+        "en": "Line 4"
+      },
+      "aliases": [],
+      "color": "#00ad8e",
+      "short_name": "4",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "ncmtr-allline",
+          "id": "4"
+        },
+        {
+          "source": "amap-subway-3601",
+          "id": "900000068673|900000068674"
+        }
+      ],
+      "extras": {
+        "official_line_id": "4",
+        "official_stop_count": 29,
+        "amap_color": "00AD8E",
+        "baidu_name_hint": "地铁4号线"
+      }
+    }
+  ]
+}

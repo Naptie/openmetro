@@ -1,0 +1,132 @@
+{
+  "id": "cn-kunming",
+  "name": "昆明轨道交通",
+  "names": {
+    "zh": "昆明轨道交通",
+    "en": "Kunming Rail Transit"
+  },
+  "city": {
+    "id": "CN-5301",
+    "name": {
+      "zh": "昆明市",
+      "en": "Kunming"
+    },
+    "country": "CN",
+    "population": 8460088,
+    "area": 21013,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        102.706111111,
+        25.043333333
+      ]
+    }
+  },
+  "country_code": "CN",
+  "currency": "CNY",
+  "timezone": "Asia/Shanghai",
+  "coordinate_system": "gcj02",
+  "default_units": {
+    "distance": "km",
+    "time": "seconds",
+    "speed": "km/h"
+  },
+  "routing": {
+    "weight": "time",
+    "default_transfer_seconds": 120,
+    "max_transfer_seconds": 600
+  },
+  "notes": "官网 www.kmgdgs.com 已不可用（WAF 挑战 + CMS 后端 502，且 2021 年起该域名只剩「昆明志愿者网」栏目），官方时刻表与票价表历史上也只以图片发布，故不做 OCR。拓扑、坐标、英文名、线色、示意图来自 AMap 地铁数据集 5301（103 座物理车站 / 115 条线-站记录，坐标与英文名 100% 覆盖）；区间行车时间、里程、区间几何与逐站逐交路首末班车来自 AMap 地铁规划器 busExt（与百度 Direction v2 独立复核，时刻逐值一致）；OD 票价按官方里程阶梯票制（4/8/13/19/26/34/43 km 分档，2 元起步）计算。1 号线在春融街分叉出至昆明南站的支线，并与 2 号线在环城南路贯通运营。",
+  "quality": {
+    "topology": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 1,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "coordinates": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 103,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "names": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 103,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 109,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "segment_distances": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 109,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "transfer_times": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 26,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "timetables": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 218,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "schematic": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 115,
+        "derived": 0,
+        "default": 0
+      }
+    },
+    "fares": {
+      "precision": "official",
+      "coverage": 1,
+      "status": "complete",
+      "counts": {
+        "official": 10506,
+        "derived": 0,
+        "default": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/lines.schema.json",
+  "schema_version": "1.0",
+  "network_id": "cn-guiyang",
+  "generated_at": "2026-10-23T12:52:49.105Z",
+  "source": [],
+  "records": [
+    {
+      "id": "cn-guiyang-line-1",
+      "name": "1号线",
+      "names": {
+        "zh": "1号线",
+        "en": "Line 1"
+      },
+      "aliases": [],
+      "color": "#86b81c",
+      "short_name": "1",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "gyurt-subway-inquiry",
+          "id": "1"
+        },
+        {
+          "source": "amap-subway-5201",
+          "id": "900000068716|900000068717"
+        }
+      ],
+      "extras": {
+        "official_line_id": "1",
+        "official_stop_count": 25,
+        "amap_color": "86B81C",
+        "names_source": "source"
+      }
+    },
+    {
+      "id": "cn-guiyang-line-2",
+      "name": "2号线",
+      "names": {
+        "zh": "2号线",
+        "en": "Line 2"
+      },
+      "aliases": [],
+      "color": "#2249a3",
+      "short_name": "2",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "gyurt-subway-inquiry",
+          "id": "2"
+        },
+        {
+          "source": "amap-subway-5201",
+          "id": "900000066417|900000066448"
+        }
+      ],
+      "extras": {
+        "official_line_id": "2",
+        "official_stop_count": 32,
+        "amap_color": "2249A3",
+        "names_source": "source"
+      }
+    },
+    {
+      "id": "cn-guiyang-line-3",
+      "name": "3号线",
+      "names": {
+        "zh": "3号线",
+        "en": "Line 3"
+      },
+      "aliases": [],
+      "color": "#fc0601",
+      "short_name": "3",
+      "mode": "metro",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "gyurt-subway-inquiry",
+          "id": "3"
+        },
+        {
+          "source": "amap-subway-5201",
+          "id": "900000132329|900000132330"
+        }
+      ],
+      "extras": {
+        "official_line_id": "3",
+        "official_stop_count": 29,
+        "amap_color": "FC0601",
+        "names_source": "source"
+      }
+    },
+    {
+      "id": "cn-guiyang-line-s1",
+      "name": "S1线",
+      "names": {
+        "zh": "S1线",
+        "en": "Line S1"
+      },
+      "aliases": [],
+      "color": "#a61d7f",
+      "short_name": "S1",
+      "mode": "suburban_rail",
+      "status": "operating",
+      "loop": false,
+      "source_ids": [
+        {
+          "source": "gyurt-subway-inquiry",
+          "id": "S1"
+        },
+        {
+          "source": "amap-subway-5201",
+          "id": "900000172285|900000172286"
+        }
+      ],
+      "extras": {
+        "official_line_id": "S1",
+        "official_stop_count": 13,
+        "amap_color": "A61D7F",
+        "names_source": "source"
+      }
+    }
+  ]
+}
