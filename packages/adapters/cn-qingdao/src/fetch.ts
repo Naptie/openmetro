@@ -409,8 +409,11 @@ function rowCellsCount(cells: Map<string, SheetCell>, row: number): number {
 export async function downloadFareWorkbookBytes(): Promise<Buffer> {
   const buf = await fetchBuffer(FARE_XLSX_URL, `${QD_SITE}/`);
   if (buf.length < 4 || buf.subarray(0, 4).toString('hex') !== '504b0304') {
+    const preview = buf.subarray(0, 80).toString('utf-8').replace(/\s+/g, ' ').trim();
     throw new Error(
-      `fare workbook: expected a zip archive, got ${buf.length} bytes — the proxy may have answered with an error page`
+      `fare workbook: expected a zip archive, got ${buf.length} bytes` +
+        (preview ? ` ("${preview}")` : '') +
+        ' — the proxy may have answered with an error page'
     );
   }
   return buf;

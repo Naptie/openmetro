@@ -20,22 +20,22 @@ import {
  */
 const requireLiveSource = Boolean(process.env.CI) && process.env.OPENMETRO_TEST_OFFLINE !== '1';
 
-async function loadWorkbook(): Promise<FareWorkbook | null> {
-  let bytes: Buffer;
-  try {
-    bytes = await downloadFareWorkbookBytes();
-  } catch (err) {
-    const message = `official fare workbook is unreachable: ${err}`;
-    if (requireLiveSource) throw new Error(message);
-    console.warn(`SKIP ${message}`);
-    return null;
-  }
-  // A failure here is a real regression: the workbook was downloaded fine, so
-  // its layout no longer matches what the parser expects.
-  return parseFareWorkbook(bytes);
+let bytes: Buffer | null = null;
+let unreachable: string | null = null;
+try {
+  bytes = await downloadFareWorkbookBytes();
+} catch (err) {
+  unreachable = err instanceof Error ? err.message : String(err);
 }
 
-const workbook = await loadWorkbook();
+// A parse failure below is deliberately left uncaught: the workbook was
+// downloaded fine, so its layout no longer matches what the parser expects —
+// a genuine regression that must fail everywhere, never a skip.
+const workbook: FareWorkbook | null = bytes ? parseFareWorkbook(bytes) : null;
+
+if (unreachable && !requireLiveSource) {
+  console.warn(`SKIP official fare workbook is unreachable: ${unreachable}`);
+}
 
 test('column letter round-trip', () => {
   expect(colIndex('A')).toBe(0);
@@ -44,6 +44,15 @@ test('column letter round-trip', () => {
   expect(colLetters(0)).toBe('A');
   expect(colLetters(196)).toBe('GO');
 });
+
+if (requireLiveSource) {
+  test('the official fare workbook is reachable', () => {
+    if (unreachable) {
+      throw new Error(`official fare workbook is unreachable: ${unreachable}`);
+    }
+    expect(workbook).not.toBeNull();
+  });
+}
 
 test.skipIf(!workbook)('parses the official fare workbook layout', () => {
   const wb = workbook!;
