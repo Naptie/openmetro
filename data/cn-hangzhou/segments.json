@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-hangzhou",
-  "generated_at": "2026-09-24T15:50:27.043Z",
+  "generated_at": "2026-10-23T12:11:20.602Z",
   "source": [
     {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-09-24T15:49:07.823Z",
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T12:11:20.602Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -43,14 +43,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-aoti-zhongxin-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-xingyi-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.433,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -79,15 +76,13 @@
       "to_station_id": "cn-hangzhou-qingshanhu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 2.092,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 135,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-baiyang-2-cn-hangzhou-jinjiadu-2",
@@ -98,7 +93,7 @@
       "to_station_id": "cn-hangzhou-jinjiadu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 262,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.708,
       "extras": {
@@ -115,7 +110,7 @@
       "to_station_id": "cn-hangzhou-north-jianguo-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 248,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.81,
       "extras": {
@@ -132,7 +127,7 @@
       "to_station_id": "cn-hangzhou-cuibai-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 438,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.461,
       "extras": {
@@ -149,7 +144,7 @@
       "to_station_id": "cn-hangzhou-jiangling-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 298,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.055,
       "extras": {
@@ -166,7 +161,7 @@
       "to_station_id": "cn-hangzhou-xixing",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 202,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.086,
       "extras": {
@@ -183,7 +178,7 @@
       "to_station_id": "cn-hangzhou-boao-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 223,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.276,
       "extras": {
@@ -200,7 +195,7 @@
       "to_station_id": "cn-hangzhou-jinji-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 285,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.891,
       "extras": {
@@ -218,14 +213,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-cangbeicun-8-to-cn-hangzhou-south-wenhai-road-mm688w",
-        "cn-hangzhou-cn-hangzhou-middle-qingliu-road-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.618,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -237,7 +229,7 @@
       "to_station_id": "cn-hangzhou-yongfu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 291,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.002,
       "extras": {
@@ -257,11 +249,13 @@
       "distance_km": 1.369,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 30.4,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 32.4,
+        "a_s_per_km": 60.5,
+        "b_s": 69.5,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 81,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner"
     },
     {
@@ -273,7 +267,7 @@
       "to_station_id": "cn-hangzhou-jucai-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 386,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.713,
       "extras": {
@@ -290,7 +284,7 @@
       "to_station_id": "cn-hangzhou-jianghan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 149,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.226,
       "extras": {
@@ -307,7 +301,7 @@
       "to_station_id": "cn-hangzhou-xiangji-temple",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 258,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.441,
       "extras": {
@@ -324,7 +318,7 @@
       "to_station_id": "cn-hangzhou-jinjiang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 60,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.317,
       "extras": {
@@ -341,7 +335,7 @@
       "to_station_id": "cn-hangzhou-jianye-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 470,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.937,
       "extras": {
@@ -358,7 +352,7 @@
       "to_station_id": "cn-hangzhou-dingan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 411,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.26,
       "extras": {
@@ -376,14 +370,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-chengzhan-5-to-cn-hangzhou-guniangqiao-59zkuu",
-        "cn-hangzhou-cn-hangzhou-jiangcheng-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.712,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -395,7 +386,7 @@
       "to_station_id": "cn-hangzhou-jinjiadu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 339,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.955,
       "extras": {
@@ -429,32 +420,13 @@
       "to_station_id": "cn-hangzhou-liangmu-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.229,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
       }
-    },
-    {
-      "id": "cn-hangzhou-seg-cn-hangzhou-chuangming-road-3-cn-hangzhou-lvting-lu-3",
-      "line_id": "cn-hangzhou-line-3",
-      "from_stop_id": "cn-hangzhou-chuangming-road-3",
-      "to_stop_id": "cn-hangzhou-lvting-lu-3",
-      "from_station_id": "cn-hangzhou-chuangming-road",
-      "to_station_id": "cn-hangzhou-lvting-lu",
-      "direction": "both",
-      "source_id": "hzmetro-operation-all",
-      "distance_km": 1.071,
-      "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 31.8,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 399,
-      "travel_time_source": "planner"
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-chuyun-road-4-cn-hangzhou-pingan-bridge-4",
@@ -465,7 +437,7 @@
       "to_station_id": "cn-hangzhou-pingan-bridge",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 106,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.538,
       "extras": {
@@ -482,7 +454,7 @@
       "to_station_id": "cn-hangzhou-chengxing-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 131,
+      "travel_time_seconds": 60,
       "travel_time_source": "planner",
       "distance_km": 0.705,
       "extras": {
@@ -499,16 +471,31 @@
       "to_station_id": "cn-hangzhou-aoti-zhongxin",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-citizen-center-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-aoti-zhongxin-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
       "distance_km": 3.113,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
+    },
+    {
+      "id": "cn-hangzhou-seg-cn-hangzhou-cj2t8-3-cn-hangzhou-lvting-lu-3",
+      "line_id": "cn-hangzhou-line-3",
+      "from_stop_id": "cn-hangzhou-cj2t8-3",
+      "to_stop_id": "cn-hangzhou-lvting-lu-3",
+      "from_station_id": "cn-hangzhou-cj2t8",
+      "to_station_id": "cn-hangzhou-lvting-lu",
+      "direction": "both",
+      "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "extras": {
+        "planner_time_source": "baidu-transit",
+        "distance_source": "baidu_path",
+        "distance_meters": 1720
+      },
+      "distance_km": 1.72
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-coach-center-1-cn-hangzhou-west-xiasha-1",
@@ -519,7 +506,7 @@
       "to_station_id": "cn-hangzhou-west-xiasha",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 3.238,
       "extras": {
@@ -537,14 +524,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-coach-center-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-jiumu-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.95,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -557,14 +541,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-cuibai-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi",
-        "cn-hangzhou-cn-hangzhou-xueyuan-road-10-to-cn-hangzhou-huanglong-sports-center-gwkzgi"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.836,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -576,7 +557,7 @@
       "to_station_id": "cn-hangzhou-shanxian",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 226,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.541,
       "extras": {
@@ -593,7 +574,7 @@
       "to_station_id": "cn-hangzhou-zhalongkou",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 400,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.516,
       "extras": {
@@ -610,7 +591,7 @@
       "to_station_id": "cn-hangzhou-baoshan-bridge",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 132,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 1.545,
       "extras": {
@@ -627,7 +608,7 @@
       "to_station_id": "cn-hangzhou-longxiangqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 165,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.029,
       "extras": {
@@ -644,7 +625,7 @@
       "to_station_id": "cn-hangzhou-hangyang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 36,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.452,
       "extras": {
@@ -661,7 +642,7 @@
       "to_station_id": "cn-hangzhou-gudun-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 321,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.247,
       "extras": {
@@ -678,7 +659,7 @@
       "to_station_id": "cn-hangzhou-wujiajiaogang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 182,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.013,
       "extras": {
@@ -695,7 +676,7 @@
       "to_station_id": "cn-hangzhou-baiyang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 245,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.797,
       "extras": {
@@ -712,7 +693,7 @@
       "to_station_id": "cn-hangzhou-huayuangang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 270,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.053,
       "extras": {
@@ -729,7 +710,7 @@
       "to_station_id": "cn-hangzhou-sandun",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 88,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.394,
       "extras": {
@@ -746,7 +727,7 @@
       "to_station_id": "cn-hangzhou-shanxian",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 276,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.217,
       "extras": {
@@ -763,7 +744,7 @@
       "to_station_id": "cn-hangzhou-pengbu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.084,
       "extras": {
@@ -780,7 +761,7 @@
       "to_station_id": "cn-hangzhou-xinfeng",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 280,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.632,
       "extras": {
@@ -797,15 +778,13 @@
       "to_station_id": "cn-hangzhou-goujulong",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.203,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 36.2,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 420,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-east-safari-park-6-cn-hangzhou-yinhu-6",
@@ -817,14 +796,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-east-safari-park-6-to-cn-hangzhou-west-guihua-road-h7q8hj",
-        "cn-hangzhou-cn-hangzhou-yinhu-6-to-cn-hangzhou-west-guihua-road-h7q8hj"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.486,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -836,7 +812,7 @@
       "to_station_id": "cn-hangzhou-qianjiang-century-city",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.168,
       "extras": {
@@ -853,7 +829,7 @@
       "to_station_id": "cn-hangzhou-zhenning-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 628,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.579,
       "extras": {
@@ -870,7 +846,7 @@
       "to_station_id": "cn-hangzhou-asian-games-village",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 558,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.892,
       "extras": {
@@ -888,14 +864,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-fengloucun-8-to-cn-hangzhou-south-wenhai-road-mm688w",
-        "cn-hangzhou-cn-hangzhou-cangbeicun-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.312,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -908,14 +881,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-fengqi-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
-        "cn-hangzhou-cn-hangzhou-wulin-square-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.965,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -927,7 +897,7 @@
       "to_station_id": "cn-hangzhou-north-zhonghe-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 79,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.922,
       "extras": {
@@ -944,7 +914,7 @@
       "to_station_id": "cn-hangzhou-gucui-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 141,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.797,
       "extras": {
@@ -961,15 +931,13 @@
       "to_station_id": "cn-hangzhou-yuhang-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.797,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 271,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-fuxing-road-4-cn-hangzhou-shuichengqiao-4",
@@ -980,7 +948,7 @@
       "to_station_id": "cn-hangzhou-shuichengqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.3,
       "extras": {
@@ -1014,7 +982,7 @@
       "to_station_id": "cn-hangzhou-nanyang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 186,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 0.992,
       "extras": {
@@ -1031,7 +999,7 @@
       "to_station_id": "cn-hangzhou-liansheng-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 138,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.264,
       "extras": {
@@ -1048,7 +1016,7 @@
       "to_station_id": "cn-hangzhou-yangbeihu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 145,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.464,
       "extras": {
@@ -1065,7 +1033,7 @@
       "to_station_id": "cn-hangzhou-wenze-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 306,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.408,
       "extras": {
@@ -1082,7 +1050,7 @@
       "to_station_id": "cn-hangzhou-xintiandi-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 563,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.248,
       "extras": {
@@ -1116,7 +1084,7 @@
       "to_station_id": "cn-hangzhou-chuangjing-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 114,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.866,
       "extras": {
@@ -1133,15 +1101,12 @@
       "to_station_id": "cn-hangzhou-south-wenhai-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 720,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-gongshang-university-yunbin-8-to-cn-hangzhou-south-wenhai-road-mm688w",
-        "cn-hangzhou-cn-hangzhou-south-wenhai-road-8-to-cn-hangzhou-xinwan-road-1if2nix"
-      ],
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.724,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1156,8 +1121,10 @@
       "distance_km": 1.904,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 36.2,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 40.3,
+        "a_s_per_km": 28.4,
+        "b_s": 115.5,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 180,
@@ -1172,15 +1139,12 @@
       "to_station_id": "cn-hangzhou-citizen-center",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-guanyintang-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-citizen-center-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.956,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1192,7 +1156,7 @@
       "to_station_id": "cn-hangzhou-xueyuan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 125,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.121,
       "extras": {
@@ -1209,7 +1173,7 @@
       "to_station_id": "cn-hangzhou-huanglong-sports-center",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 152,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.773,
       "extras": {
@@ -1226,7 +1190,7 @@
       "to_station_id": "cn-hangzhou-gudang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 218,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.085,
       "extras": {
@@ -1243,7 +1207,7 @@
       "to_station_id": "cn-hangzhou-gudang-xincun",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 46,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.016,
       "extras": {
@@ -1260,7 +1224,7 @@
       "to_station_id": "cn-hangzhou-jingchang-lu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 420,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 2.299,
       "extras": {
@@ -1277,7 +1241,7 @@
       "to_station_id": "cn-hangzhou-renmin-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 687,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.273,
       "extras": {
@@ -1294,7 +1258,7 @@
       "to_station_id": "cn-hangzhou-xiangyuan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 522,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.875,
       "extras": {
@@ -1311,7 +1275,7 @@
       "to_station_id": "cn-hangzhou-chuyun-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 240,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.324,
       "extras": {
@@ -1328,7 +1292,7 @@
       "to_station_id": "cn-hangzhou-datieguan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 528,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.144,
       "extras": {
@@ -1345,7 +1309,7 @@
       "to_station_id": "cn-hangzhou-gangcheng-avenue",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.294,
       "extras": {
@@ -1362,7 +1326,7 @@
       "to_station_id": "cn-hangzhou-hangxing-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 381,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.431,
       "extras": {
@@ -1380,14 +1344,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-hehuan-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
-        "cn-hangzhou-cn-hangzhou-yingzhong-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.863,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1399,7 +1360,7 @@
       "to_station_id": "cn-hangzhou-beida-bridge",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 165,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.16,
       "extras": {
@@ -1416,7 +1377,7 @@
       "to_station_id": "cn-hangzhou-the-grand-canal",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 215,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.657,
       "extras": {
@@ -1434,14 +1395,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-heyu-road-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-qiushan-avenue-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.795,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1454,14 +1412,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-hezhuang-road-8-to-cn-hangzhou-south-wenhai-road-mm688w",
-        "cn-hangzhou-cn-hangzhou-qiaotoubao-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 2.424,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1490,7 +1445,7 @@
       "to_station_id": "cn-hangzhou-nanxingqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 256,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.118,
       "extras": {
@@ -1541,7 +1496,7 @@
       "to_station_id": "cn-hangzhou-huahe-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 541,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.439,
       "extras": {
@@ -1558,7 +1513,7 @@
       "to_station_id": "cn-hangzhou-wulinmen",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 196,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.51,
       "extras": {
@@ -1575,7 +1530,7 @@
       "to_station_id": "cn-hangzhou-huanglong-cave",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 221,
+      "travel_time_seconds": 60,
       "travel_time_source": "planner",
       "distance_km": 1.06,
       "extras": {
@@ -1592,7 +1547,7 @@
       "to_station_id": "cn-hangzhou-dongyue",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 240,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.24,
       "extras": {
@@ -1609,7 +1564,7 @@
       "to_station_id": "cn-hangzhou-hemu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 170,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.007,
       "extras": {
@@ -1626,7 +1581,7 @@
       "to_station_id": "cn-hangzhou-shouxiang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 147,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.395,
       "extras": {
@@ -1643,7 +1598,7 @@
       "to_station_id": "cn-hangzhou-houchaomen",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 604,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.419,
       "extras": {
@@ -1661,14 +1616,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-jiangcheng-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-moyetang-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1680,7 +1632,7 @@
       "to_station_id": "cn-hangzhou-zijingang-campus-zhejiang-university",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 112,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.901,
       "extras": {
@@ -1697,7 +1649,7 @@
       "to_station_id": "cn-hangzhou-jiangling-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 140,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.313,
       "extras": {
@@ -1715,14 +1667,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-jianghehui-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-qianjiang-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.976,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1734,7 +1683,7 @@
       "to_station_id": "cn-hangzhou-binkang-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 303,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.804,
       "extras": {
@@ -1751,7 +1700,7 @@
       "to_station_id": "cn-hangzhou-citizen-center",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 53,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.689,
       "extras": {
@@ -1768,7 +1717,7 @@
       "to_station_id": "cn-hangzhou-jinjiang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 900,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 3.02,
       "extras": {
@@ -1785,7 +1734,7 @@
       "to_station_id": "cn-hangzhou-xingmin",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 130,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.84,
       "extras": {
@@ -1802,7 +1751,7 @@
       "to_station_id": "cn-hangzhou-liming",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 152,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.943,
       "extras": {
@@ -1819,7 +1768,7 @@
       "to_station_id": "cn-hangzhou-jiansheyi-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 366,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.175,
       "extras": {
@@ -1837,14 +1786,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-jianshesan-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-xinxing-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 2.589,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -1856,7 +1802,7 @@
       "to_station_id": "cn-hangzhou-peoples-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 351,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.441,
       "extras": {
@@ -1873,7 +1819,7 @@
       "to_station_id": "cn-hangzhou-changhe",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 192,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.643,
       "extras": {
@@ -1890,7 +1836,7 @@
       "to_station_id": "cn-hangzhou-hangxing-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 473,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.207,
       "extras": {
@@ -1924,7 +1870,7 @@
       "to_station_id": "cn-hangzhou-qianjiang-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 248,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.132,
       "extras": {
@@ -1941,7 +1887,7 @@
       "to_station_id": "cn-hangzhou-peoples-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 233,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.29,
       "extras": {
@@ -1958,7 +1904,7 @@
       "to_station_id": "cn-hangzhou-dunxiang-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 159,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.899,
       "extras": {
@@ -1975,7 +1921,7 @@
       "to_station_id": "cn-hangzhou-haoyun-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 170,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.978,
       "extras": {
@@ -1993,14 +1939,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-jinjiang-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q",
-        "cn-hangzhou-cn-hangzhou-wujiang-road-1-to-cn-hangzhou-xiaoshan-international-airport-vxm18q"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.946,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2012,7 +1955,7 @@
       "to_station_id": "cn-hangzhou-yongjiang-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.045,
       "extras": {
@@ -2029,7 +1972,7 @@
       "to_station_id": "cn-hangzhou-gaosha-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 171,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.93,
       "extras": {
@@ -2046,7 +1989,7 @@
       "to_station_id": "cn-hangzhou-lvting-lu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 420,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.511,
       "extras": {
@@ -2063,7 +2006,7 @@
       "to_station_id": "cn-hangzhou-coach-center",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 251,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.227,
       "extras": {
@@ -2080,7 +2023,7 @@
       "to_station_id": "cn-hangzhou-jiubao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 131,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.349,
       "extras": {
@@ -2098,14 +2041,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-jiumu-road-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-south-hongpu-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.614,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2117,7 +2057,7 @@
       "to_station_id": "cn-hangzhou-jianghui-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 265,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.312,
       "extras": {
@@ -2135,14 +2075,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-kanshan-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
-        "cn-hangzhou-cn-hangzhou-xingang-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 2.707,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2154,7 +2091,7 @@
       "to_station_id": "cn-hangzhou-xiaming-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 420,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 2.022,
       "extras": {
@@ -2188,7 +2125,7 @@
       "to_station_id": "cn-hangzhou-dufucun",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 280,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.429,
       "extras": {
@@ -2205,7 +2142,7 @@
       "to_station_id": "cn-hangzhou-hongyuan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.78,
       "extras": {
@@ -2222,7 +2159,7 @@
       "to_station_id": "cn-hangzhou-zhejiang-chinese-medical-university",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 339,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.32,
       "extras": {
@@ -2239,7 +2176,7 @@
       "to_station_id": "cn-hangzhou-mingshi-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 1873,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.348,
       "extras": {
@@ -2256,15 +2193,13 @@
       "to_station_id": "cn-hangzhou-jiuzhou-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 3.01,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 1006,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-linping-9-cn-hangzhou-nanyuan-9",
@@ -2275,15 +2210,12 @@
       "to_station_id": "cn-hangzhou-nanyuan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-linping-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-nanyuan-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.33,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2296,14 +2228,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-linpingnan-railway-station-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-wengmei-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.935,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2316,14 +2245,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-liubao-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-wubao-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.069,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2338,11 +2264,13 @@
       "distance_km": 1.701,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 31.8,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 35.8,
+        "a_s_per_km": 53.9,
+        "b_s": 79.7,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 359,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner"
     },
     {
@@ -2355,14 +2283,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-longan-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-wuzhou-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.363,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2374,7 +2299,7 @@
       "to_station_id": "cn-hangzhou-fengqi-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 106,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.022,
       "extras": {
@@ -2391,15 +2316,13 @@
       "to_station_id": "cn-hangzhou-fengxin-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 2.23,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 539,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-lvting-lu-3-cn-hangzhou-quanfeng-3",
@@ -2410,16 +2333,20 @@
       "to_station_id": "cn-hangzhou-quanfeng",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 300,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-lvting-lu-3-to-cn-hangzhou-dingqiao-siwq64",
-        "cn-hangzhou-cn-hangzhou-quanfeng-3-to-cn-hangzhou-dingqiao-siwq64"
-      ],
       "distance_km": 2.135,
       "extras": {
-        "distance_source": "haversine"
-      }
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 39.4,
+        "a_s_per_km": 53.9,
+        "b_s": 79.7
+      },
+      "travel_time_seconds": 195,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-lvting-lu-5-cn-hangzhou-gexiang-5",
@@ -2430,7 +2357,7 @@
       "to_station_id": "cn-hangzhou-gexiang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.308,
       "extras": {
@@ -2447,7 +2374,7 @@
       "to_station_id": "cn-hangzhou-qicheng-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 352,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.486,
       "extras": {
@@ -2465,14 +2392,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-middle-qingliu-road-8-to-cn-hangzhou-south-wenhai-road-mm688w",
-        "cn-hangzhou-cn-hangzhou-qingxisan-road-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.357,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2484,7 +2408,7 @@
       "to_station_id": "cn-hangzhou-south-railway-station",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 725,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.456,
       "extras": {
@@ -2501,7 +2425,7 @@
       "to_station_id": "cn-hangzhou-pengbu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 181,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.117,
       "extras": {
@@ -2519,14 +2443,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-mingxing-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-jianshesan-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.876,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2539,14 +2460,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-moyetang-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-guanyintang-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.46,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2558,7 +2476,7 @@
       "to_station_id": "cn-hangzhou-jinxing",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 452,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.958,
       "extras": {
@@ -2575,15 +2493,13 @@
       "to_station_id": "cn-hangzhou-qingshanhu-sci-tech-city",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
       "distance_km": 5.172,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nanhu-16-cn-hangzhou-nanfeng-16",
@@ -2594,15 +2510,13 @@
       "to_station_id": "cn-hangzhou-nanfeng",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 2.072,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 437,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-nanxingqiao-4-cn-hangzhou-fuxing-road-4",
@@ -2613,7 +2527,7 @@
       "to_station_id": "cn-hangzhou-fuxing-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 167,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.553,
       "extras": {
@@ -2630,7 +2544,7 @@
       "to_station_id": "cn-hangzhou-changhe",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 411,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 2.739,
       "extras": {
@@ -2665,14 +2579,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-nanyuan-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-linpingnan-railway-station-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.495,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2684,7 +2595,7 @@
       "to_station_id": "cn-hangzhou-qingling-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 109,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.412,
       "extras": {
@@ -2702,14 +2613,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-north-jianguo-road-5-to-cn-hangzhou-guniangqiao-59zkuu",
-        "cn-hangzhou-cn-hangzhou-wanan-bridge-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.168,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2721,7 +2629,7 @@
       "to_station_id": "cn-hangzhou-west-wenyi-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 872,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.471,
       "extras": {
@@ -2738,7 +2646,7 @@
       "to_station_id": "cn-hangzhou-wulian",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 150,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.882,
       "extras": {
@@ -2755,7 +2663,7 @@
       "to_station_id": "cn-hangzhou-middle-tonghui-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 731,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.701,
       "extras": {
@@ -2772,7 +2680,7 @@
       "to_station_id": "cn-hangzhou-north-jianguo-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 109,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.8,
       "extras": {
@@ -2789,7 +2697,7 @@
       "to_station_id": "cn-hangzhou-caojiaqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 504,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.519,
       "extras": {
@@ -2806,7 +2714,7 @@
       "to_station_id": "cn-hangzhou-qibao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 231,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.797,
       "extras": {
@@ -2823,7 +2731,7 @@
       "to_station_id": "cn-hangzhou-east-railway-station",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.084,
       "extras": {
@@ -2840,7 +2748,7 @@
       "to_station_id": "cn-hangzhou-hangfachang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 324,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.165,
       "extras": {
@@ -2858,14 +2766,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-peoples-square-5-to-cn-hangzhou-guniangqiao-59zkuu",
-        "cn-hangzhou-cn-hangzhou-north-yucai-road-5-to-cn-hangzhou-guniangqiao-59zkuu"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.067,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -2877,7 +2782,7 @@
       "to_station_id": "cn-hangzhou-ducheng-shengtaigongyuan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 176,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.687,
       "extras": {
@@ -2911,7 +2816,7 @@
       "to_station_id": "cn-hangzhou-yudao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.647,
       "extras": {
@@ -2928,7 +2833,7 @@
       "to_station_id": "cn-hangzhou-hemu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.901,
       "extras": {
@@ -2945,7 +2850,7 @@
       "to_station_id": "cn-hangzhou-yingfeng-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 141,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.858,
       "extras": {
@@ -2962,7 +2867,7 @@
       "to_station_id": "cn-hangzhou-fengbei",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 163,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.209,
       "extras": {
@@ -2996,7 +2901,7 @@
       "to_station_id": "cn-hangzhou-jiangjin-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 44,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.726,
       "extras": {
@@ -3014,14 +2919,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-qianjiang-road-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-xinye-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.877,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3034,14 +2936,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-qiaosi-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-south-qiaosi-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 2.235,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3054,14 +2953,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-qiaotoubao-8-to-cn-hangzhou-south-wenhai-road-mm688w",
-        "cn-hangzhou-cn-hangzhou-gongshang-university-yunbin-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 3.865,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3073,7 +2969,7 @@
       "to_station_id": "cn-hangzhou-jiuhe-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 147,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.297,
       "extras": {
@@ -3093,11 +2989,13 @@
       "distance_km": 1.296,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 42,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34.3,
+        "a_s_per_km": 42.2,
+        "b_s": 81.1,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 473,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner"
     },
     {
@@ -3109,7 +3007,7 @@
       "to_station_id": "cn-hangzhou-huafeng-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 491,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.645,
       "extras": {
@@ -3127,14 +3025,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-qingchun-square-2-to-cn-hangzhou-chaoyang-vvmotq",
-        "cn-hangzhou-cn-hangzhou-qianjiang-road-2-to-cn-hangzhou-chaoyang-vvmotq"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.849,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3146,7 +3041,7 @@
       "to_station_id": "cn-hangzhou-qingchun-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 46,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.121,
       "extras": {
@@ -3163,15 +3058,13 @@
       "to_station_id": "cn-hangzhou-zhejiang-aandf-university",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 2.083,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 251,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qingshanhu-sci-tech-city-16-cn-hangzhou-babaili-16",
@@ -3182,15 +3075,13 @@
       "to_station_id": "cn-hangzhou-babaili",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
       "distance_km": 4.683,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 1314,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-qingxisan-road-8-cn-hangzhou-hezhuang-road-8",
@@ -3202,14 +3093,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-qingxisan-road-8-to-cn-hangzhou-south-wenhai-road-mm688w",
-        "cn-hangzhou-cn-hangzhou-hezhuang-road-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.99,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3222,34 +3110,24 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-qiushan-avenue-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-linping-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.772,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
-      "id": "cn-hangzhou-seg-cn-hangzhou-quanfeng-3-cn-hangzhou-chuangming-road-3",
+      "id": "cn-hangzhou-seg-cn-hangzhou-quanfeng-3-cn-hangzhou-cj2t8-3",
       "line_id": "cn-hangzhou-line-3",
       "from_stop_id": "cn-hangzhou-quanfeng-3",
-      "to_stop_id": "cn-hangzhou-chuangming-road-3",
+      "to_stop_id": "cn-hangzhou-cj2t8-3",
       "from_station_id": "cn-hangzhou-quanfeng",
-      "to_station_id": "cn-hangzhou-chuangming-road",
+      "to_station_id": "cn-hangzhou-cj2t8",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "distance_km": 1.621,
-      "extras": {
-        "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 31.8,
-        "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 1044,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 120,
+      "travel_time_source": "estimated"
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-quanfeng-3-cn-hangzhou-gaojiao-road-3",
@@ -3260,7 +3138,7 @@
       "to_station_id": "cn-hangzhou-gaojiao-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 361,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.171,
       "extras": {
@@ -3277,7 +3155,7 @@
       "to_station_id": "cn-hangzhou-panshui",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 409,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.222,
       "extras": {
@@ -3294,7 +3172,7 @@
       "to_station_id": "cn-hangzhou-wenxin",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 226,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.198,
       "extras": {
@@ -3328,7 +3206,7 @@
       "to_station_id": "cn-hangzhou-tanhuaan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 237,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.172,
       "extras": {
@@ -3346,14 +3224,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-sanbao-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-jianghehui-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.874,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3365,7 +3240,7 @@
       "to_station_id": "cn-hangzhou-xialongwei",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 127,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.206,
       "extras": {
@@ -3382,7 +3257,7 @@
       "to_station_id": "cn-hangzhou-xintiandi-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 193,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.863,
       "extras": {
@@ -3399,7 +3274,7 @@
       "to_station_id": "cn-hangzhou-xiwen-stree",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 194,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.905,
       "extras": {
@@ -3416,7 +3291,7 @@
       "to_station_id": "cn-hangzhou-west-lake-cultural-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 204,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.482,
       "extras": {
@@ -3433,7 +3308,7 @@
       "to_station_id": "cn-hangzhou-wulinmen",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 150,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.265,
       "extras": {
@@ -3450,7 +3325,7 @@
       "to_station_id": "cn-hangzhou-xiaoheshan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 279,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.127,
       "extras": {
@@ -3467,7 +3342,7 @@
       "to_station_id": "cn-hangzhou-fuyang-coach-center",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 2.607,
       "extras": {
@@ -3484,7 +3359,7 @@
       "to_station_id": "cn-hangzhou-kehai-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 238,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.541,
       "extras": {
@@ -3504,11 +3379,13 @@
       "distance_km": 2.095,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 29.7,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 38.5,
+        "a_s_per_km": 52.9,
+        "b_s": 84.8,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 581,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner"
     },
     {
@@ -3520,7 +3397,7 @@
       "to_station_id": "cn-hangzhou-lianzhuang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.938,
       "extras": {
@@ -3538,14 +3415,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-south-hongpu-road-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-liubao-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.375,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3575,14 +3449,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-south-qiaosi-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-coach-center-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 2.128,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3594,7 +3465,7 @@
       "to_station_id": "cn-hangzhou-shuangqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 179,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.101,
       "extras": {
@@ -3611,7 +3482,7 @@
       "to_station_id": "cn-hangzhou-yunshui",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 185,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.108,
       "extras": {
@@ -3628,7 +3499,7 @@
       "to_station_id": "cn-hangzhou-huawu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 100,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.627,
       "extras": {
@@ -3648,12 +3519,17 @@
       "distance_km": 0.674,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 31.8,
-        "planner_time_source": "baidu-transit"
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 20.9,
+        "a_s_per_km": 53.9,
+        "b_s": 79.7
       },
-      "travel_time_seconds": 76,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 116,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-tangxinxian-7-cn-hangzhou-middle-qingliu-road-7",
@@ -3664,7 +3540,7 @@
       "to_station_id": "cn-hangzhou-middle-qingliu-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 714,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.596,
       "extras": {
@@ -3682,14 +3558,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-tanhuaan-road-6-to-cn-hangzhou-goujulong-1pe4ogw",
-        "cn-hangzhou-cn-hangzhou-yuanbaotang-6-to-cn-hangzhou-goujulong-1pe4ogw"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.874,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3701,7 +3574,7 @@
       "to_station_id": "cn-hangzhou-dingqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 1025,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.363,
       "extras": {
@@ -3718,7 +3591,7 @@
       "to_station_id": "cn-hangzhou-gaotingba",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 98,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.375,
       "extras": {
@@ -3735,7 +3608,7 @@
       "to_station_id": "cn-hangzhou-east-gongchen-bridge",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 356,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.616,
       "extras": {
@@ -3752,7 +3625,7 @@
       "to_station_id": "cn-hangzhou-taohuahu-park",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 312,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.2,
       "extras": {
@@ -3769,7 +3642,7 @@
       "to_station_id": "cn-hangzhou-chengzhan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 123,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.055,
       "extras": {
@@ -3786,7 +3659,7 @@
       "to_station_id": "cn-hangzhou-chengye-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 352,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.159,
       "extras": {
@@ -3804,14 +3677,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-wengmei-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-qiaosi-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 2.206,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -3826,11 +3696,13 @@
       "distance_km": 0.964,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 28.7,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.6,
+        "a_s_per_km": 58.2,
+        "b_s": 85.1,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 177,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner"
     },
     {
@@ -3842,7 +3714,7 @@
       "to_station_id": "cn-hangzhou-shentangqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 236,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.979,
       "extras": {
@@ -3859,7 +3731,7 @@
       "to_station_id": "cn-hangzhou-fengtan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 111,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.368,
       "extras": {
@@ -3876,7 +3748,7 @@
       "to_station_id": "cn-hangzhou-south-wenhai-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 386,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 2.402,
       "extras": {
@@ -3893,7 +3765,7 @@
       "to_station_id": "cn-hangzhou-zhipu-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 168,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.937,
       "extras": {
@@ -3910,7 +3782,7 @@
       "to_station_id": "cn-hangzhou-datieguan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 228,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.248,
       "extras": {
@@ -3927,7 +3799,7 @@
       "to_station_id": "cn-hangzhou-yicheng-lu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 240,
+      "travel_time_seconds": 300,
       "travel_time_source": "planner",
       "distance_km": 3.839,
       "extras": {
@@ -3944,7 +3816,7 @@
       "to_station_id": "cn-hangzhou-chaowang-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 217,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.362,
       "extras": {
@@ -3961,13 +3833,17 @@
       "to_station_id": "cn-hangzhou-chuangjing-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner",
       "distance_km": 2.46,
       "extras": {
         "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 48.1,
+        "a_s_per_km": 39.9,
+        "b_s": 85.8,
         "planner_time_source": "baidu-transit"
-      }
+      },
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner"
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-railway-station-3-cn-hangzhou-north-longzhou-road-3",
@@ -3978,7 +3854,7 @@
       "to_station_id": "cn-hangzhou-north-longzhou-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 368,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.137,
       "extras": {
@@ -3998,12 +3874,17 @@
       "distance_km": 0.954,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 31.8,
-        "planner_time_source": "baidu-transit"
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 26.2,
+        "a_s_per_km": 53.9,
+        "b_s": 79.7
       },
-      "travel_time_seconds": 437,
-      "travel_time_source": "planner"
+      "travel_time_seconds": 131,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-west-wenyi-road-3-cn-hangzhou-lvting-lu-3",
@@ -4014,7 +3895,7 @@
       "to_station_id": "cn-hangzhou-lvting-lu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.982,
       "extras": {
@@ -4031,7 +3912,7 @@
       "to_station_id": "cn-hangzhou-jinshahu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 299,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.268,
       "extras": {
@@ -4049,14 +3930,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-wubao-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-yudao-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 0.939,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4068,7 +3946,7 @@
       "to_station_id": "cn-hangzhou-jiangcun",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 1296,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 2.163,
       "extras": {
@@ -4085,7 +3963,7 @@
       "to_station_id": "cn-hangzhou-taoyuan-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 775,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.387,
       "extras": {
@@ -4102,7 +3980,7 @@
       "to_station_id": "cn-hangzhou-chengzhan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 555,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.301,
       "extras": {
@@ -4119,7 +3997,7 @@
       "to_station_id": "cn-hangzhou-wensan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.965,
       "extras": {
@@ -4136,7 +4014,7 @@
       "to_station_id": "cn-hangzhou-west-lake-cultural-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 168,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.812,
       "extras": {
@@ -4153,7 +4031,7 @@
       "to_station_id": "cn-hangzhou-west-lake-cultural-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 168,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.812,
       "extras": {
@@ -4170,7 +4048,7 @@
       "to_station_id": "cn-hangzhou-fengqi-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 114,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 0.975,
       "extras": {
@@ -4187,7 +4065,7 @@
       "to_station_id": "cn-hangzhou-wulin-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 370,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.911,
       "extras": {
@@ -4205,14 +4083,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-wushan-square-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-jiangcheng-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.444,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4224,16 +4099,20 @@
       "to_station_id": "cn-hangzhou-west-railway-station",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-wushanqiancun-3-to-cn-hangzhou-dingqiao-siwq64",
-        "cn-hangzhou-cn-hangzhou-west-railway-station-3-to-cn-hangzhou-dingqiao-siwq64"
-      ],
       "distance_km": 1.618,
       "extras": {
-        "distance_source": "haversine"
-      }
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34.9,
+        "a_s_per_km": 53.9,
+        "b_s": 79.7
+      },
+      "travel_time_seconds": 167,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-wuzhou-road-9-cn-hangzhou-heyu-road-9",
@@ -4245,14 +4124,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-wuzhou-road-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-heyu-road-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.306,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4264,7 +4140,7 @@
       "to_station_id": "cn-hangzhou-sanba",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 288,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.074,
       "extras": {
@@ -4284,11 +4160,13 @@
       "distance_km": 1.181,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 36.2,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28.5,
+        "a_s_per_km": 28.4,
+        "b_s": 115.5,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 362,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner"
     },
     {
@@ -4300,7 +4178,7 @@
       "to_station_id": "cn-hangzhou-binkang-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 74,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.839,
       "extras": {
@@ -4317,7 +4195,7 @@
       "to_station_id": "cn-hangzhou-daguan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 73,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.873,
       "extras": {
@@ -4334,7 +4212,7 @@
       "to_station_id": "cn-hangzhou-west-fenghua-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 789,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.711,
       "extras": {
@@ -4351,7 +4229,7 @@
       "to_station_id": "cn-hangzhou-zhejiang-conservatory-of-music",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 1529,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.277,
       "extras": {
@@ -4371,8 +4249,10 @@
       "distance_km": 2.899,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 32.6,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 44,
+        "a_s_per_km": 57.4,
+        "b_s": 70.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 300,
@@ -4387,7 +4267,7 @@
       "to_station_id": "cn-hangzhou-dujiaqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 567,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.317,
       "extras": {
@@ -4404,7 +4284,7 @@
       "to_station_id": "cn-hangzhou-shentangqiao",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 358,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.032,
       "extras": {
@@ -4421,7 +4301,7 @@
       "to_station_id": "cn-hangzhou-pingfeng",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 284,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.981,
       "extras": {
@@ -4455,7 +4335,7 @@
       "to_station_id": "cn-hangzhou-yongsheng-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 478,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 3.835,
       "extras": {
@@ -4489,7 +4369,7 @@
       "to_station_id": "cn-hangzhou-xintang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 401,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.233,
       "extras": {
@@ -4507,14 +4387,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 240,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-xingang-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
-        "cn-hangzhou-cn-hangzhou-xiaoshan-international-airport-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 2.988,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4526,7 +4403,7 @@
       "to_station_id": "cn-hangzhou-aoti-zhongxin",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.491,
       "extras": {
@@ -4543,7 +4420,7 @@
       "to_station_id": "cn-hangzhou-huangheshan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 529,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.885,
       "extras": {
@@ -4560,15 +4437,12 @@
       "to_station_id": "cn-hangzhou-mingxing-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-xingyi-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-mingxing-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.277,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4581,14 +4455,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-xinhan-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-xinjie-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 2.38,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4600,15 +4471,12 @@
       "to_station_id": "cn-hangzhou-hehuan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 60,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-xinjie-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
-        "cn-hangzhou-cn-hangzhou-hehuan-road-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ],
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.231,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4620,7 +4488,7 @@
       "to_station_id": "cn-hangzhou-jingfang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 1479,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.253,
       "extras": {
@@ -4637,7 +4505,7 @@
       "to_station_id": "cn-hangzhou-qilun-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 115,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.742,
       "extras": {
@@ -4654,7 +4522,7 @@
       "to_station_id": "cn-hangzhou-south-huazhong-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 614,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.99,
       "extras": {
@@ -4672,14 +4540,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-xinwan-road-8-to-cn-hangzhou-south-wenhai-road-mm688w",
-        "cn-hangzhou-cn-hangzhou-fengloucun-8-to-cn-hangzhou-south-wenhai-road-mm688w"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.833,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4692,14 +4557,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 120,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-xinxing-road-7-to-cn-hangzhou-hehuan-road-1jznirx",
-        "cn-hangzhou-cn-hangzhou-xinhan-road-7-to-cn-hangzhou-hehuan-road-1jznirx"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.107,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4714,15 +4576,14 @@
       "distance_km": 0.734,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 32.1
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 24.7,
+        "a_s_per_km": 71.5,
+        "b_s": 55,
+        "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 82,
-      "travel_time_source": "estimated",
-      "travel_time_derived_from": [
-        "distance_haversine",
-        "speed_32_kmh"
-      ]
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-xinzhen-road-7-cn-hangzhou-yipeng-7",
@@ -4733,7 +4594,7 @@
       "to_station_id": "cn-hangzhou-yipeng",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 668,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.746,
       "extras": {
@@ -4750,7 +4611,7 @@
       "to_station_id": "cn-hangzhou-zhejiang-chinese-medical-university",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 281,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.157,
       "extras": {
@@ -4767,7 +4628,7 @@
       "to_station_id": "cn-hangzhou-dongxinyuan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 290,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.028,
       "extras": {
@@ -4784,7 +4645,7 @@
       "to_station_id": "cn-hangzhou-binhe-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 317,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.39,
       "extras": {
@@ -4801,7 +4662,7 @@
       "to_station_id": "cn-hangzhou-wensan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 169,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.655,
       "extras": {
@@ -4818,7 +4679,7 @@
       "to_station_id": "cn-hangzhou-xianing-bridge",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 275,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.015,
       "extras": {
@@ -4835,7 +4696,7 @@
       "to_station_id": "cn-hangzhou-gongwang-street",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 411,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.809,
       "extras": {
@@ -4855,11 +4716,13 @@
       "distance_km": 1.002,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.7,
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28,
+        "a_s_per_km": 48,
+        "b_s": 80.5,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 194,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner"
     },
     {
@@ -4871,7 +4734,7 @@
       "to_station_id": "cn-hangzhou-east-railway-station-east-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.677,
       "extras": {
@@ -4888,7 +4751,7 @@
       "to_station_id": "cn-hangzhou-feihong-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 424,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.238,
       "extras": {
@@ -4905,15 +4768,12 @@
       "to_station_id": "cn-hangzhou-kanshan",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-yingzhong-7-to-cn-hangzhou-jiangdonger-road-imnjg8",
-        "cn-hangzhou-cn-hangzhou-kanshan-7-to-cn-hangzhou-jiangdonger-road-imnjg8"
-      ],
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
       "distance_km": 3.082,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -4925,7 +4785,7 @@
       "to_station_id": "cn-hangzhou-huxiaoxing",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.943,
       "extras": {
@@ -4959,7 +4819,7 @@
       "to_station_id": "cn-hangzhou-jinde-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 222,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.615,
       "extras": {
@@ -4976,7 +4836,7 @@
       "to_station_id": "cn-hangzhou-wuchang",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 146,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.79,
       "extras": {
@@ -5010,7 +4870,7 @@
       "to_station_id": "cn-hangzhou-xiaoshan-international-airport",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 478,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 3.835,
       "extras": {
@@ -5027,7 +4887,7 @@
       "to_station_id": "cn-hangzhou-xinzhen-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 139,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 2.663,
       "extras": {
@@ -5044,7 +4904,7 @@
       "to_station_id": "cn-hangzhou-east-railway-station-east-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 184,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.204,
       "extras": {
@@ -5061,7 +4921,7 @@
       "to_station_id": "cn-hangzhou-east-railway-station-east-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 2.969,
       "extras": {
@@ -5079,14 +4939,11 @@
       "direction": "both",
       "source_id": "hzmetro-operation-all",
       "travel_time_seconds": 180,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-hangzhou-cn-hangzhou-yudao-9-to-cn-hangzhou-guanyintang-1megtof",
-        "cn-hangzhou-cn-hangzhou-sanbao-9-to-cn-hangzhou-guanyintang-1megtof"
-      ],
+      "travel_time_source": "planner",
       "distance_km": 1.118,
       "extras": {
-        "distance_source": "haversine"
+        "distance_source": "haversine",
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -5098,15 +4955,13 @@
       "to_station_id": "cn-hangzhou-zhongtai",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 2.587,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 233,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-yunshui-1-cn-hangzhou-xiashajiangbin-1",
@@ -5117,7 +4972,7 @@
       "to_station_id": "cn-hangzhou-xiashajiangbin",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 214,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.793,
       "extras": {
@@ -5134,7 +4989,7 @@
       "to_station_id": "cn-hangzhou-east-railway-station",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 244,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.092,
       "extras": {
@@ -5151,15 +5006,13 @@
       "to_station_id": "cn-hangzhou-linan-square",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
       "distance_km": 3.598,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 877,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zhejiang-chinese-medical-university-4-cn-hangzhou-yangjiadun-4",
@@ -5170,7 +5023,7 @@
       "to_station_id": "cn-hangzhou-yangjiadun",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 240,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.918,
       "extras": {
@@ -5187,7 +5040,7 @@
       "to_station_id": "cn-hangzhou-weiye-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 238,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.416,
       "extras": {
@@ -5204,7 +5057,7 @@
       "to_station_id": "cn-hangzhou-zhongcun",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 1643,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.848,
       "extras": {
@@ -5221,7 +5074,7 @@
       "to_station_id": "cn-hangzhou-jianshesan-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 469,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.469,
       "extras": {
@@ -5238,7 +5091,7 @@
       "to_station_id": "cn-hangzhou-xipu-road",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 3.115,
       "extras": {
@@ -5289,15 +5142,13 @@
       "to_station_id": "cn-hangzhou-nanhu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 2.897,
       "extras": {
         "distance_source": "haversine",
-        "time_estimate": "distance_speed",
-        "speed_kmh": 33.5,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-zijingang-campus-zhejiang-university-5-cn-hangzhou-sanba-5",
@@ -5308,7 +5159,7 @@
       "to_station_id": "cn-hangzhou-sanba",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.136,
       "extras": {

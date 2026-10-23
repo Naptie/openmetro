@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chengdu",
-  "generated_at": "2026-09-24T19:27:10.301Z",
+  "generated_at": "2026-10-23T13:01:49.645Z",
   "source": [
     {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-09-24T19:27:10.301Z",
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T13:01:49.645Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -23,8 +23,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-2-beizhan-west-road-5",
       "to_stop_id": "cn-chengdu-2-beizhan-west-road-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-2-beizhan-west-road-7-cn-chengdu-2-beizhan-west-road-5",
@@ -33,8 +37,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-2-beizhan-west-road-7",
       "to_stop_id": "cn-chengdu-2-beizhan-west-road-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-century-city-1-cn-chengdu-century-city-18",
@@ -43,8 +51,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-century-city-1",
       "to_stop_id": "cn-chengdu-century-city-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-century-city-18-cn-chengdu-century-city-1",
@@ -53,8 +65,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-century-city-18",
       "to_stop_id": "cn-chengdu-century-city-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-east-railway-station-2-cn-chengdu-chengdu-east-railway-station-7",
@@ -63,8 +79,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-chengdu-east-railway-station-2",
       "to_stop_id": "cn-chengdu-chengdu-east-railway-station-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-east-railway-station-7-cn-chengdu-chengdu-east-railway-station-2",
@@ -73,8 +93,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-chengdu-east-railway-station-7",
       "to_stop_id": "cn-chengdu-chengdu-east-railway-station-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-first-peoples-hospital-30-cn-chengdu-chengdu-first-peoples-hospital-5",
@@ -83,8 +107,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-chengdu-first-peoples-hospital-30",
       "to_stop_id": "cn-chengdu-chengdu-first-peoples-hospital-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-first-peoples-hospital-5-cn-chengdu-chengdu-first-peoples-hospital-30",
@@ -93,8 +121,12 @@
       "to_line_id": "cn-chengdu-line-30",
       "from_stop_id": "cn-chengdu-chengdu-first-peoples-hospital-5",
       "to_stop_id": "cn-chengdu-chengdu-first-peoples-hospital-30",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-second-peoples-hospital-3-cn-chengdu-chengdu-second-peoples-hospital-4",
@@ -103,8 +135,12 @@
       "to_line_id": "cn-chengdu-line-4",
       "from_stop_id": "cn-chengdu-chengdu-second-peoples-hospital-3",
       "to_stop_id": "cn-chengdu-chengdu-second-peoples-hospital-4",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-second-peoples-hospital-4-cn-chengdu-chengdu-second-peoples-hospital-3",
@@ -113,8 +149,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-chengdu-second-peoples-hospital-4",
       "to_stop_id": "cn-chengdu-chengdu-second-peoples-hospital-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-2-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-4",
@@ -137,8 +177,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-2",
       "to_stop_id": "cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-4-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-2",
@@ -175,8 +219,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-5",
       "to_stop_id": "cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-5-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-4",
@@ -199,8 +247,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-chengdu-university-of-technology-7",
       "to_stop_id": "cn-chengdu-chengdu-university-of-technology-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-university-of-technology-8-cn-chengdu-chengdu-university-of-technology-7",
@@ -209,8 +261,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-chengdu-university-of-technology-8",
       "to_stop_id": "cn-chengdu-chengdu-university-of-technology-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-west-railway-station-4-cn-chengdu-chengdu-west-railway-station-9",
@@ -219,8 +275,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-chengdu-west-railway-station-4",
       "to_stop_id": "cn-chengdu-chengdu-west-railway-station-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-west-railway-station-4-cn-chengdu-chengdu-west-railway-station-rong2",
@@ -229,8 +289,12 @@
       "to_line_id": "cn-chengdu-line-rong2",
       "from_stop_id": "cn-chengdu-chengdu-west-railway-station-4",
       "to_stop_id": "cn-chengdu-chengdu-west-railway-station-rong2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 312,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 374,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-west-railway-station-9-cn-chengdu-chengdu-west-railway-station-4",
@@ -239,8 +303,12 @@
       "to_line_id": "cn-chengdu-line-4",
       "from_stop_id": "cn-chengdu-chengdu-west-railway-station-9",
       "to_stop_id": "cn-chengdu-chengdu-west-railway-station-4",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-west-railway-station-9-cn-chengdu-chengdu-west-railway-station-rong2",
@@ -249,8 +317,12 @@
       "to_line_id": "cn-chengdu-line-rong2",
       "from_stop_id": "cn-chengdu-chengdu-west-railway-station-9",
       "to_stop_id": "cn-chengdu-chengdu-west-railway-station-rong2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 346,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 415,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-west-railway-station-rong2-cn-chengdu-chengdu-west-railway-station-4",
@@ -259,8 +331,12 @@
       "to_line_id": "cn-chengdu-line-4",
       "from_stop_id": "cn-chengdu-chengdu-west-railway-station-rong2",
       "to_stop_id": "cn-chengdu-chengdu-west-railway-station-4",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 312,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 374,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chengdu-west-railway-station-rong2-cn-chengdu-chengdu-west-railway-station-9",
@@ -269,8 +345,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-chengdu-west-railway-station-rong2",
       "to_stop_id": "cn-chengdu-chengdu-west-railway-station-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 312,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 374,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chunxi-road-2-cn-chengdu-chunxi-road-3",
@@ -279,8 +359,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-chunxi-road-2",
       "to_stop_id": "cn-chengdu-chunxi-road-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-chunxi-road-3-cn-chengdu-chunxi-road-2",
@@ -289,8 +373,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-chunxi-road-3",
       "to_stop_id": "cn-chengdu-chunxi-road-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-culture-palace-4-cn-chengdu-culture-palace-7",
@@ -299,8 +387,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-culture-palace-4",
       "to_stop_id": "cn-chengdu-culture-palace-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-culture-palace-7-cn-chengdu-culture-palace-4",
@@ -309,8 +401,12 @@
       "to_line_id": "cn-chengdu-line-4",
       "from_stop_id": "cn-chengdu-culture-palace-7",
       "to_stop_id": "cn-chengdu-culture-palace-4",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-dongdalu-road-2-cn-chengdu-dongdalu-road-8",
@@ -319,8 +415,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-dongdalu-road-2",
       "to_stop_id": "cn-chengdu-dongdalu-road-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-dongdalu-road-8-cn-chengdu-dongdalu-road-2",
@@ -329,8 +429,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-dongdalu-road-8",
       "to_stop_id": "cn-chengdu-dongdalu-road-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-dongguang-6-cn-chengdu-dongguang-8",
@@ -339,8 +443,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-dongguang-6",
       "to_stop_id": "cn-chengdu-dongguang-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-dongguang-8-cn-chengdu-dongguang-6",
@@ -349,8 +457,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-dongguang-8",
       "to_stop_id": "cn-chengdu-dongguang-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-dongpo-road-13-cn-chengdu-dongpo-road-7",
@@ -373,8 +485,12 @@
       "to_line_id": "cn-chengdu-line-13",
       "from_stop_id": "cn-chengdu-dongpo-road-7",
       "to_stop_id": "cn-chengdu-dongpo-road-13",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-dongzikou-27-cn-chengdu-dongzikou-5",
@@ -383,8 +499,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-dongzikou-27",
       "to_stop_id": "cn-chengdu-dongzikou-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-dongzikou-5-cn-chengdu-dongzikou-27",
@@ -393,8 +513,12 @@
       "to_line_id": "cn-chengdu-line-27",
       "from_stop_id": "cn-chengdu-dongzikou-5",
       "to_stop_id": "cn-chengdu-dongzikou-27",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-19-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30",
@@ -403,8 +527,12 @@
       "to_line_id": "cn-chengdu-line-30",
       "from_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-19",
       "to_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-19",
@@ -427,8 +555,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-erxianqiao-17",
       "to_stop_id": "cn-chengdu-erxianqiao-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-erxianqiao-7-cn-chengdu-erxianqiao-17",
@@ -437,8 +569,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-erxianqiao-7",
       "to_stop_id": "cn-chengdu-erxianqiao-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-fengxihe-19-cn-chengdu-fengxihe-4",
@@ -447,8 +583,12 @@
       "to_line_id": "cn-chengdu-line-4",
       "from_stop_id": "cn-chengdu-fengxihe-19",
       "to_stop_id": "cn-chengdu-fengxihe-4",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-fengxihe-4-cn-chengdu-fengxihe-19",
@@ -457,8 +597,12 @@
       "to_line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-fengxihe-4",
       "to_stop_id": "cn-chengdu-fengxihe-19",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-financial-city-east-6-cn-chengdu-financial-city-east-9",
@@ -467,8 +611,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-financial-city-east-6",
       "to_stop_id": "cn-chengdu-financial-city-east-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-financial-city-east-9-cn-chengdu-financial-city-east-6",
@@ -477,8 +625,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-financial-city-east-9",
       "to_stop_id": "cn-chengdu-financial-city-east-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-futian-18-cn-chengdu-futian-19",
@@ -487,8 +639,12 @@
       "to_line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-futian-18",
       "to_stop_id": "cn-chengdu-futian-19",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 323,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 387,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-futian-18-cn-chengdu-futian-s3",
@@ -511,8 +667,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-futian-19",
       "to_stop_id": "cn-chengdu-futian-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-futian-19-cn-chengdu-futian-s3",
@@ -535,8 +695,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-futian-s3",
       "to_stop_id": "cn-chengdu-futian-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-futian-s3-cn-chengdu-futian-19",
@@ -545,8 +709,12 @@
       "to_line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-futian-s3",
       "to_stop_id": "cn-chengdu-futian-19",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-gaopeng-avenue-7-cn-chengdu-gaopeng-avenue-8",
@@ -555,8 +723,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-gaopeng-avenue-7",
       "to_stop_id": "cn-chengdu-gaopeng-avenue-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-gaopeng-avenue-8-cn-chengdu-gaopeng-avenue-7",
@@ -579,8 +751,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-gaoshengqiao-10",
       "to_stop_id": "cn-chengdu-gaoshengqiao-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-gaoshengqiao-10-cn-chengdu-gaoshengqiao-5",
@@ -589,8 +765,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-gaoshengqiao-10",
       "to_stop_id": "cn-chengdu-gaoshengqiao-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-gaoshengqiao-3-cn-chengdu-gaoshengqiao-10",
@@ -599,8 +779,12 @@
       "to_line_id": "cn-chengdu-line-10",
       "from_stop_id": "cn-chengdu-gaoshengqiao-3",
       "to_stop_id": "cn-chengdu-gaoshengqiao-10",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-gaoshengqiao-3-cn-chengdu-gaoshengqiao-5",
@@ -609,8 +793,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-gaoshengqiao-3",
       "to_stop_id": "cn-chengdu-gaoshengqiao-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-gaoshengqiao-5-cn-chengdu-gaoshengqiao-10",
@@ -619,8 +807,12 @@
       "to_line_id": "cn-chengdu-line-10",
       "from_stop_id": "cn-chengdu-gaoshengqiao-5",
       "to_stop_id": "cn-chengdu-gaoshengqiao-10",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-gaoshengqiao-5-cn-chengdu-gaoshengqiao-3",
@@ -629,8 +821,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-gaoshengqiao-5",
       "to_stop_id": "cn-chengdu-gaoshengqiao-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 293,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-haichang-road-1-cn-chengdu-haichang-road-18",
@@ -653,8 +849,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-haichang-road-18",
       "to_stop_id": "cn-chengdu-haichang-road-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 323,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 387,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-hongpailou-10-cn-chengdu-hongpailou-3",
@@ -663,8 +863,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-hongpailou-10",
       "to_stop_id": "cn-chengdu-hongpailou-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-hongpailou-3-cn-chengdu-hongpailou-10",
@@ -673,8 +877,12 @@
       "to_line_id": "cn-chengdu-line-10",
       "from_stop_id": "cn-chengdu-hongpailou-3",
       "to_stop_id": "cn-chengdu-hongpailou-10",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-hongxing-bridge-17-cn-chengdu-hongxing-bridge-3",
@@ -683,8 +891,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-hongxing-bridge-17",
       "to_stop_id": "cn-chengdu-hongxing-bridge-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-hongxing-bridge-3-cn-chengdu-hongxing-bridge-17",
@@ -693,8 +905,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-hongxing-bridge-3",
       "to_stop_id": "cn-chengdu-hongxing-bridge-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-huaishudian-4-cn-chengdu-huaishudian-7",
@@ -703,8 +919,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-huaishudian-4",
       "to_stop_id": "cn-chengdu-huaishudian-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-huaishudian-7-cn-chengdu-huaishudian-4",
@@ -727,8 +947,12 @@
       "to_line_id": "cn-chengdu-line-13",
       "from_stop_id": "cn-chengdu-huaxiba-1",
       "to_stop_id": "cn-chengdu-huaxiba-13",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-huaxiba-13-cn-chengdu-huaxiba-1",
@@ -737,8 +961,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-huaxiba-13",
       "to_stop_id": "cn-chengdu-huaxiba-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-huaxing-10-cn-chengdu-huaxing-9",
@@ -775,8 +1003,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-huilong-5",
       "to_stop_id": "cn-chengdu-huilong-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-huilong-6-cn-chengdu-huilong-5",
@@ -785,8 +1017,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-huilong-6",
       "to_stop_id": "cn-chengdu-huilong-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-huiwangling-2-cn-chengdu-huiwangling-30",
@@ -795,8 +1031,12 @@
       "to_line_id": "cn-chengdu-line-30",
       "from_stop_id": "cn-chengdu-huiwangling-2",
       "to_stop_id": "cn-chengdu-huiwangling-30",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-huiwangling-30-cn-chengdu-huiwangling-2",
@@ -805,8 +1045,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-huiwangling-30",
       "to_stop_id": "cn-chengdu-huiwangling-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-incubation-park-1-cn-chengdu-incubation-park-18",
@@ -815,8 +1059,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-incubation-park-1",
       "to_stop_id": "cn-chengdu-incubation-park-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 355,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 426,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-incubation-park-1-cn-chengdu-incubation-park-9",
@@ -825,8 +1073,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-incubation-park-1",
       "to_stop_id": "cn-chengdu-incubation-park-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-incubation-park-18-cn-chengdu-incubation-park-1",
@@ -835,8 +1087,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-incubation-park-18",
       "to_stop_id": "cn-chengdu-incubation-park-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-incubation-park-18-cn-chengdu-incubation-park-9",
@@ -845,8 +1101,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-incubation-park-18",
       "to_stop_id": "cn-chengdu-incubation-park-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-incubation-park-9-cn-chengdu-incubation-park-1",
@@ -855,8 +1115,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-incubation-park-9",
       "to_stop_id": "cn-chengdu-incubation-park-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-incubation-park-9-cn-chengdu-incubation-park-18",
@@ -865,8 +1129,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-incubation-park-9",
       "to_stop_id": "cn-chengdu-incubation-park-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jianshe-north-road-17-cn-chengdu-jianshe-north-road-6",
@@ -875,8 +1143,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-jianshe-north-road-17",
       "to_stop_id": "cn-chengdu-jianshe-north-road-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jianshe-north-road-6-cn-chengdu-jianshe-north-road-17",
@@ -885,8 +1157,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-jianshe-north-road-6",
       "to_stop_id": "cn-chengdu-jianshe-north-road-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jiaozi-flyover-13-cn-chengdu-jiaozi-flyover-30",
@@ -895,8 +1171,12 @@
       "to_line_id": "cn-chengdu-line-30",
       "from_stop_id": "cn-chengdu-jiaozi-flyover-13",
       "to_stop_id": "cn-chengdu-jiaozi-flyover-30",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jiaozi-flyover-30-cn-chengdu-jiaozi-flyover-13",
@@ -933,8 +1213,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-jincheng-avenue-9",
       "to_stop_id": "cn-chengdu-jincheng-avenue-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jinfu-27-cn-chengdu-jinfu-6",
@@ -943,8 +1227,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-jinfu-27",
       "to_stop_id": "cn-chengdu-jinfu-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jinfu-6-cn-chengdu-jinfu-27",
@@ -953,8 +1241,12 @@
       "to_line_id": "cn-chengdu-line-27",
       "from_stop_id": "cn-chengdu-jinfu-6",
       "to_stop_id": "cn-chengdu-jinfu-27",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jingjusi-13-cn-chengdu-jingjusi-8",
@@ -977,8 +1269,12 @@
       "to_line_id": "cn-chengdu-line-13",
       "from_stop_id": "cn-chengdu-jingjusi-8",
       "to_stop_id": "cn-chengdu-jingjusi-13",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jinshi-road-30-cn-chengdu-jinshi-road-6",
@@ -987,8 +1283,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-jinshi-road-30",
       "to_stop_id": "cn-chengdu-jinshi-road-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jinshi-road-6-cn-chengdu-jinshi-road-30",
@@ -997,8 +1297,12 @@
       "to_line_id": "cn-chengdu-line-30",
       "from_stop_id": "cn-chengdu-jinshi-road-6",
       "to_stop_id": "cn-chengdu-jinshi-road-30",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jitouqiao-17-cn-chengdu-jitouqiao-9",
@@ -1007,8 +1311,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-jitouqiao-17",
       "to_stop_id": "cn-chengdu-jitouqiao-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jitouqiao-9-cn-chengdu-jitouqiao-17",
@@ -1017,8 +1325,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-jitouqiao-9",
       "to_stop_id": "cn-chengdu-jitouqiao-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jiujiang-north-17-cn-chengdu-jiujiang-north-19",
@@ -1041,8 +1353,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-jiujiang-north-19",
       "to_stop_id": "cn-chengdu-jiujiang-north-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jiuxing-avenue-5-cn-chengdu-jiuxing-avenue-8",
@@ -1051,8 +1367,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-jiuxing-avenue-5",
       "to_stop_id": "cn-chengdu-jiuxing-avenue-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-jiuxing-avenue-8-cn-chengdu-jiuxing-avenue-5",
@@ -1061,8 +1381,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-jiuxing-avenue-8",
       "to_stop_id": "cn-chengdu-jiuxing-avenue-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-liulichang-6-cn-chengdu-liulichang-7",
@@ -1071,8 +1395,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-liulichang-6",
       "to_stop_id": "cn-chengdu-liulichang-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-liulichang-7-cn-chengdu-liulichang-6",
@@ -1109,8 +1437,12 @@
       "to_line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-longgang-8",
       "to_stop_id": "cn-chengdu-longgang-19",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-longqiao-road-19-cn-chengdu-longqiao-road-3",
@@ -1119,8 +1451,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-longqiao-road-19",
       "to_stop_id": "cn-chengdu-longqiao-road-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-longqiao-road-3-cn-chengdu-longqiao-road-19",
@@ -1143,8 +1479,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-longzhuayan-17",
       "to_stop_id": "cn-chengdu-longzhuayan-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-longzhuayan-7-cn-chengdu-longzhuayan-17",
@@ -1153,8 +1493,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-longzhuayan-7",
       "to_stop_id": "cn-chengdu-longzhuayan-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-luomashi-1-cn-chengdu-luomashi-4",
@@ -1163,8 +1507,12 @@
       "to_line_id": "cn-chengdu-line-4",
       "from_stop_id": "cn-chengdu-luomashi-1",
       "to_stop_id": "cn-chengdu-luomashi-4",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-luomashi-4-cn-chengdu-luomashi-1",
@@ -1173,8 +1521,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-luomashi-4",
       "to_stop_id": "cn-chengdu-luomashi-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-nijiaqiao-1-cn-chengdu-nijiaqiao-8",
@@ -1183,8 +1535,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-nijiaqiao-1",
       "to_stop_id": "cn-chengdu-nijiaqiao-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-nijiaqiao-8-cn-chengdu-nijiaqiao-1",
@@ -1193,8 +1549,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-nijiaqiao-8",
       "to_stop_id": "cn-chengdu-nijiaqiao-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-niuwangmiao-2-cn-chengdu-niuwangmiao-6",
@@ -1203,8 +1563,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-niuwangmiao-2",
       "to_stop_id": "cn-chengdu-niuwangmiao-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-niuwangmiao-6-cn-chengdu-niuwangmiao-2",
@@ -1227,8 +1591,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-north-railway-station-1",
       "to_stop_id": "cn-chengdu-north-railway-station-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-north-railway-station-7-cn-chengdu-north-railway-station-1",
@@ -1237,8 +1605,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-north-railway-station-7",
       "to_stop_id": "cn-chengdu-north-railway-station-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-peifeng-13-cn-chengdu-peifeng-9",
@@ -1247,8 +1619,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-peifeng-13",
       "to_stop_id": "cn-chengdu-peifeng-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-peifeng-9-cn-chengdu-peifeng-13",
@@ -1257,8 +1633,12 @@
       "to_line_id": "cn-chengdu-line-13",
       "from_stop_id": "cn-chengdu-peifeng-9",
       "to_stop_id": "cn-chengdu-peifeng-13",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-peoples-park-17-cn-chengdu-peoples-park-2",
@@ -1267,8 +1647,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-peoples-park-17",
       "to_stop_id": "cn-chengdu-peoples-park-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-peoples-park-2-cn-chengdu-peoples-park-17",
@@ -1277,8 +1661,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-peoples-park-2",
       "to_stop_id": "cn-chengdu-peoples-park-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 205,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-provincial-orthopaedics-hospital-17-cn-chengdu-provincial-orthopaedics-hospital-5",
@@ -1301,8 +1689,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-provincial-orthopaedics-hospital-5",
       "to_stop_id": "cn-chengdu-provincial-orthopaedics-hospital-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-qianfeng-road-3-cn-chengdu-qianfeng-road-6",
@@ -1311,8 +1703,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-qianfeng-road-3",
       "to_stop_id": "cn-chengdu-qianfeng-road-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-qianfeng-road-6-cn-chengdu-qianfeng-road-3",
@@ -1321,8 +1717,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-qianfeng-road-6",
       "to_stop_id": "cn-chengdu-qianfeng-road-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-qingyang-taoist-temple-13-cn-chengdu-qingyang-taoist-temple-5",
@@ -1331,8 +1731,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-qingyang-taoist-temple-13",
       "to_stop_id": "cn-chengdu-qingyang-taoist-temple-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-qingyang-taoist-temple-5-cn-chengdu-qingyang-taoist-temple-13",
@@ -1341,8 +1745,12 @@
       "to_line_id": "cn-chengdu-line-13",
       "from_stop_id": "cn-chengdu-qingyang-taoist-temple-5",
       "to_stop_id": "cn-chengdu-qingyang-taoist-temple-13",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-renmin-north-road-1-cn-chengdu-renmin-north-road-6",
@@ -1365,8 +1773,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-renmin-north-road-6",
       "to_stop_id": "cn-chengdu-renmin-north-road-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sancha-18-cn-chengdu-sancha-19",
@@ -1375,8 +1787,12 @@
       "to_line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-sancha-18",
       "to_stop_id": "cn-chengdu-sancha-19",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sancha-19-cn-chengdu-sancha-18",
@@ -1385,8 +1801,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-sancha-19",
       "to_stop_id": "cn-chengdu-sancha-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sanguantang-13-cn-chengdu-sanguantang-6",
@@ -1395,8 +1815,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-sanguantang-13",
       "to_stop_id": "cn-chengdu-sanguantang-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sanguantang-6-cn-chengdu-sanguantang-13",
@@ -1419,8 +1843,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-sanyuan-8",
       "to_stop_id": "cn-chengdu-sanyuan-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sanyuan-9-cn-chengdu-sanyuan-8",
@@ -1429,8 +1857,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-sanyuan-9",
       "to_stop_id": "cn-chengdu-sanyuan-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-shenxianshu-5-cn-chengdu-shenxianshu-7",
@@ -1439,8 +1871,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-shenxianshu-5",
       "to_stop_id": "cn-chengdu-shenxianshu-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-shenxianshu-7-cn-chengdu-shenxianshu-5",
@@ -1463,8 +1899,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-shuangliu-west-railway-station-10",
       "to_stop_id": "cn-chengdu-shuangliu-west-railway-station-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-shuangliu-west-railway-station-3-cn-chengdu-shuangliu-west-railway-station-10",
@@ -1473,8 +1913,12 @@
       "to_line_id": "cn-chengdu-line-10",
       "from_stop_id": "cn-chengdu-shuangliu-west-railway-station-3",
       "to_stop_id": "cn-chengdu-shuangliu-west-railway-station-10",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-shuangqiao-road-4-cn-chengdu-shuangqiao-road-8",
@@ -1483,8 +1927,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-shuangqiao-road-4",
       "to_stop_id": "cn-chengdu-shuangqiao-road-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 329,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 394,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-shuangqiao-road-8-cn-chengdu-shuangqiao-road-4",
@@ -1493,8 +1941,12 @@
       "to_line_id": "cn-chengdu-line-4",
       "from_stop_id": "cn-chengdu-shuangqiao-road-8",
       "to_stop_id": "cn-chengdu-shuangqiao-road-4",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 329,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 394,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sichuan-gymnasium-1-cn-chengdu-sichuan-gymnasium-3",
@@ -1503,8 +1955,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-sichuan-gymnasium-1",
       "to_stop_id": "cn-chengdu-sichuan-gymnasium-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sichuan-gymnasium-3-cn-chengdu-sichuan-gymnasium-1",
@@ -1513,8 +1969,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-sichuan-gymnasium-3",
       "to_stop_id": "cn-chengdu-sichuan-gymnasium-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sichuan-normal-university-13-cn-chengdu-sichuan-normal-university-7",
@@ -1551,8 +2011,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-sima-bridge-3",
       "to_stop_id": "cn-chengdu-sima-bridge-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-sima-bridge-7-cn-chengdu-sima-bridge-3",
@@ -1575,8 +2039,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-south-railway-station-1",
       "to_stop_id": "cn-chengdu-south-railway-station-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-south-railway-station-1-cn-chengdu-south-railway-station-7",
@@ -1585,8 +2053,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-south-railway-station-1",
       "to_stop_id": "cn-chengdu-south-railway-station-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-south-railway-station-18-cn-chengdu-south-railway-station-1",
@@ -1595,8 +2067,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-south-railway-station-18",
       "to_stop_id": "cn-chengdu-south-railway-station-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-south-railway-station-18-cn-chengdu-south-railway-station-7",
@@ -1605,8 +2081,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-south-railway-station-18",
       "to_stop_id": "cn-chengdu-south-railway-station-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-south-railway-station-7-cn-chengdu-south-railway-station-1",
@@ -1615,8 +2095,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-south-railway-station-7",
       "to_stop_id": "cn-chengdu-south-railway-station-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-south-railway-station-7-cn-chengdu-south-railway-station-18",
@@ -1625,8 +2109,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-south-railway-station-7",
       "to_stop_id": "cn-chengdu-south-railway-station-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-southwest-jiaotong-university-6-cn-chengdu-southwest-jiaotong-university-7",
@@ -1649,8 +2137,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-southwest-jiaotong-university-7",
       "to_stop_id": "cn-chengdu-southwest-jiaotong-university-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-taipingyuan-10-cn-chengdu-taipingyuan-3",
@@ -1659,8 +2151,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-taipingyuan-10",
       "to_stop_id": "cn-chengdu-taipingyuan-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-taipingyuan-10-cn-chengdu-taipingyuan-7",
@@ -1669,8 +2165,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-taipingyuan-10",
       "to_stop_id": "cn-chengdu-taipingyuan-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-taipingyuan-3-cn-chengdu-taipingyuan-10",
@@ -1679,8 +2179,12 @@
       "to_line_id": "cn-chengdu-line-10",
       "from_stop_id": "cn-chengdu-taipingyuan-3",
       "to_stop_id": "cn-chengdu-taipingyuan-10",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-taipingyuan-3-cn-chengdu-taipingyuan-7",
@@ -1689,8 +2193,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-taipingyuan-3",
       "to_stop_id": "cn-chengdu-taipingyuan-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-taipingyuan-7-cn-chengdu-taipingyuan-10",
@@ -1713,8 +2221,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-taipingyuan-7",
       "to_stop_id": "cn-chengdu-taipingyuan-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-terminal-1and2-of-tianfu-international-airport-18-cn-chengdu-terminal-1and2-of-tianfu-international-airport-19",
@@ -1757,8 +2269,12 @@
       "to_line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-tianfu-commercial-district-6",
       "to_stop_id": "cn-chengdu-tianfu-commercial-district-19",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-tianfu-international-airport-north-18-cn-chengdu-tianfu-international-airport-north-19",
@@ -1801,8 +2317,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-tianfu-square-2",
       "to_stop_id": "cn-chengdu-tianfu-square-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-tianfu-station-transfer-only-18-cn-chengdu-tianfu-station-transfer-only-19",
@@ -1811,8 +2331,12 @@
       "to_line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-tianfu-station-transfer-only-18",
       "to_stop_id": "cn-chengdu-tianfu-station-transfer-only-19",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-tianfu-station-transfer-only-19-cn-chengdu-tianfu-station-transfer-only-18",
@@ -1821,8 +2345,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-tianfu-station-transfer-only-19",
       "to_stop_id": "cn-chengdu-tianfu-station-transfer-only-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-tianhe-road-2-cn-chengdu-tianhe-road-rong2",
@@ -1831,8 +2359,12 @@
       "to_line_id": "cn-chengdu-line-rong2",
       "from_stop_id": "cn-chengdu-tianhe-road-2",
       "to_stop_id": "cn-chengdu-tianhe-road-rong2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 446,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 535,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-tianhe-road-rong2-cn-chengdu-tianhe-road-2",
@@ -1841,8 +2373,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-tianhe-road-rong2",
       "to_stop_id": "cn-chengdu-tianhe-road-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 446,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 535,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-wangcong-temple-6-cn-chengdu-wangcong-temple-rong2",
@@ -1851,8 +2387,12 @@
       "to_line_id": "cn-chengdu-line-rong2",
       "from_stop_id": "cn-chengdu-wangcong-temple-6",
       "to_stop_id": "cn-chengdu-wangcong-temple-rong2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 446,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 535,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-wangcong-temple-rong2-cn-chengdu-wangcong-temple-6",
@@ -1861,8 +2401,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-wangcong-temple-rong2",
       "to_stop_id": "cn-chengdu-wangcong-temple-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 446,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 535,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-weijianian-1-cn-chengdu-weijianian-27",
@@ -1871,8 +2415,12 @@
       "to_line_id": "cn-chengdu-line-27",
       "from_stop_id": "cn-chengdu-weijianian-1",
       "to_stop_id": "cn-chengdu-weijianian-27",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-weijianian-27-cn-chengdu-weijianian-1",
@@ -1881,8 +2429,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-weijianian-27",
       "to_stop_id": "cn-chengdu-weijianian-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-western-china-intl-expo-city-1-cn-chengdu-western-china-intl-expo-city-18",
@@ -1905,8 +2457,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-western-china-intl-expo-city-1",
       "to_stop_id": "cn-chengdu-western-china-intl-expo-city-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-western-china-intl-expo-city-18-cn-chengdu-western-china-intl-expo-city-1",
@@ -1915,8 +2471,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-western-china-intl-expo-city-18",
       "to_stop_id": "cn-chengdu-western-china-intl-expo-city-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 323,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 387,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-western-china-intl-expo-city-18-cn-chengdu-western-china-intl-expo-city-6",
@@ -1939,8 +2499,12 @@
       "to_line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-western-china-intl-expo-city-6",
       "to_stop_id": "cn-chengdu-western-china-intl-expo-city-1",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-western-china-intl-expo-city-6-cn-chengdu-western-china-intl-expo-city-18",
@@ -1949,8 +2513,12 @@
       "to_line_id": "cn-chengdu-line-18",
       "from_stop_id": "cn-chengdu-western-china-intl-expo-city-6",
       "to_stop_id": "cn-chengdu-western-china-intl-expo-city-18",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-wuqing-south-road-3-cn-chengdu-wuqing-south-road-9",
@@ -1959,8 +2527,12 @@
       "to_line_id": "cn-chengdu-line-9",
       "from_stop_id": "cn-chengdu-wuqing-south-road-3",
       "to_stop_id": "cn-chengdu-wuqing-south-road-9",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-wuqing-south-road-9-cn-chengdu-wuqing-south-road-3",
@@ -1969,8 +2541,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-wuqing-south-road-9",
       "to_stop_id": "cn-chengdu-wuqing-south-road-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-xiaonan-street-13-cn-chengdu-xiaonan-street-17",
@@ -1979,8 +2555,12 @@
       "to_line_id": "cn-chengdu-line-17",
       "from_stop_id": "cn-chengdu-xiaonan-street-13",
       "to_stop_id": "cn-chengdu-xiaonan-street-17",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-xiaonan-street-17-cn-chengdu-xiaonan-street-13",
@@ -1989,8 +2569,12 @@
       "to_line_id": "cn-chengdu-line-13",
       "from_stop_id": "cn-chengdu-xiaonan-street-17",
       "to_stop_id": "cn-chengdu-xiaonan-street-13",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-xibei-bridge-5-cn-chengdu-xibei-bridge-6",
@@ -1999,8 +2583,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-xibei-bridge-5",
       "to_stop_id": "cn-chengdu-xibei-bridge-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-xibei-bridge-6-cn-chengdu-xibei-bridge-5",
@@ -2009,8 +2597,12 @@
       "to_line_id": "cn-chengdu-line-5",
       "from_stop_id": "cn-chengdu-xibei-bridge-6",
       "to_stop_id": "cn-chengdu-xibei-bridge-5",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-xinnanmen-13-cn-chengdu-xinnanmen-3",
@@ -2019,8 +2611,12 @@
       "to_line_id": "cn-chengdu-line-3",
       "from_stop_id": "cn-chengdu-xinnanmen-13",
       "to_stop_id": "cn-chengdu-xinnanmen-3",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-xinnanmen-3-cn-chengdu-xinnanmen-13",
@@ -2029,8 +2625,12 @@
       "to_line_id": "cn-chengdu-line-13",
       "from_stop_id": "cn-chengdu-xinnanmen-3",
       "to_stop_id": "cn-chengdu-xinnanmen-13",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-xipu-railway-station-2-cn-chengdu-xipu-railway-station-6",
@@ -2039,8 +2639,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-xipu-railway-station-2",
       "to_stop_id": "cn-chengdu-xipu-railway-station-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-xipu-railway-station-6-cn-chengdu-xipu-railway-station-2",
@@ -2049,8 +2653,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-xipu-railway-station-6",
       "to_stop_id": "cn-chengdu-xipu-railway-station-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-yangxi-flyover-2-cn-chengdu-yangxi-flyover-27",
@@ -2059,8 +2667,12 @@
       "to_line_id": "cn-chengdu-line-27",
       "from_stop_id": "cn-chengdu-yangxi-flyover-2",
       "to_stop_id": "cn-chengdu-yangxi-flyover-27",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-yangxi-flyover-27-cn-chengdu-yangxi-flyover-2",
@@ -2069,8 +2681,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-yangxi-flyover-27",
       "to_stop_id": "cn-chengdu-yangxi-flyover-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-yipintianxia-2-cn-chengdu-yipintianxia-7",
@@ -2079,8 +2695,12 @@
       "to_line_id": "cn-chengdu-line-7",
       "from_stop_id": "cn-chengdu-yipintianxia-2",
       "to_stop_id": "cn-chengdu-yipintianxia-7",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-yipintianxia-7-cn-chengdu-yipintianxia-2",
@@ -2089,8 +2709,12 @@
       "to_line_id": "cn-chengdu-line-2",
       "from_stop_id": "cn-chengdu-yipintianxia-7",
       "to_stop_id": "cn-chengdu-yipintianxia-2",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-yixin-lake-19-cn-chengdu-yixin-lake-5",
@@ -2113,8 +2737,12 @@
       "to_line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-yixin-lake-5",
       "to_stop_id": "cn-chengdu-yixin-lake-19",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-yushuang-road-4-cn-chengdu-yushuang-road-6",
@@ -2123,8 +2751,12 @@
       "to_line_id": "cn-chengdu-line-6",
       "from_stop_id": "cn-chengdu-yushuang-road-4",
       "to_stop_id": "cn-chengdu-yushuang-road-6",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-yushuang-road-6-cn-chengdu-yushuang-road-4",
@@ -2133,8 +2765,12 @@
       "to_line_id": "cn-chengdu-line-4",
       "from_stop_id": "cn-chengdu-yushuang-road-6",
       "to_stop_id": "cn-chengdu-yushuang-road-4",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-zhujiang-road-30-cn-chengdu-zhujiang-road-8",
@@ -2143,8 +2779,12 @@
       "to_line_id": "cn-chengdu-line-8",
       "from_stop_id": "cn-chengdu-zhujiang-road-30",
       "to_stop_id": "cn-chengdu-zhujiang-road-8",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-chengdu-zhujiang-road-8-cn-chengdu-zhujiang-road-30",
@@ -2153,8 +2793,12 @@
       "to_line_id": "cn-chengdu-line-30",
       "from_stop_id": "cn-chengdu-zhujiang-road-8",
       "to_stop_id": "cn-chengdu-zhujiang-road-30",
-      "walk_time_seconds": 120,
-      "source_id": "chengdurail-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     }
   ]
 }

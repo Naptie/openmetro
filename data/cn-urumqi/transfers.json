@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-urumqi",
-  "generated_at": "2026-10-12T09:03:47.197Z",
-  "source": [],
+  "generated_at": "2026-10-23T11:53:57.050Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T11:53:57.050Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-urumqi-international-airport-1-cn-urumqi-international-airport-apm",
@@ -11,7 +22,13 @@
       "from_line_id": "cn-urumqi-line-1",
       "to_line_id": "cn-urumqi-line-apm",
       "from_stop_id": "cn-urumqi-international-airport-1",
-      "to_stop_id": "cn-urumqi-international-airport-apm"
+      "to_stop_id": "cn-urumqi-international-airport-apm",
+      "walk_time_seconds": 117,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 140,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-urumqi-international-airport-apm-cn-urumqi-international-airport-1",
@@ -19,7 +36,13 @@
       "from_line_id": "cn-urumqi-line-apm",
       "to_line_id": "cn-urumqi-line-1",
       "from_stop_id": "cn-urumqi-international-airport-apm",
-      "to_stop_id": "cn-urumqi-international-airport-1"
+      "to_stop_id": "cn-urumqi-international-airport-1",
+      "walk_time_seconds": 117,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 140,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     }
   ]
 }

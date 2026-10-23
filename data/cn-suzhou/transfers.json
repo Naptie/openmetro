@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-suzhou",
-  "generated_at": "2026-09-28T04:11:22.603Z",
-  "source": [],
+  "generated_at": "2026-10-23T12:07:24.904Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T12:07:24.904Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-suzhou-baidang-north-7-cn-suzhou-baidang-north-8",
@@ -12,9 +23,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-baidang-north-7",
       "to_stop_id": "cn-suzhou-baidang-north-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-baidang-north-8-cn-suzhou-baidang-north-7",
@@ -23,9 +38,13 @@
       "to_line_id": "cn-suzhou-line-7",
       "from_stop_id": "cn-suzhou-baidang-north-8",
       "to_stop_id": "cn-suzhou-baidang-north-7",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-baiyangwan-gongyuan-6-cn-suzhou-baiyangwan-gongyuan-8",
@@ -34,9 +53,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-baiyangwan-gongyuan-6",
       "to_stop_id": "cn-suzhou-baiyangwan-gongyuan-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-baiyangwan-gongyuan-8-cn-suzhou-baiyangwan-gongyuan-6",
@@ -45,9 +68,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-baiyangwan-gongyuan-8",
       "to_stop_id": "cn-suzhou-baiyangwan-gongyuan-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-baodailu-3-cn-suzhou-baodailu-4",
@@ -56,9 +83,13 @@
       "to_line_id": "cn-suzhou-line-4",
       "from_stop_id": "cn-suzhou-baodailu-3",
       "to_stop_id": "cn-suzhou-baodailu-4",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-baodailu-4-cn-suzhou-baodailu-3",
@@ -67,9 +98,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-baodailu-4",
       "to_stop_id": "cn-suzhou-baodailu-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-dongfang-zhimen-1-cn-suzhou-dongfang-zhimen-3",
@@ -78,9 +113,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-dongfang-zhimen-1",
       "to_stop_id": "cn-suzhou-dongfang-zhimen-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 293,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-dongfang-zhimen-3-cn-suzhou-dongfang-zhimen-1",
@@ -89,9 +128,13 @@
       "to_line_id": "cn-suzhou-line-1",
       "from_stop_id": "cn-suzhou-dongfang-zhimen-3",
       "to_stop_id": "cn-suzhou-dongfang-zhimen-1",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 293,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-fengting-dadao-3-cn-suzhou-fengting-dadao-5",
@@ -100,9 +143,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-fengting-dadao-3",
       "to_stop_id": "cn-suzhou-fengting-dadao-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-fengting-dadao-5-cn-suzhou-fengting-dadao-3",
@@ -111,9 +158,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-fengting-dadao-5",
       "to_stop_id": "cn-suzhou-fengting-dadao-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-guangji-nanlu-1-cn-suzhou-guangji-nanlu-2",
@@ -122,9 +173,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-guangji-nanlu-1",
       "to_stop_id": "cn-suzhou-guangji-nanlu-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-guangji-nanlu-2-cn-suzhou-guangji-nanlu-1",
@@ -133,9 +188,13 @@
       "to_line_id": "cn-suzhou-line-1",
       "from_stop_id": "cn-suzhou-guangji-nanlu-2",
       "to_stop_id": "cn-suzhou-guangji-nanlu-1",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-guoxiang-2-cn-suzhou-guoxiang-7",
@@ -144,9 +203,13 @@
       "to_line_id": "cn-suzhou-line-7",
       "from_stop_id": "cn-suzhou-guoxiang-2",
       "to_stop_id": "cn-suzhou-guoxiang-7",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-guoxiang-7-cn-suzhou-guoxiang-2",
@@ -155,9 +218,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-guoxiang-7",
       "to_stop_id": "cn-suzhou-guoxiang-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-hongzhuang-4-cn-suzhou-hongzhuang-7",
@@ -166,9 +233,13 @@
       "to_line_id": "cn-suzhou-line-7",
       "from_stop_id": "cn-suzhou-hongzhuang-4",
       "to_stop_id": "cn-suzhou-hongzhuang-7",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 122,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-hongzhuang-7-cn-suzhou-hongzhuang-4",
@@ -177,9 +248,13 @@
       "to_line_id": "cn-suzhou-line-4",
       "from_stop_id": "cn-suzhou-hongzhuang-7",
       "to_stop_id": "cn-suzhou-hongzhuang-4",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 122,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-huangtiandang-5-cn-suzhou-huangtiandang-7",
@@ -188,9 +263,13 @@
       "to_line_id": "cn-suzhou-line-7",
       "from_stop_id": "cn-suzhou-huangtiandang-5",
       "to_stop_id": "cn-suzhou-huangtiandang-7",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-huangtiandang-7-cn-suzhou-huangtiandang-5",
@@ -199,9 +278,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-huangtiandang-7",
       "to_stop_id": "cn-suzhou-huangtiandang-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-jinshanglu-2-cn-suzhou-jinshanglu-6",
@@ -210,9 +293,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-jinshanglu-2",
       "to_stop_id": "cn-suzhou-jinshanglu-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-jinshanglu-6-cn-suzhou-jinshanglu-2",
@@ -221,9 +308,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-jinshanglu-6",
       "to_stop_id": "cn-suzhou-jinshanglu-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-jinsheqiao-3-cn-suzhou-jinsheqiao-5",
@@ -232,9 +323,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-jinsheqiao-3",
       "to_stop_id": "cn-suzhou-jinsheqiao-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-jinsheqiao-5-cn-suzhou-jinsheqiao-3",
@@ -243,9 +338,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-jinsheqiao-5",
       "to_stop_id": "cn-suzhou-jinsheqiao-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-laodonglu-2-cn-suzhou-laodonglu-5",
@@ -254,9 +353,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-laodonglu-2",
       "to_stop_id": "cn-suzhou-laodonglu-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 381,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-laodonglu-5-cn-suzhou-laodonglu-2",
@@ -265,9 +368,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-laodonglu-5",
       "to_stop_id": "cn-suzhou-laodonglu-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 381,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-leqiao-1-cn-suzhou-leqiao-4",
@@ -276,9 +383,13 @@
       "to_line_id": "cn-suzhou-line-4",
       "from_stop_id": "cn-suzhou-leqiao-1",
       "to_stop_id": "cn-suzhou-leqiao-4",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-leqiao-4-cn-suzhou-leqiao-1",
@@ -287,9 +398,13 @@
       "to_line_id": "cn-suzhou-line-1",
       "from_stop_id": "cn-suzhou-leqiao-4",
       "to_stop_id": "cn-suzhou-leqiao-1",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-ligongdi-west-3-cn-suzhou-ligongdi-west-6",
@@ -298,9 +413,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-ligongdi-west-3",
       "to_stop_id": "cn-suzhou-ligongdi-west-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-ligongdi-west-6-cn-suzhou-ligongdi-west-3",
@@ -309,9 +428,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-ligongdi-west-6",
       "to_stop_id": "cn-suzhou-ligongdi-west-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-lindunlu-1-cn-suzhou-lindunlu-6",
@@ -320,9 +443,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-lindunlu-1",
       "to_stop_id": "cn-suzhou-lindunlu-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-lindunlu-6-cn-suzhou-lindunlu-1",
@@ -331,9 +458,13 @@
       "to_line_id": "cn-suzhou-line-1",
       "from_stop_id": "cn-suzhou-lindunlu-6",
       "to_stop_id": "cn-suzhou-lindunlu-1",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-nanmen-4-cn-suzhou-nanmen-5",
@@ -342,9 +473,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-nanmen-4",
       "to_stop_id": "cn-suzhou-nanmen-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-nanmen-5-cn-suzhou-nanmen-4",
@@ -353,9 +488,13 @@
       "to_line_id": "cn-suzhou-line-4",
       "from_stop_id": "cn-suzhou-nanmen-5",
       "to_stop_id": "cn-suzhou-nanmen-4",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-panlilu-2-cn-suzhou-panlilu-3",
@@ -364,9 +503,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-panlilu-2",
       "to_stop_id": "cn-suzhou-panlilu-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-panlilu-3-cn-suzhou-panlilu-2",
@@ -375,9 +518,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-panlilu-3",
       "to_stop_id": "cn-suzhou-panlilu-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-pinghelu-2-cn-suzhou-pinghelu-6",
@@ -386,9 +533,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-pinghelu-2",
       "to_stop_id": "cn-suzhou-pinghelu-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-pinghelu-6-cn-suzhou-pinghelu-2",
@@ -397,9 +548,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-pinghelu-6",
       "to_stop_id": "cn-suzhou-pinghelu-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-qiongjidun-6-cn-suzhou-qiongjidun-8",
@@ -408,9 +563,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-qiongjidun-6",
       "to_stop_id": "cn-suzhou-qiongjidun-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 293,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-qiongjidun-8-cn-suzhou-qiongjidun-6",
@@ -419,9 +578,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-qiongjidun-8",
       "to_stop_id": "cn-suzhou-qiongjidun-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 293,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-reyunqiao-6-cn-suzhou-reyunqiao-7",
@@ -430,9 +593,13 @@
       "to_line_id": "cn-suzhou-line-7",
       "from_stop_id": "cn-suzhou-reyunqiao-6",
       "to_stop_id": "cn-suzhou-reyunqiao-7",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-reyunqiao-7-cn-suzhou-reyunqiao-6",
@@ -441,9 +608,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-reyunqiao-7",
       "to_stop_id": "cn-suzhou-reyunqiao-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-sangtiandao-2-cn-suzhou-sangtiandao-6",
@@ -452,9 +623,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-sangtiandao-2",
       "to_stop_id": "cn-suzhou-sangtiandao-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-sangtiandao-6-cn-suzhou-sangtiandao-2",
@@ -463,9 +638,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-sangtiandao-6",
       "to_stop_id": "cn-suzhou-sangtiandao-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-shidaiguangchang-1-cn-suzhou-shidaiguangchang-8",
@@ -474,9 +653,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-shidaiguangchang-1",
       "to_stop_id": "cn-suzhou-shidaiguangchang-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-shidaiguangchang-8-cn-suzhou-shidaiguangchang-1",
@@ -485,9 +668,13 @@
       "to_line_id": "cn-suzhou-line-1",
       "from_stop_id": "cn-suzhou-shidaiguangchang-8",
       "to_stop_id": "cn-suzhou-shidaiguangchang-1",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-shihu-donglu-2-cn-suzhou-shihu-donglu-4",
@@ -496,9 +683,13 @@
       "to_line_id": "cn-suzhou-line-4",
       "from_stop_id": "cn-suzhou-shihu-donglu-2",
       "to_stop_id": "cn-suzhou-shihu-donglu-4",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-shihu-donglu-4-cn-suzhou-shihu-donglu-2",
@@ -507,9 +698,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-shihu-donglu-4",
       "to_stop_id": "cn-suzhou-shihu-donglu-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-shizishan-1-cn-suzhou-shizishan-3",
@@ -518,9 +713,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-shizishan-1",
       "to_stop_id": "cn-suzhou-shizishan-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-shizishan-3-cn-suzhou-shizishan-1",
@@ -529,9 +728,13 @@
       "to_line_id": "cn-suzhou-line-1",
       "from_stop_id": "cn-suzhou-shizishan-3",
       "to_stop_id": "cn-suzhou-shizishan-1",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-songtaojie-2-cn-suzhou-songtaojie-8",
@@ -540,9 +743,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-songtaojie-2",
       "to_stop_id": "cn-suzhou-songtaojie-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-songtaojie-8-cn-suzhou-songtaojie-2",
@@ -551,9 +758,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-songtaojie-8",
       "to_stop_id": "cn-suzhou-songtaojie-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 225,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-sujin-4-cn-suzhou-sujin-6",
@@ -562,9 +773,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-sujin-4",
       "to_stop_id": "cn-suzhou-sujin-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-sujin-6-cn-suzhou-sujin-4",
@@ -573,9 +788,13 @@
       "to_line_id": "cn-suzhou-line-4",
       "from_stop_id": "cn-suzhou-sujin-6",
       "to_stop_id": "cn-suzhou-sujin-4",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-sunwu-jinianyuan-4-cn-suzhou-sunwu-jinianyuan-8",
@@ -584,9 +803,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-sunwu-jinianyuan-4",
       "to_stop_id": "cn-suzhou-sunwu-jinianyuan-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 258,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-sunwu-jinianyuan-8-cn-suzhou-sunwu-jinianyuan-4",
@@ -595,9 +818,13 @@
       "to_line_id": "cn-suzhou-line-4",
       "from_stop_id": "cn-suzhou-sunwu-jinianyuan-8",
       "to_stop_id": "cn-suzhou-sunwu-jinianyuan-4",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 258,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suoshanqiao-west-3-cn-suzhou-suoshanqiao-west-5",
@@ -606,9 +833,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-suoshanqiao-west-3",
       "to_stop_id": "cn-suzhou-suoshanqiao-west-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suoshanqiao-west-5-cn-suzhou-suoshanqiao-west-3",
@@ -617,9 +848,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-suoshanqiao-west-5",
       "to_stop_id": "cn-suzhou-suoshanqiao-west-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suzhou-olympic-sports-centre-5-cn-suzhou-suzhou-olympic-sports-centre-6",
@@ -628,9 +863,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-suzhou-olympic-sports-centre-5",
       "to_stop_id": "cn-suzhou-suzhou-olympic-sports-centre-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suzhou-olympic-sports-centre-6-cn-suzhou-suzhou-olympic-sports-centre-5",
@@ -639,9 +878,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-suzhou-olympic-sports-centre-6",
       "to_stop_id": "cn-suzhou-suzhou-olympic-sports-centre-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suzhou-xinqu-railway-station-3-cn-suzhou-suzhou-xinqu-railway-station-6",
@@ -650,9 +893,13 @@
       "to_line_id": "cn-suzhou-line-6",
       "from_stop_id": "cn-suzhou-suzhou-xinqu-railway-station-3",
       "to_stop_id": "cn-suzhou-suzhou-xinqu-railway-station-6",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 337,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suzhou-xinqu-railway-station-6-cn-suzhou-suzhou-xinqu-railway-station-3",
@@ -661,9 +908,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-suzhou-xinqu-railway-station-6",
       "to_stop_id": "cn-suzhou-suzhou-xinqu-railway-station-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 337,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suzhou-yuanqu-railway-station-3-cn-suzhou-suzhou-yuanqu-railway-station-8",
@@ -672,9 +923,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-suzhou-yuanqu-railway-station-3",
       "to_stop_id": "cn-suzhou-suzhou-yuanqu-railway-station-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 205,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suzhou-yuanqu-railway-station-8-cn-suzhou-suzhou-yuanqu-railway-station-3",
@@ -683,9 +938,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-suzhou-yuanqu-railway-station-8",
       "to_stop_id": "cn-suzhou-suzhou-yuanqu-railway-station-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 205,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 246,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suzhourailwaystation-2-cn-suzhou-suzhourailwaystation-4",
@@ -694,9 +953,13 @@
       "to_line_id": "cn-suzhou-line-4",
       "from_stop_id": "cn-suzhou-suzhourailwaystation-2",
       "to_stop_id": "cn-suzhou-suzhourailwaystation-4",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-suzhourailwaystation-4-cn-suzhou-suzhourailwaystation-2",
@@ -705,9 +968,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-suzhourailwaystation-4",
       "to_stop_id": "cn-suzhou-suzhourailwaystation-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-tangzhuang-3-cn-suzhou-tangzhuang-8",
@@ -716,9 +983,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-tangzhuang-3",
       "to_stop_id": "cn-suzhou-tangzhuang-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-tangzhuang-8-cn-suzhou-tangzhuang-3",
@@ -727,9 +998,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-tangzhuang-8",
       "to_stop_id": "cn-suzhou-tangzhuang-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-tongyuanlu-south-3-cn-suzhou-tongyuanlu-south-7",
@@ -738,9 +1013,13 @@
       "to_line_id": "cn-suzhou-line-7",
       "from_stop_id": "cn-suzhou-tongyuanlu-south-3",
       "to_stop_id": "cn-suzhou-tongyuanlu-south-7",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-tongyuanlu-south-7-cn-suzhou-tongyuanlu-south-3",
@@ -749,9 +1028,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-tongyuanlu-south-7",
       "to_stop_id": "cn-suzhou-tongyuanlu-south-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-weiting-11-cn-suzhou-weiting-3",
@@ -760,12 +1043,14 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-weiting-11",
       "to_stop_id": "cn-suzhou-weiting-3",
-      "walk_time_seconds": 0,
+      "walk_time_seconds": 213,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-through-run-3-11",
+      "source_id": "baidu-transit",
       "extras": {
-        "through_run": true
-      }
+        "through_run": true,
+        "walk_source": "baidu-transit"
+      },
+      "walk_distance_meters": 255
     },
     {
       "id": "xfer-cn-suzhou-weiting-3-cn-suzhou-weiting-11",
@@ -774,12 +1059,14 @@
       "to_line_id": "cn-suzhou-line-11",
       "from_stop_id": "cn-suzhou-weiting-3",
       "to_stop_id": "cn-suzhou-weiting-11",
-      "walk_time_seconds": 0,
+      "walk_time_seconds": 213,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-through-run-3-11",
+      "source_id": "baidu-transit",
       "extras": {
-        "through_run": true
-      }
+        "through_run": true,
+        "walk_source": "baidu-transit"
+      },
+      "walk_distance_meters": 255
     },
     {
       "id": "xfer-cn-suzhou-xietang-5-cn-suzhou-xietang-8",
@@ -788,9 +1075,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-xietang-5",
       "to_stop_id": "cn-suzhou-xietang-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-xietang-8-cn-suzhou-xietang-5",
@@ -799,9 +1090,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-xietang-8",
       "to_stop_id": "cn-suzhou-xietang-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-xijinqiao-3-cn-suzhou-xijinqiao-8",
@@ -810,9 +1105,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-xijinqiao-3",
       "to_stop_id": "cn-suzhou-xijinqiao-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-xijinqiao-8-cn-suzhou-xijinqiao-3",
@@ -821,9 +1120,13 @@
       "to_line_id": "cn-suzhou-line-3",
       "from_stop_id": "cn-suzhou-xijinqiao-8",
       "to_stop_id": "cn-suzhou-xijinqiao-3",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 122,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-xingtangjie-1-cn-suzhou-xingtangjie-5",
@@ -832,9 +1135,13 @@
       "to_line_id": "cn-suzhou-line-5",
       "from_stop_id": "cn-suzhou-xingtangjie-1",
       "to_stop_id": "cn-suzhou-xingtangjie-5",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-xingtangjie-5-cn-suzhou-xingtangjie-1",
@@ -843,9 +1150,13 @@
       "to_line_id": "cn-suzhou-line-1",
       "from_stop_id": "cn-suzhou-xingtangjie-5",
       "to_stop_id": "cn-suzhou-xingtangjie-1",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 193,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-yangchenghuzhonglu-2-cn-suzhou-yangchenghuzhonglu-8",
@@ -854,9 +1165,13 @@
       "to_line_id": "cn-suzhou-line-8",
       "from_stop_id": "cn-suzhou-yangchenghuzhonglu-2",
       "to_stop_id": "cn-suzhou-yangchenghuzhonglu-8",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 381,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-yangchenghuzhonglu-8-cn-suzhou-yangchenghuzhonglu-2",
@@ -865,9 +1180,13 @@
       "to_line_id": "cn-suzhou-line-2",
       "from_stop_id": "cn-suzhou-yangchenghuzhonglu-8",
       "to_stop_id": "cn-suzhou-yangchenghuzhonglu-2",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 381,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-zhongyang-gongyuan-1-cn-suzhou-zhongyang-gongyuan-7",
@@ -876,9 +1195,13 @@
       "to_line_id": "cn-suzhou-line-7",
       "from_stop_id": "cn-suzhou-zhongyang-gongyuan-1",
       "to_stop_id": "cn-suzhou-zhongyang-gongyuan-7",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 293,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-suzhou-zhongyang-gongyuan-7-cn-suzhou-zhongyang-gongyuan-1",
@@ -887,9 +1210,13 @@
       "to_line_id": "cn-suzhou-line-1",
       "from_stop_id": "cn-suzhou-zhongyang-gongyuan-7",
       "to_stop_id": "cn-suzhou-zhongyang-gongyuan-1",
-      "walk_time_seconds": 300,
+      "walk_time_seconds": 293,
       "is_out_of_station": false,
-      "source_id": "sz-mtr-map-transfer-5min"
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 351,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     }
   ]
 }

@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-wuhan",
-  "generated_at": "2026-09-28T03:06:54.916Z",
-  "source": [],
+  "generated_at": "2026-10-23T12:11:31.695Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T12:11:31.695Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-wuhan-changqing-huayuan-2-cn-wuhan-changqing-huayuan-6",
@@ -246,8 +257,12 @@
       "to_line_id": "cn-wuhan-line-4",
       "from_stop_id": "cn-wuhan-hongshan-square-2",
       "to_stop_id": "cn-wuhan-hongshan-square-4",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-hongshan-square-4-cn-wuhan-hongshan-square-2",
@@ -256,8 +271,12 @@
       "to_line_id": "cn-wuhan-line-2",
       "from_stop_id": "cn-wuhan-hongshan-square-4",
       "to_stop_id": "cn-wuhan-hongshan-square-2",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-hongtu-boulevard-2-cn-wuhan-hongtu-boulevard-3",
@@ -526,8 +545,12 @@
       "to_line_id": "cn-wuhan-line-6",
       "from_stop_id": "cn-wuhan-laoguancun-16",
       "to_stop_id": "cn-wuhan-laoguancun-6",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-laoguancun-6-cn-wuhan-laoguancun-16",
@@ -536,8 +559,12 @@
       "to_line_id": "cn-wuhan-line-16",
       "from_stop_id": "cn-wuhan-laoguancun-6",
       "to_stop_id": "cn-wuhan-laoguancun-16",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-mafangshan-11-cn-wuhan-mafangshan-8",
@@ -650,8 +677,12 @@
       "to_line_id": "cn-wuhan-line-7",
       "from_stop_id": "cn-wuhan-sanyang-road-1",
       "to_stop_id": "cn-wuhan-sanyang-road-7",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 424,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 508,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-sanyang-road-7-cn-wuhan-sanyang-road-1",
@@ -660,8 +691,12 @@
       "to_line_id": "cn-wuhan-line-1",
       "from_stop_id": "cn-wuhan-sanyang-road-7",
       "to_stop_id": "cn-wuhan-sanyang-road-1",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 424,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 508,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-south-international-expo-center-12-cn-wuhan-south-international-expo-center-16",
@@ -709,8 +744,12 @@
       "to_line_id": "cn-wuhan-line-6",
       "from_stop_id": "cn-wuhan-south-international-expo-center-16",
       "to_stop_id": "cn-wuhan-south-international-expo-center-6",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-south-international-expo-center-6-cn-wuhan-south-international-expo-center-12",
@@ -732,8 +771,12 @@
       "to_line_id": "cn-wuhan-line-16",
       "from_stop_id": "cn-wuhan-south-international-expo-center-6",
       "to_stop_id": "cn-wuhan-south-international-expo-center-16",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-wangjiadun-12-cn-wuhan-wangjiadun-8",
@@ -1002,8 +1045,12 @@
       "to_line_id": "cn-wuhan-line-7",
       "from_stop_id": "cn-wuhan-xujiapeng-5",
       "to_stop_id": "cn-wuhan-xujiapeng-7",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 323,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 387,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-xujiapeng-5-cn-wuhan-xujiapeng-8",
@@ -1025,8 +1072,12 @@
       "to_line_id": "cn-wuhan-line-5",
       "from_stop_id": "cn-wuhan-xujiapeng-7",
       "to_stop_id": "cn-wuhan-xujiapeng-5",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 323,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 387,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-xujiapeng-7-cn-wuhan-xujiapeng-8",
@@ -1035,8 +1086,12 @@
       "to_line_id": "cn-wuhan-line-8",
       "from_stop_id": "cn-wuhan-xujiapeng-7",
       "to_stop_id": "cn-wuhan-xujiapeng-8",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 452,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 542,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-xujiapeng-8-cn-wuhan-xujiapeng-5",
@@ -1058,8 +1113,12 @@
       "to_line_id": "cn-wuhan-line-7",
       "from_stop_id": "cn-wuhan-xujiapeng-8",
       "to_stop_id": "cn-wuhan-xujiapeng-7",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 452,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 542,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-xunlimen-1-cn-wuhan-xunlimen-2",
@@ -1068,8 +1127,12 @@
       "to_line_id": "cn-wuhan-line-2",
       "from_stop_id": "cn-wuhan-xunlimen-1",
       "to_stop_id": "cn-wuhan-xunlimen-2",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-xunlimen-2-cn-wuhan-xunlimen-1",
@@ -1078,8 +1141,12 @@
       "to_line_id": "cn-wuhan-line-1",
       "from_stop_id": "cn-wuhan-xunlimen-2",
       "to_stop_id": "cn-wuhan-xunlimen-1",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-yezhihu-7-cn-wuhan-yezhihu-8",
@@ -1088,8 +1155,12 @@
       "to_line_id": "cn-wuhan-line-8",
       "from_stop_id": "cn-wuhan-yezhihu-7",
       "to_stop_id": "cn-wuhan-yezhihu-8",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-yezhihu-8-cn-wuhan-yezhihu-7",
@@ -1098,8 +1169,12 @@
       "to_line_id": "cn-wuhan-line-7",
       "from_stop_id": "cn-wuhan-yezhihu-8",
       "to_stop_id": "cn-wuhan-yezhihu-7",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-yuanlin-road-12-cn-wuhan-yuanlin-road-4",
@@ -1108,8 +1183,12 @@
       "to_line_id": "cn-wuhan-line-4",
       "from_stop_id": "cn-wuhan-yuanlin-road-12",
       "to_stop_id": "cn-wuhan-yuanlin-road-4",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-yuanlin-road-4-cn-wuhan-yuanlin-road-12",
@@ -1118,8 +1197,12 @@
       "to_line_id": "cn-wuhan-line-12",
       "from_stop_id": "cn-wuhan-yuanlin-road-4",
       "to_stop_id": "cn-wuhan-yuanlin-road-12",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-yuejiazui-4-cn-wuhan-yuejiazui-8",
@@ -1128,8 +1211,12 @@
       "to_line_id": "cn-wuhan-line-8",
       "from_stop_id": "cn-wuhan-yuejiazui-4",
       "to_stop_id": "cn-wuhan-yuejiazui-8",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-yuejiazui-8-cn-wuhan-yuejiazui-4",
@@ -1138,8 +1225,12 @@
       "to_line_id": "cn-wuhan-line-4",
       "from_stop_id": "cn-wuhan-yuejiazui-8",
       "to_stop_id": "cn-wuhan-yuejiazui-4",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zhaojiatiao-3-cn-wuhan-zhaojiatiao-8",
@@ -1148,8 +1239,12 @@
       "to_line_id": "cn-wuhan-line-8",
       "from_stop_id": "cn-wuhan-zhaojiatiao-3",
       "to_stop_id": "cn-wuhan-zhaojiatiao-8",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zhaojiatiao-8-cn-wuhan-zhaojiatiao-3",
@@ -1158,8 +1253,12 @@
       "to_line_id": "cn-wuhan-line-3",
       "from_stop_id": "cn-wuhan-zhaojiatiao-8",
       "to_stop_id": "cn-wuhan-zhaojiatiao-3",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zhongjiacun-4-cn-wuhan-zhongjiacun-6",
@@ -1168,8 +1267,12 @@
       "to_line_id": "cn-wuhan-line-6",
       "from_stop_id": "cn-wuhan-zhongjiacun-4",
       "to_stop_id": "cn-wuhan-zhongjiacun-6",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zhongjiacun-6-cn-wuhan-zhongjiacun-4",
@@ -1178,8 +1281,12 @@
       "to_line_id": "cn-wuhan-line-4",
       "from_stop_id": "cn-wuhan-zhongjiacun-6",
       "to_stop_id": "cn-wuhan-zhongjiacun-4",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zhongnan-road-2-cn-wuhan-zhongnan-road-4",
@@ -1188,8 +1295,12 @@
       "to_line_id": "cn-wuhan-line-4",
       "from_stop_id": "cn-wuhan-zhongnan-road-2",
       "to_stop_id": "cn-wuhan-zhongnan-road-4",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zhongnan-road-4-cn-wuhan-zhongnan-road-2",
@@ -1198,8 +1309,12 @@
       "to_line_id": "cn-wuhan-line-2",
       "from_stop_id": "cn-wuhan-zhongnan-road-4",
       "to_stop_id": "cn-wuhan-zhongnan-road-2",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 122,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 146,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zong-guan-1-cn-wuhan-zong-guan-3",
@@ -1208,8 +1323,12 @@
       "to_line_id": "cn-wuhan-line-3",
       "from_stop_id": "cn-wuhan-zong-guan-1",
       "to_stop_id": "cn-wuhan-zong-guan-3",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-wuhan-zong-guan-3-cn-wuhan-zong-guan-1",
@@ -1218,8 +1337,12 @@
       "to_line_id": "cn-wuhan-line-1",
       "from_stop_id": "cn-wuhan-zong-guan-3",
       "to_stop_id": "cn-wuhan-zong-guan-1",
-      "walk_time_seconds": 120,
-      "source_id": "wuhanrt-routing-default"
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     }
   ]
 }

@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-hangzhou",
-  "generated_at": "2026-09-22T19:30:48.987Z",
-  "source": [],
+  "generated_at": "2026-10-23T12:07:57.568Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-10-23T12:07:57.568Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "cn-hangzhou-aoti-zhongxin",
@@ -951,43 +962,6 @@
       }
     },
     {
-      "id": "cn-hangzhou-chuangming-road",
-      "name": "创明路",
-      "names": {
-        "zh": "创明路",
-        "en": "Chuangming Road"
-      },
-      "location": {
-        "lon": 120.0031854203823,
-        "lat": 30.26080077851791,
-        "crs": "gcj02"
-      },
-      "status": "under_construction",
-      "source_ids": [
-        {
-          "source": "hzmetro-operation-all",
-          "id": "217"
-        },
-        {
-          "source": "hzmetro-operation-all",
-          "id": "创明路"
-        }
-      ],
-      "extras": {
-        "official_codes": [
-          "217"
-        ],
-        "description": "创明路站位于杭州市余杭区境内，创明路与水乡北路交叉口，属于闲林街道，目前暂未开通，站外在建杭州国际体育中心（包含足球场、综合体育馆、游泳馆）、余杭文化艺术中心、杭州音乐厅、余杭大剧院等大型场馆。车站设有6个出入口，分别是A、B1、B2、B3、C、D口，其中B1口为预留下沉广场连接口，是联锁设备集中站。",
-        "lines": [
-          "3号线"
-        ],
-        "location_source": "overpass",
-        "names_source": "wikidata",
-        "service_status_source": "official_description",
-        "wikidata_qid": "Q112311693"
-      }
-    },
-    {
       "id": "cn-hangzhou-chuyun-road",
       "name": "储运路",
       "names": {
@@ -1080,6 +1054,44 @@
         "location_source": "subway",
         "location_provider": "amap_subway",
         "names_source": "source"
+      }
+    },
+    {
+      "id": "cn-hangzhou-cj2t8",
+      "name": "创明路",
+      "names": {
+        "zh": "创明路",
+        "en": "Chuangming Road"
+      },
+      "status": "under_construction",
+      "source_ids": [
+        {
+          "source": "hzmetro-operation-all",
+          "id": "217"
+        },
+        {
+          "source": "hzmetro-operation-all",
+          "id": "创明路"
+        }
+      ],
+      "extras": {
+        "official_codes": [
+          "217"
+        ],
+        "description": "创明路站位于杭州市余杭区境内，创明路与水乡北路交叉口，属于闲林街道，目前暂未开通，站外在建杭州国际体育中心（包含足球场、综合体育馆、游泳馆）、余杭文化艺术中心、杭州音乐厅、余杭大剧院等大型场馆。车站设有6个出入口，分别是A、B1、B2、B3、C、D口，其中B1口为预留下沉广场连接口，是联锁设备集中站。",
+        "lines": [
+          "3号线"
+        ],
+        "names_source": "derived",
+        "service_status_source": "official_description",
+        "location_source": "baidu-place",
+        "baidu_place_uid": "97759ba5a3ba38888c1a89f0",
+        "baidu_place_name": "创明路"
+      },
+      "location": {
+        "lon": 120.008791,
+        "lat": 30.267064,
+        "crs": "gcj02"
       }
     },
     {
