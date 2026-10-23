@@ -6,7 +6,13 @@
 #     that measures the segment times and transfer walks that the operator
 #     does not publish, so a scheduled sync without it would rewrite those
 #     layers back as defaults.
-#   - Monthly (1st 04:41 UTC): fares per city (OD matrix via operator planners)
+#   - Monthly (1st 04:41 UTC): the same topology layers plus fares per city
+#     (OD matrix via operator planners). Fare ladders are expensive, so they
+#     run monthly; the topology layers ride along so the monthly run publishes
+#     a complete, self-consistent snapshot.
+#
+# Both crons share one concurrency group, so a monthly run that lands on a
+# Monday waits for the weekly run instead of overlapping with it.
 #
 # Note on network egress:
 #   Chinese official metro APIs are not reliably reachable from GitHub-hosted
@@ -47,7 +53,10 @@ defaults:
     shell: bash
 
 concurrency:
-  group: sync-${{ github.event_name }}-${{ github.event.inputs.networks || github.event.schedule }}
+  # Both crons share one group so a monthly run that lands on a Monday waits
+  # for the weekly run instead of launching a second set of 28 fare-matrix
+  # harvests against the operator planners at the same time.
+  group: sync-${{ github.event_name == 'schedule' && 'schedule' || github.event.inputs.networks || 'manual' }}
   cancel-in-progress: false
 
 jobs:
@@ -76,9 +85,11 @@ jobs:
     name: Topology (${{ matrix.network }})
     needs: discover
     if: >
-      (github.event_name == 'schedule' && github.event.schedule == '17 3 * * 1') ||
+      (github.event_name == 'schedule' &&
+       (github.event.schedule == '17 3 * * 1' || github.event.schedule == '41 4 1 * *')) ||
       (github.event_name == 'workflow_dispatch' &&
-       (contains(inputs.layers, 'topology') || contains(inputs.layers, 'timetables')))
+       (contains(inputs.layers, 'topology') || contains(inputs.layers, 'timetables') ||
+        contains(inputs.layers, 'enrichment') || contains(inputs.layers, 'gapfill')))
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
@@ -105,18 +116,18 @@ jobs:
           OPENMETRO_BAIDU_AK: ${{ secrets.OPENMETRO_BAIDU_AK }}
         run: |
           echo "proxy=${OPENMETRO_REVERSE_PROXY:-none}"
-          LAYERS="topology,timetables,enrichment"
-          # The scheduled run always includes gapfill. It is the layer that
-          # upgrades weak segment times to planner-measured values and replaces
-          # baked transfer-walk defaults with real measurements — without it a
-          # scheduled sync rewrites those layers back as defaults. Measured on
-          # 2026-10-23: with gapfill all 8 recently added networks kept
-          # 9/9 official/100%, without it 5 of them dropped to
-          # `transfer_times: default / coverage 0`.
-          if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
-            LAYERS="${LAYERS},gapfill"
-          elif echo "${{ inputs.layers }}" | grep -q gapfill; then
-            LAYERS="${LAYERS},gapfill"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # A manual dispatch runs exactly the layers that were asked for.
+            LAYERS="${{ inputs.layers }}"
+          else
+            # The scheduled run always includes gapfill. It is the layer that
+            # upgrades weak segment times to planner-measured values and
+            # replaces baked transfer-walk defaults with real measurements —
+            # without it a scheduled sync rewrites those layers back as
+            # defaults. Measured on 2026-10-23: with gapfill all 8 recently
+            # added networks kept 9/9 official/100%, without it 5 of them
+            # dropped to `transfer_times: default / coverage 0`.
+            LAYERS="topology,timetables,enrichment,gapfill"
           fi
           bun run data:sync --network "${{ matrix.network }}" --layer "${LAYERS}"
 
@@ -153,10 +164,12 @@ jobs:
   fares:
     name: Fares (${{ matrix.network }})
     needs: discover
-    # Fare planners are also CN-restricted from GHA; skip on schedule and only
-    # run when explicitly requested (with reachable egress).
+    # The monthly cron owns the fare matrices; a manual dispatch can ask for
+    # them too. Fare planners are CN-restricted from GHA, so the reverse proxy
+    # (and the Baidu key some fare ladders need) must be present either way.
     if: >
-      github.event_name == 'workflow_dispatch' && contains(inputs.layers, 'fares')
+      (github.event_name == 'schedule' && github.event.schedule == '41 4 1 * *') ||
+      (github.event_name == 'workflow_dispatch' && contains(inputs.layers, 'fares'))
     runs-on: ubuntu-latest
     timeout-minutes: 360
     strategy:
@@ -180,6 +193,10 @@ jobs:
       - name: Sync fare matrix
         env:
           OPENMETRO_REVERSE_PROXY: ${{ secrets.REVERSE_PROXY }}
+          # Several fare ladders are computed over the planner's in-vehicle
+          # mileage (cn-dalian throws without it), so the key is required here
+          # exactly like in the topology job.
+          OPENMETRO_BAIDU_AK: ${{ secrets.OPENMETRO_BAIDU_AK }}
         run: bun run data:sync --network "${{ matrix.network }}" --layer fares
 
       - name: Verify network (including fares.json)
