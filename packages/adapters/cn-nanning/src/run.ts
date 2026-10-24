@@ -104,10 +104,18 @@ function buildSegmentPairs(
   coordsByName: Map<string, { lon: number; lat: number }>
 ): SegmentPairQuery[] {
   const stops = canonical.stopsByLineId.get(`cn-nanning-line-${cfg.slug}`) ?? [];
+  // The ride chain skips the stations the operator lists but does not serve,
+  // so the planner is asked for the **through-run** the service actually makes
+  // (楞塘村 → 清平坡, past 五象火车站) — a hop it can answer — instead of for
+  // the two legs into a station it has no service for.
+  const notInService = new Set(
+    canonical.stations.filter((s) => s.status !== 'operating').map((s) => s.id)
+  );
+  const chain = stops.filter((s) => !notInService.has(s.station_id));
   const out: SegmentPairQuery[] = [];
-  for (let i = 0; i + 1 < stops.length; i++) {
-    const a = stops[i]!;
-    const b = stops[i + 1]!;
+  for (let i = 0; i + 1 < chain.length; i++) {
+    const a = chain[i]!;
+    const b = chain[i + 1]!;
     const aName = String(a.extras?.official_name ?? '');
     const bName = String(b.extras?.official_name ?? '');
     const ca = coordsByName.get(aName);
@@ -190,7 +198,14 @@ async function refreshQuality(dataDir: string): Promise<void> {
   console.log('  refreshed network.quality');
 }
 
-/** Write the planner's in-vehicle distance onto the segments on disk. */
+/**
+ * Write the planner's in-vehicle distance onto the segments on disk.
+ *
+ * A **through-run** edge (a segment that runs past a station the operator
+ * lists but does not serve) also gets the planner's ride time: no pattern
+ * lists its ends as adjacent, so the core `gapfill` layer — which pairs
+ * segments by pattern adjacency — can never measure it.
+ */
 async function applySegmentDistances(
   dataDir: string,
   metrics: readonly SegmentMetrics[]
@@ -203,6 +218,9 @@ async function applySegmentDistances(
       from_stop_id: string;
       to_stop_id: string;
       distance_km?: number;
+      travel_time_seconds?: number;
+      travel_time_source?: string;
+      travel_time_derived_from?: string[];
       extras?: Record<string, unknown>;
     }[];
   };
@@ -212,10 +230,25 @@ async function applySegmentDistances(
   let applied = 0;
   for (const seg of doc.records) {
     const key = [seg.from_stop_id, seg.to_stop_id].sort().join('|');
-    const meters = byPair.get(key)?.distanceMeters;
+    const hit = byPair.get(key);
+    const meters = hit?.distanceMeters;
     if (meters == null || meters <= 0) continue;
     seg.distance_km = Math.round((meters / 1000) * 1000) / 1000;
     seg.extras = { ...(seg.extras ?? {}), distance_source: 'baidu-transit-distance' };
+    // A through-run edge is not adjacent on any pattern, so the core gapfill
+    // never reaches it — the planner's own ride time is written here.
+    const isThroughRun = Array.isArray(seg.extras?.skips_station_ids);
+    const duration = hit?.durationSeconds;
+    const weak =
+      seg.travel_time_source == null ||
+      seg.travel_time_source === 'estimated' ||
+      seg.travel_time_source === 'last_train';
+    if (isThroughRun && duration != null && duration > 0 && weak) {
+      seg.travel_time_seconds = duration;
+      seg.travel_time_source = 'planner';
+      seg.travel_time_derived_from = undefined;
+      seg.extras = { ...seg.extras, planner_time_source: 'baidu-transit' };
+    }
     applied++;
   }
   doc.generated_at = new Date().toISOString();

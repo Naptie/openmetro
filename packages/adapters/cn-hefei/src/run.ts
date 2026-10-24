@@ -152,21 +152,29 @@ function subwayStations(canonical: HefeiCanonical) {
 /**
  * The adjacent stop pairs of one line, for the in-vehicle distance harvest.
  *
- * The pairs follow the canonical line order; the not-yet-open stations have no
- * coordinate in any source, so they cannot be queried and are left out.
+ * The pairs follow the **operating chain** — the stops a service actually calls
+ * at. A station the official map marks 暂未开通 but that sits inside the
+ * alignment (市博物馆 on 6 号线) is skipped, so the planner is asked for the
+ * **through-run** the service makes (市儿童医院 → 钢红, past 市博物馆) — a hop it
+ * can answer — instead of for the two legs into a station it has no service
+ * for. The extension spurs are not on the line's stop chain at all.
  */
 function segmentPairsForLine(canonical: HefeiCanonical, cfg: HefeiLineConfig): SegmentPairQuery[] {
   const lineId = `cn-hefei-line-${cfg.slug}`;
   const stops = canonical.stopsByLineId.get(lineId) ?? [];
+  const notInService = new Set(
+    canonical.stations.filter((s) => s.status !== 'operating').map((s) => s.id)
+  );
+  const chain = stops.filter((s) => !notInService.has(s.station_id));
   const pointOf = (stationId: string): HefeiStationPoint | undefined => {
     const station = canonical.stations.find((s) => s.id === stationId);
     if (!station?.location) return undefined;
     return { name: station.name, lon: station.location.lon, lat: station.location.lat };
   };
   const out: SegmentPairQuery[] = [];
-  for (let i = 0; i + 1 < stops.length; i++) {
-    const a = stops[i]!;
-    const b = stops[i + 1]!;
+  for (let i = 0; i + 1 < chain.length; i++) {
+    const a = chain[i]!;
+    const b = chain[i + 1]!;
     const from = pointOf(a.station_id);
     const to = pointOf(b.station_id);
     if (!from || !to) continue;
@@ -182,10 +190,20 @@ function segmentPairsForLine(canonical: HefeiCanonical, cfg: HefeiLineConfig): S
  * measured distances are patched afterwards — the same way cn-dalian and
  * cn-nanchang do it. `writeCanonical` computed the quality block before the
  * patch, so it is refreshed afterwards.
+ *
+ * A **through-run** edge (a segment that runs past a station the operator
+ * lists but does not serve) also gets the planner's ride time: no pattern
+ * lists its ends as adjacent, so the core `gapfill` layer — which pairs
+ * segments by pattern adjacency — can never measure it.
  */
 async function applySegmentDistances(
   dataDir: string,
-  metrics: readonly { fromStopId: string; toStopId: string; distanceMeters: number | null }[]
+  metrics: readonly {
+    fromStopId: string;
+    toStopId: string;
+    distanceMeters: number | null;
+    durationSeconds: number | null;
+  }[]
 ): Promise<number> {
   const { readFile, writeFile } = await import('node:fs/promises');
   const path = join(dataDir, 'segments.json');
@@ -195,6 +213,9 @@ async function applySegmentDistances(
       from_stop_id: string;
       to_stop_id: string;
       distance_km?: number;
+      travel_time_seconds?: number;
+      travel_time_source?: string;
+      travel_time_derived_from?: string[];
       extras?: Record<string, unknown>;
     }[];
   };
@@ -204,7 +225,8 @@ async function applySegmentDistances(
   let applied = 0;
   for (const seg of doc.records) {
     const key = [seg.from_stop_id, seg.to_stop_id].sort().join('|');
-    const meters = byPair.get(key)?.distanceMeters;
+    const hit = byPair.get(key);
+    const meters = hit?.distanceMeters;
     if (!meters || meters <= 0) continue;
     seg.distance_km = Math.round((meters / 1000) * 1000) / 1000;
     seg.extras = {
@@ -212,6 +234,20 @@ async function applySegmentDistances(
       distance_source: 'baidu-transit-distance',
       distance_meters: Math.round(meters)
     };
+    // A through-run edge is not adjacent on any pattern, so the core gapfill
+    // never reaches it — the planner's own ride time is written here.
+    const isThroughRun = Array.isArray(seg.extras?.skips_station_ids);
+    const duration = hit?.durationSeconds;
+    const weak =
+      seg.travel_time_source == null ||
+      seg.travel_time_source === 'estimated' ||
+      seg.travel_time_source === 'last_train';
+    if (isThroughRun && duration != null && duration > 0 && weak) {
+      seg.travel_time_seconds = duration;
+      seg.travel_time_source = 'planner';
+      seg.travel_time_derived_from = undefined;
+      seg.extras = { ...seg.extras, planner_time_source: 'baidu-transit' };
+    }
     applied++;
   }
   doc.generated_at = new Date().toISOString();

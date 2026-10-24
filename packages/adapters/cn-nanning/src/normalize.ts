@@ -257,20 +257,42 @@ export function normalizeNanning(input: NormalizeInput): NanningCanonical {
   const lineIdsByStation = new Map<string, Set<string>>();
   const officialLinesByStationId = new Map<string, string[]>();
   const plannerKeyByOfficialName = new Map<string, string>();
-  const spurStops: StopEncoded[] = [];
 
   for (const { official, cfg } of lineCfgs) {
     const lineId = `${NETWORK_ID}-line-${cfg.slug}`;
+    /** The line's published stop list — the operator's order, not-yet-open stops included. */
     const lineStops: StopEncoded[] = [];
+    /** The operating chain: the stops a service actually calls at. */
+    const chainStops: StopEncoded[] = [];
     const plannedHere = plannedByLine.get(official.officialId) ?? [];
-    const plannedNames = new Set(plannedHere.map((p) => p.name));
+    const plannedSpecByName = new Map(plannedHere.map((p) => [p.name, p] as const));
+    // The service starts and ends at the operating chain's ends, which the
+    // published order alone does not tell when a not-yet-open station sits at
+    // either end of the list.
+    const chainIndexes = official.stops
+      .map((s, i) => (plannedSpecByName.has(s.name) ? -1 : i))
+      .filter((i) => i >= 0);
+    const firstChainIndex = chainIndexes[0];
+    const lastChainIndex = chainIndexes[chainIndexes.length - 1];
 
     // The operator's page lists the stops in official line order; that order is
-    // authoritative. The planned stations are removed from the operating chain
-    // and modelled as spurs below.
-    const operatingStops = official.stops.filter((s) => !plannedNames.has(s.name));
-    for (const [index, stop] of operatingStops.entries()) {
+    // authoritative — including the station it lists but does not yet operate
+    // (五象火车站 on Line 4: the first/last-train sheet gives it `/` in every
+    // time column and the operating network map omits it).
+    //
+    // Such a station keeps its **place in the line's alignment** — it is a
+    // published stop of Line 4, between 楞塘村 and 清平坡 — but it is not a stop
+    // of any service, so the ride chain skips it and the hop that runs past it
+    // is the through-run the service actually makes. Modelling it as a spur off
+    // 楞塘村 would instead assert a dead-end branch that does not exist and
+    // take the station out of the alignment the operator publishes.
+    for (const [index, stop] of official.stops.entries()) {
       const phys = ensurePhys(stop.name, stop.officialId);
+      const planned = plannedSpecByName.get(stop.name);
+      if (planned) {
+        phys.status = 'under_construction';
+        phys.statusNote = planned.note;
+      }
       const amap = amapStationIndex.get(stop.name);
       const code = String(amap?.si ?? '').trim();
       if (code && !phys.codes.includes(code)) phys.codes.push(code);
@@ -286,12 +308,12 @@ export function normalizeNanning(input: NormalizeInput): NanningCanonical {
       officialLinesByStationId.set(phys.id, officialLineList);
       plannerKeyByOfficialName.set(stop.name, phys.id);
 
-      lineStops.push({
+      const stopRec: StopEncoded = {
         id: `${phys.id}-${cfg.short}`,
         station_id: phys.id,
         line_id: lineId,
         sequence: index,
-        is_terminal: index === 0 || index === operatingStops.length - 1,
+        is_terminal: index === firstChainIndex || index === lastChainIndex,
         location: phys.location
           ? { lon: phys.location.lon, lat: phys.location.lat, crs: 'gcj02' }
           : undefined,
@@ -304,15 +326,23 @@ export function normalizeNanning(input: NormalizeInput): NanningCanonical {
           station_code: code || undefined,
           official_name: stop.name,
           official_station_id: stop.officialId,
-          amap_poiid: amap?.poiid || undefined
+          amap_poiid: amap?.poiid || undefined,
+          ...(planned
+            ? {
+                not_yet_open: true,
+                official_note: planned.note
+              }
+            : {})
         }
-      });
+      };
+      lineStops.push(stopRec);
+      if (!planned) chainStops.push(stopRec);
     }
 
-    if (lineStops.length < 2) continue;
+    if (chainStops.length < 2) continue;
 
-    const firstStop = lineStops[0]!;
-    const lastStop = lineStops[lineStops.length - 1]!;
+    const firstStop = chainStops[0]!;
+    const lastStop = chainStops[chainStops.length - 1]!;
 
     stopsByLineId.set(lineId, lineStops);
 
@@ -334,12 +364,22 @@ export function normalizeNanning(input: NormalizeInput): NanningCanonical {
       }
     });
 
-    for (let i = 0; i + 1 < lineStops.length; i++) {
-      const a = lineStops[i]!;
-      const b = lineStops[i + 1]!;
+    // Ride edges follow the operating chain. A hop that runs past a station the
+    // operator lists but does not serve is the **through-run** the service
+    // actually makes, so it is labelled with the stop(s) it passes.
+    const patternIndex = new Map(lineStops.map((s, i) => [s.id, i] as const));
+    for (let i = 0; i + 1 < chainStops.length; i++) {
+      const a = chainStops[i]!;
+      const b = chainStops[i + 1]!;
       const key = [a.id, b.id].sort().join('|');
       if (segmentKeys.has(key)) continue;
       segmentKeys.add(key);
+      const aIdx = patternIndex.get(a.id)!;
+      const bIdx = patternIndex.get(b.id)!;
+      const skipped = lineStops.filter((s) => {
+        const idx = patternIndex.get(s.id)!;
+        return idx > aIdx && idx < bIdx;
+      });
       segments.push({
         id: `${NETWORK_ID}-seg-${a.id}-${b.id}`,
         line_id: lineId,
@@ -348,95 +388,14 @@ export function normalizeNanning(input: NormalizeInput): NanningCanonical {
         from_station_id: a.station_id,
         to_station_id: b.station_id,
         direction: 'both',
-        source_id: OFFICIAL_SOURCE
-      });
-    }
-
-    // ---- Not-yet-open stations ------------------------------------------------
-    // The operator lists 五象火车站 on Line 4 but publishes no service for it
-    // (all six cells of its first/last-train sheet are `/`, and the network map
-    // omits it). It is therefore **not in passenger service**.
-    //
-    // It is modelled the way the repo models announced extensions — a **spur**
-    // hanging off the station it follows — so the stop and its segment exist
-    // but the station is `under_construction` and the routing graph drops it.
-    // The spur must not split the operating chain: the routing graph discards
-    // every segment that touches a non-operating station, so a closed station
-    // inside the main alignment would disconnect the line.
-    for (const planned of plannedHere) {
-      const anchorStop = lineStops.find((s) => s.extras?.official_name === planned.after);
-      if (!anchorStop) {
-        console.log(
-          `  WARN: ${cfg.name} anchor ${planned.after} not found — ${planned.name} skipped`
-        );
-        continue;
-      }
-      const plannedStopInOfficial = official.stops.find((s) => s.name === planned.name);
-      const phys = ensurePhys(planned.name, plannedStopInOfficial?.officialId ?? planned.name);
-      phys.status = 'under_construction';
-      phys.statusNote = planned.note;
-
-      const set = lineIdsByStation.get(phys.id) ?? new Set<string>();
-      set.add(lineId);
-      lineIdsByStation.set(phys.id, set);
-      const officialLineList = officialLinesByStationId.get(phys.id) ?? [];
-      if (!officialLineList.includes(official.officialId)) {
-        officialLineList.push(official.officialId);
-      }
-      officialLinesByStationId.set(phys.id, officialLineList);
-      plannerKeyByOfficialName.set(planned.name, phys.id);
-
-      const spurStop: StopEncoded = {
-        id: `${phys.id}-${cfg.short}`,
-        station_id: phys.id,
-        line_id: lineId,
-        // Continues after the primary chain so the per-line sequence stays
-        // unique; the spur pattern carries the real adjacency.
-        sequence: lineStops.length + spurStops.length,
-        is_terminal: true,
-        extras: {
-          line_short_name: cfg.short,
-          official_name: planned.name,
-          official_station_id: plannedStopInOfficial?.officialId,
-          not_yet_open: true,
-          official_note: planned.note,
-          anchor_station: planned.after
-        }
-      };
-      spurStops.push(spurStop);
-
-      const spurPatternId = `${lineId}-pattern-spur-${phys.id.split('-').pop()}`;
-      patterns.push({
-        id: spurPatternId,
-        line_id: lineId,
-        name: `${cfg.name}（${planned.name}支线）`,
-        names: {
-          zh: `${cfg.name}（${planned.name}支线）`,
-          en: `${cfg.name} (${planned.name} spur)`
-        },
-        stop_ids: [anchorStop.id, spurStop.id],
-        origin_stop_id: anchorStop.id,
-        terminal_stop_id: spurStop.id,
-        is_primary: false,
-        junction_stop_id: anchorStop.id,
-        source_ids: [{ source: OFFICIAL_SOURCE, id: planned.name }],
-        extras: {
-          pattern_status: 'under_construction',
-          parent_line_id: lineId,
-          connector_station_id: anchorStop.station_id,
-          official_note: planned.note
-        }
-      });
-
-      segments.push({
-        id: `${NETWORK_ID}-seg-${anchorStop.id}-${spurStop.id}`,
-        line_id: lineId,
-        from_stop_id: anchorStop.id,
-        to_stop_id: spurStop.id,
-        from_station_id: anchorStop.station_id,
-        to_station_id: spurStop.station_id,
-        direction: 'both',
-        source_id: OFFICIAL_SOURCE
+        source_id: OFFICIAL_SOURCE,
+        extras: skipped.length
+          ? {
+              skips_station_ids: skipped.map((s) => s.station_id),
+              skip_note:
+                '运营方站表列出该站但尚未开通（首末班时刻表各时间列为「/」，运营线网图未收录），运营交路由此通过；本区间是贯通运行，非相邻站区间。'
+            }
+          : undefined
       });
     }
   }
@@ -564,15 +523,15 @@ export function normalizeNanning(input: NormalizeInput): NanningCanonical {
     default_units: { distance: 'km', time: 'seconds', speed: 'km/h' },
     routing: { weight: 'time', default_transfer_seconds: 120, max_transfer_seconds: 600 },
     notes:
-      '拓扑与站序来自运营方官网的服务端渲染页面 GET https://www.nngdjt.com/traffic/subway/?pageIndex=1：1 号线 25 站（火车东站→石埠）、2 号线 23 站（西津→坛泽）、3 号线 23 站（科园大道→平良立交）、4 号线 19 站（洪运路→龙岗）、5 号线 17 站（国凯大道→金桥客运站），共 107 条 line-stop 记录、96 座物理车站、11 座换乘站（金湖广场、朝阳广场、火车站、广西大学、安吉客运站、明秀路、大沙田、平良立交、小鸡村、总部基地、那洪立交）。4 号线的五象火车站官网时刻表六个时间列均为「/」、运营线网图亦未收录，属已官宣未通车，按仓库既有的支线交路模型记为 under_construction（保留停站与区间，主运营链不被拆断）。每站详情块另给出车站描述、全部出入口（含每个口的周边地标，共 407 条）、换乘指引与设施示意图。坐标、示意图像素、线内站码、拼音、英文名与线色来自 AMap Subway 4501（GCJ-02 原生；AMap 尚无五象火车站，站序与官网一致）。逐站逐方向首末班来自百度路径规划 direction/v2/transit（tactics_incity=5 地铁优先）：该接口给出上车站自身的首班/末班发车时刻，与官网首末班车时刻表逐格一致（192 组比对中 190 组完全一致，官网仅以图片发布该表，未做 OCR）。OD 票价来自同一规划器的逐 OD 报价，官网未提供票价矩阵也未提供路径规划器；票务须知图给出官方里程分段计价规则（起步 2 元/6 公里，之后 6/6/8/8 公里各加 1 元，34 公里以上每 10 公里加 1 元）用于交叉校验与缺格兜底。换乘步行时间官方不提供，依赖 core 的 gapfill 层由百度规划器补齐。' +
-      '区间里程共 102 段，其中 98 段取自百度规划器逐区间实测；余下 4 段保留直线距离估算：楞塘村→五象火车站的终点是已官宣未通车站，规划器不给出该 OD 的路线；大沙田→金象大道（4 号线）、福建园→亭洪路（2 号线）、小鸡村→邕宾立交（5 号线）两端均已运营，但规划器对这些 OD 只给出公交与步行方案，没有地铁方案，故不套用公交里程，改用直线距离估算。'
+      '拓扑与站序来自运营方官网的服务端渲染页面 GET https://www.nngdjt.com/traffic/subway/?pageIndex=1：1 号线 25 站（火车东站→石埠）、2 号线 23 站（西津→坛泽）、3 号线 23 站（科园大道→平良立交）、4 号线 19 站（洪运路→龙岗）、5 号线 17 站（国凯大道→金桥客运站），共 107 条 line-stop 记录、96 座物理车站、11 座换乘站（金湖广场、朝阳广场、火车站、广西大学、安吉客运站、明秀路、大沙田、平良立交、小鸡村、总部基地、那洪立交）。4 号线的五象火车站官网时刻表六个时间列均为「/」、运营线网图亦未收录，属已官宣未通车：它保留在 4 号线的官方站序中（楞塘村 → 五象火车站 → 清平坡），状态记为 under_construction。运营交路不在该站停靠，因此乘车区间按贯通运行建模——楞塘村→清平坡 是运营方实际开行的一个区间，而非两个相邻站区间；路由图因该站非运营而将其剔除，4 号线本身不被拆断。每站详情块另给出车站描述、全部出入口（含每个口的周边地标，共 407 条）、换乘指引与设施示意图。坐标、示意图像素、线内站码、拼音、英文名与线色来自 AMap Subway 4501（GCJ-02 原生；AMap 尚无五象火车站，站序与官网一致）。逐站逐方向首末班来自百度路径规划 direction/v2/transit（tactics_incity=5 地铁优先）：该接口给出上车站自身的首班/末班发车时刻，与官网首末班车时刻表逐格一致（192 组比对中 190 组完全一致，官网仅以图片发布该表，未做 OCR）。OD 票价来自同一规划器的逐 OD 报价，官网未提供票价矩阵也未提供路径规划器；票务须知图给出官方里程分段计价规则（起步 2 元/6 公里，之后 6/6/8/8 公里各加 1 元，34 公里以上每 10 公里加 1 元）用于交叉校验与缺格兜底。换乘步行时间官方不提供，依赖 core 的 gapfill 层由百度规划器补齐。' +
+      '区间里程以百度路径规划逐区间实测为准；个别 OD 规划器只给出公交与步行方案、没有地铁方案，此时不套用公交里程，改用直线距离估算——这类区间在 segments.json 中以 distance_source=haversine 标注，数量随规划器当次的应答而定。'
   };
 
   return {
     network,
     lines,
     stations,
-    stops: [...stopsByLineId.values()].flat().concat(spurStops),
+    stops: [...stopsByLineId.values()].flat(),
     patterns,
     segments,
     timetables,

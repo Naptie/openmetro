@@ -4,7 +4,7 @@
 
 Generated from each network’s canonical records and fares matrix after data sync. Do not edit by hand — re-run `bun run data:sync` (or `scripts/write-quality-report.ts`).
 
-_Updated 2026-10-23T21:35:56.475Z_
+_Updated 2026-10-24T10:27:23.741Z_
 
 ## 北京地铁 / Beijing Subway (`cn-beijing`)
 
@@ -167,8 +167,8 @@ _Updated 2026-10-23T21:35:56.475Z_
 | Topology | ✅ Complete | official | 100% | official=1 |
 | Coordinates | ✅ Complete | official | 100% | official=195, derived=3 |
 | Names | ✅ Complete | official | 100% | official=198 |
-| Segment times | ✅ Complete | official | 100% | official=207, derived=3 |
-| Segment distances | ✅ Complete | official | 100% | official=206, derived=4 |
+| Segment times | ✅ Complete | official | 100% | official=206, derived=3 |
+| Segment distances | ✅ Complete | official | 100% | official=206, derived=3 |
 | Transfer times | ✅ Complete | official | 100% | official=42 |
 | Timetables | ✅ Complete | official | 100% | official=415 |
 | Schematic | 🟡 Partial | official | 99% | official=215, default=3 |
@@ -293,8 +293,8 @@ _Updated 2026-10-23T21:35:56.475Z_
 | Topology | ✅ Complete | official | 100% | official=1 |
 | Coordinates | ✅ Complete | official | 100% | official=96 |
 | Names | ✅ Complete | official | 100% | official=96 |
-| Segment times | ✅ Complete | official | 100% | official=98, derived=4 |
-| Segment distances | ✅ Complete | official | 100% | official=98, derived=4 |
+| Segment times | ✅ Complete | official | 100% | official=98, derived=3 |
+| Segment distances | ✅ Complete | official | 100% | official=99, derived=2 |
 | Transfer times | ✅ Complete | official | 100% | official=22 |
 | Timetables | ✅ Complete | official | 100% | official=202 |
 | Schematic | 🟡 Partial | official | 99% | official=106, default=1 |

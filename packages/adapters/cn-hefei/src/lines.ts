@@ -162,34 +162,44 @@ export const STATION_NAME_ALIASES: Record<string, string> = {
  * from the AMap operating dataset, so they are only known through the official
  * map; `after` names the station they follow in the line's alignment.
  *
- * Each one is modelled as a **spur** hanging off that anchor: the operating
- * chain keeps the AMap order untouched (a closed station inside the main
- * alignment would split the line, because the routing graph drops every
- * segment that touches a non-operating station), while the closed station
- * keeps its stop, its segment and a branch pattern.
+ * The two cases are modelled differently, because their topology differs:
+ *
+ * - **extension** (馆驿, 紫云湖) — the station lies past the end of the line,
+ *   so a **spur** hanging off that anchor is the real shape: the chain is
+ *   unchanged and the closed station is the branch's terminus.
+ * - **inline** (市博物馆) — the station lies *inside* the alignment, between two
+ *   operating stations. A spur would assert a dead end that does not exist and
+ *   would take the station out of the alignment the operator publishes, so the
+ *   station keeps its place in the line's stop list and the ride chain skips
+ *   it: the hop that runs past it is the through-run the service makes.
  */
 export const NOT_YET_OPEN_STATIONS: {
   name: string;
   line: string;
   after: string;
+  /** Where the station sits relative to the operating line. */
+  position: 'inline' | 'extension';
   note: string;
 }[] = [
   {
     name: '馆驿',
     line: '3号线',
     after: '省儿童医院新区',
+    position: 'extension',
     note: '暂未开通（缓建，3 号线北延增设车站）'
   },
   {
     name: '紫云湖',
     line: '4号线',
     after: '烧脉岗',
+    position: 'extension',
     note: '暂未开通（增设车站，4 号线西延）'
   },
   {
     name: '市博物馆',
     line: '6号线',
     after: '市儿童医院',
+    position: 'inline',
     note: '暂未开通（暂缓开通，位于市儿童医院与钢红之间）'
   }
 ];

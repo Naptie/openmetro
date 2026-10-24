@@ -107,9 +107,13 @@ export const LINE_CONFIG_BY_OFFICIAL_ID = new Map<string, NanningLineConfig>(
  *
  * The Line 4 sheet carries **五象火车站** with `/` in all six time columns and
  * the network map omits it, so it is announced but not in passenger service.
- * It is modelled the way the repo models announced extensions — a spur
- * pattern hanging off the station it follows — so the operating chain is never
- * split by a closed station.
+ *
+ * It is **not** modelled as a spur: the operator's own station list puts it
+ * inside Line 4's alignment (楞塘村 → 五象火车站 → 清平坡), so a branch pattern
+ * would assert a dead end that does not exist and would take the station out
+ * of the alignment the operator publishes. The station keeps its place in the
+ * line's stop list; the ride chain skips it, so the hop that runs past it is
+ * the through-run the service actually makes.
  */
 export interface NanningPlannedStation {
   name: string;
@@ -125,7 +129,7 @@ export const PLANNED_STATIONS: NanningPlannedStation[] = [
     name: '五象火车站',
     line: '4',
     after: '楞塘村',
-    note: '官网 4 号线首末班车时刻表中该站六个时间列均为「/」，运营线网图亦未收录，属已官宣未通车。'
+    note: '官网 4 号线首末班车时刻表中该站六个时间列均为「/」，运营线网图亦未收录，属已官宣未通车。该站保留在 4 号线官方站序中（楞塘村与清平坡之间），运营交路不在该站停靠。'
   }
 ];
 

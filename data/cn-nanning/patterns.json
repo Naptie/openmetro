@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/patterns.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-nanning",
-  "generated_at": "2026-10-23T21:27:13.818Z",
+  "generated_at": "2026-10-24T10:20:50.621Z",
   "source": [],
   "records": [
     {
@@ -176,6 +176,7 @@
         "cn-nanning-liangqing-bridge-south-4",
         "cn-nanning-liangqingxu-4",
         "cn-nanning-lengtangcun-4",
+        "cn-nanning-wuxiang-railway-station-4",
         "cn-nanning-qingpingpo-4",
         "cn-nanning-longgang-4"
       ],
@@ -192,35 +193,6 @@
         "line_short_name": "4",
         "origin_name": "洪运路",
         "terminal_name": "龙岗"
-      }
-    },
-    {
-      "id": "cn-nanning-line-4-pattern-spur-station",
-      "line_id": "cn-nanning-line-4",
-      "name": "轨道交通4号线（五象火车站支线）",
-      "names": {
-        "zh": "轨道交通4号线（五象火车站支线）",
-        "en": "轨道交通4号线 (五象火车站 spur)"
-      },
-      "stop_ids": [
-        "cn-nanning-lengtangcun-4",
-        "cn-nanning-wuxiang-railway-station-4"
-      ],
-      "origin_stop_id": "cn-nanning-lengtangcun-4",
-      "terminal_stop_id": "cn-nanning-wuxiang-railway-station-4",
-      "is_primary": false,
-      "junction_stop_id": "cn-nanning-lengtangcun-4",
-      "source_ids": [
-        {
-          "source": "nngdjt-subway-page",
-          "id": "五象火车站"
-        }
-      ],
-      "extras": {
-        "pattern_status": "under_construction",
-        "parent_line_id": "cn-nanning-line-4",
-        "connector_station_id": "cn-nanning-lengtangcun",
-        "official_note": "官网 4 号线首末班车时刻表中该站六个时间列均为「/」，运营线网图亦未收录，属已官宣未通车。"
       }
     },
     {

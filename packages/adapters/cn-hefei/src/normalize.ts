@@ -240,7 +240,8 @@ export function normalizeHefei(input: NormalizeInput): HefeiCanonical {
     const names = (amap.st ?? []).map((s) => String(s.n ?? '').trim()).filter(Boolean);
     if (names.length < 2) continue;
 
-    const lineStops: StopEncoded[] = [];
+    /** The operating chain: the stops the AMap dataset publishes for the line. */
+    const chainStops: StopEncoded[] = [];
 
     for (const name of names) {
       const phys = ensurePhys(name);
@@ -249,12 +250,12 @@ export function normalizeHefei(input: NormalizeInput): HefeiCanonical {
       if (code && !phys.codes.includes(code)) phys.codes.push(code);
       phys.lineIds.add(lineId);
 
-      lineStops.push({
+      chainStops.push({
         id: `${phys.id}-${cfg.short}`,
         station_id: phys.id,
         line_id: lineId,
-        sequence: lineStops.length,
-        is_terminal: lineStops.length === 0 || lineStops.length === names.length - 1,
+        sequence: chainStops.length,
+        is_terminal: chainStops.length === 0 || chainStops.length === names.length - 1,
         location: phys.location
           ? { lon: phys.location.lon, lat: phys.location.lat, crs: 'gcj02' }
           : undefined,
@@ -270,6 +271,50 @@ export function normalizeHefei(input: NormalizeInput): HefeiCanonical {
         }
       });
     }
+
+    // ---- Inline not-yet-open stations ----------------------------------------
+    // A station the official network map marks 暂未开通 that sits *inside* the
+    // alignment keeps its place in the line's stop list — the operator publishes
+    // it between two operating stations (市博物馆 between 市儿童医院 and 钢红).
+    // The ride chain skips it, so the hop that runs past it is the through-run
+    // the service actually makes; the routing graph drops the station itself
+    // because it is not in passenger service.
+    const inlinePlanned = NOT_YET_OPEN_STATIONS.filter(
+      (p) => p.line === cfg.name && p.position === 'inline'
+    );
+    const lineStops: StopEncoded[] = [];
+    for (const stop of chainStops) {
+      // Cloned with the sequence it takes in the published order (the chain's
+      // own numbering does not account for the inserted stations).
+      lineStops.push({ ...stop, sequence: lineStops.length });
+      const officialName = String(stop.extras?.official_name ?? '');
+      for (const planned of inlinePlanned.filter((p) => p.after === officialName)) {
+        const phys = ensurePhys(planned.name);
+        phys.status = 'under_construction';
+        phys.statusNote = planned.note;
+        phys.lineIds.add(lineId);
+        lineStops.push({
+          id: `${phys.id}-${cfg.short}`,
+          station_id: phys.id,
+          line_id: lineId,
+          sequence: lineStops.length,
+          is_terminal: false,
+          location: phys.location
+            ? { lon: phys.location.lon, lat: phys.location.lat, crs: 'gcj02' }
+            : undefined,
+          schematic: phys.schematic
+            ? { x: phys.schematic.x, y: phys.schematic.y, crs: 'schematic' }
+            : undefined,
+          extras: {
+            line_short_name: cfg.short,
+            official_name: planned.name,
+            not_yet_open: true,
+            official_note: planned.note
+          }
+        });
+      }
+    }
+
     stopsByLineId.set(lineId, lineStops);
 
     const patternId = `${lineId}-pattern-main`;
@@ -290,12 +335,22 @@ export function normalizeHefei(input: NormalizeInput): HefeiCanonical {
       }
     });
 
-    for (let i = 0; i + 1 < lineStops.length; i++) {
-      const a = lineStops[i]!;
-      const b = lineStops[i + 1]!;
+    // Ride edges follow the operating chain. A hop that runs past a station the
+    // operator lists but does not serve is the **through-run** the service
+    // actually makes, so it is labelled with the stop(s) it passes.
+    const patternIndex = new Map(lineStops.map((s, i) => [s.id, i] as const));
+    for (let i = 0; i + 1 < chainStops.length; i++) {
+      const a = chainStops[i]!;
+      const b = chainStops[i + 1]!;
       const key = [a.id, b.id].sort().join('|');
       if (segmentKeys.has(key)) continue;
       segmentKeys.add(key);
+      const aIdx = patternIndex.get(a.id)!;
+      const bIdx = patternIndex.get(b.id)!;
+      const skipped = lineStops.filter((s) => {
+        const idx = patternIndex.get(s.id)!;
+        return idx > aIdx && idx < bIdx;
+      });
       segments.push({
         id: `${NETWORK_ID}-seg-${a.id}-${b.id}`,
         line_id: lineId,
@@ -304,26 +359,31 @@ export function normalizeHefei(input: NormalizeInput): HefeiCanonical {
         from_station_id: a.station_id,
         to_station_id: b.station_id,
         direction: 'both',
-        source_id: AMAP_SOURCE
+        source_id: AMAP_SOURCE,
+        extras: skipped.length
+          ? {
+              skips_station_ids: skipped.map((s) => s.station_id),
+              skip_note:
+                '官方线网图将该站标为暂未开通且位于两个运营站之间，运营交路由此通过；本区间是贯通运行，非相邻站区间。'
+            }
+          : undefined
       });
     }
 
-    // ---- Not-yet-open stations ------------------------------------------------
-    // The official network map marks three stations as 暂未开通. They are part
-    // of the line's alignment but **not in passenger service**, so they are
-    // modelled as a **spur** hanging off the station they follow — the same
-    // way the repo records Suzhou's and Ningbo's announced extensions: the
-    // stop and its segment exist, but the station is `under_construction` and
-    // the routing graph drops it.
+    // ---- Not-yet-open stations beyond the line's end -------------------------
+    // The official network map marks three stations as 暂未开通. Two of them
+    // (馆驿 on 3 号线, 紫云湖 on 4 号线) lie **beyond** the operating terminus,
+    // so a **spur** hanging off that anchor is their real shape — the same way
+    // the repo records Suzhou's and Ningbo's announced extensions: the stop and
+    // its segment exist, but the station is `under_construction` and the routing
+    // graph drops it.
     //
-    // The spur must not split the operating chain: the routing graph drops
-    // every segment that touches a non-operating station, so a closed station
-    // inside the main alignment would disconnect the line. The primary
-    // pattern therefore keeps the AMap order untouched, and the closed
-    // station sits on its own branch pattern off the anchor stop.
+    // The third (市博物馆 on 6 号线) sits **between** two operating stations and
+    // is handled above, inside the line's own alignment.
     let spurIndex = 0;
     for (const planned of NOT_YET_OPEN_STATIONS) {
       if (planned.line !== cfg.name) continue;
+      if (planned.position !== 'extension') continue;
       const anchorStop = lineStops.find((s) => s.extras?.official_name === planned.after);
       if (!anchorStop) {
         console.log(
@@ -584,10 +644,10 @@ export function normalizeHefei(input: NormalizeInput): HefeiCanonical {
       '线网拓扑（线路、站序、线色、示意图像素）、坐标与英文名取自 AMap Subway 3401_drw_hefei.json（GCJ-02 原生，8 线 215 站序行 / 195 座车站全部带坐标、英文名与像素位置）。' +
       '官方结构化运营数据不在集团官网（www.hfgdjt.com 是网页隔离代理壳，无任何业务接口），而在合肥市人民政府政府信息公开平台「合肥市轨道交通集团有限公司」栏目（organId=156407）：《首末班车时间及行车间隔》给出 8 条线、周一至周四工作日/周五工作日/双休日三个服务日带的首末班时刻、始发站、终到站与最小行车间隔；《票价信息及优惠政策》给出里程分段计价票制（起步 2 元 8 公里，8-14 公里 3 元，14-21 公里 4 元，21-29 公里 5 元，29 公里以上每 9 公里加收 1 元）；《运营线路》给出官方运营线网图。' +
       '官方时刻表只公布首班车始发站与末班车终到站，逐站首末班由百度路径规划 direction/v2/transit 补齐——在官方公布的 7 个终点站上与官方表逐格一致（九联圩 06:00/22:50、合肥南站 06:04/23:55、张洼 06:00/23:10、南岗 06:00/23:00、相城路 06:00/22:25、龙塘 06:00/22:00、一里井 06:00/22:30，2026-10-23 周五）。' +
-      '官方线网图把馆驿（3 号线）、紫云湖（4 号线）、市博物馆（6 号线）标为暂未开通。三站按仓库既有的支线交路模型记为 under_construction：保留停站、区间与一条挂在相邻运营站上的支线交路，运营主线不被拆断，路由图自动丢弃这三个站。' +
+      '官方线网图把馆驿（3 号线）、紫云湖（4 号线）、市博物馆（6 号线）标为暂未开通。三站状态均记为 under_construction，建模方式按其在线路中的位置区分：馆驿与紫云湖在线路末端之外，记为挂在相邻运营站上的支线交路；市博物馆位于市儿童医院与钢红之间，保留在 6 号线的官方站序中，运营交路不在该站停靠，乘车区间按贯通运行建模——市儿童医院→钢红 是运营方实际开行的一个区间，而非两个相邻站区间。三种情况下路由图都丢弃这些站，运营主线不被拆断。' +
       '官方时刻表按三个服务日带（周一至周四工作日 / 周五工作日 / 双休日）公布，落盘为 7 元素星期数组；中间车站的时刻由百度规划器补齐，规划器只回答采集当日所在的服务日带，该档位记录在 timetables 的 service_band 中。规划器的方向标签在 3 号线与 4 号线指向仍在建的馆驿与紫云湖，方向一律以官方定义为准，规划器原标签保留在 extras.planner_direction。' +
       '官方不发布区间运行时间、区间里程、换乘步行时间与站内出入口信息，这三类数据由百度规划器与 core 的 gapfill 层补齐。' +
-      '区间里程共 210 段，其中 206 段取自百度规划器逐区间实测；余下 4 段保留直线距离估算：烧脉岗→紫云湖、省儿童医院新区→馆驿、市儿童医院→市博物馆三段的终点是官网标注暂未开通的车站，规划器不给出该 OD 的任何路线；龙岗→王岗两端均已运营，但规划器对该 OD 只给出公交（508 路 / 38 路，龙江路口站→王岗东站）与步行方案，没有地铁方案，故不套用公交里程，改用直线距离估算。'
+      '区间里程以百度路径规划逐区间实测为准；个别 OD 规划器不给出路线（终点是官网标注暂未开通的车站），或只给出公交与步行方案、没有地铁方案，此时不套用公交里程，改用直线距离估算——这类区间在 segments.json 中以 distance_source=haversine 标注，数量随规划器当次的应答而定。'
   };
 
   return {

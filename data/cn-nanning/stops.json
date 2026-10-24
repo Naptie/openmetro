@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stops.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-nanning",
-  "generated_at": "2026-10-23T21:27:13.817Z",
+  "generated_at": "2026-10-24T10:20:50.620Z",
   "source": [],
   "records": [
     {
@@ -1284,7 +1284,7 @@
       "id": "cn-nanning-longgang-4",
       "station_id": "cn-nanning-longgang",
       "line_id": "cn-nanning-line-4",
-      "sequence": 17,
+      "sequence": 18,
       "is_terminal": true,
       "location": {
         "lon": 108.465572,
@@ -1884,7 +1884,7 @@
       "id": "cn-nanning-qingpingpo-4",
       "station_id": "cn-nanning-qingpingpo",
       "line_id": "cn-nanning-line-4",
-      "sequence": 16,
+      "sequence": 17,
       "is_terminal": false,
       "location": {
         "lon": 108.454753,
@@ -2184,15 +2184,19 @@
       "id": "cn-nanning-wuxiang-railway-station-4",
       "station_id": "cn-nanning-wuxiang-railway-station",
       "line_id": "cn-nanning-line-4",
-      "sequence": 18,
-      "is_terminal": true,
+      "sequence": 16,
+      "is_terminal": false,
+      "location": {
+        "lon": 108.443526,
+        "lat": 22.75864,
+        "crs": "gcj02"
+      },
       "extras": {
         "line_short_name": "4",
         "official_name": "五象火车站",
         "official_station_id": "663319271915592",
         "not_yet_open": true,
-        "official_note": "官网 4 号线首末班车时刻表中该站六个时间列均为「/」，运营线网图亦未收录，属已官宣未通车。",
-        "anchor_station": "楞塘村"
+        "official_note": "官网 4 号线首末班车时刻表中该站六个时间列均为「/」，运营线网图亦未收录，属已官宣未通车。该站保留在 4 号线官方站序中（楞塘村与清平坡之间），运营交路不在该站停靠。"
       }
     },
     {
