@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-shenyang",
-  "generated_at": "2026-10-22T20:20:25.065Z",
-  "source": [],
+  "generated_at": "2026-11-02T12:23:07.862Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-02T12:23:07.862Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-shenyang-aotizhongxin-2-cn-shenyang-aotizhongxin-9",
@@ -87,9 +98,10 @@
       "to_line_id": "cn-shenyang-line-10",
       "from_stop_id": "cn-shenyang-changqingnanjie-9",
       "to_stop_id": "cn-shenyang-changqingnanjie-10",
-      "walk_time_seconds": 225,
-      "walk_distance_meters": 270,
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
       "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
       "extras": {
         "walk_distance_source": "baidu-transit-station-hall-walk"
       }

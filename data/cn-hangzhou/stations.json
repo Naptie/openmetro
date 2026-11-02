@@ -2,19 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-hangzhou",
-  "generated_at": "2026-10-23T12:07:57.568Z",
-  "source": [
-    {
-      "name": "Baidu Direction v2 transit",
-      "url": "https://api.map.baidu.com/direction/v2/transit",
-      "version": "2",
-      "retrieved_at": "2026-10-23T12:07:57.568Z",
-      "license": "custom",
-      "license_url": null,
-      "attribution": "Baidu Maps",
-      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
-    }
-  ],
+  "generated_at": "2026-11-02T11:41:55.894Z",
+  "source": [],
   "records": [
     {
       "id": "cn-hangzhou-aoti-zhongxin",
@@ -1063,6 +1052,11 @@
         "zh": "创明路",
         "en": "Chuangming Road"
       },
+      "location": {
+        "lon": 120.0031854203823,
+        "lat": 30.26080077851791,
+        "crs": "gcj02"
+      },
       "status": "under_construction",
       "source_ids": [
         {
@@ -1082,16 +1076,9 @@
         "lines": [
           "3号线"
         ],
+        "location_source": "overpass",
         "names_source": "derived",
-        "service_status_source": "official_description",
-        "location_source": "baidu-place",
-        "baidu_place_uid": "97759ba5a3ba38888c1a89f0",
-        "baidu_place_name": "创明路"
-      },
-      "location": {
-        "lon": 120.008791,
-        "lat": 30.267064,
-        "crs": "gcj02"
+        "service_status_source": "official_description"
       }
     },
     {

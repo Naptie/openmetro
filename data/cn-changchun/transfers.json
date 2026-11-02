@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-changchun",
-  "generated_at": "2026-10-22T21:27:21.089Z",
-  "source": [],
+  "generated_at": "2026-11-02T11:29:44.818Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-02T11:29:44.818Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-changchun-changchun-railway-station-1-cn-changchun-changchun-railway-station-3",

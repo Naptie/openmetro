@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-kunming",
-  "generated_at": "2026-10-23T13:08:14.412Z",
-  "source": [],
+  "generated_at": "2026-11-02T11:56:03.764Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-02T11:56:03.764Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "cn-kunming-seg-cn-kunming-airport-front-6-cn-kunming-dabanqiao-6",
@@ -20,11 +31,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.913491,
-            "lat": 25.084818,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.913491,
             "lat": 25.084818,
@@ -351,11 +357,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.792759,
-            "lat": 24.881848,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.793251,
             "lat": 24.881095,
             "crs": "gcj02"
@@ -389,7 +390,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -416,11 +417,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.734791,
-            "lat": 25.049617,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.735008,
             "lat": 25.049148,
             "crs": "gcj02"
@@ -434,7 +430,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -455,11 +451,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.748117,
-            "lat": 25.060961,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.748117,
             "lat": 25.060961,
@@ -579,7 +570,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -600,11 +591,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.851919,
-            "lat": 24.874763,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.851919,
             "lat": 24.874763,
@@ -734,7 +720,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "branch",
         "distance_source": "planner"
@@ -752,59 +738,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 1.13,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.723949,
-            "lat": 25.065956,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.723949,
-            "lat": 25.065956,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.724334,
-            "lat": 25.067189,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.724602,
-            "lat": 25.067893,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.725561,
-            "lat": 25.0708,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.726464,
-            "lat": 25.073421,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.726862,
-            "lat": 25.074489,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.727073,
-            "lat": 25.074894,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.727567,
-            "lat": 25.075547,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -822,74 +758,9 @@
       "travel_time_seconds": 180,
       "travel_time_source": "source",
       "distance_km": 1.55,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.732496,
-            "lat": 25.081046,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.732496,
-            "lat": 25.081046,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.73314,
-            "lat": 25.081706,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.734884,
-            "lat": 25.083473,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.735662,
-            "lat": 25.084471,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.736037,
-            "lat": 25.085088,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.736369,
-            "lat": 25.085766,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.736684,
-            "lat": 25.086529,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.73707,
-            "lat": 25.087671,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.738214,
-            "lat": 25.090511,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.738843,
-            "lat": 25.092353,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.739183,
-            "lat": 25.093315,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -910,11 +781,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.733256,
-            "lat": 25.031507,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.733256,
             "lat": 25.031507,
@@ -991,11 +857,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.751029,
-            "lat": 24.986379,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.751848,
             "lat": 24.986108,
             "crs": "gcj02"
@@ -1014,7 +875,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -1035,11 +896,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.656855,
-            "lat": 25.046652,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.656855,
             "lat": 25.046652,
@@ -1074,7 +930,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -1095,11 +951,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.61568,
-            "lat": 24.994413,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.61568,
             "lat": 24.994413,
@@ -1254,7 +1105,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -1275,11 +1126,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.729665,
-            "lat": 25.054798,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.729665,
             "lat": 25.054798,
@@ -1311,11 +1157,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.723215,
-            "lat": 25.056705,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.722108,
             "lat": 25.057009,
             "crs": "gcj02"
@@ -1324,7 +1165,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -1342,94 +1183,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 0.78,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.719543,
-            "lat": 25.049251,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719543,
-            "lat": 25.049251,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719568,
-            "lat": 25.049851,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719589,
-            "lat": 25.050769,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719586,
-            "lat": 25.051331,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.71958,
-            "lat": 25.051628,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719565,
-            "lat": 25.052108,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719528,
-            "lat": 25.053157,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719512,
-            "lat": 25.053483,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719512,
-            "lat": 25.053751,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719528,
-            "lat": 25.053948,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719573,
-            "lat": 25.054153,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719629,
-            "lat": 25.05435,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719716,
-            "lat": 25.054607,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719992,
-            "lat": 25.055313,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.720305,
-            "lat": 25.056113,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -1539,7 +1295,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "branch",
         "distance_source": "planner"
@@ -1566,11 +1322,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.825302,
-            "lat": 24.884035,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.825574,
             "lat": 24.883307,
             "crs": "gcj02"
@@ -1589,7 +1340,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -1610,11 +1361,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.664508,
-            "lat": 24.994955,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.664508,
             "lat": 24.994955,
@@ -1769,7 +1515,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -1790,11 +1536,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.876471,
-            "lat": 25.053348,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.876471,
             "lat": 25.053348,
@@ -2401,11 +2142,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.655205,
-            "lat": 25.089785,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.654513,
             "lat": 25.08773,
             "crs": "gcj02"
@@ -2509,7 +2245,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -2530,11 +2266,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.740995,
-            "lat": 25.037211,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.740995,
             "lat": 25.037211,
@@ -2609,7 +2340,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -2636,11 +2367,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.740389,
-            "lat": 25.036769,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.740617,
             "lat": 25.036266,
             "crs": "gcj02"
@@ -2659,7 +2385,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -2686,11 +2412,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.635661,
-            "lat": 25.027713,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.636015,
             "lat": 25.028466,
             "crs": "gcj02"
@@ -2709,7 +2430,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -2730,11 +2451,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.708414,
-            "lat": 24.939002,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.708414,
             "lat": 24.939002,
@@ -2834,7 +2550,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -2852,64 +2568,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 0.48,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.719665,
-            "lat": 25.03808,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719665,
-            "lat": 25.03808,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719667,
-            "lat": 25.038846,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719666,
-            "lat": 25.039086,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719661,
-            "lat": 25.039285,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719656,
-            "lat": 25.039525,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719648,
-            "lat": 25.039701,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719609,
-            "lat": 25.040336,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.71955,
-            "lat": 25.041194,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719484,
-            "lat": 25.042425,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -2936,11 +2597,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.719665,
-            "lat": 25.03808,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.720396,
             "lat": 25.038082,
             "crs": "gcj02"
@@ -2959,7 +2615,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -2980,11 +2636,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.741059,
-            "lat": 25.027776,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.741059,
             "lat": 25.027776,
@@ -3040,11 +2691,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.791855,
-            "lat": 24.908169,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.791855,
             "lat": 24.908169,
@@ -3228,8 +2874,8 @@
         ]
       },
       "extras": {
-        "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -3250,11 +2896,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.792565,
-            "lat": 24.908744,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.792565,
             "lat": 24.908744,
@@ -3364,7 +3005,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -3385,11 +3026,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.788301,
-            "lat": 25.03622,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.788301,
             "lat": 25.03622,
@@ -3571,11 +3207,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.767018,
-            "lat": 24.972614,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.767049,
             "lat": 24.972053,
             "crs": "gcj02"
@@ -3598,8 +3229,8 @@
         ]
       },
       "extras": {
-        "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -3620,11 +3251,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.696538,
-            "lat": 24.944714,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.696538,
             "lat": 24.944714,
@@ -3739,7 +3365,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -3760,11 +3386,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.730365,
-            "lat": 25.006896,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.730365,
             "lat": 25.006896,
@@ -3819,7 +3440,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -3840,11 +3461,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.684903,
-            "lat": 25.01079,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.684903,
             "lat": 25.01079,
@@ -3939,7 +3555,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -3960,11 +3576,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.674169,
-            "lat": 25.00419,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.674169,
             "lat": 25.00419,
@@ -4029,7 +3640,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4058,11 +3669,6 @@
           {
             "lon": 102.785353,
             "lat": 24.949321,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.785574,
-            "lat": 24.948789,
             "crs": "gcj02"
           },
           {
@@ -4144,7 +3750,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4165,11 +3771,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.664311,
-            "lat": 25.07605,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.664311,
             "lat": 25.07605,
@@ -4204,7 +3805,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4228,11 +3829,6 @@
           {
             "lon": 102.76199,
             "lat": 25.015272,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.762549,
-            "lat": 25.015,
             "crs": "gcj02"
           },
           {
@@ -4324,7 +3920,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4345,11 +3941,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.773152,
-            "lat": 25.03609,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.773152,
             "lat": 25.03609,
@@ -4389,7 +3980,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4484,7 +4075,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4499,36 +4090,17 @@
       "to_station_id": "cn-kunming-tangzixiang",
       "direction": "both",
       "source_id": "amap-metro-planner",
-      "travel_time_seconds": 120,
-      "travel_time_source": "source",
-      "distance_km": 0.986,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.720883,
-            "lat": 25.024746,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.720846,
-            "lat": 25.025108,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.720168,
-            "lat": 25.031747,
-            "crs": "gcj02"
-          }
-        ]
-      },
+      "distance_km": 0.93,
       "extras": {
-        "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
-        "line_short_name": "2",
-        "pattern_role": "primary",
-        "distance_source": "planner"
-      }
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 27,
+        "a_s_per_km": 58.3,
+        "b_s": 69.7,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner"
     },
     {
       "id": "cn-kunming-seg-cn-kunming-huashan-west-rd-5-cn-kunming-wuyi-rd-5",
@@ -4545,11 +4117,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.707544,
-            "lat": 25.04481,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.707544,
             "lat": 25.04481,
@@ -4646,11 +4213,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.705923,
-            "lat": 25.038241,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.705371,
             "lat": 25.037823,
             "crs": "gcj02"
@@ -4659,7 +4221,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4677,44 +4239,9 @@
       "travel_time_seconds": 60,
       "travel_time_source": "source",
       "distance_km": 0.76,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.719484,
-            "lat": 25.042425,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719484,
-            "lat": 25.042425,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719418,
-            "lat": 25.043667,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719437,
-            "lat": 25.046613,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719518,
-            "lat": 25.048645,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719543,
-            "lat": 25.049251,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4779,7 +4306,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4800,11 +4327,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.68499,
-            "lat": 25.064135,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.68499,
             "lat": 25.064135,
@@ -4869,7 +4391,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -4890,11 +4412,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.790703,
-            "lat": 24.901504,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.790703,
             "lat": 24.901504,
@@ -4979,7 +4496,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -5000,11 +4517,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.693063,
-            "lat": 24.961515,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.693063,
             "lat": 24.961515,
@@ -5169,7 +4681,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -5190,11 +4702,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.69036,
-            "lat": 25.013946,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.69036,
             "lat": 25.013946,
@@ -5244,7 +4751,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -5265,11 +4772,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.751475,
-            "lat": 25.036003,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.751475,
             "lat": 25.036003,
@@ -5324,7 +4826,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -5342,59 +4844,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 0.79,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.727567,
-            "lat": 25.075547,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.727567,
-            "lat": 25.075547,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.728061,
-            "lat": 25.076198,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.72827,
-            "lat": 25.076459,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.728589,
-            "lat": 25.07686,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.728905,
-            "lat": 25.077205,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.73056,
-            "lat": 25.079031,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.73187,
-            "lat": 25.080401,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.732496,
-            "lat": 25.081046,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -5509,7 +4961,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -5533,16 +4985,6 @@
           {
             "lon": 102.749866,
             "lat": 25.024578,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.749676,
-            "lat": 25.024703,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.749673,
-            "lat": 25.024702,
             "crs": "gcj02"
           },
           {
@@ -5631,11 +5073,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.743392,
-            "lat": 25.029801,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.743702,
             "lat": 25.029139,
             "crs": "gcj02"
@@ -5711,11 +5148,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.749673,
-            "lat": 25.024702,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.749866,
             "lat": 25.024578,
             "crs": "gcj02"
@@ -5724,7 +5156,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -5745,11 +5177,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.796723,
-            "lat": 24.874068,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.796723,
             "lat": 24.874068,
@@ -5784,7 +5211,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -5986,11 +5413,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.723795,
-            "lat": 25.013698,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.723906,
             "lat": 25.013159,
             "crs": "gcj02"
@@ -6049,7 +5471,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6076,11 +5498,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.833951,
-            "lat": 24.859673,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.834271,
             "lat": 24.858853,
             "crs": "gcj02"
@@ -6099,7 +5516,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6120,11 +5537,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.834634,
-            "lat": 24.859796,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.834634,
             "lat": 24.859796,
@@ -6219,7 +5631,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6246,11 +5658,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.67794,
-            "lat": 25.045082,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.678869,
             "lat": 25.045013,
             "crs": "gcj02"
@@ -6269,7 +5676,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6287,39 +5694,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 0.92,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.739183,
-            "lat": 25.093315,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.739183,
-            "lat": 25.093315,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.739531,
-            "lat": 25.094299,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.741724,
-            "lat": 25.100408,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.742021,
-            "lat": 25.101132,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6337,84 +5714,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 1.12,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.753801,
-            "lat": 25.111895,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.753801,
-            "lat": 25.111895,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.754165,
-            "lat": 25.111424,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.754431,
-            "lat": 25.111052,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.754909,
-            "lat": 25.110547,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.755412,
-            "lat": 25.11017,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.75602,
-            "lat": 25.109855,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.756996,
-            "lat": 25.109446,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.758013,
-            "lat": 25.10909,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.759617,
-            "lat": 25.108681,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.760634,
-            "lat": 25.108447,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.761802,
-            "lat": 25.1081,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.762768,
-            "lat": 25.107585,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.76335,
-            "lat": 25.107208,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6441,11 +5743,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.785893,
-            "lat": 24.892722,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.786211,
             "lat": 24.892281,
             "crs": "gcj02"
@@ -6464,7 +5761,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6485,11 +5782,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.699926,
-            "lat": 25.032055,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.699926,
             "lat": 25.032055,
@@ -6644,7 +5936,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6671,11 +5963,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.649438,
-            "lat": 25.047161,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.650204,
             "lat": 25.047101,
             "crs": "gcj02"
@@ -6694,7 +5981,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6721,11 +6008,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.836439,
-            "lat": 24.882183,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.837257,
             "lat": 24.882429,
             "crs": "gcj02"
@@ -6744,7 +6026,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "branch",
         "distance_source": "planner"
@@ -6765,11 +6047,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.687386,
-            "lat": 25.04442,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.687386,
             "lat": 25.04442,
@@ -6859,7 +6136,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6886,11 +6163,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.769808,
-            "lat": 24.947096,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.769954,
             "lat": 24.94655,
             "crs": "gcj02"
@@ -6908,8 +6180,8 @@
         ]
       },
       "extras": {
-        "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -6930,11 +6202,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.779544,
-            "lat": 25.005373,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.779544,
             "lat": 25.005373,
@@ -6989,7 +6256,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7016,11 +6283,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.814341,
-            "lat": 24.853808,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.8149,
             "lat": 24.853949,
             "crs": "gcj02"
@@ -7034,7 +6296,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7052,49 +6314,9 @@
       "travel_time_seconds": 180,
       "travel_time_source": "source",
       "distance_km": 1.16,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.720305,
-            "lat": 25.056113,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.720305,
-            "lat": 25.056113,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.720618,
-            "lat": 25.056909,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.723294,
-            "lat": 25.063979,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.723467,
-            "lat": 25.064443,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.723563,
-            "lat": 25.06472,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.723949,
-            "lat": 25.065956,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7118,11 +6340,6 @@
           {
             "lon": 102.721669,
             "lat": 25.057128,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.723215,
-            "lat": 25.056705,
             "crs": "gcj02"
           },
           {
@@ -7244,7 +6461,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7364,7 +6581,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7385,11 +6602,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.695467,
-            "lat": 25.043765,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.695467,
             "lat": 25.043765,
@@ -7534,7 +6746,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7555,11 +6767,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.621099,
-            "lat": 25.005415,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.621099,
             "lat": 25.005415,
@@ -7709,7 +6916,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7730,11 +6937,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.735077,
-            "lat": 25.001354,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.735077,
             "lat": 25.001354,
@@ -7778,8 +6980,8 @@
         ]
       },
       "extras": {
-        "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7800,11 +7002,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.740632,
-            "lat": 25.053412,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.740632,
             "lat": 25.053412,
@@ -7944,7 +7141,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -7965,11 +7162,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.629454,
-            "lat": 25.018123,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.629454,
             "lat": 25.018123,
@@ -8014,7 +7206,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -8032,94 +7224,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 1.16,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.74569,
-            "lat": 25.109715,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.74569,
-            "lat": 25.109715,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.745976,
-            "lat": 25.110303,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.746149,
-            "lat": 25.110721,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.746475,
-            "lat": 25.111289,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.746837,
-            "lat": 25.111822,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.7474,
-            "lat": 25.112547,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.748015,
-            "lat": 25.113199,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.748923,
-            "lat": 25.11375,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.749629,
-            "lat": 25.113966,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.750536,
-            "lat": 25.114044,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.751522,
-            "lat": 25.113873,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.752239,
-            "lat": 25.113567,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.752893,
-            "lat": 25.113063,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.753438,
-            "lat": 25.112364,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.753801,
-            "lat": 25.111895,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -8140,11 +7247,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.77525,
-            "lat": 24.929345,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.77525,
             "lat": 24.929345,
@@ -8219,7 +7321,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -8240,11 +7342,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.693246,
-            "lat": 25.063606,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.693246,
             "lat": 25.063606,
@@ -8384,7 +7481,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -8405,11 +7502,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.760802,
-            "lat": 25.036393,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.760802,
             "lat": 25.036393,
@@ -8474,7 +7566,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -8495,11 +7587,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.787737,
-            "lat": 24.937376,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.787737,
             "lat": 24.937376,
@@ -8709,7 +7796,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -8727,84 +7814,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 0.5,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.720168,
-            "lat": 25.031747,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719924,
-            "lat": 25.033559,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719924,
-            "lat": 25.033559,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719887,
-            "lat": 25.033857,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719871,
-            "lat": 25.033959,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719835,
-            "lat": 25.034368,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719787,
-            "lat": 25.034822,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719745,
-            "lat": 25.035354,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719716,
-            "lat": 25.035823,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719696,
-            "lat": 25.036276,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.71968,
-            "lat": 25.036689,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719671,
-            "lat": 25.037132,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719667,
-            "lat": 25.037306,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.719665,
-            "lat": 25.03808,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -8825,11 +7837,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.729796,
-            "lat": 25.038291,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.729796,
             "lat": 25.038291,
@@ -8929,7 +7936,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -8956,11 +7963,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.829427,
-            "lat": 24.872448,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.829688,
             "lat": 24.871714,
             "crs": "gcj02"
@@ -8979,7 +7981,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9000,11 +8002,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.842417,
-            "lat": 24.835941,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.842417,
             "lat": 24.835941,
@@ -9084,7 +8081,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9105,11 +8102,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.638836,
-            "lat": 25.035271,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.638836,
             "lat": 25.035271,
@@ -9254,7 +8246,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9399,7 +8391,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9504,7 +8496,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9519,17 +8511,12 @@
       "to_station_id": "cn-kunming-changhong-west-rd",
       "direction": "both",
       "source_id": "amap-metro-planner",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 1.53,
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.741612,
-            "lat": 24.996793,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.741612,
             "lat": 24.996793,
@@ -9593,8 +8580,8 @@
         ]
       },
       "extras": {
-        "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9618,11 +8605,6 @@
           {
             "lon": 102.847833,
             "lat": 24.865844,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.848362,
-            "lat": 24.866091,
             "crs": "gcj02"
           },
           {
@@ -9694,7 +8676,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9715,11 +8697,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.706347,
-            "lat": 25.037085,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.706347,
             "lat": 25.037085,
@@ -9849,7 +8826,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9964,7 +8941,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -9985,11 +8962,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.802784,
-            "lat": 24.857587,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.802784,
             "lat": 24.857587,
@@ -10084,7 +9056,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10105,11 +9077,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.706002,
-            "lat": 25.060485,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.706002,
             "lat": 25.060485,
@@ -10179,7 +9146,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10200,11 +9167,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.761957,
-            "lat": 24.985303,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.761957,
             "lat": 24.985303,
@@ -10278,8 +9240,8 @@
         ]
       },
       "extras": {
-        "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10300,11 +9262,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.673427,
-            "lat": 25.072222,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.673427,
             "lat": 25.072222,
@@ -10394,7 +9351,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10415,11 +9372,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.680065,
-            "lat": 24.975297,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.680065,
             "lat": 24.975297,
@@ -10534,7 +9486,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10555,11 +9507,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.768296,
-            "lat": 24.956967,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.768296,
             "lat": 24.956967,
@@ -10598,8 +9545,8 @@
         ]
       },
       "extras": {
-        "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10626,11 +9573,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.666506,
-            "lat": 25.045937,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.667452,
             "lat": 25.045869,
             "crs": "gcj02"
@@ -10649,7 +9591,7 @@
       },
       "extras": {
         "planner_service": "地铁3号线(西山公园--东部汽车站)",
-        "headway": "",
+        "headway": "首站发车约9分钟/趟",
         "line_short_name": "3",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10667,49 +9609,9 @@
       "travel_time_seconds": 120,
       "travel_time_source": "source",
       "distance_km": 1.03,
-      "geometry": {
-        "crs": "gcj02",
-        "points": [
-          {
-            "lon": 102.742021,
-            "lat": 25.101132,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.742021,
-            "lat": 25.101132,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.742317,
-            "lat": 25.101854,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.744066,
-            "lat": 25.106278,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.744605,
-            "lat": 25.107492,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.745402,
-            "lat": 25.109125,
-            "crs": "gcj02"
-          },
-          {
-            "lon": 102.74569,
-            "lat": 25.109715,
-            "crs": "gcj02"
-          }
-        ]
-      },
       "extras": {
         "planner_service": "地铁2号线(环城南路(昆明南火车站/大学城南·云南开放大学)--北部汽车站)",
-        "headway": "",
+        "headway": "首站发车约7分钟/趟",
         "line_short_name": "2",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10736,11 +9638,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.785718,
-            "lat": 24.977898,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.786504,
             "lat": 24.965831,
             "crs": "gcj02"
@@ -10759,7 +9656,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10780,11 +9677,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.698471,
-            "lat": 25.020672,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.698471,
             "lat": 25.020672,
@@ -10914,7 +9806,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -10935,11 +9827,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.844818,
-            "lat": 24.884599,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.844818,
             "lat": 24.884599,
@@ -11064,7 +9951,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "branch",
         "distance_source": "planner"
@@ -11091,11 +9978,6 @@
             "crs": "gcj02"
           },
           {
-            "lon": 102.838259,
-            "lat": 24.847629,
-            "crs": "gcj02"
-          },
-          {
             "lon": 102.838556,
             "lat": 24.846797,
             "crs": "gcj02"
@@ -11114,7 +9996,7 @@
       },
       "extras": {
         "planner_service": "地铁1号线(环城南路(北部汽车站)--大学城南·云南开放大学)",
-        "headway": "",
+        "headway": "首站发车约14分钟/趟",
         "line_short_name": "1",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -11135,11 +10017,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.663638,
-            "lat": 24.984391,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.663638,
             "lat": 24.984391,
@@ -11214,7 +10091,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -11235,11 +10112,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.712719,
-            "lat": 25.054838,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.712719,
             "lat": 25.054838,
@@ -11419,7 +10291,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -11440,11 +10312,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.670544,
-            "lat": 24.97677,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.670544,
             "lat": 24.97677,
@@ -11579,7 +10446,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -11600,11 +10467,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.786496,
-            "lat": 24.964593,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.786496,
             "lat": 24.964593,
@@ -11709,7 +10571,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -11730,11 +10592,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.692974,
-            "lat": 24.973188,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.692974,
             "lat": 24.973188,
@@ -11789,7 +10646,7 @@
       },
       "extras": {
         "planner_service": "地铁5号线(世博园--宝丰)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "5",
         "pattern_role": "primary",
         "distance_source": "planner"
@@ -11810,11 +10667,6 @@
       "geometry": {
         "crs": "gcj02",
         "points": [
-          {
-            "lon": 102.783935,
-            "lat": 24.993296,
-            "crs": "gcj02"
-          },
           {
             "lon": 102.783935,
             "lat": 24.993296,
@@ -11899,7 +10751,7 @@
       },
       "extras": {
         "planner_service": "地铁4号线(金川路--昆明南火车站)",
-        "headway": "",
+        "headway": "首站发车约8分钟/趟",
         "line_short_name": "4",
         "pattern_role": "primary",
         "distance_source": "planner"

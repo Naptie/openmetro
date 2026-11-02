@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-fuzhou",
-  "generated_at": "2026-10-11T12:26:33.226Z",
+  "generated_at": "2026-11-02T11:37:53.369Z",
   "source": [
     {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-10-11T12:26:33.226Z",
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-02T11:37:53.369Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -373,9 +373,9 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-nanmendou-2",
       "to_stop_id": "cn-fuzhou-nanmendou-1",
-      "walk_time_seconds": 199,
+      "walk_time_seconds": 200,
       "source_id": "baidu-transit",
-      "walk_distance_meters": 236,
+      "walk_distance_meters": 237,
       "extras": {
         "walk_source": "baidu-transit"
       }
@@ -429,9 +429,9 @@
       "to_line_id": "cn-fuzhou-line-1",
       "from_stop_id": "cn-fuzhou-sanchajie-滨海快线",
       "to_stop_id": "cn-fuzhou-sanchajie-1",
-      "walk_time_seconds": 205,
+      "walk_time_seconds": 349,
       "source_id": "baidu-transit",
-      "walk_distance_meters": 246,
+      "walk_distance_meters": 412,
       "extras": {
         "walk_source": "baidu-transit"
       }

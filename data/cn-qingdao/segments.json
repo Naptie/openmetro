@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-qingdao",
-  "generated_at": "2026-10-12T07:28:30.333Z",
+  "generated_at": "2026-11-02T12:25:41.949Z",
   "source": [
     {
-      "name": "Baidu Direction Lite transit",
-      "url": "https://api.map.baidu.com/directionlite/v1/transit",
-      "version": "1",
-      "retrieved_at": "2026-10-12T07:28:30.333Z",
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-02T12:25:41.949Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -220,11 +220,11 @@
       "extras": {
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 12.9,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1
+        "speed_kmh": 12.8,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8
       },
-      "travel_time_seconds": 250,
+      "travel_time_seconds": 252,
       "travel_time_source": "estimated",
       "travel_time_derived_from": [
         "distance_haversine",
@@ -299,9 +299,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 11.8,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 11.7,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -477,9 +477,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 17.6,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 19.1,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 180,
@@ -549,9 +549,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 11.7,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 11.6,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -668,17 +668,13 @@
       "to_station_id": "cn-qingdao-may-4th-square",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.969,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 13.3,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-gangtou-6-cn-qingdao-xuejiapozi-6",
@@ -706,17 +702,13 @@
       "to_station_id": "cn-qingdao-qingdao-central-fawu-unit-yanerdao-road",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.787,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 11.8,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-gaoyu-11-cn-qingdao-zangcun-11",
@@ -867,9 +859,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 16,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 16.8,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -884,17 +876,13 @@
       "to_station_id": "cn-qingdao-haiyou-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.96,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 13.4,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-haier-rd-3-cn-qingdao-metro-building-3",
@@ -905,17 +893,13 @@
       "to_station_id": "cn-qingdao-metro-building",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.005,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 14.5,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-haipo-bridge-hiser-hospital-1-cn-qingdao-taidong-1",
@@ -977,17 +961,13 @@
       "to_station_id": "cn-qingdao-taidong",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.106,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 14.8,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-haiyou-rd-2-cn-qingdao-maidao-2",
@@ -998,17 +978,13 @@
       "to_station_id": "cn-qingdao-maidao",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.178,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.9,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-hall-of-the-people-3-cn-qingdao-qingdao-railway-station-3",
@@ -1019,17 +995,13 @@
       "to_station_id": "cn-qingdao-qingdao-railway-station",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.4,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 17.7,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-hall-of-the-people-4-cn-qingdao-xinhaoshan-the-affiliated-hospital-of-qingdao-university-4",
@@ -1146,9 +1118,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 23.4,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 30,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 180,
@@ -1184,9 +1156,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 16.1,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 16,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -1239,9 +1211,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.9,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 15.8,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -1392,17 +1364,13 @@
       "to_station_id": "cn-qingdao-licun",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.076,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 14.7,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-kutao-11-cn-qingdao-ocean-university-of-china-11",
@@ -1468,9 +1436,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 12.2,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 11.6,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -1506,9 +1474,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 13.7,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 13.6,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -1523,17 +1491,13 @@
       "to_station_id": "cn-qingdao-wannianquan-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.277,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.7,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-licun-park-2-cn-qingdao-licun-2",
@@ -1548,9 +1512,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 13.7,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 13.6,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -1565,17 +1529,13 @@
       "to_station_id": "cn-qingdao-taishan-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.241,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.5,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-lingshan-bay-6-cn-qingdao-xintun-6",
@@ -1654,17 +1614,13 @@
       "to_station_id": "cn-qingdao-gaoxiong-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.2,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.1,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-majialou-6-cn-qingdao-zhuamashan-6",
@@ -1709,17 +1665,13 @@
       "to_station_id": "cn-qingdao-zhiquan-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.602,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.6,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-may-4th-square-3-cn-qingdao-yanan-3rd-rd-3",
@@ -1734,9 +1686,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 11.2,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 11.1,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 180,
@@ -1755,9 +1707,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 18.2,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 18.1,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -1793,9 +1745,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 12,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 11.4,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -1882,9 +1834,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 13.2,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 13.1,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -2039,17 +1991,13 @@
       "to_station_id": "cn-qingdao-fushansuo",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.027,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 14.2,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-qingdao-central-hospital-1-cn-qingdao-shuiqinggou-1",
@@ -2077,17 +2025,13 @@
       "to_station_id": "cn-qingdao-xiaogang",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.915,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 12.4,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-qingdao-no-2-middle-school-11-cn-qingdao-qingdao-university-of-science-and-technology-11",
@@ -2153,9 +2097,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 17.8,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 17.7,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -2229,9 +2173,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 16.1,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 16,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -2390,9 +2334,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 18.1,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 20,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 180,
@@ -2411,9 +2355,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 16,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 15.9,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 300,
@@ -2496,17 +2440,13 @@
       "to_station_id": "cn-qingdao-lijin-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.741,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 10.7,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-taihangshan-rd-1-cn-qingdao-china-university-of-petroleum-1",
@@ -2538,9 +2478,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 12.6,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 12.5,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -2555,17 +2495,13 @@
       "to_station_id": "cn-qingdao-qingdao-international-cruise-terminal",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.939,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 13.8,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-taishan-rd-4-cn-qingdao-changle-rd-4",
@@ -2614,9 +2550,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 18,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 19.9,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 180,
@@ -2665,17 +2601,13 @@
       "to_station_id": "cn-qingdao-haier-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.41,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 17,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-wenquan-east-11-cn-qingdao-gaoyu-11",
@@ -2792,9 +2724,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 20.2,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 23.7,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -3085,9 +3017,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 18.1,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 18,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -3153,17 +3085,13 @@
       "to_station_id": "cn-qingdao-zhenhua-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.241,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.8,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-zangcun-11-cn-qingdao-qiangu-mountain-11",
@@ -3199,9 +3127,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 11.2,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 10.5,
+        "a_s_per_km": 17.1,
+        "b_s": 241.6,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 60,
@@ -3301,17 +3229,13 @@
       "to_station_id": "cn-qingdao-junfeng-rd",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.97,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 13.5,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-zhiquan-rd-2-cn-qingdao-haixin-bridge-2",
@@ -3322,17 +3246,13 @@
       "to_station_id": "cn-qingdao-haixin-bridge",
       "direction": "both",
       "source_id": "amap-subway-3702",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 0.859,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 12.4,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-qingdao-seg-cn-qingdao-zhongshan-park-3-cn-qingdao-huiquan-square-3",
@@ -3347,9 +3267,9 @@
       "extras": {
         "distance_source": "baidu-transit-distance",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 11.6,
-        "a_s_per_km": 76.7,
-        "b_s": 181.1,
+        "speed_kmh": 11.5,
+        "a_s_per_km": 76.3,
+        "b_s": 183.8,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,

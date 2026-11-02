@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/fares.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-lanzhou",
-  "generated_at": "2026-10-22T21:01:07.380Z",
+  "generated_at": "2026-11-02T11:58:19.125Z",
   "source": [
     {
       "name": "兰州轨道交通票价查询矩阵（官网静态资产 fareData.js）",
@@ -11,7 +11,7 @@
       "license": "unknown",
       "license_url": null,
       "attribution": "兰州市轨道交通有限公司",
-      "retrieved_at": "2026-10-22T21:01:07.380Z",
+      "retrieved_at": "2026-11-02T11:58:19.125Z",
       "notes": "OD 票价直接取自官网静态资产 fareData.js 的 window.fareData 矩阵（27 起点 × 26 终点 = 702 个单元，对称、无缺值、2–7 元）。官网线上「票价查询」由 fareUtil.js 覆写 webPost.getRoute 后在客户端读取同一份矩阵，故该矩阵即运营方现行票价源；官网公布的里程分段计价（起步 2 元/4 公里，晋级里程 4、4、6、6、8、8，40 公里以上每加 1 元多乘 8 公里）与该矩阵逐带吻合。官网后端 /tb/search 已停用（502），不予采用。"
     }
   ],

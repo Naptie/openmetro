@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-shenzhen",
-  "generated_at": "2026-09-28T04:19:47.366Z",
-  "source": [],
+  "generated_at": "2026-11-02T12:32:21.712Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-02T12:32:21.712Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-shenzhen-antuoshan-2-cn-shenzhen-antuoshan-7",
@@ -11,7 +22,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-antuoshan-2",
-      "to_stop_id": "cn-shenzhen-antuoshan-7"
+      "to_stop_id": "cn-shenzhen-antuoshan-7",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-antuoshan-7-cn-shenzhen-antuoshan-2",
@@ -19,7 +32,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-antuoshan-7",
-      "to_stop_id": "cn-shenzhen-antuoshan-2"
+      "to_stop_id": "cn-shenzhen-antuoshan-2",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-bagualing-6-cn-shenzhen-bagualing-7",
@@ -27,7 +42,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-bagualing-6",
-      "to_stop_id": "cn-shenzhen-bagualing-7"
+      "to_stop_id": "cn-shenzhen-bagualing-7",
+      "walk_time_seconds": 380,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-bagualing-7-cn-shenzhen-bagualing-6",
@@ -35,7 +52,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-bagualing-7",
-      "to_stop_id": "cn-shenzhen-bagualing-6"
+      "to_stop_id": "cn-shenzhen-bagualing-6",
+      "walk_time_seconds": 380,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-baoanzhongxin-1-cn-shenzhen-baoanzhongxin-5",
@@ -43,7 +62,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-baoanzhongxin-1",
-      "to_stop_id": "cn-shenzhen-baoanzhongxin-5"
+      "to_stop_id": "cn-shenzhen-baoanzhongxin-5",
+      "walk_time_seconds": 230,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-baoanzhongxin-5-cn-shenzhen-baoanzhongxin-1",
@@ -51,7 +72,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-baoanzhongxin-5",
-      "to_stop_id": "cn-shenzhen-baoanzhongxin-1"
+      "to_stop_id": "cn-shenzhen-baoanzhongxin-1",
+      "walk_time_seconds": 230,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-buji-14-cn-shenzhen-buji-3",
@@ -59,7 +82,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-buji-14",
-      "to_stop_id": "cn-shenzhen-buji-3"
+      "to_stop_id": "cn-shenzhen-buji-3",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-buji-14-cn-shenzhen-buji-5",
@@ -67,7 +92,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-buji-14",
-      "to_stop_id": "cn-shenzhen-buji-5"
+      "to_stop_id": "cn-shenzhen-buji-5",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-buji-3-cn-shenzhen-buji-14",
@@ -75,7 +102,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-buji-3",
-      "to_stop_id": "cn-shenzhen-buji-14"
+      "to_stop_id": "cn-shenzhen-buji-14",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-buji-3-cn-shenzhen-buji-5",
@@ -83,7 +112,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-buji-3",
-      "to_stop_id": "cn-shenzhen-buji-5"
+      "to_stop_id": "cn-shenzhen-buji-5",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-buji-5-cn-shenzhen-buji-14",
@@ -91,7 +122,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-buji-5",
-      "to_stop_id": "cn-shenzhen-buji-14"
+      "to_stop_id": "cn-shenzhen-buji-14",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-buji-5-cn-shenzhen-buji-3",
@@ -99,7 +132,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-buji-5",
-      "to_stop_id": "cn-shenzhen-buji-3"
+      "to_stop_id": "cn-shenzhen-buji-3",
+      "walk_time_seconds": 270,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-1-cn-shenzhen-chegongmiao-11",
@@ -107,7 +142,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-chegongmiao-1",
-      "to_stop_id": "cn-shenzhen-chegongmiao-11"
+      "to_stop_id": "cn-shenzhen-chegongmiao-11",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-1-cn-shenzhen-chegongmiao-7",
@@ -115,7 +152,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-chegongmiao-1",
-      "to_stop_id": "cn-shenzhen-chegongmiao-7"
+      "to_stop_id": "cn-shenzhen-chegongmiao-7",
+      "walk_time_seconds": 660,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-1-cn-shenzhen-chegongmiao-9",
@@ -123,7 +162,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-chegongmiao-1",
-      "to_stop_id": "cn-shenzhen-chegongmiao-9"
+      "to_stop_id": "cn-shenzhen-chegongmiao-9",
+      "walk_time_seconds": 600,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-11-cn-shenzhen-chegongmiao-1",
@@ -131,7 +172,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-chegongmiao-11",
-      "to_stop_id": "cn-shenzhen-chegongmiao-1"
+      "to_stop_id": "cn-shenzhen-chegongmiao-1",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-11-cn-shenzhen-chegongmiao-7",
@@ -139,7 +182,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-chegongmiao-11",
-      "to_stop_id": "cn-shenzhen-chegongmiao-7"
+      "to_stop_id": "cn-shenzhen-chegongmiao-7",
+      "walk_time_seconds": 383,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-11-cn-shenzhen-chegongmiao-9",
@@ -147,7 +192,13 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-chegongmiao-11",
-      "to_stop_id": "cn-shenzhen-chegongmiao-9"
+      "to_stop_id": "cn-shenzhen-chegongmiao-9",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-7-cn-shenzhen-chegongmiao-1",
@@ -155,7 +206,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-chegongmiao-7",
-      "to_stop_id": "cn-shenzhen-chegongmiao-1"
+      "to_stop_id": "cn-shenzhen-chegongmiao-1",
+      "walk_time_seconds": 427,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-7-cn-shenzhen-chegongmiao-11",
@@ -163,7 +216,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-chegongmiao-7",
-      "to_stop_id": "cn-shenzhen-chegongmiao-11"
+      "to_stop_id": "cn-shenzhen-chegongmiao-11",
+      "walk_time_seconds": 383,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-7-cn-shenzhen-chegongmiao-9",
@@ -171,7 +226,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-chegongmiao-7",
-      "to_stop_id": "cn-shenzhen-chegongmiao-9"
+      "to_stop_id": "cn-shenzhen-chegongmiao-9",
+      "walk_time_seconds": 222,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-9-cn-shenzhen-chegongmiao-1",
@@ -179,7 +236,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-chegongmiao-9",
-      "to_stop_id": "cn-shenzhen-chegongmiao-1"
+      "to_stop_id": "cn-shenzhen-chegongmiao-1",
+      "walk_time_seconds": 427,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-9-cn-shenzhen-chegongmiao-11",
@@ -187,7 +246,13 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-chegongmiao-9",
-      "to_stop_id": "cn-shenzhen-chegongmiao-11"
+      "to_stop_id": "cn-shenzhen-chegongmiao-11",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-chegongmiao-9-cn-shenzhen-chegongmiao-7",
@@ -195,7 +260,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-chegongmiao-9",
-      "to_stop_id": "cn-shenzhen-chegongmiao-7"
+      "to_stop_id": "cn-shenzhen-chegongmiao-7",
+      "walk_time_seconds": 222,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chiwan-2-cn-shenzhen-chiwan-5",
@@ -203,7 +270,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-chiwan-2",
-      "to_stop_id": "cn-shenzhen-chiwan-5"
+      "to_stop_id": "cn-shenzhen-chiwan-5",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-chiwan-5-cn-shenzhen-chiwan-2",
@@ -211,7 +280,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-chiwan-5",
-      "to_stop_id": "cn-shenzhen-chiwan-2"
+      "to_stop_id": "cn-shenzhen-chiwan-2",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dajuyuan-1-cn-shenzhen-dajuyuan-2",
@@ -219,7 +290,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-dajuyuan-1",
-      "to_stop_id": "cn-shenzhen-dajuyuan-2"
+      "to_stop_id": "cn-shenzhen-dajuyuan-2",
+      "walk_time_seconds": 430,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dajuyuan-1-cn-shenzhen-dajuyuan-5",
@@ -227,7 +300,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-dajuyuan-1",
-      "to_stop_id": "cn-shenzhen-dajuyuan-5"
+      "to_stop_id": "cn-shenzhen-dajuyuan-5",
+      "walk_time_seconds": 320,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dajuyuan-2-cn-shenzhen-dajuyuan-1",
@@ -235,7 +310,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-dajuyuan-2",
-      "to_stop_id": "cn-shenzhen-dajuyuan-1"
+      "to_stop_id": "cn-shenzhen-dajuyuan-1",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dajuyuan-2-cn-shenzhen-dajuyuan-5",
@@ -243,7 +320,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-dajuyuan-2",
-      "to_stop_id": "cn-shenzhen-dajuyuan-5"
+      "to_stop_id": "cn-shenzhen-dajuyuan-5",
+      "walk_time_seconds": 280,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dajuyuan-5-cn-shenzhen-dajuyuan-1",
@@ -251,7 +330,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-dajuyuan-5",
-      "to_stop_id": "cn-shenzhen-dajuyuan-1"
+      "to_stop_id": "cn-shenzhen-dajuyuan-1",
+      "walk_time_seconds": 320,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dajuyuan-5-cn-shenzhen-dajuyuan-2",
@@ -259,7 +340,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-dajuyuan-5",
-      "to_stop_id": "cn-shenzhen-dajuyuan-2"
+      "to_stop_id": "cn-shenzhen-dajuyuan-2",
+      "walk_time_seconds": 280,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dayun-14-cn-shenzhen-dayun-16",
@@ -267,7 +350,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-16",
       "from_stop_id": "cn-shenzhen-dayun-14",
-      "to_stop_id": "cn-shenzhen-dayun-16"
+      "to_stop_id": "cn-shenzhen-dayun-16",
+      "walk_time_seconds": 270,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dayun-14-cn-shenzhen-dayun-3",
@@ -275,7 +360,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-dayun-14",
-      "to_stop_id": "cn-shenzhen-dayun-3"
+      "to_stop_id": "cn-shenzhen-dayun-3",
+      "walk_time_seconds": 530,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dayun-16-cn-shenzhen-dayun-14",
@@ -283,7 +370,9 @@
       "from_line_id": "cn-shenzhen-line-16",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-dayun-16",
-      "to_stop_id": "cn-shenzhen-dayun-14"
+      "to_stop_id": "cn-shenzhen-dayun-14",
+      "walk_time_seconds": 270,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dayun-16-cn-shenzhen-dayun-3",
@@ -291,7 +380,9 @@
       "from_line_id": "cn-shenzhen-line-16",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-dayun-16",
-      "to_stop_id": "cn-shenzhen-dayun-3"
+      "to_stop_id": "cn-shenzhen-dayun-3",
+      "walk_time_seconds": 530,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dayun-3-cn-shenzhen-dayun-14",
@@ -299,7 +390,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-dayun-3",
-      "to_stop_id": "cn-shenzhen-dayun-14"
+      "to_stop_id": "cn-shenzhen-dayun-14",
+      "walk_time_seconds": 530,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-dayun-3-cn-shenzhen-dayun-16",
@@ -307,7 +400,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-16",
       "from_stop_id": "cn-shenzhen-dayun-3",
-      "to_stop_id": "cn-shenzhen-dayun-16"
+      "to_stop_id": "cn-shenzhen-dayun-16",
+      "walk_time_seconds": 530,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-fenghuangcheng-13-cn-shenzhen-fenghuangcheng-6",
@@ -315,7 +410,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-fenghuangcheng-13",
-      "to_stop_id": "cn-shenzhen-fenghuangcheng-6"
+      "to_stop_id": "cn-shenzhen-fenghuangcheng-6",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-fenghuangcheng-6-cn-shenzhen-fenghuangcheng-13",
@@ -323,7 +420,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-fenghuangcheng-6",
-      "to_stop_id": "cn-shenzhen-fenghuangcheng-13"
+      "to_stop_id": "cn-shenzhen-fenghuangcheng-13",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-fumin-10-cn-shenzhen-fumin-4",
@@ -331,7 +430,13 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-fumin-10",
-      "to_stop_id": "cn-shenzhen-fumin-4"
+      "to_stop_id": "cn-shenzhen-fumin-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-fumin-10-cn-shenzhen-fumin-7",
@@ -339,7 +444,9 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-fumin-10",
-      "to_stop_id": "cn-shenzhen-fumin-7"
+      "to_stop_id": "cn-shenzhen-fumin-7",
+      "walk_time_seconds": 350,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-fumin-4-cn-shenzhen-fumin-10",
@@ -347,7 +454,13 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-fumin-4",
-      "to_stop_id": "cn-shenzhen-fumin-10"
+      "to_stop_id": "cn-shenzhen-fumin-10",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-fumin-4-cn-shenzhen-fumin-7",
@@ -355,7 +468,9 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-fumin-4",
-      "to_stop_id": "cn-shenzhen-fumin-7"
+      "to_stop_id": "cn-shenzhen-fumin-7",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-fumin-7-cn-shenzhen-fumin-10",
@@ -363,7 +478,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-fumin-7",
-      "to_stop_id": "cn-shenzhen-fumin-10"
+      "to_stop_id": "cn-shenzhen-fumin-10",
+      "walk_time_seconds": 350,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-fumin-7-cn-shenzhen-fumin-4",
@@ -371,7 +488,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-fumin-7",
-      "to_stop_id": "cn-shenzhen-fumin-4"
+      "to_stop_id": "cn-shenzhen-fumin-4",
+      "walk_time_seconds": 235,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-futian-11-cn-shenzhen-futian-2",
@@ -379,7 +498,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-futian-11",
-      "to_stop_id": "cn-shenzhen-futian-2"
+      "to_stop_id": "cn-shenzhen-futian-2",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-futian-11-cn-shenzhen-futian-3",
@@ -387,7 +508,13 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-futian-11",
-      "to_stop_id": "cn-shenzhen-futian-3"
+      "to_stop_id": "cn-shenzhen-futian-3",
+      "walk_time_seconds": 258,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 309,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-futian-2-cn-shenzhen-futian-11",
@@ -395,7 +522,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-futian-2",
-      "to_stop_id": "cn-shenzhen-futian-11"
+      "to_stop_id": "cn-shenzhen-futian-11",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-futian-2-cn-shenzhen-futian-3",
@@ -403,7 +532,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-futian-2",
-      "to_stop_id": "cn-shenzhen-futian-3"
+      "to_stop_id": "cn-shenzhen-futian-3",
+      "walk_time_seconds": 280,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-futian-3-cn-shenzhen-futian-11",
@@ -411,7 +542,13 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-futian-3",
-      "to_stop_id": "cn-shenzhen-futian-11"
+      "to_stop_id": "cn-shenzhen-futian-11",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-futian-3-cn-shenzhen-futian-2",
@@ -419,7 +556,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-futian-3",
-      "to_stop_id": "cn-shenzhen-futian-2"
+      "to_stop_id": "cn-shenzhen-futian-2",
+      "walk_time_seconds": 210,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-futiankouan-10-cn-shenzhen-futiankouan-4",
@@ -427,7 +566,13 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-futiankouan-10",
-      "to_stop_id": "cn-shenzhen-futiankouan-4"
+      "to_stop_id": "cn-shenzhen-futiankouan-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-futiankouan-4-cn-shenzhen-futiankouan-10",
@@ -435,7 +580,13 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-futiankouan-4",
-      "to_stop_id": "cn-shenzhen-futiankouan-10"
+      "to_stop_id": "cn-shenzhen-futiankouan-10",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-fuyong-11-cn-shenzhen-fuyong-12",
@@ -443,7 +594,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-fuyong-11",
-      "to_stop_id": "cn-shenzhen-fuyong-12"
+      "to_stop_id": "cn-shenzhen-fuyong-12",
+      "walk_time_seconds": 590,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-fuyong-12-cn-shenzhen-fuyong-11",
@@ -451,7 +604,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-fuyong-12",
-      "to_stop_id": "cn-shenzhen-fuyong-11"
+      "to_stop_id": "cn-shenzhen-fuyong-11",
+      "walk_time_seconds": 590,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxia-1-cn-shenzhen-gangxia-10",
@@ -459,7 +614,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-gangxia-1",
-      "to_stop_id": "cn-shenzhen-gangxia-10"
+      "to_stop_id": "cn-shenzhen-gangxia-10",
+      "walk_time_seconds": 211,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxia-10-cn-shenzhen-gangxia-1",
@@ -467,7 +624,9 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-gangxia-10",
-      "to_stop_id": "cn-shenzhen-gangxia-1"
+      "to_stop_id": "cn-shenzhen-gangxia-1",
+      "walk_time_seconds": 225,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-10-cn-shenzhen-gangxiabei-11",
@@ -475,7 +634,13 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-gangxiabei-10",
-      "to_stop_id": "cn-shenzhen-gangxiabei-11"
+      "to_stop_id": "cn-shenzhen-gangxiabei-11",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-10-cn-shenzhen-gangxiabei-14",
@@ -483,7 +648,9 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-gangxiabei-10",
-      "to_stop_id": "cn-shenzhen-gangxiabei-14"
+      "to_stop_id": "cn-shenzhen-gangxiabei-14",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-10-cn-shenzhen-gangxiabei-2",
@@ -491,7 +658,9 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-gangxiabei-10",
-      "to_stop_id": "cn-shenzhen-gangxiabei-2"
+      "to_stop_id": "cn-shenzhen-gangxiabei-2",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-11-cn-shenzhen-gangxiabei-10",
@@ -499,7 +668,13 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-gangxiabei-11",
-      "to_stop_id": "cn-shenzhen-gangxiabei-10"
+      "to_stop_id": "cn-shenzhen-gangxiabei-10",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-11-cn-shenzhen-gangxiabei-14",
@@ -507,7 +682,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-gangxiabei-11",
-      "to_stop_id": "cn-shenzhen-gangxiabei-14"
+      "to_stop_id": "cn-shenzhen-gangxiabei-14",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-11-cn-shenzhen-gangxiabei-2",
@@ -515,7 +692,13 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-gangxiabei-11",
-      "to_stop_id": "cn-shenzhen-gangxiabei-2"
+      "to_stop_id": "cn-shenzhen-gangxiabei-2",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-14-cn-shenzhen-gangxiabei-10",
@@ -523,7 +706,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-gangxiabei-14",
-      "to_stop_id": "cn-shenzhen-gangxiabei-10"
+      "to_stop_id": "cn-shenzhen-gangxiabei-10",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-14-cn-shenzhen-gangxiabei-11",
@@ -531,7 +716,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-gangxiabei-14",
-      "to_stop_id": "cn-shenzhen-gangxiabei-11"
+      "to_stop_id": "cn-shenzhen-gangxiabei-11",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-14-cn-shenzhen-gangxiabei-2",
@@ -539,7 +726,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-gangxiabei-14",
-      "to_stop_id": "cn-shenzhen-gangxiabei-2"
+      "to_stop_id": "cn-shenzhen-gangxiabei-2",
+      "walk_time_seconds": 395,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-2-cn-shenzhen-gangxiabei-10",
@@ -547,7 +736,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-gangxiabei-2",
-      "to_stop_id": "cn-shenzhen-gangxiabei-10"
+      "to_stop_id": "cn-shenzhen-gangxiabei-10",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-2-cn-shenzhen-gangxiabei-11",
@@ -555,7 +746,13 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-gangxiabei-2",
-      "to_stop_id": "cn-shenzhen-gangxiabei-11"
+      "to_stop_id": "cn-shenzhen-gangxiabei-11",
+      "walk_time_seconds": 381,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 457,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-gangxiabei-2-cn-shenzhen-gangxiabei-14",
@@ -563,7 +760,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-gangxiabei-2",
-      "to_stop_id": "cn-shenzhen-gangxiabei-14"
+      "to_stop_id": "cn-shenzhen-gangxiabei-14",
+      "walk_time_seconds": 395,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gongmingguangchang-13-cn-shenzhen-gongmingguangchang-6",
@@ -571,7 +770,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-gongmingguangchang-13",
-      "to_stop_id": "cn-shenzhen-gongmingguangchang-6"
+      "to_stop_id": "cn-shenzhen-gongmingguangchang-6",
+      "walk_time_seconds": 390,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gongmingguangchang-6-cn-shenzhen-gongmingguangchang-13",
@@ -579,7 +780,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-gongmingguangchang-6",
-      "to_stop_id": "cn-shenzhen-gongmingguangchang-13"
+      "to_stop_id": "cn-shenzhen-gongmingguangchang-13",
+      "walk_time_seconds": 390,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gouwugongyuan-1-cn-shenzhen-gouwugongyuan-3",
@@ -587,7 +790,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-gouwugongyuan-1",
-      "to_stop_id": "cn-shenzhen-gouwugongyuan-3"
+      "to_stop_id": "cn-shenzhen-gouwugongyuan-3",
+      "walk_time_seconds": 540,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-gouwugongyuan-3-cn-shenzhen-gouwugongyuan-1",
@@ -595,7 +800,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-gouwugongyuan-3",
-      "to_stop_id": "cn-shenzhen-gouwugongyuan-1"
+      "to_stop_id": "cn-shenzhen-gouwugongyuan-1",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-guangming-6-cn-shenzhen-guangming-6z",
@@ -603,7 +810,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-6z",
       "from_stop_id": "cn-shenzhen-guangming-6",
-      "to_stop_id": "cn-shenzhen-guangming-6z"
+      "to_stop_id": "cn-shenzhen-guangming-6z",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-guangming-6z-cn-shenzhen-guangming-6",
@@ -611,7 +820,9 @@
       "from_line_id": "cn-shenzhen-line-6z",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-guangming-6z",
-      "to_stop_id": "cn-shenzhen-guangming-6"
+      "to_stop_id": "cn-shenzhen-guangming-6",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-guangmingcheng-13-cn-shenzhen-guangmingcheng-6z",
@@ -619,7 +830,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-6z",
       "from_stop_id": "cn-shenzhen-guangmingcheng-13",
-      "to_stop_id": "cn-shenzhen-guangmingcheng-6z"
+      "to_stop_id": "cn-shenzhen-guangmingcheng-6z",
+      "walk_time_seconds": 540,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-guangmingcheng-6z-cn-shenzhen-guangmingcheng-13",
@@ -627,7 +840,9 @@
       "from_line_id": "cn-shenzhen-line-6z",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-guangmingcheng-6z",
-      "to_stop_id": "cn-shenzhen-guangmingcheng-13"
+      "to_stop_id": "cn-shenzhen-guangmingcheng-13",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-guozhan-12-cn-shenzhen-guozhan-20",
@@ -635,7 +850,13 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-20",
       "from_stop_id": "cn-shenzhen-guozhan-12",
-      "to_stop_id": "cn-shenzhen-guozhan-20"
+      "to_stop_id": "cn-shenzhen-guozhan-20",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-guozhan-20-cn-shenzhen-guozhan-12",
@@ -643,7 +864,13 @@
       "from_line_id": "cn-shenzhen-line-20",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-guozhan-20",
-      "to_stop_id": "cn-shenzhen-guozhan-12"
+      "to_stop_id": "cn-shenzhen-guozhan-12",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-guozhanbei-12-cn-shenzhen-guozhanbei-20",
@@ -651,7 +878,13 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-20",
       "from_stop_id": "cn-shenzhen-guozhanbei-12",
-      "to_stop_id": "cn-shenzhen-guozhanbei-20"
+      "to_stop_id": "cn-shenzhen-guozhanbei-20",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-guozhanbei-20-cn-shenzhen-guozhanbei-12",
@@ -659,7 +892,13 @@
       "from_line_id": "cn-shenzhen-line-20",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-guozhanbei-20",
-      "to_stop_id": "cn-shenzhen-guozhanbei-12"
+      "to_stop_id": "cn-shenzhen-guozhanbei-12",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-haishangshijie-12-cn-shenzhen-haishangshijie-2",
@@ -667,7 +906,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-haishangshijie-12",
-      "to_stop_id": "cn-shenzhen-haishangshijie-2"
+      "to_stop_id": "cn-shenzhen-haishangshijie-2",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-haishangshijie-2-cn-shenzhen-haishangshijie-12",
@@ -675,7 +916,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-haishangshijie-2",
-      "to_stop_id": "cn-shenzhen-haishangshijie-12"
+      "to_stop_id": "cn-shenzhen-haishangshijie-12",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-hongling-3-cn-shenzhen-hongling-9",
@@ -683,7 +926,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-hongling-3",
-      "to_stop_id": "cn-shenzhen-hongling-9"
+      "to_stop_id": "cn-shenzhen-hongling-9",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-hongling-9-cn-shenzhen-hongling-3",
@@ -691,7 +936,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-hongling-9",
-      "to_stop_id": "cn-shenzhen-hongling-3"
+      "to_stop_id": "cn-shenzhen-hongling-3",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-honglingbei-7-cn-shenzhen-honglingbei-9",
@@ -699,7 +946,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-honglingbei-7",
-      "to_stop_id": "cn-shenzhen-honglingbei-9"
+      "to_stop_id": "cn-shenzhen-honglingbei-9",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-honglingbei-9-cn-shenzhen-honglingbei-7",
@@ -707,7 +956,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-honglingbei-9",
-      "to_stop_id": "cn-shenzhen-honglingbei-7"
+      "to_stop_id": "cn-shenzhen-honglingbei-7",
+      "walk_time_seconds": 255,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-honglingnan-11-cn-shenzhen-honglingnan-9",
@@ -715,7 +966,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-honglingnan-11",
-      "to_stop_id": "cn-shenzhen-honglingnan-9"
+      "to_stop_id": "cn-shenzhen-honglingnan-9",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-honglingnan-9-cn-shenzhen-honglingnan-11",
@@ -723,7 +976,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-honglingnan-9",
-      "to_stop_id": "cn-shenzhen-honglingnan-11"
+      "to_stop_id": "cn-shenzhen-honglingnan-11",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-hongshan-4-cn-shenzhen-hongshan-6",
@@ -731,7 +986,13 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-hongshan-4",
-      "to_stop_id": "cn-shenzhen-hongshan-6"
+      "to_stop_id": "cn-shenzhen-hongshan-6",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-hongshan-6-cn-shenzhen-hongshan-4",
@@ -739,7 +1000,13 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-hongshan-6",
-      "to_stop_id": "cn-shenzhen-hongshan-4"
+      "to_stop_id": "cn-shenzhen-hongshan-4",
+      "walk_time_seconds": 168,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 199,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-hongshuwannan-11-cn-shenzhen-hongshuwannan-9",
@@ -747,7 +1014,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-hongshuwannan-11",
-      "to_stop_id": "cn-shenzhen-hongshuwannan-9"
+      "to_stop_id": "cn-shenzhen-hongshuwannan-9",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-hongshuwannan-9-cn-shenzhen-hongshuwannan-11",
@@ -755,7 +1024,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-hongshuwannan-9",
-      "to_stop_id": "cn-shenzhen-hongshuwannan-11"
+      "to_stop_id": "cn-shenzhen-hongshuwannan-11",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-houhai-11-cn-shenzhen-houhai-13",
@@ -763,7 +1034,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-houhai-11",
-      "to_stop_id": "cn-shenzhen-houhai-13"
+      "to_stop_id": "cn-shenzhen-houhai-13",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-houhai-11-cn-shenzhen-houhai-2",
@@ -771,7 +1044,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-houhai-11",
-      "to_stop_id": "cn-shenzhen-houhai-2"
+      "to_stop_id": "cn-shenzhen-houhai-2",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-houhai-13-cn-shenzhen-houhai-11",
@@ -779,7 +1054,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-houhai-13",
-      "to_stop_id": "cn-shenzhen-houhai-11"
+      "to_stop_id": "cn-shenzhen-houhai-11",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-houhai-13-cn-shenzhen-houhai-2",
@@ -787,7 +1064,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-houhai-13",
-      "to_stop_id": "cn-shenzhen-houhai-2"
+      "to_stop_id": "cn-shenzhen-houhai-2",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-houhai-2-cn-shenzhen-houhai-11",
@@ -795,7 +1074,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-houhai-2",
-      "to_stop_id": "cn-shenzhen-houhai-11"
+      "to_stop_id": "cn-shenzhen-houhai-11",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-houhai-2-cn-shenzhen-houhai-13",
@@ -803,7 +1084,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-houhai-2",
-      "to_stop_id": "cn-shenzhen-houhai-13"
+      "to_stop_id": "cn-shenzhen-houhai-13",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-huangbeiling-2-cn-shenzhen-huangbeiling-5",
@@ -811,7 +1094,13 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-huangbeiling-2",
-      "to_stop_id": "cn-shenzhen-huangbeiling-5"
+      "to_stop_id": "cn-shenzhen-huangbeiling-5",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-huangbeiling-5-cn-shenzhen-huangbeiling-2",
@@ -819,7 +1108,13 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-huangbeiling-5",
-      "to_stop_id": "cn-shenzhen-huangbeiling-2"
+      "to_stop_id": "cn-shenzhen-huangbeiling-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-huangmugang-14-cn-shenzhen-huangmugang-7",
@@ -827,7 +1122,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-huangmugang-14",
-      "to_stop_id": "cn-shenzhen-huangmugang-7"
+      "to_stop_id": "cn-shenzhen-huangmugang-7",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-huangmugang-7-cn-shenzhen-huangmugang-14",
@@ -835,7 +1132,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-huangmugang-7",
-      "to_stop_id": "cn-shenzhen-huangmugang-14"
+      "to_stop_id": "cn-shenzhen-huangmugang-14",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-huaqiangbei-2-cn-shenzhen-huaqiangbei-7",
@@ -843,7 +1142,13 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-huaqiangbei-2",
-      "to_stop_id": "cn-shenzhen-huaqiangbei-7"
+      "to_stop_id": "cn-shenzhen-huaqiangbei-7",
+      "walk_time_seconds": 249,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 298,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-huaqiangbei-7-cn-shenzhen-huaqiangbei-2",
@@ -851,7 +1156,13 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-huaqiangbei-7",
-      "to_stop_id": "cn-shenzhen-huaqiangbei-2"
+      "to_stop_id": "cn-shenzhen-huaqiangbei-2",
+      "walk_time_seconds": 290,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 348,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-huaqiangnan-11-cn-shenzhen-huaqiangnan-7",
@@ -859,7 +1170,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-huaqiangnan-11",
-      "to_stop_id": "cn-shenzhen-huaqiangnan-7"
+      "to_stop_id": "cn-shenzhen-huaqiangnan-7",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-huaqiangnan-7-cn-shenzhen-huaqiangnan-11",
@@ -867,7 +1180,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-huaqiangnan-7",
-      "to_stop_id": "cn-shenzhen-huaqiangnan-11"
+      "to_stop_id": "cn-shenzhen-huaqiangnan-11",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-huaxin-3-cn-shenzhen-huaxin-7",
@@ -875,7 +1190,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-huaxin-3",
-      "to_stop_id": "cn-shenzhen-huaxin-7"
+      "to_stop_id": "cn-shenzhen-huaxin-7",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-huaxin-7-cn-shenzhen-huaxin-3",
@@ -883,7 +1200,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-huaxin-7",
-      "to_stop_id": "cn-shenzhen-huaxin-3"
+      "to_stop_id": "cn-shenzhen-huaxin-3",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-hubei-2-cn-shenzhen-hubei-5",
@@ -891,7 +1210,13 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-hubei-2",
-      "to_stop_id": "cn-shenzhen-hubei-5"
+      "to_stop_id": "cn-shenzhen-hubei-5",
+      "walk_time_seconds": 296,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 355,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-hubei-5-cn-shenzhen-hubei-2",
@@ -899,7 +1224,13 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-hubei-5",
-      "to_stop_id": "cn-shenzhen-hubei-2"
+      "to_stop_id": "cn-shenzhen-hubei-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-huizhanzhongxin-1-cn-shenzhen-huizhanzhongxin-4",
@@ -907,7 +1238,13 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-huizhanzhongxin-1",
-      "to_stop_id": "cn-shenzhen-huizhanzhongxin-4"
+      "to_stop_id": "cn-shenzhen-huizhanzhongxin-4",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-huizhanzhongxin-4-cn-shenzhen-huizhanzhongxin-1",
@@ -915,7 +1252,13 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-huizhanzhongxin-4",
-      "to_stop_id": "cn-shenzhen-huizhanzhongxin-1"
+      "to_stop_id": "cn-shenzhen-huizhanzhongxin-1",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-jichangbei-11-cn-shenzhen-jichangbei-20",
@@ -923,7 +1266,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-20",
       "from_stop_id": "cn-shenzhen-jichangbei-11",
-      "to_stop_id": "cn-shenzhen-jichangbei-20"
+      "to_stop_id": "cn-shenzhen-jichangbei-20",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-jichangbei-20-cn-shenzhen-jichangbei-11",
@@ -931,7 +1276,9 @@
       "from_line_id": "cn-shenzhen-line-20",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-jichangbei-20",
-      "to_stop_id": "cn-shenzhen-jichangbei-11"
+      "to_stop_id": "cn-shenzhen-jichangbei-11",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-jichangdong-1-cn-shenzhen-jichangdong-12",
@@ -939,7 +1286,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-jichangdong-1",
-      "to_stop_id": "cn-shenzhen-jichangdong-12"
+      "to_stop_id": "cn-shenzhen-jichangdong-12",
+      "walk_time_seconds": 510,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-jichangdong-12-cn-shenzhen-jichangdong-1",
@@ -947,7 +1296,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-jichangdong-12",
-      "to_stop_id": "cn-shenzhen-jichangdong-1"
+      "to_stop_id": "cn-shenzhen-jichangdong-1",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-jingtian-2-cn-shenzhen-jingtian-9",
@@ -955,7 +1306,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-jingtian-2",
-      "to_stop_id": "cn-shenzhen-jingtian-9"
+      "to_stop_id": "cn-shenzhen-jingtian-9",
+      "walk_time_seconds": 374,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-jingtian-9-cn-shenzhen-jingtian-2",
@@ -963,7 +1316,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-jingtian-9",
-      "to_stop_id": "cn-shenzhen-jingtian-2"
+      "to_stop_id": "cn-shenzhen-jingtian-2",
+      "walk_time_seconds": 374,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-kexueguan-1-cn-shenzhen-kexueguan-6",
@@ -971,7 +1326,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-kexueguan-1",
-      "to_stop_id": "cn-shenzhen-kexueguan-6"
+      "to_stop_id": "cn-shenzhen-kexueguan-6",
+      "walk_time_seconds": 344,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-kexueguan-6-cn-shenzhen-kexueguan-1",
@@ -979,7 +1336,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-kexueguan-6",
-      "to_stop_id": "cn-shenzhen-kexueguan-1"
+      "to_stop_id": "cn-shenzhen-kexueguan-1",
+      "walk_time_seconds": 344,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-keyuan-13-cn-shenzhen-keyuan-2",
@@ -987,7 +1346,13 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-keyuan-13",
-      "to_stop_id": "cn-shenzhen-keyuan-2"
+      "to_stop_id": "cn-shenzhen-keyuan-2",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-keyuan-2-cn-shenzhen-keyuan-13",
@@ -995,7 +1360,13 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-keyuan-2",
-      "to_stop_id": "cn-shenzhen-keyuan-13"
+      "to_stop_id": "cn-shenzhen-keyuan-13",
+      "walk_time_seconds": 193,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-laojie-1-cn-shenzhen-laojie-3",
@@ -1003,7 +1374,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-laojie-1",
-      "to_stop_id": "cn-shenzhen-laojie-3"
+      "to_stop_id": "cn-shenzhen-laojie-3",
+      "walk_time_seconds": 210,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-laojie-3-cn-shenzhen-laojie-1",
@@ -1011,7 +1384,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-laojie-3",
-      "to_stop_id": "cn-shenzhen-laojie-1"
+      "to_stop_id": "cn-shenzhen-laojie-1",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-lianhuacun-10-cn-shenzhen-lianhuacun-3",
@@ -1019,7 +1394,9 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-lianhuacun-10",
-      "to_stop_id": "cn-shenzhen-lianhuacun-3"
+      "to_stop_id": "cn-shenzhen-lianhuacun-3",
+      "walk_time_seconds": 195,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-lianhuacun-3-cn-shenzhen-lianhuacun-10",
@@ -1027,7 +1404,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-lianhuacun-3",
-      "to_stop_id": "cn-shenzhen-lianhuacun-10"
+      "to_stop_id": "cn-shenzhen-lianhuacun-10",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-liantang-2-cn-shenzhen-liantang-8",
@@ -1051,7 +1430,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-lingzhi-12",
-      "to_stop_id": "cn-shenzhen-lingzhi-5"
+      "to_stop_id": "cn-shenzhen-lingzhi-5",
+      "walk_time_seconds": 230,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-lingzhi-5-cn-shenzhen-lingzhi-12",
@@ -1059,7 +1440,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-lingzhi-5",
-      "to_stop_id": "cn-shenzhen-lingzhi-12"
+      "to_stop_id": "cn-shenzhen-lingzhi-12",
+      "walk_time_seconds": 230,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-liuxiandong-13-cn-shenzhen-liuxiandong-5",
@@ -1067,7 +1450,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-liuxiandong-13",
-      "to_stop_id": "cn-shenzhen-liuxiandong-5"
+      "to_stop_id": "cn-shenzhen-liuxiandong-5",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-liuxiandong-5-cn-shenzhen-liuxiandong-13",
@@ -1075,7 +1460,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-liuxiandong-5",
-      "to_stop_id": "cn-shenzhen-liuxiandong-13"
+      "to_stop_id": "cn-shenzhen-liuxiandong-13",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-maling-10-cn-shenzhen-maling-9",
@@ -1083,7 +1470,9 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-maling-10",
-      "to_stop_id": "cn-shenzhen-maling-9"
+      "to_stop_id": "cn-shenzhen-maling-9",
+      "walk_time_seconds": 330,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-maling-9-cn-shenzhen-maling-10",
@@ -1091,7 +1480,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-maling-9",
-      "to_stop_id": "cn-shenzhen-maling-10"
+      "to_stop_id": "cn-shenzhen-maling-10",
+      "walk_time_seconds": 330,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-nanshan-11-cn-shenzhen-nanshan-12",
@@ -1099,7 +1490,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-nanshan-11",
-      "to_stop_id": "cn-shenzhen-nanshan-12"
+      "to_stop_id": "cn-shenzhen-nanshan-12",
+      "walk_time_seconds": 280,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-nanshan-12-cn-shenzhen-nanshan-11",
@@ -1107,7 +1500,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-nanshan-12",
-      "to_stop_id": "cn-shenzhen-nanshan-11"
+      "to_stop_id": "cn-shenzhen-nanshan-11",
+      "walk_time_seconds": 280,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-nanyou-12-cn-shenzhen-nanyou-9",
@@ -1115,7 +1510,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-nanyou-12",
-      "to_stop_id": "cn-shenzhen-nanyou-9"
+      "to_stop_id": "cn-shenzhen-nanyou-9",
+      "walk_time_seconds": 265,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-nanyou-9-cn-shenzhen-nanyou-12",
@@ -1123,7 +1520,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-nanyou-9",
-      "to_stop_id": "cn-shenzhen-nanyou-12"
+      "to_stop_id": "cn-shenzhen-nanyou-12",
+      "walk_time_seconds": 265,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-pingshanwei-14-cn-shenzhen-pingshanwei-16",
@@ -1131,7 +1530,9 @@
       "from_line_id": "cn-shenzhen-line-14",
       "to_line_id": "cn-shenzhen-line-16",
       "from_stop_id": "cn-shenzhen-pingshanwei-14",
-      "to_stop_id": "cn-shenzhen-pingshanwei-16"
+      "to_stop_id": "cn-shenzhen-pingshanwei-16",
+      "walk_time_seconds": 305,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-pingshanwei-16-cn-shenzhen-pingshanwei-14",
@@ -1139,7 +1540,9 @@
       "from_line_id": "cn-shenzhen-line-16",
       "to_line_id": "cn-shenzhen-line-14",
       "from_stop_id": "cn-shenzhen-pingshanwei-16",
-      "to_stop_id": "cn-shenzhen-pingshanwei-14"
+      "to_stop_id": "cn-shenzhen-pingshanwei-14",
+      "walk_time_seconds": 305,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-qianhaiwan-1-cn-shenzhen-qianhaiwan-11",
@@ -1147,7 +1550,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-qianhaiwan-1",
-      "to_stop_id": "cn-shenzhen-qianhaiwan-11"
+      "to_stop_id": "cn-shenzhen-qianhaiwan-11",
+      "walk_time_seconds": 260,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-qianhaiwan-1-cn-shenzhen-qianhaiwan-5",
@@ -1155,7 +1560,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-qianhaiwan-1",
-      "to_stop_id": "cn-shenzhen-qianhaiwan-5"
+      "to_stop_id": "cn-shenzhen-qianhaiwan-5",
+      "walk_time_seconds": 220,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-qianhaiwan-11-cn-shenzhen-qianhaiwan-1",
@@ -1163,7 +1570,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-qianhaiwan-11",
-      "to_stop_id": "cn-shenzhen-qianhaiwan-1"
+      "to_stop_id": "cn-shenzhen-qianhaiwan-1",
+      "walk_time_seconds": 260,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-qianhaiwan-11-cn-shenzhen-qianhaiwan-5",
@@ -1171,7 +1580,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-qianhaiwan-11",
-      "to_stop_id": "cn-shenzhen-qianhaiwan-5"
+      "to_stop_id": "cn-shenzhen-qianhaiwan-5",
+      "walk_time_seconds": 220,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-qianhaiwan-5-cn-shenzhen-qianhaiwan-1",
@@ -1179,7 +1590,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-qianhaiwan-5",
-      "to_stop_id": "cn-shenzhen-qianhaiwan-1"
+      "to_stop_id": "cn-shenzhen-qianhaiwan-1",
+      "walk_time_seconds": 220,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-qianhaiwan-5-cn-shenzhen-qianhaiwan-11",
@@ -1187,7 +1600,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-qianhaiwan-5",
-      "to_stop_id": "cn-shenzhen-qianhaiwan-11"
+      "to_stop_id": "cn-shenzhen-qianhaiwan-11",
+      "walk_time_seconds": 220,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-qianwan-5-cn-shenzhen-qianwan-9",
@@ -1195,7 +1610,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-qianwan-5",
-      "to_stop_id": "cn-shenzhen-qianwan-9"
+      "to_stop_id": "cn-shenzhen-qianwan-9",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-qianwan-9-cn-shenzhen-qianwan-5",
@@ -1203,7 +1620,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-qianwan-9",
-      "to_stop_id": "cn-shenzhen-qianwan-5"
+      "to_stop_id": "cn-shenzhen-qianwan-5",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shangmeilin-4-cn-shenzhen-shangmeilin-9",
@@ -1211,7 +1630,9 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-shangmeilin-4",
-      "to_stop_id": "cn-shenzhen-shangmeilin-9"
+      "to_stop_id": "cn-shenzhen-shangmeilin-9",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shangmeilin-9-cn-shenzhen-shangmeilin-4",
@@ -1219,7 +1640,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-shangmeilin-9",
-      "to_stop_id": "cn-shenzhen-shangmeilin-4"
+      "to_stop_id": "cn-shenzhen-shangmeilin-4",
+      "walk_time_seconds": 390,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shangwu-13-cn-shenzhen-shangwu-6",
@@ -1227,7 +1650,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-shangwu-13",
-      "to_stop_id": "cn-shenzhen-shangwu-6"
+      "to_stop_id": "cn-shenzhen-shangwu-6",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shangwu-6-cn-shenzhen-shangwu-13",
@@ -1235,7 +1660,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-shangwu-6",
-      "to_stop_id": "cn-shenzhen-shangwu-13"
+      "to_stop_id": "cn-shenzhen-shangwu-13",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shaoniangong-3-cn-shenzhen-shaoniangong-4",
@@ -1243,7 +1670,13 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-shaoniangong-3",
-      "to_stop_id": "cn-shenzhen-shaoniangong-4"
+      "to_stop_id": "cn-shenzhen-shaoniangong-4",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-shaoniangong-4-cn-shenzhen-shaoniangong-3",
@@ -1251,7 +1684,13 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-shaoniangong-4",
-      "to_stop_id": "cn-shenzhen-shaoniangong-3"
+      "to_stop_id": "cn-shenzhen-shaoniangong-3",
+      "walk_time_seconds": 337,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 404,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-shenda-1-cn-shenzhen-shenda-13",
@@ -1259,7 +1698,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-shenda-1",
-      "to_stop_id": "cn-shenzhen-shenda-13"
+      "to_stop_id": "cn-shenzhen-shenda-13",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shenda-13-cn-shenzhen-shenda-1",
@@ -1267,7 +1708,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-shenda-13",
-      "to_stop_id": "cn-shenzhen-shenda-1"
+      "to_stop_id": "cn-shenzhen-shenda-1",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shenzhenbei-4-cn-shenzhen-shenzhenbei-5",
@@ -1275,7 +1718,9 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-shenzhenbei-4",
-      "to_stop_id": "cn-shenzhen-shenzhenbei-5"
+      "to_stop_id": "cn-shenzhen-shenzhenbei-5",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shenzhenbei-4-cn-shenzhen-shenzhenbei-6",
@@ -1283,7 +1728,13 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-shenzhenbei-4",
-      "to_stop_id": "cn-shenzhen-shenzhenbei-6"
+      "to_stop_id": "cn-shenzhen-shenzhenbei-6",
+      "walk_time_seconds": 225,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 270,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-shenzhenbei-5-cn-shenzhen-shenzhenbei-4",
@@ -1291,7 +1742,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-shenzhenbei-5",
-      "to_stop_id": "cn-shenzhen-shenzhenbei-4"
+      "to_stop_id": "cn-shenzhen-shenzhenbei-4",
+      "walk_time_seconds": 469,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shenzhenbei-5-cn-shenzhen-shenzhenbei-6",
@@ -1299,7 +1752,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-shenzhenbei-5",
-      "to_stop_id": "cn-shenzhen-shenzhenbei-6"
+      "to_stop_id": "cn-shenzhen-shenzhenbei-6",
+      "walk_time_seconds": 469,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shenzhenbei-6-cn-shenzhen-shenzhenbei-4",
@@ -1307,7 +1762,13 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-shenzhenbei-6",
-      "to_stop_id": "cn-shenzhen-shenzhenbei-4"
+      "to_stop_id": "cn-shenzhen-shenzhenbei-4",
+      "walk_time_seconds": 168,
+      "source_id": "baidu-transit",
+      "walk_distance_meters": 199,
+      "extras": {
+        "walk_source": "baidu-transit"
+      }
     },
     {
       "id": "xfer-cn-shenzhen-shenzhenbei-6-cn-shenzhen-shenzhenbei-5",
@@ -1315,7 +1776,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-shenzhenbei-6",
-      "to_stop_id": "cn-shenzhen-shenzhenbei-5"
+      "to_stop_id": "cn-shenzhen-shenzhenbei-5",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shijiezhichuang-1-cn-shenzhen-shijiezhichuang-2",
@@ -1323,7 +1786,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-shijiezhichuang-1",
-      "to_stop_id": "cn-shenzhen-shijiezhichuang-2"
+      "to_stop_id": "cn-shenzhen-shijiezhichuang-2",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shijiezhichuang-2-cn-shenzhen-shijiezhichuang-1",
@@ -1331,7 +1796,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-shijiezhichuang-2",
-      "to_stop_id": "cn-shenzhen-shijiezhichuang-1"
+      "to_stop_id": "cn-shenzhen-shijiezhichuang-1",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shiminzhongxin-2-cn-shenzhen-shiminzhongxin-4",
@@ -1339,7 +1806,9 @@
       "from_line_id": "cn-shenzhen-line-2",
       "to_line_id": "cn-shenzhen-line-4",
       "from_stop_id": "cn-shenzhen-shiminzhongxin-2",
-      "to_stop_id": "cn-shenzhen-shiminzhongxin-4"
+      "to_stop_id": "cn-shenzhen-shiminzhongxin-4",
+      "walk_time_seconds": 420,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shiminzhongxin-4-cn-shenzhen-shiminzhongxin-2",
@@ -1347,7 +1816,9 @@
       "from_line_id": "cn-shenzhen-line-4",
       "to_line_id": "cn-shenzhen-line-2",
       "from_stop_id": "cn-shenzhen-shiminzhongxin-4",
-      "to_stop_id": "cn-shenzhen-shiminzhongxin-2"
+      "to_stop_id": "cn-shenzhen-shiminzhongxin-2",
+      "walk_time_seconds": 540,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shixia-3-cn-shenzhen-shixia-7",
@@ -1355,7 +1826,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-shixia-3",
-      "to_stop_id": "cn-shenzhen-shixia-7"
+      "to_stop_id": "cn-shenzhen-shixia-7",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shixia-7-cn-shenzhen-shixia-3",
@@ -1363,7 +1836,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-shixia-7",
-      "to_stop_id": "cn-shenzhen-shixia-3"
+      "to_stop_id": "cn-shenzhen-shixia-3",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shuanglong-16-cn-shenzhen-shuanglong-3",
@@ -1371,7 +1846,9 @@
       "from_line_id": "cn-shenzhen-line-16",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-shuanglong-16",
-      "to_stop_id": "cn-shenzhen-shuanglong-3"
+      "to_stop_id": "cn-shenzhen-shuanglong-3",
+      "walk_time_seconds": 330,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-shuanglong-3-cn-shenzhen-shuanglong-16",
@@ -1379,7 +1856,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-16",
       "from_stop_id": "cn-shenzhen-shuanglong-3",
-      "to_stop_id": "cn-shenzhen-shuanglong-16"
+      "to_stop_id": "cn-shenzhen-shuanglong-16",
+      "walk_time_seconds": 360,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-songgang-11-cn-shenzhen-songgang-12",
@@ -1387,7 +1866,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-songgang-11",
-      "to_stop_id": "cn-shenzhen-songgang-12"
+      "to_stop_id": "cn-shenzhen-songgang-12",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-songgang-11-cn-shenzhen-songgang-6",
@@ -1395,7 +1876,9 @@
       "from_line_id": "cn-shenzhen-line-11",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-songgang-11",
-      "to_stop_id": "cn-shenzhen-songgang-6"
+      "to_stop_id": "cn-shenzhen-songgang-6",
+      "walk_time_seconds": 210,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-songgang-12-cn-shenzhen-songgang-11",
@@ -1403,7 +1886,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-songgang-12",
-      "to_stop_id": "cn-shenzhen-songgang-11"
+      "to_stop_id": "cn-shenzhen-songgang-11",
+      "walk_time_seconds": 480,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-songgang-12-cn-shenzhen-songgang-6",
@@ -1411,7 +1896,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-songgang-12",
-      "to_stop_id": "cn-shenzhen-songgang-6"
+      "to_stop_id": "cn-shenzhen-songgang-6",
+      "walk_time_seconds": 510,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-songgang-6-cn-shenzhen-songgang-11",
@@ -1419,7 +1906,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-11",
       "from_stop_id": "cn-shenzhen-songgang-6",
-      "to_stop_id": "cn-shenzhen-songgang-11"
+      "to_stop_id": "cn-shenzhen-songgang-11",
+      "walk_time_seconds": 210,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-songgang-6-cn-shenzhen-songgang-12",
@@ -1427,7 +1916,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-songgang-6",
-      "to_stop_id": "cn-shenzhen-songgang-12"
+      "to_stop_id": "cn-shenzhen-songgang-12",
+      "walk_time_seconds": 510,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-taian-5-cn-shenzhen-taian-7",
@@ -1435,7 +1926,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-taian-5",
-      "to_stop_id": "cn-shenzhen-taian-7"
+      "to_stop_id": "cn-shenzhen-taian-7",
+      "walk_time_seconds": 225,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-taian-7-cn-shenzhen-taian-5",
@@ -1443,7 +1936,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-taian-7",
-      "to_stop_id": "cn-shenzhen-taian-5"
+      "to_stop_id": "cn-shenzhen-taian-5",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-taoyuan-1-cn-shenzhen-taoyuan-12",
@@ -1451,7 +1946,9 @@
       "from_line_id": "cn-shenzhen-line-1",
       "to_line_id": "cn-shenzhen-line-12",
       "from_stop_id": "cn-shenzhen-taoyuan-1",
-      "to_stop_id": "cn-shenzhen-taoyuan-12"
+      "to_stop_id": "cn-shenzhen-taoyuan-12",
+      "walk_time_seconds": 248,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-taoyuan-12-cn-shenzhen-taoyuan-1",
@@ -1459,7 +1956,9 @@
       "from_line_id": "cn-shenzhen-line-12",
       "to_line_id": "cn-shenzhen-line-1",
       "from_stop_id": "cn-shenzhen-taoyuan-12",
-      "to_stop_id": "cn-shenzhen-taoyuan-1"
+      "to_stop_id": "cn-shenzhen-taoyuan-1",
+      "walk_time_seconds": 248,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-tianbei-3-cn-shenzhen-tianbei-7",
@@ -1467,7 +1966,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-tianbei-3",
-      "to_stop_id": "cn-shenzhen-tianbei-7"
+      "to_stop_id": "cn-shenzhen-tianbei-7",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-tianbei-7-cn-shenzhen-tianbei-3",
@@ -1475,7 +1976,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-tianbei-7",
-      "to_stop_id": "cn-shenzhen-tianbei-3"
+      "to_stop_id": "cn-shenzhen-tianbei-3",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-tongxinling-3-cn-shenzhen-tongxinling-6",
@@ -1483,7 +1986,9 @@
       "from_line_id": "cn-shenzhen-line-3",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-tongxinling-3",
-      "to_stop_id": "cn-shenzhen-tongxinling-6"
+      "to_stop_id": "cn-shenzhen-tongxinling-6",
+      "walk_time_seconds": 220,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-tongxinling-6-cn-shenzhen-tongxinling-3",
@@ -1491,7 +1996,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-3",
       "from_stop_id": "cn-shenzhen-tongxinling-6",
-      "to_stop_id": "cn-shenzhen-tongxinling-3"
+      "to_stop_id": "cn-shenzhen-tongxinling-3",
+      "walk_time_seconds": 220,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-wuhe-10-cn-shenzhen-wuhe-5",
@@ -1499,7 +2006,9 @@
       "from_line_id": "cn-shenzhen-line-10",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-wuhe-10",
-      "to_stop_id": "cn-shenzhen-wuhe-5"
+      "to_stop_id": "cn-shenzhen-wuhe-5",
+      "walk_time_seconds": 320,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-wuhe-5-cn-shenzhen-wuhe-10",
@@ -1507,7 +2016,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-10",
       "from_stop_id": "cn-shenzhen-wuhe-5",
-      "to_stop_id": "cn-shenzhen-wuhe-10"
+      "to_stop_id": "cn-shenzhen-wuhe-10",
+      "walk_time_seconds": 320,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-xili-5-cn-shenzhen-xili-7",
@@ -1515,7 +2026,9 @@
       "from_line_id": "cn-shenzhen-line-5",
       "to_line_id": "cn-shenzhen-line-7",
       "from_stop_id": "cn-shenzhen-xili-5",
-      "to_stop_id": "cn-shenzhen-xili-7"
+      "to_stop_id": "cn-shenzhen-xili-7",
+      "walk_time_seconds": 300,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-xili-7-cn-shenzhen-xili-5",
@@ -1523,7 +2036,9 @@
       "from_line_id": "cn-shenzhen-line-7",
       "to_line_id": "cn-shenzhen-line-5",
       "from_stop_id": "cn-shenzhen-xili-7",
-      "to_stop_id": "cn-shenzhen-xili-5"
+      "to_stop_id": "cn-shenzhen-xili-5",
+      "walk_time_seconds": 210,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-yinhu-6-cn-shenzhen-yinhu-9",
@@ -1531,7 +2046,9 @@
       "from_line_id": "cn-shenzhen-line-6",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-yinhu-6",
-      "to_stop_id": "cn-shenzhen-yinhu-9"
+      "to_stop_id": "cn-shenzhen-yinhu-9",
+      "walk_time_seconds": 212,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-yinhu-9-cn-shenzhen-yinhu-6",
@@ -1539,7 +2056,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-6",
       "from_stop_id": "cn-shenzhen-yinhu-9",
-      "to_stop_id": "cn-shenzhen-yinhu-6"
+      "to_stop_id": "cn-shenzhen-yinhu-6",
+      "walk_time_seconds": 212,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-yuehaimen-13-cn-shenzhen-yuehaimen-9",
@@ -1547,7 +2066,9 @@
       "from_line_id": "cn-shenzhen-line-13",
       "to_line_id": "cn-shenzhen-line-9",
       "from_stop_id": "cn-shenzhen-yuehaimen-13",
-      "to_stop_id": "cn-shenzhen-yuehaimen-9"
+      "to_stop_id": "cn-shenzhen-yuehaimen-9",
+      "walk_time_seconds": 240,
+      "source_id": "szmc-mintime-transfer"
     },
     {
       "id": "xfer-cn-shenzhen-yuehaimen-9-cn-shenzhen-yuehaimen-13",
@@ -1555,7 +2076,9 @@
       "from_line_id": "cn-shenzhen-line-9",
       "to_line_id": "cn-shenzhen-line-13",
       "from_stop_id": "cn-shenzhen-yuehaimen-9",
-      "to_stop_id": "cn-shenzhen-yuehaimen-13"
+      "to_stop_id": "cn-shenzhen-yuehaimen-13",
+      "walk_time_seconds": 255,
+      "source_id": "szmc-mintime-transfer"
     }
   ]
 }

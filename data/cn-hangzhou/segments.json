@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-hangzhou",
-  "generated_at": "2026-10-23T12:11:20.602Z",
+  "generated_at": "2026-11-02T11:45:25.094Z",
   "source": [
     {
       "name": "Baidu Direction v2 transit",
       "url": "https://api.map.baidu.com/direction/v2/transit",
       "version": "2",
-      "retrieved_at": "2026-10-23T12:11:20.602Z",
+      "retrieved_at": "2026-11-02T11:45:25.094Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -488,14 +488,17 @@
       "to_station_id": "cn-hangzhou-lvting-lu",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner",
+      "distance_km": 1.071,
       "extras": {
-        "planner_time_source": "baidu-transit",
-        "distance_source": "baidu_path",
-        "distance_meters": 1720
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 28.1,
+        "a_s_per_km": 53.9,
+        "b_s": 79.7,
+        "planner_time_source": "baidu-transit"
       },
-      "distance_km": 1.72
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-coach-center-1-cn-hangzhou-west-xiasha-1",
@@ -3126,8 +3129,20 @@
       "to_station_id": "cn-hangzhou-cj2t8",
       "direction": "both",
       "source_id": "hzmetro-operation-all",
-      "travel_time_seconds": 120,
-      "travel_time_source": "estimated"
+      "distance_km": 1.621,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 34.9,
+        "a_s_per_km": 53.9,
+        "b_s": 79.7
+      },
+      "travel_time_seconds": 167,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-hangzhou-seg-cn-hangzhou-quanfeng-3-cn-hangzhou-gaojiao-road-3",

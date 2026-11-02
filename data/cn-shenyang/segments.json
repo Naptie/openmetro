@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-shenyang",
-  "generated_at": "2026-10-22T20:20:25.064Z",
+  "generated_at": "2026-11-02T12:23:07.853Z",
   "source": [],
   "records": [
     {
@@ -65,7 +65,7 @@
       "to_station_id": "cn-shenyang-huaihejieshenyieryuan",
       "direction": "both",
       "source_id": "symtc-cocc-api",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "extras": {
         "planner_time_source": "baidu-transit-direction",
@@ -201,17 +201,13 @@
       "to_station_id": "cn-shenyang-datonghujie",
       "direction": "both",
       "source_id": "symtc-cocc-api",
-      "distance_km": 2.479,
-      "extras": {
-        "distance_source": "baidu-transit-distance",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 42.6,
-        "a_s_per_km": 51.2,
-        "b_s": 79.3,
-        "planner_time_source": "baidu-transit-direction"
-      },
       "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      "travel_time_source": "planner",
+      "extras": {
+        "planner_time_source": "baidu-transit-direction",
+        "distance_source": "baidu-transit-distance"
+      },
+      "distance_km": 2.479
     },
     {
       "id": "cn-shenyang-seg-cn-shenyang-changanlu-10-cn-shenyang-pangjiangjie-10",
@@ -681,7 +677,7 @@
       "to_station_id": "cn-shenyang-tawanjie",
       "direction": "both",
       "source_id": "symtc-cocc-api",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "extras": {
         "planner_time_source": "baidu-transit-direction",
@@ -1040,11 +1036,11 @@
       "source_id": "symtc-cocc-api",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
-      "distance_km": 1.354,
       "extras": {
-        "distance_source": "baidu-transit-distance",
-        "planner_time_source": "baidu-transit-direction"
-      }
+        "planner_time_source": "baidu-transit-direction",
+        "distance_source": "baidu-transit-distance"
+      },
+      "distance_km": 1.354
     },
     {
       "id": "cn-shenyang-seg-cn-shenyang-lingkong-3-cn-shenyang-shayang-3",
@@ -1480,7 +1476,7 @@
       "to_station_id": "cn-shenyang-shenbendajie",
       "direction": "both",
       "source_id": "symtc-cocc-api",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "extras": {
         "planner_time_source": "baidu-transit-direction",
@@ -1599,7 +1595,7 @@
       "to_station_id": "cn-shenyang-shenzhongdajie",
       "direction": "both",
       "source_id": "symtc-cocc-api",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "extras": {
         "planner_time_source": "baidu-transit-direction",
@@ -2126,7 +2122,7 @@
       "to_station_id": "cn-shenyang-zhaijia",
       "direction": "both",
       "source_id": "symtc-cocc-api",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "extras": {
         "planner_time_source": "baidu-transit-direction",

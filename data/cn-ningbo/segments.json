@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-ningbo",
-  "generated_at": "2026-10-23T21:19:43.638Z",
+  "generated_at": "2026-11-02T12:09:49.218Z",
   "source": [
     {
       "name": "Baidu Direction v2 transit",
       "url": "https://api.map.baidu.com/direction/v2/transit",
       "version": "2",
-      "retrieved_at": "2026-10-23T21:19:43.638Z",
+      "retrieved_at": "2026-11-02T12:09:49.218Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -653,12 +653,12 @@
       "to_station_id": "cn-ningbo-jinshan-xilu",
       "direction": "both",
       "source_id": "nbmetro-station-stat",
-      "travel_time_seconds": 420,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
-      "distance_km": 3.972,
+      "distance_km": 1.521,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "distance_meters": 3972,
+        "distance_meters": 1521,
         "planner_time_source": "baidu-transit"
       }
     },
@@ -2299,10 +2299,10 @@
       "source_id": "nbmetro-station-stat",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
-      "distance_km": 3.526,
+      "distance_km": 0.871,
       "extras": {
         "distance_source": "baidu-transit-distance",
-        "distance_meters": 3526,
+        "distance_meters": 871,
         "planner_time_source": "baidu-transit"
       }
     },

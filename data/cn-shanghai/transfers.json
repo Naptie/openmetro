@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-shanghai",
-  "generated_at": "2026-09-21T07:35:30.847Z",
-  "source": [],
+  "generated_at": "2026-11-02T12:20:32.480Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-02T12:20:32.480Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "xfer-cn-shanghai-baoshan-road-3-cn-shanghai-baoshan-road-4",
@@ -533,7 +544,7 @@
       "from_stop_id": "cn-shanghai-gangcheng-road-10",
       "to_stop_id": "cn-shanghai-gangcheng-road-6",
       "walk_time_seconds": 60,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-gangcheng-road-6-cn-shanghai-gangcheng-road-10",
@@ -563,7 +574,7 @@
       "from_stop_id": "cn-shanghai-gucun-park-7",
       "to_stop_id": "cn-shanghai-gucun-park-15",
       "walk_time_seconds": 240,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-guilin-park-12-cn-shanghai-guilin-park-15",
@@ -733,7 +744,7 @@
       "from_stop_id": "cn-shanghai-hongqiao-airport-terminal-2-10",
       "to_stop_id": "cn-shanghai-hongqiao-airport-terminal-2-2",
       "walk_time_seconds": 360,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-shanghai-hongqiao-airport-terminal-2-10-cn-shanghai-hongqiao-airport-terminal-2-51",
@@ -772,8 +783,8 @@
       "to_line_id": "cn-shanghai-line-10",
       "from_stop_id": "cn-shanghai-hongqiao-airport-terminal-2-51",
       "to_stop_id": "cn-shanghai-hongqiao-airport-terminal-2-10",
-      "walk_time_seconds": 240,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 300,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-hongqiao-airport-terminal-2-51-cn-shanghai-hongqiao-airport-terminal-2-2",
@@ -782,8 +793,8 @@
       "to_line_id": "cn-shanghai-line-2",
       "from_stop_id": "cn-shanghai-hongqiao-airport-terminal-2-51",
       "to_stop_id": "cn-shanghai-hongqiao-airport-terminal-2-2",
-      "walk_time_seconds": 240,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 540,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-hongqiao-railway-station-10-cn-shanghai-hongqiao-railway-station-17",
@@ -792,8 +803,8 @@
       "to_line_id": "cn-shanghai-line-17",
       "from_stop_id": "cn-shanghai-hongqiao-railway-station-10",
       "to_stop_id": "cn-shanghai-hongqiao-railway-station-17",
-      "walk_time_seconds": 360,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-hongqiao-railway-station-10-cn-shanghai-hongqiao-railway-station-2",
@@ -803,7 +814,7 @@
       "from_stop_id": "cn-shanghai-hongqiao-railway-station-10",
       "to_stop_id": "cn-shanghai-hongqiao-railway-station-2",
       "walk_time_seconds": 360,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-shanghai-hongqiao-railway-station-17-cn-shanghai-hongqiao-railway-station-10",
@@ -812,8 +823,8 @@
       "to_line_id": "cn-shanghai-line-10",
       "from_stop_id": "cn-shanghai-hongqiao-railway-station-17",
       "to_stop_id": "cn-shanghai-hongqiao-railway-station-10",
-      "walk_time_seconds": 360,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-hongqiao-railway-station-17-cn-shanghai-hongqiao-railway-station-2",
@@ -823,7 +834,7 @@
       "from_stop_id": "cn-shanghai-hongqiao-railway-station-17",
       "to_stop_id": "cn-shanghai-hongqiao-railway-station-2",
       "walk_time_seconds": 180,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-hongqiao-railway-station-2-cn-shanghai-hongqiao-railway-station-10",
@@ -1123,7 +1134,7 @@
       "from_stop_id": "cn-shanghai-jinhai-road-9",
       "to_stop_id": "cn-shanghai-jinhai-road-12",
       "walk_time_seconds": 240,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-jinshajiang-road-13-cn-shanghai-jinshajiang-road-3",
@@ -1352,8 +1363,8 @@
       "to_line_id": "cn-shanghai-line-18",
       "from_stop_id": "cn-shanghai-longyang-road-16",
       "to_stop_id": "cn-shanghai-longyang-road-18",
-      "walk_time_seconds": 60,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-longyang-road-16-cn-shanghai-longyang-road-2",
@@ -1362,8 +1373,8 @@
       "to_line_id": "cn-shanghai-line-2",
       "from_stop_id": "cn-shanghai-longyang-road-16",
       "to_stop_id": "cn-shanghai-longyang-road-2",
-      "walk_time_seconds": 420,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 240,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-longyang-road-16-cn-shanghai-longyang-road-7",
@@ -1372,8 +1383,8 @@
       "to_line_id": "cn-shanghai-line-7",
       "from_stop_id": "cn-shanghai-longyang-road-16",
       "to_stop_id": "cn-shanghai-longyang-road-7",
-      "walk_time_seconds": 420,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 540,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-longyang-road-18-cn-shanghai-longyang-road-16",
@@ -1483,7 +1494,7 @@
       "from_stop_id": "cn-shanghai-loushanguan-road-2",
       "to_stop_id": "cn-shanghai-loushanguan-road-15",
       "walk_time_seconds": 480,
-      "source_id": "shmetro-plantrip"
+      "source_id": "shmetro-plantrip-reverse"
     },
     {
       "id": "xfer-cn-shanghai-lujiabang-road-8-cn-shanghai-lujiabang-road-9",
@@ -1653,7 +1664,7 @@
       "from_stop_id": "cn-shanghai-national-exhibition-and-convention-center-17",
       "to_stop_id": "cn-shanghai-national-exhibition-and-convention-center-2",
       "walk_time_seconds": 180,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-shanghai-national-exhibition-and-convention-center-2-cn-shanghai-national-exhibition-and-convention-center-17",
@@ -1693,7 +1704,7 @@
       "from_stop_id": "cn-shanghai-oriental-sports-center-6",
       "to_stop_id": "cn-shanghai-oriental-sports-center-11",
       "walk_time_seconds": 180,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-oriental-sports-center-6-cn-shanghai-oriental-sports-center-8",
@@ -1703,7 +1714,7 @@
       "from_stop_id": "cn-shanghai-oriental-sports-center-6",
       "to_stop_id": "cn-shanghai-oriental-sports-center-8",
       "walk_time_seconds": 180,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-oriental-sports-center-8-cn-shanghai-oriental-sports-center-11",
@@ -1793,7 +1804,7 @@
       "from_stop_id": "cn-shanghai-pudong-airport-terminal-1-2-2",
       "to_stop_id": "cn-shanghai-pudong-airport-terminal-1-2-51",
       "walk_time_seconds": 240,
-      "source_id": "shmetro-plantrip-alt"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-pudong-airport-terminal-1-2-51-cn-shanghai-pudong-airport-terminal-1-2-2",
@@ -1862,8 +1873,8 @@
       "to_line_id": "cn-shanghai-line-1",
       "from_stop_id": "cn-shanghai-shanghai-indoor-stadium-4",
       "to_stop_id": "cn-shanghai-shanghai-indoor-stadium-1",
-      "walk_time_seconds": 360,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 480,
+      "source_id": "shmetro-plantrip-alt"
     },
     {
       "id": "xfer-cn-shanghai-shanghai-railway-station-1-cn-shanghai-shanghai-railway-station-3",
@@ -1973,7 +1984,7 @@
       "from_stop_id": "cn-shanghai-shanghai-south-railway-station-3",
       "to_stop_id": "cn-shanghai-shanghai-south-railway-station-1",
       "walk_time_seconds": 360,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-shanghai-south-railway-station-3-cn-shanghai-shanghai-south-railway-station-15",
@@ -1982,8 +1993,8 @@
       "to_line_id": "cn-shanghai-line-15",
       "from_stop_id": "cn-shanghai-shanghai-south-railway-station-3",
       "to_stop_id": "cn-shanghai-shanghai-south-railway-station-15",
-      "walk_time_seconds": 540,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 360,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-shanghai-west-railway-station-11-cn-shanghai-shanghai-west-railway-station-15",
@@ -2012,8 +2023,8 @@
       "to_line_id": "cn-shanghai-line-8",
       "from_stop_id": "cn-shanghai-shendu-highway-41",
       "to_stop_id": "cn-shanghai-shendu-highway-8",
-      "walk_time_seconds": 120,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 300,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-shendu-highway-8-cn-shanghai-shendu-highway-41",
@@ -2022,8 +2033,8 @@
       "to_line_id": "cn-shanghai-line-41",
       "from_stop_id": "cn-shanghai-shendu-highway-8",
       "to_stop_id": "cn-shanghai-shendu-highway-41",
-      "walk_time_seconds": 120,
-      "source_id": "shmetro-plantrip-derived"
+      "walk_time_seconds": 180,
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-siping-road-10-cn-shanghai-siping-road-8",
@@ -2353,7 +2364,7 @@
       "from_stop_id": "cn-shanghai-xinzhuang-1",
       "to_stop_id": "cn-shanghai-xinzhuang-5",
       "walk_time_seconds": 300,
-      "source_id": "shmetro-plantrip-derived"
+      "source_id": "shmetro-plantrip"
     },
     {
       "id": "xfer-cn-shanghai-xinzhuang-5-cn-shanghai-xinzhuang-1",
@@ -2452,7 +2463,7 @@
       "to_line_id": "cn-shanghai-line-4",
       "from_stop_id": "cn-shanghai-yishan-road-3",
       "to_stop_id": "cn-shanghai-yishan-road-4",
-      "walk_time_seconds": 720,
+      "walk_time_seconds": 480,
       "source_id": "shmetro-plantrip-derived"
     },
     {
@@ -2472,7 +2483,7 @@
       "to_line_id": "cn-shanghai-line-3",
       "from_stop_id": "cn-shanghai-yishan-road-4",
       "to_stop_id": "cn-shanghai-yishan-road-3",
-      "walk_time_seconds": 720,
+      "walk_time_seconds": 480,
       "source_id": "shmetro-plantrip-derived"
     },
     {
@@ -2502,8 +2513,8 @@
       "to_line_id": "cn-shanghai-line-4",
       "from_stop_id": "cn-shanghai-yishan-road-9",
       "to_stop_id": "cn-shanghai-yishan-road-4",
-      "walk_time_seconds": 720,
-      "source_id": "shmetro-plantrip"
+      "walk_time_seconds": 480,
+      "source_id": "shmetro-plantrip-reverse"
     },
     {
       "id": "xfer-cn-shanghai-yunshan-road-14-cn-shanghai-yunshan-road-6",

@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chengdu",
-  "generated_at": "2026-10-23T13:01:49.644Z",
+  "generated_at": "2026-11-02T11:37:57.940Z",
   "source": [
     {
       "name": "Baidu Direction v2 transit",
       "url": "https://api.map.baidu.com/direction/v2/transit",
       "version": "2",
-      "retrieved_at": "2026-10-23T13:01:49.644Z",
+      "retrieved_at": "2026-11-02T11:37:57.940Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -35,11 +35,11 @@
       }
     },
     {
-      "id": "cn-chengdu-seg-cn-chengdu-3r-tianfu-street-1-cn-chengdu-5-tianfu-street-1",
+      "id": "cn-chengdu-seg-cn-chengdu-3-tianfu-street-1-cn-chengdu-5-tianfu-street-1",
       "line_id": "cn-chengdu-line-1",
-      "from_stop_id": "cn-chengdu-3r-tianfu-street-1",
+      "from_stop_id": "cn-chengdu-3-tianfu-street-1",
       "to_stop_id": "cn-chengdu-5-tianfu-street-1",
-      "from_station_id": "cn-chengdu-3r-tianfu-street",
+      "from_station_id": "cn-chengdu-3-tianfu-street",
       "to_station_id": "cn-chengdu-5-tianfu-street",
       "direction": "both",
       "source_id": "chengdurail-station-time",
@@ -125,7 +125,7 @@
         "distance_meters": 4179,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner"
     },
     {
@@ -160,8 +160,8 @@
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 31,
-        "a_s_per_km": 46,
-        "b_s": 79.9,
+        "a_s_per_km": 47.2,
+        "b_s": 78.7,
         "distance_meters": 1139,
         "planner_time_source": "baidu-transit"
       },
@@ -177,18 +177,14 @@
       "to_station_id": "cn-chengdu-chenfeng",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
       "distance_km": 1.182,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 19.2,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 1182,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-balizhuang-7-cn-chengdu-erxianqiao-7",
@@ -203,9 +199,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 29,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
+        "speed_kmh": 32.2,
+        "a_s_per_km": 66.5,
+        "b_s": 48.2,
         "distance_meters": 1067,
         "planner_time_source": "baidu-transit"
       },
@@ -243,7 +239,7 @@
       "to_station_id": "cn-chengdu-liaojiawan",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.983,
       "extras": {
@@ -261,7 +257,7 @@
       "to_station_id": "cn-chengdu-chengdu-junqu-general-hospital",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.204,
       "extras": {
@@ -307,12 +303,12 @@
       }
     },
     {
-      "id": "cn-chengdu-seg-cn-chengdu-century-city-1-cn-chengdu-3r-tianfu-street-1",
+      "id": "cn-chengdu-seg-cn-chengdu-century-city-1-cn-chengdu-3-tianfu-street-1",
       "line_id": "cn-chengdu-line-1",
       "from_stop_id": "cn-chengdu-century-city-1",
-      "to_stop_id": "cn-chengdu-3r-tianfu-street-1",
+      "to_stop_id": "cn-chengdu-3-tianfu-street-1",
       "from_station_id": "cn-chengdu-century-city",
-      "to_station_id": "cn-chengdu-3r-tianfu-street",
+      "to_station_id": "cn-chengdu-3-tianfu-street",
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
@@ -351,18 +347,14 @@
       "to_station_id": "cn-chengdu-huazhaobi",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.022,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 26.9,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1022,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-chadianzi-bus-terminal-station-2-cn-chengdu-yangxi-flyover-2",
@@ -427,18 +419,32 @@
       "to_station_id": "cn-chengdu-tianhe-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.84,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 16.6,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 840,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner"
+      }
+    },
+    {
+      "id": "cn-chengdu-seg-cn-chengdu-chengdu-academy-of-governance-2-cn-chengdu-longquanyi-railway-station-transfer-outside-the-fare-gates-2",
+      "line_id": "cn-chengdu-line-2",
+      "from_stop_id": "cn-chengdu-chengdu-academy-of-governance-2",
+      "to_stop_id": "cn-chengdu-longquanyi-railway-station-transfer-outside-the-fare-gates-2",
+      "from_station_id": "cn-chengdu-chengdu-academy-of-governance",
+      "to_station_id": "cn-chengdu-longquanyi-railway-station-transfer-outside-the-fare-gates",
+      "direction": "both",
+      "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "distance_km": 2.689,
+      "extras": {
+        "distance_source": "getTravel_dis",
+        "distance_meters": 2689,
+        "planner_time_source": "baidu-transit"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-chengdu-east-railway-station-2-cn-chengdu-chengyu-flyover-2",
@@ -467,18 +473,14 @@
       "to_station_id": "cn-chengdu-daguan",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.167,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.5,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1167,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-chengdu-fifth-peoples-hospital-19-cn-chengdu-huangshi-19",
@@ -637,18 +639,14 @@
       "to_station_id": "cn-chengdu-renhe",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 0.694,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 14.2,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 694,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-chengdu-university-4-cn-chengdu-mingshuwangling-4",
@@ -696,12 +694,15 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chengdu-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-4-to-cn-chengdu-xihe-4-zyzf7x",
+        "cn-chengdu-cn-chengdu-kuanzhaixiangzi-alleys-4-to-cn-chengdu-xihe-4-zyzf7x"
+      ],
       "distance_km": 1.004,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1004,
-        "planner_time_source": "baidu-transit"
+        "distance_meters": 1004
       }
     },
     {
@@ -714,12 +715,15 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chengdu-cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital-5-to-cn-chengdu-huagui-road-5-1nnfjd",
+        "cn-chengdu-cn-chengdu-fuqin-5-to-cn-chengdu-huagui-road-5-1nnfjd"
+      ],
       "distance_km": 1.293,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1293,
-        "planner_time_source": "baidu-transit"
+        "distance_meters": 1293
       }
     },
     {
@@ -731,17 +735,17 @@
       "to_station_id": "cn-chengdu-cuijiadian",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "distance_km": 1.041,
+      "distance_km": 1.04,
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 25.6,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
-        "distance_meters": 1041,
+        "speed_kmh": 29.9,
+        "a_s_per_km": 66.5,
+        "b_s": 48.2,
+        "distance_meters": 1040,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 60,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner"
     },
     {
@@ -771,7 +775,7 @@
       "to_station_id": "cn-chengdu-qingjiang-west-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.358,
       "extras": {
@@ -829,7 +833,7 @@
       "to_station_id": "cn-chengdu-xidajie-street",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.758,
       "extras": {
@@ -977,9 +981,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 25.1,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
+        "speed_kmh": 29.6,
+        "a_s_per_km": 66.5,
+        "b_s": 48.2,
         "distance_meters": 951,
         "planner_time_source": "baidu-transit"
       },
@@ -1031,18 +1035,14 @@
       "to_station_id": "cn-chengdu-jinsha-site-museum",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.718,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 19.8,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 718,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-cuqiao-9-cn-chengdu-wuqing-south-road-9",
@@ -1089,18 +1089,32 @@
       "to_station_id": "cn-chengdu-shizishan",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.071,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 28.8,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1071,
         "planner_time_source": "baidu-transit"
-      },
+      }
+    },
+    {
+      "id": "cn-chengdu-seg-cn-chengdu-damianpu-2-cn-chengdu-lianshanpo-2",
+      "line_id": "cn-chengdu-line-2",
+      "from_stop_id": "cn-chengdu-damianpu-2",
+      "to_stop_id": "cn-chengdu-lianshanpo-2",
+      "from_station_id": "cn-chengdu-damianpu",
+      "to_station_id": "cn-chengdu-lianshanpo",
+      "direction": "both",
+      "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      "travel_time_source": "planner",
+      "distance_km": 1.225,
+      "extras": {
+        "distance_source": "getTravel_dis",
+        "distance_meters": 1225,
+        "planner_time_source": "baidu-transit"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-datian-rong2-cn-chengdu-xihua-university-rong2",
@@ -1111,18 +1125,14 @@
       "to_station_id": "cn-chengdu-xihua-university",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.593,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 12.8,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 593,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-datong-30-cn-chengdu-zhujiang-road-30",
@@ -1151,7 +1161,7 @@
       "to_station_id": "cn-chengdu-hongzhan-east-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.045,
       "extras": {
@@ -1277,7 +1287,7 @@
       "to_station_id": "cn-chengdu-jingjusi",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.762,
       "extras": {
@@ -1367,18 +1377,14 @@
       "to_station_id": "cn-chengdu-culture-palace",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.154,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 32.8,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1154,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-dongsheng-3-cn-chengdu-shuangliu-square-3",
@@ -1471,11 +1477,11 @@
       }
     },
     {
-      "id": "cn-chengdu-seg-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-19-cn-chengdu-longqiao-road-19",
+      "id": "cn-chengdu-seg-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates-19-cn-chengdu-longqiao-road-19",
       "line_id": "cn-chengdu-line-19",
-      "from_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-19",
+      "from_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates-19",
       "to_stop_id": "cn-chengdu-longqiao-road-19",
-      "from_station_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport",
+      "from_station_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates",
       "to_station_id": "cn-chengdu-longqiao-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
@@ -1515,7 +1521,7 @@
       "to_station_id": "cn-chengdu-tashui-bridge",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.919,
       "extras": {
@@ -1537,9 +1543,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.1,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
+        "speed_kmh": 35.6,
+        "a_s_per_km": 66.5,
+        "b_s": 48.2,
         "distance_meters": 1114,
         "planner_time_source": "baidu-transit"
       },
@@ -1775,9 +1781,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 33.9,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
+        "speed_kmh": 34.9,
+        "a_s_per_km": 66.5,
+        "b_s": 48.2,
         "distance_meters": 1336,
         "planner_time_source": "baidu-transit"
       },
@@ -1865,18 +1871,14 @@
       "to_station_id": "cn-chengdu-taipingyuan",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.523,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.8,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1523,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-gaopeng-avenue-8-cn-chengdu-jiuxing-avenue-8",
@@ -1905,7 +1907,7 @@
       "to_station_id": "cn-chengdu-hongpailou",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.412,
       "extras": {
@@ -1923,7 +1925,7 @@
       "to_station_id": "cn-chengdu-hongpailou",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.412,
       "extras": {
@@ -1941,7 +1943,7 @@
       "to_station_id": "cn-chengdu-provincial-orthopaedics-hospital",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.358,
       "extras": {
@@ -1977,18 +1979,14 @@
       "to_station_id": "cn-chengdu-wugensong",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.396,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31,
-        "a_s_per_km": 66.3,
-        "b_s": 55.4,
         "distance_meters": 1396,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-guangfu-1-cn-chengdu-hongshi-park-1",
@@ -2111,18 +2109,14 @@
       "to_station_id": "cn-chengdu-datian",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
       "distance_km": 1.148,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 18.5,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 1148,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 720,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-haichang-road-1-cn-chengdu-guangfu-1",
@@ -2151,7 +2145,7 @@
       "to_station_id": "cn-chengdu-western-china-intl-expo-city",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 900,
+      "travel_time_seconds": 300,
       "travel_time_source": "planner",
       "distance_km": 7.533,
       "extras": {
@@ -2223,7 +2217,7 @@
       "to_station_id": "cn-chengdu-renmintang",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.471,
       "extras": {
@@ -2371,18 +2365,14 @@
       "to_station_id": "cn-chengdu-chengdu-academy-of-governance",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.568,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.5,
-        "a_s_per_km": 52.1,
-        "b_s": 75.8,
         "distance_meters": 1568,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 240,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-honglian-19-cn-chengdu-zhengxingwan-19",
@@ -2576,7 +2566,7 @@
       "to_station_id": "cn-chengdu-lailong",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 2.434,
       "extras": {
@@ -2594,18 +2584,14 @@
       "to_station_id": "cn-chengdu-yinghui-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.311,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 31.4,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1311,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-huanghuayuan-5-cn-chengdu-shixi-park-5",
@@ -2837,12 +2823,15 @@
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chengdu-cn-chengdu-huayang-1-to-cn-chengdu-science-city-1-y277a2",
+        "cn-chengdu-cn-chengdu-haichang-road-1-to-cn-chengdu-science-city-1-y277a2"
+      ],
       "distance_km": 1.178,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 1178,
-        "planner_time_source": "baidu-transit"
+        "distance_meters": 1178
       }
     },
     {
@@ -2872,18 +2861,14 @@
       "to_station_id": "cn-chengdu-southwest-jiaotong-university",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.865,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 24.1,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 865,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-huazhaobi-north-27-cn-chengdu-jinniu-park-27",
@@ -3128,7 +3113,7 @@
       "to_station_id": "cn-chengdu-jinyi",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.698,
       "extras": {
@@ -3152,6 +3137,24 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "distance_meters": 944,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-chengdu-seg-cn-chengdu-jiepai-2-cn-chengdu-shufang-2",
+      "line_id": "cn-chengdu-line-2",
+      "from_stop_id": "cn-chengdu-jiepai-2",
+      "to_stop_id": "cn-chengdu-shufang-2",
+      "from_station_id": "cn-chengdu-jiepai",
+      "to_station_id": "cn-chengdu-shufang",
+      "direction": "both",
+      "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.813,
+      "extras": {
+        "distance_source": "getTravel_dis",
+        "distance_meters": 1813,
         "planner_time_source": "baidu-transit"
       }
     },
@@ -3182,7 +3185,7 @@
       "to_station_id": "cn-chengdu-sanyuan",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.532,
       "extras": {
@@ -3200,7 +3203,7 @@
       "to_station_id": "cn-chengdu-jincheng-avenue",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.334,
       "extras": {
@@ -3438,18 +3441,14 @@
       "to_station_id": "cn-chengdu-yipintianxia",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.565,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 36.2,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1565,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-jinshi-road-30-cn-chengdu-fucheng-bridge-30",
@@ -3496,7 +3495,7 @@
       "to_station_id": "cn-chengdu-sanhechang",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.976,
       "extras": {
@@ -3514,18 +3513,14 @@
       "to_station_id": "cn-chengdu-chengdu-technician-college",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 0.903,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.9,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 903,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-jinyi-30-cn-chengdu-juanzishu-30",
@@ -3644,18 +3639,14 @@
       "to_station_id": "cn-chengdu-2-beizhan-west-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.838,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 25,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 838,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-jiuxing-avenue-5-cn-chengdu-keyuan-5",
@@ -3868,9 +3859,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 19.6,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
+        "speed_kmh": 19.7,
+        "a_s_per_km": 122.5,
+        "b_s": 74.9,
         "distance_meters": 1385,
         "planner_time_source": "baidu-transit"
       },
@@ -3892,6 +3883,24 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "distance_meters": 1320,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-chengdu-seg-cn-chengdu-lianshanpo-2-cn-chengdu-jiepai-2",
+      "line_id": "cn-chengdu-line-2",
+      "from_stop_id": "cn-chengdu-lianshanpo-2",
+      "to_stop_id": "cn-chengdu-jiepai-2",
+      "from_station_id": "cn-chengdu-lianshanpo",
+      "to_station_id": "cn-chengdu-jiepai",
+      "direction": "both",
+      "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.3,
+      "extras": {
+        "distance_source": "getTravel_dis",
+        "distance_meters": 1300,
         "planner_time_source": "baidu-transit"
       }
     },
@@ -3980,18 +3989,14 @@
       "to_station_id": "cn-chengdu-sanwayao",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 2.207,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 45.6,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 2207,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-liusan-road-6-cn-chengdu-liulichang-6",
@@ -4056,7 +4061,7 @@
       "to_station_id": "cn-chengdu-longhuasi",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 162,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.438,
       "extras": {
@@ -4084,12 +4089,12 @@
       }
     },
     {
-      "id": "cn-chengdu-seg-cn-chengdu-longgang-19-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-19",
+      "id": "cn-chengdu-seg-cn-chengdu-longgang-19-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates-19",
       "line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-longgang-19",
-      "to_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-19",
+      "to_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates-19",
       "from_station_id": "cn-chengdu-longgang",
-      "to_station_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport",
+      "to_station_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates",
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 180,
@@ -4156,6 +4161,28 @@
       }
     },
     {
+      "id": "cn-chengdu-seg-cn-chengdu-longping-road-2-cn-chengdu-longquanyi-2",
+      "line_id": "cn-chengdu-line-2",
+      "from_stop_id": "cn-chengdu-longping-road-2",
+      "to_stop_id": "cn-chengdu-longquanyi-2",
+      "from_station_id": "cn-chengdu-longping-road",
+      "to_station_id": "cn-chengdu-longquanyi",
+      "direction": "both",
+      "source_id": "chengdurail-station-time",
+      "distance_km": 1.664,
+      "extras": {
+        "distance_source": "getTravel_dis",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 38.2,
+        "a_s_per_km": 42.8,
+        "b_s": 85.8,
+        "distance_meters": 1664,
+        "planner_time_source": "baidu-transit"
+      },
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner"
+    },
+    {
       "id": "cn-chengdu-seg-cn-chengdu-longqiao-road-19-cn-chengdu-jiujiang-north-19",
       "line_id": "cn-chengdu-line-19",
       "from_stop_id": "cn-chengdu-longqiao-road-19",
@@ -4192,11 +4219,11 @@
       }
     },
     {
-      "id": "cn-chengdu-seg-cn-chengdu-longquanyi-railway-station-south-30-cn-chengdu-yushi-30",
+      "id": "cn-chengdu-seg-cn-chengdu-longquanyi-railway-station-south-transfer-outside-the-fare-gates-30-cn-chengdu-yushi-30",
       "line_id": "cn-chengdu-line-30",
-      "from_stop_id": "cn-chengdu-longquanyi-railway-station-south-30",
+      "from_stop_id": "cn-chengdu-longquanyi-railway-station-south-transfer-outside-the-fare-gates-30",
       "to_stop_id": "cn-chengdu-yushi-30",
-      "from_station_id": "cn-chengdu-longquanyi-railway-station-south",
+      "from_station_id": "cn-chengdu-longquanyi-railway-station-south-transfer-outside-the-fare-gates",
       "to_station_id": "cn-chengdu-yushi",
       "direction": "both",
       "source_id": "chengdurail-station-time",
@@ -4206,6 +4233,24 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "distance_meters": 3886,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-chengdu-seg-cn-chengdu-longquanyi-railway-station-transfer-outside-the-fare-gates-2-cn-chengdu-damianpu-2",
+      "line_id": "cn-chengdu-line-2",
+      "from_stop_id": "cn-chengdu-longquanyi-railway-station-transfer-outside-the-fare-gates-2",
+      "to_stop_id": "cn-chengdu-damianpu-2",
+      "from_station_id": "cn-chengdu-longquanyi-railway-station-transfer-outside-the-fare-gates",
+      "to_station_id": "cn-chengdu-damianpu",
+      "direction": "both",
+      "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
+      "distance_km": 0.546,
+      "extras": {
+        "distance_source": "getTravel_dis",
+        "distance_meters": 546,
         "planner_time_source": "baidu-transit"
       }
     },
@@ -4254,18 +4299,14 @@
       "to_station_id": "cn-chengdu-xipu-campus-southwest-jiaotong-university",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 0.818,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.9,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 818,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-longzhuayan-17-cn-chengdu-yanggongqiao-17",
@@ -4294,18 +4335,14 @@
       "to_station_id": "cn-chengdu-dongpo-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.108,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.4,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1108,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-luhu-lake-1-cn-chengdu-wuhan-road-1",
@@ -4518,9 +4555,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 42.6,
-        "a_s_per_km": 54.8,
-        "b_s": 68.2,
+        "speed_kmh": 42.8,
+        "a_s_per_km": 55.8,
+        "b_s": 65.2,
         "distance_meters": 2318,
         "planner_time_source": "baidu-transit"
       },
@@ -4662,7 +4699,7 @@
       "to_station_id": "cn-chengdu-dongdalu-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 60,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 0.668,
       "extras": {
@@ -4680,7 +4717,7 @@
       "to_station_id": "cn-chengdu-niushikou",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.543,
       "extras": {
@@ -4738,13 +4775,13 @@
         "role": "loop_closure",
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 23,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
+        "speed_kmh": 28.1,
+        "a_s_per_km": 66.5,
+        "b_s": 48.2,
         "distance_meters": 746
       },
       "distance_km": 0.746,
-      "travel_time_seconds": 122,
+      "travel_time_seconds": 100,
       "travel_time_source": "estimated",
       "travel_time_derived_from": [
         "distance_haversine",
@@ -4764,9 +4801,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 42.3,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
+        "speed_kmh": 38.8,
+        "a_s_per_km": 66.5,
+        "b_s": 48.2,
         "distance_meters": 2019,
         "planner_time_source": "baidu-transit"
       },
@@ -4946,10 +4983,10 @@
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
-      "distance_km": 0.915,
+      "distance_km": 2,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 915,
+        "distance_meters": 2000,
         "planner_time_source": "baidu-transit"
       }
     },
@@ -5124,7 +5161,7 @@
       "to_station_id": "cn-chengdu-chengdu-university-of-tcm-and-sichuan-provincial-peoples-hospital",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 300,
       "travel_time_source": "planner",
       "distance_km": 0.676,
       "extras": {
@@ -5196,7 +5233,7 @@
       "to_station_id": "cn-chengdu-xibei-bridge",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.331,
       "extras": {
@@ -5214,7 +5251,7 @@
       "to_station_id": "cn-chengdu-jichechang",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.017,
       "extras": {
@@ -5286,13 +5323,16 @@
       "to_station_id": "cn-chengdu-tianfu-station-transfer-only",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 840,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 600,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chengdu-cn-chengdu-sancha-19-to-cn-chengdu-jinxing-19-1kaf1pz",
+        "cn-chengdu-cn-chengdu-tianfu-station-transfer-only-19-to-cn-chengdu-jinxing-19-1kaf1pz"
+      ],
       "distance_km": 19.162,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 19162,
-        "planner_time_source": "baidu-transit"
+        "distance_meters": 19162
       }
     },
     {
@@ -5304,7 +5344,7 @@
       "to_station_id": "cn-chengdu-jiuyan-bridge",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.511,
       "extras": {
@@ -5368,7 +5408,7 @@
         "distance_meters": 1940,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 240,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner"
     },
     {
@@ -5416,18 +5456,14 @@
       "to_station_id": "cn-chengdu-south-railway-station",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.162,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27.2,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1162,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-sanyuan-8-cn-chengdu-shiyang-8",
@@ -5582,7 +5618,7 @@
       "to_station_id": "cn-chengdu-jiuxing-avenue",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.599,
       "extras": {
@@ -5600,18 +5636,14 @@
       "to_station_id": "cn-chengdu-gaopeng-avenue",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.628,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.3,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1628,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-shenyang-road-6-cn-chengdu-lushan-avenue-6",
@@ -5766,7 +5798,7 @@
       "to_station_id": "cn-chengdu-datong",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.99,
       "extras": {
@@ -5784,18 +5816,14 @@
       "to_station_id": "cn-chengdu-sichuan-normal-university",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "distance_km": 1.127,
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 1.126,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 29.3,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
-        "distance_meters": 1127,
+        "distance_meters": 1126,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-shuangdian-road-7-cn-chengdu-huaishudian-7",
@@ -5806,18 +5834,14 @@
       "to_station_id": "cn-chengdu-huaishudian",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.901,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27.7,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 901,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-shuangfengqiao-3-cn-chengdu-longqiao-road-3",
@@ -5846,18 +5870,14 @@
       "to_station_id": "cn-chengdu-jintu",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.574,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 15.1,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 574,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-shuangliu-square-3-cn-chengdu-sanliba-3",
@@ -5946,6 +5966,24 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "distance_meters": 616,
+        "planner_time_source": "baidu-transit"
+      }
+    },
+    {
+      "id": "cn-chengdu-seg-cn-chengdu-shufang-2-cn-chengdu-longping-road-2",
+      "line_id": "cn-chengdu-line-2",
+      "from_stop_id": "cn-chengdu-shufang-2",
+      "to_stop_id": "cn-chengdu-longping-road-2",
+      "from_station_id": "cn-chengdu-shufang",
+      "to_station_id": "cn-chengdu-longping-road",
+      "direction": "both",
+      "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
+      "distance_km": 1.807,
+      "extras": {
+        "distance_source": "getTravel_dis",
+        "distance_meters": 1807,
         "planner_time_source": "baidu-transit"
       }
     },
@@ -6084,18 +6122,14 @@
       "to_station_id": "cn-chengdu-liulichang",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.645,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 39.3,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1645,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-sichuan-university-jiangan-campus-8-cn-chengdu-zhujiang-road-8",
@@ -6124,7 +6158,7 @@
       "to_station_id": "cn-chengdu-donghu-park",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.416,
       "extras": {
@@ -6146,12 +6180,12 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 26.5,
-        "a_s_per_km": 66.3,
-        "b_s": 55.4,
+        "speed_kmh": 26,
+        "a_s_per_km": 65.5,
+        "b_s": 58,
         "distance_meters": 1033
       },
-      "travel_time_seconds": 109,
+      "travel_time_seconds": 111,
       "travel_time_source": "estimated",
       "travel_time_derived_from": [
         "distance_haversine",
@@ -6207,9 +6241,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.3,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
+        "speed_kmh": 35.1,
+        "a_s_per_km": 66.5,
+        "b_s": 48.2,
         "distance_meters": 1206,
         "planner_time_source": "baidu-transit"
       },
@@ -6217,12 +6251,12 @@
       "travel_time_source": "planner"
     },
     {
-      "id": "cn-chengdu-seg-cn-chengdu-sisheng-30-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30",
+      "id": "cn-chengdu-seg-cn-chengdu-sisheng-30-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates-30",
       "line_id": "cn-chengdu-line-30",
       "from_stop_id": "cn-chengdu-sisheng-30",
-      "to_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30",
+      "to_stop_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates-30",
       "from_station_id": "cn-chengdu-sisheng",
-      "to_station_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport",
+      "to_station_id": "cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-transfer-outside-the-fare-gates",
       "direction": "both",
       "source_id": "chengdurail-station-time",
       "distance_km": 2.101,
@@ -6301,18 +6335,14 @@
       "to_station_id": "cn-chengdu-shenxianshu",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.87,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 43.4,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1870,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-southwest-jiaotong-university-6-cn-chengdu-xinghe-6",
@@ -6341,18 +6371,14 @@
       "to_station_id": "cn-chengdu-jiulidi",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 60,
+      "travel_time_source": "planner",
       "distance_km": 0.81,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 22.2,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 810,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-southwest-petroleum-university-3-cn-chengdu-clock-tower-3",
@@ -6417,7 +6443,7 @@
       "to_station_id": "cn-chengdu-cujin",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.98,
       "extras": {
@@ -6453,18 +6479,14 @@
       "to_station_id": "cn-chengdu-wuhou-avenue",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.544,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 37.6,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1544,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-taisheng-south-road-4-cn-chengdu-chengdu-second-peoples-hospital-4",
@@ -6557,7 +6579,7 @@
         "distance_meters": 2601,
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner"
     },
     {
@@ -6587,7 +6609,7 @@
       "to_station_id": "cn-chengdu-shuangliu-west-railway-station",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 420,
+      "travel_time_seconds": 240,
       "travel_time_source": "planner",
       "distance_km": 5.099,
       "extras": {
@@ -6659,7 +6681,7 @@
       "to_station_id": "cn-chengdu-terminal-1and2-of-tianfu-international-airport",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 2.601,
       "extras": {
@@ -6713,7 +6735,7 @@
       "to_station_id": "cn-chengdu-chunxi-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.408,
       "extras": {
@@ -6731,13 +6753,16 @@
       "to_station_id": "cn-chengdu-sancha",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 840,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 660,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chengdu-cn-chengdu-tianfu-station-transfer-only-18-to-cn-chengdu-tianfu-international-airport-north-18-1jyszv8",
+        "cn-chengdu-cn-chengdu-sancha-18-to-cn-chengdu-tianfu-international-airport-north-18-1jyszv8"
+      ],
       "distance_km": 19.162,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 19162,
-        "planner_time_source": "baidu-transit"
+        "distance_meters": 19162
       }
     },
     {
@@ -6749,13 +6774,16 @@
       "to_station_id": "cn-chengdu-lanjiadian",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 840,
-      "travel_time_source": "planner",
+      "travel_time_seconds": 240,
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chengdu-cn-chengdu-tianfu-station-transfer-only-19-to-cn-chengdu-jinxing-19-1kaf1pz",
+        "cn-chengdu-cn-chengdu-lanjiadian-19-to-cn-chengdu-jinxing-19-1kaf1pz"
+      ],
       "distance_km": 5.094,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 5094,
-        "planner_time_source": "baidu-transit"
+        "distance_meters": 5094
       }
     },
     {
@@ -6785,18 +6813,14 @@
       "to_station_id": "cn-chengdu-longyin",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
       "distance_km": 1.497,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 20,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 1497,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 300,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-tianxin-road-rong2-cn-chengdu-hezuo-road-rong2",
@@ -6969,7 +6993,7 @@
       "to_station_id": "cn-chengdu-chengdu-jincheng-college",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 480,
+      "travel_time_seconds": 360,
       "travel_time_source": "planner",
       "distance_km": 2.514,
       "extras": {
@@ -6989,10 +7013,10 @@
       "source_id": "chengdurail-station-time",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
-      "distance_km": 0.762,
+      "distance_km": 2,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 762,
+        "distance_meters": 2000,
         "planner_time_source": "baidu-transit"
       }
     },
@@ -7297,7 +7321,7 @@
       "to_station_id": "cn-chengdu-xinglong",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 3.914,
       "extras": {
@@ -7351,18 +7375,14 @@
       "to_station_id": "cn-chengdu-longzhuayan",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.631,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 39.3,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1631,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-wuhou-flyover-3-cn-chengdu-wuqing-south-road-3",
@@ -7520,7 +7540,7 @@
       "to_station_id": "cn-chengdu-2-beizhan-west-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.499,
       "extras": {
@@ -7592,18 +7612,14 @@
       "to_station_id": "cn-chengdu-guoning",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 1.007,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 16.3,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 1007,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-xihua-avenue-6-cn-chengdu-qinggang-6",
@@ -7632,18 +7648,14 @@
       "to_station_id": "cn-chengdu-shuanglin-village",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 180,
+      "travel_time_source": "planner",
       "distance_km": 0.792,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 16,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 792,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 180,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-xinchuan-road-6-cn-chengdu-xintong-avenue-6",
@@ -7744,7 +7756,7 @@
       "to_station_id": "cn-chengdu-beibu-shopping-mall",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.582,
       "extras": {
@@ -7805,9 +7817,9 @@
       "extras": {
         "distance_source": "getTravel_dis",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 35.6,
-        "a_s_per_km": 66.3,
-        "b_s": 55.4,
+        "speed_kmh": 35.3,
+        "a_s_per_km": 65.5,
+        "b_s": 58,
         "distance_meters": 1612,
         "planner_time_source": "baidu-transit"
       },
@@ -7859,16 +7871,13 @@
       "to_station_id": "cn-chengdu-sisheng",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 60,
-      "travel_time_source": "last_train",
-      "travel_time_derived_from": [
-        "cn-chengdu-cn-chengdu-xingyue-30-to-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30-2",
-        "cn-chengdu-cn-chengdu-sisheng-30-to-cn-chengdu-east-of-terminal-2-of-shuangliu-international-airport-30-2"
-      ],
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
       "distance_km": 0.799,
       "extras": {
         "distance_source": "getTravel_dis",
-        "distance_meters": 799
+        "distance_meters": 799,
+        "planner_time_source": "baidu-transit"
       }
     },
     {
@@ -7992,14 +8001,14 @@
       "extras": {
         "distance_source": "getTravel_dis_triangulation",
         "time_estimate": "distance_time_affine",
-        "speed_kmh": 18.4,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
+        "speed_kmh": 18.6,
+        "a_s_per_km": 122.5,
+        "b_s": 74.9,
         "distance_meters": 1136,
         "distance_method": "triangle through junction: dis(A,B)=d(A,X)+d(X,B)",
         "planner_time_source": "baidu-transit"
       },
-      "travel_time_seconds": 240,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner"
     },
     {
@@ -8048,18 +8057,14 @@
       "to_station_id": "cn-chengdu-xifang-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 0.91,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 17.4,
-        "a_s_per_km": 120.2,
-        "b_s": 79.3,
         "distance_meters": 910,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-xipu-railway-station-2-cn-chengdu-tianhe-road-2",
@@ -8070,7 +8075,7 @@
       "to_station_id": "cn-chengdu-tianhe-road",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 1.663,
       "extras": {
@@ -8214,7 +8219,7 @@
       "to_station_id": "cn-chengdu-dongsheng",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 180,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.327,
       "extras": {
@@ -8232,18 +8237,14 @@
       "to_station_id": "cn-chengdu-chengdu-east-railway-station",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "distance_km": 0.997,
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "distance_km": 0.996,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 27.8,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
-        "distance_meters": 997,
+        "distance_meters": 996,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-yingtian-temple-10-cn-chengdu-huangshui-10",
@@ -8254,7 +8255,7 @@
       "to_station_id": "cn-chengdu-huangshui",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.346,
       "extras": {
@@ -8308,18 +8309,14 @@
       "to_station_id": "cn-chengdu-chadianzi",
       "direction": "both",
       "source_id": "chengdurail-station-time",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
       "distance_km": 1.263,
       "extras": {
         "distance_source": "getTravel_dis",
-        "time_estimate": "distance_time_affine",
-        "speed_kmh": 34.3,
-        "a_s_per_km": 32.7,
-        "b_s": 96.7,
         "distance_meters": 1263,
         "planner_time_source": "baidu-transit"
-      },
-      "travel_time_seconds": 120,
-      "travel_time_source": "planner"
+      }
     },
     {
       "id": "cn-chengdu-seg-cn-chengdu-yixin-lake-19-cn-chengdu-muhua-road-19",
@@ -8348,7 +8345,7 @@
       "to_station_id": "cn-chengdu-nanhu-flyover",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.034,
       "extras": {
@@ -8492,7 +8489,7 @@
       "to_station_id": "cn-chengdu-shimenkan",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 300,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.564,
       "extras": {
@@ -8564,7 +8561,7 @@
       "to_station_id": "cn-chengdu-financial-city-east",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 360,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 2.832,
       "extras": {
@@ -8600,7 +8597,7 @@
       "to_station_id": "cn-chengdu-shunfeng",
       "direction": "both",
       "source_id": "chengdurail-station-time",
-      "travel_time_seconds": 240,
+      "travel_time_seconds": 120,
       "travel_time_source": "planner",
       "distance_km": 1.438,
       "extras": {
