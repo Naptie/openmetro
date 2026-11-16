@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-changsha",
-  "generated_at": "2026-10-23T13:01:40.316Z",
-  "source": [],
+  "generated_at": "2026-11-16T11:43:47.789Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-16T11:43:47.789Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "cn-changsha-seg-cn-changsha-bai-ge-ju-6-cn-changsha-xiang-ya-san-yi-yuan-6",
@@ -106,6 +117,23 @@
         "distance_source": "baidu-transit-distance"
       },
       "distance_km": 1.43
+    },
+    {
+      "id": "cn-changsha-seg-cn-changsha-cao-long-qiao-2-cn-changsha-mo-jia-zhou-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-cao-long-qiao-2",
+      "to_stop_id": "cn-changsha-mo-jia-zhou-2",
+      "from_station_id": "cn-changsha-cao-long-qiao",
+      "to_station_id": "cn-changsha-mo-jia-zhou",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "extras": {
+        "planner_time_source": "baidu-transit-direction",
+        "distance_source": "baidu-transit-distance"
+      },
+      "distance_km": 1.093
     },
     {
       "id": "cn-changsha-seg-cn-changsha-cha-zi-shan-4-cn-changsha-guan-sha-ling-4",
@@ -295,6 +323,23 @@
       "distance_km": 1.901
     },
     {
+      "id": "cn-changsha-seg-cn-changsha-che-tian-wan-2-cn-changsha-zhen-ren-qiao-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-che-tian-wan-2",
+      "to_stop_id": "cn-changsha-zhen-ren-qiao-2",
+      "from_station_id": "cn-changsha-che-tian-wan",
+      "to_station_id": "cn-changsha-zhen-ren-qiao",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "extras": {
+        "planner_time_source": "baidu-transit-direction",
+        "distance_source": "baidu-transit-distance"
+      },
+      "distance_km": 1.197
+    },
+    {
       "id": "cn-changsha-seg-cn-changsha-chi-gang-ling-4-cn-changsha-shu-mu-ling-4",
       "line_id": "cn-changsha-line-4",
       "from_stop_id": "cn-changsha-chi-gang-ling-4",
@@ -363,6 +408,18 @@
       "distance_km": 10.918
     },
     {
+      "id": "cn-changsha-seg-cn-changsha-cz31q-2-cn-changsha-long-hu-ling-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-cz31q-2",
+      "to_stop_id": "cn-changsha-long-hu-ling-2",
+      "from_station_id": "cn-changsha-cz31q",
+      "to_station_id": "cn-changsha-long-hu-ling",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "travel_time_seconds": 120,
+      "travel_time_source": "estimated"
+    },
+    {
       "id": "cn-changsha-seg-cn-changsha-da-lu-cun-6-cn-changsha-mu-ma-duan-6",
       "line_id": "cn-changsha-line-6",
       "from_stop_id": "cn-changsha-da-lu-cun-6",
@@ -429,6 +486,18 @@
         "distance_source": "baidu-transit-distance"
       },
       "distance_km": 1.754
+    },
+    {
+      "id": "cn-changsha-seg-cn-changsha-djsy4u-2-cn-changsha-zhu-tian-zhou-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-djsy4u-2",
+      "to_stop_id": "cn-changsha-zhu-tian-zhou-2",
+      "from_station_id": "cn-changsha-djsy4u",
+      "to_station_id": "cn-changsha-zhu-tian-zhou",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "travel_time_seconds": 120,
+      "travel_time_source": "estimated"
     },
     {
       "id": "cn-changsha-seg-cn-changsha-dong-hu-6-cn-changsha-shao-guang-6",
@@ -1466,6 +1535,41 @@
         "distance_source": "baidu-transit-distance"
       },
       "distance_km": 1.064
+    },
+    {
+      "id": "cn-changsha-seg-cn-changsha-mei-xi-hu-xi-2-cn-changsha-zhong-tang-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "to_stop_id": "cn-changsha-zhong-tang-2",
+      "from_station_id": "cn-changsha-mei-xi-hu-xi",
+      "to_station_id": "cn-changsha-zhong-tang",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "travel_time_seconds": 240,
+      "travel_time_source": "planner",
+      "extras": {
+        "planner_time_source": "baidu-transit-direction",
+        "distance_source": "baidu-transit-distance"
+      },
+      "distance_km": 2.194
+    },
+    {
+      "id": "cn-changsha-seg-cn-changsha-mo-jia-zhou-2-cn-changsha-djsy4u-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-mo-jia-zhou-2",
+      "to_stop_id": "cn-changsha-djsy4u-2",
+      "from_station_id": "cn-changsha-mo-jia-zhou",
+      "to_station_id": "cn-changsha-djsy4u",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "travel_time_seconds": 300,
+      "travel_time_source": "planner",
+      "extras": {
+        "planner_time_source": "baidu-transit",
+        "distance_source": "baidu_path",
+        "distance_meters": 2998
+      },
+      "distance_km": 2.998
     },
     {
       "id": "cn-changsha-seg-cn-changsha-mu-ma-duan-6-cn-changsha-huang-hua-ji-chang-t1-t2-6",
@@ -2576,6 +2680,18 @@
       "distance_km": 0.799
     },
     {
+      "id": "cn-changsha-seg-cn-changsha-zhen-ren-qiao-2-cn-changsha-cz31q-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-zhen-ren-qiao-2",
+      "to_stop_id": "cn-changsha-cz31q-2",
+      "from_station_id": "cn-changsha-zhen-ren-qiao",
+      "to_station_id": "cn-changsha-cz31q",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "travel_time_seconds": 120,
+      "travel_time_source": "estimated"
+    },
+    {
       "id": "cn-changsha-seg-cn-changsha-zhong-nan-da-xue-3-cn-changsha-yang-guang-3",
       "line_id": "cn-changsha-line-3",
       "from_stop_id": "cn-changsha-zhong-nan-da-xue-3",
@@ -2591,6 +2707,30 @@
         "distance_source": "baidu-transit-distance"
       },
       "distance_km": 1.39
+    },
+    {
+      "id": "cn-changsha-seg-cn-changsha-zhong-tang-2-cn-changsha-cao-long-qiao-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-zhong-tang-2",
+      "to_stop_id": "cn-changsha-cao-long-qiao-2",
+      "from_station_id": "cn-changsha-zhong-tang",
+      "to_station_id": "cn-changsha-cao-long-qiao",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "distance_km": 1.143,
+      "extras": {
+        "distance_source": "haversine",
+        "time_estimate": "distance_time_affine",
+        "speed_kmh": 31.7,
+        "a_s_per_km": 56.3,
+        "b_s": 65.4
+      },
+      "travel_time_seconds": 130,
+      "travel_time_source": "estimated",
+      "travel_time_derived_from": [
+        "distance_haversine",
+        "affine_time_model"
+      ]
     },
     {
       "id": "cn-changsha-seg-cn-changsha-zhong-tang-6-cn-changsha-yi-shi-fan-xi-xiao-qu-6",
@@ -2625,6 +2765,23 @@
         "distance_source": "baidu-transit-distance"
       },
       "distance_km": 1.319
+    },
+    {
+      "id": "cn-changsha-seg-cn-changsha-zhu-tian-zhou-2-cn-changsha-che-tian-wan-2",
+      "line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-zhu-tian-zhou-2",
+      "to_stop_id": "cn-changsha-che-tian-wan-2",
+      "from_station_id": "cn-changsha-zhu-tian-zhou",
+      "to_station_id": "cn-changsha-che-tian-wan",
+      "direction": "both",
+      "source_id": "hncsmtr-creatorcms",
+      "travel_time_seconds": 120,
+      "travel_time_source": "planner",
+      "extras": {
+        "planner_time_source": "baidu-transit-direction",
+        "distance_source": "baidu-transit-distance"
+      },
+      "distance_km": 1.065
     }
   ]
 }

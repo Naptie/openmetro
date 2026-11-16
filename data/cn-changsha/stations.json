@@ -2,8 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/stations.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-changsha",
-  "generated_at": "2026-10-23T13:01:40.312Z",
-  "source": [],
+  "generated_at": "2026-11-16T11:43:41.547Z",
+  "source": [
+    {
+      "name": "Baidu Direction v2 transit",
+      "url": "https://api.map.baidu.com/direction/v2/transit",
+      "version": "2",
+      "retrieved_at": "2026-11-16T11:43:41.547Z",
+      "license": "custom",
+      "license_url": null,
+      "attribution": "Baidu Maps",
+      "notes": "Third-party route planner used only to gap-fill weak/missing segment times, distances and transfer walks. Official operator values are never overwritten."
+    }
+  ],
   "records": [
     {
       "id": "cn-changsha-bai-ge-ju",
@@ -258,6 +269,47 @@
       }
     },
     {
+      "id": "cn-changsha-cao-long-qiao",
+      "name": "漕龙桥站",
+      "names": {
+        "zh": "漕龙桥站",
+        "en": "Cao Longqiao"
+      },
+      "location": {
+        "lon": 112.852083,
+        "lat": 28.181143,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 458,
+        "y": 1065,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "hncsmtr-creatorcms",
+          "id": "e33bcd08be2044ad9589111397a2673c"
+        }
+      ],
+      "extras": {
+        "pinyin": "Cao Long Qiao",
+        "camel_pinyin": "Cao LongQiao",
+        "amap_name_en": "Cao Longqiao",
+        "official_station_ids": [
+          "e33bcd08be2044ad9589111397a2673c"
+        ],
+        "official_codes": [
+          "25"
+        ],
+        "lines": [
+          "cn-changsha-line-2"
+        ],
+        "official_interchange": false,
+        "location_source": "source"
+      }
+    },
+    {
       "id": "cn-changsha-cha-zi-shan",
       "name": "茶子山",
       "names": {
@@ -421,7 +473,7 @@
         ],
         "official_interchange": false,
         "exits": "4号口",
-        "bus_connections": "1号出口 大桥东站：148路；348路；503路；912路；208路；368路；121路；707路；917路；215路\n<br>沙湾路口站：148路；348路；503路；208路；912路\n<br>2号出口 沙湾路长沙大道口：156路；210路；368路\n<br>3号出口 沙湾路长沙大道口：156路；210路；368路\n<br>4号出口 大桥东站：148路；348路；503路；912路；208路；368路；121路；707路；917路；215路\n<br>沙湾路口站：215路148路；348路；503路；208路；912路",
+        "bus_connections": "1号出口 大桥东站：148路；348路；503路；912路；208路；368路；121路；707路；917路；215路\r\n<br>沙湾路口站：148路；348路；503路；208路；912路\r\n<br>2号出口 沙湾路长沙大道口：156路；210路；368路\r\n<br>3号出口 沙湾路长沙大道口：156路；210路；368路\r\n<br>4号出口 大桥东站：148路；348路；503路；912路；208路；368路；121路；707路；917路；215路\r\n<br>沙湾路口站：215路148路；348路；503路；208路；912路",
         "location_source": "subway"
       }
     },
@@ -615,6 +667,47 @@
         "exits": "5号口",
         "bus_connections": "3号线换乘",
         "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-changsha-che-tian-wan",
+      "name": "车田湾站",
+      "names": {
+        "zh": "车田湾站",
+        "en": "Chetianwan"
+      },
+      "location": {
+        "lon": 112.829313,
+        "lat": 28.211511,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 76,
+        "y": 751,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "hncsmtr-creatorcms",
+          "id": "93204df15ab545e79e1024d6880770b6"
+        }
+      ],
+      "extras": {
+        "pinyin": "Che Tian Wan",
+        "camel_pinyin": "CheTianWan",
+        "amap_name_en": "Chetianwan",
+        "official_station_ids": [
+          "93204df15ab545e79e1024d6880770b6"
+        ],
+        "official_codes": [
+          "29"
+        ],
+        "lines": [
+          "cn-changsha-line-2"
+        ],
+        "official_interchange": false,
+        "location_source": "source"
       }
     },
     {
@@ -832,6 +925,34 @@
       }
     },
     {
+      "id": "cn-changsha-cz31q",
+      "name": "华龙站",
+      "names": {
+        "zh": "华龙站",
+        "en": "Station cz31q"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "hncsmtr-creatorcms",
+          "id": "43bbc38aadfa48c9a3a3468d3b075923"
+        }
+      ],
+      "extras": {
+        "official_station_ids": [
+          "43bbc38aadfa48c9a3a3468d3b075923"
+        ],
+        "official_codes": [
+          "31"
+        ],
+        "lines": [
+          "cn-changsha-line-2"
+        ],
+        "official_interchange": false,
+        "location_source": "amap"
+      }
+    },
+    {
       "id": "cn-changsha-da-lu-cun",
       "name": "大路村",
       "names": {
@@ -997,6 +1118,41 @@
         "official_interchange": false,
         "exits": "1号口",
         "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-changsha-djsy4u",
+      "name": "桥头铺站",
+      "names": {
+        "zh": "桥头铺站",
+        "en": "Qiaotoupu"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "hncsmtr-creatorcms",
+          "id": "95727635a1364c6b9436548138897660"
+        }
+      ],
+      "extras": {
+        "official_station_ids": [
+          "95727635a1364c6b9436548138897660"
+        ],
+        "official_codes": [
+          "27"
+        ],
+        "lines": [
+          "cn-changsha-line-2"
+        ],
+        "official_interchange": false,
+        "location_source": "baidu-place",
+        "baidu_place_uid": "18eb25ac2420e348354aaef7",
+        "baidu_place_name": "桥头铺(中联智慧城)"
+      },
+      "location": {
+        "lon": 112.8363,
+        "lat": 28.195518,
+        "crs": "gcj02"
       }
     },
     {
@@ -2519,7 +2675,7 @@
         ],
         "official_interchange": false,
         "exits": "3号口",
-        "bus_connections": "2号出口 荷花路口站：星通103路；10路；114路；362路；126路；158路；502路；801路； 906路；220路；x116路\n<br>3号出口 锦泰广场站：星通103路；10路；114路；362路；126路；158路；502路；801路； 906路；103路；220路；x116路\n<br>4号出口 锦泰广场站：星通103路；10路；114路；362路；126路；158路；502路；801路； 906路；103路；220路；x116路",
+        "bus_connections": "2号出口 荷花路口站：星通103路；10路；114路；362路；126路；158路；502路；801路； 906路；220路；x116路\r\n<br>3号出口 锦泰广场站：星通103路；10路；114路；362路；126路；158路；502路；801路； 906路；103路；220路；x116路\r\n<br>4号出口 锦泰广场站：星通103路；10路；114路；362路；126路；158路；502路；801路； 906路；103路；220路；x116路",
         "location_source": "subway"
       }
     },
@@ -2952,6 +3108,47 @@
         ],
         "official_interchange": false,
         "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-changsha-long-hu-ling",
+      "name": "龙虎岭站",
+      "names": {
+        "zh": "龙虎岭站",
+        "en": "Longhuling"
+      },
+      "location": {
+        "lon": 112.825038,
+        "lat": 28.239074,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 75,
+        "y": 397,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "hncsmtr-creatorcms",
+          "id": "6c264782961640cc83acacde78b05ad7"
+        }
+      ],
+      "extras": {
+        "pinyin": "Long Hu Ling",
+        "camel_pinyin": "LongHuLing",
+        "amap_name_en": "Longhuling",
+        "official_station_ids": [
+          "6c264782961640cc83acacde78b05ad7"
+        ],
+        "official_codes": [
+          "32"
+        ],
+        "lines": [
+          "cn-changsha-line-2"
+        ],
+        "official_interchange": false,
+        "location_source": "source"
       }
     },
     {
@@ -3457,6 +3654,47 @@
         "exits": "2号口",
         "bus_connections": "1号出口 梅溪湖西地铁站：207路；367路；W109路；902路；359路；233路；371路；N19路；211路；269路；W222路；418路；N108路；社区巴士6号线\r\n<br>2号出口 银杏公园站：418路；386路；社区巴士17路；233路；269路\r\n<br>4号出口 梅溪湖西地铁站：207路；359路；367路；902路；W109路；211路；社区巴士6号线；269路；371路；N19路；233路；N108路；W222路；418路",
         "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-changsha-mo-jia-zhou",
+      "name": "莫家洲站",
+      "names": {
+        "zh": "莫家洲站",
+        "en": "Mojiazhou"
+      },
+      "location": {
+        "lon": 112.841922,
+        "lat": 28.183663,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 330,
+        "y": 1065,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "hncsmtr-creatorcms",
+          "id": "fe1e4535cdd64df59268842625a75f35"
+        }
+      ],
+      "extras": {
+        "pinyin": "Mo Jia Zhou",
+        "camel_pinyin": "MoJiaZhou",
+        "amap_name_en": "Mojiazhou",
+        "official_station_ids": [
+          "fe1e4535cdd64df59268842625a75f35"
+        ],
+        "official_codes": [
+          "26"
+        ],
+        "lines": [
+          "cn-changsha-line-2"
+        ],
+        "official_interchange": false,
+        "location_source": "source"
       }
     },
     {
@@ -4706,7 +4944,7 @@
         ],
         "official_interchange": true,
         "exits": "2号口",
-        "bus_connections": "1号出口 万家丽广场站：66路；122路；802路；915路；810路；w207东；\n<br>2号出口 万家丽广场站：810路\n<br>3号出口 古曲路口站：405路\n<br>4号出口 万家丽广场站：66路；122路；802路；915路；810路；w207东路\n<br>5号出口 万家丽广场站：66路；122路；802路；915路；810路；w207东路\n<br>6号出口 万家丽广场南站：405路；215路",
+        "bus_connections": "1号出口 万家丽广场站：66路；122路；802路；915路；810路；w207东；\r\n<br>2号出口 万家丽广场站：810路\r\n<br>3号出口 古曲路口站：405路\r\n<br>4号出口 万家丽广场站：66路；122路；802路；915路；810路；w207东路\r\n<br>5号出口 万家丽广场站：66路；122路；802路；915路；810路；w207东路\r\n<br>6号出口 万家丽广场南站：405路；215路",
         "location_source": "subway"
       }
     },
@@ -6055,6 +6293,47 @@
       }
     },
     {
+      "id": "cn-changsha-zhen-ren-qiao",
+      "name": "真人桥站",
+      "names": {
+        "zh": "真人桥站",
+        "en": "Zhenren Bridge"
+      },
+      "location": {
+        "lon": 112.824723,
+        "lat": 28.221035,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 76,
+        "y": 654,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "hncsmtr-creatorcms",
+          "id": "81fb4d80ab3240ec969317b3a24a90a8"
+        }
+      ],
+      "extras": {
+        "pinyin": "Zhen Ren Qiao",
+        "camel_pinyin": "ZhenRen Qiao",
+        "amap_name_en": "Zhenren Bridge",
+        "official_station_ids": [
+          "81fb4d80ab3240ec969317b3a24a90a8"
+        ],
+        "official_codes": [
+          "30"
+        ],
+        "lines": [
+          "cn-changsha-line-2"
+        ],
+        "official_interchange": false,
+        "location_source": "source"
+      }
+    },
+    {
       "id": "cn-changsha-zhong-nan-da-xue",
       "name": "中南大学",
       "names": {
@@ -6098,9 +6377,9 @@
     },
     {
       "id": "cn-changsha-zhong-tang",
-      "name": "中塘",
+      "name": "中塘站",
       "names": {
-        "zh": "中塘",
+        "zh": "中塘站",
         "en": "Zhongtang"
       },
       "location": {
@@ -6117,6 +6396,10 @@
       "source_ids": [
         {
           "source": "hncsmtr-creatorcms",
+          "id": "ee0eb50179de41e89c25b63d0142c93c"
+        },
+        {
+          "source": "hncsmtr-creatorcms",
           "id": "d556a1f24a634b85966eabf1240b5108"
         }
       ],
@@ -6125,17 +6408,20 @@
         "camel_pinyin": "ZhongTang",
         "amap_name_en": "Zhongtang",
         "official_station_ids": [
+          "ee0eb50179de41e89c25b63d0142c93c",
           "d556a1f24a634b85966eabf1240b5108"
         ],
         "official_codes": [
+          "24",
           "603"
         ],
         "lines": [
+          "cn-changsha-line-2",
           "cn-changsha-line-6"
         ],
         "official_interchange": true,
         "bus_connections": "2号线换乘",
-        "location_source": "subway"
+        "location_source": "source"
       }
     },
     {
@@ -6179,6 +6465,47 @@
         "exits": "1号口出入口1号、3号出入口2号",
         "bus_connections": "1号出口  湘府中学西门站：230路、125路、209路、802路、社区巴士3号线\t\r\n<br>2号出口  友阿奥特拉莱斯站：社区巴士4号线、27路、125路、266路、230路、15路、长株潭101路、209路、206路\r\n<br>3号出口  友阿奥特拉莱斯站：社区巴士3号线、209路、长株潭101路、27路、125路、社区巴士1号线、230路、15路、206路\r\n<br>3号出口  湘府中学站：140路、15路、27路、802路、长株潭101路、206路、社区巴士1号线\t            \r\n<br>4号出口  湘府中学站：140路、15路、206路、27路、802路、长株潭101路",
         "location_source": "subway"
+      }
+    },
+    {
+      "id": "cn-changsha-zhu-tian-zhou",
+      "name": "注田洲站",
+      "names": {
+        "zh": "注田洲站",
+        "en": "Zhutianzhou"
+      },
+      "location": {
+        "lon": 112.829572,
+        "lat": 28.201688,
+        "crs": "gcj02"
+      },
+      "schematic": {
+        "x": 77,
+        "y": 900,
+        "crs": "schematic"
+      },
+      "status": "operating",
+      "source_ids": [
+        {
+          "source": "hncsmtr-creatorcms",
+          "id": "c9ffa10981d5422e88fddbd7d07f6aae"
+        }
+      ],
+      "extras": {
+        "pinyin": "Zhu Tian Zhou",
+        "camel_pinyin": "ZhuTianZhou",
+        "amap_name_en": "Zhutianzhou",
+        "official_station_ids": [
+          "c9ffa10981d5422e88fddbd7d07f6aae"
+        ],
+        "official_codes": [
+          "28"
+        ],
+        "lines": [
+          "cn-changsha-line-2"
+        ],
+        "official_interchange": false,
+        "location_source": "source"
       }
     }
   ]

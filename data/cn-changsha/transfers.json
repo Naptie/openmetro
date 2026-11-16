@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/transfers.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-changsha",
-  "generated_at": "2026-10-23T13:01:44.613Z",
+  "generated_at": "2026-11-16T11:43:47.790Z",
   "source": [
     {
       "name": "Baidu Direction v2 transit",
       "url": "https://api.map.baidu.com/direction/v2/transit",
       "version": "2",
-      "retrieved_at": "2026-10-23T13:01:44.613Z",
+      "retrieved_at": "2026-11-16T11:43:47.790Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -676,6 +676,36 @@
       "to_line_id": "cn-changsha-line-3",
       "from_stop_id": "cn-changsha-yue-hu-gong-yuan-bei-5",
       "to_stop_id": "cn-changsha-yue-hu-gong-yuan-bei-3",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-zhong-tang-2-cn-changsha-zhong-tang-6",
+      "station_id": "cn-changsha-zhong-tang",
+      "from_line_id": "cn-changsha-line-2",
+      "to_line_id": "cn-changsha-line-6",
+      "from_stop_id": "cn-changsha-zhong-tang-2",
+      "to_stop_id": "cn-changsha-zhong-tang-6",
+      "walk_time_seconds": 193,
+      "is_out_of_station": false,
+      "source_id": "baidu-transit-station-hall-walk",
+      "walk_distance_meters": 231,
+      "extras": {
+        "walk_distance_source": "baidu-transit-station-hall-walk"
+      }
+    },
+    {
+      "id": "xfer-cn-changsha-zhong-tang-6-cn-changsha-zhong-tang-2",
+      "station_id": "cn-changsha-zhong-tang",
+      "from_line_id": "cn-changsha-line-6",
+      "to_line_id": "cn-changsha-line-2",
+      "from_stop_id": "cn-changsha-zhong-tang-6",
+      "to_stop_id": "cn-changsha-zhong-tang-2",
       "walk_time_seconds": 193,
       "is_out_of_station": false,
       "source_id": "baidu-transit-station-hall-walk",

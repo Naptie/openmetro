@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/segments.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-chongqing",
-  "generated_at": "2026-10-23T12:52:56.639Z",
+  "generated_at": "2026-11-16T11:49:04.060Z",
   "source": [
     {
       "name": "Baidu Direction v2 transit",
       "url": "https://api.map.baidu.com/direction/v2/transit",
       "version": "2",
-      "retrieved_at": "2026-10-23T12:52:56.639Z",
+      "retrieved_at": "2026-11-16T11:49:04.060Z",
       "license": "custom",
       "license_url": null,
       "attribution": "Baidu Maps",
@@ -129,7 +129,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
-      "distance_km": 1.167,
+      "distance_km": 1.195,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -363,7 +363,7 @@
         "cn-chongqing-central-park-east-10|cn-chongqing-wangjiazhuang-10",
         "cn-chongqing-central-park-10|cn-chongqing-wangjiazhuang-10"
       ],
-      "distance_km": 0.848,
+      "distance_km": 0.82,
       "extras": {
         "distance_source": "haversine"
       }
@@ -463,7 +463,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 300,
       "travel_time_source": "planner",
-      "distance_km": 4.565,
+      "distance_km": 4.613,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -993,11 +993,14 @@
       "direction": "both",
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
-      "travel_time_source": "planner",
+      "travel_time_source": "last_train",
+      "travel_time_derived_from": [
+        "cn-chongqing-dashiba-4|cn-chongqing-huangling-4",
+        "cn-chongqing-daqingcun-4|cn-chongqing-huangling-4"
+      ],
       "distance_km": 0.669,
       "extras": {
-        "distance_source": "haversine",
-        "planner_time_source": "baidu-transit"
+        "distance_source": "haversine"
       }
     },
     {
@@ -1249,7 +1252,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
-      "distance_km": 1.333,
+      "distance_km": 1.325,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -1572,7 +1575,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
-      "distance_km": 2.342,
+      "distance_km": 2.324,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -1782,8 +1785,8 @@
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 34.7,
-        "a_s_per_km": 41.4,
-        "b_s": 88.9,
+        "a_s_per_km": 40.9,
+        "b_s": 90,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 120,
@@ -2509,7 +2512,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
-      "distance_km": 1.171,
+      "distance_km": 1.181,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -2628,7 +2631,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 120,
       "travel_time_source": "planner",
-      "distance_km": 1.993,
+      "distance_km": 2.015,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -2888,7 +2891,7 @@
       "to_station_id": "cn-chongqing-south-square-of-chongqingbei-railway-station",
       "direction": "both",
       "source_id": "cqmetro-official",
-      "travel_time_seconds": 120,
+      "travel_time_seconds": 180,
       "travel_time_source": "planner",
       "distance_km": 0.904,
       "extras": {
@@ -3009,7 +3012,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
-      "distance_km": 1.569,
+      "distance_km": 1.596,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -3383,7 +3386,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
-      "distance_km": 2.056,
+      "distance_km": 2.032,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -3777,7 +3780,7 @@
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 34.7,
-        "a_s_per_km": 50.9,
+        "a_s_per_km": 50.8,
         "b_s": 82.9,
         "planner_time_source": "baidu-transit"
       },
@@ -3795,7 +3798,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 180,
       "travel_time_source": "planner",
-      "distance_km": 1.982,
+      "distance_km": 2.034,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -4309,7 +4312,7 @@
       "source_id": "cqmetro-official",
       "travel_time_seconds": 240,
       "travel_time_source": "planner",
-      "distance_km": 1.999,
+      "distance_km": 2.016,
       "extras": {
         "distance_source": "haversine",
         "planner_time_source": "baidu-transit"
@@ -5173,8 +5176,8 @@
         "distance_source": "haversine",
         "time_estimate": "distance_time_affine",
         "speed_kmh": 36.8,
-        "a_s_per_km": 55.7,
-        "b_s": 85,
+        "a_s_per_km": 55,
+        "b_s": 85.9,
         "planner_time_source": "baidu-transit"
       },
       "travel_time_seconds": 180,

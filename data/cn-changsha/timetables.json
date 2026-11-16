@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Naptie/openmetro/main/schemas/v1/timetables.schema.json",
   "schema_version": "1.0",
   "network_id": "cn-changsha",
-  "generated_at": "2026-10-23T13:01:40.314Z",
+  "generated_at": "2026-11-16T11:43:36.765Z",
   "source": [],
   "records": [
     {
@@ -1134,6 +1134,54 @@
       }
     },
     {
+      "id": "cn-changsha-line-2-cn-changsha-cao-long-qiao-2-to-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-cao-long-qiao",
+      "stop_id": "cn-changsha-cao-long-qiao-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "25",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-guang-da-2",
+      "origin_stop_id": "cn-changsha-cao-long-qiao-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "光达方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "23:55"
+      ],
+      "extras": {
+        "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-cao-long-qiao-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-cao-long-qiao",
+      "stop_id": "cn-changsha-cao-long-qiao-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "25",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-cao-long-qiao-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "23:15"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
       "id": "cn-changsha-line-2-cn-changsha-chang-sha-da-dao-2-to-cn-changsha-guang-da-2",
       "station_id": "cn-changsha-chang-sha-da-dao",
       "stop_id": "cn-changsha-chang-sha-da-dao-2",
@@ -1146,10 +1194,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:30"
+        "06:35"
       ],
       "last_train": [
-        "23:38"
+        "23:09"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1158,25 +1206,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-chang-sha-da-dao-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-chang-sha-da-dao-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-chang-sha-da-dao",
       "stop_id": "cn-changsha-chang-sha-da-dao-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "5",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-chang-sha-da-dao-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:30"
+        "06:33"
       ],
       "last_train": [
-        "23:10"
+        "24:01"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1194,10 +1242,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:37"
+        "06:32"
       ],
       "last_train": [
-        "23:45"
+        "23:02"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1206,25 +1254,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-chang-sha-huo-che-nan-zhan-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-chang-sha-huo-che-nan-zhan-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-chang-sha-huo-che-nan-zhan",
       "stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "23",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-chang-sha-huo-che-nan-zhan-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:33"
+        "06:40"
       ],
       "last_train": [
-        "23:03"
+        "24:08"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1245,7 +1293,7 @@
         "06:30"
       ],
       "last_train": [
-        "23:29"
+        "23:19"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1254,25 +1302,169 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-chang-sha-huo-che-zhan-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-chang-sha-huo-che-zhan-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-chang-sha-huo-che-zhan",
       "stop_id": "cn-changsha-chang-sha-huo-che-zhan-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "13",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-chang-sha-huo-che-zhan-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "23:51"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-che-tian-wan-2-to-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-che-tian-wan",
+      "stop_id": "cn-changsha-che-tian-wan-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "29",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-guang-da-2",
+      "origin_stop_id": "cn-changsha-che-tian-wan-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "光达方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "24:04"
+      ],
+      "extras": {
+        "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-che-tian-wan-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-che-tian-wan",
+      "stop_id": "cn-changsha-che-tian-wan-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "29",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-che-tian-wan-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "23:06"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-cz31q-2-to-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-cz31q",
+      "stop_id": "cn-changsha-cz31q-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "31",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-guang-da-2",
+      "origin_stop_id": "cn-changsha-cz31q-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "光达方向",
+      "first_train": [
+        "06:36"
+      ],
+      "last_train": [
+        "24:09"
+      ],
+      "extras": {
+        "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-cz31q-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-cz31q",
+      "stop_id": "cn-changsha-cz31q-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "31",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-cz31q-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:31"
+      ],
+      "last_train": [
+        "23:01"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-djsy4u-2-to-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-djsy4u",
+      "stop_id": "cn-changsha-djsy4u-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "27",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-guang-da-2",
+      "origin_stop_id": "cn-changsha-djsy4u-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "光达方向",
       "first_train": [
         "06:34"
       ],
       "last_train": [
-        "23:19"
+        "24:00"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-djsy4u-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-djsy4u",
+      "stop_id": "cn-changsha-djsy4u-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "27",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-djsy4u-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "23:10"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1290,10 +1482,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:35"
+        "06:30"
       ],
       "last_train": [
-        "23:43"
+        "23:04"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1302,25 +1494,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-du-hua-lu-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-du-hua-lu-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-du-hua-lu",
       "stop_id": "cn-changsha-du-hua-lu-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "3",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-du-hua-lu-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:30"
+        "06:38"
       ],
       "last_train": [
-        "23:05"
+        "24:06"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1338,10 +1530,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:31"
+        "06:36"
       ],
       "last_train": [
-        "23:23"
+        "23:25"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1350,41 +1542,41 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-fu-rong-guang-chang-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-fu-rong-guang-chang-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-fu-rong-guang-chang",
       "stop_id": "cn-changsha-fu-rong-guang-chang-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "12",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-fu-rong-guang-chang-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:23"
+        "06:35"
       ],
       "last_train": [
-        "23:24"
+        "23:45"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-guang-da-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-guang-da-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-guang-da",
       "stop_id": "cn-changsha-guang-da-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "24",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-guang-da-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭方向",
       "first_train": [
         "06:30"
       ],
@@ -1392,7 +1584,7 @@
         "23:00"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1410,10 +1602,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:31"
+        "06:35"
       ],
       "last_train": [
-        "23:30"
+        "23:17"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1422,25 +1614,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-jin-tai-guang-chang-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-jin-tai-guang-chang-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-jin-tai-guang-chang",
       "stop_id": "cn-changsha-jin-tai-guang-chang-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "8",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-jin-tai-guang-chang-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:32"
+        "06:34"
       ],
       "last_train": [
-        "23:17"
+        "23:53"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1458,10 +1650,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:32"
+        "06:34"
       ],
       "last_train": [
-        "23:10"
+        "23:38"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1470,25 +1662,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-jin-xing-lu-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-jin-xing-lu-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-jin-xing-lu",
       "stop_id": "cn-changsha-jin-xing-lu-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "18",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-jin-xing-lu-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:34"
+        "06:32"
       ],
       "last_train": [
-        "23:36"
+        "23:32"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1506,10 +1698,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:32"
+        "06:33"
       ],
       "last_train": [
-        "23:17"
+        "23:31"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1518,25 +1710,49 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-ju-zi-zhou-qing-lian-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-ju-zi-zhou-qing-lian-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-ju-zi-zhou-qing-lian",
       "stop_id": "cn-changsha-ju-zi-zhou-qing-lian-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "15",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-ju-zi-zhou-qing-lian-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:33"
+        "06:30"
       ],
       "last_train": [
-        "23:30"
+        "23:39"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-long-hu-ling-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-long-hu-ling",
+      "stop_id": "cn-changsha-long-hu-ling-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "32",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-long-hu-ling-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "23:00"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1554,10 +1770,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:32"
+        "06:36"
       ],
       "last_train": [
-        "23:02"
+        "23:46"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1566,25 +1782,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-lu-yun-lu-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-lu-yun-lu-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-lu-yun-lu",
       "stop_id": "cn-changsha-lu-yun-lu-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "22",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-lu-yun-lu-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:36"
+        "06:32"
       ],
       "last_train": [
-        "23:45"
+        "23:24"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1602,10 +1818,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:36"
+        "06:32"
       ],
       "last_train": [
-        "23:06"
+        "23:42"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1614,25 +1830,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-mei-xi-hu-dong-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-mei-xi-hu-dong-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-mei-xi-hu-dong",
       "stop_id": "cn-changsha-mei-xi-hu-dong-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "20",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-mei-xi-hu-dong-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:32"
+        "06:36"
       ],
       "last_train": [
-        "23:41"
+        "23:28"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1653,10 +1869,82 @@
         "06:30"
       ],
       "last_train": [
-        "23:00"
+        "23:49"
       ],
       "extras": {
         "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-mei-xi-hu-xi-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-mei-xi-hu-xi",
+      "stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "23",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "23:22"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-mo-jia-zhou-2-to-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-mo-jia-zhou",
+      "stop_id": "cn-changsha-mo-jia-zhou-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "26",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-guang-da-2",
+      "origin_stop_id": "cn-changsha-mo-jia-zhou-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "光达方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "23:57"
+      ],
+      "extras": {
+        "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-mo-jia-zhou-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-mo-jia-zhou",
+      "stop_id": "cn-changsha-mo-jia-zhou-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "26",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-mo-jia-zhou-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "23:13"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1674,10 +1962,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:36"
+        "06:30"
       ],
       "last_train": [
-        "23:35"
+        "23:12"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1686,25 +1974,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-ren-min-dong-lu-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-ren-min-dong-lu-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-ren-min-dong-lu",
       "stop_id": "cn-changsha-ren-min-dong-lu-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "622",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-ren-min-dong-lu-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:32"
+        "06:30"
       ],
       "last_train": [
-        "23:12"
+        "23:57"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1722,10 +2010,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:34"
+        "06:33"
       ],
       "last_train": [
-        "23:40"
+        "23:07"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1734,25 +2022,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-sha-wan-gong-yuan-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-sha-wan-gong-yuan-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-sha-wan-gong-yuan",
       "stop_id": "cn-changsha-sha-wan-gong-yuan-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "20",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-sha-wan-gong-yuan-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
         "06:35"
       ],
       "last_train": [
-        "23:07"
+        "24:03"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1770,10 +2058,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:34"
+        "06:32"
       ],
       "last_train": [
-        "23:33"
+        "23:15"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1782,25 +2070,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-wan-jia-li-guang-chang-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-wan-jia-li-guang-chang-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-wan-jia-li-guang-chang",
       "stop_id": "cn-changsha-wan-jia-li-guang-chang-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "10",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-wan-jia-li-guang-chang-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:30"
+        "06:36"
       ],
       "last_train": [
-        "23:15"
+        "23:55"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1821,7 +2109,7 @@
         "06:30"
       ],
       "last_train": [
-        "23:08"
+        "23:40"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1830,25 +2118,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-wang-cheng-po-qi-che-xi-zhan-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-wang-cheng-po-qi-che-xi-zhan-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-wang-cheng-po-qi-che-xi-zhan",
       "stop_id": "cn-changsha-wang-cheng-po-qi-che-xi-zhan-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "19",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-wang-cheng-po-qi-che-xi-zhan-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
         "06:30"
       ],
       "last_train": [
-        "23:39"
+        "23:30"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1869,7 +2157,7 @@
         "06:34"
       ],
       "last_train": [
-        "23:04"
+        "23:44"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1878,25 +2166,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-wen-hua-yi-shu-zhong-xin-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-wen-hua-yi-shu-zhong-xin-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-wen-hua-yi-shu-zhong-xin",
       "stop_id": "cn-changsha-wen-hua-yi-shu-zhong-xin-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "21",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-wen-hua-yi-shu-zhong-xin-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
         "06:34"
       ],
       "last_train": [
-        "23:43"
+        "23:26"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1917,7 +2205,7 @@
         "06:30"
       ],
       "last_train": [
-        "23:21"
+        "23:27"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1926,25 +2214,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-wu-yi-guang-chang-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-wu-yi-guang-chang-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-wu-yi-guang-chang",
       "stop_id": "cn-changsha-wu-yi-guang-chang-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "13",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-wu-yi-guang-chang-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:30"
+        "06:33"
       ],
       "last_train": [
-        "23:26"
+        "23:43"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -1962,10 +2250,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:34"
+        "06:32"
       ],
       "last_train": [
-        "23:13"
+        "23:36"
       ],
       "extras": {
         "destination_name": "光达",
@@ -1974,25 +2262,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-xi-hu-gong-yuan-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-xi-hu-gong-yuan-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-xi-hu-gong-yuan",
       "stop_id": "cn-changsha-xi-hu-gong-yuan-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "17",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-xi-hu-gong-yuan-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:32"
+        "06:34"
       ],
       "last_train": [
         "23:34"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -2010,10 +2298,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:33"
+        "06:31"
       ],
       "last_train": [
-        "23:19"
+        "23:29"
       ],
       "extras": {
         "destination_name": "光达",
@@ -2022,25 +2310,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-xiang-jiang-zhong-lu-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-xiang-jiang-zhong-lu-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-xiang-jiang-zhong-lu",
       "stop_id": "cn-changsha-xiang-jiang-zhong-lu-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "14",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-xiang-jiang-zhong-lu-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
         "06:31"
       ],
       "last_train": [
-        "23:29"
+        "23:41"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -2058,7 +2346,7 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:33"
+        "06:34"
       ],
       "last_train": [
         "23:24"
@@ -2070,25 +2358,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-ying-bin-lu-kou-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-ying-bin-lu-kou-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-ying-bin-lu-kou",
       "stop_id": "cn-changsha-ying-bin-lu-kou-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "618",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-ying-bin-lu-kou-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:31"
+        "06:37"
       ],
       "last_train": [
-        "23:23"
+        "23:47"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -2109,7 +2397,7 @@
         "06:30"
       ],
       "last_train": [
-        "23:15"
+        "23:33"
       ],
       "extras": {
         "destination_name": "光达",
@@ -2118,25 +2406,25 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-ying-wan-zhen-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-ying-wan-zhen-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-ying-wan-zhen",
       "stop_id": "cn-changsha-ying-wan-zhen-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "10",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-ying-wan-zhen-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
-        "06:30"
+        "06:36"
       ],
       "last_train": [
-        "23:32"
+        "23:37"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
@@ -2154,10 +2442,10 @@
       "direction_type": "linear",
       "direction_label": "光达方向",
       "first_train": [
-        "06:35"
+        "06:32"
       ],
       "last_train": [
-        "23:26"
+        "23:22"
       ],
       "extras": {
         "destination_name": "光达",
@@ -2166,25 +2454,169 @@
       }
     },
     {
-      "id": "cn-changsha-line-2-cn-changsha-yuan-jia-ling-2-to-cn-changsha-mei-xi-hu-xi-2",
+      "id": "cn-changsha-line-2-cn-changsha-yuan-jia-ling-2-to-cn-changsha-long-hu-ling-2",
       "station_id": "cn-changsha-yuan-jia-ling",
       "stop_id": "cn-changsha-yuan-jia-ling-2",
       "line_id": "cn-changsha-line-2",
       "station_code": "10",
       "source_id": "hncsmtr-creatorcms",
-      "destination_stop_id": "cn-changsha-mei-xi-hu-xi-2",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
       "origin_stop_id": "cn-changsha-yuan-jia-ling-2",
       "pattern_id": "cn-changsha-line-2-pattern-primary",
       "direction_type": "linear",
-      "direction_label": "梅溪湖西方向",
+      "direction_label": "龙虎岭站方向",
       "first_train": [
         "06:30"
       ],
       "last_train": [
-        "23:21"
+        "23:49"
       ],
       "extras": {
-        "destination_name": "梅溪湖西",
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-zhen-ren-qiao-2-to-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-zhen-ren-qiao",
+      "stop_id": "cn-changsha-zhen-ren-qiao-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "30",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-guang-da-2",
+      "origin_stop_id": "cn-changsha-zhen-ren-qiao-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "光达方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "24:07"
+      ],
+      "extras": {
+        "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-zhen-ren-qiao-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-zhen-ren-qiao",
+      "stop_id": "cn-changsha-zhen-ren-qiao-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "30",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-zhen-ren-qiao-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "23:04"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-zhong-tang-2-to-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-zhong-tang",
+      "stop_id": "cn-changsha-zhong-tang-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "603",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-guang-da-2",
+      "origin_stop_id": "cn-changsha-zhong-tang-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "光达方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "23:53"
+      ],
+      "extras": {
+        "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-zhong-tang-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-zhong-tang",
+      "stop_id": "cn-changsha-zhong-tang-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "603",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-zhong-tang-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:34"
+      ],
+      "last_train": [
+        "23:17"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-zhu-tian-zhou-2-to-cn-changsha-guang-da-2",
+      "station_id": "cn-changsha-zhu-tian-zhou",
+      "stop_id": "cn-changsha-zhu-tian-zhou-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "28",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-guang-da-2",
+      "origin_stop_id": "cn-changsha-zhu-tian-zhou-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "光达方向",
+      "first_train": [
+        "06:30"
+      ],
+      "last_train": [
+        "24:02"
+      ],
+      "extras": {
+        "destination_name": "光达",
+        "calendar": "single",
+        "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
+      }
+    },
+    {
+      "id": "cn-changsha-line-2-cn-changsha-zhu-tian-zhou-2-to-cn-changsha-long-hu-ling-2",
+      "station_id": "cn-changsha-zhu-tian-zhou",
+      "stop_id": "cn-changsha-zhu-tian-zhou-2",
+      "line_id": "cn-changsha-line-2",
+      "station_code": "28",
+      "source_id": "hncsmtr-creatorcms",
+      "destination_stop_id": "cn-changsha-long-hu-ling-2",
+      "origin_stop_id": "cn-changsha-zhu-tian-zhou-2",
+      "pattern_id": "cn-changsha-line-2-pattern-primary",
+      "direction_type": "linear",
+      "direction_label": "龙虎岭站方向",
+      "first_train": [
+        "06:32"
+      ],
+      "last_train": [
+        "23:08"
+      ],
+      "extras": {
+        "destination_name": "龙虎岭站",
         "calendar": "single",
         "source_note": "逐站逐方向首末班取自长沙轨道交通集团官网 www.hncsmtr.com 的 Creator CMS 接口 findDtStationData.page（该站该方向的首/末发车时刻）；方向以终点站表示，3 号线同时发布广生、红桥、湘潭北三个终点。磁浮快线另发布工作日与双休日两套时刻。"
       }
